@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Yokogawa ZR22G Oxygen Analyzer | AnalyzersHub</title>
-    <meta name="description" content="Yokogawa ZR22G oxygen analyzer details, working principle, alarms, and step-by-step troubleshooting for analyzer technicians.">
+    <meta name="description" content="Detailed Yokogawa ZR22G oxygen analyzer troubleshooting, alarms, working principle, and field-tested solutions for analyzer technicians.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
@@ -23,50 +23,55 @@
     <p><strong>Manufacturer:</strong> Yokogawa</p>
     <p><strong>Analyzer Type:</strong> In-situ Zirconia Oxygen Analyzer</p>
 
+    <!-- 1 -->
     <section>
         <h3>1. Overview</h3>
         <p>
-            The Yokogawa ZR22G is an in-situ zirconia oxygen analyzer designed for continuous
-            oxygen measurement in combustion processes such as boilers, furnaces, heaters,
-            and incinerators.
+            The Yokogawa ZR22G is an in-situ zirconia oxygen analyzer used for continuous
+            oxygen measurement in combustion applications such as boilers, furnaces,
+            heaters, and incinerators.
         </p>
     </section>
 
+    <!-- 2 -->
     <section>
         <h3>2. Measurement Principle</h3>
         <p>
-            The analyzer uses a zirconium oxide (ZrO₂) sensor operating at high temperature.
-            Oxygen concentration is determined by measuring the electromotive force (EMF)
-            generated between the process gas and reference air.
+            The analyzer operates on a zirconium oxide (ZrO₂) sensor heated to a high
+            temperature. The oxygen concentration is calculated from the EMF generated
+            between the process gas and reference air.
         </p>
         <ul>
             <li>Zirconia sensor cell</li>
-            <li>Integrated heater for sensor temperature control</li>
+            <li>Integrated heater for temperature control</li>
             <li>Reference air supply system</li>
         </ul>
     </section>
 
+    <!-- 3 -->
     <section>
         <h3>3. Key Components</h3>
         <ul>
             <li>Zirconia sensor probe</li>
             <li>Heater assembly</li>
-            <li>Reference air system and filter</li>
+            <li>Reference air filter and tubing</li>
             <li>Calibration solenoid valves</li>
-            <li>Signal converter / transmitter unit</li>
+            <li>Signal converter / transmitter</li>
         </ul>
     </section>
 
+    <!-- 4 -->
     <section>
         <h3>4. Installation Notes</h3>
         <ul>
-            <li>Install probe at correct insertion length as per flue diameter</li>
-            <li>Avoid locations with excessive vibration</li>
-            <li>Ensure clean and dry reference air supply</li>
-            <li>Allow sufficient straight duct length upstream</li>
+            <li>Install probe at correct insertion length</li>
+            <li>Avoid high vibration locations</li>
+            <li>Ensure clean, dry reference air</li>
+            <li>Provide proper grounding and shielding</li>
         </ul>
     </section>
 
+    <!-- 5 -->
     <section>
         <h3>5. Common Alarms & Probable Causes</h3>
         <table border="1" cellpadding="6" cellspacing="0">
@@ -79,61 +84,171 @@
                 <td>Heater failure, power supply issue, sensor aging</td>
             </tr>
             <tr>
-                <td>Low Oxygen / Zero Drift</td>
-                <td>Reference air blockage, sensor contamination</td>
+                <td>No Oxygen Signal</td>
+                <td>Heater off, sensor failure, wiring issue</td>
             </tr>
             <tr>
-                <td>No Signal</td>
-                <td>Sensor failure, cable issue, electronics fault</td>
+                <td>High Drift</td>
+                <td>Sensor contamination, reference air leak</td>
             </tr>
             <tr>
                 <td>Calibration Failure</td>
-                <td>Calibration gas issue, solenoid valve malfunction</td>
+                <td>Calibration gas or valve issue</td>
             </tr>
         </table>
     </section>
 
+    <!-- 6 -->
     <section>
         <h3>6. Troubleshooting – No Oxygen Reading</h3>
+
+        <h4>Possible Causes (Most Common First)</h4>
         <ol>
-            <li>Check heater resistance and heater current</li>
-            <li>Verify reference air flow and filter condition</li>
-            <li>Inspect sensor probe for damage or aging</li>
-            <li>Check signal cable continuity</li>
-            <li>Restart analyzer and observe alarm status</li>
+            <li>Heater not operating or under-temperature</li>
+            <li>Reference air supply blocked or leaking</li>
+            <li>Zirconia sensor end-of-life</li>
+            <li>Signal cable or terminal issue</li>
+            <li>Converter electronics failure</li>
         </ol>
+
+        <h4>Field Checks</h4>
+        <ul>
+            <li>Verify heater current and heater status</li>
+            <li>Check reference air flow at analyzer inlet</li>
+            <li>Inspect probe tip for cracks or deposits</li>
+            <li>Measure output signal at terminals</li>
+        </ul>
+
+        <h4>Corrective Actions</h4>
+        <ul>
+            <li>Restore heater power or replace heater</li>
+            <li>Clean or replace reference air filter</li>
+            <li>Replace sensor probe if degraded</li>
+            <li>Repair wiring or replace electronics</li>
+        </ul>
+
         <p>
-            👉 Also refer to the general guide:
-            <a href="../../troubleshooting/no-signal.html">No Analyzer Signal – Troubleshooting</a>
+            🔎 Refer also:
+            <a href="../../troubleshooting/no-signal.html">General No Analyzer Signal Guide</a>
         </p>
     </section>
 
+    <!-- 7 -->
     <section>
-        <h3>7. Calibration Guidelines</h3>
+        <h3>7. Troubleshooting – Heater Alarm / Heater Error</h3>
+
+        <h4>Possible Causes</h4>
+        <ol>
+            <li>Heater open or short circuit</li>
+            <li>Power supply instability</li>
+            <li>Excessive flue temperature</li>
+            <li>Electronics board failure</li>
+        </ol>
+
+        <h4>Field Checks</h4>
         <ul>
-            <li>Ensure analyzer has completed warm-up</li>
-            <li>Use certified calibration gases</li>
-            <li>Verify calibration valve operation</li>
+            <li>Measure heater resistance</li>
+            <li>Check heater voltage at terminals</li>
+            <li>Inspect probe for overheating damage</li>
+            <li>Verify grounding and earthing</li>
+        </ul>
+
+        <h4>Corrective Actions</h4>
+        <ul>
+            <li>Replace heater assembly</li>
+            <li>Stabilize power supply</li>
+            <li>Correct installation location</li>
+            <li>Replace converter electronics if required</li>
+        </ul>
+    </section>
+
+    <!-- 8 -->
+    <section>
+        <h3>8. Troubleshooting – High Drift / Unstable Reading</h3>
+
+        <h4>Possible Causes</h4>
+        <ol>
+            <li>Sensor contamination due to dust or ash</li>
+            <li>Reference air leakage</li>
+            <li>Process temperature fluctuations</li>
+            <li>Electrical noise or poor grounding</li>
+        </ol>
+
+        <h4>Field Checks</h4>
+        <ul>
+            <li>Inspect probe tip for deposits</li>
+            <li>Check reference air tubing and fittings</li>
+            <li>Observe process conditions</li>
+            <li>Verify grounding continuity</li>
+        </ul>
+
+        <h4>Corrective Actions</h4>
+        <ul>
+            <li>Clean or replace probe</li>
+            <li>Fix reference air leaks</li>
+            <li>Improve probe shielding or location</li>
+            <li>Correct grounding and cable routing</li>
+        </ul>
+    </section>
+
+    <!-- 9 -->
+    <section>
+        <h3>9. Troubleshooting – Calibration Failure</h3>
+
+        <h4>Possible Causes</h4>
+        <ol>
+            <li>Calibration gas not reaching sensor</li>
+            <li>Solenoid valve malfunction</li>
+            <li>Incorrect gas concentration</li>
+            <li>Slow or degraded sensor response</li>
+        </ol>
+
+        <h4>Field Checks</h4>
+        <ul>
+            <li>Verify calibration gas pressure and flow</li>
+            <li>Manually actuate calibration valves</li>
+            <li>Check calibration gas certificate</li>
+            <li>Observe response time</li>
+        </ul>
+
+        <h4>Corrective Actions</h4>
+        <ul>
+            <li>Restore gas supply or tubing</li>
+            <li>Replace faulty solenoid valve</li>
+            <li>Use correct certified calibration gas</li>
+            <li>Replace sensor if response is slow</li>
+        </ul>
+    </section>
+
+    <!-- 10 -->
+    <section>
+        <h3>10. Calibration Guidelines</h3>
+        <ul>
+            <li>Allow full analyzer warm-up</li>
+            <li>Use certified span gas</li>
+            <li>Confirm valve operation before calibration</li>
             <li>Allow sufficient stabilization time</li>
         </ul>
     </section>
 
+    <!-- 11 -->
     <section>
-        <h3>8. Preventive Maintenance</h3>
+        <h3>11. Preventive Maintenance</h3>
         <ul>
             <li>Inspect reference air filter monthly</li>
-            <li>Check heater current during routine maintenance</li>
-            <li>Perform calibration as per site SOP</li>
-            <li>Inspect probe for dust or ash buildup</li>
+            <li>Check heater current during PM</li>
+            <li>Calibrate as per site SOP</li>
+            <li>Inspect probe for buildup or corrosion</li>
         </ul>
     </section>
 
+    <!-- 12 -->
     <section>
-        <h3>9. Field Tips</h3>
+        <h3>12. Field Tips</h3>
         <ul>
-            <li>Never judge sensor health before full warm-up</li>
-            <li>Reference air problems cause most false readings</li>
-            <li>Sudden drift often indicates sensor contamination</li>
+            <li>Never assess sensor health before warm-up completes</li>
+            <li>Most false readings are reference air related</li>
+            <li>Sudden drift usually indicates contamination</li>
             <li>Always check heater status first during faults</li>
         </ul>
     </section>
