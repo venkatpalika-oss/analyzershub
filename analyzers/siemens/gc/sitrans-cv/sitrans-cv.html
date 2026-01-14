@@ -58,13 +58,15 @@
       padding:16px; box-shadow:0 4px 14px rgba(0,0,0,0.08);
       position:relative; overflow:hidden;
       background-image: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(245,248,252,0.98));
+      transition: transform .18s ease, box-shadow .18s ease;
     }
+    .card:hover{ transform: translateY(-3px); box-shadow:0 10px 26px rgba(0,0,0,0.14); }
     .card::before{
       content:""; position:absolute; top:0; left:0; width:100%; height:7px;
       background: linear-gradient(90deg, #2e7d32, #6fcf97);
     }
     .card h3{ margin:6px 0 10px; color:#0b3c5d; }
-    .card p{ margin:0 0 10px; color:#333; line-height:1.45; }
+    .card p{ margin:0 0 12px; color:#333; line-height:1.45; }
     .card a{ font-weight:900; color:#1f78b4; text-decoration:none; }
     .card a:hover{ text-decoration:underline; }
 
@@ -137,7 +139,7 @@
     </div>
 
     <div class="btn-row">
-      <a class="btn btn-primary" href="alarms/index.html">Alarms →</a>
+      <a class="btn btn-primary" href="alarms/index.html">Alarms Index →</a>
       <a class="btn btn-ghost" href="../../../../../analyzers.html">Back to Search</a>
     </div>
   </section>
@@ -147,9 +149,46 @@
     For any gas line disconnection: depressurize/vent safely and leak test after reconnection.
   </div>
 
+  <!-- ✅ NEW: Alarm decision tree cards -->
+  <section class="section" id="alarm-cards">
+    <h3>Alarm Decision Trees (Quick Access)</h3>
+    <p style="margin-top:-6px; opacity:.9;">Choose the alarm group that matches your symptom and follow the decision tree.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Carrier / Pressure / Flow</h3>
+        <p>Low carrier pressure, unstable flow, no peaks, injection failure symptoms.</p>
+        <a href="alarms/carrier-pressure.html">Open Decision Tree →</a>
+      </div>
+
+      <div class="card">
+        <h3>Oven / Temperature</h3>
+        <p>Oven not ready, heater fault, temperature sensor error, unstable oven.</p>
+        <a href="alarms/oven-temperature.html">Open Decision Tree →</a>
+      </div>
+
+      <div class="card">
+        <h3>Valve / Sequence</h3>
+        <p>Valve not switching, wrong timing, pneumatic issues, sequence faults.</p>
+        <a href="alarms/valve-sequence.html">Open Decision Tree →</a>
+      </div>
+
+      <div class="card">
+        <h3>Communications / DCS</h3>
+        <p>Bad quality, stale values, no update, Modbus/OPC mapping issues.</p>
+        <a href="alarms/communications.html">Open Decision Tree →</a>
+      </div>
+    </div>
+
+    <div class="btn-row" style="margin-top:14px;">
+      <a class="btn btn-primary" href="alarms/index.html">Open Alarms Index →</a>
+      <a class="btn btn-ghost" href="#start">Start Troubleshooting ↓</a>
+    </div>
+  </section>
+
   <section class="section toc">
     <h3>Quick Navigation</h3>
-    <a href="alarms/index.html">0) Alarm Decision Trees</a>
+    <a href="#alarm-cards">0) Alarm Decision Trees (Quick Access)</a>
     <a href="#start">1) Startup & Health Checks</a>
     <a href="#no-update">2) No Update / No Results / Stale Values</a>
     <a href="#bad-quality">3) Bad Quality / Unstable CV-Wobbe</a>
@@ -165,7 +204,6 @@
 
   <section class="section" id="start">
     <h3>1) Startup & Health Checks</h3>
-
     <div class="step">
       <b>A — Visual inspection</b>
       <ul>
@@ -174,7 +212,6 @@
         <li>Check sample conditioning: filters, drains, traps, heat tracing (if used).</li>
       </ul>
     </div>
-
     <div class="step">
       <b>B — Status & alarms</b>
       <ul>
@@ -183,7 +220,6 @@
         <li>Confirm last analysis timestamp is updating normally.</li>
       </ul>
     </div>
-
     <div class="step">
       <b>C — Quick checks (most common causes)</b>
       <ul>
@@ -192,7 +228,6 @@
         <li>Oven temperature at setpoint and stable.</li>
       </ul>
     </div>
-
     <div class="ok">
       <b>Healthy system signs:</b> stable pressures, stable oven temperature, repeatable runs, no active critical alarms.
     </div>
@@ -200,7 +235,6 @@
 
   <section class="section" id="no-update">
     <h3>2) No Update / No Results / Stale Values</h3>
-
     <div class="step">
       <b>Symptoms</b>
       <ul>
@@ -208,7 +242,6 @@
         <li>Local GC run not happening (no new timestamp) or results not calculated.</li>
       </ul>
     </div>
-
     <div class="step">
       <b>Check 1 — Is the GC running locally?</b>
       <ul>
@@ -216,7 +249,6 @@
         <li><b>If running:</b> go to Check 2.</li>
       </ul>
     </div>
-
     <div class="step">
       <b>Check 2 — Are chromatograms/peaks present?</b>
       <ul>
@@ -224,7 +256,6 @@
         <li><b>Peaks present but no result:</b> suspect method/calculation/config or comms mapping → see section 9.</li>
       </ul>
     </div>
-
     <div class="step">
       <b>Check 3 — DCS link vs analyzer link</b>
       <ul>
@@ -232,7 +263,6 @@
         <li>If nothing updates locally either → GC run path or sampling/carrier/oven/valve issue.</li>
       </ul>
     </div>
-
     <div class="bad">
       <b>If urgent:</b> record (1) last good timestamp, (2) alarm list, (3) sample & carrier pressures, (4) oven temp, and escalate.
     </div>
@@ -240,7 +270,6 @@
 
   <section class="section" id="bad-quality">
     <h3>3) Bad Quality / Unstable CV–Wobbe</h3>
-
     <div class="step">
       <b>Symptoms</b>
       <ul>
@@ -249,7 +278,6 @@
         <li>Sudden step change without process reason.</li>
       </ul>
     </div>
-
     <div class="step">
       <b>Most common causes</b>
       <ul>
@@ -260,7 +288,6 @@
         <li>Valve timing/sequence inconsistency.</li>
       </ul>
     </div>
-
     <div class="step">
       <b>Fix actions</b>
       <ul>
@@ -274,7 +301,6 @@
 
   <section class="section" id="drift">
     <h3>4) Drift / Repeatability Issues</h3>
-
     <div class="step">
       <b>Quick diagnosis</b>
       <ul>
@@ -282,7 +308,6 @@
         <li><b>Drift suddenly:</b> leaks, sample upset, method/config change, valve issue.</li>
       </ul>
     </div>
-
     <div class="step">
       <b>Checks</b>
       <ul>
@@ -291,7 +316,6 @@
         <li>Verify calibration gas cylinder and regulator condition (no creep).</li>
       </ul>
     </div>
-
     <div class="step">
       <b>Fix actions</b>
       <ul>
@@ -304,7 +328,6 @@
 
   <section class="section" id="sample">
     <h3>5) Sample System Troubleshooting</h3>
-
     <div class="step">
       <b>Symptoms</b>
       <ul>
@@ -313,7 +336,6 @@
         <li>Pressure alarms on sample side.</li>
       </ul>
     </div>
-
     <div class="step">
       <b>Checks</b>
       <ul>
@@ -323,7 +345,6 @@
         <li>Confirm sample supply pressure from process is available.</li>
       </ul>
     </div>
-
     <div class="ok">
       <b>Verification:</b> stable sample pressure/flow, consistent peak response, no new liquid accumulation.
     </div>
@@ -331,14 +352,12 @@
 
   <section class="section" id="carrier">
     <h3>6) Carrier / Pressure / Flow Issues</h3>
-
     <div class="step">
       <b>Symptoms</b>
       <ul>
         <li>No peaks, unstable retention, noisy baseline, “carrier low” type alarms.</li>
       </ul>
     </div>
-
     <div class="step">
       <b>Checks</b>
       <ul>
@@ -348,7 +367,6 @@
         <li>Inspect filters/restrictors for blockage.</li>
       </ul>
     </div>
-
     <div class="step">
       <b>Fix actions</b>
       <ul>
@@ -361,14 +379,12 @@
 
   <section class="section" id="oven">
     <h3>7) Oven / Temperature Issues</h3>
-
     <div class="step">
       <b>Symptoms</b>
       <ul>
         <li>Oven not ready, slow ramp, unstable temperature, heater/sensor alarms.</li>
       </ul>
     </div>
-
     <div class="step">
       <b>Checks</b>
       <ul>
@@ -377,7 +393,6 @@
         <li>Check heater power status and sensor readings (open/short indications).</li>
       </ul>
     </div>
-
     <div class="step">
       <b>Fix actions</b>
       <ul>
@@ -390,14 +405,12 @@
 
   <section class="section" id="valves">
     <h3>8) Valve / Sequence Issues</h3>
-
     <div class="step">
       <b>Symptoms</b>
       <ul>
         <li>No injection events, wrong peak order, retention shift, valves not switching.</li>
       </ul>
     </div>
-
     <div class="step">
       <b>Checks</b>
       <ul>
@@ -407,7 +420,6 @@
         <li>Leak test valve manifold and check for contamination in pneumatic lines.</li>
       </ul>
     </div>
-
     <div class="step">
       <b>Fix actions</b>
       <ul>
@@ -420,7 +432,6 @@
 
   <section class="section" id="comms">
     <h3>9) DCS/Network/Communication Issues</h3>
-
     <div class="step">
       <b>Symptoms</b>
       <ul>
@@ -428,7 +439,6 @@
         <li>Analyzer shows values locally but not in DCS.</li>
       </ul>
     </div>
-
     <div class="step">
       <b>Checks</b>
       <ul>
@@ -438,7 +448,6 @@
         <li>Look for time sync issues if historian uses timestamps.</li>
       </ul>
     </div>
-
     <div class="step">
       <b>Fix actions</b>
       <ul>
@@ -461,7 +470,6 @@
 
   <section class="section" id="escalate">
     <h3>11) Escalation Checklist (Before Vendor Support)</h3>
-
     <div class="step">
       <b>Collect these details</b>
       <ul>
@@ -473,12 +481,8 @@
       </ul>
     </div>
 
-    <div class="ok">
-      <b>Tip:</b> If you send me 3–6 common SITRANS CV alarm messages (exact text), I’ll build the complete alarm decision-tree pages immediately.
-    </div>
-
     <div class="btn-row" style="margin-top:14px;">
-      <a class="btn btn-primary" href="alarms/index.html">Open Alarms →</a>
+      <a class="btn btn-primary" href="alarms/index.html">Open Alarms Index →</a>
       <a class="btn btn-ghost" href="../../../../../analyzers.html">Back to Analyzer Search</a>
     </div>
   </section>
