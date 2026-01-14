@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Yokogawa ZR22G Oxygen Analyzer | AnalyzersHub</title>
-    <meta name="description" content="Detailed Yokogawa ZR22G oxygen analyzer troubleshooting, alarms, working principle, and field-tested solutions for analyzer technicians.">
+    <title>Yokogawa ZR22G Zirconia Oxygen Analyzer | AnalyzersHub</title>
+
+    <meta name="description" content="Yokogawa ZR22G zirconia oxygen analyzer overview, specifications, common alarms, and troubleshooting links for analyzer technicians.">
+    <meta name="keywords" content="Yokogawa ZR22G, zirconia oxygen analyzer, combustion analyzer troubleshooting">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
+
 <body>
 
 <header>
@@ -19,245 +23,121 @@
 
 <main>
 
-    <h2>Yokogawa ZR22G Oxygen Analyzer</h2>
-    <p><strong>Manufacturer:</strong> Yokogawa</p>
-    <p><strong>Analyzer Type:</strong> In-situ Zirconia Oxygen Analyzer</p>
+    <h2>Yokogawa ZR22G Zirconia Oxygen Analyzer</h2>
 
-    <!-- 1 -->
     <section>
-        <h3>1. Overview</h3>
+        <h3>Analyzer Overview</h3>
         <p>
-            The Yokogawa ZR22G is an in-situ zirconia oxygen analyzer used for continuous
-            oxygen measurement in combustion applications such as boilers, furnaces,
-            heaters, and incinerators.
+            The Yokogawa ZR22G is a high-performance zirconia oxygen analyzer used
+            for continuous oxygen measurement in combustion processes such as
+            boilers, furnaces, kilns, and incinerators.
         </p>
     </section>
 
-    <!-- 2 -->
     <section>
-        <h3>2. Measurement Principle</h3>
-        <p>
-            The analyzer operates on a zirconium oxide (ZrO₂) sensor heated to a high
-            temperature. The oxygen concentration is calculated from the EMF generated
-            between the process gas and reference air.
-        </p>
+        <h3>Key Features</h3>
         <ul>
-            <li>Zirconia sensor cell</li>
-            <li>Integrated heater for temperature control</li>
-            <li>Reference air supply system</li>
+            <li>High accuracy zirconia sensor technology</li>
+            <li>Fast response time</li>
+            <li>Suitable for high-temperature flue gas applications</li>
+            <li>Long sensor life with proper maintenance</li>
         </ul>
     </section>
 
-    <!-- 3 -->
     <section>
-        <h3>3. Key Components</h3>
+        <h3>Typical Applications</h3>
         <ul>
-            <li>Zirconia sensor probe</li>
-            <li>Heater assembly</li>
-            <li>Reference air filter and tubing</li>
-            <li>Calibration solenoid valves</li>
-            <li>Signal converter / transmitter</li>
+            <li>Boilers and furnaces</li>
+            <li>Cement kilns</li>
+            <li>Incinerators</li>
+            <li>Power plant combustion control</li>
         </ul>
     </section>
 
-    <!-- 4 -->
     <section>
-        <h3>4. Installation Notes</h3>
-        <ul>
-            <li>Install probe at correct insertion length</li>
-            <li>Avoid high vibration locations</li>
-            <li>Ensure clean, dry reference air</li>
-            <li>Provide proper grounding and shielding</li>
-        </ul>
-    </section>
+        <h3>Common Alarms & Troubleshooting</h3>
 
-    <!-- 5 -->
-    <section>
-        <h3>5. Common Alarms & Probable Causes</h3>
-        <table border="1" cellpadding="6" cellspacing="0">
-            <tr>
-                <th>Alarm</th>
-                <th>Probable Cause</th>
-            </tr>
-            <tr>
-               <td><a href="../../alarms/yokogawa/heater-error.html">Heater Error</a></td>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Alarm</th>
+                    <th>Description</th>
+                    <th>Diagnosis</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <a href="../../alarms/yokogawa/heater-error.html">
+                            Heater Error
+                        </a>
+                    </td>
+                    <td>Sensor heater not operating correctly</td>
+                    <td>
+                        <a href="../../alarms/yokogawa/decision-trees/zr22g-heater-error.html">
+                            Start Diagnosis
+                        </a>
+                    </td>
+                </tr>
 
-                <td>Heater failure, power supply issue, sensor aging</td>
-            </tr>
-            <tr>
-                <td>No Oxygen Signal</td>
-                <td>Heater off, sensor failure, wiring issue</td>
-            </tr>
-            <tr>
-                <td>High Drift</td>
-                <td>Sensor contamination, reference air leak</td>
-            </tr>
-            <tr>
-                <td>Calibration Failure</td>
-                <td>Calibration gas or valve issue</td>
-            </tr>
+                <tr>
+                    <td>
+                        <a href="../../alarms/yokogawa/no-signal.html">
+                            No Oxygen Signal
+                        </a>
+                    </td>
+                    <td>No valid oxygen measurement available</td>
+                    <td>
+                        <a href="../../alarms/yokogawa/decision-trees/zr22g-no-signal.html">
+                            Start Diagnosis
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <a href="../../alarms/yokogawa/calibration-failure.html">
+                            Calibration Failure
+                        </a>
+                    </td>
+                    <td>Analyzer fails zero or span calibration</td>
+                    <td>
+                        <a href="../../alarms/yokogawa/decision-trees/zr22g-calibration-failure.html">
+                            Start Diagnosis
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <a href="../../alarms/yokogawa/high-drift.html">
+                            High Drift / Unstable Reading
+                        </a>
+                    </td>
+                    <td>Oxygen reading unstable or drifting</td>
+                    <td>
+                        <a href="../../alarms/yokogawa/decision-trees/zr22g-high-drift.html">
+                            Start Diagnosis
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
         </table>
     </section>
 
-    <!-- 6 -->
     <section>
-        <h3>6. Troubleshooting – No Oxygen Reading</h3>
-
-        <h4>Possible Causes (Most Common First)</h4>
-        <ol>
-            <li>Heater not operating or under-temperature</li>
-            <li>Reference air supply blocked or leaking</li>
-            <li>Zirconia sensor end-of-life</li>
-            <li>Signal cable or terminal issue</li>
-            <li>Converter electronics failure</li>
-        </ol>
-
-        <h4>Field Checks</h4>
+        <h3>Related Documentation</h3>
         <ul>
-            <li>Verify heater current and heater status</li>
-            <li>Check reference air flow at analyzer inlet</li>
-            <li>Inspect probe tip for cracks or deposits</li>
-            <li>Measure output signal at terminals</li>
-        </ul>
-
-        <h4>Corrective Actions</h4>
-        <ul>
-            <li>Restore heater power or replace heater</li>
-            <li>Clean or replace reference air filter</li>
-            <li>Replace sensor probe if degraded</li>
-            <li>Repair wiring or replace electronics</li>
-        </ul>
-
-        <p>
-            🔎 Refer also:
-            <a href="../../troubleshooting/no-signal.html">General No Analyzer Signal Guide</a>
-        </p>
-    </section>
-
-    <!-- 7 -->
-    <section>
-        <h3>7. Troubleshooting – Heater Alarm / Heater Error</h3>
-
-        <h4>Possible Causes</h4>
-        <ol>
-            <li>Heater open or short circuit</li>
-            <li>Power supply instability</li>
-            <li>Excessive flue temperature</li>
-            <li>Electronics board failure</li>
-        </ol>
-
-        <h4>Field Checks</h4>
-        <ul>
-            <li>Measure heater resistance</li>
-            <li>Check heater voltage at terminals</li>
-            <li>Inspect probe for overheating damage</li>
-            <li>Verify grounding and earthing</li>
-        </ul>
-
-        <h4>Corrective Actions</h4>
-        <ul>
-            <li>Replace heater assembly</li>
-            <li>Stabilize power supply</li>
-            <li>Correct installation location</li>
-            <li>Replace converter electronics if required</li>
-        </ul>
-    </section>
-
-    <!-- 8 -->
-    <section>
-        <h3>8. Troubleshooting – High Drift / Unstable Reading</h3>
-
-        <h4>Possible Causes</h4>
-        <ol>
-            <li>Sensor contamination due to dust or ash</li>
-            <li>Reference air leakage</li>
-            <li>Process temperature fluctuations</li>
-            <li>Electrical noise or poor grounding</li>
-        </ol>
-
-        <h4>Field Checks</h4>
-        <ul>
-            <li>Inspect probe tip for deposits</li>
-            <li>Check reference air tubing and fittings</li>
-            <li>Observe process conditions</li>
-            <li>Verify grounding continuity</li>
-        </ul>
-
-        <h4>Corrective Actions</h4>
-        <ul>
-            <li>Clean or replace probe</li>
-            <li>Fix reference air leaks</li>
-            <li>Improve probe shielding or location</li>
-            <li>Correct grounding and cable routing</li>
-        </ul>
-    </section>
-
-    <!-- 9 -->
-    <section>
-        <h3>9. Troubleshooting – Calibration Failure</h3>
-
-        <h4>Possible Causes</h4>
-        <ol>
-            <li>Calibration gas not reaching sensor</li>
-            <li>Solenoid valve malfunction</li>
-            <li>Incorrect gas concentration</li>
-            <li>Slow or degraded sensor response</li>
-        </ol>
-
-        <h4>Field Checks</h4>
-        <ul>
-            <li>Verify calibration gas pressure and flow</li>
-            <li>Manually actuate calibration valves</li>
-            <li>Check calibration gas certificate</li>
-            <li>Observe response time</li>
-        </ul>
-
-        <h4>Corrective Actions</h4>
-        <ul>
-            <li>Restore gas supply or tubing</li>
-            <li>Replace faulty solenoid valve</li>
-            <li>Use correct certified calibration gas</li>
-            <li>Replace sensor if response is slow</li>
-        </ul>
-    </section>
-
-    <!-- 10 -->
-    <section>
-        <h3>10. Calibration Guidelines</h3>
-        <ul>
-            <li>Allow full analyzer warm-up</li>
-            <li>Use certified span gas</li>
-            <li>Confirm valve operation before calibration</li>
-            <li>Allow sufficient stabilization time</li>
-        </ul>
-    </section>
-
-    <!-- 11 -->
-    <section>
-        <h3>11. Preventive Maintenance</h3>
-        <ul>
-            <li>Inspect reference air filter monthly</li>
-            <li>Check heater current during PM</li>
-            <li>Calibrate as per site SOP</li>
-            <li>Inspect probe for buildup or corrosion</li>
-        </ul>
-    </section>
-
-    <!-- 12 -->
-    <section>
-        <h3>12. Field Tips</h3>
-        <ul>
-            <li>Never assess sensor health before warm-up completes</li>
-            <li>Most false readings are reference air related</li>
-            <li>Sudden drift usually indicates contamination</li>
-            <li>Always check heater status first during faults</li>
+            <li>Installation & commissioning guidelines</li>
+            <li>Calibration best practices</li>
+            <li>Preventive maintenance recommendations</li>
         </ul>
     </section>
 
 </main>
 
 <footer>
-    <p>© 2026 AnalyzersHub.com</p>
+    <p>© 2026 AnalyzersHub.com | Built for Analyzer Technicians</p>
 </footer>
 
 </body>
