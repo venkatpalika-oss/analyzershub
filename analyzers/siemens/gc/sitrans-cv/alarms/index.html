@@ -1,64 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SITRANS CV Alarms | AnalyzersHub</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SITRANS CV Alarm Decision Trees | AnalyzersHub</title>
 
-  <link rel="stylesheet" href="../../../../../assets/css/style.css" />
+<link rel="stylesheet" href="../../../../../assets/css/style.css">
 
-  <style>
-    header{ position: sticky; top:0; z-index:999; box-shadow:0 2px 12px rgba(0,0,0,0.18); }
-    .wrap{ max-width:1100px; margin:0 auto; padding:18px 16px 40px; }
-    .breadcrumbs{ font-size:.95rem; margin:8px 0 14px; }
-    .breadcrumbs a{ color:#1f78b4; text-decoration:none; font-weight:900; }
-    .breadcrumbs a:hover{ text-decoration:underline; }
+<style>
+header{position:sticky;top:0;z-index:999;box-shadow:0 2px 12px rgba(0,0,0,.18)}
+.wrap{max-width:1100px;margin:0 auto;padding:20px}
+.hero{background:#0b3c5d;color:#fff;border-radius:12px;padding:20px}
+.hero h2{margin:0;color:#fff}
+.hero p{margin:6px 0 0;opacity:.95}
 
-    .hero-mini{
-      background:#0b3c5d; color:#fff; border-radius:12px;
-      padding:18px; box-shadow:0 6px 18px rgba(0,0,0,0.12);
-      margin-bottom:16px;
-    }
-    .hero-mini h2{ margin:0 0 6px; color:#fff; }
-    .hero-mini p{ margin:0; opacity:.95; }
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:20px}
+.card{background:#fff;border-radius:12px;padding:16px;border:1px solid #e0e6ec;box-shadow:0 4px 14px rgba(0,0,0,.08)}
+.card h3{margin-top:0;color:#0b3c5d}
+.card p{font-size:.95rem}
+.card a{font-weight:900;color:#1f78b4;text-decoration:none}
+.card a:hover{text-decoration:underline}
 
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap:16px; margin-top:14px;
-    }
-    .card{
-      background:#fff; border:1px solid #e0e6ec; border-radius:12px;
-      padding:16px; box-shadow:0 4px 14px rgba(0,0,0,0.08);
-      position:relative; overflow:hidden;
-      background-image: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(245,248,252,0.98));
-      transition: transform .18s ease, box-shadow .18s ease;
-    }
-    .card:hover{ transform: translateY(-3px); box-shadow:0 10px 26px rgba(0,0,0,0.14); }
-    .card::before{
-      content:""; position:absolute; top:0; left:0; width:100%; height:7px;
-      background: linear-gradient(90deg, #2e7d32, #6fcf97);
-    }
-    .card h3{ margin:6px 0 8px; color:#0b3c5d; }
-    .card p{ margin:0 0 12px; color:#333; line-height:1.45; font-size:.95rem; }
-
-    .btn{
-      display:inline-block; padding:10px 14px; border-radius:8px;
-      font-weight:900; text-decoration:none; border:1px solid rgba(0,0,0,0.10);
-    }
-    .btn-primary{ background:#1f78b4; color:#fff; }
-    .btn-primary:hover{ background:#155a8a; }
-    .btn-ghost{ background:#fff; color:#0b3c5d; }
-    .btn-ghost:hover{ background:#e9f2f9; }
-
-    .note{
-      background:#fff7ed; border-left:4px solid #f59e0b;
-      padding:12px; border-radius:10px; margin:14px 0;
-    }
-  </style>
+.breadcrumbs{font-size:.9rem;margin-bottom:14px}
+.breadcrumbs a{color:#1f78b4;font-weight:900;text-decoration:none}
+</style>
 </head>
 
 <body>
+
 <header>
   <h1>AnalyzersHub</h1>
   <nav>
@@ -68,53 +37,47 @@
 </header>
 
 <main class="wrap">
-  <div class="breadcrumbs">
-    <a href="../../../../../index.html">Home</a> →
-    <a href="../../../../../analyzers.html">Analyzer Search</a> →
-    <a href="../sitrans-cv.html">Siemens SITRANS CV</a> →
-    <span>Alarms</span>
+
+<div class="breadcrumbs">
+  <a href="../../../../../index.html">Home</a> →
+  <a href="../../../../../analyzers.html">Analyzer Search</a> →
+  <a href="../sitrans-cv.html">SITRANS CV</a> →
+  <span>Alarms</span>
+</div>
+
+<section class="hero">
+  <h2>Siemens SITRANS CV — Alarm Decision Trees</h2>
+  <p>Step-by-step troubleshooting paths for common GC alarms.</p>
+</section>
+
+<section class="grid">
+
+  <div class="card">
+    <h3>Carrier / Pressure / Flow Alarms</h3>
+    <p>Low carrier pressure, unstable flow, no injection, regulator issues.</p>
+    <a href="carrier-pressure.html">Open Decision Tree →</a>
   </div>
 
-  <section class="hero-mini">
-    <h2>Siemens SITRANS CV — Alarm Decision Trees</h2>
-    <p>Select an alarm group. Each page is a step-by-step decision tree for technicians.</p>
-  </section>
-
-  <div class="note">
-    <b>Next:</b> Tell me your most common SITRANS CV alarms (exact text). I will create the full decision-tree pages.
+  <div class="card">
+    <h3>Oven / Temperature Alarms</h3>
+    <p>Oven not ready, heater fault, temperature instability.</p>
+    <a href="oven-temperature.html">Open Decision Tree →</a>
   </div>
 
-  <section class="grid">
-
-    <div class="card">
-      <h3>Carrier / Pressure / Flow</h3>
-      <p>Low pressure, unstable carrier, leaks, regulator issues, restrictions.</p>
-      <a class="btn btn-primary" href="#">(Next) Build Page</a>
-    </div>
-
-    <div class="card">
-      <h3>Oven / Temperature</h3>
-      <p>Oven not ready, heater fault, sensor issues, unstable temperature.</p>
-      <a class="btn btn-primary" href="#">(Next) Build Page</a>
-    </div>
-
-    <div class="card">
-      <h3>Valve / Sequence</h3>
-      <p>Valves not switching, timing mismatch, pneumatic problems.</p>
-      <a class="btn btn-primary" href="#">(Next) Build Page</a>
-    </div>
-
-    <div class="card">
-      <h3>Comms / DCS / Quality Bad</h3>
-      <p>No update to DCS, bad quality, protocol or mapping issues.</p>
-      <a class="btn btn-primary" href="#">(Next) Build Page</a>
-    </div>
-
-  </section>
-
-  <div style="margin-top:18px;">
-    <a class="btn btn-ghost" href="../sitrans-cv.html">← Back to SITRANS CV</a>
+  <div class="card">
+    <h3>Valve / Sequence Alarms</h3>
+    <p>Valve not switching, incorrect timing, pneumatic issues.</p>
+    <a href="valve-sequence.html">Open Decision Tree →</a>
   </div>
+
+  <div class="card">
+    <h3>Communication / DCS Alarms</h3>
+    <p>Bad quality, stale values, Modbus / OPC issues.</p>
+    <a href="communications.html">Open Decision Tree →</a>
+  </div>
+
+</section>
+
 </main>
 
 <footer>Built for Analyzer Technicians</footer>
