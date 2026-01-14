@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SITRANS CV Communication / DCS Alarm | AnalyzersHub</title>
+
+<link rel="stylesheet" href="../../../../../assets/css/style.css">
+
+<style>
+header{position:sticky;top:0;z-index:999;box-shadow:0 2px 12px rgba(0,0,0,.18)}
+.wrap{max-width:1100px;margin:0 auto;padding:20px}
+.breadcrumbs{font-size:.9rem;margin-bottom:14px}
+.breadcrumbs a{color:#1f78b4;font-weight:900;text-decoration:none}
+
+.hero{background:#1f78b4;color:#fff;border-radius:12px;padding:20px;box-shadow:0 6px 18px rgba(0,0,0,.12)}
+.hero h2{margin:0;color:#fff}
+.hero p{margin:6px 0 0;opacity:.95}
+
+.section{background:#fff;border-radius:12px;padding:16px;margin-top:16px;border:1px solid #e0e6ec;box-shadow:0 4px 14px rgba(0,0,0,.08)}
+.section h3{margin-top:0;color:#0b3c5d}
+
+.step{background:#f6fbff;border-left:4px solid #1f78b4;padding:12px;border-radius:10px;margin:10px 0}
+.warn{background:#fff7ed;border-left:4px solid #f59e0b;padding:12px;border-radius:10px;margin:10px 0}
+.ok{background:#ecfdf5;border-left:4px solid #10b981;padding:12px;border-radius:10px;margin:10px 0}
+.bad{background:#fef2f2;border-left:4px solid #ef4444;padding:12px;border-radius:10px;margin:10px 0}
+
+ul{margin:8px 0 0 18px}
+li{margin:6px 0}
+code{background:#f2f4f7;padding:2px 6px;border-radius:6px}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>AnalyzersHub</h1>
+  <nav>
+    <a href="../../../../../index.html">Home</a>
+    <a href="../../../../../analyzers.html">Analyzer Search</a>
+  </nav>
+</header>
+
+<main class="wrap">
+
+<div class="breadcrumbs">
+  <a href="../../../../../index.html">Home</a> →
+  <a href="../../../../../analyzers.html">Analyzer Search</a> →
+  <a href="../sitrans-cv.html">SITRANS CV</a> →
+  <a href="index.html">Alarms</a> →
+  <span>Communications</span>
+</div>
+
+<section class="hero">
+  <h2>Communication / DCS Alarm</h2>
+  <p>Decision tree for “No update”, “Bad quality”, “Comms fail”, “OPC/Modbus error”.</p>
+</section>
+
+<section class="section">
+  <h3>Step 1 — Identify Where the Failure Is</h3>
+  <div class="step">
+    <ul>
+      <li><b>Case A:</b> Values update on analyzer locally, but not in DCS → network/protocol/mapping.</li>
+      <li><b>Case B:</b> Values do not update locally either → analyzer/run problem (check main page sections).</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <h3>Step 2 — Physical Network Checks</h3>
+  <div class="step">
+    <ul>
+      <li>Check Ethernet cable seated properly</li>
+      <li>Check switch port LEDs (link/activity)</li>
+      <li>If using fiber/media converter: check power and link</li>
+    </ul>
+  </div>
+  <div class="warn">
+    No link lights = physical issue → replace cable/port, check switch configuration.
+  </div>
+</section>
+
+<section class="section">
+  <h3>Step 3 — IP / Subnet / Gateway</h3>
+  <div class="step">
+    Verify:
+    <ul>
+      <li>IP address correct</li>
+      <li>Subnet mask correct</li>
+      <li>Gateway correct (if crossing VLAN/subnets)</li>
+      <li>No duplicate IP on network</li>
+    </ul>
+  </div>
+  <div class="warn">
+    Duplicate IP can cause intermittent update and bad quality.
+  </div>
+</section>
+
+<section class="section">
+  <h3>Step 4 — Protocol Layer (OPC / Modbus / Other)</h3>
+  <div class="step">
+    Check:
+    <ul>
+      <li>Protocol service status = RUNNING</li>
+      <li>Correct port open (ask IT/Automation if firewall rules exist)</li>
+      <li>Correct slave ID/register map (Modbus)</li>
+      <li>Correct OPC endpoint and certificate/trust (OPC UA if used)</li>
+    </ul>
+  </div>
+  <div class="warn">
+    If protocol restarted, wait 1–2 minutes then re-check DCS update.
+  </div>
+</section>
+
+<section class="section">
+  <h3>Step 5 — Tag Mapping / Scaling / Quality Flags</h3>
+  <div class="step">
+    Most common “bad quality” causes:
+    <ul>
+      <li>Wrong tag mapping (points shifted)</li>
+      <li>Wrong scaling/engineering units (CV/Wobbe)</li>
+      <li>DCS expecting faster update than GC cycle</li>
+      <li>Quality flag mapped incorrectly (e.g., always bad)</li>
+    </ul>
+  </div>
+  <div class="step">
+    Action:
+    <ul>
+      <li>Compare one value on analyzer screen with same tag in DCS</li>
+      <li>Verify update timestamp is changing each GC cycle</li>
+      <li>Confirm DCS scan time aligns with GC analysis time</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <h3>Escalation (If Still Not Fixed)</h3>
+  <div class="bad">
+    Send to automation/IT/vendor:
+    <ul>
+      <li>Analyzer IP/subnet/gateway</li>
+      <li>Protocol type + port</li>
+      <li>DCS tag list / register map</li>
+      <li>Screenshots: analyzer values + DCS values + alarm text</li>
+      <li>Switch port ID and link status</li>
+    </ul>
+  </div>
+  <div class="ok">
+    If local updates are stable and DCS updates after mapping fix → problem solved.
+  </div>
+</section>
+
+<div style="margin-top:20px">
+  <a href="index.html">← Back to SITRANS CV Alarms</a>
+</div>
+
+</main>
+
+<footer>Built for Analyzer Technicians</footer>
+</body>
+</html>
