@@ -3,104 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Siemens SITRANS CV | Troubleshooting | AnalyzersHub</title>
+  <title>SITRANS CV Alarms | AnalyzersHub</title>
 
   <link rel="stylesheet" href="../../../../../assets/css/style.css" />
 
   <style>
     header{ position: sticky; top:0; z-index:999; box-shadow:0 2px 12px rgba(0,0,0,0.18); }
-    .wrap{ max-width:1100px; margin:0 auto; padding:18px 16px 44px; }
-
+    .wrap{ max-width:1100px; margin:0 auto; padding:18px 16px 40px; }
     .breadcrumbs{ font-size:.95rem; margin:8px 0 14px; }
     .breadcrumbs a{ color:#1f78b4; text-decoration:none; font-weight:900; }
     .breadcrumbs a:hover{ text-decoration:underline; }
 
-    .hero{
+    .hero-mini{
       background:#0b3c5d; color:#fff; border-radius:12px;
       padding:18px; box-shadow:0 6px 18px rgba(0,0,0,0.12);
-      margin-bottom:18px;
+      margin-bottom:16px;
     }
-    .hero h2{ margin:0 0 6px; color:#fff; }
-    .hero p{ margin:0; opacity:.95; }
-
-    .tags{ margin-top:10px; }
-    .tag{
-      display:inline-block;
-      font-size:.82rem;
-      font-weight:900;
-      padding:6px 10px;
-      border-radius:999px;
-      background:#e9f2f9;
-      color:#0b3c5d;
-      margin:6px 6px 0 0;
-    }
-
-    .btn-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
-    .btn{
-      display:inline-block; padding:10px 14px; border-radius:8px;
-      font-weight:900; text-decoration:none; border:1px solid rgba(0,0,0,0.10);
-      transition: background .15s ease, transform .15s ease;
-    }
-    .btn:hover{ transform: translateY(-1px); }
-    .btn-primary{ background:#1f78b4; color:#fff !important; }
-    .btn-primary:hover{ background:#155a8a; }
-    .btn-ghost{ background:#fff; color:#0b3c5d !important; }
-    .btn-ghost:hover{ background:#e9f2f9; }
+    .hero-mini h2{ margin:0 0 6px; color:#fff; }
+    .hero-mini p{ margin:0; opacity:.95; }
 
     .grid{
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap:16px;
-      margin-top:14px;
+      gap:16px; margin-top:14px;
     }
     .card{
       background:#fff; border:1px solid #e0e6ec; border-radius:12px;
       padding:16px; box-shadow:0 4px 14px rgba(0,0,0,0.08);
       position:relative; overflow:hidden;
       background-image: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(245,248,252,0.98));
+      transition: transform .18s ease, box-shadow .18s ease;
     }
+    .card:hover{ transform: translateY(-3px); box-shadow:0 10px 26px rgba(0,0,0,0.14); }
     .card::before{
       content:""; position:absolute; top:0; left:0; width:100%; height:7px;
       background: linear-gradient(90deg, #2e7d32, #6fcf97);
     }
-    .card h3{ margin:6px 0 10px; color:#0b3c5d; }
-    .card p{ margin:0 0 10px; color:#333; line-height:1.45; }
-    .card a{ font-weight:900; color:#1f78b4; text-decoration:none; }
-    .card a:hover{ text-decoration:underline; }
+    .card h3{ margin:6px 0 8px; color:#0b3c5d; }
+    .card p{ margin:0 0 12px; color:#333; line-height:1.45; font-size:.95rem; }
 
-    .toc a{
-      display:block; margin:6px 0; font-weight:900;
-      color:#1f78b4; text-decoration:none;
+    .btn{
+      display:inline-block; padding:10px 14px; border-radius:8px;
+      font-weight:900; text-decoration:none; border:1px solid rgba(0,0,0,0.10);
     }
-    .toc a:hover{ text-decoration:underline; }
+    .btn-primary{ background:#1f78b4; color:#fff; }
+    .btn-primary:hover{ background:#155a8a; }
+    .btn-ghost{ background:#fff; color:#0b3c5d; }
+    .btn-ghost:hover{ background:#e9f2f9; }
 
-    .section{
-      background:#fff; border:1px solid #e0e6ec; border-radius:12px;
-      padding:16px; box-shadow:0 4px 14px rgba(0,0,0,0.08);
-      margin-top:14px;
-    }
-    .section h3{ margin-top:0; color:#0b3c5d; }
-
-    .step{
-      margin:10px 0;
-      padding:12px;
-      border-left:4px solid #1f78b4;
-      background:#f6fbff;
-      border-radius:10px;
-    }
-    .step b{ color:#0b3c5d; }
-
-    ul{ margin:8px 0 0 18px; }
-    li{ margin:6px 0; }
-    code{ background:#f2f4f7; padding:2px 6px; border-radius:6px; }
-
-    .warn{ background:#fff7ed; border-left:4px solid #f59e0b; padding:12px; border-radius:10px; margin:14px 0; }
-    .ok{ background:#ecfdf5; border-left:4px solid #10b981; padding:12px; border-radius:10px; margin:14px 0; }
-    .bad{ background:#fef2f2; border-left:4px solid #ef4444; padding:12px; border-radius:10px; margin:14px 0; }
-
-    @media (max-width:768px){
-      .wrap{ padding:14px 14px 36px; }
-      .hero h2{ font-size:1.65rem; line-height:1.15; }
+    .note{
+      background:#fff7ed; border-left:4px solid #f59e0b;
+      padding:12px; border-radius:10px; margin:14px 0;
     }
   </style>
 </head>
@@ -115,374 +68,53 @@
 </header>
 
 <main class="wrap">
-
   <div class="breadcrumbs">
     <a href="../../../../../index.html">Home</a> →
     <a href="../../../../../analyzers.html">Analyzer Search</a> →
-    <span>Siemens SITRANS CV</span>
+    <a href="../sitrans-cv.html">Siemens SITRANS CV</a> →
+    <span>Alarms</span>
   </div>
 
-  <section class="hero">
-    <h2>Siemens SITRANS CV (Process GC for CV/Wobbe)</h2>
-    <p>Technician-focused troubleshooting guide: quick checks → root cause → corrective action → verification.</p>
-
-    <div class="tags">
-      <span class="tag">GC</span>
-      <span class="tag">Calorific Value</span>
-      <span class="tag">Wobbe Index</span>
-      <span class="tag">Sampling</span>
-      <span class="tag">Oven</span>
-      <span class="tag">Valves</span>
-      <span class="tag">Comms</span>
-    </div>
-
-    <div class="btn-row">
-      <a class="btn btn-primary" href="alarms/index.html">Alarms →</a>
-      <a class="btn btn-ghost" href="../../../../../analyzers.html">Back to Search</a>
-    </div>
+  <section class="hero-mini">
+    <h2>Siemens SITRANS CV — Alarm Decision Trees</h2>
+    <p>Select an alarm group. Each page is a step-by-step decision tree for technicians.</p>
   </section>
 
-  <div class="warn">
-    <b>Safety first:</b> This is a general troubleshooting guide. Follow your plant permit, gas-handling, and isolation procedures.
-    For any gas line disconnection: depressurize/vent safely and leak test after reconnection.
+  <div class="note">
+    <b>Next:</b> Tell me your most common SITRANS CV alarms (exact text). I will create the full decision-tree pages.
   </div>
 
-  <section class="section toc">
-    <h3>Quick Navigation</h3>
-    <a href="alarms/index.html">0) Alarm Decision Trees</a>
-    <a href="#start">1) Startup & Health Checks</a>
-    <a href="#no-update">2) No Update / No Results / Stale Values</a>
-    <a href="#bad-quality">3) Bad Quality / Unstable CV-Wobbe</a>
-    <a href="#drift">4) Drift / Repeatability Issues</a>
-    <a href="#sample">5) Sample System Troubleshooting</a>
-    <a href="#carrier">6) Carrier / Pressure / Flow Issues</a>
-    <a href="#oven">7) Oven / Temperature Issues</a>
-    <a href="#valves">8) Valve / Sequence Issues</a>
-    <a href="#comms">9) DCS/Network/Communication Issues</a>
-    <a href="#pm">10) Preventive Maintenance</a>
-    <a href="#escalate">11) Escalation Checklist</a>
+  <section class="grid">
+
+    <div class="card">
+      <h3>Carrier / Pressure / Flow</h3>
+      <p>Low pressure, unstable carrier, leaks, regulator issues, restrictions.</p>
+      <a class="btn btn-primary" href="#">(Next) Build Page</a>
+    </div>
+
+    <div class="card">
+      <h3>Oven / Temperature</h3>
+      <p>Oven not ready, heater fault, sensor issues, unstable temperature.</p>
+      <a class="btn btn-primary" href="#">(Next) Build Page</a>
+    </div>
+
+    <div class="card">
+      <h3>Valve / Sequence</h3>
+      <p>Valves not switching, timing mismatch, pneumatic problems.</p>
+      <a class="btn btn-primary" href="#">(Next) Build Page</a>
+    </div>
+
+    <div class="card">
+      <h3>Comms / DCS / Quality Bad</h3>
+      <p>No update to DCS, bad quality, protocol or mapping issues.</p>
+      <a class="btn btn-primary" href="#">(Next) Build Page</a>
+    </div>
+
   </section>
 
-  <section class="section" id="start">
-    <h3>1) Startup & Health Checks</h3>
-
-    <div class="step">
-      <b>A — Visual inspection</b>
-      <ul>
-        <li>Check cabinet condition: dust, moisture, loose tubing, abnormal odor/heat.</li>
-        <li>Confirm utilities: stable power, instrument air (if used), carrier gas, sample supply.</li>
-        <li>Check sample conditioning: filters, drains, traps, heat tracing (if used).</li>
-      </ul>
-    </div>
-
-    <div class="step">
-      <b>B — Status & alarms</b>
-      <ul>
-        <li>Open local interface/software and check current alarms (record alarm text + time).</li>
-        <li>Confirm analyzer is in <b>RUN</b> and method/schedule is active.</li>
-        <li>Confirm last analysis timestamp is updating normally.</li>
-      </ul>
-    </div>
-
-    <div class="step">
-      <b>C — Quick checks (most common causes)</b>
-      <ul>
-        <li>Carrier supply pressure OK and stable.</li>
-        <li>Sample pressure/flow OK (no restriction/plugging).</li>
-        <li>Oven temperature at setpoint and stable.</li>
-      </ul>
-    </div>
-
-    <div class="ok">
-      <b>Healthy system signs:</b> stable pressures, stable oven temperature, repeatable runs, no active critical alarms.
-    </div>
-  </section>
-
-  <section class="section" id="no-update">
-    <h3>2) No Update / No Results / Stale Values</h3>
-
-    <div class="step">
-      <b>Symptoms</b>
-      <ul>
-        <li>DCS shows stale values (no update), bad quality, or zeros.</li>
-        <li>Local GC run not happening (no new timestamp) or results not calculated.</li>
-      </ul>
-    </div>
-
-    <div class="step">
-      <b>Check 1 — Is the GC running locally?</b>
-      <ul>
-        <li><b>If not running:</b> confirm schedule/method start, check interlocks, check critical alarms.</li>
-        <li><b>If running:</b> go to Check 2.</li>
-      </ul>
-    </div>
-
-    <div class="step">
-      <b>Check 2 — Are chromatograms/peaks present?</b>
-      <ul>
-        <li><b>No peaks:</b> likely sample not reaching / injection not happening / carrier problem → see sections 5–8.</li>
-        <li><b>Peaks present but no result:</b> suspect method/calculation/config or comms mapping → see section 9.</li>
-      </ul>
-    </div>
-
-    <div class="step">
-      <b>Check 3 — DCS link vs analyzer link</b>
-      <ul>
-        <li>If values update locally but not in DCS → comms/protocol/mapping issue.</li>
-        <li>If nothing updates locally either → GC run path or sampling/carrier/oven/valve issue.</li>
-      </ul>
-    </div>
-
-    <div class="bad">
-      <b>If urgent:</b> record (1) last good timestamp, (2) alarm list, (3) sample & carrier pressures, (4) oven temp, and escalate.
-    </div>
-  </section>
-
-  <section class="section" id="bad-quality">
-    <h3>3) Bad Quality / Unstable CV–Wobbe</h3>
-
-    <div class="step">
-      <b>Symptoms</b>
-      <ul>
-        <li>CV/Wobbe fluctuates more than normal.</li>
-        <li>Repeatability poor between runs.</li>
-        <li>Sudden step change without process reason.</li>
-      </ul>
-    </div>
-
-    <div class="step">
-      <b>Most common causes</b>
-      <ul>
-        <li>Sample conditioning issue (liquid carryover, water, heavy HC contamination).</li>
-        <li>Unstable sample pressure or flow restrictions.</li>
-        <li>Carrier pressure instability or small leaks.</li>
-        <li>Oven temperature instability.</li>
-        <li>Valve timing/sequence inconsistency.</li>
-      </ul>
-    </div>
-
-    <div class="step">
-      <b>Fix actions</b>
-      <ul>
-        <li>Drain traps, check coalescing filters, replace blocked sample filters.</li>
-        <li>Verify sample pressure regulator stability (no hunting).</li>
-        <li>Leak test around valve manifold and fittings.</li>
-        <li>Confirm oven at setpoint and stable for 15–20 min.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section" id="drift">
-    <h3>4) Drift / Repeatability Issues</h3>
-
-    <div class="step">
-      <b>Quick diagnosis</b>
-      <ul>
-        <li><b>Drift slowly over hours/days:</b> contamination, regulator creep, aging components.</li>
-        <li><b>Drift suddenly:</b> leaks, sample upset, method/config change, valve issue.</li>
-      </ul>
-    </div>
-
-    <div class="step">
-      <b>Checks</b>
-      <ul>
-        <li>Review trend: CV/Wobbe vs sample pressure vs carrier pressure vs oven temperature.</li>
-        <li>Run 2–3 repeat analyses on same stream and compare.</li>
-        <li>Verify calibration gas cylinder and regulator condition (no creep).</li>
-      </ul>
-    </div>
-
-    <div class="step">
-      <b>Fix actions</b>
-      <ul>
-        <li>Replace suspect regulators; leak test calibration line and switching valves.</li>
-        <li>Service sample conditioning to remove contamination source.</li>
-        <li>Restore method from last known good backup if configuration changed.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section" id="sample">
-    <h3>5) Sample System Troubleshooting</h3>
-
-    <div class="step">
-      <b>Symptoms</b>
-      <ul>
-        <li>No peaks / weak peaks / slow response.</li>
-        <li>Frequent filter plugging or liquid in traps.</li>
-        <li>Pressure alarms on sample side.</li>
-      </ul>
-    </div>
-
-    <div class="step">
-      <b>Checks</b>
-      <ul>
-        <li>Check sample filters/coalescers and replace if dirty.</li>
-        <li>Drain liquid traps and verify heat tracing (if used).</li>
-        <li>Check sample regulator and needle valve/restrictor for blockage.</li>
-        <li>Confirm sample supply pressure from process is available.</li>
-      </ul>
-    </div>
-
-    <div class="ok">
-      <b>Verification:</b> stable sample pressure/flow, consistent peak response, no new liquid accumulation.
-    </div>
-  </section>
-
-  <section class="section" id="carrier">
-    <h3>6) Carrier / Pressure / Flow Issues</h3>
-
-    <div class="step">
-      <b>Symptoms</b>
-      <ul>
-        <li>No peaks, unstable retention, noisy baseline, “carrier low” type alarms.</li>
-      </ul>
-    </div>
-
-    <div class="step">
-      <b>Checks</b>
-      <ul>
-        <li>Confirm cylinder pressure and regulator outlet setpoint.</li>
-        <li>Check for regulator creep or oscillation (hunting).</li>
-        <li>Leak test carrier path, valve block, detector fittings.</li>
-        <li>Inspect filters/restrictors for blockage.</li>
-      </ul>
-    </div>
-
-    <div class="step">
-      <b>Fix actions</b>
-      <ul>
-        <li>Replace empty cylinder; open valves fully.</li>
-        <li>Replace faulty regulator; repair leaks; replace ferrules.</li>
-        <li>Replace clogged filters/restrictors and recheck stability.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section" id="oven">
-    <h3>7) Oven / Temperature Issues</h3>
-
-    <div class="step">
-      <b>Symptoms</b>
-      <ul>
-        <li>Oven not ready, slow ramp, unstable temperature, heater/sensor alarms.</li>
-      </ul>
-    </div>
-
-    <div class="step">
-      <b>Checks</b>
-      <ul>
-        <li>Compare setpoint vs actual temperature; look for oscillations.</li>
-        <li>Check door seal/gasket and cabinet airflow for heat loss.</li>
-        <li>Check heater power status and sensor readings (open/short indications).</li>
-      </ul>
-    </div>
-
-    <div class="step">
-      <b>Fix actions</b>
-      <ul>
-        <li>Correct enclosure sealing/airflow issues.</li>
-        <li>Repair wiring, replace faulty sensor/heater as per plant procedure.</li>
-        <li>Confirm stable temperature for 15–20 minutes then repeat run.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section" id="valves">
-    <h3>8) Valve / Sequence Issues</h3>
-
-    <div class="step">
-      <b>Symptoms</b>
-      <ul>
-        <li>No injection events, wrong peak order, retention shift, valves not switching.</li>
-      </ul>
-    </div>
-
-    <div class="step">
-      <b>Checks</b>
-      <ul>
-        <li>Confirm pneumatic supply (instrument air) and regulator.</li>
-        <li>Listen/observe valve switching during a run.</li>
-        <li>Check solenoid status/diagnostics (command vs actual).</li>
-        <li>Leak test valve manifold and check for contamination in pneumatic lines.</li>
-      </ul>
-    </div>
-
-    <div class="step">
-      <b>Fix actions</b>
-      <ul>
-        <li>Restore air supply; drain water in air lines; replace sticky solenoids.</li>
-        <li>Verify method timing vs last known good backup.</li>
-        <li>Service/replace leaking or stuck valves if suspected.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section" id="comms">
-    <h3>9) DCS/Network/Communication Issues</h3>
-
-    <div class="step">
-      <b>Symptoms</b>
-      <ul>
-        <li>DCS shows bad quality, stale values, or no update.</li>
-        <li>Analyzer shows values locally but not in DCS.</li>
-      </ul>
-    </div>
-
-    <div class="step">
-      <b>Checks</b>
-      <ul>
-        <li>Verify network link (cable/switch LED), IP/subnet/gateway.</li>
-        <li>Confirm protocol status (Modbus/OPC/etc.) is running.</li>
-        <li>Check mapping/tag list and scaling (especially CV/Wobbe units).</li>
-        <li>Look for time sync issues if historian uses timestamps.</li>
-      </ul>
-    </div>
-
-    <div class="step">
-      <b>Fix actions</b>
-      <ul>
-        <li>Correct IP settings and eliminate duplicate IP conflicts.</li>
-        <li>Restart comm service (if allowed) and verify tag mapping with DCS team.</li>
-        <li>Confirm quality flags and update rate match DCS expectations.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section" id="pm">
-    <h3>10) Preventive Maintenance</h3>
-    <ul>
-      <li><b>Weekly:</b> check sample filters/traps, drain liquids, verify pressures stable.</li>
-      <li><b>Monthly:</b> leak check critical fittings, review drift/quality trends, verify calibration.</li>
-      <li><b>Quarterly:</b> verify valve actuation, service sample conditioning, check oven stability.</li>
-      <li><b>Planned:</b> maintain regulators, solenoids, and replace worn components proactively.</li>
-    </ul>
-  </section>
-
-  <section class="section" id="escalate">
-    <h3>11) Escalation Checklist (Before Vendor Support)</h3>
-
-    <div class="step">
-      <b>Collect these details</b>
-      <ul>
-        <li>Analyzer model + serial (and module IDs if shown)</li>
-        <li>Alarm text + timestamp + screenshots</li>
-        <li>Last good run time + last calibration time</li>
-        <li>Sample pressure/flow, carrier pressure, oven temperature (actual vs setpoint)</li>
-        <li>What you already tried (filters replaced, leak test, restart, etc.)</li>
-      </ul>
-    </div>
-
-    <div class="ok">
-      <b>Tip:</b> If you send me 3–6 common SITRANS CV alarm messages (exact text), I’ll build the complete alarm decision-tree pages immediately.
-    </div>
-
-    <div class="btn-row" style="margin-top:14px;">
-      <a class="btn btn-primary" href="alarms/index.html">Open Alarms →</a>
-      <a class="btn btn-ghost" href="../../../../../analyzers.html">Back to Analyzer Search</a>
-    </div>
-  </section>
-
+  <div style="margin-top:18px;">
+    <a class="btn btn-ghost" href="../sitrans-cv.html">← Back to SITRANS CV</a>
+  </div>
 </main>
 
 <footer>Built for Analyzer Technicians</footer>
