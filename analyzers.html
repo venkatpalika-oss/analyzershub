@@ -8,14 +8,13 @@
   <!-- Keep your existing site styling -->
   <link rel="stylesheet" href="assets/css/style.css" />
 
-  <!-- Safe additions: search bar + small layout helpers -->
   <style>
-    .search-wrap {
+    .search-wrap{
       max-width: 900px;
       margin: 18px auto 0;
       padding: 0 16px;
     }
-    .search-input {
+    .search-input{
       width: 100%;
       padding: 14px 14px;
       border-radius: 10px;
@@ -25,28 +24,11 @@
       outline: none;
       font-size: 1rem;
     }
-    .search-input::placeholder {
-      color: rgba(255,255,255,0.6);
-    }
-    .section-title {
-      margin-top: 28px;
-    }
-    .card .meta {
-      opacity: 0.85;
-      font-size: 0.92rem;
-      line-height: 1.35;
-    }
-    .card .links {
-      margin-top: 10px;
-    }
-    .card .links a {
-      margin-right: 12px;
-      white-space: nowrap;
-    }
-    /* Hidden cards when searching */
-    .card.is-hidden {
-      display: none !important;
-    }
+    .search-input::placeholder{ color: rgba(255,255,255,0.6); }
+    .card .meta{ opacity: .88; font-size: .92rem; line-height: 1.35; }
+    .card .links{ margin-top: 10px; }
+    .card .links a{ margin-right: 12px; white-space: nowrap; }
+    .card.is-hidden{ display:none !important; }
   </style>
 </head>
 
@@ -60,8 +42,6 @@
   </nav>
 </header>
 
-<!-- Keep the look consistent with your site. If your old analyzers page had a hero,
-     you can add it here later. For now we keep it clean + functional. -->
 <main>
 
   <h3 class="section-title">Analyzer Search</h3>
@@ -74,14 +54,14 @@
            placeholder="Type to search… (ZR22G, OX400, AZ10, GC8000, Siemens, Agilent, ABB)" />
   </div>
 
-  <!-- ================= OXYGEN / FIELD ANALYZERS (OLD WORKING LINKS) ================= -->
-  <h3 class="section-title" style="max-width:1200px;margin-left:auto;margin-right:auto;padding:0 16px;">
+  <!-- ================= OXYGEN / FIELD ANALYZERS (KEEP YOUR WORKING PATHS) ================= -->
+  <h3 class="section-title" style="max-width:1200px;margin:28px auto 0;padding:0 16px;">
     Oxygen & Field Analyzers
   </h3>
 
   <div class="analyzer-grid" style="margin-top:14px;">
 
-    <!-- Yokogawa (flat paths - preserve) -->
+    <!-- Yokogawa (flat paths – confirmed working) -->
     <div class="card" data-search="yokogawa zr22g oxygen analyzer zirconia">
       <h4>Yokogawa ZR22G</h4>
       <p class="meta">Zirconia oxygen analyzer for combustion control with troubleshooting and alarm guidance.</p>
@@ -106,7 +86,7 @@
       </div>
     </div>
 
-    <!-- Rosemount (flat paths - preserve) -->
+    <!-- Rosemount (keep your original structure) -->
     <div class="card" data-search="rosemount 6888 oxygen analyzer zirconia">
       <h4>Rosemount 6888</h4>
       <p class="meta">Robust zirconia oxygen analyzer for industrial furnaces and boilers.</p>
@@ -115,12 +95,12 @@
       </div>
     </div>
 
-    <!-- ABB AZ Series (flat paths - same as other analyzers) -->
+    <!-- ABB AZ Series (FIXED: folder-style paths to stop 404) -->
     <div class="card" data-search="abb az10 oxygen analyzer zirconia">
       <h4>ABB AZ10</h4>
       <p class="meta">Compact zirconia oxygen analyzer for combustion and process monitoring.</p>
       <div class="links">
-        <a href="analyzers/abb/az10.html">Open Analyzer →</a>
+        <a href="analyzers/abb/az10/az10.html">Open Analyzer →</a>
       </div>
     </div>
 
@@ -128,7 +108,7 @@
       <h4>ABB AZ20</h4>
       <p class="meta">Advanced zirconia oxygen analyzer with improved diagnostics and stability.</p>
       <div class="links">
-        <a href="analyzers/abb/az20.html">Open Analyzer →</a>
+        <a href="analyzers/abb/az20/az20.html">Open Analyzer →</a>
       </div>
     </div>
 
@@ -136,7 +116,7 @@
       <h4>ABB AZ25</h4>
       <p class="meta">Zirconia oxygen analyzer with integrated diagnostics.</p>
       <div class="links">
-        <a href="analyzers/abb/az25.html">Open Analyzer →</a>
+        <a href="analyzers/abb/az25/az25.html">Open Analyzer →</a>
       </div>
     </div>
 
@@ -144,7 +124,7 @@
       <h4>ABB AZ30</h4>
       <p class="meta">High-accuracy oxygen analyzer designed for demanding process control.</p>
       <div class="links">
-        <a href="analyzers/abb/az30.html">Open Analyzer →</a>
+        <a href="analyzers/abb/az30/az30.html">Open Analyzer →</a>
       </div>
     </div>
 
@@ -152,20 +132,19 @@
       <h4>ABB AZ40</h4>
       <p class="meta">Premium oxygen analyzer with advanced communications and performance features.</p>
       <div class="links">
-        <a href="analyzers/abb/az40.html">Open Analyzer →</a>
+        <a href="analyzers/abb/az40/az40.html">Open Analyzer →</a>
       </div>
     </div>
 
   </div>
 
-  <!-- ================= GAS CHROMATOGRAPHS (NEW GC PAGES) ================= -->
-  <h3 class="section-title" style="max-width:1200px;margin-left:auto;margin-right:auto;padding:0 16px;margin-top:34px;">
+  <!-- ================= GAS CHROMATOGRAPHS (NEW FOLDER-STYLE PAGES) ================= -->
+  <h3 class="section-title" style="max-width:1200px;margin:34px auto 0;padding:0 16px;">
     Gas Chromatographs (GC)
   </h3>
 
   <div class="analyzer-grid" style="margin-top:14px;">
 
-    <!-- Yokogawa GC (new folder style) -->
     <div class="card" data-search="yokogawa gc8000 process gas chromatograph gc">
       <h4>Yokogawa GC8000</h4>
       <p class="meta">Process gas chromatograph for continuous online gas composition monitoring.</p>
@@ -174,7 +153,6 @@
       </div>
     </div>
 
-    <!-- Siemens -->
     <div class="card" data-search="siemens maxum edition ii process gc chromatograph">
       <h4>Siemens MAXUM Edition II</h4>
       <p class="meta">Flexible and reliable process GC for refineries and petrochemical plants.</p>
@@ -191,40 +169,6 @@
       </div>
     </div>
 
-    <!-- ABB GCs (new folder style) -->
-    <div class="card" data-search="abb pgc5000b smart oven process gc chromatograph">
-      <h4>ABB PGC5000B (Smart Oven)</h4>
-      <p class="meta">Smart oven process GC for industrial gas analysis.</p>
-      <div class="links">
-        <a href="analyzers/abb/gc/pgc5000b/pgc5000b.html">Open Analyzer →</a>
-      </div>
-    </div>
-
-    <div class="card" data-search="abb pgc5000c smart oven process gc chromatograph">
-      <h4>ABB PGC5000C (Smart Oven)</h4>
-      <p class="meta">Advanced smart oven GC for demanding process applications.</p>
-      <div class="links">
-        <a href="analyzers/abb/gc/pgc5000c/pgc5000c.html">Open Analyzer →</a>
-      </div>
-    </div>
-
-    <div class="card" data-search="abb pgc5007b total sulfur analysis gc chromatograph">
-      <h4>ABB PGC5007B (Total Sulfur)</h4>
-      <p class="meta">Process GC solution used for total sulfur analysis applications.</p>
-      <div class="links">
-        <a href="analyzers/abb/gc/pgc5007b/pgc5007b.html">Open Analyzer →</a>
-      </div>
-    </div>
-
-    <div class="card" data-search="abb portable ngc natural gas chromatograph portable gc">
-      <h4>ABB Portable NGC</h4>
-      <p class="meta">Portable natural gas chromatograph for field analysis and diagnostics.</p>
-      <div class="links">
-        <a href="analyzers/abb/gc/portable-ngc/portable-ngc.html">Open Analyzer →</a>
-      </div>
-    </div>
-
-    <!-- Agilent -->
     <div class="card" data-search="agilent 8850 gc system chromatograph">
       <h4>Agilent 8850 GC System</h4>
       <p class="meta">Compact GC system for routine laboratory and industrial analysis.</p>
@@ -235,7 +179,7 @@
 
     <div class="card" data-search="agilent 8860 gc system chromatograph">
       <h4>Agilent 8860 GC System</h4>
-      <p class="meta">Advanced GC with improved automation and diagnostics.</p>
+      <p class="meta">Advanced GC with enhanced automation and diagnostics.</p>
       <div class="links">
         <a href="analyzers/agilent/gc/8860/8860.html">Open Analyzer →</a>
       </div>
@@ -243,7 +187,7 @@
 
     <div class="card" data-search="agilent 8890 gc system chromatograph">
       <h4>Agilent 8890 GC System</h4>
-      <p class="meta">High-performance GC for mission-critical analytical applications.</p>
+      <p class="meta">High-performance GC for mission-critical applications.</p>
       <div class="links">
         <a href="analyzers/agilent/gc/8890/8890.html">Open Analyzer →</a>
       </div>
