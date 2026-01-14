@@ -5,8 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AnalyzersHub | Industrial Analyzer Knowledge Hub</title>
 
-  <!-- DO NOT CHANGE: your existing CSS controls hero + layout -->
+  <!-- Your existing CSS (keeps site theme) -->
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Enhancements (safe overrides) -->
+  <style>
+    /* Sticky header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    }
+
+    /* Hero text glow (professional) */
+    .hero-content h2 {
+      text-shadow: 0 0 18px rgba(0,0,0,0.55), 0 0 26px rgba(31,120,180,0.35);
+    }
+
+    /* Improve card hover (safe) */
+    .card {
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+    }
+
+    /* Mobile hero tuning */
+    @media (max-width: 768px) {
+      .hero { min-height: 420px; }
+      .hero-content { padding: 14px; }
+      .hero-content h2 { font-size: 2.1rem; line-height: 1.15; }
+      .hero-content p { font-size: 1.05rem; line-height: 1.35; }
+      .hero-content a { padding: 12px 20px; }
+    }
+  </style>
 </head>
 
 <body>
@@ -19,7 +53,7 @@
   </nav>
 </header>
 
-<!-- HERO (banner image comes from CSS) -->
+<!-- HERO (background image comes from your CSS .hero rule) -->
 <section class="hero">
   <div class="hero-content">
     <h2>Industrial Analyzer Knowledge Hub</h2>
@@ -59,7 +93,7 @@
       <a href="analyzers/rosemount/6888.html">Open Analyzer →</a>
     </div>
 
-    <!-- ===== ABB AZ SERIES (FIXED PATHS) ===== -->
+    <!-- ===== ABB AZ SERIES (FOLDER PATHS) ===== -->
     <div class="card">
       <h4>ABB AZ10</h4>
       <p>Compact zirconia oxygen analyzer for combustion monitoring.</p>
@@ -92,7 +126,7 @@
 
   </div>
 
-  <!-- ===== DATA FLOW IMAGE (UNCHANGED) ===== -->
+  <!-- ===== DATA FLOW IMAGE (UNCHANGED PATH) ===== -->
   <div class="data-flow">
     <h3 class="section-title">Analyzer Data Flow to DCS</h3>
     <img src="assets/images/data_flow_to_dcs.png" alt="Analyzer data flow to DCS">
