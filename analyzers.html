@@ -5,184 +5,100 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Analyzer Search | AnalyzersHub</title>
 
-  <!-- Keep your existing base site styling -->
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <style>
-    /* keep header sticky + clean */
-    header{
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-    }
+    header{ position: sticky; top:0; z-index:999; box-shadow:0 2px 12px rgba(0,0,0,0.18); }
 
-    .page-wrap{
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 18px 16px 40px;
-    }
+    .page-wrap{ max-width:1200px; margin:0 auto; padding:18px 16px 40px; }
+    .page-title{ margin:10px 0 8px; }
+    .page-subtitle{ margin:0 0 14px; opacity:.9; }
 
-    .page-title{
-      margin: 10px 0 8px;
-    }
-
-    .page-subtitle{
-      margin: 0 0 14px;
-      opacity: 0.9;
-    }
-
-    /* search bar */
-    .search-wrap{
-      margin: 12px 0 18px;
-      display: flex;
-      justify-content: center;
-    }
+    .search-wrap{ margin:12px 0 18px; display:flex; justify-content:center; }
     .search-input{
-      width: 100%;
-      max-width: 900px;
-      padding: 14px 14px;
-      border-radius: 10px;
-      border: 1px solid rgba(0,0,0,0.15);
-      background: #ffffff;
-      color: #222;
-      outline: none;
-      font-size: 1rem;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      width:100%; max-width:900px; padding:14px 14px;
+      border-radius:10px; border:1px solid rgba(0,0,0,0.15);
+      background:#fff; color:#222; outline:none; font-size:1rem;
+      box-shadow:0 3px 10px rgba(0,0,0,0.08);
     }
-    .search-input::placeholder{
-      color: rgba(34,34,34,0.6);
-    }
+    .search-input::placeholder{ color:rgba(34,34,34,0.6); }
 
-    /* section headings */
     .section-title-lite{
-      margin: 26px 0 10px;
-      color: #0b3c5d;
-      font-size: 1.2rem;
-      font-weight: 900;
-      letter-spacing: 0.2px;
-      text-align: center;
+      margin:26px 0 10px; color:#0b3c5d; font-size:1.2rem;
+      font-weight:900; letter-spacing:0.2px; text-align:center;
     }
 
-    /* grid + cards */
     .analyzer-grid{
-      display: grid;
+      display:grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 18px;
-      margin-top: 10px;
+      gap:18px;
+      margin-top:10px;
     }
 
     .analyzer-card{
-      position: relative;
-      overflow: hidden;
-      border-radius: 12px;
-      padding: 18px;
-      border: 1px solid #e0e6ec;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      position:relative; overflow:hidden;
+      border-radius:12px; padding:18px;
+      border:1px solid #e0e6ec;
+      box-shadow:0 4px 14px rgba(0,0,0,0.08);
       transition: transform .18s ease, box-shadow .18s ease;
-
-      /* subtle light industrial pattern */
-      background-image:
-        linear-gradient(135deg, rgba(255,255,255,0.98), rgba(245,248,252,0.98));
+      background-image: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(245,248,252,0.98));
     }
+    .analyzer-card:hover{ transform: translateY(-3px); box-shadow:0 10px 26px rgba(0,0,0,0.14); }
 
-    .analyzer-card:hover{
-      transform: translateY(-3px);
-      box-shadow: 0 10px 26px rgba(0,0,0,0.14);
-    }
-
-    /* Top gradient strip */
     .analyzer-card::before{
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 7px;
-      background: #d1d5db; /* default */
+      content:""; position:absolute; top:0; left:0; width:100%; height:7px;
+      background:#d1d5db;
     }
 
     .analyzer-card h4{
-      margin: 0 0 8px 0;
-      color: #0b3c5d;
-      font-size: 1.05rem;
-      font-weight: 900;
-      letter-spacing: 0.2px;
+      margin:0 0 8px 0;
+      color:#0b3c5d;
+      font-size:1.05rem;
+      font-weight:900;
+      letter-spacing:0.2px;
     }
-
     .analyzer-card p{
-      margin: 0 0 14px 0;
-      color: #333;
-      line-height: 1.45;
-      font-size: 0.95rem;
+      margin:0 0 14px 0;
+      color:#333;
+      line-height:1.45;
+      font-size:0.95rem;
     }
 
-    /* button row */
-    .btn-row{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 6px;
-    }
-
+    .btn-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:6px; }
     .btn{
-      display: inline-block;
-      padding: 10px 14px;
-      border-radius: 8px;
-      font-weight: 900;
-      text-decoration: none;
-      border: 1px solid rgba(0,0,0,0.10);
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:8px;
+      font-weight:900;
+      text-decoration:none;
+      border:1px solid rgba(0,0,0,0.10);
       transition: background .15s ease, transform .15s ease;
     }
     .btn:hover{ transform: translateY(-1px); }
 
-    .btn-open{
-      background: #1f78b4;
-      color: #fff !important;
-    }
-    .btn-open:hover{ background: #155a8a; }
+    .btn-open{ background:#1f78b4; color:#fff !important; }
+    .btn-open:hover{ background:#155a8a; }
 
-    .btn-alarm{
-      background: #ffffff;
-      color: #0b3c5d !important;
-    }
-    .btn-alarm:hover{ background: #e9f2f9; }
+    .btn-alarm{ background:#fff; color:#0b3c5d !important; }
+    .btn-alarm:hover{ background:#e9f2f9; }
 
-    /* Hide cards when searching */
-    .is-hidden{ display: none !important; }
+    .is-hidden{ display:none !important; }
 
-    /* ================= COLOR CODING / PATTERNS ================= */
+    /* Color coding */
+    .analyzer-card[data-search*="oxygen"]{ border-left:5px solid #1f78b4; }
+    .analyzer-card[data-search*="oxygen"]::before{ background: linear-gradient(90deg, #1f78b4, #6fb6e9); }
 
-    /* Oxygen analyzers (blue) */
-    .analyzer-card[data-search*="oxygen"]{
-      border-left: 5px solid #1f78b4;
-    }
-    .analyzer-card[data-search*="oxygen"]::before{
-      background: linear-gradient(90deg, #1f78b4, #6fb6e9);
-    }
+    .analyzer-card[data-search*="abb"]{ border-left:5px solid #0b3c5d; }
+    .analyzer-card[data-search*="abb"]::before{ background: linear-gradient(90deg, #0b3c5d, #1f78b4); }
 
-    /* ABB analyzers (stronger deep blue) */
-    .analyzer-card[data-search*="abb"]{
-      border-left: 5px solid #0b3c5d;
-    }
-    .analyzer-card[data-search*="abb"]::before{
-      background: linear-gradient(90deg, #0b3c5d, #1f78b4);
-    }
-
-    /* Gas Chromatographs (green) */
     .analyzer-card[data-search*="gc"],
-    .analyzer-card[data-search*="chromatograph"]{
-      border-left: 5px solid #2e7d32;
-    }
+    .analyzer-card[data-search*="chromatograph"]{ border-left:5px solid #2e7d32; }
     .analyzer-card[data-search*="gc"]::before,
-    .analyzer-card[data-search*="chromatograph"]::before{
-      background: linear-gradient(90deg, #2e7d32, #6fcf97);
-    }
+    .analyzer-card[data-search*="chromatograph"]::before{ background: linear-gradient(90deg, #2e7d32, #6fcf97); }
 
-    /* mobile tweaks */
-    @media (max-width: 768px){
-      .page-wrap{ padding: 14px 14px 34px; }
-      .search-input{ padding: 13px 12px; }
+    @media (max-width:768px){
+      .page-wrap{ padding:14px 14px 34px; }
+      .search-input{ padding:13px 12px; }
     }
   </style>
 </head>
@@ -209,9 +125,8 @@
            placeholder="Type to search… (ZR22G, OX400, AZ10, GC8000, Siemens, Agilent, ABB)" />
   </div>
 
-  <!-- ================= Oxygen & Field Analyzers ================= -->
+  <!-- Oxygen & Field -->
   <div class="section-title-lite">Oxygen & Field Analyzers</div>
-
   <div class="analyzer-grid">
 
     <div class="analyzer-card" data-search="yokogawa zr22g oxygen analyzer zirconia">
@@ -289,9 +204,8 @@
 
   </div>
 
-  <!-- ================= Gas Chromatographs ================= -->
+  <!-- GC -->
   <div class="section-title-lite" style="margin-top:34px;">Gas Chromatographs (GC)</div>
-
   <div class="analyzer-grid">
 
     <div class="analyzer-card" data-search="yokogawa gc8000 gas chromatograph process gc">
@@ -307,6 +221,7 @@
       <p>Flexible and reliable process GC for refineries and petrochemical plants.</p>
       <div class="btn-row">
         <a class="btn btn-open" href="analyzers/siemens/gc/maxum-ii/maxum-ii.html">Open Analyzer →</a>
+        <a class="btn btn-alarm" href="analyzers/siemens/gc/maxum-ii/alarms/index.html">Alarms →</a>
       </div>
     </div>
 
@@ -354,9 +269,7 @@
 
 </main>
 
-<footer>
-  Built for Analyzer Technicians
-</footer>
+<footer>Built for Analyzer Technicians</footer>
 
 <script>
   (function () {
@@ -365,10 +278,7 @@
 
     function applyFilter() {
       const q = (input.value || "").trim().toLowerCase();
-      if (!q) {
-        cards.forEach(c => c.classList.remove("is-hidden"));
-        return;
-      }
+      if (!q) { cards.forEach(c => c.classList.remove("is-hidden")); return; }
       cards.forEach(card => {
         const hay = (card.getAttribute("data-search") || "").toLowerCase();
         card.classList.toggle("is-hidden", !hay.includes(q));
