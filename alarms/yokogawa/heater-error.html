@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Yokogawa Heater Error Alarm | AnalyzersHub</title>
-    <meta name="description" content="Yokogawa heater error alarm meaning, causes, checks, and corrective actions for zirconia oxygen analyzers.">
+    <title>Yokogawa ZR22G Heater Error Alarm | AnalyzersHub</title>
+
+    <meta name="description" content="Yokogawa ZR22G heater error alarm troubleshooting. Causes, field checks, corrective actions, and decision tree for zirconia oxygen analyzers.">
+    <meta name="keywords" content="ZR22G heater error, Yokogawa oxygen analyzer heater alarm, zirconia analyzer troubleshooting">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
+
 <body>
 
 <header>
@@ -14,42 +18,59 @@
     <nav>
         <a href="../../index.html">Home</a>
         <a href="../../analyzers.html">Analyzers</a>
+        <a href="index.html">Yokogawa Alarms</a>
     </nav>
 </header>
 
 <main>
 
     <h2>Alarm: Heater Error</h2>
+
     <p><strong>Manufacturer:</strong> Yokogawa</p>
-    <p><strong>Applies To:</strong> ZR22G, other zirconia O₂ analyzers</p>
+    <p><strong>Analyzer:</strong> ZR22G Zirconia Oxygen Analyzer</p>
+
+    <hr>
 
     <section>
         <h3>Alarm Description</h3>
         <p>
             The Heater Error alarm indicates that the zirconia sensor heater is not
             operating within the required temperature range. Accurate oxygen
-            measurement is not possible without proper heater operation.
+            measurement is not possible unless the sensor heater is functioning
+            correctly.
         </p>
+    </section>
+
+    <section>
+        <h3>Typical Symptoms</h3>
+        <ul>
+            <li>Oxygen reading frozen, zero, or invalid</li>
+            <li>Analyzer stuck in warm-up state</li>
+            <li>Repeated heater-related alarms after power-up</li>
+            <li>Sudden signal loss following process temperature increase</li>
+        </ul>
     </section>
 
     <section>
         <h3>Probable Causes (Most Common First)</h3>
         <ol>
-            <li>Heater open circuit or burnout</li>
+            <li>Heater element open circuit or burnout</li>
             <li>Heater power supply failure</li>
-            <li>Loose or damaged heater wiring</li>
-            <li>Excessive process temperature</li>
-            <li>Electronics board fault</li>
+            <li>Loose, damaged, or corroded heater wiring</li>
+            <li>Excessive process or flue gas temperature</li>
+            <li>Electronics module malfunction</li>
         </ol>
     </section>
 
     <section>
-        <h3>Field Checks</h3>
+        <h3>Field Checks (Recommended Order)</h3>
         <ul>
+            <li>Verify analyzer power supply and fuses</li>
+            <li>Check heater LED/status indication on the converter</li>
             <li>Measure heater resistance and compare with specifications</li>
-            <li>Verify heater voltage at analyzer terminals</li>
-            <li>Inspect wiring connectors for looseness or corrosion</li>
-            <li>Check flue temperature at probe location</li>
+            <li>Verify heater voltage at probe terminals</li>
+            <li>Inspect wiring and connectors for looseness or corrosion</li>
+            <li>Confirm process temperature is within probe limits</li>
         </ul>
     </section>
 
@@ -57,34 +78,59 @@
         <h3>Corrective Actions</h3>
         <ul>
             <li>Replace heater assembly if resistance is abnormal</li>
-            <li>Restore or stabilize power supply</li>
-            <li>Repair or replace damaged wiring</li>
-            <li>Relocate probe if temperature exceeds limits</li>
-            <li>Replace electronics module if required</li>
+            <li>Restore or stabilize heater power supply</li>
+            <li>Repair or replace damaged heater wiring</li>
+            <li>Relocate probe or install heat shield if temperature is excessive</li>
+            <li>Replace electronics module if heater control fails</li>
         </ul>
     </section>
 
     <section>
         <h3>Impact on Measurement</h3>
         <p>
-            When a heater error is active, oxygen readings are unreliable and should
-            not be used for combustion control or reporting.
+            When a heater error is active, oxygen measurement is unreliable and must
+            not be used for combustion control or emissions reporting. The alarm must
+            be cleared before returning the analyzer to service.
         </p>
     </section>
 
     <section>
-        <h3>Related Analyzer Pages</h3>
+        <h3>Decision Tree Diagnosis</h3>
+        <p>
+            Follow the structured diagnostic flow below to identify the root cause:
+        </p>
+        <p>
+            👉 <a href="decision-trees/zr22g-heater-error.html">
+            ZR22G Heater Error Decision Tree
+            </a>
+        </p>
+    </section>
+
+    <section>
+        <h3>Related Pages</h3>
         <ul>
-            <li><a href="../../analyzers/yokogawa/zr22g.html">Yokogawa ZR22G Analyzer</a></li>
+            <li>
+                <a href="../../analyzers/yokogawa/zr22g.html">
+                    Yokogawa ZR22G Analyzer Overview
+                </a>
+            </li>
+            <li>
+                <a href="no-signal.html">No Oxygen Signal Alarm</a>
+            </li>
+            <li>
+                <a href="calibration-failure.html">Calibration Failure Alarm</a>
+            </li>
+            <li>
+                <a href="high-drift.html">High Drift Alarm</a>
+            </li>
         </ul>
     </section>
 
 </main>
 
 <footer>
-    <p>© 2026 AnalyzersHub.com</p>
+    <p>© 2026 AnalyzersHub.com | Built for Analyzer Technicians</p>
 </footer>
 
 </body>
 </html>
-
