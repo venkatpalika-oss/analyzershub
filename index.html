@@ -43,7 +43,7 @@
 
         /* Hero Section */
         .hero {
-            background: url('assets/images/hero-analyzers.jpg') center/cover no-repeat;
+            background: url('assets/images/industrial_control_room.png') center/cover no-repeat;
             height: 350px;
             display: flex;
             justify-content: center;
@@ -152,6 +152,19 @@
             background-color: #2563eb;
         }
 
+        /* Data Flow Section */
+        .data-flow {
+            max-width: 1200px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .data-flow img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
         footer {
             background-color: #1e3a8a;
             color: #fff;
@@ -177,6 +190,7 @@
     </nav>
 </header>
 
+<!-- Hero Section -->
 <section class="hero">
     <div class="hero-content">
         <h2>Your Industrial Analyzer Hub</h2>
@@ -186,11 +200,10 @@
 </section>
 
 <main>
+    <!-- Popular Analyzers -->
     <h3 class="section-title">Popular Analyzers</h3>
-
     <div class="analyzer-grid">
-
-        <!-- ZR22G -->
+        <!-- Example Card: ZR22G -->
         <div class="card" onclick="window.location='analyzers/yokogawa/zr22g.html';">
             <img src="assets/images/icons/zr22g.png" alt="ZR22G Icon">
             <h4>Yokogawa ZR22G</h4>
@@ -221,7 +234,13 @@
             <p>Zirconia Oxygen Analyzer – CEMS & Combustion Control</p>
             <a href="analyzers/rosemount/6888.html">Open Analyzer →</a>
         </div>
+    </div>
 
+    <!-- Data Flow Section -->
+    <div class="data-flow">
+        <h3 class="section-title">Analyzer Data Flow to DCS</h3>
+        <img src="assets/images/data_flow_to_dcs.png" alt="Data flow from analyzers to DCS">
+        <p>Illustration of how analyzer signals are collected and transmitted to your plant's DCS system.</p>
     </div>
 </main>
 
