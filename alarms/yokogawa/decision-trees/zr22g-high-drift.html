@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ZR22G High Drift Decision Tree | AnalyzersHub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../../../assets/css/style.css">
+<style>
+ul.tree, ul.tree ul { list-style: none; padding-left: 1em; }
+ul.tree ul { border-left: 2px solid #555; margin-left: 1em; }
+ul.tree li { margin: 0.6em 0; position: relative; }
+ul.tree li::before {
+  content: '';
+  position: absolute;
+  top: 0.9em;
+  left: -1em;
+  width: 1em;
+  border-top: 2px solid #555;
+}
+</style>
+</head>
+
+<body>
+<header>
+<h1>AnalyzersHub</h1>
+<nav>
+<a href="../../../index.html">Home</a>
+<a href="../../../analyzers.html">Analyzers</a>
+<a href="../index.html">Alarm Index</a>
+</nav>
+</header>
+
+<main>
+<h2>Decision Tree – ZR22G High Drift / Unstable Reading</h2>
+
+<ul class="tree">
+<li>High Drift Alarm
+  <ul>
+    <li>Is process condition stable?
+      <ul>
+        <li>No → Stabilize process first</li>
+        <li>Yes → Inspect probe for contamination
+          <ul>
+            <li>Dirty/corroded → Clean or replace probe</li>
+            <li>Clean → Check reference air leakage
+              <ul>
+                <li>Leak present → Repair tubing</li>
+                <li>No leak → Check grounding and shielding
+                  <ul>
+                    <li>Poor grounding → Correct earthing</li>
+                    <li>Grounding OK → Sensor end-of-life → Replace sensor</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>Field Tip:</strong> Ash buildup is the #1 cause in boilers and kilns.</p>
+</main>
+
+<footer>
+<p>© 2026 AnalyzersHub.com</p>
+</footer>
+</body>
+</html>
