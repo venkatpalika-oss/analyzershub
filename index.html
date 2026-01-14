@@ -1,278 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>AnalyzersHub | Industrial Analyzer Knowledge Base</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AnalyzersHub | Industrial Analyzer Knowledge Hub</title>
 
-    <meta name="description" content="AnalyzersHub – A professional knowledge base for analyzer technicians covering alarms, troubleshooting, and decision trees.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0e1525;
+  color: #e5e7eb;
+}
 
-    <link rel="stylesheet" href="assets/css/style.css">
+/* NAVIGATION */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #020617;
+  padding: 14px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
 
-    <style>
-        body {
-            margin: 0;
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f6f9;
-            color: #1f2937;
-        }
+nav .logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
 
-        /* ===== HEADER (Sticky Navigation) ===== */
-        header {
-            background-color: #1e3a8a;
-            color: #ffffff;
-            padding: 18px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+nav a {
+  color: #93c5fd;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 20px;
+}
 
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-        }
+nav a:hover {
+  color: #ffffff;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 1.7rem;
-            color: #ffffff;
-        }
+/* HERO */
+header {
+  background: linear-gradient(135deg, #0f172a, #020617);
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+}
 
-        header nav a {
-            color: #ffffff;
-            text-decoration: none;
-            margin-left: 25px;
-            font-weight: 600;
-        }
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+  color: #ffffff;
+  text-shadow: 0 0 12px rgba(59,130,246,0.6);
+}
 
-        header nav a:hover {
-            text-decoration: underline;
-        }
+header p {
+  color: #cbd5f5;
+  font-size: 1.2rem;
+}
 
-        /* ===== HERO SECTION ===== */
-        .hero {
-            background: url("assets/images/industrial_control_room.png") center/cover no-repeat;
-            height: 360px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #ffffff;
-        }
+/* CARDS SECTION */
+section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
 
-        .hero::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.45);
-        }
+h2 {
+  color: #93c5fd;
+  border-left: 4px solid #3b82f6;
+  padding-left: 12px;
+  margin-top: 40px;
+}
 
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 900px;
-            padding: 20px;
-        }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
 
-        /* HERO TITLE – White + Subtle Glow */
-        .hero h2 {
-            font-size: 2.8rem;
-            margin-bottom: 15px;
-            color: #ffffff;
-            text-shadow:
-                0 2px 6px rgba(0, 0, 0, 0.6),
-                0 0 12px rgba(255, 255, 255, 0.15);
-        }
+.card {
+  background: #020617;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 0 18px rgba(59,130,246,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 25px;
-            color: #e5e7eb;
-            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-        }
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 28px rgba(59,130,246,0.25);
+}
 
-        .hero a {
-            background-color: #2563eb;
-            color: #ffffff;
-            padding: 14px 34px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-        }
+.card h3 {
+  color: #bfdbfe;
+  margin-top: 0;
+}
 
-        .hero a:hover {
-            background-color: #1e40af;
-        }
+.card p {
+  color: #cbd5f5;
+  font-size: 0.95rem;
+}
 
-        /* ===== MAIN CONTENT ===== */
-        main {
-            padding: 55px 20px;
-        }
+.card a {
+  display: inline-block;
+  margin-top: 12px;
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-        .section-title {
-            text-align: center;
-            font-size: 1.8rem;
-            color: #1e3a8a;
-            margin-bottom: 40px;
-        }
-
-        /* ANALYZER CARDS */
-        .analyzer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .card {
-            background-color: #ffffff;
-            border-radius: 14px;
-            padding: 30px 25px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-            border-top: 4px solid #1e3a8a;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
-        }
-
-        .card h4 {
-            margin-top: 0;
-            margin-bottom: 10px;
-            font-size: 1.25rem;
-            color: #1e3a8a;
-        }
-
-        .card p {
-            margin: 0 0 18px;
-            font-size: 0.95rem;
-            line-height: 1.5;
-            color: #374151;
-        }
-
-        .card a {
-            font-weight: 600;
-            color: #1e3a8a;
-            text-decoration: none;
-        }
-
-        .card a:hover {
-            text-decoration: underline;
-        }
-
-        /* DATA FLOW */
-        .data-flow {
-            max-width: 1100px;
-            margin: 70px auto 0;
-            text-align: center;
-        }
-
-        .data-flow img {
-            max-width: 100%;
-            border-radius: 14px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        /* FOOTER */
-        footer {
-            background-color: #1e3a8a;
-            color: #ffffff;
-            text-align: center;
-            padding: 20px;
-            margin-top: 70px;
-            font-size: 0.9rem;
-        }
-
-        /* ===== MOBILE TUNING ===== */
-        @media (max-width: 768px) {
-            .hero {
-                height: 300px;
-            }
-
-            .hero h2 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1.05rem;
-            }
-
-            header {
-                padding: 16px 20px;
-            }
-
-            header nav a {
-                margin-left: 15px;
-            }
-        }
-    </style>
+/* FOOTER */
+footer {
+  background: #020617;
+  text-align: center;
+  padding: 20px;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-    <h1>AnalyzersHub</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="analyzers.html">Analyzer Search</a>
-    </nav>
-</header>
+<!-- NAVIGATION -->
+<nav>
+  <div class="logo">AnalyzersHub</div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="analyzers.html">Analyzers</a>
+  </div>
+</nav>
 
 <!-- HERO -->
-<section class="hero">
-    <div class="hero-content">
-        <h2>Industrial Analyzer Knowledge Hub</h2>
-        <p>Alarms, troubleshooting procedures, and decision trees built for analyzer technicians</p>
-        <a href="analyzers.html">Browse Analyzers</a>
+<header>
+  <h1>Industrial Analyzer Knowledge Hub</h1>
+  <p>Technical guides, troubleshooting, alarms, and calibration for all major analyzers</p>
+</header>
+
+<!-- OXYGEN ANALYZERS CARDS -->
+<section>
+  <h2>Oxygen Analyzers</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Yokogawa ZR22G</h3>
+      <p>Zirconia oxygen analyzer for combustion control</p>
+      <a href="analyzers/yokogawa/zr22g/zr22g.html">Details</a> |
+      <a href="alarms/zr22g/alarm-index.html">Alarms</a>
     </div>
+
+    <div class="card">
+      <h3>Yokogawa OX400</h3>
+      <p>In-situ oxygen analyzer for furnaces</p>
+      <a href="analyzers/yokogawa/ox400/ox400.html">Details</a> |
+      <a href="alarms/ox400/alarm-index.html">Alarms</a>
+    </div>
+
+    <div class="card">
+      <h3>ABB AZ10</h3>
+      <p>Compact zirconia oxygen analyzer</p>
+      <a href="analyzers/abb/az10/az10.html">Details</a> |
+      <a href="alarms/abb-az/az10-index.html">Alarms</a>
+    </div>
+
+    <div class="card">
+      <h3>ABB AZ20</h3>
+      <p>Advanced zirconia oxygen analyzer</p>
+      <a href="analyzers/abb/az20/az20.html">Details</a> |
+      <a href="alarms/abb-az/az20-index.html">Alarms</a>
+    </div>
+
+    <div class="card">
+      <h3>ABB AZ25</h3>
+      <p>Oxygen analyzer with integrated diagnostics</p>
+      <a href="analyzers/abb/az25/az25.html">Details</a> |
+      <a href="alarms/abb-az/az25-index.html">Alarms</a>
+    </div>
+
+    <div class="card">
+      <h3>ABB AZ30</h3>
+      <p>High-accuracy oxygen analyzer for process control</p>
+      <a href="analyzers/abb/az30/az30.html">Details</a> |
+      <a href="alarms/abb-az/az30-index.html">Alarms</a>
+    </div>
+
+    <div class="card">
+      <h3>ABB AZ40</h3>
+      <p>Premium oxygen analyzer with advanced communications</p>
+      <a href="analyzers/abb/az40/az40.html">Details</a> |
+      <a href="alarms/abb-az/az40-index.html">Alarms</a>
+    </div>
+  </div>
 </section>
 
-<main>
-
-    <h3 class="section-title">Popular Analyzers</h3>
-
-    <div class="analyzer-grid">
-
-        <div class="card">
-            <h4>Yokogawa ZR22G</h4>
-            <p>Zirconia oxygen analyzer widely used for combustion control and CEMS applications.</p>
-            <a href="analyzers/yokogawa/zr22g.html">Open Analyzer →</a>
-        </div>
-
-        <div class="card">
-            <h4>Yokogawa OX400</h4>
-            <p>Reliable zirconia oxygen analyzer for continuous oxygen monitoring.</p>
-            <a href="analyzers/yokogawa/ox400.html">Open Analyzer →</a>
-        </div>
-
-        <div class="card">
-            <h4>Yokogawa TDLS8000</h4>
-            <p>Tunable diode laser analyzer for fast, in-situ gas measurement.</p>
-            <a href="analyzers/yokogawa/tdls8000.html">Open Analyzer →</a>
-        </div>
-
-        <div class="card">
-            <h4>Rosemount 6888</h4>
-            <p>Robust zirconia oxygen analyzer for industrial furnaces and boilers.</p>
-            <a href="analyzers/rosemount/6888.html">Open Analyzer →</a>
-        </div>
-
+<!-- GAS CHROMATOGRAPHS CARDS -->
+<section>
+  <h2>Gas Chromatographs</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Yokogawa GC8000</h3>
+      <p>High-speed process gas chromatograph</p>
+      <a href="analyzers/yokogawa/gc8000/gc8000.html">Details</a>
     </div>
 
-    <div class="data-flow">
-        <h3 class="section-title">Analyzer Data Flow to DCS</h3>
-        <img src="assets/images/data_flow_to_dcs.png" alt="Analyzer data flow to DCS">
-        <p>Typical signal flow from field analyzers to plant control systems.</p>
+    <div class="card">
+      <h3>Siemens MAXUM II</h3>
+      <p>Flexible process GC for refineries</p>
+      <a href="analyzers/siemens/gc/maxum-ii/maxum-ii.html">Details</a>
     </div>
 
-</main>
+    <div class="card">
+      <h3>Siemens SITRANS CV</h3>
+      <p>GC for calorific value and Wobbe index</p>
+      <a href="analyzers/siemens/gc/sitrans-cv/sitrans-cv.html">Details</a>
+    </div>
+
+    <div class="card">
+      <h3>ABB PGC5000B</h3>
+      <p>Smart oven process gas chromatograph</p>
+      <a href="analyzers/abb/gc/pgc5000b/pgc5000b.html">Details</a>
+    </div>
+
+    <div class="card">
+      <h3>ABB PGC5000C</h3>
+      <p>Advanced smart oven GC</p>
+      <a href="analyzers/abb/gc/pgc5000c/pgc5000c.html">Details</a>
+    </div>
+
+    <div class="card">
+      <h3>ABB PGC5007B</h3>
+      <p>Total sulfur GC</p>
+      <a href="analyzers/abb/gc/pgc5007b/pgc5007b.html">Details</a>
+    </div>
+
+    <div class="card">
+      <h3>ABB Portable NGC</h3>
+      <p>Portable natural gas GC</p>
+      <a href="analyzers/abb/gc/portable-ngc/portable-ngc.html">Details</a>
+    </div>
+
+    <div class="card">
+      <h3>Agilent 8850 GC</h3>
+      <p>Compact GC for lab and industrial analysis</p>
+      <a href="analyzers/agilent/gc/8850/8850.html">Details</a>
+    </div>
+
+    <div class="card">
+      <h3>Agilent 8860 GC</h3>
+      <p>Advanced GC with automation and diagnostics</p>
+      <a href="analyzers/agilent/gc/8860/8860.html">Details</a>
+    </div>
+
+    <div class="card">
+      <h3>Agilent 8890 GC</h3>
+      <p>High-performance GC for mission-critical applications</p>
+      <a href="analyzers/agilent/gc/8890/8890.html">Details</a>
+    </div>
+
+    <div class="card">
+      <h3>Agilent 990 Micro GC</h3>
+      <p>Portable GC for field analysis</p>
+      <a href="analyzers/agilent/gc/990-micro/990-micro.html">Details</a>
+    </div>
+  </div>
+</section>
 
 <footer>
-    © 2026 AnalyzersHub.com | Built for Analyzer Technicians
+  © 2026 AnalyzersHub.com | Industrial Analyzer Knowledge Hub
 </footer>
 
 </body>
