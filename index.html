@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AnalyzersHub | Industrial Analyzer Knowledge Hub</title>
 
   <link rel="stylesheet" href="assets/css/style.css">
@@ -10,86 +10,104 @@
   <style>
     header{ position: sticky; top:0; z-index:999; box-shadow:0 2px 12px rgba(0,0,0,0.18); }
 
-    .hero{ min-height: 380px; }
+    /* Smaller hero */
+    .hero{ min-height: 280px; display:flex; align-items:center; }
     .hero-content h2{
       text-shadow: 0 0 18px rgba(0,0,0,0.55), 0 0 26px rgba(31,120,180,0.35);
+      margin-bottom:10px;
     }
+    .hero-content p{ max-width:820px; }
 
-    .container{ max-width:1200px; margin:0 auto; padding:0 16px 40px; }
+    .container{ max-width:1200px; margin:0 auto; padding:0 16px 42px; }
 
-    .quick-nav{
-      max-width:1100px; margin:16px auto 0; padding:0 16px;
+    .quick-actions{
+      max-width:1100px; margin:-18px auto 0; padding:0 16px;
       display:flex; flex-wrap:wrap; gap:10px; justify-content:center;
     }
-    .quick-nav a{
+    .quick-actions a{
       background:#0b3c5d; color:#fff; text-decoration:none; font-weight:900;
-      padding:10px 14px; border-radius:8px; border:1px solid rgba(255,255,255,0.15);
+      padding:10px 14px; border-radius:10px; border:1px solid rgba(255,255,255,0.15);
       transition: transform .15s ease, background .15s ease;
     }
-    .quick-nav a:hover{ background:#155a8a; transform: translateY(-1px); }
-    .quick-nav a.primary{ background:#1f78b4; }
-    .quick-nav a.primary:hover{ background:#155a8a; }
+    .quick-actions a:hover{ background:#155a8a; transform: translateY(-1px); }
+    .quick-actions a.primary{ background:#1f78b4; }
+    .quick-actions a.primary:hover{ background:#155a8a; }
 
-    .analyzer-grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap:18px;
-      margin-top:12px;
+    .section-title{
+      margin:26px 0 12px;
+      color:#0b3c5d;
+      font-weight:900;
+      letter-spacing:.2px;
     }
 
-    .analyzer-card{
-      position:relative; overflow:hidden;
-      border-radius:12px; padding:18px;
+    .cat-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap:16px;
+      margin-top:10px;
+    }
+    .cat-card{
+      background:#fff;
+      border-radius:12px;
       border:1px solid #e0e6ec;
       box-shadow:0 4px 14px rgba(0,0,0,0.08);
+      padding:16px;
+      position:relative;
+      overflow:hidden;
       transition: transform .18s ease, box-shadow .18s ease;
       background-image: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(245,248,252,0.98));
     }
-    .analyzer-card:hover{ transform: translateY(-3px); box-shadow:0 10px 26px rgba(0,0,0,0.14); }
-
-    .analyzer-card::before{
+    .cat-card:hover{ transform: translateY(-3px); box-shadow:0 10px 26px rgba(0,0,0,0.14); }
+    .cat-card::before{
       content:""; position:absolute; top:0; left:0; width:100%; height:7px;
       background:#d1d5db;
     }
+    .cat-card h3{ margin:6px 0 8px; color:#0b3c5d; }
+    .cat-card p{ margin:0 0 12px; color:#333; line-height:1.45; font-size:.95rem; }
 
-    .analyzer-card h4{
-      margin:0 0 8px 0; color:#0b3c5d; font-size:1.05rem;
-      font-weight:900; letter-spacing:0.2px;
-    }
-    .analyzer-card p{
-      margin:0 0 14px 0; color:#333; line-height:1.45; font-size:0.95rem;
-    }
-
-    .btn-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:6px; }
     .btn{
-      display:inline-block; padding:10px 14px; border-radius:8px; font-weight:900;
-      text-decoration:none; border:1px solid rgba(0,0,0,0.10);
-      transition: background .15s ease, transform .15s ease;
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:10px;
+      font-weight:900;
+      text-decoration:none;
+      border:1px solid rgba(0,0,0,0.10);
+      transition: transform .15s ease, background .15s ease;
     }
     .btn:hover{ transform: translateY(-1px); }
+    .btn-primary{ background:#1f78b4; color:#fff !important; }
+    .btn-primary:hover{ background:#155a8a; }
+    .btn-ghost{ background:#fff; color:#0b3c5d !important; }
+    .btn-ghost:hover{ background:#e9f2f9; }
 
-    .btn-open{ background:#1f78b4; color:#fff !important; }
-    .btn-open:hover{ background:#155a8a; }
+    /* Category color strips */
+    .cat-card.oxygen::before{ background: linear-gradient(90deg, #1f78b4, #6fb6e9); }
+    .cat-card.gc::before{ background: linear-gradient(90deg, #2e7d32, #6fcf97); }
+    .cat-card.cems::before{ background: linear-gradient(90deg, #0b3c5d, #1f78b4); }
+    .cat-card.tdls::before{ background: linear-gradient(90deg, #7c3aed, #a78bfa); }
+    .cat-card.general::before{ background: linear-gradient(90deg, #374151, #9ca3af); }
 
-    .btn-alarm{ background:#fff; color:#0b3c5d !important; }
-    .btn-alarm:hover{ background:#e9f2f9; }
-
-    .analyzer-card[data-tag="oxygen"]{ border-left:5px solid #1f78b4; }
-    .analyzer-card[data-tag="oxygen"]::before{ background: linear-gradient(90deg, #1f78b4, #6fb6e9); }
-
-    .analyzer-card[data-tag="abb"]{ border-left:5px solid #0b3c5d; }
-    .analyzer-card[data-tag="abb"]::before{ background: linear-gradient(90deg, #0b3c5d, #1f78b4); }
-
-    .analyzer-card[data-tag="gc"]{ border-left:5px solid #2e7d32; }
-    .analyzer-card[data-tag="gc"]::before{ background: linear-gradient(90deg, #2e7d32, #6fcf97); }
-
-    .data-flow img{
-      max-width:650px; width:100%; height:auto;
-      display:block; margin:18px auto 0; border-radius:10px;
+    /* Data flow image smaller */
+    .data-flow{
+      margin-top:26px;
+      background:#fff;
+      border:1px solid #e0e6ec;
+      border-radius:12px;
+      padding:16px;
+      box-shadow:0 4px 14px rgba(0,0,0,0.08);
     }
+    .data-flow img{
+      max-width:520px;
+      width:100%;
+      height:auto;
+      display:block;
+      margin:12px auto 0;
+      border-radius:10px;
+    }
+    .muted{ opacity:.9; }
 
     @media (max-width:768px){
-      .hero{ min-height:300px; }
+      .hero{ min-height:240px; }
       .hero-content h2{ font-size:2rem; line-height:1.15; }
       .hero-content p{ font-size:1.05rem; }
     }
@@ -109,173 +127,62 @@
 <section class="hero">
   <div class="hero-content">
     <h2>Industrial Analyzer Knowledge Hub</h2>
-    <p>Fast troubleshooting, alarms, decision trees, and calibration guides — built for analyzer technicians.</p>
+    <p class="muted">Troubleshooting guides, alarms, decision trees, and calibration support — built for analyzer technicians.</p>
     <a href="analyzers.html">Browse All Analyzers</a>
   </div>
 </section>
 
-<div class="quick-nav">
+<!-- Simple navigation buttons -->
+<div class="quick-actions">
   <a class="primary" href="analyzers.html">🔎 Analyzer Search</a>
-  <a href="#oxygen">Oxygen</a>
-  <a href="#gc">Gas Chromatographs</a>
-  <a href="#dataflow">Data Flow</a>
+  <a href="analyzers.html">📘 Troubleshooting</a>
+  <a href="analyzers.html">🚨 Alarms</a>
 </div>
 
 <main class="container">
 
-  <h3 id="oxygen" class="section-title" style="margin-top:26px;">Oxygen & Field Analyzers</h3>
+  <h2 class="section-title">Browse by Category</h2>
 
-  <div class="analyzer-grid">
-
-    <div class="analyzer-card" data-tag="oxygen">
-      <h4>Yokogawa ZR22G</h4>
-      <p>Zirconia oxygen analyzer for combustion control with troubleshooting and alarm guidance.</p>
-      <div class="btn-row">
-        <a class="btn btn-open" href="analyzers/yokogawa/zr22g.html">Open Analyzer →</a>
-      </div>
+  <div class="cat-grid">
+    <div class="cat-card oxygen">
+      <h3>Oxygen Analyzers</h3>
+      <p>ZR22G, OX400, Rosemount 6888, ABB AZ Series and more.</p>
+      <a class="btn btn-primary" href="analyzers.html">Open Category →</a>
     </div>
 
-    <div class="analyzer-card" data-tag="oxygen">
-      <h4>Yokogawa OX400</h4>
-      <p>In-situ oxygen analyzer used for boilers and furnaces.</p>
-      <div class="btn-row">
-        <a class="btn btn-open" href="analyzers/yokogawa/ox400.html">Open Analyzer →</a>
-      </div>
+    <div class="cat-card gc">
+      <h3>Gas Chromatographs (GC)</h3>
+      <p>Siemens MAXUM II, SITRANS CV, Yokogawa GC8000, Agilent GC family.</p>
+      <a class="btn btn-primary" href="analyzers.html">Open Category →</a>
     </div>
 
-    <div class="analyzer-card" data-tag="oxygen">
-      <h4>Yokogawa TDLS8000</h4>
-      <p>TDLS analyzer for fast in-situ gas measurement and process diagnostics.</p>
-      <div class="btn-row">
-        <a class="btn btn-open" href="analyzers/yokogawa/tdls8000.html">Open Analyzer →</a>
-      </div>
+    <div class="cat-card tdls">
+      <h3>TDLS / Laser</h3>
+      <p>Fast in-situ measurement analyzers (TDLS-based systems).</p>
+      <a class="btn btn-primary" href="analyzers.html">Open Category →</a>
     </div>
 
-    <div class="analyzer-card" data-tag="oxygen">
-      <h4>Rosemount 6888</h4>
-      <p>Robust zirconia oxygen analyzer for industrial furnaces and boilers.</p>
-      <div class="btn-row">
-        <a class="btn btn-open" href="analyzers/rosemount/6888.html">Open Analyzer →</a>
-      </div>
+    <div class="cat-card cems">
+      <h3>CEMS / Environmental</h3>
+      <p>Emissions monitoring analyzers, DAHS/DEMS support, compliance checks.</p>
+      <a class="btn btn-primary" href="analyzers.html">Open Category →</a>
     </div>
 
-    <div class="analyzer-card" data-tag="abb">
-      <h4>ABB AZ10</h4>
-      <p>Compact zirconia oxygen analyzer for combustion and process monitoring.</p>
-      <div class="btn-row">
-        <a class="btn btn-open" href="analyzers/abb/az10/az10.html">Open Analyzer →</a>
-        <a class="btn btn-alarm" href="analyzers/abb/az10/alarms/index.html">Alarms →</a>
-      </div>
+    <div class="cat-card general">
+      <h3>All Analyzers</h3>
+      <p>Full list with search bar and direct links to every model.</p>
+      <a class="btn btn-ghost" href="analyzers.html">Go to Analyzer Search →</a>
     </div>
-
-    <div class="analyzer-card" data-tag="abb">
-      <h4>ABB AZ20</h4>
-      <p>Advanced zirconia oxygen analyzer with improved diagnostics and stability.</p>
-      <div class="btn-row">
-        <a class="btn btn-open" href="analyzers/abb/az20/az20.html">Open Analyzer →</a>
-      </div>
-    </div>
-
-    <div class="analyzer-card" data-tag="abb">
-      <h4>ABB AZ25</h4>
-      <p>Zirconia oxygen analyzer with integrated diagnostics for maintenance support.</p>
-      <div class="btn-row">
-        <a class="btn btn-open" href="analyzers/abb/az25/az25.html">Open Analyzer →</a>
-      </div>
-    </div>
-
-    <div class="analyzer-card" data-tag="abb">
-      <h4>ABB AZ30</h4>
-      <p>High-accuracy oxygen analyzer designed for demanding process control.</p>
-      <div class="btn-row">
-        <a class="btn btn-open" href="analyzers/abb/az30/az30.html">Open Analyzer →</a>
-      </div>
-    </div>
-
-    <div class="analyzer-card" data-tag="abb">
-      <h4>ABB AZ40</h4>
-      <p>Premium oxygen analyzer with advanced communications and performance features.</p>
-      <div class="btn-row">
-        <a class="btn btn-open" href="analyzers/abb/az40/az40.html">Open Analyzer →</a>
-      </div>
-    </div>
-
   </div>
 
-  <div id="dataflow" class="data-flow" style="margin-top:34px;">
-    <h3 class="section-title">Analyzer Data Flow to DCS</h3>
+  <section class="data-flow" id="dataflow">
+    <h2 class="section-title" style="margin-top:0;">Analyzer Data Flow to DCS</h2>
+    <p class="muted">Typical signal and data flow from field analyzers to plant control and historians.</p>
     <img src="assets/images/data_flow_to_dcs.png" alt="Analyzer data flow to DCS">
-    <p>Typical signal flow from field analyzers to plant control systems.</p>
-  </div>
-
-  <h3 id="gc" class="section-title" style="margin-top:34px;">Gas Chromatographs (GC)</h3>
-
-  <div class="analyzer-grid">
-
-    <div class="analyzer-card" data-tag="gc">
-      <h4>Yokogawa GC8000</h4>
-      <p>Process gas chromatograph for continuous online gas composition monitoring.</p>
-      <div class="btn-row">
-        <a class="btn btn-open" href="analyzers/yokogawa/gc8000/gc8000.html">Open Analyzer →</a>
-        <a class="btn btn-alarm" href="analyzers/yokogawa/gc8000/alarms/index.html">Alarms →</a>
-      </div>
-    </div>
-
-    <div class="analyzer-card" data-tag="gc">
-      <h4>Siemens MAXUM Edition II</h4>
-      <p>Flexible and reliable process GC for refineries and petrochemical plants.</p>
-      <div class="btn-row">
-        <a class="btn btn-open" href="analyzers/siemens/gc/maxum-ii/maxum-ii.html">Open Analyzer →</a>
-        <a class="btn btn-alarm" href="analyzers/siemens/gc/maxum-ii/alarms/index.html">Alarms →</a>
-      </div>
-    </div>
-
-    <div class="analyzer-card" data-tag="gc">
-      <h4>Siemens SITRANS CV</h4>
-      <p>Process GC for calorific value and Wobbe index measurement.</p>
-      <div class="btn-row">
-        <a class="btn btn-open" href="analyzers/siemens/gc/sitrans-cv/sitrans-cv.html">Open Analyzer →</a>
-        <a class="btn btn-alarm" href="analyzers/siemens/gc/sitrans-cv/alarms/index.html">Alarms →</a>
-      </div>
-    </div>
-
-    <div class="analyzer-card" data-tag="gc">
-      <h4>Agilent 8850 GC System</h4>
-      <p>Compact GC system for routine laboratory and industrial analysis.</p>
-      <div class="btn-row">
-        <a class="btn btn-open" href="analyzers/agilent/gc/8850/8850.html">Open Analyzer →</a>
-      </div>
-    </div>
-
-    <div class="analyzer-card" data-tag="gc">
-      <h4>Agilent 8860 GC System</h4>
-      <p>Advanced GC with improved automation and diagnostics.</p>
-      <div class="btn-row">
-        <a class="btn btn-open" href="analyzers/agilent/gc/8860/8860.html">Open Analyzer →</a>
-      </div>
-    </div>
-
-    <div class="analyzer-card" data-tag="gc">
-      <h4>Agilent 8890 GC System</h4>
-      <p>High-performance GC for mission-critical analytical applications.</p>
-      <div class="btn-row">
-        <a class="btn btn-open" href="analyzers/agilent/gc/8890/8890.html">Open Analyzer →</a>
-      </div>
-    </div>
-
-    <div class="analyzer-card" data-tag="gc">
-      <h4>Agilent 990 Micro GC</h4>
-      <p>Compact and portable GC for fast on-site and field gas analysis.</p>
-      <div class="btn-row">
-        <a class="btn btn-open" href="analyzers/agilent/gc/990-micro/990-micro.html">Open Analyzer →</a>
-      </div>
-    </div>
-
-  </div>
+  </section>
 
 </main>
 
 <footer>Built for Analyzer Technicians</footer>
-
 </body>
 </html>
