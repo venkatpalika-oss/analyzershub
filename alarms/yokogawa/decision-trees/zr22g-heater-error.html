@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ZR22G Heater Error Decision Tree | AnalyzersHub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../../../assets/css/style.css">
+<style>
+ul.tree, ul.tree ul { list-style: none; padding-left: 1em; }
+ul.tree ul { border-left: 2px solid #555; margin-left: 1em; }
+ul.tree li { margin: 0.6em 0; position: relative; }
+ul.tree li::before {
+  content: '';
+  position: absolute;
+  top: 0.9em;
+  left: -1em;
+  width: 1em;
+  border-top: 2px solid #555;
+}
+</style>
+</head>
+
+<body>
+<header>
+<h1>AnalyzersHub</h1>
+<nav>
+<a href="../../../index.html">Home</a>
+<a href="../../../analyzers.html">Analyzers</a>
+<a href="../index.html">Alarm Index</a>
+</nav>
+</header>
+
+<main>
+<h2>Decision Tree – ZR22G Heater Error</h2>
+
+<ul class="tree">
+<li>Heater Error Alarm Active
+  <ul>
+    <li>Is analyzer powered ON?
+      <ul>
+        <li>No → Restore power supply</li>
+        <li>Yes → Check heater LED status
+          <ul>
+            <li>LED OFF → Measure heater resistance
+              <ul>
+                <li>Resistance open/short → Replace heater assembly</li>
+                <li>Resistance normal → Check heater power supply</li>
+              </ul>
+            </li>
+            <li>LED ON → Check wiring between probe and converter
+              <ul>
+                <li>Wiring faulty → Repair wiring</li>
+                <li>Wiring OK → Replace electronics module</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>Field Tip:</strong> High flue temperature can also trigger heater protection.</p>
+</main>
+
+<footer>
+<p>© 2026 AnalyzersHub.com</p>
+</footer>
+</body>
+</html>
 
