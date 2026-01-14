@@ -5,171 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AnalyzersHub | Industrial Analyzer Knowledge Hub</title>
 
-  <!-- Your existing site CSS (hero background etc.) -->
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <!-- Homepage enhancements + SAME card style as analyzers.html -->
   <style>
-    /* Sticky header */
-    header{
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-    }
+    header{ position: sticky; top:0; z-index:999; box-shadow:0 2px 12px rgba(0,0,0,0.18); }
 
-    /* Reduce hero height (adjust if needed) */
     .hero{ min-height: 380px; }
-
-    /* Hero glow */
     .hero-content h2{
       text-shadow: 0 0 18px rgba(0,0,0,0.55), 0 0 26px rgba(31,120,180,0.35);
     }
 
-    /* Page container */
-    .container{
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 16px 40px;
-    }
+    .container{ max-width:1200px; margin:0 auto; padding:0 16px 40px; }
 
-    /* Quick navigation buttons */
     .quick-nav{
-      max-width: 1100px;
-      margin: 16px auto 0;
-      padding: 0 16px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
+      max-width:1100px; margin:16px auto 0; padding:0 16px;
+      display:flex; flex-wrap:wrap; gap:10px; justify-content:center;
     }
     .quick-nav a{
-      background: #0b3c5d;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 900;
-      padding: 10px 14px;
-      border-radius: 8px;
-      border: 1px solid rgba(255,255,255,0.15);
+      background:#0b3c5d; color:#fff; text-decoration:none; font-weight:900;
+      padding:10px 14px; border-radius:8px; border:1px solid rgba(255,255,255,0.15);
       transition: transform .15s ease, background .15s ease;
     }
     .quick-nav a:hover{ background:#155a8a; transform: translateY(-1px); }
     .quick-nav a.primary{ background:#1f78b4; }
     .quick-nav a.primary:hover{ background:#155a8a; }
 
-    /* Grid */
     .analyzer-grid{
-      display: grid;
+      display:grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 18px;
-      margin-top: 12px;
+      gap:18px;
+      margin-top:12px;
     }
 
-    /* Cards (same as analyzers.html) */
     .analyzer-card{
-      position: relative;
-      overflow: hidden;
-      border-radius: 12px;
-      padding: 18px;
-      border: 1px solid #e0e6ec;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      position:relative; overflow:hidden;
+      border-radius:12px; padding:18px;
+      border:1px solid #e0e6ec;
+      box-shadow:0 4px 14px rgba(0,0,0,0.08);
       transition: transform .18s ease, box-shadow .18s ease;
-
-      /* subtle light industrial pattern */
-      background-image:
-        linear-gradient(135deg, rgba(255,255,255,0.98), rgba(245,248,252,0.98));
+      background-image: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(245,248,252,0.98));
     }
-    .analyzer-card:hover{
-      transform: translateY(-3px);
-      box-shadow: 0 10px 26px rgba(0,0,0,0.14);
-    }
+    .analyzer-card:hover{ transform: translateY(-3px); box-shadow:0 10px 26px rgba(0,0,0,0.14); }
 
-    /* Top gradient strip */
     .analyzer-card::before{
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 7px;
-      background: #d1d5db; /* default */
+      content:""; position:absolute; top:0; left:0; width:100%; height:7px;
+      background:#d1d5db;
     }
 
     .analyzer-card h4{
-      margin: 0 0 8px 0;
-      color: #0b3c5d;
-      font-size: 1.05rem;
-      font-weight: 900;
-      letter-spacing: 0.2px;
+      margin:0 0 8px 0; color:#0b3c5d; font-size:1.05rem;
+      font-weight:900; letter-spacing:0.2px;
     }
     .analyzer-card p{
-      margin: 0 0 14px 0;
-      color: #333;
-      line-height: 1.45;
-      font-size: 0.95rem;
+      margin:0 0 14px 0; color:#333; line-height:1.45; font-size:0.95rem;
     }
 
-    /* Buttons */
-    .btn-row{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 6px;
-    }
+    .btn-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:6px; }
     .btn{
-      display: inline-block;
-      padding: 10px 14px;
-      border-radius: 8px;
-      font-weight: 900;
-      text-decoration: none;
-      border: 1px solid rgba(0,0,0,0.10);
+      display:inline-block; padding:10px 14px; border-radius:8px; font-weight:900;
+      text-decoration:none; border:1px solid rgba(0,0,0,0.10);
       transition: background .15s ease, transform .15s ease;
     }
     .btn:hover{ transform: translateY(-1px); }
 
-    .btn-open{
-      background: #1f78b4;
-      color: #fff !important;
-    }
-    .btn-open:hover{ background: #155a8a; }
+    .btn-open{ background:#1f78b4; color:#fff !important; }
+    .btn-open:hover{ background:#155a8a; }
 
-    .btn-alarm{
-      background: #ffffff;
-      color: #0b3c5d !important;
-    }
-    .btn-alarm:hover{ background: #e9f2f9; }
+    .btn-alarm{ background:#fff; color:#0b3c5d !important; }
+    .btn-alarm:hover{ background:#e9f2f9; }
 
-    /* Color coding */
-    .analyzer-card[data-tag="oxygen"]{ border-left: 5px solid #1f78b4; }
-    .analyzer-card[data-tag="oxygen"]::before{
-      background: linear-gradient(90deg, #1f78b4, #6fb6e9);
-    }
+    .analyzer-card[data-tag="oxygen"]{ border-left:5px solid #1f78b4; }
+    .analyzer-card[data-tag="oxygen"]::before{ background: linear-gradient(90deg, #1f78b4, #6fb6e9); }
 
-    .analyzer-card[data-tag="abb"]{ border-left: 5px solid #0b3c5d; }
-    .analyzer-card[data-tag="abb"]::before{
-      background: linear-gradient(90deg, #0b3c5d, #1f78b4);
-    }
+    .analyzer-card[data-tag="abb"]{ border-left:5px solid #0b3c5d; }
+    .analyzer-card[data-tag="abb"]::before{ background: linear-gradient(90deg, #0b3c5d, #1f78b4); }
 
-    .analyzer-card[data-tag="gc"]{ border-left: 5px solid #2e7d32; }
-    .analyzer-card[data-tag="gc"]::before{
-      background: linear-gradient(90deg, #2e7d32, #6fcf97);
-    }
+    .analyzer-card[data-tag="gc"]{ border-left:5px solid #2e7d32; }
+    .analyzer-card[data-tag="gc"]::before{ background: linear-gradient(90deg, #2e7d32, #6fcf97); }
 
-    /* Data flow image size */
     .data-flow img{
-      max-width: 650px;
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 18px auto 0;
-      border-radius: 10px;
+      max-width:650px; width:100%; height:auto;
+      display:block; margin:18px auto 0; border-radius:10px;
     }
 
-    /* Mobile */
-    @media (max-width: 768px){
-      .hero{ min-height: 300px; }
-      .hero-content h2{ font-size: 2rem; line-height: 1.15; }
-      .hero-content p{ font-size: 1.05rem; }
+    @media (max-width:768px){
+      .hero{ min-height:300px; }
+      .hero-content h2{ font-size:2rem; line-height:1.15; }
+      .hero-content p{ font-size:1.05rem; }
     }
   </style>
 </head>
@@ -184,7 +106,6 @@
   </nav>
 </header>
 
-<!-- HERO (background image comes from your CSS .hero rule) -->
 <section class="hero">
   <div class="hero-content">
     <h2>Industrial Analyzer Knowledge Hub</h2>
@@ -193,7 +114,6 @@
   </div>
 </section>
 
-<!-- Quick Nav -->
 <div class="quick-nav">
   <a class="primary" href="analyzers.html">🔎 Analyzer Search</a>
   <a href="#oxygen">Oxygen</a>
@@ -305,6 +225,7 @@
       <p>Flexible and reliable process GC for refineries and petrochemical plants.</p>
       <div class="btn-row">
         <a class="btn btn-open" href="analyzers/siemens/gc/maxum-ii/maxum-ii.html">Open Analyzer →</a>
+        <a class="btn btn-alarm" href="analyzers/siemens/gc/maxum-ii/alarms/index.html">Alarms →</a>
       </div>
     </div>
 
@@ -352,9 +273,7 @@
 
 </main>
 
-<footer>
-  Built for Analyzer Technicians
-</footer>
+<footer>Built for Analyzer Technicians</footer>
 
 </body>
 </html>
