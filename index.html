@@ -17,19 +17,24 @@
             color: #1f2937;
         }
 
-        /* HEADER */
+        /* ===== HEADER (Sticky Navigation) ===== */
         header {
             background-color: #1e3a8a;
             color: #ffffff;
-            padding: 20px 40px;
+            padding: 18px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         }
 
         header h1 {
             margin: 0;
-            font-size: 1.8rem;
+            font-size: 1.7rem;
             color: #ffffff;
         }
 
@@ -44,7 +49,7 @@
             text-decoration: underline;
         }
 
-        /* HERO */
+        /* ===== HERO SECTION ===== */
         .hero {
             background: url("assets/images/industrial_control_room.png") center/cover no-repeat;
             height: 360px;
@@ -66,18 +71,25 @@
         .hero-content {
             position: relative;
             z-index: 1;
-            max-width: 800px;
+            max-width: 900px;
             padding: 20px;
         }
 
+        /* HERO TITLE – White + Subtle Glow */
         .hero h2 {
             font-size: 2.8rem;
             margin-bottom: 15px;
+            color: #ffffff;
+            text-shadow:
+                0 2px 6px rgba(0, 0, 0, 0.6),
+                0 0 12px rgba(255, 255, 255, 0.15);
         }
 
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 25px;
+            color: #e5e7eb;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
         }
 
         .hero a {
@@ -93,9 +105,9 @@
             background-color: #1e40af;
         }
 
-        /* MAIN */
+        /* ===== MAIN CONTENT ===== */
         main {
-            padding: 50px 20px;
+            padding: 55px 20px;
         }
 
         .section-title {
@@ -143,8 +155,6 @@
         }
 
         .card a {
-            display: inline-block;
-            margin-top: 10px;
             font-weight: 600;
             color: #1e3a8a;
             text-decoration: none;
@@ -177,9 +187,26 @@
             font-size: 0.9rem;
         }
 
-        @media (max-width: 600px) {
+        /* ===== MOBILE TUNING ===== */
+        @media (max-width: 768px) {
+            .hero {
+                height: 300px;
+            }
+
             .hero h2 {
                 font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.05rem;
+            }
+
+            header {
+                padding: 16px 20px;
+            }
+
+            header nav a {
+                margin-left: 15px;
             }
         }
     </style>
@@ -239,7 +266,7 @@
     <div class="data-flow">
         <h3 class="section-title">Analyzer Data Flow to DCS</h3>
         <img src="assets/images/data_flow_to_dcs.png" alt="Analyzer data flow to DCS">
-        <p>Typical signal flow from field analyzers to control systems for monitoring and control.</p>
+        <p>Typical signal flow from field analyzers to plant control systems.</p>
     </div>
 
 </main>
