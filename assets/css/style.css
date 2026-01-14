@@ -36,7 +36,7 @@ footer {
 /* ================= HERO BANNER ================= */
 
 .hero {
-    min-height: 520px;
+    min-height: 380px;
     background-image: url("../images/industrial_control_room.png");
     background-size: cover;
     background-position: center;
@@ -146,4 +146,13 @@ header {
   height: auto;
   display: block;
   margin: 20px auto 0; /* centers image */
+}
+@media (max-width: 768px) {
+    .hero {
+        min-height: 300px;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
 }
