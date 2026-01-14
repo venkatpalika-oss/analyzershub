@@ -5,40 +5,110 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AnalyzersHub | Industrial Analyzer Knowledge Hub</title>
 
-  <!-- Your existing CSS (keeps site theme) -->
+  <!-- Your existing CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <!-- Enhancements (safe overrides) -->
+  <!-- Clearer UI additions (safe) -->
   <style>
-    /* Sticky header */
-    header {
+    header{
       position: sticky;
       top: 0;
       z-index: 999;
       box-shadow: 0 2px 12px rgba(0,0,0,0.18);
     }
 
-    /* Hero text glow (professional) */
-    .hero-content h2 {
+    /* Hero text glow */
+    .hero-content h2{
       text-shadow: 0 0 18px rgba(0,0,0,0.55), 0 0 26px rgba(31,120,180,0.35);
     }
 
-    /* Improve card hover (safe) */
-    .card {
+    /* Quick nav buttons */
+    .quick-nav{
+      max-width: 1100px;
+      margin: 18px auto 0;
+      padding: 0 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .quick-nav a{
+      background: #0b3c5d;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.15);
+      transition: transform .15s ease, background .15s ease;
+    }
+    .quick-nav a:hover{
+      background: #155a8a;
+      transform: translateY(-1px);
+    }
+    .quick-nav a.primary{
+      background: #1f78b4;
+    }
+    .quick-nav a.primary:hover{
+      background: #155a8a;
+    }
+
+    /* Section containers */
+    .container{
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* Card grid (works with your existing .card styling too) */
+    .analyzer-grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 14px;
+    }
+
+    /* Card buttons */
+    .card .btn-row{
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .btn{
+      display: inline-block;
+      padding: 10px 12px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+    .btn-open{
+      background: #1f78b4;
+      color: #fff;
+    }
+    .btn-open:hover{ background:#155a8a; }
+    .btn-alarm{
+      background: #ffffff;
+      color: #0b3c5d;
+    }
+    .btn-alarm:hover{ background:#e9f2f9; }
+
+    /* Card hover polish */
+    .card{
       transition: transform 0.18s ease, box-shadow 0.18s ease;
     }
-    .card:hover {
+    .card:hover{
       transform: translateY(-3px);
       box-shadow: 0 10px 24px rgba(0,0,0,0.15);
     }
 
-    /* Mobile hero tuning */
-    @media (max-width: 768px) {
-      .hero { min-height: 420px; }
-      .hero-content { padding: 14px; }
-      .hero-content h2 { font-size: 2.1rem; line-height: 1.15; }
-      .hero-content p { font-size: 1.05rem; line-height: 1.35; }
-      .hero-content a { padding: 12px 20px; }
+    /* Mobile tuning */
+    @media (max-width: 768px){
+      .hero{ min-height: 420px; }
+      .hero-content{ padding: 14px; }
+      .hero-content h2{ font-size: 2.1rem; line-height: 1.15; }
+      .hero-content p{ font-size: 1.05rem; line-height: 1.35; }
     }
   </style>
 </head>
@@ -53,131 +123,178 @@
   </nav>
 </header>
 
-<!-- HERO (background image comes from your CSS .hero rule) -->
+<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
     <h2>Industrial Analyzer Knowledge Hub</h2>
-    <p>Alarms, troubleshooting procedures, and decision trees for analyzer technicians</p>
-    <a href="analyzers.html">Browse Analyzers</a>
+    <p>Fast troubleshooting, alarms, decision trees, and calibration guides — built for analyzer technicians.</p>
+    <a href="analyzers.html">Browse All Analyzers</a>
   </div>
 </section>
 
-<main>
+<!-- QUICK NAV -->
+<div class="quick-nav">
+  <a class="primary" href="analyzers.html">🔎 Analyzer Search</a>
+  <a href="#oxygen">Oxygen Analyzers</a>
+  <a href="#gc">Gas Chromatographs</a>
+  <a href="#dataflow">Analyzer → DCS Data Flow</a>
+  <a href="#popular">Popular</a>
+</div>
 
-  <h3 class="section-title">Popular Analyzers</h3>
+<main class="container">
 
+  <!-- POPULAR -->
+  <h3 id="popular" class="section-title">Popular Analyzers</h3>
   <div class="analyzer-grid">
 
-    <!-- ===== WORKING LINKS (UNCHANGED) ===== -->
     <div class="card">
       <h4>Yokogawa ZR22G</h4>
       <p>Zirconia oxygen analyzer for combustion and CEMS applications.</p>
-      <a href="analyzers/yokogawa/zr22g.html">Open Analyzer →</a>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/yokogawa/zr22g.html">Open Analyzer →</a>
+        <!-- add alarm link if you have it -->
+        <!-- <a class="btn btn-alarm" href="alarms/zr22g/alarm-index.html">Alarms →</a> -->
+      </div>
     </div>
 
     <div class="card">
       <h4>Yokogawa OX400</h4>
       <p>Reliable in-situ oxygen analyzer for boilers and furnaces.</p>
-      <a href="analyzers/yokogawa/ox400.html">Open Analyzer →</a>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/yokogawa/ox400.html">Open Analyzer →</a>
+        <!-- <a class="btn btn-alarm" href="alarms/ox400/alarm-index.html">Alarms →</a> -->
+      </div>
     </div>
 
     <div class="card">
       <h4>Yokogawa TDLS8000</h4>
       <p>TDLS analyzer for fast in-situ gas measurement.</p>
-      <a href="analyzers/yokogawa/tdls8000.html">Open Analyzer →</a>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/yokogawa/tdls8000.html">Open Analyzer →</a>
+      </div>
     </div>
 
     <div class="card">
       <h4>Rosemount 6888</h4>
       <p>Robust zirconia oxygen analyzer for industrial furnaces.</p>
-      <a href="analyzers/rosemount/6888.html">Open Analyzer →</a>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/rosemount/6888.html">Open Analyzer →</a>
+      </div>
     </div>
 
-    <!-- ===== ABB AZ SERIES (FOLDER PATHS) ===== -->
+  </div>
+
+  <!-- OXYGEN -->
+  <h3 id="oxygen" class="section-title" style="margin-top:34px;">Oxygen Analyzers</h3>
+  <div class="analyzer-grid">
+
     <div class="card">
       <h4>ABB AZ10</h4>
       <p>Compact zirconia oxygen analyzer for combustion monitoring.</p>
-      <a href="analyzers/abb/az10/az10.html">Open Analyzer →</a>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/abb/az10/az10.html">Open Analyzer →</a>
+      </div>
     </div>
 
     <div class="card">
       <h4>ABB AZ20</h4>
       <p>Advanced zirconia oxygen analyzer with diagnostics.</p>
-      <a href="analyzers/abb/az20/az20.html">Open Analyzer →</a>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/abb/az20/az20.html">Open Analyzer →</a>
+      </div>
     </div>
 
     <div class="card">
       <h4>ABB AZ25</h4>
       <p>Zirconia oxygen analyzer with integrated diagnostics.</p>
-      <a href="analyzers/abb/az25/az25.html">Open Analyzer →</a>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/abb/az25/az25.html">Open Analyzer →</a>
+      </div>
     </div>
 
     <div class="card">
       <h4>ABB AZ30</h4>
       <p>High-accuracy oxygen analyzer for process control.</p>
-      <a href="analyzers/abb/az30/az30.html">Open Analyzer →</a>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/abb/az30/az30.html">Open Analyzer →</a>
+      </div>
     </div>
 
     <div class="card">
       <h4>ABB AZ40</h4>
       <p>Premium oxygen analyzer with advanced communications.</p>
-      <a href="analyzers/abb/az40/az40.html">Open Analyzer →</a>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/abb/az40/az40.html">Open Analyzer →</a>
+      </div>
     </div>
 
   </div>
 
-  <!-- ===== DATA FLOW IMAGE (UNCHANGED PATH) ===== -->
-  <div class="data-flow">
+  <!-- DATA FLOW -->
+  <div id="dataflow" class="data-flow" style="margin-top:34px;">
     <h3 class="section-title">Analyzer Data Flow to DCS</h3>
     <img src="assets/images/data_flow_to_dcs.png" alt="Analyzer data flow to DCS">
     <p>Typical signal flow from field analyzers to plant control systems.</p>
   </div>
 
-  <!-- ===== GAS CHROMATOGRAPHS ===== -->
-  <h3 class="section-title">Gas Chromatographs</h3>
-
+  <!-- GC -->
+  <h3 id="gc" class="section-title" style="margin-top:34px;">Gas Chromatographs</h3>
   <div class="analyzer-grid">
 
     <div class="card">
       <h4>Yokogawa GC8000</h4>
-      <p>Process gas chromatograph for continuous online gas analysis.</p>
-      <a href="analyzers/yokogawa/gc8000/gc8000.html">Open Analyzer →</a>
+      <p>Process GC for continuous online gas analysis.</p>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/yokogawa/gc8000/gc8000.html">Open Analyzer →</a>
+      </div>
     </div>
 
     <div class="card">
       <h4>Siemens MAXUM Edition II</h4>
       <p>Flexible and reliable process gas chromatograph.</p>
-      <a href="analyzers/siemens/gc/maxum-ii/maxum-ii.html">Open Analyzer →</a>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/siemens/gc/maxum-ii/maxum-ii.html">Open Analyzer →</a>
+      </div>
     </div>
 
     <div class="card">
       <h4>Siemens SITRANS CV</h4>
-      <p>Process GC for calorific value and Wobbe index measurement.</p>
-      <a href="analyzers/siemens/gc/sitrans-cv/sitrans-cv.html">Open Analyzer →</a>
+      <p>GC for calorific value and Wobbe index measurement.</p>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/siemens/gc/sitrans-cv/sitrans-cv.html">Open Analyzer →</a>
+      </div>
     </div>
 
     <div class="card">
       <h4>Agilent 8850 GC</h4>
       <p>Compact GC system for routine analysis.</p>
-      <a href="analyzers/agilent/gc/8850/8850.html">Open Analyzer →</a>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/agilent/gc/8850/8850.html">Open Analyzer →</a>
+      </div>
     </div>
 
     <div class="card">
       <h4>Agilent 8860 GC</h4>
       <p>Advanced GC with automation and diagnostics.</p>
-      <a href="analyzers/agilent/gc/8860/8860.html">Open Analyzer →</a>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/agilent/gc/8860/8860.html">Open Analyzer →</a>
+      </div>
     </div>
 
     <div class="card">
       <h4>Agilent 8890 GC</h4>
       <p>High-performance GC for mission-critical applications.</p>
-      <a href="analyzers/agilent/gc/8890/8890.html">Open Analyzer →</a>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/agilent/gc/8890/8890.html">Open Analyzer →</a>
+      </div>
     </div>
 
     <div class="card">
       <h4>Agilent 990 Micro GC</h4>
       <p>Portable GC for fast field analysis.</p>
-      <a href="analyzers/agilent/gc/990-micro/990-micro.html">Open Analyzer →</a>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/agilent/gc/990-micro/990-micro.html">Open Analyzer →</a>
+      </div>
     </div>
 
   </div>
