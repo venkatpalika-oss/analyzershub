@@ -5,30 +5,146 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Analyzer Search | AnalyzersHub</title>
 
-  <!-- Keep your existing site styling -->
+  <!-- Keep your existing site styling (header, fonts, colors, etc.) -->
   <link rel="stylesheet" href="assets/css/style.css" />
 
+  <!-- Analyzer Search page styling (cards + buttons + search UI) -->
   <style>
+    /* keep header sticky + clean */
+    header{
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    }
+
+    .page-wrap{
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 18px 16px 40px;
+    }
+
+    .page-title{
+      margin: 10px 0 8px;
+    }
+
+    .page-subtitle{
+      margin: 0 0 14px;
+      opacity: 0.9;
+    }
+
+    /* search bar */
     .search-wrap{
-      max-width: 900px;
-      margin: 18px auto 0;
-      padding: 0 16px;
+      margin: 12px 0 18px;
+      display: flex;
+      justify-content: center;
     }
     .search-input{
       width: 100%;
+      max-width: 900px;
       padding: 14px 14px;
       border-radius: 10px;
-      border: 1px solid rgba(255,255,255,0.15);
-      background: rgba(2,6,23,0.65);
-      color: #fff;
+      border: 1px solid rgba(0,0,0,0.15);
+      background: #ffffff;
+      color: #222;
       outline: none;
       font-size: 1rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
     }
-    .search-input::placeholder{ color: rgba(255,255,255,0.6); }
-    .card .meta{ opacity: .88; font-size: .92rem; line-height: 1.35; }
-    .card .links{ margin-top: 10px; }
-    .card .links a{ margin-right: 12px; white-space: nowrap; }
-    .card.is-hidden{ display:none !important; }
+    .search-input::placeholder{
+      color: rgba(34,34,34,0.6);
+    }
+
+    /* section headings */
+    .section-title-lite{
+      margin: 26px 0 10px;
+      color: #0b3c5d;
+      font-size: 1.2rem;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+      text-align: center;
+    }
+
+    /* grid + cards */
+    .analyzer-grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+      margin-top: 10px;
+    }
+
+    .analyzer-card{
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 18px;
+      border: 1px solid #e0e6ec;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+
+    .analyzer-card:hover{
+      transform: translateY(-3px);
+      box-shadow: 0 10px 26px rgba(0,0,0,0.14);
+    }
+
+    .analyzer-card h4{
+      margin: 0 0 8px 0;
+      color: #0b3c5d;
+      font-size: 1.05rem;
+    }
+
+    .analyzer-card p{
+      margin: 0 0 14px 0;
+      color: #333;
+      line-height: 1.45;
+      font-size: 0.95rem;
+    }
+
+    /* button row */
+    .btn-row{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .btn{
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-weight: 800;
+      text-decoration: none;
+      border: 1px solid rgba(0,0,0,0.10);
+      transition: background .15s ease, transform .15s ease;
+    }
+    .btn:hover{
+      transform: translateY(-1px);
+    }
+
+    .btn-open{
+      background: #1f78b4;
+      color: #fff !important;
+    }
+    .btn-open:hover{
+      background: #155a8a;
+    }
+
+    .btn-alarm{
+      background: #ffffff;
+      color: #0b3c5d !important;
+    }
+    .btn-alarm:hover{
+      background: #e9f2f9;
+    }
+
+    /* hide cards when searching */
+    .is-hidden{ display: none !important; }
+
+    /* mobile tweaks */
+    @media (max-width: 768px){
+      .page-wrap{ padding: 14px 14px 34px; }
+      .search-input{ padding: 13px 12px; }
+    }
   </style>
 </head>
 
@@ -42,198 +158,156 @@
   </nav>
 </header>
 
-<main>
+<main class="page-wrap">
 
-  <h3 class="section-title">Analyzer Search</h3>
-  <p style="max-width:900px;margin:0 auto;padding:0 16px;opacity:.9;">
+  <h2 class="page-title">Analyzer Search</h2>
+  <p class="page-subtitle">
     Search by model, vendor, or type (example: <b>ZR22G</b>, <b>ABB</b>, <b>GC</b>, <b>oxygen</b>)
   </p>
 
   <div class="search-wrap">
     <input id="searchInput" class="search-input" type="text"
-    <h3 class="section-title">Oxygen & Field Analyzers</h3>
-
-<div class="analyzer-grid">
-
-  <div class="analyzer-card" data-search="zr22g yokogawa oxygen">
-    <h4>Yokogawa ZR22G</h4>
-    <p>Zirconia oxygen analyzer for combustion control with troubleshooting and alarm guidance.</p>
-    <a class="btn-primary" href="analyzers/yokogawa/zr22g.html">Open Analyzer →</a>
-  </div>
-
-  <div class="analyzer-card" data-search="ox400 yokogawa oxygen">
-    <h4>Yokogawa OX400</h4>
-    <p>In-situ oxygen analyzer used for boilers and furnaces.</p>
-    <a class="btn-primary" href="analyzers/yokogawa/ox400.html">Open Analyzer →</a>
-  </div>
-
-  <div class="analyzer-card" data-search="tdls8000 yokogawa tdls">
-    <h4>Yokogawa TDLS8000</h4>
-    <p>TDLS analyzer for fast in-situ gas measurement.</p>
-    <a class="btn-primary" href="analyzers/yokogawa/tdls8000.html">Open Analyzer →</a>
-  </div>
-
-  <div class="analyzer-card" data-search="6888 rosemount oxygen">
-    <h4>Rosemount 6888</h4>
-    <p>Robust zirconia oxygen analyzer for industrial furnaces.</p>
-    <a class="btn-primary" href="analyzers/rosemount/6888.html">Open Analyzer →</a>
-  </div>
-
-  <div class="analyzer-card" data-search="az10 abb oxygen">
-    <h4>ABB AZ10</h4>
-    <p>Compact zirconia oxygen analyzer for combustion monitoring.</p>
-    <a class="btn-primary" href="analyzers/abb/az10/az10.html">Open Analyzer →</a>
-  </div>
-
-</div>
-  
            placeholder="Type to search… (ZR22G, OX400, AZ10, GC8000, Siemens, Agilent, ABB)" />
   </div>
 
-  <!-- ================= OXYGEN / FIELD ANALYZERS (KEEP YOUR WORKING PATHS) ================= -->
-  <h3 class="section-title" style="max-width:1200px;margin:28px auto 0;padding:0 16px;">
-    Oxygen & Field Analyzers
-  </h3>
+  <!-- ================= Oxygen & Field Analyzers ================= -->
+  <div class="section-title-lite">Oxygen & Field Analyzers</div>
 
-  <div class="analyzer-grid" style="margin-top:14px;">
+  <div class="analyzer-grid">
 
-    <!-- Yokogawa (flat paths – confirmed working) -->
-    <div class="card" data-search="yokogawa zr22g oxygen analyzer zirconia">
+    <div class="analyzer-card" data-search="yokogawa zr22g oxygen analyzer zirconia">
       <h4>Yokogawa ZR22G</h4>
-      <p class="meta">Zirconia oxygen analyzer for combustion control with troubleshooting and alarm guidance.</p>
-      <div class="links">
-        <a href="analyzers/yokogawa/zr22g.html">Open Analyzer →</a>
+      <p>Zirconia oxygen analyzer for combustion control with troubleshooting and alarm guidance.</p>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/yokogawa/zr22g.html">Open Analyzer →</a>
       </div>
     </div>
 
-    <div class="card" data-search="yokogawa ox400 oxygen analyzer zirconia">
+    <div class="analyzer-card" data-search="yokogawa ox400 oxygen analyzer zirconia">
       <h4>Yokogawa OX400</h4>
-      <p class="meta">In-situ oxygen analyzer used for boilers and furnaces.</p>
-      <div class="links">
-        <a href="analyzers/yokogawa/ox400.html">Open Analyzer →</a>
+      <p>In-situ oxygen analyzer used for boilers and furnaces.</p>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/yokogawa/ox400.html">Open Analyzer →</a>
       </div>
     </div>
 
-    <div class="card" data-search="yokogawa tdls8000 tdls laser analyzer">
+    <div class="analyzer-card" data-search="yokogawa tdls8000 tdls laser analyzer">
       <h4>Yokogawa TDLS8000</h4>
-      <p class="meta">TDLS analyzer for fast in-situ gas measurement and process diagnostics.</p>
-      <div class="links">
-        <a href="analyzers/yokogawa/tdls8000.html">Open Analyzer →</a>
+      <p>TDLS analyzer for fast in-situ gas measurement and process diagnostics.</p>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/yokogawa/tdls8000.html">Open Analyzer →</a>
       </div>
     </div>
 
-    <!-- Rosemount (keep your original structure) -->
-    <div class="card" data-search="rosemount 6888 oxygen analyzer zirconia">
+    <div class="analyzer-card" data-search="rosemount 6888 oxygen analyzer zirconia">
       <h4>Rosemount 6888</h4>
-      <p class="meta">Robust zirconia oxygen analyzer for industrial furnaces and boilers.</p>
-      <div class="links">
-        <a href="analyzers/rosemount/6888.html">Open Analyzer →</a>
+      <p>Robust zirconia oxygen analyzer for industrial furnaces and boilers.</p>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/rosemount/6888.html">Open Analyzer →</a>
       </div>
     </div>
 
-    <!-- ABB AZ Series (FIXED: folder-style paths to stop 404) -->
-    <div class="card" data-search="abb az10 oxygen analyzer zirconia">
+    <div class="analyzer-card" data-search="abb az10 oxygen analyzer zirconia">
       <h4>ABB AZ10</h4>
-      <p class="meta">Compact zirconia oxygen analyzer for combustion and process monitoring.</p>
-      <div class="links">
-        <a href="analyzers/abb/az10/az10.html">Open Analyzer →</a>
+      <p>Compact zirconia oxygen analyzer for combustion and process monitoring.</p>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/abb/az10/az10.html">Open Analyzer →</a>
+        <a class="btn btn-alarm" href="analyzers/abb/az10/alarms/index.html">Alarms →</a>
       </div>
     </div>
 
-    <div class="card" data-search="abb az20 oxygen analyzer zirconia">
+    <div class="analyzer-card" data-search="abb az20 oxygen analyzer zirconia">
       <h4>ABB AZ20</h4>
-      <p class="meta">Advanced zirconia oxygen analyzer with improved diagnostics and stability.</p>
-      <div class="links">
-        <a href="analyzers/abb/az20/az20.html">Open Analyzer →</a>
+      <p>Advanced zirconia oxygen analyzer with improved diagnostics and stability.</p>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/abb/az20/az20.html">Open Analyzer →</a>
       </div>
     </div>
 
-    <div class="card" data-search="abb az25 oxygen analyzer zirconia diagnostics">
+    <div class="analyzer-card" data-search="abb az25 oxygen analyzer zirconia diagnostics">
       <h4>ABB AZ25</h4>
-      <p class="meta">Zirconia oxygen analyzer with integrated diagnostics.</p>
-      <div class="links">
-        <a href="analyzers/abb/az25/az25.html">Open Analyzer →</a>
+      <p>Zirconia oxygen analyzer with integrated diagnostics for maintenance support.</p>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/abb/az25/az25.html">Open Analyzer →</a>
       </div>
     </div>
 
-    <div class="card" data-search="abb az30 oxygen analyzer zirconia">
+    <div class="analyzer-card" data-search="abb az30 oxygen analyzer zirconia">
       <h4>ABB AZ30</h4>
-      <p class="meta">High-accuracy oxygen analyzer designed for demanding process control.</p>
-      <div class="links">
-        <a href="analyzers/abb/az30/az30.html">Open Analyzer →</a>
+      <p>High-accuracy oxygen analyzer designed for demanding process control.</p>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/abb/az30/az30.html">Open Analyzer →</a>
       </div>
     </div>
 
-    <div class="card" data-search="abb az40 oxygen analyzer zirconia">
+    <div class="analyzer-card" data-search="abb az40 oxygen analyzer zirconia">
       <h4>ABB AZ40</h4>
-      <p class="meta">Premium oxygen analyzer with advanced communications and performance features.</p>
-      <div class="links">
-        <a href="analyzers/abb/az40/az40.html">Open Analyzer →</a>
+      <p>Premium oxygen analyzer with advanced communications and performance features.</p>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/abb/az40/az40.html">Open Analyzer →</a>
       </div>
     </div>
 
   </div>
 
-  <!-- ================= GAS CHROMATOGRAPHS (NEW FOLDER-STYLE PAGES) ================= -->
-  <h3 class="section-title" style="max-width:1200px;margin:34px auto 0;padding:0 16px;">
-    Gas Chromatographs (GC)
-  </h3>
+  <!-- ================= Gas Chromatographs ================= -->
+  <div class="section-title-lite" style="margin-top:34px;">Gas Chromatographs (GC)</div>
 
-  <div class="analyzer-grid" style="margin-top:14px;">
+  <div class="analyzer-grid">
 
-    <div class="card" data-search="yokogawa gc8000 process gas chromatograph gc">
+    <div class="analyzer-card" data-search="yokogawa gc8000 gas chromatograph process gc">
       <h4>Yokogawa GC8000</h4>
-      <p class="meta">Process gas chromatograph for continuous online gas composition monitoring.</p>
-      <div class="links">
-        <a href="analyzers/yokogawa/gc8000/gc8000.html">Open Analyzer →</a>
+      <p>Process gas chromatograph for continuous online gas composition monitoring.</p>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/yokogawa/gc8000/gc8000.html">Open Analyzer →</a>
       </div>
     </div>
 
-    <div class="card" data-search="siemens maxum edition ii process gc chromatograph">
+    <div class="analyzer-card" data-search="siemens maxum edition ii process gc chromatograph">
       <h4>Siemens MAXUM Edition II</h4>
-      <p class="meta">Flexible and reliable process GC for refineries and petrochemical plants.</p>
-      <div class="links">
-        <a href="analyzers/siemens/gc/maxum-ii/maxum-ii.html">Open Analyzer →</a>
+      <p>Flexible and reliable process GC for refineries and petrochemical plants.</p>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/siemens/gc/maxum-ii/maxum-ii.html">Open Analyzer →</a>
       </div>
     </div>
 
-    <div class="card" data-search="siemens sitrans cv wobbe calorific value process gc chromatograph">
+    <div class="analyzer-card" data-search="siemens sitrans cv wobbe calorific value process gc chromatograph">
       <h4>Siemens SITRANS CV</h4>
-      <p class="meta">GC for calorific value, Wobbe index, and gas quality measurement.</p>
-      <div class="links">
-        <a href="analyzers/siemens/gc/sitrans-cv/sitrans-cv.html">Open Analyzer →</a>
+      <p>Process GC for calorific value and Wobbe index measurement.</p>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/siemens/gc/sitrans-cv/sitrans-cv.html">Open Analyzer →</a>
       </div>
     </div>
 
-    <div class="card" data-search="agilent 8850 gc system chromatograph">
+    <div class="analyzer-card" data-search="agilent 8850 gc system chromatograph">
       <h4>Agilent 8850 GC System</h4>
-      <p class="meta">Compact GC system for routine laboratory and industrial analysis.</p>
-      <div class="links">
-        <a href="analyzers/agilent/gc/8850/8850.html">Open Analyzer →</a>
+      <p>Compact GC system for routine laboratory and industrial analysis.</p>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/agilent/gc/8850/8850.html">Open Analyzer →</a>
       </div>
     </div>
 
-    <div class="card" data-search="agilent 8860 gc system chromatograph">
+    <div class="analyzer-card" data-search="agilent 8860 gc system chromatograph">
       <h4>Agilent 8860 GC System</h4>
-      <p class="meta">Advanced GC with enhanced automation and diagnostics.</p>
-      <div class="links">
-        <a href="analyzers/agilent/gc/8860/8860.html">Open Analyzer →</a>
+      <p>Advanced GC with improved automation and diagnostics.</p>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/agilent/gc/8860/8860.html">Open Analyzer →</a>
       </div>
     </div>
 
-    <div class="card" data-search="agilent 8890 gc system chromatograph">
+    <div class="analyzer-card" data-search="agilent 8890 gc system chromatograph">
       <h4>Agilent 8890 GC System</h4>
-      <p class="meta">High-performance GC for mission-critical applications.</p>
-      <div class="links">
-        <a href="analyzers/agilent/gc/8890/8890.html">Open Analyzer →</a>
+      <p>High-performance GC for mission-critical analytical applications.</p>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/agilent/gc/8890/8890.html">Open Analyzer →</a>
       </div>
     </div>
 
-    <div class="card" data-search="agilent 990 micro gc portable field analysis">
+    <div class="analyzer-card" data-search="agilent 990 micro gc portable field analysis">
       <h4>Agilent 990 Micro GC</h4>
-      <p class="meta">Compact and portable GC for fast on-site and field gas analysis.</p>
-      <div class="links">
-        <a href="analyzers/agilent/gc/990-micro/990-micro.html">Open Analyzer →</a>
+      <p>Compact and portable GC for fast on-site and field gas analysis.</p>
+      <div class="btn-row">
+        <a class="btn btn-open" href="analyzers/agilent/gc/990-micro/990-micro.html">Open Analyzer →</a>
       </div>
     </div>
 
@@ -248,7 +322,7 @@
 <script>
   (function () {
     const input = document.getElementById("searchInput");
-    const cards = Array.from(document.querySelectorAll(".card"));
+    const cards = Array.from(document.querySelectorAll(".analyzer-card"));
 
     function applyFilter() {
       const q = (input.value || "").trim().toLowerCase();
