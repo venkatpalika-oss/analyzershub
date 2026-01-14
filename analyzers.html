@@ -21,12 +21,25 @@ header {
 
 header h1 {
   font-size: 2.4rem;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 header p {
   color: #cbd5f5;
   font-size: 1.1rem;
+}
+
+.search-box {
+  max-width: 500px;
+  margin: 25px auto 0;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
 }
 
 section {
@@ -57,9 +70,8 @@ h2 {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 26px rgba(59,130,246,0.35);
+.card.hidden {
+  display: none;
 }
 
 .card h3 {
@@ -80,10 +92,6 @@ h2 {
   font-weight: bold;
 }
 
-.card a:hover {
-  text-decoration: underline;
-}
-
 footer {
   background: #020617;
   text-align: center;
@@ -98,144 +106,153 @@ footer {
 
 <header>
   <h1>Analyzer Search</h1>
-  <p>Select an analyzer to view troubleshooting, alarms, and operational guidance</p>
+  <p>Find analyzers by name, vendor, or type</p>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search analyzers (e.g. ZR22G, ABB, GC)">
+  </div>
 </header>
 
-<section>
+<section id="analyzerSection">
 
-  <!-- ================= YOKOGAWA ================= -->
-  <h2>Yokogawa – Gas & Oxygen Analyzers</h2>
+  <!-- Example Card Format (ALL cards use data-name) -->
+
+  <h2>All Analyzers</h2>
   <div class="grid">
-    <div class="card">
-      <h3>ZR22G</h3>
+
+    <!-- Yokogawa -->
+    <div class="card" data-name="yokogawa zr22g oxygen analyzer">
+      <h3>Yokogawa ZR22G</h3>
       <p>Zirconia oxygen analyzer for combustion control.</p>
       <a href="analyzers/yokogawa/zr22g/zr22g.html">View Details →</a>
     </div>
 
-    <div class="card">
-      <h3>OX400</h3>
-      <p>In-situ oxygen analyzer for industrial furnaces.</p>
+    <div class="card" data-name="yokogawa ox400 oxygen analyzer">
+      <h3>Yokogawa OX400</h3>
+      <p>In-situ oxygen analyzer for furnaces.</p>
       <a href="analyzers/yokogawa/ox400/ox400.html">View Details →</a>
     </div>
 
-    <div class="card">
-      <h3>GC8000</h3>
+    <div class="card" data-name="yokogawa gc8000 gas chromatograph">
+      <h3>Yokogawa GC8000</h3>
       <p>High-speed process gas chromatograph.</p>
       <a href="analyzers/yokogawa/gc8000/gc8000.html">View Details →</a>
     </div>
-  </div>
 
-  <!-- ================= ABB AZ SERIES ================= -->
-  <h2>ABB – AZ Oxygen Analyzer Series</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>AZ10</h3>
+    <!-- ABB AZ -->
+    <div class="card" data-name="abb az10 oxygen analyzer">
+      <h3>ABB AZ10</h3>
       <p>Compact zirconia oxygen analyzer.</p>
       <a href="analyzers/abb/az10/az10.html">View Details →</a>
     </div>
 
-    <div class="card">
-      <h3>AZ20</h3>
+    <div class="card" data-name="abb az20 oxygen analyzer">
+      <h3>ABB AZ20</h3>
       <p>Advanced zirconia oxygen analyzer.</p>
       <a href="analyzers/abb/az20/az20.html">View Details →</a>
     </div>
 
-    <div class="card">
-      <h3>AZ25</h3>
-      <p>Oxygen analyzer with integrated diagnostics.</p>
+    <div class="card" data-name="abb az25 oxygen analyzer">
+      <h3>ABB AZ25</h3>
+      <p>Oxygen analyzer with diagnostics.</p>
       <a href="analyzers/abb/az25/az25.html">View Details →</a>
     </div>
 
-    <div class="card">
-      <h3>AZ30</h3>
-      <p>High-accuracy oxygen analyzer for process control.</p>
+    <div class="card" data-name="abb az30 oxygen analyzer">
+      <h3>ABB AZ30</h3>
+      <p>High accuracy oxygen analyzer.</p>
       <a href="analyzers/abb/az30/az30.html">View Details →</a>
     </div>
 
-    <div class="card">
-      <h3>AZ40</h3>
-      <p>Premium oxygen analyzer with advanced communications.</p>
+    <div class="card" data-name="abb az40 oxygen analyzer">
+      <h3>ABB AZ40</h3>
+      <p>Premium oxygen analyzer.</p>
       <a href="analyzers/abb/az40/az40.html">View Details →</a>
     </div>
-  </div>
 
-  <!-- ================= SIEMENS GC ================= -->
-  <h2>Siemens – Gas Chromatographs</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>MAXUM Edition II</h3>
-      <p>Flexible process GC for refineries and petrochemicals.</p>
+    <!-- Siemens GC -->
+    <div class="card" data-name="siemens maxum gc">
+      <h3>Siemens MAXUM II</h3>
+      <p>Flexible process gas chromatograph.</p>
       <a href="analyzers/siemens/gc/maxum-ii/maxum-ii.html">View Details →</a>
     </div>
 
-    <div class="card">
-      <h3>SITRANS CV</h3>
-      <p>GC for calorific value and Wobbe index measurement.</p>
+    <div class="card" data-name="siemens sitrans cv gc">
+      <h3>Siemens SITRANS CV</h3>
+      <p>GC for calorific value measurement.</p>
       <a href="analyzers/siemens/gc/sitrans-cv/sitrans-cv.html">View Details →</a>
     </div>
-  </div>
 
-  <!-- ================= ABB GC ================= -->
-  <h2>ABB – Gas Chromatographs</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>PGC5000B</h3>
-      <p>Smart oven process gas chromatograph.</p>
+    <!-- ABB GC -->
+    <div class="card" data-name="abb pgc5000b gc">
+      <h3>ABB PGC5000B</h3>
+      <p>Smart oven process GC.</p>
       <a href="analyzers/abb/gc/pgc5000b/pgc5000b.html">View Details →</a>
     </div>
 
-    <div class="card">
-      <h3>PGC5000C</h3>
+    <div class="card" data-name="abb pgc5000c gc">
+      <h3>ABB PGC5000C</h3>
       <p>Advanced smart oven GC.</p>
       <a href="analyzers/abb/gc/pgc5000c/pgc5000c.html">View Details →</a>
     </div>
 
-    <div class="card">
-      <h3>PGC5007B</h3>
+    <div class="card" data-name="abb pgc5007b sulfur gc">
+      <h3>ABB PGC5007B</h3>
       <p>Total sulfur gas chromatograph.</p>
       <a href="analyzers/abb/gc/pgc5007b/pgc5007b.html">View Details →</a>
     </div>
 
-    <div class="card">
-      <h3>Portable NGC</h3>
+    <div class="card" data-name="abb portable ngc gc">
+      <h3>ABB Portable NGC</h3>
       <p>Portable natural gas chromatograph.</p>
       <a href="analyzers/abb/gc/portable-ngc/portable-ngc.html">View Details →</a>
     </div>
-  </div>
 
-  <!-- ================= AGILENT GC ================= -->
-  <h2>Agilent – Gas Chromatographs</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>8850 GC</h3>
+    <!-- Agilent -->
+    <div class="card" data-name="agilent 8850 gc">
+      <h3>Agilent 8850 GC</h3>
       <p>Compact GC for routine analysis.</p>
       <a href="analyzers/agilent/gc/8850/8850.html">View Details →</a>
     </div>
 
-    <div class="card">
-      <h3>8860 GC</h3>
+    <div class="card" data-name="agilent 8860 gc">
+      <h3>Agilent 8860 GC</h3>
       <p>Advanced GC with automation.</p>
       <a href="analyzers/agilent/gc/8860/8860.html">View Details →</a>
     </div>
 
-    <div class="card">
-      <h3>8890 GC</h3>
-      <p>High-performance GC for critical applications.</p>
+    <div class="card" data-name="agilent 8890 gc">
+      <h3>Agilent 8890 GC</h3>
+      <p>High-performance GC.</p>
       <a href="analyzers/agilent/gc/8890/8890.html">View Details →</a>
     </div>
 
-    <div class="card">
-      <h3>990 Micro GC</h3>
+    <div class="card" data-name="agilent 990 micro gc portable">
+      <h3>Agilent 990 Micro GC</h3>
       <p>Portable GC for field analysis.</p>
       <a href="analyzers/agilent/gc/990-micro/990-micro.html">View Details →</a>
     </div>
-  </div>
 
+  </div>
 </section>
 
 <footer>
   © 2026 AnalyzersHub.com | Industrial Analyzer Knowledge Hub
 </footer>
+
+<script>
+const searchInput = document.getElementById("searchInput");
+const cards = document.querySelectorAll(".card");
+
+searchInput.addEventListener("keyup", function () {
+  const filter = searchInput.value.toLowerCase();
+
+  cards.forEach(card => {
+    const text = card.getAttribute("data-name");
+    card.classList.toggle("hidden", !text.includes(filter));
+  });
+});
+</script>
 
 </body>
 </html>
