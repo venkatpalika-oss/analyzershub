@@ -13,6 +13,37 @@ body {
   color: #e5e7eb;
 }
 
+/* NAV BAR */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #020617;
+  padding: 14px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
+
+nav .logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+nav a {
+  color: #93c5fd;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 20px;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+/* HEADER */
 header {
   background: linear-gradient(135deg, #0f172a, #020617);
   padding: 50px 20px;
@@ -29,6 +60,7 @@ header p {
   font-size: 1.1rem;
 }
 
+/* SEARCH */
 .search-box {
   max-width: 500px;
   margin: 25px auto 0;
@@ -42,6 +74,7 @@ header p {
   font-size: 1rem;
 }
 
+/* CONTENT */
 section {
   max-width: 1200px;
   margin: auto;
@@ -74,6 +107,11 @@ h2 {
   display: none;
 }
 
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 28px rgba(59,130,246,0.25);
+}
+
 .card h3 {
   color: #bfdbfe;
   margin-top: 0;
@@ -104,6 +142,16 @@ footer {
 
 <body>
 
+<!-- NAVIGATION -->
+<nav>
+  <div class="logo">AnalyzersHub</div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="analyzers.html">Analyzers</a>
+  </div>
+</nav>
+
+<!-- HERO -->
 <header>
   <h1>Analyzer Search</h1>
   <p>Find analyzers by name, vendor, or type</p>
@@ -113,14 +161,13 @@ footer {
   </div>
 </header>
 
-<section id="analyzerSection">
-
-  <!-- Example Card Format (ALL cards use data-name) -->
-
+<!-- ANALYZERS -->
+<section>
   <h2>All Analyzers</h2>
+
   <div class="grid">
 
-    <!-- Yokogawa -->
+    <!-- ================= YOKOGAWA ================= -->
     <div class="card" data-name="yokogawa zr22g oxygen analyzer">
       <h3>Yokogawa ZR22G</h3>
       <p>Zirconia oxygen analyzer for combustion control.</p>
@@ -129,7 +176,7 @@ footer {
 
     <div class="card" data-name="yokogawa ox400 oxygen analyzer">
       <h3>Yokogawa OX400</h3>
-      <p>In-situ oxygen analyzer for furnaces.</p>
+      <p>In-situ oxygen analyzer for industrial furnaces.</p>
       <a href="analyzers/yokogawa/ox400/ox400.html">View Details →</a>
     </div>
 
@@ -139,7 +186,7 @@ footer {
       <a href="analyzers/yokogawa/gc8000/gc8000.html">View Details →</a>
     </div>
 
-    <!-- ABB AZ -->
+    <!-- ================= ABB AZ ================= -->
     <div class="card" data-name="abb az10 oxygen analyzer">
       <h3>ABB AZ10</h3>
       <p>Compact zirconia oxygen analyzer.</p>
@@ -154,39 +201,39 @@ footer {
 
     <div class="card" data-name="abb az25 oxygen analyzer">
       <h3>ABB AZ25</h3>
-      <p>Oxygen analyzer with diagnostics.</p>
+      <p>Oxygen analyzer with integrated diagnostics.</p>
       <a href="analyzers/abb/az25/az25.html">View Details →</a>
     </div>
 
     <div class="card" data-name="abb az30 oxygen analyzer">
       <h3>ABB AZ30</h3>
-      <p>High accuracy oxygen analyzer.</p>
+      <p>High-accuracy oxygen analyzer for process control.</p>
       <a href="analyzers/abb/az30/az30.html">View Details →</a>
     </div>
 
     <div class="card" data-name="abb az40 oxygen analyzer">
       <h3>ABB AZ40</h3>
-      <p>Premium oxygen analyzer.</p>
+      <p>Premium oxygen analyzer with advanced communications.</p>
       <a href="analyzers/abb/az40/az40.html">View Details →</a>
     </div>
 
-    <!-- Siemens GC -->
+    <!-- ================= SIEMENS GC ================= -->
     <div class="card" data-name="siemens maxum gc">
       <h3>Siemens MAXUM II</h3>
-      <p>Flexible process gas chromatograph.</p>
+      <p>Flexible and reliable process gas chromatograph.</p>
       <a href="analyzers/siemens/gc/maxum-ii/maxum-ii.html">View Details →</a>
     </div>
 
     <div class="card" data-name="siemens sitrans cv gc">
       <h3>Siemens SITRANS CV</h3>
-      <p>GC for calorific value measurement.</p>
+      <p>GC for calorific value and Wobbe index measurement.</p>
       <a href="analyzers/siemens/gc/sitrans-cv/sitrans-cv.html">View Details →</a>
     </div>
 
-    <!-- ABB GC -->
+    <!-- ================= ABB GC ================= -->
     <div class="card" data-name="abb pgc5000b gc">
       <h3>ABB PGC5000B</h3>
-      <p>Smart oven process GC.</p>
+      <p>Smart oven process gas chromatograph.</p>
       <a href="analyzers/abb/gc/pgc5000b/pgc5000b.html">View Details →</a>
     </div>
 
@@ -198,7 +245,7 @@ footer {
 
     <div class="card" data-name="abb pgc5007b sulfur gc">
       <h3>ABB PGC5007B</h3>
-      <p>Total sulfur gas chromatograph.</p>
+      <p>Total sulfur process gas chromatograph.</p>
       <a href="analyzers/abb/gc/pgc5007b/pgc5007b.html">View Details →</a>
     </div>
 
@@ -208,28 +255,28 @@ footer {
       <a href="analyzers/abb/gc/portable-ngc/portable-ngc.html">View Details →</a>
     </div>
 
-    <!-- Agilent -->
+    <!-- ================= AGILENT GC ================= -->
     <div class="card" data-name="agilent 8850 gc">
       <h3>Agilent 8850 GC</h3>
-      <p>Compact GC for routine analysis.</p>
+      <p>Compact GC for routine laboratory and industrial analysis.</p>
       <a href="analyzers/agilent/gc/8850/8850.html">View Details →</a>
     </div>
 
     <div class="card" data-name="agilent 8860 gc">
       <h3>Agilent 8860 GC</h3>
-      <p>Advanced GC with automation.</p>
+      <p>Advanced GC with enhanced automation and diagnostics.</p>
       <a href="analyzers/agilent/gc/8860/8860.html">View Details →</a>
     </div>
 
     <div class="card" data-name="agilent 8890 gc">
       <h3>Agilent 8890 GC</h3>
-      <p>High-performance GC.</p>
+      <p>High-performance GC for mission-critical applications.</p>
       <a href="analyzers/agilent/gc/8890/8890.html">View Details →</a>
     </div>
 
     <div class="card" data-name="agilent 990 micro gc portable">
       <h3>Agilent 990 Micro GC</h3>
-      <p>Portable GC for field analysis.</p>
+      <p>Portable GC for fast field analysis.</p>
       <a href="analyzers/agilent/gc/990-micro/990-micro.html">View Details →</a>
     </div>
 
@@ -246,7 +293,6 @@ const cards = document.querySelectorAll(".card");
 
 searchInput.addEventListener("keyup", function () {
   const filter = searchInput.value.toLowerCase();
-
   cards.forEach(card => {
     const text = card.getAttribute("data-name");
     card.classList.toggle("hidden", !text.includes(filter));
