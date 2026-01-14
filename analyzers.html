@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Analyzer Search | AnalyzersHub</title>
 
-  <!-- Keep your existing site styling (header, fonts, colors, etc.) -->
+  <!-- Keep your existing base site styling -->
   <link rel="stylesheet" href="assets/css/style.css" />
 
-  <!-- Analyzer Search page styling (cards + buttons + search UI) -->
   <style>
     /* keep header sticky + clean */
     header{
@@ -60,7 +59,7 @@
       margin: 26px 0 10px;
       color: #0b3c5d;
       font-size: 1.2rem;
-      font-weight: 800;
+      font-weight: 900;
       letter-spacing: 0.2px;
       text-align: center;
     }
@@ -74,12 +73,17 @@
     }
 
     .analyzer-card{
-      background: #ffffff;
+      position: relative;
+      overflow: hidden;
       border-radius: 12px;
       padding: 18px;
       border: 1px solid #e0e6ec;
       box-shadow: 0 4px 14px rgba(0,0,0,0.08);
       transition: transform .18s ease, box-shadow .18s ease;
+
+      /* subtle light industrial pattern */
+      background-image:
+        linear-gradient(135deg, rgba(255,255,255,0.98), rgba(245,248,252,0.98));
     }
 
     .analyzer-card:hover{
@@ -87,10 +91,23 @@
       box-shadow: 0 10px 26px rgba(0,0,0,0.14);
     }
 
+    /* Top gradient strip */
+    .analyzer-card::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 7px;
+      background: #d1d5db; /* default */
+    }
+
     .analyzer-card h4{
       margin: 0 0 8px 0;
       color: #0b3c5d;
       font-size: 1.05rem;
+      font-weight: 900;
+      letter-spacing: 0.2px;
     }
 
     .analyzer-card p{
@@ -112,33 +129,55 @@
       display: inline-block;
       padding: 10px 14px;
       border-radius: 8px;
-      font-weight: 800;
+      font-weight: 900;
       text-decoration: none;
       border: 1px solid rgba(0,0,0,0.10);
       transition: background .15s ease, transform .15s ease;
     }
-    .btn:hover{
-      transform: translateY(-1px);
-    }
+    .btn:hover{ transform: translateY(-1px); }
 
     .btn-open{
       background: #1f78b4;
       color: #fff !important;
     }
-    .btn-open:hover{
-      background: #155a8a;
-    }
+    .btn-open:hover{ background: #155a8a; }
 
     .btn-alarm{
       background: #ffffff;
       color: #0b3c5d !important;
     }
-    .btn-alarm:hover{
-      background: #e9f2f9;
+    .btn-alarm:hover{ background: #e9f2f9; }
+
+    /* Hide cards when searching */
+    .is-hidden{ display: none !important; }
+
+    /* ================= COLOR CODING / PATTERNS ================= */
+
+    /* Oxygen analyzers (blue) */
+    .analyzer-card[data-search*="oxygen"]{
+      border-left: 5px solid #1f78b4;
+    }
+    .analyzer-card[data-search*="oxygen"]::before{
+      background: linear-gradient(90deg, #1f78b4, #6fb6e9);
     }
 
-    /* hide cards when searching */
-    .is-hidden{ display: none !important; }
+    /* ABB analyzers (stronger deep blue) */
+    .analyzer-card[data-search*="abb"]{
+      border-left: 5px solid #0b3c5d;
+    }
+    .analyzer-card[data-search*="abb"]::before{
+      background: linear-gradient(90deg, #0b3c5d, #1f78b4);
+    }
+
+    /* Gas Chromatographs (green) */
+    .analyzer-card[data-search*="gc"],
+    .analyzer-card[data-search*="chromatograph"]{
+      border-left: 5px solid #2e7d32;
+    }
+    .analyzer-card[data-search*="gc"]::before,
+    .analyzer-card[data-search*="chromatograph"]::before{
+      background: linear-gradient(90deg, #2e7d32, #6fcf97);
+    }
 
     /* mobile tweaks */
     @media (max-width: 768px){
