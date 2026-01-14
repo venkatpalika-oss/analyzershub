@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SITRANS CV Valve / Sequence Alarm | AnalyzersHub</title>
+
+<link rel="stylesheet" href="../../../../../assets/css/style.css">
+
+<style>
+header{position:sticky;top:0;z-index:999;box-shadow:0 2px 12px rgba(0,0,0,.18)}
+.wrap{max-width:1100px;margin:0 auto;padding:20px}
+.breadcrumbs{font-size:.9rem;margin-bottom:14px}
+.breadcrumbs a{color:#1f78b4;font-weight:900;text-decoration:none}
+
+.hero{background:#7c3aed;color:#fff;border-radius:12px;padding:20px;box-shadow:0 6px 18px rgba(0,0,0,.12)}
+.hero h2{margin:0;color:#fff}
+.hero p{margin:6px 0 0;opacity:.95}
+
+.section{background:#fff;border-radius:12px;padding:16px;margin-top:16px;border:1px solid #e0e6ec;box-shadow:0 4px 14px rgba(0,0,0,.08)}
+.section h3{margin-top:0;color:#0b3c5d}
+
+.step{background:#f6fbff;border-left:4px solid #1f78b4;padding:12px;border-radius:10px;margin:10px 0}
+.warn{background:#fff7ed;border-left:4px solid #f59e0b;padding:12px;border-radius:10px;margin:10px 0}
+.ok{background:#ecfdf5;border-left:4px solid #10b981;padding:12px;border-radius:10px;margin:10px 0}
+
+ul{margin:8px 0 0 18px}
+li{margin:6px 0}
+code{background:#f2f4f7;padding:2px 6px;border-radius:6px}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>AnalyzersHub</h1>
+  <nav>
+    <a href="../../../../../index.html">Home</a>
+    <a href="../../../../../analyzers.html">Analyzer Search</a>
+  </nav>
+</header>
+
+<main class="wrap">
+
+<div class="breadcrumbs">
+  <a href="../../../../../index.html">Home</a> →
+  <a href="../../../../../analyzers.html">Analyzer Search</a> →
+  <a href="../sitrans-cv.html">SITRANS CV</a> →
+  <a href="index.html">Alarms</a> →
+  <span>Valve / Sequence</span>
+</div>
+
+<section class="hero">
+  <h2>Valve / Sequence Alarm</h2>
+  <p>Decision tree for “Valve not switching”, “Sequence fault”, “Injection timing error”, “No peaks due to valve”.</p>
+</section>
+
+<section class="section">
+  <h3>Step 1 — Confirm Symptom Type</h3>
+  <div class="step">
+    Identify which case matches:
+    <ul>
+      <li><b>Case A:</b> No peaks / very weak peaks</li>
+      <li><b>Case B:</b> Peaks present but wrong order/retention shift</li>
+      <li><b>Case C:</b> Runs fail early or sequence stops</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <h3>Step 2 — Pneumatic Supply (Most Common)</h3>
+  <div class="step">
+    Check:
+    <ul>
+      <li>Instrument air present and stable</li>
+      <li>No water/oil contamination in air line</li>
+      <li>Regulator set correctly for valve manifold</li>
+    </ul>
+  </div>
+  <div class="warn">
+    If air supply is low/dirty → valves may not actuate fully → clean/dry air and re-test.
+  </div>
+</section>
+
+<section class="section">
+  <h3>Step 3 — Observe Valve Switching During a Run</h3>
+  <div class="step">
+    <ul>
+      <li>Start a run and observe: do you hear/see switching at expected times?</li>
+      <li>Check diagnostics: command vs actual state (if available)</li>
+      <li>Confirm solenoid LEDs (if present) toggle when commanded</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <h3>Step 4 — Solenoid / Coil / Electrical</h3>
+  <div class="step">
+    If valve does not move:
+    <ul>
+      <li>Check solenoid coil connection and tightness</li>
+      <li>Swap with a known good solenoid channel (if possible) to isolate</li>
+      <li>Check for blown fuse/IO fault</li>
+    </ul>
+  </div>
+  <div class="warn">
+    If swapping solenoid fixes issue → replace faulty solenoid/coil.
+  </div>
+</section>
+
+<section class="section">
+  <h3>Step 5 — Valve Block Restriction / Sticking</h3>
+  <div class="step">
+    If solenoid works but switching still unreliable:
+    <ul>
+      <li>Contamination in valve (oil, sticky residue)</li>
+      <li>Mechanical wear / internal leakage</li>
+      <li>Incorrect pressure on valve actuator</li>
+    </ul>
+  </div>
+  <div class="step">
+    Actions:
+    <ul>
+      <li>Check air quality and drain air filter</li>
+      <li>Service or replace sticking valve as per OEM procedures</li>
+      <li>After replacement: run repeat test for stable retention and consistent peaks</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <h3>Step 6 — Method/Timing Configuration Check</h3>
+  <div class="step">
+    If valves switch correctly but results wrong:
+    <ul>
+      <li>Compare method timing with last known good backup</li>
+      <li>Check if recent changes were made (after maintenance or software update)</li>
+      <li>Confirm correct stream selection and calibration sequence</li>
+    </ul>
+  </div>
+  <div class="warn">
+    Wrong timing can look like “hardware fault” but is actually configuration.
+  </div>
+</section>
+
+<section class="section">
+  <h3>Verification</h3>
+  <div class="ok">
+    Pass criteria:
+    <ul>
+      <li>Valve events occur consistently every run</li>
+      <li>Peaks appear normal and repeatable</li>
+      <li>No sequence faults during full cycle</li>
+    </ul>
+  </div>
+</section>
+
+<div style="margin-top:20px">
+  <a href="index.html">← Back to SITRANS CV Alarms</a>
+</div>
+
+</main>
+
+<footer>Built for Analyzer Technicians</footer>
+</body>
+</html>
