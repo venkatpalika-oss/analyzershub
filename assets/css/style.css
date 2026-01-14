@@ -91,3 +91,51 @@ footer {
 .hero-content a:hover {
     background: #155a8a;
 }
+/* ================= PRO HERO TUNING ================= */
+
+/* Slight professional glow on hero text */
+.hero-content h2 {
+  text-shadow: 0 0 18px rgba(0,0,0,0.55), 0 0 26px rgba(31,120,180,0.35);
+}
+
+/* Mobile hero text tuning */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 420px;
+  }
+  .hero-content {
+    padding: 14px;
+  }
+  .hero-content h2 {
+    font-size: 2.1rem;
+    line-height: 1.15;
+  }
+  .hero-content p {
+    font-size: 1.05rem;
+    line-height: 1.35;
+  }
+  .hero-content a {
+    padding: 12px 20px;
+  }
+}
+
+/* Make header sticky (keeps your existing header design) */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* Add subtle depth so header doesn’t blend into hero */
+header {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+}
+
+/* Optional: improve card hover (safe even if cards already styled) */
+.card {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+}
