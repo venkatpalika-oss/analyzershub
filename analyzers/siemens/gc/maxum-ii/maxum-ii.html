@@ -23,7 +23,7 @@
       font-size: 0.95rem;
       margin: 8px 0 14px;
     }
-    .breadcrumbs a{ color: #1f78b4; text-decoration: none; font-weight: 700; }
+    .breadcrumbs a{ color: #1f78b4; text-decoration: none; font-weight: 800; }
     .breadcrumbs a:hover{ text-decoration: underline; }
 
     .hero-mini{
@@ -37,30 +37,58 @@
     .hero-mini h2{ margin: 0 0 6px; color:#fff; }
     .hero-mini p{ margin: 0; opacity: 0.95; }
 
-    .grid{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 16px;
-      margin-top: 14px;
-    }
-    .card{
-      background: #fff;
-      border: 1px solid #e0e6ec;
-      border-radius: 12px;
-      padding: 16px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-    }
-    .card h3{ margin-top: 0; }
+    .tags{ margin-top: 10px; }
     .tag{
       display:inline-block;
       font-size:0.82rem;
-      font-weight:800;
+      font-weight:900;
       padding:6px 10px;
       border-radius:999px;
       background:#e9f2f9;
       color:#0b3c5d;
       margin: 6px 6px 0 0;
     }
+
+    .btn-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top: 12px;
+    }
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:8px;
+      font-weight:900;
+      text-decoration:none;
+      border: 1px solid rgba(255,255,255,0.22);
+      transition: background .15s ease, transform .15s ease;
+    }
+    .btn:hover{ transform: translateY(-1px); }
+    .btn-primary{ background:#1f78b4; color:#fff; }
+    .btn-primary:hover{ background:#155a8a; }
+    .btn-ghost{ background: rgba(255,255,255,0.10); color:#fff; }
+    .btn-ghost:hover{ background: rgba(255,255,255,0.18); }
+
+    .card{
+      background: #fff;
+      border: 1px solid #e0e6ec;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      margin-top: 14px;
+    }
+    .card h3{ margin-top: 0; }
+
+    .toc a{
+      color:#1f78b4;
+      text-decoration:none;
+      font-weight:900;
+      display:block;
+      margin:6px 0;
+    }
+    .toc a:hover{ text-decoration: underline; }
+
     .step{
       margin: 10px 0;
       padding: 12px;
@@ -69,27 +97,6 @@
       border-radius: 8px;
     }
     .step b{ color:#0b3c5d; }
-    .btn-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top: 10px;
-    }
-    .btn{
-      display:inline-block;
-      padding:10px 14px;
-      border-radius:8px;
-      font-weight:900;
-      text-decoration:none;
-      border: 1px solid rgba(0,0,0,0.10);
-    }
-    .btn-primary{ background:#1f78b4; color:#fff; }
-    .btn-primary:hover{ background:#155a8a; }
-    .btn-ghost{ background:#fff; color:#0b3c5d; }
-    .btn-ghost:hover{ background:#e9f2f9; }
-
-    .toc a{ color:#1f78b4; text-decoration:none; font-weight:800; display:block; margin:6px 0; }
-    .toc a:hover{ text-decoration: underline; }
 
     ul{ margin: 10px 0 0 18px; }
     li{ margin: 6px 0; }
@@ -101,10 +108,6 @@
       padding: 12px;
       border-radius: 10px;
       margin: 14px 0;
-    }
-
-    @media (max-width: 768px){
-      .hero-mini{ padding: 16px; }
     }
   </style>
 </head>
@@ -122,15 +125,16 @@
 <main class="wrap">
 
   <div class="breadcrumbs">
-    <a href="../../../../index.html">Home</a> → 
-    <a href="../../../../analyzers.html">Analyzer Search</a> → 
+    <a href="../../../../index.html">Home</a> →
+    <a href="../../../../analyzers.html">Analyzer Search</a> →
     <span>Siemens MAXUM Edition II</span>
   </div>
 
   <section class="hero-mini">
     <h2>Siemens MAXUM Edition II (Process GC)</h2>
     <p>Troubleshooting playbook for technicians: symptoms → checks → fixes → escalation.</p>
-    <div style="margin-top:10px;">
+
+    <div class="tags">
       <span class="tag">GC</span>
       <span class="tag">Sampling</span>
       <span class="tag">Columns</span>
@@ -138,10 +142,17 @@
       <span class="tag">Detectors</span>
       <span class="tag">Communications</span>
     </div>
+
+    <!-- NEW: Quick buttons -->
+    <div class="btn-row">
+      <a class="btn btn-primary" href="alarms/index.html">Alarms →</a>
+      <a class="btn btn-ghost" href="../../../../analyzers.html">Back to Search</a>
+    </div>
   </section>
 
   <section class="card toc">
     <h3>Quick Navigation</h3>
+    <a href="alarms/index.html">0) Alarm Decision Trees</a>
     <a href="#startup">1) Startup & Basic Health Checks</a>
     <a href="#noresults">2) No Results / No Peaks</a>
     <a href="#badpeaks">3) Bad Peaks (tailing, broad, shifting)</a>
@@ -435,9 +446,8 @@
       <li>What actions were taken (filters changed, leak test, restart, etc.)</li>
     </ul>
 
-    <div class="btn-row">
+    <div style="margin-top:14px;">
       <a class="btn btn-primary" href="../../../../analyzers.html">Back to Analyzer Search</a>
-      <a class="btn btn-ghost" href="../../../../index.html">Home</a>
     </div>
   </section>
 
