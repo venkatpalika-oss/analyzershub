@@ -11,20 +11,45 @@
     header{ position: sticky; top:0; z-index:999; box-shadow:0 2px 12px rgba(0,0,0,0.18); }
 
     .page-wrap{ max-width:1200px; margin:0 auto; padding:18px 16px 40px; }
-    .page-title{ margin:10px 0 8px; }
+    .page-title{ margin:10px 0 6px; }
     .page-subtitle{ margin:0 0 14px; opacity:.9; }
 
-    .search-wrap{ margin:12px 0 18px; display:flex; justify-content:center; }
+    .search-wrap{ margin:12px 0 14px; display:flex; justify-content:center; }
     .search-input{
-      width:100%; max-width:900px; padding:14px 14px;
+      width:100%; max-width:920px; padding:14px 14px;
       border-radius:10px; border:1px solid rgba(0,0,0,0.15);
       background:#fff; color:#222; outline:none; font-size:1rem;
       box-shadow:0 3px 10px rgba(0,0,0,0.08);
     }
     .search-input::placeholder{ color:rgba(34,34,34,0.6); }
 
+    /* ✅ Category filter bar */
+    .filter-bar{
+      display:flex; flex-wrap:wrap; gap:10px;
+      justify-content:center;
+      margin:10px 0 18px;
+    }
+    .filter-btn{
+      border:none;
+      cursor:pointer;
+      padding:10px 14px;
+      border-radius:999px;
+      font-weight:900;
+      background:#fff;
+      color:#0b3c5d;
+      border:1px solid rgba(0,0,0,0.12);
+      box-shadow:0 2px 10px rgba(0,0,0,0.06);
+      transition: transform .15s ease, background .15s ease, color .15s ease;
+    }
+    .filter-btn:hover{ transform: translateY(-1px); background:#e9f2f9; }
+    .filter-btn.active{
+      background:#1f78b4;
+      color:#fff;
+      border-color: rgba(255,255,255,0.0);
+    }
+
     .section-title-lite{
-      margin:26px 0 10px; color:#0b3c5d; font-size:1.2rem;
+      margin:26px 0 10px; color:#0b3c5d; font-size:1.15rem;
       font-weight:900; letter-spacing:0.2px; text-align:center;
     }
 
@@ -75,26 +100,26 @@
       transition: background .15s ease, transform .15s ease;
     }
     .btn:hover{ transform: translateY(-1px); }
-
     .btn-open{ background:#1f78b4; color:#fff !important; }
     .btn-open:hover{ background:#155a8a; }
-
     .btn-alarm{ background:#fff; color:#0b3c5d !important; }
     .btn-alarm:hover{ background:#e9f2f9; }
 
     .is-hidden{ display:none !important; }
 
-    /* Color coding */
-    .analyzer-card[data-search*="oxygen"]{ border-left:5px solid #1f78b4; }
-    .analyzer-card[data-search*="oxygen"]::before{ background: linear-gradient(90deg, #1f78b4, #6fb6e9); }
+    /* Color coding strips */
+    .analyzer-card[data-tag~="oxygen"]{ border-left:5px solid #1f78b4; }
+    .analyzer-card[data-tag~="oxygen"]::before{ background: linear-gradient(90deg, #1f78b4, #6fb6e9); }
 
-    .analyzer-card[data-search*="abb"]{ border-left:5px solid #0b3c5d; }
-    .analyzer-card[data-search*="abb"]::before{ background: linear-gradient(90deg, #0b3c5d, #1f78b4); }
+    .analyzer-card[data-tag~="abb"]{ border-left:5px solid #0b3c5d; }
+    .analyzer-card[data-tag~="abb"]::before{ background: linear-gradient(90deg, #0b3c5d, #1f78b4); }
 
-    .analyzer-card[data-search*="gc"],
-    .analyzer-card[data-search*="chromatograph"]{ border-left:5px solid #2e7d32; }
-    .analyzer-card[data-search*="gc"]::before,
-    .analyzer-card[data-search*="chromatograph"]::before{ background: linear-gradient(90deg, #2e7d32, #6fcf97); }
+    .analyzer-card[data-tag~="gc"]{ border-left:5px solid #2e7d32; }
+    .analyzer-card[data-tag~="gc"]::before{ background: linear-gradient(90deg, #2e7d32, #6fcf97); }
+
+    .analyzer-card[data-tag~="yokogawa"]::before{ background: linear-gradient(90deg, #0b3c5d, #1f78b4); }
+    .analyzer-card[data-tag~="siemens"]::before{ background: linear-gradient(90deg, #2e7d32, #1f78b4); }
+    .analyzer-card[data-tag~="agilent"]::before{ background: linear-gradient(90deg, #374151, #9ca3af); }
 
     @media (max-width:768px){
       .page-wrap{ padding:14px 14px 34px; }
@@ -104,7 +129,6 @@
 </head>
 
 <body>
-
 <header>
   <h1>AnalyzersHub</h1>
   <nav>
@@ -125,11 +149,25 @@
            placeholder="Type to search… (ZR22G, OX400, AZ10, GC8000, Siemens, Agilent, ABB)" />
   </div>
 
-  <!-- Oxygen & Field -->
-  <div class="section-title-lite">Oxygen & Field Analyzers</div>
+  <!-- ✅ Category filter buttons -->
+  <div class="filter-bar" aria-label="Category filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="oxygen">Oxygen</button>
+    <button class="filter-btn" data-filter="gc">GC</button>
+    <button class="filter-btn" data-filter="abb">ABB</button>
+    <button class="filter-btn" data-filter="yokogawa">Yokogawa</button>
+    <button class="filter-btn" data-filter="siemens">Siemens</button>
+    <button class="filter-btn" data-filter="agilent">Agilent</button>
+  </div>
+
+  <div class="section-title-lite">Analyzers</div>
+
   <div class="analyzer-grid">
 
-    <div class="analyzer-card" data-search="yokogawa zr22g oxygen analyzer zirconia">
+    <!-- ✅ Yokogawa Oxygen -->
+    <div class="analyzer-card"
+         data-tag="oxygen yokogawa"
+         data-search="yokogawa zr22g oxygen analyzer zirconia">
       <h4>Yokogawa ZR22G</h4>
       <p>Zirconia oxygen analyzer for combustion control with troubleshooting and alarm guidance.</p>
       <div class="btn-row">
@@ -137,7 +175,9 @@
       </div>
     </div>
 
-    <div class="analyzer-card" data-search="yokogawa ox400 oxygen analyzer zirconia">
+    <div class="analyzer-card"
+         data-tag="oxygen yokogawa"
+         data-search="yokogawa ox400 oxygen analyzer zirconia">
       <h4>Yokogawa OX400</h4>
       <p>In-situ oxygen analyzer used for boilers and furnaces.</p>
       <div class="btn-row">
@@ -145,7 +185,9 @@
       </div>
     </div>
 
-    <div class="analyzer-card" data-search="yokogawa tdls8000 tdls laser analyzer">
+    <div class="analyzer-card"
+         data-tag="tdls yokogawa"
+         data-search="yokogawa tdls8000 tdls laser analyzer">
       <h4>Yokogawa TDLS8000</h4>
       <p>TDLS analyzer for fast in-situ gas measurement and process diagnostics.</p>
       <div class="btn-row">
@@ -153,7 +195,10 @@
       </div>
     </div>
 
-    <div class="analyzer-card" data-search="rosemount 6888 oxygen analyzer zirconia">
+    <!-- ✅ Rosemount -->
+    <div class="analyzer-card"
+         data-tag="oxygen rosemount"
+         data-search="rosemount 6888 oxygen analyzer zirconia">
       <h4>Rosemount 6888</h4>
       <p>Robust zirconia oxygen analyzer for industrial furnaces and boilers.</p>
       <div class="btn-row">
@@ -161,7 +206,10 @@
       </div>
     </div>
 
-    <div class="analyzer-card" data-search="abb az10 oxygen analyzer zirconia">
+    <!-- ✅ ABB AZ -->
+    <div class="analyzer-card"
+         data-tag="oxygen abb"
+         data-search="abb az10 oxygen analyzer zirconia">
       <h4>ABB AZ10</h4>
       <p>Compact zirconia oxygen analyzer for combustion and process monitoring.</p>
       <div class="btn-row">
@@ -170,7 +218,9 @@
       </div>
     </div>
 
-    <div class="analyzer-card" data-search="abb az20 oxygen analyzer zirconia">
+    <div class="analyzer-card"
+         data-tag="oxygen abb"
+         data-search="abb az20 oxygen analyzer zirconia">
       <h4>ABB AZ20</h4>
       <p>Advanced zirconia oxygen analyzer with improved diagnostics and stability.</p>
       <div class="btn-row">
@@ -178,7 +228,9 @@
       </div>
     </div>
 
-    <div class="analyzer-card" data-search="abb az25 oxygen analyzer zirconia diagnostics">
+    <div class="analyzer-card"
+         data-tag="oxygen abb"
+         data-search="abb az25 oxygen analyzer zirconia diagnostics">
       <h4>ABB AZ25</h4>
       <p>Zirconia oxygen analyzer with integrated diagnostics for maintenance support.</p>
       <div class="btn-row">
@@ -186,7 +238,9 @@
       </div>
     </div>
 
-    <div class="analyzer-card" data-search="abb az30 oxygen analyzer zirconia">
+    <div class="analyzer-card"
+         data-tag="oxygen abb"
+         data-search="abb az30 oxygen analyzer zirconia">
       <h4>ABB AZ30</h4>
       <p>High-accuracy oxygen analyzer designed for demanding process control.</p>
       <div class="btn-row">
@@ -194,7 +248,9 @@
       </div>
     </div>
 
-    <div class="analyzer-card" data-search="abb az40 oxygen analyzer zirconia">
+    <div class="analyzer-card"
+         data-tag="oxygen abb"
+         data-search="abb az40 oxygen analyzer zirconia">
       <h4>ABB AZ40</h4>
       <p>Premium oxygen analyzer with advanced communications and performance features.</p>
       <div class="btn-row">
@@ -202,13 +258,10 @@
       </div>
     </div>
 
-  </div>
-
-  <!-- GC -->
-  <div class="section-title-lite" style="margin-top:34px;">Gas Chromatographs (GC)</div>
-  <div class="analyzer-grid">
-
-    <div class="analyzer-card" data-search="yokogawa gc8000 gas chromatograph process gc">
+    <!-- ✅ GC -->
+    <div class="analyzer-card"
+         data-tag="gc yokogawa"
+         data-search="yokogawa gc8000 gas chromatograph process gc">
       <h4>Yokogawa GC8000</h4>
       <p>Process gas chromatograph for continuous online gas composition monitoring.</p>
       <div class="btn-row">
@@ -217,7 +270,9 @@
       </div>
     </div>
 
-    <div class="analyzer-card" data-search="siemens maxum edition ii process gc chromatograph">
+    <div class="analyzer-card"
+         data-tag="gc siemens"
+         data-search="siemens maxum edition ii process gc chromatograph">
       <h4>Siemens MAXUM Edition II</h4>
       <p>Flexible and reliable process GC for refineries and petrochemical plants.</p>
       <div class="btn-row">
@@ -226,7 +281,9 @@
       </div>
     </div>
 
-    <div class="analyzer-card" data-search="siemens sitrans cv wobbe calorific value process gc chromatograph">
+    <div class="analyzer-card"
+         data-tag="gc siemens"
+         data-search="siemens sitrans cv wobbe calorific value process gc chromatograph">
       <h4>Siemens SITRANS CV</h4>
       <p>Process GC for calorific value and Wobbe index measurement.</p>
       <div class="btn-row">
@@ -235,7 +292,9 @@
       </div>
     </div>
 
-    <div class="analyzer-card" data-search="agilent 8850 gc system chromatograph">
+    <div class="analyzer-card"
+         data-tag="gc agilent"
+         data-search="agilent 8850 gc system chromatograph">
       <h4>Agilent 8850 GC System</h4>
       <p>Compact GC system for routine laboratory and industrial analysis.</p>
       <div class="btn-row">
@@ -243,7 +302,9 @@
       </div>
     </div>
 
-    <div class="analyzer-card" data-search="agilent 8860 gc system chromatograph">
+    <div class="analyzer-card"
+         data-tag="gc agilent"
+         data-search="agilent 8860 gc system chromatograph">
       <h4>Agilent 8860 GC System</h4>
       <p>Advanced GC with improved automation and diagnostics.</p>
       <div class="btn-row">
@@ -251,7 +312,9 @@
       </div>
     </div>
 
-    <div class="analyzer-card" data-search="agilent 8890 gc system chromatograph">
+    <div class="analyzer-card"
+         data-tag="gc agilent"
+         data-search="agilent 8890 gc system chromatograph">
       <h4>Agilent 8890 GC System</h4>
       <p>High-performance GC for mission-critical analytical applications.</p>
       <div class="btn-row">
@@ -259,7 +322,9 @@
       </div>
     </div>
 
-    <div class="analyzer-card" data-search="agilent 990 micro gc portable field analysis">
+    <div class="analyzer-card"
+         data-tag="gc agilent"
+         data-search="agilent 990 micro gc portable field analysis">
       <h4>Agilent 990 Micro GC</h4>
       <p>Compact and portable GC for fast on-site and field gas analysis.</p>
       <div class="btn-row">
@@ -274,21 +339,47 @@
 <footer>Built for Analyzer Technicians</footer>
 
 <script>
-  (function () {
-    const input = document.getElementById("searchInput");
-    const cards = Array.from(document.querySelectorAll(".analyzer-card"));
+(function () {
+  const input = document.getElementById("searchInput");
+  const cards = Array.from(document.querySelectorAll(".analyzer-card"));
+  const buttons = Array.from(document.querySelectorAll(".filter-btn"));
 
-    function applyFilter() {
-      const q = (input.value || "").trim().toLowerCase();
-      if (!q) { cards.forEach(c => c.classList.remove("is-hidden")); return; }
-      cards.forEach(card => {
-        const hay = (card.getAttribute("data-search") || "").toLowerCase();
-        card.classList.toggle("is-hidden", !hay.includes(q));
-      });
-    }
+  let activeFilter = "all";
 
-    input.addEventListener("input", applyFilter);
-  })();
+  function matchFilter(card) {
+    if (activeFilter === "all") return true;
+    const tags = (card.getAttribute("data-tag") || "").toLowerCase().split(/\s+/);
+    return tags.includes(activeFilter);
+  }
+
+  function matchSearch(card) {
+    const q = (input.value || "").trim().toLowerCase();
+    if (!q) return true;
+    const hay = (card.getAttribute("data-search") || "").toLowerCase();
+    return hay.includes(q);
+  }
+
+  function applyAll() {
+    cards.forEach(card => {
+      const show = matchFilter(card) && matchSearch(card);
+      card.classList.toggle("is-hidden", !show);
+    });
+  }
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      buttons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      activeFilter = btn.getAttribute("data-filter");
+      applyAll();
+    });
+  });
+
+  input.addEventListener("input", applyAll);
+
+  // initial
+  applyAll();
+})();
 </script>
 
 </body>
