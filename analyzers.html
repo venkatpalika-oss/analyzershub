@@ -65,6 +65,7 @@ header{
   border:1px solid #e0e6ec;
   box-shadow:0 4px 14px rgba(0,0,0,.08);
   position:relative;
+  overflow:hidden;
 }
 .analyzer-card::before{
   content:"";
@@ -74,7 +75,7 @@ header{
   background:#d1d5db;
 }
 .analyzer-card h4{margin:6px 0;color:#0b3c5d}
-.analyzer-card p{margin:0 0 14px;font-size:.95rem}
+.analyzer-card p{margin:0 0 14px;font-size:.95rem; line-height:1.45;}
 
 .btn-row{display:flex;flex-wrap:wrap;gap:10px}
 .btn{
@@ -118,7 +119,7 @@ header{
 
 <div class="search-wrap">
   <input id="searchInput" class="search-input"
-         placeholder="Search… (ZR22G, GC8000, ABB AZ10, Siemens, GC)">
+         placeholder="Search… (ZR22G, GC8000, PGC5000B, ABB, Siemens, GC)">
 </div>
 
 <div class="filter-bar">
@@ -133,83 +134,181 @@ header{
 
 <div class="analyzer-grid">
 
-<!-- Yokogawa Oxygen -->
-<div class="analyzer-card" data-tag="oxygen yokogawa"
-     data-search="yokogawa zr22g oxygen zirconia">
-  <h4>Yokogawa ZR22G</h4>
-  <p>Zirconia oxygen analyzer for combustion control.</p>
-  <div class="btn-row">
-    <a class="btn btn-open" href="analyzers/yokogawa/zr22g.html">Open Analyzer →</a>
+  <!-- ✅ Yokogawa Oxygen -->
+  <div class="analyzer-card" data-tag="oxygen yokogawa"
+       data-search="yokogawa zr22g oxygen zirconia">
+    <h4>Yokogawa ZR22G</h4>
+    <p>Zirconia oxygen analyzer for combustion control.</p>
+    <div class="btn-row">
+      <a class="btn btn-open" href="analyzers/yokogawa/zr22g.html">Open Analyzer →</a>
+    </div>
   </div>
-</div>
 
-<div class="analyzer-card" data-tag="oxygen yokogawa"
-     data-search="yokogawa ox400 oxygen analyzer">
-  <h4>Yokogawa OX400</h4>
-  <p>In-situ oxygen analyzer for boilers and furnaces.</p>
-  <div class="btn-row">
-    <a class="btn btn-open" href="analyzers/yokogawa/ox400.html">Open Analyzer →</a>
+  <div class="analyzer-card" data-tag="oxygen yokogawa"
+       data-search="yokogawa ox400 oxygen analyzer">
+    <h4>Yokogawa OX400</h4>
+    <p>In-situ oxygen analyzer for boilers and furnaces.</p>
+    <div class="btn-row">
+      <a class="btn btn-open" href="analyzers/yokogawa/ox400.html">Open Analyzer →</a>
+    </div>
   </div>
-</div>
 
-<!-- ABB AZ -->
-<div class="analyzer-card" data-tag="oxygen abb"
-     data-search="abb az10 oxygen analyzer">
-  <h4>ABB AZ10</h4>
-  <p>Compact zirconia oxygen analyzer.</p>
-  <div class="btn-row">
-    <a class="btn btn-open" href="analyzers/abb/az10/az10.html">Open Analyzer →</a>
-    <a class="btn btn-alarm" href="analyzers/abb/az10/alarms/index.html">Alarms →</a>
+  <!-- ✅ ABB AZ -->
+  <div class="analyzer-card" data-tag="oxygen abb"
+       data-search="abb az10 oxygen analyzer">
+    <h4>ABB AZ10</h4>
+    <p>Compact zirconia oxygen analyzer.</p>
+    <div class="btn-row">
+      <a class="btn btn-open" href="analyzers/abb/az10/az10.html">Open Analyzer →</a>
+      <a class="btn btn-alarm" href="analyzers/abb/az10/alarms/index.html">Alarms →</a>
+    </div>
   </div>
-</div>
 
-<div class="analyzer-card" data-tag="oxygen abb"
-     data-search="abb az20 oxygen analyzer">
-  <h4>ABB AZ20</h4>
-  <p>Zirconia oxygen analyzer with advanced diagnostics.</p>
-  <div class="btn-row">
-    <a class="btn btn-open" href="analyzers/abb/az20/az20.html">Open Analyzer →</a>
+  <div class="analyzer-card" data-tag="oxygen abb"
+       data-search="abb az20 oxygen analyzer">
+    <h4>ABB AZ20</h4>
+    <p>Zirconia oxygen analyzer with advanced diagnostics.</p>
+    <div class="btn-row">
+      <a class="btn btn-open" href="analyzers/abb/az20/az20.html">Open Analyzer →</a>
+    </div>
   </div>
-</div>
 
-<!-- GC -->
-<div class="analyzer-card" data-tag="gc yokogawa"
-     data-search="yokogawa gc8000 gas chromatograph">
-  <h4>Yokogawa GC8000</h4>
-  <p>Process gas chromatograph for online analysis.</p>
-  <div class="btn-row">
-    <a class="btn btn-open" href="analyzers/yokogawa/gc8000/gc8000.html">Open Analyzer →</a>
-    <a class="btn btn-alarm" href="analyzers/yokogawa/gc8000/alarms/index.html">Alarms →</a>
+  <div class="analyzer-card" data-tag="oxygen abb"
+       data-search="abb az25 oxygen analyzer">
+    <h4>ABB AZ25</h4>
+    <p>Zirconia oxygen analyzer with integrated diagnostics.</p>
+    <div class="btn-row">
+      <a class="btn btn-open" href="analyzers/abb/az25/az25.html">Open Analyzer →</a>
+    </div>
   </div>
-</div>
 
-<div class="analyzer-card" data-tag="gc siemens"
-     data-search="siemens sitrans cv process gc">
-  <h4>Siemens SITRANS CV</h4>
-  <p>Process GC for calorific value and Wobbe index.</p>
-  <div class="btn-row">
-    <a class="btn btn-open" href="analyzers/siemens/gc/sitrans-cv/sitrans-cv.html">Open Analyzer →</a>
-    <a class="btn btn-alarm" href="analyzers/siemens/gc/sitrans-cv/alarms/index.html">Alarms →</a>
+  <div class="analyzer-card" data-tag="oxygen abb"
+       data-search="abb az30 oxygen analyzer">
+    <h4>ABB AZ30</h4>
+    <p>High accuracy oxygen analyzer for demanding process control.</p>
+    <div class="btn-row">
+      <a class="btn btn-open" href="analyzers/abb/az30/az30.html">Open Analyzer →</a>
+    </div>
   </div>
-</div>
 
-<div class="analyzer-card" data-tag="gc siemens"
-     data-search="siemens maxum edition ii process gc">
-  <h4>Siemens MAXUM II</h4>
-  <p>Flexible process gas chromatograph.</p>
-  <div class="btn-row">
-    <a class="btn btn-open" href="analyzers/siemens/gc/maxum-ii/maxum-ii.html">Open Analyzer →</a>
+  <div class="analyzer-card" data-tag="oxygen abb"
+       data-search="abb az40 oxygen analyzer">
+    <h4>ABB AZ40</h4>
+    <p>Premium oxygen analyzer with advanced performance features.</p>
+    <div class="btn-row">
+      <a class="btn btn-open" href="analyzers/abb/az40/az40.html">Open Analyzer →</a>
+    </div>
   </div>
-</div>
 
-<div class="analyzer-card" data-tag="gc agilent"
-     data-search="agilent 8890 gc">
-  <h4>Agilent 8890 GC</h4>
-  <p>High-performance GC system.</p>
-  <div class="btn-row">
-    <a class="btn btn-open" href="analyzers/agilent/gc/8890/8890.html">Open Analyzer →</a>
+  <!-- ✅ Yokogawa GC -->
+  <div class="analyzer-card" data-tag="gc yokogawa"
+       data-search="yokogawa gc8000 gas chromatograph process gc">
+    <h4>Yokogawa GC8000</h4>
+    <p>Process gas chromatograph for continuous online gas composition monitoring.</p>
+    <div class="btn-row">
+      <a class="btn btn-open" href="analyzers/yokogawa/gc8000/gc8000.html">Open Analyzer →</a>
+      <a class="btn btn-alarm" href="analyzers/yokogawa/gc8000/alarms/index.html">Alarms →</a>
+    </div>
   </div>
-</div>
+
+  <!-- ✅ ABB GC models (NEW) -->
+  <div class="analyzer-card" data-tag="gc abb"
+       data-search="abb pgc5000b smart oven process gc chromatograph">
+    <h4>ABB PGC5000B (Smart Oven)</h4>
+    <p>Process GC smart oven series for continuous online analysis.</p>
+    <div class="btn-row">
+      <a class="btn btn-open" href="analyzers/abb/gc/pgc5000b/pgc5000b.html">Open Analyzer →</a>
+      <a class="btn btn-alarm" href="analyzers/abb/gc/pgc5000b/alarms/index.html">Alarms →</a>
+    </div>
+  </div>
+
+  <div class="analyzer-card" data-tag="gc abb"
+       data-search="abb pgc5000c smart oven process gc chromatograph">
+    <h4>ABB PGC5000C (Smart Oven)</h4>
+    <p>PGC5000C smart oven series for stable online chromatographic measurement.</p>
+    <div class="btn-row">
+      <a class="btn btn-open" href="analyzers/abb/gc/pgc5000c/pgc5000c.html">Open Analyzer →</a>
+      <a class="btn btn-alarm" href="analyzers/abb/gc/pgc5000c/alarms/index.html">Alarms →</a>
+    </div>
+  </div>
+
+  <div class="analyzer-card" data-tag="gc abb"
+       data-search="abb pgc5007b total sulfur analysis process gc chromatograph">
+    <h4>ABB PGC5007B (Total Sulfur)</h4>
+    <p>Process GC system configured for total sulfur analysis applications.</p>
+    <div class="btn-row">
+      <a class="btn btn-open" href="analyzers/abb/gc/pgc5007b/pgc5007b.html">Open Analyzer →</a>
+      <a class="btn btn-alarm" href="analyzers/abb/gc/pgc5007b/alarms/index.html">Alarms →</a>
+    </div>
+  </div>
+
+  <div class="analyzer-card" data-tag="gc abb"
+       data-search="abb portable ngc natural gas chromatograph portable gc">
+    <h4>ABB Portable NGC</h4>
+    <p>Portable natural gas chromatograph for field measurement and verification.</p>
+    <div class="btn-row">
+      <a class="btn btn-open" href="analyzers/abb/gc/portable-ngc/portable-ngc.html">Open Analyzer →</a>
+      <a class="btn btn-alarm" href="analyzers/abb/gc/portable-ngc/alarms/index.html">Alarms →</a>
+    </div>
+  </div>
+
+  <!-- ✅ Siemens GC -->
+  <div class="analyzer-card" data-tag="gc siemens"
+       data-search="siemens sitrans cv process gc wobbe calorific value">
+    <h4>Siemens SITRANS CV</h4>
+    <p>Process GC for calorific value and Wobbe index measurement.</p>
+    <div class="btn-row">
+      <a class="btn btn-open" href="analyzers/siemens/gc/sitrans-cv/sitrans-cv.html">Open Analyzer →</a>
+      <a class="btn btn-alarm" href="analyzers/siemens/gc/sitrans-cv/alarms/index.html">Alarms →</a>
+    </div>
+  </div>
+
+  <div class="analyzer-card" data-tag="gc siemens"
+       data-search="siemens maxum edition ii process gc">
+    <h4>Siemens MAXUM Edition II</h4>
+    <p>Flexible and reliable process gas chromatograph.</p>
+    <div class="btn-row">
+      <a class="btn btn-open" href="analyzers/siemens/gc/maxum-ii/maxum-ii.html">Open Analyzer →</a>
+      <a class="btn btn-alarm" href="analyzers/siemens/gc/maxum-ii/alarms/index.html">Alarms →</a>
+    </div>
+  </div>
+
+  <!-- ✅ Agilent GC -->
+  <div class="analyzer-card" data-tag="gc agilent"
+       data-search="agilent 8850 gc system">
+    <h4>Agilent 8850 GC</h4>
+    <p>Compact GC system for routine analysis.</p>
+    <div class="btn-row">
+      <a class="btn btn-open" href="analyzers/agilent/gc/8850/8850.html">Open Analyzer →</a>
+    </div>
+  </div>
+
+  <div class="analyzer-card" data-tag="gc agilent"
+       data-search="agilent 8860 gc system">
+    <h4>Agilent 8860 GC</h4>
+    <p>Advanced GC with improved automation and diagnostics.</p>
+    <div class="btn-row">
+      <a class="btn btn-open" href="analyzers/agilent/gc/8860/8860.html">Open Analyzer →</a>
+    </div>
+  </div>
+
+  <div class="analyzer-card" data-tag="gc agilent"
+       data-search="agilent 8890 gc system">
+    <h4>Agilent 8890 GC</h4>
+    <p>High-performance GC for mission-critical applications.</p>
+    <div class="btn-row">
+      <a class="btn btn-open" href="analyzers/agilent/gc/8890/8890.html">Open Analyzer →</a>
+    </div>
+  </div>
+
+  <div class="analyzer-card" data-tag="gc agilent"
+       data-search="agilent 990 micro gc portable">
+    <h4>Agilent 990 Micro GC</h4>
+    <p>Compact and portable GC for field gas analysis.</p>
+    <div class="btn-row">
+      <a class="btn btn-open" href="analyzers/agilent/gc/990-micro/990-micro.html">Open Analyzer →</a>
+    </div>
+  </div>
 
 </div>
 </main>
@@ -223,24 +322,26 @@ const buttons=[...document.querySelectorAll(".filter-btn")];
 let active="all";
 
 function apply(){
-  const q=searchInput.value.toLowerCase();
+  const q=(searchInput.value||"").toLowerCase().trim();
   cards.forEach(c=>{
-    const tag=c.dataset.tag||"";
-    const text=c.dataset.search||"";
-    const show=(active==="all"||tag.includes(active)) && text.toLowerCase().includes(q);
-    c.classList.toggle("is-hidden",!show);
+    const tag=(c.dataset.tag||"").toLowerCase();
+    const text=(c.dataset.search||"").toLowerCase();
+    const matchesFilter = (active==="all") || tag.includes(active);
+    const matchesSearch = !q || text.includes(q);
+    c.classList.toggle("is-hidden", !(matchesFilter && matchesSearch));
   });
 }
 
 buttons.forEach(b=>{
-  b.onclick=()=>{
+  b.addEventListener("click", ()=>{
     buttons.forEach(x=>x.classList.remove("active"));
     b.classList.add("active");
     active=b.dataset.filter;
     apply();
-  }
+  });
 });
-searchInput.oninput=apply;
+
+searchInput.addEventListener("input", apply);
 apply();
 </script>
 
