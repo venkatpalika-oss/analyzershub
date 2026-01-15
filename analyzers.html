@@ -98,7 +98,8 @@ header{
 [data-tag~="abb"]::before{background:linear-gradient(90deg,#0b3c5d,#1f78b4)}
 [data-tag~="yokogawa"]::before{background:linear-gradient(90deg,#0b3c5d,#1f78b4)}
 [data-tag~="siemens"]::before{background:linear-gradient(90deg,#2e7d32,#1f78b4)}
-[data-tag~="agilent"]::before{background:linear-gradient(90deg,#374151,#9ca3af)}
+[data-tag~="agilent"]::before{background:linear-gradient(90deg,#6b7280,#111827)}
+[data-tag~="rosemount"]::before{background:linear-gradient(90deg,#374151,#9ca3af)}
 </style>
 </head>
 
@@ -130,6 +131,7 @@ header{
   <button class="filter-btn" data-filter="yokogawa">Yokogawa</button>
   <button class="filter-btn" data-filter="siemens">Siemens</button>
   <button class="filter-btn" data-filter="agilent">Agilent</button>
+  <button class="filter-btn" data-filter="rosemount">Rosemount</button>
 </div>
 
 <div class="analyzer-grid">
@@ -211,7 +213,7 @@ header{
     </div>
   </div>
 
-  <!-- ✅ ABB GC models (NEW) -->
+  <!-- ✅ ABB GC models -->
   <div class="analyzer-card" data-tag="gc abb"
        data-search="abb pgc5000b smart oven process gc chromatograph">
     <h4>ABB PGC5000B (Smart Oven)</h4>
@@ -310,36 +312,70 @@ header{
     </div>
   </div>
 
+  <!-- ✅ Rosemount placeholder (safe; add links later) -->
+  <div class="analyzer-card" data-tag="oxygen rosemount"
+       data-search="rosemount emerson 6888 oxygen analyzer">
+    <h4>Rosemount 6888 (Coming Soon)</h4>
+    <p>Placeholder card (add your 6888 page when ready).</p>
+    <div class="btn-row">
+      <a class="btn btn-open" href="analyzers.html">Open Analyzer →</a>
+    </div>
+  </div>
+
 </div>
 </main>
 
 <footer>Built for Analyzer Technicians</footer>
 
 <script>
-const searchInput=document.getElementById("searchInput");
-const cards=[...document.querySelectorAll(".analyzer-card")];
-const buttons=[...document.querySelectorAll(".filter-btn")];
-let active="all";
+const searchInput = document.getElementById("searchInput");
+const cards = [...document.querySelectorAll(".analyzer-card")];
+const buttons = [...document.querySelectorAll(".filter-btn")];
 
+let active = "all";
+
+/* Apply filter + search */
 function apply(){
-  const q=(searchInput.value||"").toLowerCase().trim();
+  const q = (searchInput.value || "").toLowerCase().trim();
   cards.forEach(c=>{
-    const tag=(c.dataset.tag||"").toLowerCase();
-    const text=(c.dataset.search||"").toLowerCase();
-    const matchesFilter = (active==="all") || tag.includes(active);
+    const tag = (c.dataset.tag || "").toLowerCase();
+    const text = (c.dataset.search || "").toLowerCase();
+    const matchesFilter = (active === "all") || tag.includes(active);
     const matchesSearch = !q || text.includes(q);
     c.classList.toggle("is-hidden", !(matchesFilter && matchesSearch));
   });
 }
 
+/* Set filter programmatically */
+function setFilter(filterValue){
+  active = filterValue;
+  buttons.forEach(b => b.classList.toggle("active", b.dataset.filter === filterValue));
+  apply();
+}
+
+/* Click handlers */
 buttons.forEach(b=>{
   b.addEventListener("click", ()=>{
-    buttons.forEach(x=>x.classList.remove("active"));
-    b.classList.add("active");
-    active=b.dataset.filter;
-    apply();
+    setFilter(b.dataset.filter);
   });
 });
+
+/* ✅ Vendor filter from URL: analyzers.html?vendor=abb */
+(function initFromURL(){
+  const params = new URLSearchParams(window.location.search);
+  let vendor = (params.get("vendor") || "").toLowerCase().trim();
+
+  // allow synonyms
+  if (vendor === "emerson") vendor = "rosemount";
+  if (vendor === "yoko") vendor = "yokogawa";
+
+  const valid = new Set(["all","oxygen","gc","abb","yokogawa","siemens","agilent","rosemount"]);
+  if (valid.has(vendor)) setFilter(vendor);
+
+  // Optional: also support ?category=gc or ?filter=gc
+  let cat = (params.get("category") || params.get("filter") || "").toLowerCase().trim();
+  if (valid.has(cat)) setFilter(cat);
+})();
 
 searchInput.addEventListener("input", apply);
 apply();
