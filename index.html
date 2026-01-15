@@ -8,160 +8,147 @@
   <link rel="stylesheet" href="assets/css/style.css">
 
   <style>
-    header{
-      position: sticky;
-      top:0;
-      z-index:999;
-      box-shadow:0 2px 12px rgba(0,0,0,0.18);
-    }
+    header{ position:sticky; top:0; z-index:999; box-shadow:0 2px 12px rgba(0,0,0,0.18); }
 
-    /* ================= HERO ================= */
+    /* Compact hero (not too tall) */
     .hero{
-      min-height:280px;
+      min-height:240px;
       display:flex;
       align-items:center;
-      position:relative;
-      z-index:1;
+      background: linear-gradient(120deg, rgba(11,60,93,0.96), rgba(31,120,180,0.88));
     }
+    .hero-content{ max-width:1100px; margin:0 auto; padding:22px 16px; color:#fff; }
     .hero-content h2{
-      text-shadow:0 0 18px rgba(0,0,0,0.55), 0 0 26px rgba(31,120,180,0.35);
-      margin-bottom:10px;
-    }
-    .hero-content p{ max-width:820px; }
-
-    /* ================= QUICK ACTIONS ================= */
-    .quick-actions{
-      max-width:1100px;
-      margin:16px auto 0;
-      padding:0 16px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      justify-content:center;
-      position:relative;
-      z-index:5;
-    }
-    .quick-actions a{
-      background:#0b3c5d;
+      margin:0 0 8px;
       color:#fff;
-      text-decoration:none;
-      font-weight:900;
-      padding:10px 14px;
-      border-radius:10px;
-      border:1px solid rgba(255,255,255,0.15);
-      transition:transform .15s ease, background .15s ease;
+      font-size:2.2rem;
+      line-height:1.1;
+      text-shadow: 0 0 18px rgba(0,0,0,0.45);
     }
-    .quick-actions a:hover{
-      background:#155a8a;
-      transform:translateY(-1px);
-    }
-    .quick-actions a.primary{
-      background:#1f78b4;
-    }
-    .quick-actions a.primary:hover{
-      background:#155a8a;
+    .hero-content p{
+      margin:0 0 14px;
+      max-width:820px;
+      font-size:1.05rem;
+      opacity:.95;
     }
 
-    /* ================= LAYOUT ================= */
-    .container{
-      max-width:1200px;
-      margin:0 auto;
-      padding:0 16px 42px;
-    }
-    .section-title{
-      margin:26px 0 12px;
-      color:#0b3c5d;
-      font-weight:900;
-      letter-spacing:.2px;
-    }
-
-    /* ================= CATEGORY CARDS ================= */
-    .cat-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
-      gap:16px;
-      margin-top:10px;
-    }
-    .cat-card{
-      background:#fff;
-      border-radius:12px;
-      border:1px solid #e0e6ec;
-      box-shadow:0 4px 14px rgba(0,0,0,0.08);
-      padding:16px;
-      position:relative;
-      overflow:hidden;
-      transition:transform .18s ease, box-shadow .18s ease;
-      background-image:linear-gradient(135deg, rgba(255,255,255,0.98), rgba(245,248,252,0.98));
-    }
-    .cat-card:hover{
-      transform:translateY(-3px);
-      box-shadow:0 10px 26px rgba(0,0,0,0.14);
-    }
-    .cat-card::before{
-      content:"";
-      position:absolute;
-      top:0;
-      left:0;
-      width:100%;
-      height:7px;
-      background:#d1d5db;
-    }
-    .cat-card h3{
-      margin:6px 0 8px;
-      color:#0b3c5d;
-    }
-    .cat-card p{
-      margin:0 0 12px;
-      color:#333;
-      line-height:1.45;
-      font-size:.95rem;
-    }
-
+    .hero-actions{ display:flex; flex-wrap:wrap; gap:10px; margin-top:10px; }
     .btn{
       display:inline-block;
       padding:10px 14px;
       border-radius:10px;
       font-weight:900;
       text-decoration:none;
-      border:1px solid rgba(0,0,0,0.10);
-      transition:transform .15s ease, background .15s ease;
+      border:1px solid rgba(255,255,255,0.20);
+      transition: transform .15s ease, background .15s ease;
     }
-    .btn:hover{ transform:translateY(-1px); }
+    .btn:hover{ transform: translateY(-1px); }
     .btn-primary{ background:#1f78b4; color:#fff !important; }
     .btn-primary:hover{ background:#155a8a; }
-    .btn-ghost{ background:#fff; color:#0b3c5d !important; }
-    .btn-ghost:hover{ background:#e9f2f9; }
+    .btn-ghost{ background:rgba(255,255,255,0.10); color:#fff !important; }
+    .btn-ghost:hover{ background:rgba(255,255,255,0.18); }
 
-    /* Category colors */
-    .oxygen::before{ background:linear-gradient(90deg,#1f78b4,#6fb6e9); }
-    .gc::before{ background:linear-gradient(90deg,#2e7d32,#6fcf97); }
-    .tdls::before{ background:linear-gradient(90deg,#7c3aed,#a78bfa); }
-    .cems::before{ background:linear-gradient(90deg,#0b3c5d,#1f78b4); }
-    .general::before{ background:linear-gradient(90deg,#374151,#9ca3af); }
+    .container{ max-width:1200px; margin:0 auto; padding:0 16px 44px; }
 
-    /* ================= DATA FLOW ================= */
+    /* Manufacturer grid */
+    .section-title{
+      margin:22px 0 10px;
+      color:#0b3c5d;
+      font-weight:900;
+      letter-spacing:.2px;
+    }
+
+    .mfg-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap:16px;
+      margin-top:10px;
+    }
+
+    .mfg-card{
+      background:#fff;
+      border-radius:14px;
+      border:1px solid #e0e6ec;
+      box-shadow:0 4px 14px rgba(0,0,0,0.08);
+      padding:16px;
+      position:relative;
+      overflow:hidden;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .mfg-card:hover{
+      transform: translateY(-3px);
+      box-shadow:0 12px 28px rgba(0,0,0,0.14);
+    }
+    .mfg-card::before{
+      content:"";
+      position:absolute;
+      top:0; left:0;
+      height:7px; width:100%;
+      background:#d1d5db;
+    }
+    .mfg-card h3{ margin:8px 0 8px; color:#0b3c5d; }
+    .mfg-card p{ margin:0 0 12px; color:#333; line-height:1.45; font-size:.95rem; opacity:.92; }
+
+    .mfg-card a{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:10px;
+      font-weight:900;
+      text-decoration:none;
+      border:1px solid rgba(0,0,0,0.10);
+      background:#fff;
+      color:#0b3c5d;
+    }
+    .mfg-card a:hover{ background:#e9f2f9; }
+
+    /* brand colors */
+    .yokogawa::before{ background: linear-gradient(90deg, #0b3c5d, #1f78b4); }
+    .abb::before{ background: linear-gradient(90deg, #1f78b4, #0b3c5d); }
+    .siemens::before{ background: linear-gradient(90deg, #2e7d32, #1f78b4); }
+    .rosemount::before{ background: linear-gradient(90deg, #374151, #9ca3af); }
+    .agilent::before{ background: linear-gradient(90deg, #6b7280, #111827); }
+
+    /* quick links */
+    .quick-links{
+      margin-top:18px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .quick-links a{
+      background:#0b3c5d;
+      color:#fff;
+      text-decoration:none;
+      font-weight:900;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,0.15);
+    }
+    .quick-links a:hover{ background:#155a8a; }
+
+    /* dataflow smaller */
     .data-flow{
-      margin-top:26px;
+      margin-top:22px;
       background:#fff;
       border:1px solid #e0e6ec;
-      border-radius:12px;
+      border-radius:14px;
       padding:16px;
       box-shadow:0 4px 14px rgba(0,0,0,0.08);
     }
     .data-flow img{
       max-width:520px;
       width:100%;
+      height:auto;
       display:block;
       margin:12px auto 0;
-      border-radius:10px;
+      border-radius:12px;
     }
-
     .muted{ opacity:.9; }
 
     @media (max-width:768px){
-      .hero{ min-height:240px; }
-      .hero-content h2{ font-size:2rem; line-height:1.15; }
-      .hero-content p{ font-size:1.05rem; }
+      .hero{ min-height:210px; }
+      .hero-content h2{ font-size:1.9rem; }
+      .hero-content p{ font-size:1rem; }
     }
   </style>
 </head>
@@ -179,62 +166,61 @@
 <section class="hero">
   <div class="hero-content">
     <h2>Industrial Analyzer Knowledge Hub</h2>
-    <p class="muted">
-      Troubleshooting guides, alarms, decision trees, and calibration support —
-      built for analyzer technicians.
-    </p>
-    <a href="analyzers.html">Browse All Analyzers</a>
+    <p class="muted">Troubleshooting procedures, alarm decision trees, and practical guides — built for analyzer technicians.</p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#manufacturers">Browse Manufacturers</a>
+      <a class="btn btn-ghost" href="analyzers.html">Open Analyzer Search</a>
+    </div>
   </div>
 </section>
 
-<!-- Quick navigation -->
-<div class="quick-actions">
-  <a class="primary" href="analyzers.html">🔎 Analyzer Search</a>
-  <a href="analyzers.html">📘 Troubleshooting</a>
-  <a href="analyzers.html">🚨 Alarms</a>
-</div>
-
 <main class="container">
 
-  <h2 class="section-title">Browse by Category</h2>
+  <h2 id="manufacturers" class="section-title">Manufacturers</h2>
 
-  <div class="cat-grid">
-    <div class="cat-card oxygen">
-      <h3>Oxygen Analyzers</h3>
-      <p>ZR22G, OX400, Rosemount 6888, ABB AZ Series and more.</p>
-      <a class="btn btn-primary" href="analyzers.html">Open Category →</a>
+  <div class="mfg-grid">
+    <div class="mfg-card yokogawa">
+      <h3>Yokogawa</h3>
+      <p>ZR22G, OX400, GC8000 and more.</p>
+      <a href="analyzers.html?vendor=yokogawa">View Yokogawa →</a>
     </div>
 
-    <div class="cat-card gc">
-      <h3>Gas Chromatographs (GC)</h3>
-      <p>Siemens MAXUM II, SITRANS CV, Yokogawa GC8000, Agilent GC family.</p>
-      <a class="btn btn-primary" href="analyzers.html">Open Category →</a>
+    <div class="mfg-card abb">
+      <h3>ABB</h3>
+      <p>AZ Series, Process GCs (PGC5000B/C, PGC5007B, Portable NGC).</p>
+      <a href="analyzers.html?vendor=abb">View ABB →</a>
     </div>
 
-    <div class="cat-card tdls">
-      <h3>TDLS / Laser</h3>
-      <p>Fast in-situ laser based analyzers.</p>
-      <a class="btn btn-primary" href="analyzers.html">Open Category →</a>
+    <div class="mfg-card siemens">
+      <h3>Siemens</h3>
+      <p>MAXUM II, SITRANS CV and other process analyzers.</p>
+      <a href="analyzers.html?vendor=siemens">View Siemens →</a>
     </div>
 
-    <div class="cat-card cems">
-      <h3>CEMS / Environmental</h3>
-      <p>Emission monitoring analyzers, DAHS / DEMS support.</p>
-      <a class="btn btn-primary" href="analyzers.html">Open Category →</a>
+    <div class="mfg-card rosemount">
+      <h3>Emerson / Rosemount</h3>
+      <p>6888, 700XA, 400XA, CT5100 and more (add gradually).</p>
+      <a href="analyzers.html?vendor=rosemount">View Rosemount →</a>
     </div>
 
-    <div class="cat-card general">
-      <h3>All Analyzers</h3>
-      <p>Full searchable list with direct access to every model.</p>
-      <a class="btn btn-ghost" href="analyzers.html">Go to Analyzer Search →</a>
+    <div class="mfg-card agilent">
+      <h3>Agilent</h3>
+      <p>8850 / 8860 / 8890 GC systems, 990 Micro GC and more.</p>
+      <a href="analyzers.html?vendor=agilent">View Agilent →</a>
     </div>
   </div>
 
-  <section class="data-flow">
+  <h2 class="section-title">Quick Links</h2>
+  <div class="quick-links">
+    <a href="analyzers.html">🔎 Analyzer Search</a>
+    <a href="guides/gc/chromatogram-guide.html">📈 Chromatogram Guide</a>
+    <a href="guides/gc/abb-gc-alarm-codes.html">🧾 ABB GC Alarm Codes</a>
+  </div>
+
+  <section class="data-flow" id="dataflow">
     <h2 class="section-title" style="margin-top:0;">Analyzer Data Flow to DCS</h2>
-    <p class="muted">
-      Typical signal and data flow from field analyzers to plant control systems.
-    </p>
+    <p class="muted">Typical signal and data flow from field analyzers to plant control and historians.</p>
     <img src="assets/images/data_flow_to_dcs.png" alt="Analyzer data flow to DCS">
   </section>
 
