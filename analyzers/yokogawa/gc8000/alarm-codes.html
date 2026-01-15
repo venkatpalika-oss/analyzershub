@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Yokogawa GC8000 Alarm Codes | AnalyzersHub</title>
+
+<link rel="stylesheet" href="../../../../assets/css/style.css" />
+
+<style>
+header{ position:sticky; top:0; z-index:999; box-shadow:0 2px 12px rgba(0,0,0,0.18); }
+.wrap{ max-width:1100px; margin:0 auto; padding:18px 16px 44px; }
+
+.breadcrumbs{ font-size:.95rem; margin:8px 0 14px; }
+.breadcrumbs a{ color:#1f78b4; text-decoration:none; font-weight:900; }
+.breadcrumbs a:hover{ text-decoration:underline; }
+
+.hero{ background:#0b3c5d; color:#fff; border-radius:12px; padding:18px; box-shadow:0 6px 18px rgba(0,0,0,0.12); }
+.hero h2{ margin:0 0 6px; color:#fff; }
+.hero p{ margin:0; opacity:.95; }
+
+.section{
+  background:#fff; border:1px solid #e0e6ec; border-radius:12px;
+  padding:16px; box-shadow:0 4px 14px rgba(0,0,0,0.08);
+  margin-top:14px;
+}
+
+.note{ background:#fff7ed; border-left:4px solid #f59e0b; padding:12px; border-radius:10px; }
+.ok{ background:#ecfdf5; border-left:4px solid #10b981; padding:12px; border-radius:10px; }
+.bad{ background:#fef2f2; border-left:4px solid #ef4444; padding:12px; border-radius:10px; }
+
+.table-wrap{ overflow:auto; border-radius:10px; border:1px solid #e0e6ec; }
+table{ width:100%; border-collapse:collapse; min-width:900px; }
+th, td{ padding:12px; border-bottom:1px solid #e9edf2; text-align:left; vertical-align:top; }
+th{ background:#f6fbff; color:#0b3c5d; font-weight:900; position:sticky; top:0; }
+tr:hover td{ background:#fafcff; }
+
+.badge{
+  display:inline-block; font-weight:900; font-size:.82rem;
+  padding:4px 8px; border-radius:999px; border:1px solid rgba(0,0,0,.12);
+  background:#fff;
+}
+.b-critical{ background:#fef2f2; border-color:#fecaca; color:#b91c1c; }
+.b-major{ background:#fff7ed; border-color:#fed7aa; color:#b45309; }
+.b-minor{ background:#eff6ff; border-color:#bfdbfe; color:#1d4ed8; }
+.b-info{ background:#ecfdf5; border-color:#bbf7d0; color:#047857; }
+
+.btn-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
+.btn{
+  display:inline-block; padding:10px 14px; border-radius:8px;
+  font-weight:900; text-decoration:none; border:1px solid rgba(0,0,0,0.10);
+}
+.btn-primary{ background:#1f78b4; color:#fff !important; }
+.btn-primary:hover{ background:#155a8a; }
+.btn-ghost{ background:#fff; color:#0b3c5d !important; }
+.btn-ghost:hover{ background:#e9f2f9; }
+
+small{ opacity:.85; }
+code{ background:#f2f4f7; padding:2px 6px; border-radius:6px; }
+</style>
+</head>
+
+<body>
+<header>
+  <h1>AnalyzersHub</h1>
+  <nav>
+    <a href="../../../../index.html">Home</a>
+    <a href="../../../../analyzers.html">Analyzer Search</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="breadcrumbs">
+    <a href="../../../../index.html">Home</a> →
+    <a href="../../../../analyzers.html">Analyzer Search</a> →
+    <a href="gc8000.html">Yokogawa GC8000</a> →
+    <span>Alarm Codes</span>
+  </div>
+
+  <section class="hero">
+    <h2>GC8000 Alarm Codes & Quick Actions</h2>
+    <p>Use this table to identify likely causes and the fastest next checks. For step-by-step isolation, open the decision trees.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="alarms/index.html">Open Alarm Decision Trees →</a>
+      <a class="btn btn-ghost" href="gc8000.html">Back to GC8000 Main →</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="note">
+      <b>Important:</b> GC8000 alarm wording varies by configuration. Use this table as a <b>field guide</b>.
+      If you want, tell me the exact alarm messages you see on your GC8000 screen and I will map them precisely.
+    </div>
+  </section>
+
+  <section class="section">
+    <h3 style="margin-top:0;color:#0b3c5d;">Alarm Code Table</h3>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:160px;">Alarm / Message Type</th>
+            <th style="width:140px;">Severity</th>
+            <th>Typical Symptoms</th>
+            <th>Likely Causes</th>
+            <th>Fast Checks (5–10 min)</th>
+            <th>Next Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Carrier Low / Pressure Low</b></td>
+            <td><span class="badge b-critical">CRITICAL</span></td>
+            <td>No peaks, unstable baseline, run fails early</td>
+            <td>Empty cylinder, regulator creep/hunting, leak, blocked restrictor/filter</td>
+            <td>Check cylinder pressure, regulator outlet, leak test quick fittings</td>
+            <td>Replace cylinder/regulator, repair leaks, clean/replace filters; then run verification</td>
+          </tr>
+
+          <tr>
+            <td><b>Flow Unstable</b></td>
+            <td><span class="badge b-major">MAJOR</span></td>
+            <td>Retention time shift, poor repeatability</td>
+            <td>Regulator hunting, micro-leaks, temperature instability, sample restriction</td>
+            <td>Observe outlet pressure stability; check fittings near manifold</td>
+            <td>Stabilize carrier + oven; fix leaks; verify 2–3 runs stable</td>
+          </tr>
+
+          <tr>
+            <td><b>Oven Not Ready</b></td>
+            <td><span class="badge b-major">MAJOR</span></td>
+            <td>Runs blocked or results flagged invalid</td>
+            <td>Heater fault, fuse, sensor issue, ventilation/cooling issue</td>
+            <td>Compare setpoint vs actual; check cabinet airflow</td>
+            <td>Restore temperature stability; replace heater/sensor per procedure</td>
+          </tr>
+
+          <tr>
+            <td><b>Heater Fault / Heater Overload</b></td>
+            <td><span class="badge b-critical">CRITICAL</span></td>
+            <td>No warm-up / temp drops, or temp runaway</td>
+            <td>Heater open circuit, SSR/relay fault, wiring issues</td>
+            <td>Check power/fuse status; inspect terminals for burn</td>
+            <td>Electrical maintenance: replace heater/SSR; verify stable hold</td>
+          </tr>
+
+          <tr>
+            <td><b>Temperature Sensor Error</b></td>
+            <td><span class="badge b-critical">CRITICAL</span></td>
+            <td>Temp reading jumps, oven control unstable</td>
+            <td>Loose sensor wiring, failed RTD/TC, grounding/noise</td>
+            <td>Reseat sensor connectors; check for damaged cable</td>
+            <td>Replace sensor; confirm stability for 15–20 min, then run test</td>
+          </tr>
+
+          <tr>
+            <td><b>Valve Not Switching / Solenoid Fault</b></td>
+            <td><span class="badge b-major">MAJOR</span></td>
+            <td>No peaks / wrong peaks, timing issues</td>
+            <td>Low instrument air, wet/dirty air, solenoid coil fault, valve sticking</td>
+            <td>Check air pressure/quality; observe switching; check solenoid LED</td>
+            <td>Fix air quality, swap solenoid if possible, service/replace valve</td>
+          </tr>
+
+          <tr>
+            <td><b>Sequence Error / Method Error</b></td>
+            <td><span class="badge b-major">MAJOR</span></td>
+            <td>Run aborts, abnormal cycle behavior</td>
+            <td>Incorrect timing/config changes, module mismatch after maintenance</td>
+            <td>Confirm correct method loaded; compare with last known good</td>
+            <td>Restore backup method; re-verify with standard/known stream</td>
+          </tr>
+
+          <tr>
+            <td><b>No Peaks / Weak Peaks</b></td>
+            <td><span class="badge b-major">MAJOR</span></td>
+            <td>Flat chromatogram or tiny peaks</td>
+            <td>Sample not reaching, blocked filter, leak, injection failure, carrier issue</td>
+            <td>Check sample pressure/flow, filters, carrier supply</td>
+            <td>Use sampling guide + carrier/valve tree to isolate and correct</td>
+          </tr>
+
+          <tr>
+            <td><b>Baseline Noise / Instability</b></td>
+            <td><span class="badge b-minor">MINOR</span></td>
+            <td>Noisy baseline, integration errors</td>
+            <td>Pressure instability, contamination, oven fluctuations</td>
+            <td>Check carrier stability + oven stability</td>
+            <td>Stabilize utilities; inspect for contamination; verify repeatability</td>
+          </tr>
+
+          <tr>
+            <td><b>Communication Fail / Link Down</b></td>
+            <td><span class="badge b-major">MAJOR</span></td>
+            <td>DCS stale values, bad quality flags</td>
+            <td>Network cable/switch issue, IP mismatch, firewall/protocol service down</td>
+            <td>Check link LEDs, IP/subnet/gateway</td>
+            <td>Restart service (if allowed), correct mapping/registers, confirm cycle update timing</td>
+          </tr>
+
+          <tr>
+            <td><b>Bad Quality / Data Stale</b></td>
+            <td><span class="badge b-minor">MINOR</span></td>
+            <td>DCS value not updating every scan</td>
+            <td>Update rate mismatch (GC cycles), tag mapping/scaling, quality flag mapping</td>
+            <td>Compare local value vs DCS; check update timestamp per run</td>
+            <td>Align DCS scan to cycle; fix mapping/scaling; validate historian timestamps</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="ok" style="margin-top:14px;">
+      <b>Best practice:</b> Always verify fixes with <b>2–3 stable consecutive runs</b> before handing over results to operations.
+    </div>
+
+    <div class="btn-row">
+      <a class="btn btn-primary" href="alarms/index.html">Open Decision Trees →</a>
+      <a class="btn btn-ghost" href="sampling-system.html">Open Sampling System Guide →</a>
+    </div>
+
+    <p style="margin-top:10px;"><small>Tip: Save a screenshot of the alarm + last good run time to speed up escalation.</small></p>
+  </section>
+
+</main>
+
+<footer>Built for Analyzer Technicians</footer>
+</body>
+</html>
