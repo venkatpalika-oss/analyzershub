@@ -8,31 +8,66 @@
   <link rel="stylesheet" href="assets/css/style.css">
 
   <style>
-    header{ position: sticky; top:0; z-index:999; box-shadow:0 2px 12px rgba(0,0,0,0.18); }
+    header{
+      position: sticky;
+      top:0;
+      z-index:999;
+      box-shadow:0 2px 12px rgba(0,0,0,0.18);
+    }
 
-    /* Smaller hero */
-    .hero{ min-height: 280px; display:flex; align-items:center; }
+    /* ================= HERO ================= */
+    .hero{
+      min-height:280px;
+      display:flex;
+      align-items:center;
+      position:relative;
+      z-index:1;
+    }
     .hero-content h2{
-      text-shadow: 0 0 18px rgba(0,0,0,0.55), 0 0 26px rgba(31,120,180,0.35);
+      text-shadow:0 0 18px rgba(0,0,0,0.55), 0 0 26px rgba(31,120,180,0.35);
       margin-bottom:10px;
     }
     .hero-content p{ max-width:820px; }
 
-    .container{ max-width:1200px; margin:0 auto; padding:0 16px 42px; }
-
+    /* ================= QUICK ACTIONS ================= */
     .quick-actions{
-      max-width:1100px; margin:-18px auto 0; padding:0 16px;
-      display:flex; flex-wrap:wrap; gap:10px; justify-content:center;
+      max-width:1100px;
+      margin:16px auto 0;
+      padding:0 16px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:center;
+      position:relative;
+      z-index:5;
     }
     .quick-actions a{
-      background:#0b3c5d; color:#fff; text-decoration:none; font-weight:900;
-      padding:10px 14px; border-radius:10px; border:1px solid rgba(255,255,255,0.15);
-      transition: transform .15s ease, background .15s ease;
+      background:#0b3c5d;
+      color:#fff;
+      text-decoration:none;
+      font-weight:900;
+      padding:10px 14px;
+      border-radius:10px;
+      border:1px solid rgba(255,255,255,0.15);
+      transition:transform .15s ease, background .15s ease;
     }
-    .quick-actions a:hover{ background:#155a8a; transform: translateY(-1px); }
-    .quick-actions a.primary{ background:#1f78b4; }
-    .quick-actions a.primary:hover{ background:#155a8a; }
+    .quick-actions a:hover{
+      background:#155a8a;
+      transform:translateY(-1px);
+    }
+    .quick-actions a.primary{
+      background:#1f78b4;
+    }
+    .quick-actions a.primary:hover{
+      background:#155a8a;
+    }
 
+    /* ================= LAYOUT ================= */
+    .container{
+      max-width:1200px;
+      margin:0 auto;
+      padding:0 16px 42px;
+    }
     .section-title{
       margin:26px 0 12px;
       color:#0b3c5d;
@@ -40,9 +75,10 @@
       letter-spacing:.2px;
     }
 
+    /* ================= CATEGORY CARDS ================= */
     .cat-grid{
       display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
       gap:16px;
       margin-top:10px;
     }
@@ -54,16 +90,32 @@
       padding:16px;
       position:relative;
       overflow:hidden;
-      transition: transform .18s ease, box-shadow .18s ease;
-      background-image: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(245,248,252,0.98));
+      transition:transform .18s ease, box-shadow .18s ease;
+      background-image:linear-gradient(135deg, rgba(255,255,255,0.98), rgba(245,248,252,0.98));
     }
-    .cat-card:hover{ transform: translateY(-3px); box-shadow:0 10px 26px rgba(0,0,0,0.14); }
+    .cat-card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 10px 26px rgba(0,0,0,0.14);
+    }
     .cat-card::before{
-      content:""; position:absolute; top:0; left:0; width:100%; height:7px;
+      content:"";
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:7px;
       background:#d1d5db;
     }
-    .cat-card h3{ margin:6px 0 8px; color:#0b3c5d; }
-    .cat-card p{ margin:0 0 12px; color:#333; line-height:1.45; font-size:.95rem; }
+    .cat-card h3{
+      margin:6px 0 8px;
+      color:#0b3c5d;
+    }
+    .cat-card p{
+      margin:0 0 12px;
+      color:#333;
+      line-height:1.45;
+      font-size:.95rem;
+    }
 
     .btn{
       display:inline-block;
@@ -72,22 +124,22 @@
       font-weight:900;
       text-decoration:none;
       border:1px solid rgba(0,0,0,0.10);
-      transition: transform .15s ease, background .15s ease;
+      transition:transform .15s ease, background .15s ease;
     }
-    .btn:hover{ transform: translateY(-1px); }
+    .btn:hover{ transform:translateY(-1px); }
     .btn-primary{ background:#1f78b4; color:#fff !important; }
     .btn-primary:hover{ background:#155a8a; }
     .btn-ghost{ background:#fff; color:#0b3c5d !important; }
     .btn-ghost:hover{ background:#e9f2f9; }
 
-    /* Category color strips */
-    .cat-card.oxygen::before{ background: linear-gradient(90deg, #1f78b4, #6fb6e9); }
-    .cat-card.gc::before{ background: linear-gradient(90deg, #2e7d32, #6fcf97); }
-    .cat-card.cems::before{ background: linear-gradient(90deg, #0b3c5d, #1f78b4); }
-    .cat-card.tdls::before{ background: linear-gradient(90deg, #7c3aed, #a78bfa); }
-    .cat-card.general::before{ background: linear-gradient(90deg, #374151, #9ca3af); }
+    /* Category colors */
+    .oxygen::before{ background:linear-gradient(90deg,#1f78b4,#6fb6e9); }
+    .gc::before{ background:linear-gradient(90deg,#2e7d32,#6fcf97); }
+    .tdls::before{ background:linear-gradient(90deg,#7c3aed,#a78bfa); }
+    .cems::before{ background:linear-gradient(90deg,#0b3c5d,#1f78b4); }
+    .general::before{ background:linear-gradient(90deg,#374151,#9ca3af); }
 
-    /* Data flow image smaller */
+    /* ================= DATA FLOW ================= */
     .data-flow{
       margin-top:26px;
       background:#fff;
@@ -99,11 +151,11 @@
     .data-flow img{
       max-width:520px;
       width:100%;
-      height:auto;
       display:block;
       margin:12px auto 0;
       border-radius:10px;
     }
+
     .muted{ opacity:.9; }
 
     @media (max-width:768px){
@@ -127,12 +179,15 @@
 <section class="hero">
   <div class="hero-content">
     <h2>Industrial Analyzer Knowledge Hub</h2>
-    <p class="muted">Troubleshooting guides, alarms, decision trees, and calibration support — built for analyzer technicians.</p>
+    <p class="muted">
+      Troubleshooting guides, alarms, decision trees, and calibration support —
+      built for analyzer technicians.
+    </p>
     <a href="analyzers.html">Browse All Analyzers</a>
   </div>
 </section>
 
-<!-- Simple navigation buttons -->
+<!-- Quick navigation -->
 <div class="quick-actions">
   <a class="primary" href="analyzers.html">🔎 Analyzer Search</a>
   <a href="analyzers.html">📘 Troubleshooting</a>
@@ -158,26 +213,28 @@
 
     <div class="cat-card tdls">
       <h3>TDLS / Laser</h3>
-      <p>Fast in-situ measurement analyzers (TDLS-based systems).</p>
+      <p>Fast in-situ laser based analyzers.</p>
       <a class="btn btn-primary" href="analyzers.html">Open Category →</a>
     </div>
 
     <div class="cat-card cems">
       <h3>CEMS / Environmental</h3>
-      <p>Emissions monitoring analyzers, DAHS/DEMS support, compliance checks.</p>
+      <p>Emission monitoring analyzers, DAHS / DEMS support.</p>
       <a class="btn btn-primary" href="analyzers.html">Open Category →</a>
     </div>
 
     <div class="cat-card general">
       <h3>All Analyzers</h3>
-      <p>Full list with search bar and direct links to every model.</p>
+      <p>Full searchable list with direct access to every model.</p>
       <a class="btn btn-ghost" href="analyzers.html">Go to Analyzer Search →</a>
     </div>
   </div>
 
-  <section class="data-flow" id="dataflow">
+  <section class="data-flow">
     <h2 class="section-title" style="margin-top:0;">Analyzer Data Flow to DCS</h2>
-    <p class="muted">Typical signal and data flow from field analyzers to plant control and historians.</p>
+    <p class="muted">
+      Typical signal and data flow from field analyzers to plant control systems.
+    </p>
     <img src="assets/images/data_flow_to_dcs.png" alt="Analyzer data flow to DCS">
   </section>
 
