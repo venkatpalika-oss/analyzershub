@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GC Chromatogram Interpretation Guide | AnalyzersHub</title>
+
+<link rel="stylesheet" href="../../assets/css/style.css" />
+
+<style>
+header{ position:sticky; top:0; z-index:999; box-shadow:0 2px 12px rgba(0,0,0,0.18); }
+.wrap{ max-width:1100px; margin:0 auto; padding:18px 16px 44px; }
+
+.hero{
+  background:#2e7d32; color:#fff; border-radius:12px; padding:18px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.12);
+}
+.hero h2{ margin:0 0 6px; color:#fff; }
+.hero p{ margin:0; opacity:.95; }
+
+.breadcrumbs{ font-size:.95rem; margin:8px 0 14px; }
+.breadcrumbs a{ color:#1f78b4; text-decoration:none; font-weight:900; }
+.breadcrumbs a:hover{ text-decoration:underline; }
+
+.section{
+  background:#fff; border:1px solid #e0e6ec; border-radius:12px;
+  padding:16px; box-shadow:0 4px 14px rgba(0,0,0,0.08);
+  margin-top:14px;
+}
+.section h3{ margin-top:0; color:#0b3c5d; }
+
+.grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:16px; margin-top:12px; }
+.card{ background:#fff; border:1px solid #e0e6ec; border-radius:12px; padding:16px; box-shadow:0 4px 14px rgba(0,0,0,.08); }
+.card h4{ margin:0 0 8px; color:#0b3c5d; }
+
+.step{ background:#f6fbff; border-left:4px solid #1f78b4; padding:12px; border-radius:10px; margin:10px 0; }
+.warn{ background:#fff7ed; border-left:4px solid #f59e0b; padding:12px; border-radius:10px; margin:10px 0; }
+.bad{ background:#fef2f2; border-left:4px solid #ef4444; padding:12px; border-radius:10px; margin:10px 0; }
+.ok{ background:#ecfdf5; border-left:4px solid #10b981; padding:12px; border-radius:10px; margin:10px 0; }
+
+ul{ margin:8px 0 0 18px; }
+li{ margin:6px 0; }
+code{ background:#f2f4f7; padding:2px 6px; border-radius:6px; }
+
+.btn-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
+.btn{
+  display:inline-block; padding:10px 14px; border-radius:8px;
+  font-weight:900; text-decoration:none; border:1px solid rgba(0,0,0,0.10);
+}
+.btn-primary{ background:#1f78b4; color:#fff !important; }
+.btn-primary:hover{ background:#155a8a; }
+.btn-ghost{ background:#fff; color:#0b3c5d !important; }
+.btn-ghost:hover{ background:#e9f2f9; }
+
+.table-wrap{ overflow:auto; border-radius:10px; border:1px solid #e0e6ec; }
+table{ width:100%; border-collapse:collapse; min-width:950px; }
+th, td{ padding:12px; border-bottom:1px solid #e9edf2; text-align:left; vertical-align:top; }
+th{ background:#f6fbff; color:#0b3c5d; font-weight:900; position:sticky; top:0; }
+tr:hover td{ background:#fafcff; }
+
+small{ opacity:.85; }
+</style>
+</head>
+
+<body>
+<header>
+  <h1>AnalyzersHub</h1>
+  <nav>
+    <a href="../../index.html">Home</a>
+    <a href="../../analyzers.html">Analyzer Search</a>
+  </nav>
+</header>
+
+<main class="wrap">
+
+<div class="breadcrumbs">
+  <a href="../../index.html">Home</a> →
+  <a href="../../analyzers.html">Analyzer Search</a> →
+  <span>GC Chromatogram Interpretation</span>
+</div>
+
+<section class="hero">
+  <h2>GC Chromatogram Interpretation Guide</h2>
+  <p>How to read chromatograms, identify common faults, and confirm whether the problem is sampling, carrier, oven, valve, or comms.</p>
+
+  <div class="btn-row">
+    <a class="btn btn-primary" href="../../analyzers/yokogawa/gc8000/gc8000.html">GC8000 →</a>
+    <a class="btn btn-ghost" href="../../analyzers/siemens/gc/sitrans-cv/sitrans-cv.html">SITRANS CV →</a>
+    <a class="btn btn-ghost" href="../../analyzers.html">Back to Search</a>
+  </div>
+</section>
+
+<section class="section">
+  <h3>Fast Rule: Before You Analyze Peaks</h3>
+  <div class="step"><b>1)</b> Confirm stable carrier pressure (no hunting)</div>
+  <div class="step"><b>2)</b> Confirm stable oven temperature (setpoint = actual)</div>
+  <div class="step"><b>3)</b> Confirm sample pressure/flow stable + no liquids in traps</div>
+  <div class="ok"><b>If any of these are unstable</b> → chromatogram symptoms will mislead you.</div>
+</section>
+
+<section class="section">
+  <h3>What a “Healthy” Chromatogram Looks Like</h3>
+  <ul>
+    <li>Stable baseline (minimal noise) before/after peaks</li>
+    <li>Retention times repeat consistently run-to-run</li>
+    <li>Peak shapes consistent (not broad/tailed unexpectedly)</li>
+    <li>Peak areas repeat within expected tolerance</li>
+    <li>No unexplained extra peaks or missing peaks</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h3>Common Symptoms → Likely Root Causes</h3>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:220px;">Chromatogram Symptom</th>
+          <th style="width:260px;">Most Likely Cause</th>
+          <th>Fast Checks (5–10 min)</th>
+          <th>Corrective Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>No peaks (flat line)</b></td>
+          <td>Sample not reaching / carrier low / injection not happening</td>
+          <td>Check sample pressure/flow, carrier pressure, valve switching (air/solenoid)</td>
+          <td>Restore carrier supply, clear sample blockage, fix valve/air, rerun</td>
+        </tr>
+        <tr>
+          <td><b>Very weak peaks</b></td>
+          <td>Low sample flow, leak, restriction, wrong stream selection</td>
+          <td>Check filters, traps, sample regulator; verify stream selection valves</td>
+          <td>Replace filters, fix leaks, restore flow, verify stream switching</td>
+        </tr>
+        <tr>
+          <td><b>Retention time shifts</b></td>
+          <td>Carrier flow instability / oven temperature drift</td>
+          <td>Check carrier regulator hunting; check oven actual vs setpoint</td>
+          <td>Stabilize carrier/oven; leak test; confirm stable cycle</td>
+        </tr>
+        <tr>
+          <td><b>Baseline noise</b></td>
+          <td>Pressure instability, electrical noise, contamination</td>
+          <td>Check pressure stability; check grounding/shielding; check recent maintenance</td>
+          <td>Stabilize utilities; clean/maintain; address grounding/noise</td>
+        </tr>
+        <tr>
+          <td><b>Broad peaks</b></td>
+          <td>Column overload, flow too low, sample contamination</td>
+          <td>Check sample pressure/flow; review stream changes; inspect traps</td>
+          <td>Correct flow; improve conditioning; verify sample composition</td>
+        </tr>
+        <tr>
+          <td><b>Peak tailing</b></td>
+          <td>Contamination, column degradation, valve/liner issues</td>
+          <td>Check for liquids; verify valve switching; check maintenance history</td>
+          <td>Service sampling; clean components; replace worn parts as per plan</td>
+        </tr>
+        <tr>
+          <td><b>Extra peaks / ghost peaks</b></td>
+          <td>Contamination, leaks, carryover, wrong stream</td>
+          <td>Check traps/coalescers, leak test, verify stream valve</td>
+          <td>Eliminate contamination source; purge; validate next 2–3 runs</td>
+        </tr>
+        <tr>
+          <td><b>Missing expected peaks</b></td>
+          <td>Stream selection wrong, injection issue, method timing</td>
+          <td>Confirm stream selection; check valve sequence; compare to last good</td>
+          <td>Fix selection, restore sequence/method backup, rerun</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="warn" style="margin-top:14px;">
+    <b>Important:</b> A “bad chromatogram” is often a <b>sampling problem</b>, not a GC hardware problem.
+    Check sampling stability first.
+  </div>
+</section>
+
+<section class="section">
+  <h3>Quick Decision: Sampling vs GC</h3>
+
+  <div class="grid">
+    <div class="card">
+      <h4>It’s probably Sampling</h4>
+      <ul>
+        <li>Liquid appears in traps</li>
+        <li>Filters plug frequently</li>
+        <li>Sample pressure/flow unstable</li>
+        <li>Response is slow</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>It’s probably Carrier/Oven/Valve</h4>
+      <ul>
+        <li>Retention time shifts widely</li>
+        <li>No peaks but sample is confirmed OK</li>
+        <li>Oven not stable / heater alarms</li>
+        <li>Valve switching inconsistent</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>It’s probably Comms</h4>
+      <ul>
+        <li>Local results OK, DCS stale/bad quality</li>
+        <li>Update delay matches GC cycle</li>
+        <li>Scaling/mapping mismatch</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h3>Validation: How to Confirm You Fixed It</h3>
+  <div class="ok">
+    <ul>
+      <li>Run <b>2–3 consecutive analyses</b> and compare retention/area stability</li>
+      <li>Confirm no new alarms appear during cycle</li>
+      <li>Confirm values update in DCS once per cycle (expected behavior)</li>
+      <li>Log the action taken + time to help future troubleshooting</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <h3>Links for Faster Fix</h3>
+  <div class="btn-row">
+    <a class="btn btn-primary" href="../../analyzers/yokogawa/gc8000/sampling-system.html">GC8000 Sampling System →</a>
+    <a class="btn btn-ghost" href="../../analyzers/yokogawa/gc8000/alarm-codes.html">GC8000 Alarm Codes →</a>
+    <a class="btn btn-ghost" href="../../analyzers/yokogawa/gc8000/alarms/index.html">GC8000 Alarm Trees →</a>
+  </div>
+  <p><small>Want this guide to include your site’s real peak names/stream names? Send one screenshot of a chromatogram and alarm text (no confidential values needed).</small></p>
+</section>
+
+</main>
+
+<footer>Built for Analyzer Technicians</footer>
+</body>
+</html>
