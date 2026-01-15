@@ -1,113 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yokogawa GC8000 | Troubleshooting | AnalyzersHub</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Yokogawa GC8000 | Troubleshooting | AnalyzersHub</title>
 
-  <link rel="stylesheet" href="../../../../assets/css/style.css" />
+<link rel="stylesheet" href="../../../../assets/css/style.css" />
 
-  <style>
-    header{ position: sticky; top:0; z-index:999; box-shadow:0 2px 12px rgba(0,0,0,0.18); }
-    .wrap{ max-width:1100px; margin:0 auto; padding:18px 16px 44px; }
+<style>
+header{ position: sticky; top:0; z-index:999; box-shadow:0 2px 12px rgba(0,0,0,0.18); }
+.wrap{ max-width:1100px; margin:0 auto; padding:18px 16px 44px; }
 
-    .breadcrumbs{ font-size:.95rem; margin:8px 0 14px; }
-    .breadcrumbs a{ color:#1f78b4; text-decoration:none; font-weight:900; }
-    .breadcrumbs a:hover{ text-decoration:underline; }
+.hero{
+  background:#0b3c5d; color:#fff; border-radius:12px;
+  padding:20px; box-shadow:0 6px 18px rgba(0,0,0,0.12);
+}
+.hero h2{ margin:0 0 6px; color:#fff; }
+.hero p{ margin:0; opacity:.95; }
 
-    .hero{
-      background:#0b3c5d; color:#fff; border-radius:12px;
-      padding:18px; box-shadow:0 6px 18px rgba(0,0,0,0.12);
-      margin-bottom:18px;
-    }
-    .hero h2{ margin:0 0 6px; color:#fff; }
-    .hero p{ margin:0; opacity:.95; }
+.tags{ margin-top:10px; }
+.tag{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:.82rem;
+  font-weight:900;
+  background:#e9f2f9;
+  color:#0b3c5d;
+  margin:6px 6px 0 0;
+}
 
-    .tags{ margin-top:10px; }
-    .tag{
-      display:inline-block;
-      font-size:.82rem;
-      font-weight:900;
-      padding:6px 10px;
-      border-radius:999px;
-      background:#e9f2f9;
-      color:#0b3c5d;
-      margin:6px 6px 0 0;
-    }
+.btn-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+.btn{
+  padding:10px 14px;
+  border-radius:8px;
+  font-weight:900;
+  text-decoration:none;
+  border:1px solid rgba(0,0,0,.12);
+}
+.btn-primary{ background:#1f78b4; color:#fff !important; }
+.btn-primary:hover{ background:#155a8a; }
+.btn-ghost{ background:#fff; color:#0b3c5d !important; }
+.btn-ghost:hover{ background:#e9f2f9; }
 
-    .btn-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
-    .btn{
-      display:inline-block; padding:10px 14px; border-radius:8px;
-      font-weight:900; text-decoration:none; border:1px solid rgba(0,0,0,0.10);
-      transition: background .15s ease, transform .15s ease;
-    }
-    .btn:hover{ transform: translateY(-1px); }
-    .btn-primary{ background:#1f78b4; color:#fff !important; }
-    .btn-primary:hover{ background:#155a8a; }
-    .btn-ghost{ background:#fff; color:#0b3c5d !important; }
-    .btn-ghost:hover{ background:#e9f2f9; }
+.section{
+  background:#fff;
+  border:1px solid #e0e6ec;
+  border-radius:12px;
+  padding:16px;
+  box-shadow:0 4px 14px rgba(0,0,0,.08);
+  margin-top:16px;
+}
+.section h3{ margin-top:0; color:#0b3c5d; }
 
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap:16px;
-      margin-top:14px;
-    }
-    .card{
-      background:#fff; border:1px solid #e0e6ec; border-radius:12px;
-      padding:16px; box-shadow:0 4px 14px rgba(0,0,0,0.08);
-      position:relative; overflow:hidden;
-      background-image: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(245,248,252,0.98));
-      transition: transform .18s ease, box-shadow .18s ease;
-    }
-    .card:hover{ transform: translateY(-3px); box-shadow:0 10px 26px rgba(0,0,0,0.14); }
-    .card::before{
-      content:""; position:absolute; top:0; left:0; width:100%; height:7px;
-      background: linear-gradient(90deg, #2e7d32, #6fcf97);
-    }
-    .card h3{ margin:6px 0 10px; color:#0b3c5d; }
-    .card p{ margin:0 0 12px; color:#333; line-height:1.45; }
-    .card a{ font-weight:900; color:#1f78b4; text-decoration:none; }
-    .card a:hover{ text-decoration:underline; }
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:16px;
+}
 
-    .toc a{
-      display:block; margin:6px 0; font-weight:900;
-      color:#1f78b4; text-decoration:none;
-    }
-    .toc a:hover{ text-decoration:underline; }
+.card{
+  background:#fff;
+  border-radius:12px;
+  padding:16px;
+  border:1px solid #e0e6ec;
+  box-shadow:0 4px 14px rgba(0,0,0,.08);
+}
+.card h4{ margin:0 0 8px; color:#0b3c5d; }
+.card p{ margin:0 0 12px; }
 
-    .section{
-      background:#fff; border:1px solid #e0e6ec; border-radius:12px;
-      padding:16px; box-shadow:0 4px 14px rgba(0,0,0,0.08);
-      margin-top:14px;
-    }
-    .section h3{ margin-top:0; color:#0b3c5d; }
+.warn{
+  background:#fff7ed;
+  border-left:4px solid #f59e0b;
+  padding:12px;
+  border-radius:10px;
+}
 
-    .step{
-      margin:10px 0;
-      padding:12px;
-      border-left:4px solid #1f78b4;
-      background:#f6fbff;
-      border-radius:10px;
-    }
-    .step b{ color:#0b3c5d; }
+.ok{
+  background:#ecfdf5;
+  border-left:4px solid #10b981;
+  padding:12px;
+  border-radius:10px;
+}
 
-    ul{ margin:8px 0 0 18px; }
-    li{ margin:6px 0; }
-    code{ background:#f2f4f7; padding:2px 6px; border-radius:6px; }
+.step{
+  background:#f6fbff;
+  border-left:4px solid #1f78b4;
+  padding:12px;
+  border-radius:10px;
+  margin:10px 0;
+}
 
-    .warn{ background:#fff7ed; border-left:4px solid #f59e0b; padding:12px; border-radius:10px; margin:14px 0; }
-    .ok{ background:#ecfdf5; border-left:4px solid #10b981; padding:12px; border-radius:10px; margin:14px 0; }
-    .bad{ background:#fef2f2; border-left:4px solid #ef4444; padding:12px; border-radius:10px; margin:14px 0; }
-
-    @media (max-width:768px){
-      .wrap{ padding:14px 14px 36px; }
-      .hero h2{ font-size:1.65rem; line-height:1.15; }
-    }
-  </style>
+ul{ margin:6px 0 0 18px; }
+li{ margin:6px 0; }
+</style>
 </head>
 
 <body>
+
 <header>
   <h1>AnalyzersHub</h1>
   <nav>
@@ -118,313 +108,86 @@
 
 <main class="wrap">
 
-  <div class="breadcrumbs">
-    <a href="../../../../index.html">Home</a> →
-    <a href="../../../../analyzers.html">Analyzer Search</a> →
-    <span>Yokogawa GC8000</span>
+<section class="hero">
+  <h2>Yokogawa GC8000 – Process Gas Chromatograph</h2>
+  <p>Complete troubleshooting reference for GC8000: alarms, sampling system, repeatability, drift, and DCS integration.</p>
+
+  <div class="tags">
+    <span class="tag">GC</span>
+    <span class="tag">Online Analysis</span>
+    <span class="tag">Sampling</span>
+    <span class="tag">Carrier</span>
+    <span class="tag">Oven</span>
+    <span class="tag">Valves</span>
+    <span class="tag">Comms</span>
   </div>
 
-  <section class="hero">
-    <h2>Yokogawa GC8000 (Process Gas Chromatograph)</h2>
-    <p>Technician troubleshooting: startup → no peaks → repeatability/drift → sampling → valves → comms → verification.</p>
-
-    <div class="tags">
-      <span class="tag">GC</span>
-      <span class="tag">Online Analysis</span>
-      <span class="tag">Sampling</span>
-      <span class="tag">Carrier</span>
-      <span class="tag">Oven</span>
-      <span class="tag">Valves</span>
-      <span class="tag">Comms</span>
-    </div>
-
-    <div class="btn-row">
-      <a class="btn btn-primary" href="alarms/index.html">Alarms Index →</a>
-      <a class="btn btn-ghost" href="../../../../analyzers.html">Back to Search</a>
-    </div>
-  </section>
-
-  <div class="warn">
-    <b>Safety:</b> Follow plant permit and gas-handling procedures. Depressurize/vent safely and leak test after reconnecting.
+  <!-- 🔑 UPDATED BUTTONS -->
+  <div class="btn-row">
+    <a class="btn btn-primary" href="alarms/index.html">Alarm Decision Trees →</a>
+    <a class="btn btn-primary" href="alarm-codes.html">Alarm Codes →</a>
+    <a class="btn btn-ghost" href="sampling-system.html">Sampling System →</a>
+    <a class="btn btn-ghost" href="../../../../analyzers.html">Back to Search</a>
   </div>
+</section>
 
-  <!-- Alarm cards -->
-  <section class="section" id="alarm-cards">
-    <h3>Alarm Decision Trees (Quick Access)</h3>
-    <p style="margin-top:-6px; opacity:.9;">Select an alarm group and follow the decision tree.</p>
+<div class="warn" style="margin-top:14px;">
+  <b>Safety reminder:</b> Always isolate, depressurize, and leak-test gas lines before and after maintenance.
+</div>
 
-    <div class="grid">
-      <div class="card">
-        <h3>Carrier / Pressure / Flow</h3>
-        <p>No peaks, unstable baseline, carrier supply/regulator issues.</p>
-        <a href="alarms/carrier-pressure.html">Open Decision Tree →</a>
-      </div>
+<section class="section">
+  <h3>Quick Problem Selector</h3>
 
-      <div class="card">
-        <h3>Oven / Temperature</h3>
-        <p>Oven not ready, heater fault, temperature instability.</p>
-        <a href="alarms/oven-temperature.html">Open Decision Tree →</a>
-      </div>
-
-      <div class="card">
-        <h3>Valve / Sequence</h3>
-        <p>Injection issues, valve switching faults, timing mismatch.</p>
-        <a href="alarms/valve-sequence.html">Open Decision Tree →</a>
-      </div>
-
-      <div class="card">
-        <h3>Communication / DCS</h3>
-        <p>Stale values, bad quality, Modbus/OPC mapping and network issues.</p>
-        <a href="alarms/communications.html">Open Decision Tree →</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section toc">
-    <h3>Quick Navigation</h3>
-    <a href="#start">1) Startup & Health Checks</a>
-    <a href="#no-results">2) No Peaks / No Results</a>
-    <a href="#unstable">3) Unstable / Poor Repeatability</a>
-    <a href="#drift">4) Drift / Calibration Issues</a>
-    <a href="#sample">5) Sample System Troubleshooting</a>
-    <a href="#carrier">6) Carrier / Pressure / Flow</a>
-    <a href="#oven">7) Oven / Temperature</a>
-    <a href="#valves">8) Valve / Sequence</a>
-    <a href="#comms">9) DCS / Communications</a>
-    <a href="#pm">10) Preventive Maintenance</a>
-    <a href="#escalate">11) Escalation Checklist</a>
-  </section>
-
-  <section class="section" id="start">
-    <h3>1) Startup & Health Checks</h3>
-
-    <div class="step">
-      <b>A — Visual checks</b>
-      <ul>
-        <li>Cabinet clean/dry, no loose tubing, no gas smell.</li>
-        <li>Confirm utilities: power stable, instrument air (if used), carrier gas, sample supply.</li>
-        <li>Check sample conditioning: filters/traps/drains, heaters/heat tracing.</li>
-      </ul>
+  <div class="grid">
+    <div class="card">
+      <h4>No Peaks / Weak Peaks</h4>
+      <p>Usually carrier, sampling, or valve related.</p>
+      <a href="alarms/carrier-pressure.html">Carrier Decision Tree →</a>
     </div>
 
-    <div class="step">
-      <b>B — Status & timestamps</b>
-      <ul>
-        <li>Confirm analyzer mode is <b>RUN</b> and schedule is active.</li>
-        <li>Confirm last analysis timestamp is updating (based on cycle time).</li>
-        <li>Check active alarms and record text/time.</li>
-      </ul>
+    <div class="card">
+      <h4>Oven Not Ready / Heater Fault</h4>
+      <p>Temperature control preventing analysis.</p>
+      <a href="alarms/oven-temperature.html">Oven Decision Tree →</a>
     </div>
 
-    <div class="ok">
-      <b>Healthy signs:</b> stable carrier/sample pressures, stable oven temperature, repeatable peaks, no critical alarms.
-    </div>
-  </section>
-
-  <section class="section" id="no-results">
-    <h3>2) No Peaks / No Results</h3>
-
-    <div class="step">
-      <b>Symptoms</b>
-      <ul>
-        <li>No chromatogram peaks (flat line) or extremely weak peaks.</li>
-        <li>Results not generated / analysis fails / sequence stops.</li>
-      </ul>
+    <div class="card">
+      <h4>Injection / Sequence Error</h4>
+      <p>Valve switching or timing problems.</p>
+      <a href="alarms/valve-sequence.html">Valve Decision Tree →</a>
     </div>
 
-    <div class="step">
-      <b>Quick isolate</b>
-      <ul>
-        <li><b>No peaks</b> usually means: sample not reaching / injection not happening / carrier issue.</li>
-        <li><b>Peaks present but no result</b> usually means: configuration/calculation issue or comms mapping.</li>
-      </ul>
+    <div class="card">
+      <h4>DCS / Communication Issue</h4>
+      <p>Stale values, bad quality, or missing updates.</p>
+      <a href="alarms/communications.html">Comms Decision Tree →</a>
     </div>
+  </div>
+</section>
 
-    <div class="step">
-      <b>Most common causes</b>
-      <ul>
-        <li>Carrier low / regulator creep / leaks</li>
-        <li>Sample line blocked / filter plugged / liquid carryover</li>
-        <li>Valve not switching due to instrument air or solenoid fault</li>
-      </ul>
-    </div>
+<section class="section">
+  <h3>Recommended Troubleshooting Flow</h3>
 
-    <div class="warn">
-      Use alarm trees for faster isolation:
-      <a href="alarms/carrier-pressure.html">Carrier</a> ·
-      <a href="alarms/valve-sequence.html">Valves</a> ·
-      <a href="alarms/oven-temperature.html">Oven</a>
-    </div>
-  </section>
+  <div class="step"><b>1.</b> Check active alarms and timestamps</div>
+  <div class="step"><b>2.</b> Verify carrier pressure and sample pressure stability</div>
+  <div class="step"><b>3.</b> Confirm oven temperature holds steady</div>
+  <div class="step"><b>4.</b> Inspect sample conditioning (filters, traps, drains)</div>
+  <div class="step"><b>5.</b> Review chromatogram and repeatability</div>
 
-  <section class="section" id="unstable">
-    <h3>3) Unstable / Poor Repeatability</h3>
+  <div class="ok">
+    <b>Rule:</b> GC results are only as good as the sampling system and carrier stability.
+  </div>
+</section>
 
-    <div class="step">
-      <b>Symptoms</b>
-      <ul>
-        <li>Component values fluctuate abnormally between runs.</li>
-        <li>Retention time shift, peak area variation, unstable baseline.</li>
-      </ul>
-    </div>
-
-    <div class="step">
-      <b>Top causes</b>
-      <ul>
-        <li>Sample conditioning problem (water/heavy HC contamination)</li>
-        <li>Unstable carrier pressure or micro-leaks</li>
-        <li>Oven temperature instability</li>
-        <li>Valve switching inconsistency</li>
-      </ul>
-    </div>
-
-    <div class="step">
-      <b>Actions</b>
-      <ul>
-        <li>Drain traps, replace filters, verify sample regulator stability.</li>
-        <li>Leak test critical fittings and valve manifold.</li>
-        <li>Confirm oven holds steady for 15–20 minutes before comparing runs.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section" id="drift">
-    <h3>4) Drift / Calibration Issues</h3>
-
-    <div class="step">
-      <b>Diagnosis</b>
-      <ul>
-        <li><b>Slow drift</b> → contamination, regulator creep, aging components.</li>
-        <li><b>Sudden shift</b> → leak, method/config change, valve failure, sample upset.</li>
-      </ul>
-    </div>
-
-    <div class="step">
-      <b>Calibration checks</b>
-      <ul>
-        <li>Verify calibration gas cylinder validity and correct connection.</li>
-        <li>Confirm calibration line is leak-free and switching works correctly.</li>
-        <li>Run repeat calibration/verification and compare trend.</li>
-      </ul>
-    </div>
-
-    <div class="warn">
-      If calibration fails repeatedly: suspect leaks, wrong gas, stuck valve, or contaminated sample system.
-    </div>
-  </section>
-
-  <section class="section" id="sample">
-    <h3>5) Sample System Troubleshooting</h3>
-
-    <div class="step">
-      <b>Symptoms</b>
-      <ul>
-        <li>No peaks / weak peaks / slow response to process changes.</li>
-        <li>Frequent filter plugging or liquid accumulation.</li>
-      </ul>
-    </div>
-
-    <div class="step">
-      <b>Checks</b>
-      <ul>
-        <li>Replace/clean sample filters and coalescers.</li>
-        <li>Drain liquid traps; check heat tracing (if required).</li>
-        <li>Check sample regulator and restrictor for blockage.</li>
-        <li>Confirm sample pressure is available from process.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section" id="carrier">
-    <h3>6) Carrier / Pressure / Flow</h3>
-
-    <div class="step">
-      <b>Checks</b>
-      <ul>
-        <li>Carrier cylinder pressure and correct gas type.</li>
-        <li>Regulator outlet stable (no hunting).</li>
-        <li>Leak test carrier path and fittings.</li>
-      </ul>
-    </div>
-
-    <div class="ok">
-      If stable carrier returns, peaks and retention stabilize automatically.
-    </div>
-  </section>
-
-  <section class="section" id="oven">
-    <h3>7) Oven / Temperature</h3>
-
-    <div class="step">
-      <b>Checks</b>
-      <ul>
-        <li>Setpoint vs actual temperature stability.</li>
-        <li>Heater power/fuses and sensor wiring.</li>
-        <li>Ventilation and cabinet cooling airflow.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section" id="valves">
-    <h3>8) Valve / Sequence</h3>
-
-    <div class="step">
-      <b>Checks</b>
-      <ul>
-        <li>Instrument air pressure/quality (water/oil causes sticking).</li>
-        <li>Solenoid operation (command vs actual).</li>
-        <li>Valve manifold contamination or internal leakage.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section" id="comms">
-    <h3>9) DCS / Communications</h3>
-
-    <div class="step">
-      <b>Common causes</b>
-      <ul>
-        <li>Wrong IP/subnet/gateway or duplicate IP</li>
-        <li>Mapping/register mismatch in DCS</li>
-        <li>Update rate mismatch (GC updates per cycle)</li>
-      </ul>
-    </div>
-
-    <div class="warn">
-      Use the comms tree for step-by-step isolation:
-      <a href="alarms/communications.html">Communication / DCS Decision Tree</a>
-    </div>
-  </section>
-
-  <section class="section" id="pm">
-    <h3>10) Preventive Maintenance</h3>
-    <ul>
-      <li><b>Weekly:</b> drain traps, check filters, verify pressures stable.</li>
-      <li><b>Monthly:</b> leak check critical fittings, review trend repeatability.</li>
-      <li><b>Quarterly:</b> service sample conditioning, verify valve switching, confirm oven stability.</li>
-      <li><b>Planned:</b> replace aging regulators/solenoids based on performance and site strategy.</li>
-    </ul>
-  </section>
-
-  <section class="section" id="escalate">
-    <h3>11) Escalation Checklist (Before Vendor Support)</h3>
-
-    <div class="step">
-      <b>Collect these details</b>
-      <ul>
-        <li>Model + serial, module details</li>
-        <li>Alarm list (text + timestamps) + screenshots</li>
-        <li>Last good run time + last calibration time</li>
-        <li>Carrier pressure, sample pressure/flow, oven temperature (actual vs setpoint)</li>
-        <li>What actions were done (filters changed, leak tested, restart, etc.)</li>
-      </ul>
-    </div>
-
-    <div class="btn-row" style="margin-top:14px;">
-      <a class="btn btn-primary" href="alarms/index.html">Open Alarms Index →</a>
-      <a class="btn btn-ghost" href="../../../../analyzers.html">Back to Analyzer Search</a>
-    </div>
-  </section>
+<section class="section">
+  <h3>Preventive Maintenance (Quick)</h3>
+  <ul>
+    <li><b>Weekly:</b> Drain traps, check pressures, inspect filters</li>
+    <li><b>Monthly:</b> Leak test carrier and sample fittings</li>
+    <li><b>Quarterly:</b> Verify valve switching and oven stability</li>
+    <li><b>After maintenance:</b> Confirm 2–3 stable consecutive runs</li>
+  </ul>
+</section>
 
 </main>
 
