@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ABB GC Alarm Codes & Troubleshooting | AnalyzersHub</title>
+
+<link rel="stylesheet" href="../../assets/css/style.css" />
+
+<style>
+header{ position:sticky; top:0; z-index:999; box-shadow:0 2px 12px rgba(0,0,0,0.18); }
+.wrap{ max-width:1100px; margin:0 auto; padding:18px 16px 44px; }
+
+.hero{
+  background:#0b3c5d; color:#fff; border-radius:12px; padding:18px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.12);
+}
+.hero h2{ margin:0 0 6px; color:#fff; }
+.hero p{ margin:0; opacity:.95; }
+
+.btn-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
+.btn{
+  display:inline-block; padding:10px 14px; border-radius:8px;
+  font-weight:900; text-decoration:none; border:1px solid rgba(0,0,0,0.10);
+}
+.btn-primary{ background:#1f78b4; color:#fff !important; }
+.btn-primary:hover{ background:#155a8a; }
+.btn-ghost{ background:#fff; color:#0b3c5d !important; }
+.btn-ghost:hover{ background:#e9f2f9; }
+
+.section{
+  background:#fff; border:1px solid #e0e6ec; border-radius:12px;
+  padding:16px; box-shadow:0 4px 14px rgba(0,0,0,0.08);
+  margin-top:14px;
+}
+.section h3{ margin-top:0; color:#0b3c5d; }
+
+.note{ background:#f6fbff; border-left:4px solid #1f78b4; padding:12px; border-radius:10px; margin-top:10px; }
+.warn{ background:#fff7ed; border-left:4px solid #f59e0b; padding:12px; border-radius:10px; margin-top:10px; }
+.ok{ background:#ecfdf5; border-left:4px solid #10b981; padding:12px; border-radius:10px; margin-top:10px; }
+
+.table-wrap{ overflow:auto; border-radius:10px; border:1px solid #e0e6ec; }
+table{ width:100%; border-collapse:collapse; min-width:980px; }
+th, td{ padding:12px; border-bottom:1px solid #e9edf2; text-align:left; vertical-align:top; }
+th{ background:#f6fbff; color:#0b3c5d; font-weight:900; position:sticky; top:0; }
+tr:hover td{ background:#fafcff; }
+
+.small{ font-size:.92rem; opacity:.9; }
+code{ background:#f2f4f7; padding:2px 6px; border-radius:6px; }
+
+.quick-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:14px; margin-top:12px; }
+.qcard{ background:#fff; border:1px solid #e0e6ec; border-radius:12px; padding:14px; box-shadow:0 4px 14px rgba(0,0,0,.08); }
+.qcard h4{ margin:0 0 8px; color:#0b3c5d; }
+.qcard a{ font-weight:900; color:#1f78b4; text-decoration:none; }
+.qcard a:hover{ text-decoration:underline; }
+
+ul{ margin:6px 0 0 18px; }
+li{ margin:6px 0; }
+</style>
+</head>
+
+<body>
+<header>
+  <h1>AnalyzersHub</h1>
+  <nav>
+    <a href="../../index.html">Home</a>
+    <a href="../../analyzers.html">Analyzer Search</a>
+  </nav>
+</header>
+
+<main class="wrap">
+
+<section class="hero">
+  <h2>ABB Process GC — Alarm Codes & Troubleshooting</h2>
+  <p>Shared alarm troubleshooting reference for ABB GC family (PGC5000B/PGC5000C/PGC5007B/Portable NGC).</p>
+
+  <div class="btn-row">
+    <a class="btn btn-primary" href="chromatogram-guide.html">Chromatogram Guide →</a>
+    <a class="btn btn-ghost" href="../../analyzers/abb/gc/pgc5000b/pgc5000b.html">PGC5000B →</a>
+    <a class="btn btn-ghost" href="../../analyzers/abb/gc/pgc5000c/pgc5000c.html">PGC5000C →</a>
+    <a class="btn btn-ghost" href="../../analyzers/abb/gc/pgc5007b/pgc5007b.html">PGC5007B →</a>
+    <a class="btn btn-ghost" href="../../analyzers/abb/gc/portable-ngc/portable-ngc.html">Portable NGC →</a>
+  </div>
+
+  <div class="warn">
+    <b>Note:</b> ABB systems can show alarms as text, category, or internal code. This page groups by the <b>most common alarm families</b>.
+    If you have a real ABB alarm list, you can paste it here and we’ll map each code precisely.
+  </div>
+</section>
+
+<section class="section">
+  <h3>Fast Triage (Start Here)</h3>
+
+  <div class="quick-grid">
+    <div class="qcard">
+      <h4>No peaks / weak peaks</h4>
+      <p class="small">Start with carrier stability + sampling flow.</p>
+      <a href="../../analyzers/abb/gc/pgc5000b/alarms/carrier-pressure.html">Carrier / Pressure Decision Tree →</a>
+    </div>
+
+    <div class="qcard">
+      <h4>Retention time shifts / repeatability poor</h4>
+      <p class="small">Usually carrier hunting, oven instability, or leaks.</p>
+      <a href="chromatogram-guide.html">Chromatogram interpretation →</a>
+    </div>
+
+    <div class="qcard">
+      <h4>Oven not ready / temp fault</h4>
+      <p class="small">Check setpoint vs actual + power path.</p>
+      <a href="../../analyzers/abb/gc/pgc5000b/alarms/oven-temperature.html">Oven Decision Tree →</a>
+    </div>
+
+    <div class="qcard">
+      <h4>DCS not updating</h4>
+      <p class="small">Often normal cycle timing or mapping issue.</p>
+      <a href="../../analyzers/abb/gc/pgc5000b/alarms/communications.html">Comms Decision Tree →</a>
+    </div>
+  </div>
+
+  <div class="note">
+    <b>Rule:</b> A “bad chromatogram” is often a <b>sampling problem</b>. Confirm sampling stability before touching GC hardware.
+  </div>
+</section>
+
+<section class="section">
+  <h3>ABB GC Alarm Families (Practical Codes Table)</h3>
+  <p class="small">Use this when you see an alarm message like “Pressure low”, “Oven not ready”, “Valve sequence”, “Communication fail”, etc.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:190px;">Alarm family</th>
+          <th style="width:210px;">What you see</th>
+          <th style="width:240px;">Most likely causes</th>
+          <th style="width:260px;">First checks (5–10 min)</th>
+          <th>Corrective actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>Carrier / Pressure</b></td>
+          <td>Low carrier pressure, unstable baseline, no peaks</td>
+          <td>Empty cylinder, regulator hunting/creep, leaks, restriction</td>
+          <td>
+            <ul>
+              <li>Carrier cylinder pressure OK</li>
+              <li>Regulator outlet stable</li>
+              <li>Leak test critical joints</li>
+              <li>Check filters/orifice</li>
+            </ul>
+          </td>
+          <td>
+            Restore carrier supply, repair leaks, replace/clean restriction, rerun 2–3 cycles to confirm.
+            <br><a href="../../analyzers/abb/gc/pgc5000b/alarms/carrier-pressure.html">Decision tree →</a>
+          </td>
+        </tr>
+
+        <tr>
+          <td><b>Sampling / Flow</b></td>
+          <td>Weak peaks, slow response, unstable results</td>
+          <td>Plugged filter, liquid carryover, unstable sample pressure/flow</td>
+          <td>
+            <ul>
+              <li>Check sample pressure stability</li>
+              <li>Inspect traps for liquids</li>
+              <li>Check filters/coalescer</li>
+              <li>Check stream selection</li>
+            </ul>
+          </td>
+          <td>
+            Drain/replace filters, restore stable flow, improve conditioning.
+            Validate with repeatable chromatograms.
+            <br><a href="chromatogram-guide.html">Chromatogram guide →</a>
+          </td>
+        </tr>
+
+        <tr>
+          <td><b>Oven / Temperature</b></td>
+          <td>Oven not ready, heater fault, temperature unstable</td>
+          <td>Heater power issue, sensor/wiring, ventilation, controller fault</td>
+          <td>
+            <ul>
+              <li>Setpoint = actual?</li>
+              <li>Check fuses/breakers</li>
+              <li>Inspect sensor wiring</li>
+              <li>Check cabinet ventilation</li>
+            </ul>
+          </td>
+          <td>
+            Restore power path, fix sensor wiring, clear airflow.
+            Run a stability hold then test.
+            <br><a href="../../analyzers/abb/gc/pgc5000b/alarms/oven-temperature.html">Decision tree →</a>
+          </td>
+        </tr>
+
+        <tr>
+          <td><b>Valve / Sequence</b></td>
+          <td>Injection fail, sequence error, valve not switching</td>
+          <td>Dirty/wet instrument air, solenoid fault, mechanical sticking</td>
+          <td>
+            <ul>
+              <li>Instrument air dry/oil-free</li>
+              <li>Observe switching/solenoid LED</li>
+              <li>Check coil wiring/loose connections</li>
+            </ul>
+          </td>
+          <td>
+            Restore clean air, service solenoid/valve, rerun cycle.
+            <br><a href="../../analyzers/abb/gc/pgc5000b/alarms/valve-sequence.html">Decision tree →</a>
+          </td>
+        </tr>
+
+        <tr>
+          <td><b>Detector / Electronics</b></td>
+          <td>Noise, drift, unstable baseline, detector faults</td>
+          <td>Grounding, contamination, utility instability, electronics issue</td>
+          <td>
+            <ul>
+              <li>Confirm stable carrier & oven first</li>
+              <li>Check grounding/shielding</li>
+              <li>Review recent maintenance</li>
+            </ul>
+          </td>
+          <td>
+            Stabilize utilities, address grounding/noise source, clean contamination sources.
+            Verify with repeated stable runs.
+          </td>
+        </tr>
+
+        <tr>
+          <td><b>Communication / DCS</b></td>
+          <td>No update, bad quality, comms fail</td>
+          <td>IP/network issues, mapping, service down, cycle timing misunderstood</td>
+          <td>
+            <ul>
+              <li>Check link LEDs + ping test</li>
+              <li>Verify IP/subnet/gateway</li>
+              <li>Confirm protocol/service running</li>
+              <li>Confirm cycle time expectation</li>
+            </ul>
+          </td>
+          <td>
+            Fix network/mapping, confirm values update after each completed cycle.
+            <br><a href="../../analyzers/abb/gc/pgc5000b/alarms/communications.html">Decision tree →</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ok">
+    <b>Field best practice:</b> Always verify with <b>2–3 consecutive stable cycles</b> before releasing values to operations.
+  </div>
+</section>
+
+<section class="section">
+  <h3>How to Add Your Real ABB Alarm Codes</h3>
+  <p class="small">
+    If you send a list like: <code>Code / Text / Description</code>, we can map each one to the correct family and decision tree.
+  </p>
+  <ul>
+    <li>Add a new column “ABB Code” to the table</li>
+    <li>Group codes under the same alarm family</li>
+    <li>Link each row to the relevant decision tree page</li>
+  </ul>
+</section>
+
+</main>
+
+<footer>Built for Analyzer Technicians</footer>
+</body>
+</html>
