@@ -2,32 +2,70 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>GC8000 Valve / Sequence Alarm</title>
-<link rel="stylesheet" href="../../../../assets/css/style.css">
-</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GC8000 Valve / Sequence | Decision Tree | AnalyzersHub</title>
 
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
 <body>
-<header>
-  <h1>AnalyzersHub</h1>
-  <nav>
-    <a href="../../../../index.html">Home</a>
-    <a href="../../../../analyzers.html">Analyzer Search</a>
-  </nav>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="analyzers.html?category=gc">GC Hub</a>
+    </nav>
+  </div>
 </header>
 
-<main class="wrap">
-<h2>Valve / Sequence Alarm</h2>
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="analyzers.html?category=gc">GC Hub</a><span>›</span>
+  <a href="analyzers/yokogawa/gc8000/gc8000.html">GC8000</a><span>›</span>
+  <a href="analyzers/yokogawa/gc8000/alarms/index.html">Alarms</a><span>›</span>
+  <span class="current">Valve / Sequence</span>
+</nav>
 
-<ul>
-  <li>Check instrument air supply and pressure</li>
-  <li>Observe valve switching during run</li>
-  <li>Check solenoid LEDs and wiring</li>
-  <li>Inspect valve block for contamination</li>
-</ul>
+<main class="container">
+  <h2 style="margin-top:18px;">Decision Tree: Valve / Sequence</h2>
 
-<p><b>Tip:</b> Dirty air is the #1 cause of GC valve failure.</p>
+  <div class="action-row">
+    <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/alarms/index.html">← Back to Alarms Hub</a>
+    <a class="btn btn-primary" href="analyzers/yokogawa/gc8000/alarm-codes.html">Alarm Codes →</a>
+    <a class="btn btn-ghost" href="guides/gc/chromatogram-guide.html">Chromatogram Guide</a>
+  </div>
 
-<a href="index.html">← Back to GC8000 Alarms</a>
+  <div class="warn">
+    <b>Goal:</b> ensure valves switch correctly and method timing is consistent. Valve faults can look like “no peaks” or “wrong peaks”.
+  </div>
+
+  <div class="step"><b>1)</b> Check instrument air (if used): pressure OK, clean/dry, no water/oil, regulator stable.</div>
+  <div class="step"><b>2)</b> Observe valve actuation (sound/indicator). If no click or movement, check solenoid power and wiring.</div>
+  <div class="step"><b>3)</b> If valve clicks but results wrong: suspect sticking valve, contamination, or internal leakage.</div>
+  <div class="step"><b>4)</b> Confirm method sequence timing: compare to last known good method (if available).</div>
+  <div class="step"><b>5)</b> After correction: run <b>2–3 cycles</b> and verify repeatable peaks + stable retention time.</div>
+
+  <div class="card gc" style="margin-top:16px;">
+    <h3>Quick Symptoms → Likely Cause</h3>
+    <p><b>No peaks + valve alarm:</b> no actuation (air/solenoid/power/wiring).</p>
+    <p><b>Peaks present but wrong order:</b> method timing or valve leakage.</p>
+    <p><b>Unstable area / repeatability:</b> sticking valve, contamination, or pressure instability.</p>
+  </div>
 </main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="analyzers/yokogawa/gc8000/alarms/index.html">GC8000 Alarms</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
