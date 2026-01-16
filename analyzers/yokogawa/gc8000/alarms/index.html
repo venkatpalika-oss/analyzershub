@@ -3,81 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yokogawa GC8000 Alarm Decision Trees | AnalyzersHub</title>
+<title>GC8000 Alarm Decision Trees | AnalyzersHub</title>
 
-<link rel="stylesheet" href="../../../../../assets/css/style.css">
-
-<style>
-header{ position:sticky; top:0; z-index:999; box-shadow:0 2px 12px rgba(0,0,0,0.18); }
-.wrap{max-width:1100px;margin:0 auto;padding:20px}
-.hero{background:#0b3c5d;color:#fff;border-radius:12px;padding:20px}
-.hero h2{margin:0;color:#fff}
-.hero p{margin:8px 0 0;opacity:.95}
-
-.btn-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
-.btn{ padding:10px 14px; border-radius:8px; font-weight:900; text-decoration:none; border:1px solid rgba(0,0,0,.12); }
-.btn-primary{ background:#1f78b4; color:#fff !important; }
-.btn-primary:hover{ background:#155a8a; }
-.btn-ghost{ background:#fff; color:#0b3c5d !important; }
-.btn-ghost:hover{ background:#e9f2f9; }
-
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:20px}
-.card{background:#fff;border-radius:12px;padding:16px;border:1px solid #e0e6ec;box-shadow:0 4px 14px rgba(0,0,0,.08)}
-.card h3{margin-top:0;color:#0b3c5d}
-.card a{font-weight:900;color:#1f78b4;text-decoration:none}
-.card a:hover{text-decoration:underline}
-</style>
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
-<header>
-  <h1>AnalyzersHub</h1>
-  <nav>
-    <!-- ✅ FIXED -->
-    <a href="../../../../../index.html">Home</a>
-    <a href="../../../../../analyzers.html">Analyzer Search</a>
-  </nav>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="analyzers.html?category=gc">GC Hub</a>
+    </nav>
+  </div>
 </header>
 
-<main class="wrap">
-<section class="hero">
-  <h2>Yokogawa GC8000 – Alarm Decision Trees</h2>
-  <p>Structured troubleshooting for common GC8000 operational alarms.</p>
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="analyzers.html?category=gc">GC Hub</a><span>›</span>
+  <a href="analyzers/yokogawa/gc8000/gc8000.html">GC8000</a><span>›</span>
+  <span class="current">Alarm Decision Trees</span>
+</nav>
 
-  <div class="btn-row">
-    <a class="btn btn-ghost" href="../gc8000.html">← Back to GC8000</a>
-    <a class="btn btn-primary" href="../alarm-codes.html">Alarm Codes →</a>
-    <a class="btn btn-ghost" href="../../../../../analyzers.html">Back to Search</a>
-  </div>
-</section>
+<main class="container">
+  <h2 style="margin-top:18px;">GC8000 – Alarm Decision Trees</h2>
 
-<section class="grid">
-  <div class="card">
-    <h3>Carrier / Pressure / Flow</h3>
-    <p>No peaks, unstable baseline, carrier pressure alarms.</p>
-    <a href="carrier-pressure.html">Open Decision Tree →</a>
+  <div class="action-row">
+    <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/gc8000.html">← Back to GC8000</a>
+    <a class="btn btn-primary" href="analyzers/yokogawa/gc8000/alarm-codes.html">Alarm Codes →</a>
+    <a class="btn btn-ghost" href="analyzers.html">Back to Search</a>
   </div>
 
-  <div class="card">
-    <h3>Oven / Temperature</h3>
-    <p>Oven not ready, heater fault, temperature instability.</p>
-    <a href="oven-temperature.html">Open Decision Tree →</a>
+  <div class="grid">
+    <div class="card gc">
+      <h3>Carrier / Pressure / Flow</h3>
+      <p>No peaks, unstable baseline, carrier pressure alarms.</p>
+      <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/alarms/carrier-pressure.html">Open →</a>
+    </div>
+    <div class="card gc">
+      <h3>Oven / Temperature</h3>
+      <p>Oven not ready, heater fault, instability.</p>
+      <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/alarms/oven-temperature.html">Open →</a>
+    </div>
+    <div class="card gc">
+      <h3>Valve / Sequence</h3>
+      <p>Injection failure, valve switching faults.</p>
+      <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/alarms/valve-sequence.html">Open →</a>
+    </div>
+    <div class="card gc">
+      <h3>Communication / DCS</h3>
+      <p>No update, bad quality, network issues.</p>
+      <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/alarms/communications.html">Open →</a>
+    </div>
   </div>
-
-  <div class="card">
-    <h3>Valve / Sequence</h3>
-    <p>Injection failure, valve not switching, timing faults.</p>
-    <a href="valve-sequence.html">Open Decision Tree →</a>
-  </div>
-
-  <div class="card">
-    <h3>Communication / DCS</h3>
-    <p>No update, bad quality, Modbus/OPC issues.</p>
-    <a href="communications.html">Open Decision Tree →</a>
-  </div>
-</section>
-
 </main>
-<footer>Built for Analyzer Technicians</footer>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="guides/gc/chromatogram-guide.html">Chromatograms</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
