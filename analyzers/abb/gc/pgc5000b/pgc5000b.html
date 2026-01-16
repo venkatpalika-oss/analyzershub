@@ -36,18 +36,44 @@
     <a class="btn btn-primary" href="analyzers/abb/gc/pgc5000b/alarms/index.html">Alarm Decision Trees →</a>
     <a class="btn btn-ghost" href="guides/gc/abb-gc-alarm-codes.html">ABB GC Alarm Codes →</a>
     <a class="btn btn-ghost" href="guides/gc/chromatogram-guide.html">Chromatogram Guide →</a>
-    <a class="btn btn-ghost" href="analyzers.html">Back to Search</a>
+    <a class="btn btn-ghost" href="analyzers.html">← Back to Search</a>
   </div>
 
-  <div class="warn"><b>Safety:</b> follow site procedures for hazardous gases. Isolate, depressurize, and leak test after work.</div>
+  <div class="warn"><b>Safety:</b> follow site procedures for hazardous gases. Isolate, depressurize, and leak test after maintenance.</div>
 
   <div class="card gc">
     <h3>Recommended Troubleshooting Flow</h3>
-    <div class="step"><b>1)</b> Check alarms + time of last good run</div>
+    <div class="step"><b>1)</b> Check alarms + last good run</div>
     <div class="step"><b>2)</b> Verify carrier pressure stability (no hunting)</div>
-    <div class="step"><b>3)</b> Verify sample conditioning (dry, clean filters)</div>
+    <div class="step"><b>3)</b> Verify sample conditioning (dry gas, clean filters)</div>
     <div class="step"><b>4)</b> Confirm oven temperature stable at setpoint</div>
-    <div class="step"><b>5)</b> Verify valves switch; instrument air clean/dry</div>
+    <div class="step"><b>5)</b> Verify valve switching; instrument air clean/dry</div>
+  </div>
+
+  <div class="card gc" style="margin-top:16px;">
+    <h3>Quick Problem Selector</h3>
+    <div class="grid">
+      <div class="card gc">
+        <h4>Carrier / Flow issues</h4>
+        <p>No peaks, unstable baseline, retention shift.</p>
+        <a class="btn btn-ghost" href="analyzers/abb/gc/pgc5000b/alarms/carrier-pressure.html">Open Decision Tree →</a>
+      </div>
+      <div class="card gc">
+        <h4>Oven not ready / Temp drift</h4>
+        <p>Setpoint deviation, repeatability problems.</p>
+        <a class="btn btn-ghost" href="analyzers/abb/gc/pgc5000b/alarms/oven-temperature.html">Open Decision Tree →</a>
+      </div>
+      <div class="card gc">
+        <h4>Injection / Valve timing</h4>
+        <p>Switching faults, wrong peaks, poor repeatability.</p>
+        <a class="btn btn-ghost" href="analyzers/abb/gc/pgc5000b/alarms/valve-sequence.html">Open Decision Tree →</a>
+      </div>
+      <div class="card gc">
+        <h4>DCS / Communication</h4>
+        <p>Stale values, bad quality, mapping issues.</p>
+        <a class="btn btn-ghost" href="analyzers/abb/gc/pgc5000b/alarms/communications.html">Open Decision Tree →</a>
+      </div>
+    </div>
   </div>
 </main>
 
