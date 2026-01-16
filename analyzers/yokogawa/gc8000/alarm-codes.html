@@ -5,7 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Yokogawa GC8000 Alarm Codes | AnalyzersHub</title>
 
-<link rel="stylesheet" href="../../../../assets/css/style.css">
+<!-- IMPORTANT: fixes all navigation paths on GitHub Pages project site -->
+<base href="/analyzershub/">
+
+<link rel="stylesheet" href="assets/css/style.css">
 
 <style>
 header{position:sticky;top:0;z-index:999;box-shadow:0 2px 12px rgba(0,0,0,0.18)}
@@ -30,14 +33,24 @@ li{margin:6px 0}
 
 <body>
 
-<header>
-  <h1>AnalyzersHub</h1>
-  <nav>
-    <!-- ✅ CORRECT RELATIVE LINKS -->
-    <a href="../../../../index.html">Home</a>
-    <a href="../../../../analyzers.html">Analyzer Search</a>
-  </nav>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="analyzers.html?category=gc">GC Hub</a>
+    </nav>
+  </div>
 </header>
+
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="analyzers.html?category=gc">GC Hub</a><span>›</span>
+  <a href="analyzers.html?vendor=yokogawa">Yokogawa</a><span>›</span>
+  <a href="analyzers/yokogawa/gc8000/gc8000.html">GC8000</a><span>›</span>
+  <span class="current">Alarm Codes</span>
+</nav>
 
 <main class="wrap">
 
@@ -46,9 +59,9 @@ li{margin:6px 0}
   <p>Common GC8000 alarms, symptoms, and recommended first actions.</p>
 
   <div class="btn-row">
-    <a class="btn btn-ghost" href="gc8000.html">← Back to GC8000</a>
-    <a class="btn btn-primary" href="alarms/index.html">Alarm Decision Trees →</a>
-    <a class="btn btn-ghost" href="../../../../analyzers.html">Back to Search</a>
+    <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/gc8000.html">← Back to GC8000</a>
+    <a class="btn btn-primary" href="analyzers/yokogawa/gc8000/alarms/index.html">Alarm Decision Trees →</a>
+    <a class="btn btn-ghost" href="analyzers.html">Back to Search</a>
   </div>
 </section>
 
@@ -74,6 +87,17 @@ li{margin:6px 0}
 
 </main>
 
-<footer>Built for Analyzer Technicians</footer>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="analyzers/yokogawa/gc8000/gc8000.html">GC8000</a>
+      <a href="analyzers/yokogawa/gc8000/alarms/index.html">GC8000 Alarms</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
