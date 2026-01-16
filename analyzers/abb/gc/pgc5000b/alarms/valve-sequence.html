@@ -2,58 +2,48 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>PGC5000B Valve / Sequence Alarm | AnalyzersHub</title>
-<link rel="stylesheet" href="../../../../../assets/css/style.css">
-<style>
-.wrap{max-width:1100px;margin:0 auto;padding:20px}
-.section{background:#fff;border:1px solid #e0e6ec;border-radius:12px;padding:16px;margin-top:14px;box-shadow:0 4px 14px rgba(0,0,0,.08)}
-.step{background:#f6fbff;border-left:4px solid #1f78b4;padding:12px;border-radius:10px;margin:10px 0}
-.warn{background:#fff7ed;border-left:4px solid #f59e0b;padding:12px;border-radius:10px;margin:10px 0}
-.ok{background:#ecfdf5;border-left:4px solid #10b981;padding:12px;border-radius:10px;margin:10px 0}
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PGC5000B Valve / Sequence | Decision Tree | AnalyzersHub</title>
+
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<header>
-  <h1>AnalyzersHub</h1>
-  <nav>
-    <a href="../../../../../index.html">Home</a>
-    <a href="../../../../../analyzers.html">Analyzer Search</a>
-  </nav>
-</header>
 
-<main class="wrap">
-<h2>Valve / Sequence Alarm (PGC5000B)</h2>
+<header class="site-header"><div class="site-header-inner">
+  <a class="brand" href="index.html">AnalyzersHub</a>
+  <nav class="site-nav"><a href="index.html">Home</a><a href="analyzers.html">Search</a><a href="analyzers.html?category=gc">GC Hub</a></nav>
+</div></header>
 
-<div class="section">
-  <div class="step"><b>1) Instrument air</b><br>
-    Verify pressure and quality (dry, oil-free). Wet/dirty air causes sticking.
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span>›</span><a href="analyzers.html?vendor=abb">ABB</a><span>›</span>
+  <a href="analyzers/abb/gc/pgc5000b/pgc5000b.html">PGC5000B</a><span>›</span>
+  <a href="analyzers/abb/gc/pgc5000b/alarms/index.html">Alarms</a><span>›</span>
+  <span class="current">Valve / Sequence</span>
+</nav>
+
+<main class="container">
+  <h2 style="margin-top:18px;">Decision Tree: Valve / Sequence</h2>
+
+  <div class="action-row">
+    <a class="btn btn-ghost" href="analyzers/abb/gc/pgc5000b/alarms/index.html">← Back to Alarms Hub</a>
+    <a class="btn btn-primary" href="guides/gc/abb-gc-alarm-codes.html">ABB GC Codes →</a>
+    <a class="btn btn-ghost" href="guides/gc/chromatogram-guide.html">Chromatogram Guide</a>
   </div>
-  <div class="warn"><b>#1 cause:</b> water/oil in air → valves stick → injection fails.</div>
-</div>
 
-<div class="section">
-  <div class="step"><b>2) Observe switching</b><br>
-    Confirm solenoids energize as expected and valves physically switch.
-  </div>
-</div>
+  <div class="warn"><b>Goal:</b> confirm valves switch correctly and method timing is consistent.</div>
 
-<div class="section">
-  <div class="step"><b>3) Solenoid check</b><br>
-    Check coil/wiring/indication. Swap with spare (if available) to confirm fault.
-  </div>
-</div>
-
-<div class="section">
-  <div class="step"><b>4) Mechanical contamination</b><br>
-    If sticking persists, valve block may be contaminated → service/replace.
-  </div>
-</div>
-
-<div class="section">
-  <div class="ok"><b>Verify:</b> run completes + chromatogram returns normal.</div>
-</div>
-
-<a href="index.html">← Back to Alarms</a>
+  <div class="step"><b>1)</b> Check instrument air supply: pressure OK, clean/dry, no water/oil.</div>
+  <div class="step"><b>2)</b> Verify solenoid actuation (click/indicator). Check power/wiring if dead.</div>
+  <div class="step"><b>3)</b> If valve clicks but results wrong: suspect sticking/leakage/contamination.</div>
+  <div class="step"><b>4)</b> Confirm method sequence timing vs last known good configuration.</div>
+  <div class="step"><b>5)</b> Run 2–3 cycles and verify repeatable peaks.</div>
 </main>
+
+<footer class="site-footer"><div class="site-footer-inner">
+  <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+  <div class="footer-links"><a href="index.html">Home</a><a href="analyzers.html">Search</a></div>
+</div></footer>
+
 </body>
 </html>
