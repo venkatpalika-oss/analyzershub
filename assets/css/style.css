@@ -1,158 +1,91 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f5f7fa;
-    color: #222;
+/* Base */
+body{font-family:Arial, sans-serif;margin:0;background:#f5f7fa;color:#222}
+a{color:#1f78b4}
+.muted{opacity:.9}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:999;background:#0b3c5d;color:#fff;box-shadow:0 2px 12px rgba(0,0,0,.18)}
+.site-header-inner{max-width:1200px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{color:#fff;text-decoration:none;font-weight:900;font-size:1.2rem}
+.site-nav{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end}
+.site-nav a{color:#fff;text-decoration:none;font-weight:800;opacity:.95}
+.site-nav a:hover{opacity:1;text-decoration:underline}
+@media(max-width:800px){
+  .site-header-inner{flex-direction:column;align-items:flex-start}
+  .site-nav{justify-content:flex-start}
 }
 
-header {
-    background: #0b3c5d;
-    color: #fff;
-    padding: 15px;
-}
+/* Breadcrumbs */
+.crumbs{max-width:1200px;margin:12px auto 0;padding:0 16px;font-weight:800;opacity:.9}
+.crumbs a{color:#1f78b4;text-decoration:none}
+.crumbs a:hover{text-decoration:underline}
+.crumbs span{margin:0 6px}
+.crumbs .current{color:#0b3c5d}
 
-nav a {
-    color: #fff;
-    margin-right: 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
+/* Buttons */
+.action-row{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;font-weight:900;text-decoration:none;border:1px solid rgba(0,0,0,.12)}
+.btn-primary{background:#1f78b4;color:#fff}
+.btn-primary:hover{background:#155a8a}
+.btn-ghost{background:#fff;color:#0b3c5d}
+.btn-ghost:hover{background:#e9f2f9}
 
-main {
-    padding: 20px;
-}
+/* Containers */
+.container{max-width:1200px;margin:0 auto;padding:0 16px 44px}
 
-h1, h2, h3 {
-    color: #0b3c5d;
+/* Hero */
+.hero{
+  min-height:220px;display:flex;align-items:center;
+  background:linear-gradient(120deg, rgba(11,60,93,0.96), rgba(31,120,180,0.88));
+  color:#fff;
 }
+.hero-inner{max-width:1200px;margin:0 auto;padding:22px 16px}
+.hero h2{margin:0 0 8px;color:#fff;font-size:2.1rem;line-height:1.1;text-shadow:0 0 18px rgba(0,0,0,0.45)}
+.hero p{margin:0 0 14px;max-width:860px;font-size:1.05rem;opacity:.95}
+@media(max-width:768px){.hero{min-height:200px}.hero h2{font-size:1.8rem}}
 
-footer {
-    background: #ddd;
-    text-align: center;
-    padding: 10px;
-    margin-top: 30px;
+/* Cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:10px}
+.card{
+  background:#fff;border-radius:14px;border:1px solid #e0e6ec;
+  box-shadow:0 4px 14px rgba(0,0,0,0.08);
+  padding:16px;position:relative;overflow:hidden;
+  transition:transform .18s ease, box-shadow .18s ease;
 }
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,0.14)}
+.card::before{content:"";position:absolute;top:0;left:0;width:100%;height:7px;background:#d1d5db}
+.card h3,.card h4{margin:8px 0;color:#0b3c5d}
+.card p{margin:0 0 12px;color:#333;line-height:1.45;font-size:.95rem;opacity:.92}
 
-/* ================= HERO BANNER ================= */
+/* Category color strips */
+.card.yokogawa::before{background:linear-gradient(90deg,#0b3c5d,#1f78b4)}
+.card.abb::before{background:linear-gradient(90deg,#1f78b4,#0b3c5d)}
+.card.siemens::before{background:linear-gradient(90deg,#2e7d32,#1f78b4)}
+.card.agilent::before{background:linear-gradient(90deg,#6b7280,#111827)}
+.card.gc::before{background:linear-gradient(90deg,#2e7d32,#6fcf97)}
+.card.oxygen::before{background:linear-gradient(90deg,#1f78b4,#6fb6e9)}
 
-.hero {
-    min-height: 380px;
-    background-image: url("../images/industrial_control_room.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Search */
+.search-wrap{margin:14px 0;display:flex;justify-content:center}
+.search-input{
+  width:100%;max-width:920px;padding:14px;border-radius:10px;
+  border:1px solid rgba(0,0,0,.15);font-size:1rem;
 }
+.filter-bar{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:20px}
+.filter-btn{
+  padding:10px 14px;border-radius:999px;border:1px solid rgba(0,0,0,.12);
+  background:#fff;font-weight:900;cursor:pointer;
+}
+.filter-btn.active{background:#1f78b4;color:#fff}
+.is-hidden{display:none}
 
-/* Dark overlay for readability */
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(11, 60, 93, 0.65);
-}
+/* Footer */
+.site-footer{margin-top:40px;background:#eef2f6;border-top:1px solid #d9e2ec}
+.site-footer-inner{max-width:1200px;margin:0 auto;padding:16px;display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+.footer-links{display:flex;flex-wrap:wrap;gap:12px}
+.footer-links a{color:#0b3c5d;text-decoration:none;font-weight:800}
+.footer-links a:hover{text-decoration:underline}
 
-/* Hero content */
-.hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    max-width: 900px;
-    padding: 20px;
-    color: #ffffff;
-}
-
-.hero-content h2 {
-    font-size: 3rem;
-    margin-bottom: 12px;
-    color: #ffffff;
-    text-shadow: 0 0 15px rgba(0,0,0,0.5);
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: #e6eef4;
-}
-
-.hero-content a {
-    display: inline-block;
-    padding: 12px 28px;
-    background: #1f78b4;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-}
-
-.hero-content a:hover {
-    background: #155a8a;
-}
-/* ================= PRO HERO TUNING ================= */
-
-/* Slight professional glow on hero text */
-.hero-content h2 {
-  text-shadow: 0 0 18px rgba(0,0,0,0.55), 0 0 26px rgba(31,120,180,0.35);
-}
-
-/* Mobile hero text tuning */
-@media (max-width: 768px) {
-  .hero {
-    min-height: 420px;
-  }
-  .hero-content {
-    padding: 14px;
-  }
-  .hero-content h2 {
-    font-size: 2.1rem;
-    line-height: 1.15;
-  }
-  .hero-content p {
-    font-size: 1.05rem;
-    line-height: 1.35;
-  }
-  .hero-content a {
-    padding: 12px 20px;
-  }
-}
-
-/* Make header sticky (keeps your existing header design) */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
-
-/* Add subtle depth so header doesn’t blend into hero */
-header {
-  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-}
-
-/* Optional: improve card hover (safe even if cards already styled) */
-.card {
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
-}
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
-}
-/* ===== Data Flow Image Sizing ===== */
-.data-flow img {
-  max-width: 700px;     /* adjust: 600px / 650px / 700px */
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 20px auto 0; /* centers image */
-}
-@media (max-width: 768px) {
-    .hero {
-        min-height: 300px;
-    }
-
-    .hero-content h2 {
-        font-size: 2rem;
-    }
-}
+/* Info blocks */
+.warn{background:#fff7ed;border-left:4px solid #f59e0b;padding:12px;border-radius:10px;margin:14px 0}
+.step{background:#f6fbff;border-left:4px solid #1f78b4;padding:12px;border-radius:10px;margin:10px 0}
