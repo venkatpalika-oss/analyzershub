@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAXUM II Communication / DCS | Decision Tree | AnalyzersHub</title>
+
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header"><div class="site-header-inner">
+  <a class="brand" href="index.html">AnalyzersHub</a>
+  <nav class="site-nav"><a href="index.html">Home</a><a href="analyzers.html">Analyzer Search</a><a href="analyzers.html?category=gc">GC Hub</a></nav>
+</div></header>
+
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="analyzers.html?category=gc">GC Hub</a><span>›</span>
+  <a href="analyzers/siemens/maxum-ii/maxum-ii.html">MAXUM II</a><span>›</span>
+  <a href="analyzers/siemens/maxum-ii/alarms/index.html">Alarms</a><span>›</span>
+  <span class="current">Communication / DCS</span>
+</nav>
+
+<main class="container">
+  <h2 style="margin-top:18px;">Decision Tree: Communication / DCS</h2>
+
+  <div class="action-row">
+    <a class="btn btn-ghost" href="analyzers/siemens/maxum-ii/alarms/index.html">← Back to Alarms Hub</a>
+    <a class="btn btn-primary" href="analyzers/siemens/maxum-ii/alarm-codes.html">Alarm Codes →</a>
+    <a class="btn btn-ghost" href="analyzers/siemens/maxum-ii/maxum-ii.html">Back to MAXUM II</a>
+  </div>
+
+  <div class="warn"><b>Goal:</b> restore stable updates to DCS/PLC/Historians (values + quality + update timing).</div>
+
+  <div class="step"><b>1)</b> Confirm analyzer is running analysis normally (latest run time updating).</div>
+  <div class="step"><b>2)</b> Check physical/network basics: link lights, correct IP/subnet/gateway, ping test.</div>
+  <div class="step"><b>3)</b> Verify protocol settings: Modbus TCP / OPC / serial gateway match DCS config.</div>
+  <div class="step"><b>4)</b> Verify mapping/scaling: register list, data types, scaling, and quality/status mapping.</div>
+  <div class="step"><b>5)</b> Align DCS polling interval with GC cycle time (avoid timeouts).</div>
+
+  <div class="card gc" style="margin-top:16px;">
+    <h3>Quick Symptoms → Likely Cause</h3>
+    <p><b>All values stale:</b> IP/network, service down, wrong port.</p>
+    <p><b>Values update but wrong:</b> mapping/register offset, scaling, wrong data type.</p>
+    <p><b>Bad quality only:</b> quality/status mapping, handshake, polling mismatch.</p>
+  </div>
+</main>
+
+<footer class="site-footer"><div class="site-footer-inner">
+  <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+  <div class="footer-links"><a href="index.html">Home</a><a href="analyzers.html">Search</a></div>
+</div></footer>
+
+</body>
+</html>
