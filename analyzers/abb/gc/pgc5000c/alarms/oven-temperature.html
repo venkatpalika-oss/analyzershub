@@ -2,58 +2,48 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>PGC5000C Oven / Temperature Alarm | AnalyzersHub</title>
-<link rel="stylesheet" href="../../../../../assets/css/style.css">
-<style>
-.wrap{max-width:1100px;margin:0 auto;padding:20px}
-.section{background:#fff;border:1px solid #e0e6ec;border-radius:12px;padding:16px;margin-top:14px;box-shadow:0 4px 14px rgba(0,0,0,.08)}
-.step{background:#f6fbff;border-left:4px solid #1f78b4;padding:12px;border-radius:10px;margin:10px 0}
-.warn{background:#fff7ed;border-left:4px solid #f59e0b;padding:12px;border-radius:10px;margin:10px 0}
-.ok{background:#ecfdf5;border-left:4px solid #10b981;padding:12px;border-radius:10px;margin:10px 0}
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PGC5000C Oven / Temperature | Decision Tree | AnalyzersHub</title>
+
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<header>
-  <h1>AnalyzersHub</h1>
-  <nav>
-    <a href="../../../../../index.html">Home</a>
-    <a href="../../../../../analyzers.html">Analyzer Search</a>
-  </nav>
-</header>
 
-<main class="wrap">
-<h2>Oven / Temperature Alarm (PGC5000C)</h2>
+<header class="site-header"><div class="site-header-inner">
+  <a class="brand" href="index.html">AnalyzersHub</a>
+  <nav class="site-nav"><a href="index.html">Home</a><a href="analyzers.html">Search</a><a href="analyzers.html?category=gc">GC Hub</a></nav>
+</div></header>
 
-<div class="section">
-  <div class="step"><b>1) Setpoint vs actual</b><br>
-    Confirm actual temperature reaches and holds setpoint steadily.
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span>›</span><a href="analyzers.html?vendor=abb">ABB</a><span>›</span>
+  <a href="analyzers/abb/gc/pgc5000c/pgc5000c.html">PGC5000C</a><span>›</span>
+  <a href="analyzers/abb/gc/pgc5000c/alarms/index.html">Alarms</a><span>›</span>
+  <span class="current">Oven / Temperature</span>
+</nav>
+
+<main class="container">
+  <h2 style="margin-top:18px;">Decision Tree: Oven / Temperature</h2>
+
+  <div class="action-row">
+    <a class="btn btn-ghost" href="analyzers/abb/gc/pgc5000c/alarms/index.html">← Back to Alarms Hub</a>
+    <a class="btn btn-primary" href="guides/gc/abb-gc-alarm-codes.html">ABB GC Codes →</a>
+    <a class="btn btn-ghost" href="guides/gc/chromatogram-guide.html">Chromatogram Guide</a>
   </div>
-  <div class="warn">Temp instability = retention shift + poor repeatability.</div>
-</div>
 
-<div class="section">
-  <div class="step"><b>2) Check heater power path</b><br>
-    Check fuses/breakers, heater power status, loose terminals.
-  </div>
-</div>
+  <div class="warn"><b>Goal:</b> get oven stable at setpoint before judging retention time or repeatability.</div>
 
-<div class="section">
-  <div class="step"><b>3) Sensor / wiring</b><br>
-    Inspect RTD/TC wiring, connectors, and any recent maintenance disturbance.
-  </div>
-</div>
-
-<div class="section">
-  <div class="step"><b>4) Cabinet cooling/ventilation</b><br>
-    Ensure ventilation is not blocked; check fan operation if applicable.
-  </div>
-</div>
-
-<div class="section">
-  <div class="ok"><b>Verify:</b> hold stable for 15–20 minutes then run test.</div>
-</div>
-
-<a href="index.html">← Back to Alarms</a>
+  <div class="step"><b>1)</b> Compare setpoint vs actual. Note alarms and timestamps.</div>
+  <div class="step"><b>2)</b> If actual never reaches setpoint: check heater power path, fuses, relays, wiring.</div>
+  <div class="step"><b>3)</b> If temperature hunts: check sensor integrity, loose connections, airflow issues.</div>
+  <div class="step"><b>4)</b> Confirm cabinet ventilation and ambient temperature are acceptable.</div>
+  <div class="step"><b>5)</b> Run 2–3 cycles and confirm retention time stability.</div>
 </main>
+
+<footer class="site-footer"><div class="site-footer-inner">
+  <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+  <div class="footer-links"><a href="index.html">Home</a><a href="analyzers.html">Search</a></div>
+</div></footer>
+
 </body>
 </html>
