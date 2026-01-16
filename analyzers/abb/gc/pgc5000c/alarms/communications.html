@@ -2,52 +2,48 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>PGC5000C Communication / DCS Alarm | AnalyzersHub</title>
-<link rel="stylesheet" href="../../../../../assets/css/style.css">
-<style>
-.wrap{max-width:1100px;margin:0 auto;padding:20px}
-.section{background:#fff;border:1px solid #e0e6ec;border-radius:12px;padding:16px;margin-top:14px;box-shadow:0 4px 14px rgba(0,0,0,.08)}
-.step{background:#f6fbff;border-left:4px solid #1f78b4;padding:12px;border-radius:10px;margin:10px 0}
-.warn{background:#fff7ed;border-left:4px solid #f59e0b;padding:12px;border-radius:10px;margin:10px 0}
-.ok{background:#ecfdf5;border-left:4px solid #10b981;padding:12px;border-radius:10px;margin:10px 0}
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PGC5000C Communication / DCS | Decision Tree | AnalyzersHub</title>
+
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<header>
-  <h1>AnalyzersHub</h1>
-  <nav>
-    <a href="../../../../../index.html">Home</a>
-    <a href="../../../../../analyzers.html">Analyzer Search</a>
-  </nav>
-</header>
 
-<main class="wrap">
-<h2>Communication / DCS Alarm (PGC5000C)</h2>
+<header class="site-header"><div class="site-header-inner">
+  <a class="brand" href="index.html">AnalyzersHub</a>
+  <nav class="site-nav"><a href="index.html">Home</a><a href="analyzers.html">Search</a><a href="analyzers.html?category=gc">GC Hub</a></nav>
+</div></header>
 
-<div class="section">
-  <div class="step"><b>1) Network physical</b><br>
-    Check cable, switch port, link LEDs, and correct IP/subnet/gateway.
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span>›</span><a href="analyzers.html?vendor=abb">ABB</a><span>›</span>
+  <a href="analyzers/abb/gc/pgc5000c/pgc5000c.html">PGC5000C</a><span>›</span>
+  <a href="analyzers/abb/gc/pgc5000c/alarms/index.html">Alarms</a><span>›</span>
+  <span class="current">Communication / DCS</span>
+</nav>
+
+<main class="container">
+  <h2 style="margin-top:18px;">Decision Tree: Communication / DCS</h2>
+
+  <div class="action-row">
+    <a class="btn btn-ghost" href="analyzers/abb/gc/pgc5000c/alarms/index.html">← Back to Alarms Hub</a>
+    <a class="btn btn-primary" href="guides/gc/abb-gc-alarm-codes.html">ABB GC Codes →</a>
+    <a class="btn btn-ghost" href="analyzers/abb/gc/pgc5000c/pgc5000c.html">Back to PGC5000C</a>
   </div>
-</div>
 
-<div class="section">
-  <div class="step"><b>2) Protocol/service</b><br>
-    Confirm Modbus/OPC service running and mapping correct.
-  </div>
-</div>
+  <div class="warn"><b>Goal:</b> restore stable data updates to DCS/PLC (values + quality + timing).</div>
 
-<div class="section">
-  <div class="step"><b>3) Update behavior</b><br>
-    GC updates per analysis cycle, not continuous.
-  </div>
-  <div class="warn">DCS scan faster than cycle → may look “stale” but is normal.</div>
-</div>
-
-<div class="section">
-  <div class="ok"><b>Verify:</b> local values match DCS after each run timestamp.</div>
-</div>
-
-<a href="index.html">← Back to Alarms</a>
+  <div class="step"><b>1)</b> Confirm analyzer is running and last analysis time updates.</div>
+  <div class="step"><b>2)</b> Verify IP/subnet/gateway and physical link.</div>
+  <div class="step"><b>3)</b> Confirm protocol settings match DCS (Modbus/OPC/etc.).</div>
+  <div class="step"><b>4)</b> Check mapping/scaling/data types and quality/status mapping.</div>
+  <div class="step"><b>5)</b> Ensure polling interval suits GC cycle time (avoid timeouts).</div>
 </main>
+
+<footer class="site-footer"><div class="site-footer-inner">
+  <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+  <div class="footer-links"><a href="index.html">Home</a><a href="analyzers.html">Search</a></div>
+</div></footer>
+
 </body>
 </html>
