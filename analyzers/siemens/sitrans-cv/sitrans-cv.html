@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siemens SITRANS CV | AnalyzersHub</title>
+
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="analyzers.html?category=gc">GC Hub</a>
+      <a href="guides/gc/chromatogram-guide.html">Chromatogram Guide</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="analyzers.html?category=gc">GC Hub</a><span>›</span>
+  <a href="analyzers.html?vendor=siemens">Siemens</a><span>›</span>
+  <span class="current">SITRANS CV</span>
+</nav>
+
+<main class="container">
+  <h2 style="margin-top:18px;">Siemens SITRANS CV — Calorific Value / Wobbe Index GC</h2>
+  <p class="muted">
+    Technician troubleshooting reference for CV/Wobbe measurement: sampling, carrier stability, oven stability,
+    valve sequencing, calculation reliability, and communication to DCS/PLC.
+  </p>
+
+  <div class="action-row">
+    <a class="btn btn-ghost" href="analyzers.html">← Back to Search</a>
+    <a class="btn btn-primary" href="analyzers/siemens/sitrans-cv/alarms/index.html">Alarm Decision Trees →</a>
+    <a class="btn btn-ghost" href="analyzers/siemens/sitrans-cv/alarm-codes.html">Alarm Codes →</a>
+    <a class="btn btn-ghost" href="guides/gc/chromatogram-guide.html">Chromatogram Guide →</a>
+  </div>
+
+  <div class="warn">
+    <b>Important:</b> CV/Wobbe instability is often caused by <b>sampling changes</b> (moisture, liquid carryover,
+    contamination) or <b>carrier pressure hunting</b>. Fix utilities & sampling first.
+  </div>
+
+  <div class="grid" style="margin-top:14px;">
+    <div class="card gc">
+      <h3>Common SITRANS CV Symptoms</h3>
+      <p><b>CV/Wobbe jumping:</b> sampling quality issue, pressure hunting, inconsistent cycle time.</p>
+      <p><b>No update to DCS:</b> comms/mapping/quality status issue.</p>
+      <p><b>Wrong CV:</b> wrong component mapping, scaling, or calculation inputs.</p>
+    </div>
+
+    <div class="card gc">
+      <h3>Recommended Troubleshooting Order</h3>
+      <div class="step"><b>1)</b> Confirm analyzer is cycling (timestamps update)</div>
+      <div class="step"><b>2)</b> Stabilize carrier pressure (no hunting)</div>
+      <div class="step"><b>3)</b> Check sample conditioning (filters, drains, dewpoint/liquid)</div>
+      <div class="step"><b>4)</b> Confirm oven temperature stable</div>
+      <div class="step"><b>5)</b> Confirm valve switching + method timing</div>
+    </div>
+
+    <div class="card gc">
+      <h3>Quick Links</h3>
+      <p>Open the decision tree matching your alarm/symptom:</p>
+      <div class="action-row">
+        <a class="btn btn-ghost" href="analyzers/siemens/sitrans-cv/alarms/carrier-pressure.html">Carrier / Pressure →</a>
+        <a class="btn btn-ghost" href="analyzers/siemens/sitrans-cv/alarms/oven-temperature.html">Oven / Temp →</a>
+        <a class="btn btn-ghost" href="analyzers/siemens/sitrans-cv/alarms/valve-sequence.html">Valve / Sequence →</a>
+        <a class="btn btn-ghost" href="analyzers/siemens/sitrans-cv/alarms/communications.html">Comms / DCS →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="action-row" style="margin-top:18px;">
+    <a class="btn btn-primary" href="index.html">Home</a>
+    <a class="btn btn-ghost" href="analyzers.html">Analyzer Search</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="analyzers/siemens/sitrans-cv/alarms/index.html">SITRANS CV Alarms</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
