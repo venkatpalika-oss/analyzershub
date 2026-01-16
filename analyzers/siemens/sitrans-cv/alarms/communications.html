@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SITRANS CV Communication / DCS | Decision Tree | AnalyzersHub</title>
+
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header"><div class="site-header-inner">
+  <a class="brand" href="index.html">AnalyzersHub</a>
+  <nav class="site-nav"><a href="index.html">Home</a><a href="analyzers.html">Analyzer Search</a><a href="analyzers.html?category=gc">GC Hub</a></nav>
+</div></header>
+
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="analyzers.html?category=gc">GC Hub</a><span>›</span>
+  <a href="analyzers/siemens/sitrans-cv/sitrans-cv.html">SITRANS CV</a><span>›</span>
+  <a href="analyzers/siemens/sitrans-cv/alarms/index.html">Alarms</a><span>›</span>
+  <span class="current">Communication / DCS</span>
+</nav>
+
+<main class="container">
+  <h2 style="margin-top:18px;">Decision Tree: Communication / DCS</h2>
+
+  <div class="action-row">
+    <a class="btn btn-ghost" href="analyzers/siemens/sitrans-cv/alarms/index.html">← Back to Alarms Hub</a>
+    <a class="btn btn-primary" href="analyzers/siemens/sitrans-cv/alarm-codes.html">Alarm Codes →</a>
+    <a class="btn btn-ghost" href="analyzers/siemens/sitrans-cv/sitrans-cv.html">Back to SITRANS CV</a>
+  </div>
+
+  <div class="warn"><b>Goal:</b> stable updates to DCS/PLC (CV/Wobbe values + quality + correct timing).</div>
+
+  <div class="step"><b>1)</b> Confirm analyzer is cycling and timestamps update normally.</div>
+  <div class="step"><b>2)</b> Verify physical/network basics: link lights, IP/subnet/gateway, ping test.</div>
+  <div class="step"><b>3)</b> Confirm protocol settings: Modbus TCP / OPC / serial gateway match DCS config.</div>
+  <div class="step"><b>4)</b> Verify mapping/scaling: CV/Wobbe tags, data types, scaling, and quality/status mapping.</div>
+  <div class="step"><b>5)</b> Align DCS polling with GC cycle time (avoid timeouts or “stale data”).</div>
+
+  <div class="card gc" style="margin-top:16px;">
+    <h3>Quick Symptoms → Likely Cause</h3>
+    <p><b>All values stale:</b> IP/network, service down, wrong port/protocol.</p>
+    <p><b>Values update but wrong:</b> mapping offset/scaling/data type mismatch.</p>
+    <p><b>Bad quality only:</b> quality mapping or polling mismatch with cycle time.</p>
+  </div>
+</main>
+
+<footer class="site-footer"><div class="site-footer-inner">
+  <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+  <div class="footer-links"><a href="index.html">Home</a><a href="analyzers.html">Search</a></div>
+</div></footer>
+
+</body>
+</html>
