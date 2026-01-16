@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siemens SITRANS CV Alarm Codes | AnalyzersHub</title>
+
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<style>
+.wrap{max-width:1100px;margin:0 auto;padding:20px}
+.hero{background:#0b3c5d;color:#fff;border-radius:12px;padding:20px}
+.hero h2{margin:0;color:#fff}
+.hero p{margin-top:8px;opacity:.95}
+.section{background:#fff;border:1px solid #e0e6ec;border-radius:12px;padding:16px;margin-top:16px;box-shadow:0 4px 14px rgba(0,0,0,.08)}
+.section h3{margin-top:0;color:#0b3c5d}
+ul{margin-left:18px}
+li{margin:6px 0}
+.btn-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.btn{padding:10px 14px;border-radius:8px;font-weight:900;text-decoration:none;border:1px solid rgba(0,0,0,.12)}
+.btn-primary{background:#1f78b4;color:#fff}
+.btn-primary:hover{background:#155a8a}
+.btn-ghost{background:#fff;color:#0b3c5d}
+.btn-ghost:hover{background:#e9f2f9}
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="analyzers.html?category=gc">GC Hub</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="analyzers.html?category=gc">GC Hub</a><span>›</span>
+  <a href="analyzers.html?vendor=siemens">Siemens</a><span>›</span>
+  <a href="analyzers/siemens/sitrans-cv/sitrans-cv.html">SITRANS CV</a><span>›</span>
+  <span class="current">Alarm Codes</span>
+</nav>
+
+<main class="wrap">
+  <section class="hero">
+    <h2>Siemens SITRANS CV – Alarm Codes</h2>
+    <p>Common categories and first actions for CV/Wobbe GC measurement reliability.</p>
+
+    <div class="btn-row">
+      <a class="btn btn-ghost" href="analyzers/siemens/sitrans-cv/sitrans-cv.html">← Back to SITRANS CV</a>
+      <a class="btn btn-primary" href="analyzers/siemens/sitrans-cv/alarms/index.html">Alarm Decision Trees →</a>
+      <a class="btn btn-ghost" href="analyzers.html">Back to Search</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h3>Typical SITRANS CV Alarm Categories</h3>
+    <ul>
+      <li><b>Carrier Pressure / Flow</b> – supply low, regulator hunting, leaks, restrictions</li>
+      <li><b>Oven Not Ready / Temperature Deviation</b> – heater, sensor, airflow/venting</li>
+      <li><b>Valve / Sequence / Injection</b> – instrument air/solenoid, sticking valves, timing mismatch</li>
+      <li><b>Calculation / CV-Wobbe Quality</b> – unstable composition, mapping/scaling errors, invalid component list</li>
+      <li><b>Communication / DCS</b> – network, Modbus/OPC settings, quality/status mapping</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h3>CV/Wobbe Specific Tips</h3>
+    <ul>
+      <li>Check for <b>liquid carryover</b> and moisture: it causes false composition and unstable CV.</li>
+      <li>Verify <b>component mapping</b> and scaling before blaming calculation.</li>
+      <li>Confirm GC cycle time matches DCS expectations; avoid too-fast polling.</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="analyzers/siemens/sitrans-cv/sitrans-cv.html">SITRANS CV</a>
+      <a href="analyzers/siemens/sitrans-cv/alarms/index.html">SITRANS CV Alarms</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
