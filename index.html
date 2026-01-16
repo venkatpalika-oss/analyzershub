@@ -5,227 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AnalyzersHub | Industrial Analyzer Knowledge Hub</title>
 
+  <base href="/analyzershub/">
   <link rel="stylesheet" href="assets/css/style.css">
-
-  <style>
-    header{ position:sticky; top:0; z-index:999; box-shadow:0 2px 12px rgba(0,0,0,0.18); }
-
-    /* Compact hero (not too tall) */
-    .hero{
-      min-height:240px;
-      display:flex;
-      align-items:center;
-      background: linear-gradient(120deg, rgba(11,60,93,0.96), rgba(31,120,180,0.88));
-    }
-    .hero-content{ max-width:1100px; margin:0 auto; padding:22px 16px; color:#fff; }
-    .hero-content h2{
-      margin:0 0 8px;
-      color:#fff;
-      font-size:2.2rem;
-      line-height:1.1;
-      text-shadow: 0 0 18px rgba(0,0,0,0.45);
-    }
-    .hero-content p{
-      margin:0 0 14px;
-      max-width:820px;
-      font-size:1.05rem;
-      opacity:.95;
-    }
-
-    .hero-actions{ display:flex; flex-wrap:wrap; gap:10px; margin-top:10px; }
-    .btn{
-      display:inline-block;
-      padding:10px 14px;
-      border-radius:10px;
-      font-weight:900;
-      text-decoration:none;
-      border:1px solid rgba(255,255,255,0.20);
-      transition: transform .15s ease, background .15s ease;
-    }
-    .btn:hover{ transform: translateY(-1px); }
-    .btn-primary{ background:#1f78b4; color:#fff !important; }
-    .btn-primary:hover{ background:#155a8a; }
-    .btn-ghost{ background:rgba(255,255,255,0.10); color:#fff !important; }
-    .btn-ghost:hover{ background:rgba(255,255,255,0.18); }
-
-    .container{ max-width:1200px; margin:0 auto; padding:0 16px 44px; }
-
-    /* Manufacturer grid */
-    .section-title{
-      margin:22px 0 10px;
-      color:#0b3c5d;
-      font-weight:900;
-      letter-spacing:.2px;
-    }
-
-    .mfg-grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap:16px;
-      margin-top:10px;
-    }
-
-    .mfg-card{
-      background:#fff;
-      border-radius:14px;
-      border:1px solid #e0e6ec;
-      box-shadow:0 4px 14px rgba(0,0,0,0.08);
-      padding:16px;
-      position:relative;
-      overflow:hidden;
-      transition: transform .18s ease, box-shadow .18s ease;
-    }
-    .mfg-card:hover{
-      transform: translateY(-3px);
-      box-shadow:0 12px 28px rgba(0,0,0,0.14);
-    }
-    .mfg-card::before{
-      content:"";
-      position:absolute;
-      top:0; left:0;
-      height:7px; width:100%;
-      background:#d1d5db;
-    }
-    .mfg-card h3{ margin:8px 0 8px; color:#0b3c5d; }
-    .mfg-card p{ margin:0 0 12px; color:#333; line-height:1.45; font-size:.95rem; opacity:.92; }
-
-    .mfg-card a{
-      display:inline-block;
-      padding:10px 14px;
-      border-radius:10px;
-      font-weight:900;
-      text-decoration:none;
-      border:1px solid rgba(0,0,0,0.10);
-      background:#fff;
-      color:#0b3c5d;
-    }
-    .mfg-card a:hover{ background:#e9f2f9; }
-
-    /* brand colors */
-    .yokogawa::before{ background: linear-gradient(90deg, #0b3c5d, #1f78b4); }
-    .abb::before{ background: linear-gradient(90deg, #1f78b4, #0b3c5d); }
-    .siemens::before{ background: linear-gradient(90deg, #2e7d32, #1f78b4); }
-    .rosemount::before{ background: linear-gradient(90deg, #374151, #9ca3af); }
-    .agilent::before{ background: linear-gradient(90deg, #6b7280, #111827); }
-
-    /* quick links */
-    .quick-links{
-      margin-top:18px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-    }
-    .quick-links a{
-      background:#0b3c5d;
-      color:#fff;
-      text-decoration:none;
-      font-weight:900;
-      padding:10px 14px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,0.15);
-    }
-    .quick-links a:hover{ background:#155a8a; }
-
-    /* dataflow smaller */
-    .data-flow{
-      margin-top:22px;
-      background:#fff;
-      border:1px solid #e0e6ec;
-      border-radius:14px;
-      padding:16px;
-      box-shadow:0 4px 14px rgba(0,0,0,0.08);
-    }
-    .data-flow img{
-      max-width:520px;
-      width:100%;
-      height:auto;
-      display:block;
-      margin:12px auto 0;
-      border-radius:12px;
-    }
-    .muted{ opacity:.9; }
-
-    @media (max-width:768px){
-      .hero{ min-height:210px; }
-      .hero-content h2{ font-size:1.9rem; }
-      .hero-content p{ font-size:1rem; }
-    }
-  </style>
 </head>
 
 <body>
 
-<header>
-  <h1>AnalyzersHub</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="analyzers.html">Analyzer Search</a>
-  </nav>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search All Analyzers</a>
+      <a href="analyzers.html?category=gc">GC Hub</a>
+      <a href="guides/gc/chromatogram-guide.html">Chromatogram Guide</a>
+    </nav>
+  </div>
 </header>
 
 <section class="hero">
-  <div class="hero-content">
+  <div class="hero-inner">
     <h2>Industrial Analyzer Knowledge Hub</h2>
     <p class="muted">Troubleshooting procedures, alarm decision trees, and practical guides — built for analyzer technicians.</p>
-
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="#manufacturers">Browse Manufacturers</a>
-      <a class="btn btn-ghost" href="analyzers.html">Open Analyzer Search</a>
+    <div class="action-row">
+      <a class="btn btn-primary" href="analyzers.html">Open Analyzer Search</a>
+      <a class="btn btn-ghost" href="analyzers.html?category=gc">Go to GC Hub</a>
     </div>
   </div>
 </section>
 
 <main class="container">
 
-  <h2 id="manufacturers" class="section-title">Manufacturers</h2>
+  <h2 style="margin:22px 0 10px;color:#0b3c5d;font-weight:900;">Manufacturers</h2>
 
-  <div class="mfg-grid">
-    <div class="mfg-card yokogawa">
+  <div class="grid">
+    <div class="card yokogawa">
       <h3>Yokogawa</h3>
       <p>ZR22G, OX400, GC8000 and more.</p>
-      <a href="analyzers.html?vendor=yokogawa">View Yokogawa →</a>
+      <a class="btn btn-ghost" href="analyzers.html?vendor=yokogawa">View Yokogawa →</a>
     </div>
 
-    <div class="mfg-card abb">
+    <div class="card abb">
       <h3>ABB</h3>
-      <p>AZ Series, Process GCs (PGC5000B/C, PGC5007B, Portable NGC).</p>
-      <a href="analyzers.html?vendor=abb">View ABB →</a>
+      <p>AZ Series and ABB Process GCs (PGC5000B/C, PGC5007B, Portable NGC).</p>
+      <a class="btn btn-ghost" href="analyzers.html?vendor=abb">View ABB →</a>
     </div>
 
-    <div class="mfg-card siemens">
+    <div class="card siemens">
       <h3>Siemens</h3>
-      <p>MAXUM II, SITRANS CV and other process analyzers.</p>
-      <a href="analyzers.html?vendor=siemens">View Siemens →</a>
+      <p>MAXUM II and SITRANS CV process GC systems.</p>
+      <a class="btn btn-ghost" href="analyzers.html?vendor=siemens">View Siemens →</a>
     </div>
 
-    <div class="mfg-card rosemount">
-      <h3>Emerson / Rosemount</h3>
-      <p>6888, 700XA, 400XA, CT5100 and more (add gradually).</p>
-      <a href="analyzers.html?vendor=rosemount">View Rosemount →</a>
-    </div>
-
-    <div class="mfg-card agilent">
+    <div class="card agilent">
       <h3>Agilent</h3>
-      <p>8850 / 8860 / 8890 GC systems, 990 Micro GC and more.</p>
-      <a href="analyzers.html?vendor=agilent">View Agilent →</a>
+      <p>8850 / 8860 / 8890 GC, 990 Micro GC (pages can be added gradually).</p>
+      <a class="btn btn-ghost" href="analyzers.html?vendor=agilent">View Agilent →</a>
     </div>
   </div>
 
-  <h2 class="section-title">Quick Links</h2>
-  <div class="quick-links">
-    <a href="analyzers.html">🔎 Analyzer Search</a>
-    <a href="guides/gc/chromatogram-guide.html">📈 Chromatogram Guide</a>
-    <a href="guides/gc/abb-gc-alarm-codes.html">🧾 ABB GC Alarm Codes</a>
+  <h2 style="margin:22px 0 10px;color:#0b3c5d;font-weight:900;">Quick Links</h2>
+  <div class="action-row">
+    <a class="btn btn-primary" href="analyzers.html">Analyzer Search</a>
+    <a class="btn btn-ghost" href="guides/gc/chromatogram-guide.html">Chromatogram Guide</a>
+    <a class="btn btn-ghost" href="guides/gc/abb-gc-alarm-codes.html">ABB GC Alarm Codes</a>
   </div>
-
-  <section class="data-flow" id="dataflow">
-    <h2 class="section-title" style="margin-top:0;">Analyzer Data Flow to DCS</h2>
-    <p class="muted">Typical signal and data flow from field analyzers to plant control and historians.</p>
-    <img src="assets/images/data_flow_to_dcs.png" alt="Analyzer data flow to DCS">
-  </section>
 
 </main>
 
-<footer>Built for Analyzer Technicians</footer>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="guides/gc/chromatogram-guide.html">Chromatograms</a>
+      <a href="guides/gc/abb-gc-alarm-codes.html">ABB GC Codes</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
