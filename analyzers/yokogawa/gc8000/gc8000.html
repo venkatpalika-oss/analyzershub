@@ -1,131 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Yokogawa GC8000 | Troubleshooting | AnalyzersHub</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yokogawa GC8000 | AnalyzersHub</title>
 
-<link rel="stylesheet" href="../../../../assets/css/style.css" />
+  <!-- IMPORTANT: fixes all navigation paths on GitHub Pages project site -->
+  <base href="/analyzershub/">
 
-<style>
-header{ position:sticky; top:0; z-index:999; box-shadow:0 2px 12px rgba(0,0,0,0.18); }
-.wrap{ max-width:1100px; margin:0 auto; padding:18px 16px 44px; }
-
-.hero{ background:#0b3c5d; color:#fff; border-radius:12px; padding:20px; box-shadow:0 6px 18px rgba(0,0,0,0.12); }
-.hero h2{ margin:0 0 6px; color:#fff; }
-.hero p{ margin:0; opacity:.95; }
-
-.badges{ display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
-.badge{ background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.18); padding:6px 10px; border-radius:999px; font-weight:800; }
-
-.btn-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
-.btn{ padding:10px 14px; border-radius:8px; font-weight:900; text-decoration:none; border:1px solid rgba(0,0,0,.12); }
-.btn-primary{ background:#1f78b4; color:#fff !important; }
-.btn-primary:hover{ background:#155a8a; }
-.btn-ghost{ background:#fff; color:#0b3c5d !important; }
-.btn-ghost:hover{ background:#e9f2f9; }
-
-.section{ background:#fff; border:1px solid #e0e6ec; border-radius:12px; padding:16px; box-shadow:0 4px 14px rgba(0,0,0,.08); margin-top:16px; }
-.section h3{ margin-top:0; color:#0b3c5d; }
-
-.grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:16px; }
-.card{ background:#fff; border:1px solid #e0e6ec; border-radius:12px; padding:16px; box-shadow:0 4px 14px rgba(0,0,0,.08); }
-.card h4{ margin:0 0 8px; color:#0b3c5d; }
-.card p{ margin:0 0 12px; }
-.card a{ font-weight:900; color:#1f78b4; text-decoration:none; }
-.card a:hover{ text-decoration:underline; }
-
-.warn{ background:#fff7ed; border-left:4px solid #f59e0b; padding:12px; border-radius:10px; margin-top:14px; }
-.step{ background:#f6fbff; border-left:4px solid #1f78b4; padding:12px; border-radius:10px; margin:10px 0; }
-</style>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-<header>
-  <h1>AnalyzersHub</h1>
-  <nav>
-    <!-- ✅ FIXED (relative paths) -->
-    <a href="../../../../index.html">Home</a>
-    <a href="../../../../analyzers.html">Analyzer Search</a>
-  </nav>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="analyzers.html?category=gc">GC Hub</a>
+      <a href="guides/gc/chromatogram-guide.html">Chromatogram Guide</a>
+    </nav>
+  </div>
 </header>
 
-<main class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="analyzers.html?category=gc">GC Hub</a><span>›</span>
+  <a href="analyzers.html?vendor=yokogawa">Yokogawa</a><span>›</span>
+  <span class="current">GC8000</span>
+</nav>
 
-<section class="hero">
-  <h2>Yokogawa GC8000 – Process Gas Chromatograph</h2>
-  <p>Complete troubleshooting reference for GC8000: alarms, alarm codes, sampling system, chromatograms, and DCS integration.</p>
+<main class="container">
 
-  <div class="badges">
-    <span class="badge">GC</span>
-    <span class="badge">Online Analysis</span>
-    <span class="badge">Sampling</span>
-    <span class="badge">Carrier</span>
-    <span class="badge">Oven</span>
-    <span class="badge">Valves</span>
-    <span class="badge">Comms</span>
+  <h2 style="margin-top:18px;">Yokogawa GC8000 — Process Gas Chromatograph</h2>
+  <p class="muted">
+    Technician-ready troubleshooting: sampling, carrier stability, oven stability, valve sequencing, alarms and communication to DCS.
+  </p>
+
+  <div class="action-row">
+    <a class="btn btn-ghost" href="analyzers.html">← Back to Search</a>
+    <a class="btn btn-primary" href="analyzers/yokogawa/gc8000/alarms/index.html">Alarm Decision Trees →</a>
+    <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/alarm-codes.html">Alarm Codes →</a>
+    <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/sampling-system.html">Sampling System →</a>
   </div>
 
-  <div class="btn-row">
-    <a class="btn btn-primary" href="alarms/index.html">Alarm Decision Trees →</a>
-    <a class="btn btn-ghost" href="alarm-codes.html">Alarm Codes →</a>
-    <a class="btn btn-ghost" href="sampling-system.html">Sampling System →</a>
-    <a class="btn btn-ghost" href="../../../../guides/gc/chromatogram-guide.html">Chromatogram Guide →</a>
-    <a class="btn btn-ghost" href="../../../../analyzers.html">Back to Search</a>
+  <div class="warn">
+    <b>Best practice:</b> If results look wrong, first stabilize <b>carrier pressure</b> and <b>sampling conditioning</b>.
+    Many “GC problems” are actually sampling problems.
   </div>
-</section>
 
-<div class="warn">
-  <b>Safety reminder:</b> Always isolate, depressurize, and leak-test gas lines before and after maintenance.
-</div>
-
-<section class="section">
-  <h3>Quick Problem Selector</h3>
   <div class="grid">
-    <div class="card">
-      <h4>No Peaks / Weak Peaks</h4>
-      <p>Usually carrier, sampling, or valve related.</p>
-      <a href="alarms/carrier-pressure.html">Carrier Decision Tree →</a>
+
+    <div class="card gc">
+      <h3>Common Symptoms</h3>
+      <p><b>No peaks:</b> carrier low / valve not switching / sample blocked.</p>
+      <p><b>Retention shift:</b> oven instability or carrier hunting.</p>
+      <p><b>Baseline noise:</b> contamination / detector / grounding.</p>
     </div>
-    <div class="card">
-      <h4>Oven Not Ready / Heater Fault</h4>
-      <p>Temperature control preventing analysis.</p>
-      <a href="alarms/oven-temperature.html">Oven Decision Tree →</a>
+
+    <div class="card gc">
+      <h3>Recommended Troubleshooting Order</h3>
+      <div class="step"><b>1)</b> Check alarms + last good analysis time</div>
+      <div class="step"><b>2)</b> Check carrier stability (no hunting)</div>
+      <div class="step"><b>3)</b> Check sample conditioning + filters</div>
+      <div class="step"><b>4)</b> Confirm oven temperature stable</div>
+      <div class="step"><b>5)</b> Confirm valve switching + method timing</div>
     </div>
-    <div class="card">
-      <h4>Injection / Sequence Error</h4>
-      <p>Valve switching or timing problems.</p>
-      <a href="alarms/valve-sequence.html">Valve Decision Tree →</a>
+
+    <div class="card gc">
+      <h3>Quick Links</h3>
+      <p>Go directly to decision trees for the most common categories.</p>
+      <div class="action-row">
+        <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/alarms/carrier-pressure.html">Carrier / Pressure →</a>
+        <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/alarms/oven-temperature.html">Oven / Temp →</a>
+        <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/alarms/valve-sequence.html">Valve / Sequence →</a>
+        <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/alarms/communications.html">Comms / DCS →</a>
+      </div>
     </div>
-    <div class="card">
-      <h4>DCS / Communication Issue</h4>
-      <p>Stale values, bad quality, or missing updates.</p>
-      <a href="alarms/communications.html">Comms Decision Tree →</a>
-    </div>
+
   </div>
-</section>
 
-<section class="section">
-  <h3>Recommended Troubleshooting Flow</h3>
-  <div class="step"><b>1)</b> Check active alarms and timestamps</div>
-  <div class="step"><b>2)</b> Verify carrier pressure and sample pressure stability</div>
-  <div class="step"><b>3)</b> Confirm oven temperature holds steady</div>
-  <div class="step"><b>4)</b> Inspect sample conditioning (filters, traps, drains)</div>
-  <div class="step"><b>5)</b> Review chromatogram and repeatability</div>
-  <div class="step"><b>Rule:</b> GC results are only as good as the sampling system and carrier stability.</div>
-</section>
-
-<section class="section">
-  <h3>Preventive Maintenance (Quick)</h3>
-  <ul>
-    <li><b>Weekly:</b> Drain traps, check pressures, inspect filters</li>
-    <li><b>Monthly:</b> Leak test carrier and sample fittings</li>
-    <li><b>Quarterly:</b> Verify valve switching and oven stability</li>
-    <li><b>After maintenance:</b> Confirm 2–3 stable consecutive runs</li>
-  </ul>
-</section>
+  <div class="action-row" style="margin-top:18px;">
+    <a class="btn btn-primary" href="index.html">Home</a>
+    <a class="btn btn-ghost" href="analyzers.html">Analyzer Search</a>
+  </div>
 
 </main>
-<footer>Built for Analyzer Technicians</footer>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="analyzers/yokogawa/gc8000/alarms/index.html">GC8000 Alarms</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
