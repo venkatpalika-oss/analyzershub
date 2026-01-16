@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SITRANS CV Carrier / Pressure | Decision Tree | AnalyzersHub</title>
+
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="analyzers.html?category=gc">GC Hub</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="analyzers.html?category=gc">GC Hub</a><span>›</span>
+  <a href="analyzers/siemens/sitrans-cv/sitrans-cv.html">SITRANS CV</a><span>›</span>
+  <a href="analyzers/siemens/sitrans-cv/alarms/index.html">Alarms</a><span>›</span>
+  <span class="current">Carrier / Pressure</span>
+</nav>
+
+<main class="container">
+  <h2 style="margin-top:18px;">Decision Tree: Carrier / Pressure / Flow</h2>
+
+  <div class="action-row">
+    <a class="btn btn-ghost" href="analyzers/siemens/sitrans-cv/alarms/index.html">← Back to Alarms Hub</a>
+    <a class="btn btn-primary" href="analyzers/siemens/sitrans-cv/alarm-codes.html">Alarm Codes →</a>
+    <a class="btn btn-ghost" href="guides/gc/chromatogram-guide.html">Chromatogram Guide</a>
+  </div>
+
+  <div class="warn"><b>Goal:</b> stabilize carrier pressure (no hunting). This directly affects retention time and CV/Wobbe stability.</div>
+
+  <div class="step"><b>1)</b> Verify carrier supply and isolation valves open (cylinder/bundle/manifold).</div>
+  <div class="step"><b>2)</b> Check regulator stability. If hunting/oscillation exists, replace/repair regulator.</div>
+  <div class="step"><b>3)</b> Leak test carrier lines/fittings/manifold. Repair and retest.</div>
+  <div class="step"><b>4)</b> Check restrictions: filters, capillary/tubing blockage, kinked lines.</div>
+  <div class="step"><b>5)</b> Run 2–3 cycles and confirm retention time + CV/Wobbe are stable.</div>
+
+  <div class="card gc" style="margin-top:16px;">
+    <h3>Quick Symptoms → Likely Cause</h3>
+    <p><b>CV/Wobbe jumping:</b> carrier hunting, sampling liquid carryover, inconsistent cycle.</p>
+    <p><b>No peaks:</b> carrier off/low, restriction, major leak.</p>
+    <p><b>Retention shift:</b> carrier pressure unstable or oven unstable (check both).</p>
+  </div>
+</main>
+
+<footer class="site-footer"><div class="site-footer-inner">
+  <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+  <div class="footer-links"><a href="index.html">Home</a><a href="analyzers.html">Search</a></div>
+</div></footer>
+
+</body>
+</html>
