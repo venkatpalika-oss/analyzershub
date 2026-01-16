@@ -1,53 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Portable NGC Communication / Export Alarm | AnalyzersHub</title>
-<link rel="stylesheet" href="../../../../../assets/css/style.css">
-<style>
-.wrap{max-width:1100px;margin:0 auto;padding:20px}
-.section{background:#fff;border:1px solid #e0e6ec;border-radius:12px;padding:16px;margin-top:14px;box-shadow:0 4px 14px rgba(0,0,0,.08)}
-.step{background:#f6fbff;border-left:4px solid #1f78b4;padding:12px;border-radius:10px;margin:10px 0}
-.warn{background:#fff7ed;border-left:4px solid #f59e0b;padding:12px;border-radius:10px;margin:10px 0}
-.ok{background:#ecfdf5;border-left:4px solid #10b981;padding:12px;border-radius:10px;margin:10px 0}
-</style>
-</head>
-<body>
-<header>
-  <h1>AnalyzersHub</h1>
-  <nav>
-    <a href="../../../../../index.html">Home</a>
-    <a href="../../../../../analyzers.html">Analyzer Search</a>
-  </nav>
-</header>
-
-<main class="wrap">
-<h2>Communication / Export Alarm (Portable NGC)</h2>
-
-<div class="section">
-  <div class="step"><b>1) Cable / driver / port</b><br>
-    Confirm correct cable and connection method. Try different USB/Ethernet port.
-  </div>
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portable NGC Communication / Export | Decision Tree | AnalyzersHub</title>
+<base href="/analyzershub/"><link rel="stylesheet" href="assets/css/style.css">
+</head><body>
+<header class="site-header"><div class="site-header-inner">
+<a class="brand" href="index.html">AnalyzersHub</a>
+<nav class="site-nav"><a href="index.html">Home</a><a href="analyzers.html">Search</a><a href="analyzers.html?category=gc">GC Hub</a></nav>
+</div></header>
+<nav class="crumbs" aria-label="Breadcrumb">
+<a href="index.html">Home</a><span>›</span><a href="analyzers.html?vendor=abb">ABB</a><span>›</span>
+<a href="analyzers/abb/gc/portable-ngc/portable-ngc.html">Portable NGC</a><span>›</span>
+<a href="analyzers/abb/gc/portable-ngc/alarms/index.html">Alarms</a><span>›</span><span class="current">Communication / Export</span>
+</nav>
+<main class="container">
+<h2 style="margin-top:18px;">Decision Tree: Communication / Export</h2>
+<div class="action-row">
+<a class="btn btn-ghost" href="analyzers/abb/gc/portable-ngc/alarms/index.html">← Back to Alarms Hub</a>
+<a class="btn btn-primary" href="guides/gc/abb-gc-alarm-codes.html">ABB GC Codes →</a>
+<a class="btn btn-ghost" href="analyzers/abb/gc/portable-ngc/portable-ngc.html">Back to Portable NGC</a>
 </div>
-
-<div class="section">
-  <div class="step"><b>2) Network settings</b><br>
-    Confirm IP/subnet if Ethernet is used. Avoid duplicate IP.
-  </div>
-</div>
-
-<div class="section">
-  <div class="step"><b>3) Export behavior</b><br>
-    Export occurs after run completion. Confirm run finished successfully.
-  </div>
-  <div class="warn">If run fails, export may be incomplete or blocked.</div>
-</div>
-
-<div class="section">
-  <div class="ok"><b>Verify:</b> export file/time updates after each completed cycle.</div>
-</div>
-
-<a href="index.html">← Back to Alarms</a>
+<div class="warn"><b>Goal:</b> restore stable data transfer/export.</div>
+<div class="step"><b>1)</b> Confirm device runs and timestamps update.</div>
+<div class="step"><b>2)</b> Check cable/USB/network connection.</div>
+<div class="step"><b>3)</b> Verify correct interface settings and permissions.</div>
+<div class="step"><b>4)</b> Confirm file format/export profile.</div>
+<div class="step"><b>5)</b> Re-test export with a known sample run.</div>
 </main>
-</body>
-</html>
+<footer class="site-footer"><div class="site-footer-inner">
+<div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+<div class="footer-links"><a href="index.html">Home</a><a href="analyzers.html">Search</a></div>
+</div></footer>
+</body></html>
