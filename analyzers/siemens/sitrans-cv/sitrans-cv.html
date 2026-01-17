@@ -8,6 +8,7 @@
   <base href="/analyzershub/">
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
 
 <header class="site-header">
@@ -16,71 +17,113 @@
     <nav class="site-nav">
       <a href="index.html">Home</a>
       <a href="analyzers.html">Analyzer Search</a>
-      <a href="analyzers.html?category=gc">GC Hub</a>
-      <a href="guides/gc/chromatogram-guide.html">Chromatogram Guide</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/venkatpalika-oss/analyzershub/discussions" target="_blank" rel="noopener">Discussion</a>
     </nav>
   </div>
 </header>
 
 <nav class="crumbs" aria-label="Breadcrumb">
   <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers.html?category=gc">GC Hub</a><span>›</span>
+  <a href="analyzers.html">Analyzer Search</a><span>›</span>
   <a href="analyzers.html?vendor=siemens">Siemens</a><span>›</span>
   <span class="current">SITRANS CV</span>
 </nav>
 
 <main class="container">
-  <h2 style="margin-top:18px;">Siemens SITRANS CV — Calorific Value / Wobbe Index GC</h2>
-  <p class="muted">
-    Technician troubleshooting reference for CV/Wobbe measurement: sampling, carrier stability, oven stability,
-    valve sequencing, calculation reliability, and communication to DCS/PLC.
-  </p>
 
-  <div class="action-row">
-    <a class="btn btn-ghost" href="analyzers.html">← Back to Search</a>
-    <a class="btn btn-primary" href="analyzers/siemens/sitrans-cv/alarms/index.html">Alarm Decision Trees →</a>
-    <a class="btn btn-ghost" href="analyzers/siemens/sitrans-cv/alarm-codes.html">Alarm Codes →</a>
-    <a class="btn btn-ghost" href="guides/gc/chromatogram-guide.html">Chromatogram Guide →</a>
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">Siemens SITRANS CV — Calorific Value / Wobbe Analyzer</h2>
+    <p class="muted" style="margin:8px 0 0;">
+      System for <b>Calorific Value</b> and <b>Wobbe Index</b> measurement for fuel-gas applications.
+      Technician focus: stable sampling, pressure/flow stability, moisture control, stable calculations, and DCS communications.
+    </p>
+
+    <div class="action-row">
+      <a class="btn btn-ghost" href="analyzers.html">← Back to Search</a>
+      <a class="btn btn-primary" href="analyzers/siemens/sitrans-cv/alarms/index.html">Alarm Decision Trees →</a>
+      <a class="btn btn-ghost" href="guides/gc/chromatogram-guide.html">Chromatogram Guide →</a>
+    </div>
+
+    <div class="warn">
+      <b>Technician rule:</b> If CV/Wobbe is unstable, do NOT calibrate first.
+      Stabilize <b>sample condition + pressure/flow</b>, then verify outputs and DCS scaling.
+    </div>
   </div>
 
-  <div class="warn">
-    <b>Important:</b> CV/Wobbe instability is often caused by <b>sampling changes</b> (moisture, liquid carryover,
-    contamination) or <b>carrier pressure hunting</b>. Fix utilities & sampling first.
-  </div>
+  <div class="grid">
 
-  <div class="grid" style="margin-top:14px;">
     <div class="card gc">
-      <h3>Common SITRANS CV Symptoms</h3>
-      <p><b>CV/Wobbe jumping:</b> sampling quality issue, pressure hunting, inconsistent cycle time.</p>
-      <p><b>No update to DCS:</b> comms/mapping/quality status issue.</p>
-      <p><b>Wrong CV:</b> wrong component mapping, scaling, or calculation inputs.</p>
+      <h3>Working Principle</h3>
+      <p>
+        SITRANS CV provides fuel quality indication used in combustion control. The output relates to
+        energy content and specific gravity, and the system relies heavily on <b>stable sampling and pressure</b>.
+      </p>
+      <p class="muted"><b>Concept:</b> Wobbe Index = Heating Value / √(Specific Gravity)</p>
+      <ul class="list">
+        <li><b>Stable sample</b> is critical — moisture or liquid carryover causes major errors.</li>
+        <li><b>Stable pressure/flow</b> is critical — regulator hunting causes unstable output.</li>
+        <li><b>DCS mapping</b> must include correct scaling and quality/status bits.</li>
+      </ul>
     </div>
 
     <div class="card gc">
-      <h3>Recommended Troubleshooting Order</h3>
-      <div class="step"><b>1)</b> Confirm analyzer is cycling (timestamps update)</div>
-      <div class="step"><b>2)</b> Stabilize carrier pressure (no hunting)</div>
-      <div class="step"><b>3)</b> Check sample conditioning (filters, drains, dewpoint/liquid)</div>
-      <div class="step"><b>4)</b> Confirm oven temperature stable</div>
-      <div class="step"><b>5)</b> Confirm valve switching + method timing</div>
+      <h3>Main Components (Field Focus)</h3>
+      <ul class="list">
+        <li><b>Sampling system:</b> probe/tap, tubing, isolation valves, leak-tight fittings.</li>
+        <li><b>Conditioning:</b> filters/coalescers, moisture control, drains, heat tracing (if used).</li>
+        <li><b>Pressure/flow control:</b> regulators, restrictors, flow indication.</li>
+        <li><b>Measurement/calculation module:</b> measurement section + internal computation.</li>
+        <li><b>Controller & comms:</b> network interface, outputs to DCS (OPC/Modbus/etc.).</li>
+      </ul>
     </div>
 
     <div class="card gc">
-      <h3>Quick Links</h3>
-      <p>Open the decision tree matching your alarm/symptom:</p>
-      <div class="action-row">
-        <a class="btn btn-ghost" href="analyzers/siemens/sitrans-cv/alarms/carrier-pressure.html">Carrier / Pressure →</a>
-        <a class="btn btn-ghost" href="analyzers/siemens/sitrans-cv/alarms/oven-temperature.html">Oven / Temp →</a>
-        <a class="btn btn-ghost" href="analyzers/siemens/sitrans-cv/alarms/valve-sequence.html">Valve / Sequence →</a>
-        <a class="btn btn-ghost" href="analyzers/siemens/sitrans-cv/alarms/communications.html">Comms / DCS →</a>
+      <h3>Calibration Procedure (Technician Sequence)</h3>
+      <div class="step"><b>1)</b> Verify sampling is stable: dry gas, no liquid carryover, filters/drains OK.</div>
+      <div class="step"><b>2)</b> Verify pressure/flow is stable: no regulator hunting, no restrictions/leaks.</div>
+      <div class="step"><b>3)</b> Stabilize reading locally first (trend steady for sufficient time).</div>
+      <div class="step"><b>4)</b> Apply reference/standard as per site procedure (zero/verification).</div>
+      <div class="step"><b>5)</b> Apply span/verification point (if applicable) and confirm stable output.</div>
+      <div class="step"><b>6)</b> Return to process and confirm stable CV/Wobbe and DCS values/quality.</div>
+      <p class="muted">Tip: If output is fluctuating, calibration will fail or won’t hold—fix sample/pressure first.</p>
+    </div>
+
+    <div class="card gc">
+      <h3>Major Troubleshooting (Top Issues + Fast Checks)</h3>
+      <ul class="list">
+        <li><b>Output fluctuates:</b> regulator hunting, wet sample, blocked drains, filter saturation, leaks.</li>
+        <li><b>Output suddenly steps:</b> process composition change or liquid carryover during upset.</li>
+        <li><b>Wrong vs lab:</b> compare only after stable period; verify scaling/mapping in DCS.</li>
+        <li><b>Calibration fails:</b> reference flow/pressure wrong, sample unstable, leaks or moisture.</li>
+        <li><b>DCS issues:</b> stale values, wrong scaling, bad quality bit mapping, polling mismatch.</li>
+      </ul>
+
+      <div class="action-row" style="margin-top:10px;">
+        <a class="btn btn-ghost" href="analyzers/siemens/sitrans-cv/alarms/index.html">Use Decision Trees →</a>
+        <a class="btn btn-ghost" href="analyzers/hobre/wobbe-index/wobbe-index.html">Compare: Hobré Wobbe →</a>
       </div>
     </div>
+
   </div>
 
-  <div class="action-row" style="margin-top:18px;">
-    <a class="btn btn-primary" href="index.html">Home</a>
-    <a class="btn btn-ghost" href="analyzers.html">Analyzer Search</a>
+  <!-- Discussion -->
+  <div class="panel">
+    <h3 style="margin:0;color:#0b3c5d;">Discussion</h3>
+    <p class="muted" style="margin:8px 0 0;">
+      Share SITRANS CV fuel quality issues (moisture, pressure hunting, DCS mapping) and calibration tips. (Requires GitHub login.)
+    </p>
+
+    <script src="https://utteranc.es/client.js"
+            repo="venkatpalika-oss/analyzershub"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
   </div>
+
 </main>
 
 <footer class="site-footer">
@@ -89,7 +132,8 @@
     <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="analyzers.html">Search</a>
-      <a href="analyzers/siemens/sitrans-cv/alarms/index.html">SITRANS CV Alarms</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
     </div>
   </div>
 </footer>
