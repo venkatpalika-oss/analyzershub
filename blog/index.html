@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | AnalyzersHub</title>
+
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    .panel{background:#fff;border:1px solid #e0e6ec;border-radius:14px;padding:16px;
+      box-shadow:0 6px 18px rgba(0,0,0,.08);margin-top:14px}
+    .post-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin-top:12px}
+    .post{background:#fff;border:1px solid #e0e6ec;border-radius:14px;padding:14px;box-shadow:0 6px 18px rgba(0,0,0,.06)}
+    .post h3{margin:0 0 6px;color:#0b3c5d}
+    .meta{opacity:.8;font-size:.95rem;margin:0 0 10px}
+    .btnx{display:inline-block;text-decoration:none;font-weight:900;padding:10px 14px;border-radius:12px;
+      border:1px solid rgba(0,0,0,.12);transition:transform .15s ease, background .15s ease}
+    .btnx:hover{transform:translateY(-1px)}
+    .primary{background:#1f78b4;color:#fff}
+    .primary:hover{background:#155a8a}
+    .ghost{background:#fff;color:#0b3c5d}
+    .ghost:hover{background:#e9f2f9}
+    .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+  </style>
+</head>
+<body>
+
+<header class="site-header" style="position:sticky;top:0;z-index:999;box-shadow:0 2px 12px rgba(0,0,0,0.18);">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <h2 style="margin-top:18px;">Blog</h2>
+  <p class="muted">Short field notes, troubleshooting stories, and calibration tips.</p>
+
+  <div class="panel">
+    <div class="row">
+      <a class="btnx primary" href="blog/posts/2026-01-01-welcome.html">Read the first post →</a>
+      <a class="btnx ghost" href="analyzers.html">Back to Analyzer Search</a>
+    </div>
+  </div>
+
+  <div class="post-list">
+    <article class="post">
+      <h3>Welcome to AnalyzersHub Blog</h3>
+      <p class="meta">2026-01-01 • 3 min read</p>
+      <p class="muted">What this site is, how to use decision trees, and how to request new analyzers.</p>
+      <a class="btnx ghost" href="blog/posts/2026-01-01-welcome.html">Open →</a>
+    </article>
+
+    <!-- Copy this card for every new post -->
+    <!--
+    <article class="post">
+      <h3>Post title</h3>
+      <p class="meta">YYYY-MM-DD • X min read</p>
+      <p class="muted">Short summary…</p>
+      <a class="btnx ghost" href="blog/posts/YYYY-MM-DD-title.html">Open →</a>
+    </article>
+    -->
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
 
