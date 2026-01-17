@@ -9,281 +9,152 @@
   <link rel="stylesheet" href="assets/css/style.css">
 
   <style>
-    /* Safe homepage-only UI upgrade */
-    .home-hero{
-      margin-top:14px;
-      border-radius:16px;
-      padding:22px 18px;
-      color:#fff;
-      background: radial-gradient(1200px 500px at 20% 20%, rgba(31,120,180,.55), transparent 55%),
-                  radial-gradient(900px 400px at 80% 10%, rgba(255,255,255,.18), transparent 60%),
-                  linear-gradient(135deg, #0b3c5d 0%, #103a58 45%, #0b3c5d 100%);
-      box-shadow:0 14px 34px rgba(0,0,0,.18);
-      overflow:hidden;
-      position:relative;
-    }
-    .home-hero h2{
-      margin:0 0 8px;
-      color:#fff;
-      letter-spacing:.2px;
-      text-shadow:0 0 18px rgba(0,0,0,.55), 0 0 26px rgba(31,120,180,.35);
-    }
-    .home-hero p{
-      margin:0;
-      opacity:.95;
-      max-width:900px;
-      font-size:1.05rem;
-      line-height:1.55;
-    }
+    /* Make home hero slightly shorter */
+    .hero{ min-height:210px; }
+    .home-actions{ margin-top:-16px; position:relative; z-index:5; }
+    .home-actions .panel{ padding:12px; }
+    .home-actions .action-row{ margin:0; justify-content:center; }
 
-    .quick-actions{
-      display:flex; flex-wrap:wrap; gap:10px;
-      margin:12px 0 0;
-    }
-    .qa{
-      display:inline-flex; align-items:center; gap:10px;
-      text-decoration:none;
-      font-weight:900;
-      padding:10px 14px;
-      border-radius:12px;
-      border:1px solid rgba(255,255,255,.20);
-      background:rgba(255,255,255,.12);
-      color:#fff;
-      transition: transform .15s ease, background .15s ease;
-    }
-    .qa:hover{ transform:translateY(-1px); background:rgba(255,255,255,.18); }
-    .qa.primary{ background:#1f78b4; border-color:rgba(255,255,255,.28); }
-    .qa.primary:hover{ background:#155a8a; }
-
-    .section-title{
-      margin:22px 0 10px;
-      color:#0b3c5d;
-      font-weight:900;
-      letter-spacing:.2px;
-    }
-
-    .grid2{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap:14px;
-    }
-    .cardx{
-      background:#fff;
-      border:1px solid #e0e6ec;
-      border-radius:14px;
-      padding:16px;
-      box-shadow:0 6px 18px rgba(0,0,0,.08);
-      position:relative;
-      overflow:hidden;
-      transition: transform .18s ease, box-shadow .18s ease;
-    }
-    .cardx:hover{ transform:translateY(-3px); box-shadow:0 12px 28px rgba(0,0,0,.14); }
-    .cardx::before{
-      content:"";
-      position:absolute; top:0; left:0; width:100%; height:6px;
-      background: linear-gradient(90deg, #0b3c5d, #1f78b4);
-      opacity:.95;
-    }
-    .cardx h3{ margin:8px 0 6px; color:#0b3c5d; }
-    .cardx p{ margin:0 0 12px; color:#333; line-height:1.45; }
-    .row{
-      display:flex; gap:10px; flex-wrap:wrap;
-    }
-    .btnx{
-      display:inline-block;
-      text-decoration:none;
-      font-weight:900;
-      padding:10px 14px;
-      border-radius:12px;
-      border:1px solid rgba(0,0,0,.12);
-      transition: transform .15s ease, background .15s ease;
-    }
-    .btnx:hover{ transform:translateY(-1px); }
-    .btnx.primary{ background:#1f78b4; color:#fff; }
-    .btnx.primary:hover{ background:#155a8a; }
-    .btnx.ghost{ background:#fff; color:#0b3c5d; }
-    .btnx.ghost:hover{ background:#e9f2f9; }
-
-    /* Manufacturer accent strips */
-    .yoko::before{ background: linear-gradient(90deg, #1f78b4, #6fb6e9); }
-    .abb::before{ background: linear-gradient(90deg, #0b3c5d, #1f78b4); }
-    .siemens::before{ background: linear-gradient(90deg, #2e7d32, #6fcf97); }
-    .hobre::before{ background: linear-gradient(90deg, #7c3aed, #a78bfa); }
-    .agilent::before{ background: linear-gradient(90deg, #b45309, #f59e0b); }
-    .tools::before{ background: linear-gradient(90deg, #374151, #9ca3af); }
-
-    /* Data flow block */
-    .data-flow{
-      margin-top:14px;
-      background:#fff;
-      border:1px solid #e0e6ec;
-      border-radius:14px;
-      padding:16px;
-      box-shadow:0 6px 18px rgba(0,0,0,.08);
-    }
-    .data-flow .top{
-      display:flex; flex-wrap:wrap; gap:10px;
-      align-items:center; justify-content:space-between;
-    }
-    .data-flow p{ margin:6px 0 0; color:#333; opacity:.92; }
-    .data-flow img{
-      max-width:520px;
+    /* Data flow card – smaller image */
+    .dataflow img{
+      max-width:560px;
       width:100%;
       height:auto;
       display:block;
       margin:12px auto 0;
       border-radius:12px;
-      border:1px solid #eef2f6;
-    }
-
-    /* Small feature list */
-    .mini{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap:12px;
-    }
-    .mini .item{
-      background:#fff;
       border:1px solid #e0e6ec;
-      border-radius:14px;
-      padding:14px;
-      box-shadow:0 6px 18px rgba(0,0,0,.07);
-    }
-    .mini .item b{ color:#0b3c5d; }
-
-    @media (max-width:768px){
-      .home-hero{ padding:18px 16px; }
-      .home-hero h2{ font-size:2rem; line-height:1.15; }
+      box-shadow:0 6px 18px rgba(0,0,0,.08);
     }
   </style>
 </head>
 
 <body>
 
-<header class="site-header" style="position:sticky;top:0;z-index:999;box-shadow:0 2px 12px rgba(0,0,0,0.18);">
+<header class="site-header">
   <div class="site-header-inner">
     <a class="brand" href="index.html">AnalyzersHub</a>
-   <nav class="site-nav">
-  <a href="index.html">Home</a>
-  <a href="analyzers.html">Analyzer Search</a>
-  <a href="blog/index.html">Blog</a>
-  <a href="contact.html">Contact</a>
-  <a href="https://github.com/venkatpalika-oss/analyzershub/discussions" target="_blank" rel="noopener">Discussion</a>
-</nav>
- 
+    <nav class="site-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
   </div>
 </header>
 
-<main class="container">
-
-  <!-- HERO -->
-  <section class="home-hero">
+<section class="hero">
+  <div class="hero-inner">
     <h2>Industrial Analyzer Knowledge Hub</h2>
     <p>
-      Troubleshooting guides, alarm decision trees, calibration procedures, and field best practices — organized by manufacturer
-      for fast navigation.
+      Troubleshooting guides, working principles, calibration procedures, and alarm decision trees —
+      built for analyzer technicians.
     </p>
-
-    <div class="quick-actions">
-      <a class="qa primary" href="analyzers.html">🔎 Analyzer Search</a>
-      <a class="qa" href="analyzers.html?category=gc">🧪 GC Hub</a>
-      <a class="qa" href="analyzers.html?category=oxygen">🌡️ Oxygen Analyzers</a>
-      <a class="qa" href="guides/gc/chromatogram-guide.html">📈 Chromatogram Guide</a>
+    <div class="action-row">
+      <a class="btn btn-primary" href="analyzers.html">Browse All Analyzers →</a>
+      <a class="btn btn-ghost" href="analyzers.html?category=gc">GC Hub →</a>
+      <a class="btn btn-ghost" href="analyzers.html?category=oxygen">Oxygen Hub →</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- MANUFACTURERS -->
-  <h2 class="section-title">Browse by Manufacturer</h2>
-  <div class="grid2">
+<main class="container">
 
-    <div class="cardx yoko">
+  <!-- Quick actions (won't hide behind hero) -->
+  <div class="home-actions">
+    <div class="panel">
+      <div class="action-row">
+        <a class="btn btn-primary" href="analyzers.html">🔎 Analyzer Search</a>
+        <a class="btn btn-ghost" href="analyzers.html?category=gc">🧪 GC</a>
+        <a class="btn btn-ghost" href="analyzers.html?category=oxygen">🫁 Oxygen</a>
+        <a class="btn btn-ghost" href="analyzers/flash-point/index.html">🔥 Flash Point</a>
+        <a class="btn btn-ghost" href="blog/index.html">📝 Blog</a>
+        <a class="btn btn-ghost" href="contact.html">✉️ Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <h2 style="margin:18px 0 8px;color:#0b3c5d;">Browse by Manufacturer</h2>
+  <p class="muted" style="margin:0 0 14px;">
+    Choose a manufacturer to open their analyzer pages. Use Analyzer Search for full model list.
+  </p>
+
+  <div class="grid">
+
+    <div class="card yokogawa">
       <h3>Yokogawa</h3>
-      <p>ZR22G, OX400, GC8000 and Yokogawa analyzer troubleshooting.</p>
-      <div class="row">
-        <a class="btnx primary" href="analyzers.html?vendor=yokogawa">Open Yokogawa →</a>
-        <a class="btnx ghost" href="analyzers.html?category=gc">GC Hub →</a>
+      <p>ZR22G, OX400, GC8000 and related troubleshooting + alarm decision trees.</p>
+      <div class="action-row">
+        <a class="btn btn-primary" href="analyzers.html?filter=yokogawa">Open Yokogawa →</a>
+        <a class="btn btn-ghost" href="analyzers.html?category=oxygen">Oxygen Hub →</a>
       </div>
     </div>
 
-    <div class="cardx abb">
+    <div class="card abb">
       <h3>ABB</h3>
-      <p>ABB GC models (PGC5000 series, Portable NGC) + future ABB analyzers.</p>
-      <div class="row">
-        <a class="btnx primary" href="analyzers.html?vendor=abb">Open ABB →</a>
-        <a class="btnx ghost" href="guides/gc/abb-gc-alarm-codes.html">ABB GC Codes →</a>
+      <p>PGC5000B/C, PGC5007B, Portable NGC and more — guides and alarm trees.</p>
+      <div class="action-row">
+        <a class="btn btn-primary" href="analyzers.html?filter=abb">Open ABB →</a>
+        <a class="btn btn-ghost" href="analyzers.html?category=gc">GC Hub →</a>
       </div>
     </div>
 
-    <div class="cardx siemens">
+    <div class="card siemens">
       <h3>Siemens</h3>
-      <p>MAXUM II and SITRANS CV — troubleshooting & alarm decision trees.</p>
-      <div class="row">
-        <a class="btnx primary" href="analyzers.html?vendor=siemens">Open Siemens →</a>
-        <a class="btnx ghost" href="analyzers.html?category=gc">GC Hub →</a>
+      <p>MAXUM Edition II — working principle, calibration, troubleshooting, alarms.</p>
+      <div class="action-row">
+        <a class="btn btn-primary" href="analyzers.html?filter=siemens">Open Siemens →</a>
+        <a class="btn btn-ghost" href="analyzers/siemens/maxum-ii/maxum-ii.html">MAXUM II →</a>
       </div>
     </div>
 
-    <div class="cardx hobre">
-      <h3>Hobré</h3>
-      <p>Wobbe Index analyzer: working principle, components, calibration & major troubleshooting.</p>
-      <div class="row">
-        <a class="btnx primary" href="analyzers.html?filter=hobre">Open Hobré →</a>
-        <a class="btnx ghost" href="analyzers/hobre/wobbe-index/wobbe-index.html">Wobbe Index →</a>
+    <div class="card">
+      <h3>AMETEK</h3>
+      <p>933 Series Oxygen Analyzer — calibration + common fault decision trees.</p>
+      <div class="action-row">
+        <a class="btn btn-primary" href="analyzers.html?filter=ametek">Open AMETEK →</a>
+        <a class="btn btn-ghost" href="analyzers/ametek/933/933.html">AMETEK 933 →</a>
       </div>
     </div>
 
-    <div class="cardx agilent">
-      <h3>Agilent</h3>
-      <p>GC family (8850/8860/8890/990 Micro GC) — pages can be added next.</p>
-      <div class="row">
-        <a class="btnx primary" href="analyzers.html?filter=agilent">Open Agilent →</a>
-        <a class="btnx ghost" href="analyzers.html?category=gc">GC Hub →</a>
-      </div>
-    </div>
-
-    <div class="cardx tools">
-      <h3>Tools & Guides</h3>
-      <p>Decision trees, alarm-code hubs, and reference guides for technicians.</p>
-      <div class="row">
-        <a class="btnx primary" href="analyzers.html">Analyzer Search →</a>
-        <a class="btnx ghost" href="guides/gc/chromatogram-guide.html">Chromatograms →</a>
+    <div class="card">
+      <h3>Flash Point</h3>
+      <p>P-500 series — method references, calibration materials, repeatability guidance.</p>
+      <div class="action-row">
+        <a class="btn btn-primary" href="analyzers/flash-point/index.html">Flash Point Hub →</a>
+        <a class="btn btn-ghost" href="analyzers/flash-point/p500/p500.html">P-500 →</a>
       </div>
     </div>
 
   </div>
 
-  <!-- QUICK “WHAT’S INSIDE” -->
-  <h2 class="section-title">What You’ll Find Here</h2>
-  <div class="mini">
-    <div class="item"><b>Decision Trees</b><br><span class="muted">Step-by-step troubleshooting for alarms & symptoms.</span></div>
-    <div class="item"><b>Calibration Procedures</b><br><span class="muted">Field-friendly sequence (stability → zero/span → verification).</span></div>
-    <div class="item"><b>Major Troubleshoots</b><br><span class="muted">Top issues + fast checks (sampling, pressure, comms).</span></div>
-    <div class="item"><b>DCS Integration</b><br><span class="muted">Mapping, scaling, quality bits, and comms troubleshooting.</span></div>
-  </div>
-
-  <!-- DATA FLOW IMAGE -->
-  <section class="data-flow" id="dataflow">
-    <div class="top">
-      <h2 class="section-title" style="margin:0;">Analyzer Data Flow to DCS</h2>
-      <div class="row">
-        <a class="btnx ghost" href="analyzers.html">Open Analyzer Search →</a>
-      </div>
-    </div>
-    <p>Typical signal/data flow from field analyzers to plant control, historians, and reporting systems.</p>
+  <div class="panel dataflow" style="margin-top:18px;">
+    <h2 style="margin:0;color:#0b3c5d;">Analyzer Data Flow to DCS</h2>
+    <p class="muted" style="margin-top:8px;">
+      Typical signal & communication flow from field analyzers to PLC/DCS and historian.
+    </p>
     <img src="assets/images/data_flow_to_dcs.png" alt="Analyzer data flow to DCS">
-  </section>
+    <p class="muted" style="margin-top:10px;font-size:.85rem;">
+      If you created this graphic yourself (or generated it), it’s safe to use. Avoid copying diagrams from manuals unless permission exists.
+    </p>
+  </div>
 
 </main>
 
 <footer class="site-footer">
   <div class="site-footer-inner">
-    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div>
+      <b>AnalyzersHub</b><br>
+      <span class="muted">Built for Analyzer Technicians</span>
+    </div>
     <div class="footer-links">
-  <a href="index.html">Home</a>
-  <a href="analyzers.html">Search</a>
-  <a href="disclaimer.html">Disclaimer</a>
-</div>
-
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
   </div>
 </footer>
 
