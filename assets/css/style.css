@@ -270,3 +270,44 @@ img{max-width:100%;height:auto;display:block}
 .field-tip b{
   color:#1f78b4;                       /* highlight label */
 }
+/* ================================
+   Home Page Wallpaper Hero
+================================ */
+
+.hero {
+  position: relative;
+  min-height: 320px;           /* adjust height here */
+  display: flex;
+  align-items: center;
+  color: #fff;
+
+  background-image:
+    linear-gradient(
+      rgba(11, 60, 93, 0.75),
+      rgba(11, 60, 93, 0.65)
+    ),
+    url("../images/industrial-analyzer-wallpaper.webp");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Make text readable */
+.hero h2,
+.hero p {
+  text-shadow: 0 2px 12px rgba(0,0,0,0.65);
+}
+
+/* Keep buttons visible */
+.hero .btn {
+  box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 260px;
+    background-position: center top;
+  }
+}
