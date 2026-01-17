@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZR22G High Drift | Yokogawa Decision Tree</title>
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/venkatpalika-oss/analyzershub/discussions" target="_blank" rel="noopener">Discussion</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="alarms/yokogawa/decision-trees/index.html">Yokogawa Decision Trees</a><span>›</span>
+  <a href="analyzers/yokogawa/zr22g.html">ZR22G</a><span>›</span>
+  <span class="current">High Drift</span>
+</nav>
+
+<main class="container">
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">ZR22G — High Drift / Unstable Reading (Decision Tree)</h2>
+    <p class="muted" style="margin:8px 0 0;">Use this when O₂ gradually moves up/down or becomes unstable after being stable.</p>
+
+    <div class="warn">
+      <b>Golden rule:</b> Drift is usually from <b>probe contamination</b>, <b>reference air issues</b>, or <b>heater instability</b> — not calibration.
+    </div>
+
+    <div class="action-row">
+      <a class="btn btn-ghost" href="alarms/yokogawa/decision-trees/index.html">← Back to Yokogawa Trees</a>
+      <a class="btn btn-ghost" href="analyzers/yokogawa/zr22g.html">ZR22G Main Page →</a>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card oxygen">
+      <h3>Decision Tree</h3>
+
+      <div class="step"><b>1) Heater stable?</b><br>
+        If heater alarm or temperature fluctuating → go to <b>Heater Error</b> page. Fix heater first.
+      </div>
+
+      <div class="step"><b>2) Reference air path OK?</b><br>
+        Check reference air filter, tubing, fittings. Any blockage/leak causes drift. Ensure clean/dry air.
+      </div>
+
+      <div class="step"><b>3) Probe tip / filter fouled?</b><br>
+        Inspect for dust/ash buildup, plugged cap. Clean/replace. Fouling causes slow response + drifting.
+      </div>
+
+      <div class="step"><b>4) Process conditions changed?</b><br>
+        Confirm combustion/process is stable. Compare with other indicators (stack O₂, fuel/air ratio, draft changes).
+      </div>
+
+      <div class="step"><b>5) Calibration line leakage?</b><br>
+        A leaking cal valve/manifold can bleed air/gas and cause drift. Isolate and leak test.
+      </div>
+
+      <div class="step"><b>6) Electrical grounding / noise?</b><br>
+        Check cable shielding, grounding, loose terminals, water ingress in junction box. Noise can appear as unstable reading.
+      </div>
+
+      <div class="step"><b>7) Still drifting after checks?</b><br>
+        Suspect sensor aging/damage. Plan cell/assembly replacement and verify after replacement.
+      </div>
+    </div>
+
+    <div class="card oxygen">
+      <h3>Fast Actions</h3>
+      <ul class="list">
+        <li>Verify reference air filter and line integrity</li>
+        <li>Clean/inspect probe cap and sensor area</li>
+        <li>Confirm heater temperature stable</li>
+        <li>Check cal valve manifold for leakage</li>
+        <li>Check terminals/grounding and moisture ingress</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="alarms/yokogawa/decision-trees/index.html">Yokogawa Trees</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
