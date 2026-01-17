@@ -1,143 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Yokogawa ZR22G Zirconia Oxygen Analyzer | AnalyzersHub</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yokogawa ZR22G | AnalyzersHub</title>
 
-    <meta name="description" content="Yokogawa ZR22G zirconia oxygen analyzer overview, specifications, common alarms, and troubleshooting links for analyzer technicians.">
-    <meta name="keywords" content="Yokogawa ZR22G, zirconia oxygen analyzer, combustion analyzer troubleshooting">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="../../assets/css/style.css">
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
 
-<header>
-    <h1>AnalyzersHub</h1>
-    <nav>
-        <a href="../../index.html">Home</a>
-        <a href="../../analyzers.html">Analyzers</a>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/venkatpalika-oss/analyzershub/discussions" target="_blank" rel="noopener">Discussion</a>
     </nav>
+  </div>
 </header>
 
-<main>
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="analyzers.html">Analyzer Search</a><span>›</span>
+  <a href="analyzers.html?vendor=yokogawa">Yokogawa</a><span>›</span>
+  <span class="current">ZR22G</span>
+</nav>
 
-    <h2>Yokogawa ZR22G Zirconia Oxygen Analyzer</h2>
+<main class="container">
 
-    <section>
-        <h3>Analyzer Overview</h3>
-        <p>
-            The Yokogawa ZR22G is a high-performance zirconia oxygen analyzer used
-            for continuous oxygen measurement in combustion processes such as
-            boilers, furnaces, kilns, and incinerators.
-        </p>
-    </section>
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">Yokogawa ZR22G — Zirconia Oxygen Analyzer</h2>
+    <p class="muted" style="margin:8px 0 0;">
+      In-situ zirconia O₂ analyzer used for combustion control (boilers, heaters, furnaces).
+      Technician focus: probe condition, heater stability, reference air, calibration gas handling, and drift control.
+    </p>
 
-    <section>
-        <h3>Key Features</h3>
-        <ul>
-            <li>High accuracy zirconia sensor technology</li>
-            <li>Fast response time</li>
-            <li>Suitable for high-temperature flue gas applications</li>
-            <li>Long sensor life with proper maintenance</li>
-        </ul>
-    </section>
+    <div class="action-row">
+      <a class="btn btn-ghost" href="analyzers.html">← Back to Search</a>
+      <a class="btn btn-primary" href="analyzers/yokogawa/alarms/zr22g/index.html">Alarm Decision Trees →</a>
+      <a class="btn btn-ghost" href="analyzers/yokogawa/alarms/zr22g/alarm-codes.html">Alarm Codes →</a>
+    </div>
 
-    <section>
-        <h3>Typical Applications</h3>
-        <ul>
-            <li>Boilers and furnaces</li>
-            <li>Cement kilns</li>
-            <li>Incinerators</li>
-            <li>Power plant combustion control</li>
-        </ul>
-    </section>
+    <div class="warn">
+      <b>Technician rule:</b> If O₂ is unstable or drifting, check <b>probe condition + reference air + heater stability</b> first.
+      Don’t calibrate until the reading is stable.
+    </div>
+  </div>
 
-    <section>
-        <h3>Common Alarms & Troubleshooting</h3>
+  <div class="grid">
 
-        <table border="1" cellpadding="8" cellspacing="0">
-            <thead>
-                <tr>
-                    <th>Alarm</th>
-                    <th>Description</th>
-                    <th>Diagnosis</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <a href="../../alarms/yokogawa/heater-error.html">
-                            Heater Error
-                        </a>
-                    </td>
-                    <td>Sensor heater not operating correctly</td>
-                    <td>
-                        <a href="../../alarms/yokogawa/decision-trees/zr22g-heater-error.html">
-                            Start Diagnosis
-                        </a>
-                    </td>
-                </tr>
+    <div class="card oxygen">
+      <h3>Working Principle</h3>
+      <p>
+        ZR22G uses a <b>zirconia sensor</b> (solid electrolyte) that generates an electrical signal based on the
+        difference in oxygen concentration between <b>process gas</b> and <b>reference air</b>.
+      </p>
+      <ul class="list">
+        <li><b>Sensor output</b> changes with oxygen partial pressure difference (process vs reference).</li>
+        <li><b>Heater</b> maintains sensor temperature for stable, correct measurement.</li>
+        <li><b>Accuracy depends on</b> clean probe, stable temperature, proper reference air, and correct calibration gas.</li>
+      </ul>
+    </div>
 
-                <tr>
-                    <td>
-                        <a href="../../alarms/yokogawa/no-signal.html">
-                            No Oxygen Signal
-                        </a>
-                    </td>
-                    <td>No valid oxygen measurement available</td>
-                    <td>
-                        <a href="../../alarms/yokogawa/decision-trees/zr22g-no-signal.html">
-                            Start Diagnosis
-                        </a>
-                    </td>
-                </tr>
+    <div class="card oxygen">
+      <h3>Main Components (Field Focus)</h3>
+      <ul class="list">
+        <li><b>Probe / sensor assembly:</b> zirconia cell, protective filter/cap, mounting hardware.</li>
+        <li><b>Heater & temperature control:</b> heater element, temperature sensor, controller.</li>
+        <li><b>Reference air system:</b> reference air line, filter, flow control (clean/dry air).</li>
+        <li><b>Calibration system:</b> calibration gas connection, solenoid/valves (if equipped), tubing.</li>
+        <li><b>Converter/transmitter:</b> display/HMI, outputs, diagnostics, DCS communication.</li>
+      </ul>
+    </div>
 
-                <tr>
-                    <td>
-                        <a href="../../alarms/yokogawa/calibration-failure.html">
-                            Calibration Failure
-                        </a>
-                    </td>
-                    <td>Analyzer fails zero or span calibration</td>
-                    <td>
-                        <a href="../../alarms/yokogawa/decision-trees/zr22g-calibration-failure.html">
-                            Start Diagnosis
-                        </a>
-                    </td>
-                </tr>
+    <div class="card oxygen">
+      <h3>Calibration Procedure (Technician Sequence)</h3>
+      <div class="step"><b>1)</b> Warm-up complete: confirm heater OK and reading stable.</div>
+      <div class="step"><b>2)</b> Verify reference air: clean, dry, flowing (no blockage/leaks).</div>
+      <div class="step"><b>3)</b> Check probe/filter condition: no heavy dust buildup or plugging.</div>
+      <div class="step"><b>4)</b> Apply <b>Zero/Low O₂</b> calibration gas (as per plant practice). Wait stabilization.</div>
+      <div class="step"><b>5)</b> Apply <b>Span</b> calibration gas. Wait stabilization. Adjust span value if required.</div>
+      <div class="step"><b>6)</b> Return to process. Verify stable reading and output to DCS.</div>
+      <p class="muted">Tip: If you see unstable O₂ during calibration, fix probe/heater/reference air first.</p>
+    </div>
 
-                <tr>
-                    <td>
-                        <a href="../../alarms/yokogawa/high-drift.html">
-                            High Drift / Unstable Reading
-                        </a>
-                    </td>
-                    <td>Oxygen reading unstable or drifting</td>
-                    <td>
-                        <a href="../../alarms/yokogawa/decision-trees/zr22g-high-drift.html">
-                            Start Diagnosis
-                        </a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+    <div class="card oxygen">
+      <h3>Major Troubleshooting (Top Issues + Fast Checks)</h3>
+      <ul class="list">
+        <li><b>High drift / unstable O₂:</b> probe contamination, reference air leak/blockage, heater instability.</li>
+        <li><b>Slow response:</b> plugged filter/cap, heavy dust, long sample diffusion time due to blockage.</li>
+        <li><b>Heater error / low temp:</b> heater element failure, wiring, controller, power supply.</li>
+        <li><b>Calibration failure:</b> wrong gas, leaks in cal line, insufficient stabilization time, unstable sensor temp.</li>
+        <li><b>DCS mismatch:</b> scaling, range, output wiring, comms mapping.</li>
+      </ul>
 
-    <section>
-        <h3>Related Documentation</h3>
-        <ul>
-            <li>Installation & commissioning guidelines</li>
-            <li>Calibration best practices</li>
-            <li>Preventive maintenance recommendations</li>
-        </ul>
-    </section>
+      <div class="action-row" style="margin-top:10px;">
+        <a class="btn btn-ghost" href="analyzers/yokogawa/alarms/zr22g/index.html">Use Decision Trees →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Discussion -->
+  <div class="panel">
+    <h3 style="margin:0;color:#0b3c5d;">Discussion</h3>
+    <p class="muted" style="margin:8px 0 0;">
+      Share ZR22G troubleshooting tips (heater issues, drift, calibration experience). (Requires GitHub login.)
+    </p>
+
+    <script src="https://utteranc.es/client.js"
+            repo="venkatpalika-oss/analyzershub"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
 
 </main>
 
-<footer>
-    <p>© 2026 AnalyzersHub.com | Built for Analyzer Technicians</p>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
 </footer>
 
 </body>
