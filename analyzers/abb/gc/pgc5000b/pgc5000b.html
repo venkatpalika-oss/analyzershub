@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>ABB PGC5000B Smart Oven | AnalyzersHub</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ABB PGC5000B (Smart Oven) | AnalyzersHub</title>
 
-<base href="/analyzershub/">
-<link rel="stylesheet" href="assets/css/style.css" />
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
 
 <header class="site-header">
@@ -15,66 +16,113 @@
     <a class="brand" href="index.html">AnalyzersHub</a>
     <nav class="site-nav">
       <a href="index.html">Home</a>
-      <a href="analyzers.html">Search</a>
-      <a href="analyzers.html?category=gc">GC Hub</a>
-      <a href="guides/gc/abb-gc-alarm-codes.html">ABB GC Codes</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/venkatpalika-oss/analyzershub/discussions" target="_blank" rel="noopener">Discussion</a>
     </nav>
   </div>
 </header>
 
 <nav class="crumbs" aria-label="Breadcrumb">
   <a href="index.html">Home</a><span>›</span>
+  <a href="analyzers.html">Analyzer Search</a><span>›</span>
   <a href="analyzers.html?vendor=abb">ABB</a><span>›</span>
   <span class="current">PGC5000B</span>
 </nav>
 
 <main class="container">
-  <h2 style="margin-top:18px;">ABB PGC5000B — Smart Oven Series</h2>
-  <p class="muted">Process GC troubleshooting: sampling, carrier stability, oven control, valves, and communications.</p>
 
-  <div class="action-row">
-    <a class="btn btn-primary" href="analyzers/abb/gc/pgc5000b/alarms/index.html">Alarm Decision Trees →</a>
-    <a class="btn btn-ghost" href="guides/gc/abb-gc-alarm-codes.html">ABB GC Alarm Codes →</a>
-    <a class="btn btn-ghost" href="guides/gc/chromatogram-guide.html">Chromatogram Guide →</a>
-    <a class="btn btn-ghost" href="analyzers.html">← Back to Search</a>
-  </div>
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">ABB PGC5000B — Smart Oven Process GC</h2>
+    <p class="muted" style="margin:8px 0 0;">
+      Process GC with smart oven design. Focus: sampling & conditioning, carrier gas stability,
+      oven stability, valve switching, detector stability, and DCS communication.
+    </p>
 
-  <div class="warn"><b>Safety:</b> follow site procedures for hazardous gases. Isolate, depressurize, and leak test after maintenance.</div>
+    <div class="action-row">
+      <a class="btn btn-ghost" href="analyzers.html">← Back to Search</a>
+      <a class="btn btn-primary" href="analyzers/abb/gc/pgc5000b/alarms/index.html">Alarm Decision Trees →</a>
+      <a class="btn btn-ghost" href="guides/gc/abb-gc-alarm-codes.html">ABB GC Alarm Codes →</a>
+    </div>
 
-  <div class="card gc">
-    <h3>Recommended Troubleshooting Flow</h3>
-    <div class="step"><b>1)</b> Check alarms + last good run</div>
-    <div class="step"><b>2)</b> Verify carrier pressure stability (no hunting)</div>
-    <div class="step"><b>3)</b> Verify sample conditioning (dry gas, clean filters)</div>
-    <div class="step"><b>4)</b> Confirm oven temperature stable at setpoint</div>
-    <div class="step"><b>5)</b> Verify valve switching; instrument air clean/dry</div>
-  </div>
-
-  <div class="card gc" style="margin-top:16px;">
-    <h3>Quick Problem Selector</h3>
-    <div class="grid">
-      <div class="card gc">
-        <h4>Carrier / Flow issues</h4>
-        <p>No peaks, unstable baseline, retention shift.</p>
-        <a class="btn btn-ghost" href="analyzers/abb/gc/pgc5000b/alarms/carrier-pressure.html">Open Decision Tree →</a>
-      </div>
-      <div class="card gc">
-        <h4>Oven not ready / Temp drift</h4>
-        <p>Setpoint deviation, repeatability problems.</p>
-        <a class="btn btn-ghost" href="analyzers/abb/gc/pgc5000b/alarms/oven-temperature.html">Open Decision Tree →</a>
-      </div>
-      <div class="card gc">
-        <h4>Injection / Valve timing</h4>
-        <p>Switching faults, wrong peaks, poor repeatability.</p>
-        <a class="btn btn-ghost" href="analyzers/abb/gc/pgc5000b/alarms/valve-sequence.html">Open Decision Tree →</a>
-      </div>
-      <div class="card gc">
-        <h4>DCS / Communication</h4>
-        <p>Stale values, bad quality, mapping issues.</p>
-        <a class="btn btn-ghost" href="analyzers/abb/gc/pgc5000b/alarms/communications.html">Open Decision Tree →</a>
-      </div>
+    <div class="warn">
+      <b>Technician rule:</b> For unstable results, check <b>sample conditioning + carrier stability</b> first.
+      GC hardware is very sensitive to pressure hunting and moisture contamination.
     </div>
   </div>
+
+  <div class="grid">
+
+    <div class="card gc">
+      <h3>Working Principle</h3>
+      <p>
+        Like all GCs, the PGC separates gas components in a column and measures them with a detector.
+        The “smart oven” maintains stable temperature conditions for repeatable retention times and peak shapes.
+      </p>
+      <ul class="list">
+        <li><b>Inject sample</b> through a loop/valve sequence.</li>
+        <li><b>Separate</b> components in column(s) at controlled oven temperature.</li>
+        <li><b>Detect</b> peaks and convert peak area to concentration using calibration factors.</li>
+      </ul>
+    </div>
+
+    <div class="card gc">
+      <h3>Main Components</h3>
+      <ul class="list">
+        <li><b>Sample conditioning:</b> filters, coalescers, regulators, heat tracing (if used), drains.</li>
+        <li><b>Carrier gas system:</b> carrier bottle/header, regulator(s), traps.</li>
+        <li><b>Valves & sample loop:</b> injection and switching valves, timing control.</li>
+        <li><b>Smart oven & temp control:</b> heater, sensors, controller.</li>
+        <li><b>Column module:</b> column(s), fittings, restrictions.</li>
+        <li><b>Detector module:</b> detector + electronics.</li>
+        <li><b>Controller & comms:</b> HMI/controller, I/O, network communications.</li>
+      </ul>
+    </div>
+
+    <div class="card gc">
+      <h3>Calibration Procedure</h3>
+      <div class="step"><b>1)</b> Ensure stable operation (no sample/carrier alarms).</div>
+      <div class="step"><b>2)</b> Verify carrier and sample pressures are stable (no hunting).</div>
+      <div class="step"><b>3)</b> Run standard gas for calibration; allow 2–3 stable runs.</div>
+      <div class="step"><b>4)</b> Update response factors per method; save and document changes.</div>
+      <div class="step"><b>5)</b> Run verification standard; confirm within acceptance criteria.</div>
+      <div class="step"><b>6)</b> Return to process, check trending and DCS mapping/scaling.</div>
+    </div>
+
+    <div class="card gc">
+      <h3>Major Troubleshooting</h3>
+      <ul class="list">
+        <li><b>Repeatability poor:</b> valve timing, pressure hunting, wet sample, leaks.</li>
+        <li><b>Retention time shift:</b> oven temperature drift, carrier flow changes.</li>
+        <li><b>Low response / missing peaks:</b> injection valve/loop issue, restriction, detector fault.</li>
+        <li><b>No update to DCS:</b> comms/mapping/scaling/quality bit issues.</li>
+      </ul>
+
+      <div class="action-row" style="margin-top:10px;">
+        <a class="btn btn-ghost" href="analyzers/abb/gc/pgc5000b/alarms/index.html">Use Decision Trees →</a>
+        <a class="btn btn-ghost" href="guides/gc/chromatogram-guide.html">Chromatogram Guide →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Discussion -->
+  <div class="panel">
+    <h3 style="margin:0;color:#0b3c5d;">Discussion</h3>
+    <p class="muted" style="margin:8px 0 0;">
+      Share PGC5000B issues, calibration experiences, valve/peak problems. (Requires GitHub login.)
+    </p>
+
+    <script src="https://utteranc.es/client.js"
+            repo="venkatpalika-oss/analyzershub"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+
 </main>
 
 <footer class="site-footer">
@@ -83,7 +131,8 @@
     <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="analyzers.html">Search</a>
-      <a href="analyzers/abb/gc/pgc5000b/alarms/index.html">PGC5000B Alarms</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
     </div>
   </div>
 </footer>
