@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OX400 Probe Fouling | Yokogawa Decision Tree</title>
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/venkatpalika-oss/analyzershub/discussions" target="_blank" rel="noopener">Discussion</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="alarms/yokogawa/decision-trees/index.html">Yokogawa Decision Trees</a><span>›</span>
+  <a href="analyzers/yokogawa/ox400.html">OX400</a><span>›</span>
+  <span class="current">Probe Fouling</span>
+</nav>
+
+<main class="container">
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">OX400 — Probe Fouling / Plugging (Decision Tree)</h2>
+    <p class="muted" style="margin:8px 0 0;">Use when response is slow, unstable, or readings drift due to dust/ash buildup.</p>
+
+    <div class="warn">
+      <b>Symptoms:</b> slow response, unstable readings, calibration difficulty, frequent drift.
+    </div>
+
+    <div class="action-row">
+      <a class="btn btn-ghost" href="alarms/yokogawa/decision-trees/index.html">← Back to Yokogawa Trees</a>
+      <a class="btn btn-ghost" href="analyzers/yokogawa/ox400.html">OX400 Main Page →</a>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card oxygen">
+      <h3>Decision Tree</h3>
+
+      <div class="step"><b>1) Confirm fouling present</b><br>
+        Inspect probe tip/filter cap for ash/dust buildup, sintered filter blockage, sticky deposits.
+      </div>
+
+      <div class="step"><b>2) Purge system working?</b><br>
+        If purge is equipped: confirm purge air pressure/flow, purge valve operates on schedule. Fix purge first.
+      </div>
+
+      <div class="step"><b>3) Clean/replace protective cap/filter</b><br>
+        Clean as per maintenance practice. If damaged or permanently blocked → replace.
+      </div>
+
+      <div class="step"><b>4) Check installation location</b><br>
+        Severe dust zones may need relocation, longer/shorter insertion depth, or improved shielding.
+      </div>
+
+      <div class="step"><b>5) After cleaning</b><br>
+        Allow stabilization time, then run verification/calibration if needed.
+      </div>
+
+      <div class="step"><b>6) Fouling repeats quickly</b><br>
+        Increase purge frequency (if allowed), improve filtration/conditioning, or review process dust issues.
+      </div>
+    </div>
+
+    <div class="card oxygen">
+      <h3>Good Practices</h3>
+      <ul class="list">
+        <li>Schedule routine cleaning in dusty service</li>
+        <li>Ensure purge air is dry/clean</li>
+        <li>Keep cal manifold leak-free (prevents false drift)</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="alarms/yokogawa/decision-trees/index.html">Yokogawa Trees</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
