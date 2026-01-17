@@ -256,3 +256,17 @@ img{max-width:100%;height:auto;display:block}
 /* Utility */
 .row{display:flex;flex-wrap:wrap;gap:10px}
 .right{margin-left:auto}
+/* Field Tip (distinct from warning) */
+.field-tip{
+  background:#f0f9ff;                 /* soft blue background */
+  border-left:4px solid #1f78b4;       /* brand blue */
+  color:#0b3c5d;                       /* darker readable text */
+  padding:12px;
+  border-radius:10px;
+  margin:14px 0;
+  font-weight:800;
+}
+
+.field-tip b{
+  color:#1f78b4;                       /* highlight label */
+}
