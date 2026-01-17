@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn | CEMS Module 6: DAHS Fundamentals | AnalyzersHub</title>
+
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Knowledge Base</a>
+      <a href="troubleshooting/index.html">Troubleshooting</a>
+      <a href="cems/index.html">CEMS</a>
+      <a href="learn/index.html" class="active">Learn</a>
+      <a href="community/index.html">Community</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="resources/index.html">Resources</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero-search">
+  <div class="hero-inner">
+    <h2>CEMS Fundamentals — Module 6: DAHS Fundamentals</h2>
+    <p>
+      DAHS is where good analyzer data becomes compliant reports.
+      Learn signals, scaling, flags, time sync, and common failure modes.
+    </p>
+    <div class="action-row">
+      <a class="btn btn-primary" href="learn/index.html">← Back to Learn</a>
+      <a class="btn btn-ghost" href="cems/index.html">CEMS Hub →</a>
+      <a class="btn btn-ghost" href="troubleshooting/index.html">Troubleshooting Hub →</a>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+
+  <div class="panel">
+    <h3>What DAHS does (simple)</h3>
+    <ul class="list">
+      <li>Collects analyzer values (analog, digital, Modbus, OPC, etc.)</li>
+      <li>Applies scaling, conversion, and reporting basis rules</li>
+      <li>Applies validity flags (calibration, faults, warm-up)</li>
+      <li>Stores data and generates compliance reports</li>
+    </ul>
+    <div class="step">
+      <b>Field tip:</b> A perfect analyzer can still produce bad reports if DAHS mapping/scaling is wrong.
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Common DAHS issues</h3>
+    <div class="grid">
+      <div class="card">
+        <h4>Wrong Scaling</h4>
+        <p>ppm looks 10× high/low, wrong units, wrong range mapping.</p>
+      </div>
+      <div class="card">
+        <h4>Bad Time Sync</h4>
+        <p>Data gaps, misaligned events, calibration periods recorded incorrectly.</p>
+      </div>
+      <div class="card">
+        <h4>Flags Not Applied</h4>
+        <p>Invalid data reported as valid during calibration or fault states.</p>
+      </div>
+      <div class="card">
+        <h4>Communication Instability</h4>
+        <p>Network drops, IP changes, device restarts, bad cables/switch ports.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>DAHS verification checklist (technician)</h3>
+    <ul class="list">
+      <li>Confirm tag mapping (each analyzer channel to correct DAHS tag)</li>
+      <li>Confirm scaling (mA/ppm/unit conversion) matches analyzer configuration</li>
+      <li>Confirm timestamps (NTP/time sync) and timezone settings</li>
+      <li>Confirm validity flags during calibration and fault conditions</li>
+      <li>Confirm data storage continuity (no gaps during normal operation)</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <h3>When you see “Data Gaps”</h3>
+    <ol class="list">
+      <li>Check analyzer comm status and I/O health</li>
+      <li>Check switch port logs (if available) and physical cable</li>
+      <li>Check DAHS service restart logs / PC uptime</li>
+      <li>Check for IP conflicts / DHCP changes</li>
+      <li>Verify time sync to NTP server</li>
+    </ol>
+  </div>
+
+  <div class="warn">
+    If “values look correct in analyzer but wrong in DAHS” — suspect scaling, basis conversion,
+    or tag mapping first. Don’t recalibrate blindly.
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <b>AnalyzersHub</b><br>
+    <span class="muted">Built for Analyzer Technicians</span>
+  </div>
+</footer>
+
+</body>
+</html>
