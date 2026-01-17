@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Flash Point Analyzer P-500 | AnalyzersHub</title>
 
 <base href="/analyzershub/">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
@@ -17,6 +17,8 @@
     <nav class="site-nav">
       <a href="index.html">Home</a>
       <a href="analyzers.html">Analyzer Search</a>
+      <a href="analyzers/flash-point/index.html">Flash Point Hub</a>
+      <a href="disclaimer.html">Disclaimer</a>
     </nav>
   </div>
 </header>
@@ -24,22 +26,28 @@
 <nav class="crumbs">
   <a href="index.html">Home</a><span>›</span>
   <a href="analyzers.html">Analyzers</a><span>›</span>
-  <span class="current">Flash Point Analyzer P-500</span>
+  <a href="analyzers/flash-point/index.html">Flash Point</a><span>›</span>
+  <span class="current">P-500</span>
 </nav>
 
 <section class="hero">
   <div class="hero-inner">
-    <h2>Flash Point Analyzer – Model P-500</h2>
+    <h2>Flash Point Analyzer – Model P-500 (P-500-1.00)</h2>
     <p>
-      Automatic flash point measurement system used for determining the
-      lowest temperature at which vapors of a liquid ignite under controlled conditions.
+      Automatic flash point measurement system used to determine the lowest temperature at which vapors of a liquid
+      ignite under controlled conditions. Built for consistent testing and repeatability.
     </p>
 
     <div class="action-row">
+      <a class="btn btn-ghost" href="analyzers/flash-point/index.html">← Flash Point Hub</a>
+      <a class="btn btn-ghost" href="analyzers.html">← Analyzer Search</a>
       <a class="btn btn-ghost" href="alarms/flash-point/p500/alarm-codes.html">Alarm Codes →</a>
-<a class="btn btn-primary" href="alarms/flash-point/p500/decision-trees/index.html">Decision Trees →</a>
+      <a class="btn btn-primary" href="alarms/flash-point/p500/decision-trees/index.html">Decision Trees →</a>
+    </div>
 
-      <a class="btn btn-ghost" href="analyzers.html">← Back to Analyzer Search</a>
+    <div class="warn">
+      <b>Field tip:</b> Most repeatability issues come from <b>cup cleanliness</b>, <b>sample handling</b>, and
+      <b>method settings</b> — not hardware failure.
     </div>
   </div>
 </section>
@@ -50,69 +58,171 @@
   <div class="panel">
     <h3>Working Principle</h3>
     <p>
-      The P-500 Flash Point Analyzer determines the flash point of a liquid
-      by gradually heating a test sample under controlled conditions.
-      At predefined temperature intervals, an ignition source is introduced
-      above the sample surface.
+      The P-500 determines flash point by heating a sample in a controlled cup at a defined ramp rate.
+      At specified temperature intervals, an ignition source is applied above the sample surface.
+      When vapors ignite (a transient flash), the instrument detects the event and records the temperature as the flash point.
     </p>
-    <p>
-      The flash point is identified as the lowest temperature at which
-      a transient flame or ignition is detected.
-      The analyzer operates according to standardized test methods
-      such as closed cup or open cup principles (depending on configuration).
+    <ul class="list">
+      <li><b>Heating control</b> maintains a stable, repeatable ramp rate.</li>
+      <li><b>Ignition system</b> introduces a consistent ignition energy at repeatable intervals.</li>
+      <li><b>Detection system</b> confirms a flash event (optical/flame detection depending on design).</li>
+      <li><b>Result quality</b> depends heavily on method setup, sample volume, and cleanliness.</li>
+    </ul>
+  </div>
+
+  <!-- ASTM Method References -->
+  <div class="panel">
+    <h3>ASTM Method References (Common Flash Point Standards)</h3>
+    <p class="muted">
+      The exact supported method depends on your analyzer configuration and your lab/site standard. These are the most common ASTM flash point methods technicians see in the field:
     </p>
+
+    <ul class="list">
+      <li><b>ASTM D93</b> — Pensky-Martens Closed Cup (PMCC) (widely used for fuels/oils)</li>
+      <li><b>ASTM D56</b> — Tag Closed Cup (TCC) (often for lighter products/solvents)</li>
+      <li><b>ASTM D92</b> — Cleveland Open Cup (COC) (higher flash point materials, open cup)</li>
+      <li><b>ASTM D3828</b> — Small Scale Closed Cup (SSCC)</li>
+      <li><b>ASTM D7094</b> — Modified PMCC (automated / modern instrument variations)</li>
+    </ul>
+
+    <div class="step">
+      <b>Important:</b> Always match the method to the product and site SOP. Do not mix method types (open vs closed cup) when trending results.
+    </div>
   </div>
 
   <!-- Main Components -->
   <div class="panel">
-    <h3>Main Components</h3>
+    <h3>Main Components (Technician View)</h3>
     <ul class="list">
-      <li><b>Sample Cup</b> – Holds the test liquid during analysis</li>
-      <li><b>Heating System</b> – Controlled electrical heater for precise temperature ramping</li>
-      <li><b>Temperature Sensor</b> – Measures sample temperature accurately</li>
-      <li><b>Ignition Source</b> – Electric or gas-based ignition mechanism</li>
-      <li><b>Flame / Ignition Detector</b> – Detects flash event</li>
-      <li><b>Controller & Display</b> – Manages test sequence and displays results</li>
-      <li><b>Safety Enclosure</b> – Prevents operator exposure during ignition</li>
+      <li><b>Sample cup + lid/seal:</b> cleanliness and correct seating affect repeatability</li>
+      <li><b>Heating block/heater:</b> provides controlled ramp</li>
+      <li><b>Temperature sensor (RTD/TC):</b> primary measurement reference</li>
+      <li><b>Ignition source:</b> electric spark or gas ignition mechanism</li>
+      <li><b>Flash detection:</b> optical/flame detection module + window/lens</li>
+      <li><b>Interlocks:</b> door/lid switches, safety enclosure</li>
+      <li><b>Controller/HMI:</b> method selection, ramp settings, test execution, alarms</li>
     </ul>
+  </div>
+
+  <!-- Calibration + Reference Materials Table -->
+  <div class="panel">
+    <h3>Calibration & Verification Using Reference Materials</h3>
+    <p>
+      Flash point instruments are typically <b>verified</b> using certified reference materials (CRMs) with known flash points.
+      Use reference materials that match your normal operating range (low/medium/high).
+    </p>
+
+    <div class="step">
+      <b>Good practice:</b> Verify the <b>temperature measurement</b> and <b>method performance</b> (ignition/detection + ramp control) using CRMs.
+    </div>
+
+    <div style="overflow:auto;margin-top:10px;">
+      <table style="width:100%;border-collapse:collapse;min-width:720px;">
+        <thead>
+          <tr>
+            <th style="text-align:left;border-bottom:2px solid #d9e2ec;padding:10px;">Reference Material (Example)</th>
+            <th style="text-align:left;border-bottom:2px solid #d9e2ec;padding:10px;">Nominal Flash Point</th>
+            <th style="text-align:left;border-bottom:2px solid #d9e2ec;padding:10px;">Used For</th>
+            <th style="text-align:left;border-bottom:2px solid #d9e2ec;padding:10px;">Field Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="border-bottom:1px solid #eef2f6;padding:10px;"><b>CRM – Low range</b> (site-approved certified standard)</td>
+            <td style="border-bottom:1px solid #eef2f6;padding:10px;">e.g., ~10–30°C</td>
+            <td style="border-bottom:1px solid #eef2f6;padding:10px;">Verifies light products / solvents region</td>
+            <td style="border-bottom:1px solid #eef2f6;padding:10px;">Highly sensitive to evaporation & cup sealing</td>
+          </tr>
+          <tr>
+            <td style="border-bottom:1px solid #eef2f6;padding:10px;"><b>CRM – Mid range</b> (site-approved certified standard)</td>
+            <td style="border-bottom:1px solid #eef2f6;padding:10px;">e.g., ~40–80°C</td>
+            <td style="border-bottom:1px solid #eef2f6;padding:10px;">Verifies common fuels and blended products</td>
+            <td style="border-bottom:1px solid #eef2f6;padding:10px;">Best for weekly/monthly routine verification</td>
+          </tr>
+          <tr>
+            <td style="border-bottom:1px solid #eef2f6;padding:10px;"><b>CRM – High range</b> (site-approved certified standard)</td>
+            <td style="border-bottom:1px solid #eef2f6;padding:10px;">e.g., ~90–150°C</td>
+            <td style="border-bottom:1px solid #eef2f6;padding:10px;">Verifies heavier oils / higher flash points</td>
+            <td style="border-bottom:1px solid #eef2f6;padding:10px;">Watch ramp stability and thermal lag</td>
+          </tr>
+          <tr>
+            <td style="border-bottom:1px solid #eef2f6;padding:10px;"><b>Temperature sensor check</b> (traceable thermometer)</td>
+            <td style="border-bottom:1px solid #eef2f6;padding:10px;">N/A</td>
+            <td style="border-bottom:1px solid #eef2f6;padding:10px;">Confirms RTD/TC accuracy & offsets</td>
+            <td style="border-bottom:1px solid #eef2f6;padding:10px;">Do after sensor replacement or drift suspicion</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="muted" style="margin-top:10px;">
+      Replace the “example” ranges with the specific CRMs your lab/site uses. Always record lot numbers, expiry, and certificate traceability.
+    </p>
   </div>
 
   <!-- Calibration Procedure -->
   <div class="panel">
-    <h3>Calibration Procedure</h3>
+    <h3>Verification / Calibration Procedure (Technician Sequence)</h3>
+
+    <div class="step"><b>1)</b> Confirm method settings match site SOP (cup type, ignition interval, ramp rate, sample volume).</div>
+    <div class="step"><b>2)</b> Inspect & clean sample cup + lid seal; ensure fully dry and seated correctly.</div>
+    <div class="step"><b>3)</b> Confirm temperature sensor reading is reasonable at ambient (quick sanity check).</div>
+    <div class="step"><b>4)</b> Run a mid-range CRM first (best routine indicator). Record result and deviation vs certificate.</div>
+    <div class="step"><b>5)</b> If deviation is high: re-clean cup, repeat with fresh portion, confirm ramp stability, and inspect ignition/detector cleanliness.</div>
+    <div class="step"><b>6)</b> If your system supports adjustment: apply offset only after confirming stability and repeat verification.</div>
+    <div class="step"><b>7)</b> Verify at low/high range CRMs if your products cover wide range.</div>
+  </div>
+
+  <!-- Trend / Repeatability Guide -->
+  <div class="panel">
+    <h3>P-500 Trend & Repeatability Guide (Field Practical)</h3>
 
     <div class="step">
-      <b>Step 1:</b> Ensure analyzer is clean, powered on, and thermally stable.
+      <b>Daily/Shift check (fast):</b> Run one site-approved CRM (mid-range). Compare to historical average and certificate tolerance.
     </div>
 
     <div class="step">
-      <b>Step 2:</b> Verify temperature sensor accuracy using certified reference thermometers.
+      <b>Repeatability check:</b> Run the same sample/CRM <b>3 times</b> under identical method settings:
+      <ul class="list">
+        <li>If results spread is small and stable → instrument + method OK.</li>
+        <li>If spread is large → clean cup, verify volume, check drafts/venting, inspect ignition/detector.</li>
+      </ul>
     </div>
 
     <div class="step">
-      <b>Step 3:</b> Run calibration using certified flash point reference materials
-      with known flash points.
+      <b>Control chart idea (simple):</b> Keep a log of the CRM result each week. If it drifts slowly over time, suspect:
+      <ul class="list">
+        <li>Temperature sensor drift</li>
+        <li>Heating control instability (SSR/relay aging)</li>
+        <li>Ignition/detector contamination (vapors leaving deposits)</li>
+        <li>Cup seal wear causing vapor loss (low flash point bias)</li>
+      </ul>
     </div>
 
     <div class="step">
-      <b>Step 4:</b> Compare measured values with reference values and apply offset
-      corrections if required.
+      <b>Common causes of non-repeatable results:</b>
+      <ul class="list">
+        <li>Inconsistent sample volume or evaporation before test</li>
+        <li>Dirty cup / residue / moisture</li>
+        <li>Wrong method parameters (ramp/interval)</li>
+        <li>Drafts / ventilation changes affecting heating</li>
+        <li>Ignition electrode dirty or detector window contaminated</li>
+      </ul>
     </div>
 
-    <div class="step">
-      <b>Step 5:</b> Document calibration results and return analyzer to normal operation.
+    <div class="warn">
+      <b>Tip:</b> If CRM is stable but product samples are unstable → problem is likely sample handling/process variability, not the analyzer.
     </div>
   </div>
 
   <!-- Major Troubleshooting -->
   <div class="panel">
-    <h3>Major Troubleshooting Areas</h3>
+    <h3>Major Troubleshooting (Top Issues)</h3>
     <ul class="list">
-      <li><b>No Ignition Detected</b> – Check ignition source, wiring, and spark gap</li>
-      <li><b>Erratic Flash Point Results</b> – Verify sample cleanliness and temperature stability</li>
-      <li><b>Overheating Alarm</b> – Inspect heater control loop and temperature sensor</li>
-      <li><b>Flame Detector Fault</b> – Clean optical sensor and verify alignment</li>
-      <li><b>Test Aborted</b> – Check safety interlocks and enclosure switches</li>
+      <li><b>No ignition detected:</b> ignition electrode, HV supply, detector contamination, interlocks</li>
+      <li><b>Overheating / runaway:</b> SSR/relay stuck, sensor wiring, method ramp too aggressive</li>
+      <li><b>Erratic results:</b> cup contamination, sample volume differences, method mismatch, drafts</li>
+      <li><b>Test aborted:</b> door/lid switches, E-stop, safety interlock state</li>
     </ul>
   </div>
 
@@ -120,8 +230,7 @@
   <div class="panel">
     <h3>Discussion</h3>
     <p class="muted">
-      Share field experience, calibration tips, and troubleshooting notes for the P-500.
-      (Requires GitHub login.)
+      Share field experience, best practices, and repeatability tips for the P-500. (Requires GitHub login.)
     </p>
 
     <script src="https://utteranc.es/client.js"
@@ -148,6 +257,7 @@
     <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="analyzers.html">Search</a>
+      <a href="analyzers/flash-point/index.html">Flash Point Hub</a>
       <a href="disclaimer.html">Disclaimer</a>
     </div>
   </div>
