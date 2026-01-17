@@ -10,6 +10,47 @@
 
 <link rel="stylesheet" href="assets/css/style.css">
 
+<!-- SEO Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"Organization",
+      "@id":"https://venkatpalika-oss.github.io/analyzershub/#org",
+      "name":"AnalyzersHub",
+      "url":"https://venkatpalika-oss.github.io/analyzershub/"
+    },
+    {
+      "@type":"WebSite",
+      "@id":"https://venkatpalika-oss.github.io/analyzershub/#website",
+      "url":"https://venkatpalika-oss.github.io/analyzershub/",
+      "name":"AnalyzersHub",
+      "publisher":{"@id":"https://venkatpalika-oss.github.io/analyzershub/#org"},
+      "potentialAction":{
+        "@type":"SearchAction",
+        "target":"https://venkatpalika-oss.github.io/analyzershub/analyzers.html?q={search_term_string}",
+        "query-input":"required name=search_term_string"
+      }
+    },
+    {
+      "@type":"WebPage",
+      "@id":"https://venkatpalika-oss.github.io/analyzershub/index.html#page",
+      "name":"Industrial Analyzer Knowledge Hub",
+      "url":"https://venkatpalika-oss.github.io/analyzershub/index.html",
+      "isPartOf":{"@id":"https://venkatpalika-oss.github.io/analyzershub/#website"},
+      "about":[
+        {"@type":"Thing","name":"Industrial analyzers"},
+        {"@type":"Thing","name":"Troubleshooting"},
+        {"@type":"Thing","name":"Alarm codes"},
+        {"@type":"Thing","name":"Decision trees"},
+        {"@type":"Thing","name":"Calibration"}
+      ]
+    }
+  ]
+}
+</script>
+
 <!-- HOME PAGE HERO BANNER -->
 <style>
 .hero{
