@@ -1,1 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn | CEMS Fundamentals | AnalyzersHub</title>
+
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Knowledge Base</a>
+      <a href="troubleshooting/index.html">Troubleshooting</a>
+      <a href="cems/index.html">CEMS</a>
+      <a href="learn/index.html" class="active">Learn</a>
+      <a href="community/index.html">Community</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="resources/index.html">Resources</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero-search">
+  <div class="hero-inner">
+    <h2>Learn: CEMS Fundamentals</h2>
+    <p>
+      Training-style basics for technicians and engineers — understand how CEMS
+      works, why it fails, and how to keep data valid and reliable.
+    </p>
+
+    <div class="action-row">
+      <a class="btn btn-primary" href="cems/index.html">Go to CEMS Hub →</a>
+      <a class="btn btn-ghost" href="analyzers.html">Analyzer Knowledge Base →</a>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+
+  <div class="panel">
+    <h3>What you’ll learn here</h3>
+    <ul class="list">
+      <li>What a CEMS system is (and what each block does)</li>
+      <li>Wet vs dry basis, moisture and O₂ correction</li>
+      <li>Calibration, drift, and data validity concepts</li>
+      <li>Common field failure modes and how to prevent them</li>
+      <li>How to think like a CEMS troubleshooter (system view)</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <h3>CEMS Block Diagram (Simple Explanation)</h3>
+    <div class="step">
+      <b>Stack/Process</b> → Probe → Heated Line → Sample Conditioning
+      (filter/chiller/dryer) → Analyzer (SO₂/NOx/CO/CO₂/O₂) → DAHS/PLC/DCS →
+      Reporting / Historian
+    </div>
+    <p class="muted">
+      Many “analyzer problems” are actually caused by the probe, sample line,
+      conditioning system, utilities, or DAHS signal handling.
+    </p>
+  </div>
+
+  <div class="panel">
+    <h3>Module 1: Key CEMS Terms</h3>
+    <div class="grid">
+      <div class="card">
+        <h4>Span & Zero</h4>
+        <p>
+          Zero verifies baseline. Span verifies sensitivity.
+          Both must stabilize and be repeatable.
+        </p>
+      </div>
+      <div class="card">
+        <h4>Drift</h4>
+        <p>
+          Change in reading during a defined period.
+          Drift usually points to contamination, leaks, or aging.
+        </p>
+      </div>
+      <div class="card">
+        <h4>Validity / Flags</h4>
+        <p>
+          Data becomes invalid during calibrations, faults,
+          warm-up, or unstable conditions.
+        </p>
+      </div>
+      <div class="card">
+        <h4>Response Time</h4>
+        <p>
+          How fast the analyzer reaches a stable value.
+          Often slowed by sample restrictions or condensation.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Module 2: Wet vs Dry Basis (Field Meaning)</h3>
+    <p>
+      Emission values may be reported on a <b>wet basis</b> (includes water vapor)
+      or a <b>dry basis</b> (water removed). Conditioning method and reporting rules
+      decide which basis is used.
+    </p>
+    <div class="step">
+      <b>Field tip:</b> If moisture enters the analyzer or sample line,
+      readings can drift, become noisy, or calibration can fail.
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Module 3: Sample System Fundamentals</h3>
+    <ul class="list">
+      <li><b>Probe plugging</b> → low flow, slow response, unstable readings</li>
+      <li><b>Cold spots</b> in heated line → condensation → drift/noise</li>
+      <li><b>Filters</b> → restriction → slow response / pump strain</li>
+      <li><b>Leaks</b> → air ingress → false oxygen / dilution effects</li>
+      <li><b>Chiller/dryer issues</b> → water carryover → analyzer damage</li>
+    </ul>
+    <div class="action-row">
+      <a class="btn btn-primary" href="troubleshooting/index.html">Troubleshooting Hub →</a>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Module 4: Calibration Quality (What “Good” Looks Like)</h3>
+    <div class="grid">
+      <div class="card">
+        <h4>Stable</h4>
+        <p>Reading settles and stays steady during zero/span application.</p>
+      </div>
+      <div class="card">
+        <h4>Repeatable</h4>
+        <p>Repeated span checks give similar results within expected tolerance.</p>
+      </div>
+      <div class="card">
+        <h4>Fast Enough</h4>
+        <p>Response time is consistent; slow response suggests restrictions.</p>
+      </div>
+      <div class="card">
+        <h4>Traceable</h4>
+        <p>Calibration gases are correct, valid, and properly regulated.</p>
+      </div>
+    </div>
+    <div class="warn">
+      If calibration fails repeatedly, suspect <b>sample conditioning</b> and
+      <b>leaks</b> first — not the analyzer electronics.
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Module 5: The Technician’s Troubleshooting Method</h3>
+    <ol class="list">
+      <li><b>Confirm the symptom</b> (trend, alarms, process context)</li>
+      <li><b>Verify utilities</b> (power, instrument air, temps, flow)</li>
+      <li><b>Check sample system</b> (probe → line → conditioning → flow)</li>
+      <li><b>Check calibration path</b> (gas, regulator, manifold, valves)</li>
+      <li><b>Only then</b> suspect analyzer hardware/software</li>
+      <li><b>Verify recovery</b> with stable trend + repeat checks</li>
+    </ol>
+  </div>
+
+  <div class="panel">
+    <h3>Next Lessons (Coming Soon)</h3>
+    <div class="chip-row">
+      <span class="chip">ISO 14181: QAL1 / QAL2 / QAL3</span>
+      <span class="chip">Drift & Linearity Concepts</span>
+      <span class="chip">DAHS Basics</span>
+      <span class="chip">CEMS Alarm Strategy</span>
+      <span class="chip">Common Root Causes</span>
+    </div>
+    <p class="muted" style="margin-top:10px;">
+      We can build these as individual pages under <b>/learn/cems/</b>.
+    </p>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div>
+      <b>AnalyzersHub</b><br>
+      <span class="muted">Built for Analyzer Technicians</span>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="cems/index.html">CEMS</a>
+      <a href="troubleshooting/index.html">Troubleshooting</a>
+      <a href="resources/index.html">Resources</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
 
