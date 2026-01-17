@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AMETEK 933 Low/No Flow | Decision Tree</title>
+
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="alarms/ametek/933/decision-trees/index.html">AMETEK 933 Trees</a><span>›</span>
+  <span class="current">Low / No Flow</span>
+</nav>
+
+<main class="container">
+
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">Decision Tree: Low / No Flow</h2>
+    <p class="muted" style="margin-top:8px;">Symptom: low flow alarm, no sample flow, slow response, unstable reading.</p>
+    <div class="action-row">
+      <a class="btn btn-ghost" href="alarms/ametek/933/decision-trees/index.html">← Back to Trees</a>
+      <a class="btn btn-ghost" href="alarms/ametek/933/alarm-codes.html">← Alarm Codes</a>
+      <a class="btn btn-ghost" href="analyzers/ametek/933/933.html">AMETEK 933 Main →</a>
+    </div>
+    <div class="warn"><b>Safety:</b> Follow permit rules before opening sample lines. Depressurize safely.</div>
+  </div>
+
+  <div class="panel">
+    <h3>Isolation steps</h3>
+
+    <div class="step"><b>1)</b> Confirm sample source pressure is available. Check upstream isolation valves are open.</div>
+
+    <div class="step"><b>2)</b> Check filter condition: if DP high or bowl dirty, replace/clean filter and re-test flow.</div>
+
+    <div class="step"><b>3)</b> Check regulator and needle valve settings: ensure not fully closed and not hunting.</div>
+
+    <div class="step"><b>4)</b> If pump fitted:
+      <ul class="list">
+        <li>Check pump power and status</li>
+        <li>Check pump diaphragm/vanes (weak pump = low flow)</li>
+        <li>Check pump inlet blockage / moisture trap full</li>
+      </ul>
+    </div>
+
+    <div class="step"><b>5)</b> Check for line blockage / condensation:
+      <ul class="list">
+        <li>Frozen/condensed lines restrict flow</li>
+        <li>Heat tracing failure causes condensation</li>
+        <li>Drain moisture traps and inspect tubing</li>
+      </ul>
+    </div>
+
+    <div class="step"><b>6)</b> After restoring flow:
+      <ul class="list">
+        <li>Allow reading to stabilize</li>
+        <li>Verify with calibration gas</li>
+        <li>Confirm alarms clear and trend stable</li>
+      </ul>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
