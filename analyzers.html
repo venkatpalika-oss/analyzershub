@@ -5,9 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Analyzer Search | AnalyzersHub</title>
 
-<!-- GitHub Pages base -->
 <base href="/analyzershub/">
-
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -19,13 +17,12 @@
     <nav class="site-nav">
       <a href="index.html">Home</a>
       <a href="analyzers.html" class="active">Analyzer Search</a>
-      <a href="blog/index.html">Blog</a>
-      <a href="contact.html">Contact</a>
+      <a href="analyzers.html?category=gc">GC Hub</a>
     </nav>
   </div>
 </header>
 
-<!-- MATCHING HERO -->
+<!-- Hero -->
 <section class="hero-search">
   <div class="hero-inner">
     <h2>Analyzer Search</h2>
@@ -39,38 +36,32 @@
 
 <main class="container">
 
-  <h2 style="margin:18px 0 6px;">Search Analyzers</h2>
-  <p class="muted" style="margin:0 0 14px;">
-    Search by model, vendor, or analyzer type
-  </p>
-
-  <!-- SEARCH -->
+  <!-- Search -->
   <div class="search-wrap">
     <input id="searchInput" class="search-input"
-           placeholder="Search… (ZR22G, GC8000, AMETEK 888, ABB, Siemens)">
+           placeholder="Search… (ZR22G, GC8000, AMETEK 888, Siemens, ABB)">
   </div>
 
-  <!-- FILTERS -->
+  <!-- Filters -->
   <div class="filter-bar">
     <button class="filter-btn active" data-filter="all">All</button>
     <button class="filter-btn" data-filter="gc">GC</button>
     <button class="filter-btn" data-filter="oxygen">Oxygen</button>
+    <button class="filter-btn" data-filter="ametek">AMETEK</button>
     <button class="filter-btn" data-filter="yokogawa">Yokogawa</button>
     <button class="filter-btn" data-filter="abb">ABB</button>
     <button class="filter-btn" data-filter="siemens">Siemens</button>
-    <button class="filter-btn" data-filter="ametek">AMETEK</button>
   </div>
 
-  <!-- ANALYZER CARDS -->
+  <!-- Analyzer Cards -->
   <div class="grid" id="cards">
 
-    <!-- ================= YOKOGAWA ================= -->
-
+    <!-- YOKOGAWA -->
     <div class="card yokogawa oxygen"
          data-tag="yokogawa oxygen"
          data-search="yokogawa zr22g zirconia oxygen">
       <h3>Yokogawa ZR22G</h3>
-      <p>Zirconia in-situ oxygen analyzer for combustion control.</p>
+      <p>Zirconia oxygen analyzer for combustion control.</p>
       <div class="action-row">
         <a class="btn btn-primary" href="analyzers/yokogawa/zr22g.html">Open →</a>
       </div>
@@ -78,7 +69,7 @@
 
     <div class="card yokogawa oxygen"
          data-tag="yokogawa oxygen"
-         data-search="yokogawa ox400 oxygen analyzer">
+         data-search="yokogawa ox400 oxygen">
       <h3>Yokogawa OX400</h3>
       <p>In-situ oxygen analyzer for boilers and furnaces.</p>
       <div class="action-row">
@@ -90,40 +81,38 @@
          data-tag="yokogawa gc"
          data-search="yokogawa gc8000 gas chromatograph">
       <h3>Yokogawa GC8000</h3>
-      <p>Process gas chromatograph for online gas analysis.</p>
+      <p>Online process gas chromatograph.</p>
       <div class="action-row">
         <a class="btn btn-primary"
            href="analyzers/yokogawa/gc8000/gc8000.html">Open →</a>
         <a class="btn btn-ghost"
-           href="alarms/yokogawa/gc8000/alarm-codes.html">Alarms →</a>
+           href="analyzers/yokogawa/gc8000/alarms/index.html">Alarms →</a>
       </div>
     </div>
 
-    <!-- ================= ABB GC ================= -->
-
+    <!-- ABB GC -->
     <div class="card abb gc"
          data-tag="abb gc"
          data-search="abb pgc5000b smart oven">
       <h3>ABB PGC5000B</h3>
-      <p>Smart oven process gas chromatograph.</p>
+      <p>Smart oven process GC series.</p>
       <div class="action-row">
         <a class="btn btn-primary"
            href="analyzers/abb/gc/pgc5000b/pgc5000b.html">Open →</a>
         <a class="btn btn-ghost"
-           href="alarms/abb/gc/pgc5000b/alarm-codes.html">Alarms →</a>
+           href="analyzers/abb/gc/pgc5000b/alarms/index.html">Alarms →</a>
       </div>
     </div>
 
-    <!-- ================= SIEMENS ================= -->
-
+    <!-- SIEMENS -->
     <div class="card siemens gc"
          data-tag="siemens gc"
          data-search="siemens maxum edition ii">
       <h3>Siemens MAXUM Edition II</h3>
-      <p>Flexible and reliable process gas chromatograph.</p>
+      <p>High-performance process gas chromatograph.</p>
       <div class="action-row">
         <a class="btn btn-primary"
-           href="analyzers/siemens/maxum-ii/maxum-ii.html">Open →</a>
+           href="analyzers/siemens/maxum/maxum.html">Open →</a>
       </div>
     </div>
 
@@ -131,33 +120,19 @@
          data-tag="siemens gc"
          data-search="siemens sitrans cv wobbe">
       <h3>Siemens SITRANS CV</h3>
-      <p>GC for Wobbe Index and calorific value measurement.</p>
+      <p>Wobbe index & calorific value GC.</p>
       <div class="action-row">
         <a class="btn btn-primary"
            href="analyzers/siemens/sitrans-cv/sitrans-cv.html">Open →</a>
       </div>
     </div>
 
-    <!-- ================= AMETEK ================= -->
-
-    <div class="card ametek oxygen"
-         data-tag="ametek oxygen"
-         data-search="ametek 933 oxygen analyzer">
-      <h3>AMETEK 933 Oxygen Analyzer</h3>
-      <p>Process oxygen analyzer for industrial applications.</p>
-      <div class="action-row">
-        <a class="btn btn-primary"
-           href="analyzers/ametek/933/933.html">Open →</a>
-        <a class="btn btn-ghost"
-           href="alarms/ametek/933/alarm-codes.html">Alarms →</a>
-      </div>
-    </div>
-
+    <!-- AMETEK -->
     <div class="card ametek gc"
          data-tag="ametek gc"
-         data-search="ametek 888 tail gas analyzer sru">
+         data-search="ametek 888 tail gas sru">
       <h3>AMETEK 888 Tail Gas Analyzer</h3>
-      <p>Tail gas analyzer for sulfur recovery units (SRU).</p>
+      <p>Continuous sulfur monitoring for SRU tail gas.</p>
       <div class="action-row">
         <a class="btn btn-primary"
            href="analyzers/ametek/888/888.html">Open →</a>
@@ -166,24 +141,29 @@
       </div>
     </div>
 
+    <div class="card ametek oxygen"
+         data-tag="ametek oxygen"
+         data-search="ametek 933 oxygen analyzer">
+      <h3>AMETEK 933 Oxygen Analyzer</h3>
+      <p>Continuous oxygen measurement for process control.</p>
+      <div class="action-row">
+        <a class="btn btn-primary"
+           href="analyzers/ametek/933/933.html">Open →</a>
+        <a class="btn btn-ghost"
+           href="alarms/ametek/933/alarm-codes.html">Alarms →</a>
+      </div>
+    </div>
+
   </div>
 </main>
 
 <footer class="site-footer">
   <div class="site-footer-inner">
-    <div>
-      <b>AnalyzersHub</b><br>
-      <span class="muted">Built for Analyzer Technicians</span>
-    </div>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Search</a>
-      <a href="disclaimer.html">Disclaimer</a>
-    </div>
+    <b>AnalyzersHub</b>
+    <span class="muted">Built for Analyzer Technicians</span>
   </div>
 </footer>
 
-<!-- SEARCH + FILTER SCRIPT -->
 <script>
 const searchInput = document.getElementById("searchInput");
 const cards = [...document.querySelectorAll("#cards .card")];
@@ -195,19 +175,22 @@ function apply(){
   cards.forEach(c=>{
     const tag = (c.dataset.tag || "").toLowerCase();
     const text = (c.dataset.search || "").toLowerCase();
-    const okFilter = active==="all" || tag.includes(active);
+    const okFilter = active === "all" || tag.includes(active);
     const okSearch = !q || text.includes(q);
     c.classList.toggle("is-hidden", !(okFilter && okSearch));
   });
 }
 
 buttons.forEach(b=>{
-  b.onclick=()=>{active=b.dataset.filter;
-    buttons.forEach(x=>x.classList.toggle("active",x===b));
+  b.addEventListener("click",()=>{
+    buttons.forEach(x=>x.classList.remove("active"));
+    b.classList.add("active");
+    active = b.dataset.filter;
     apply();
-  };
+  });
 });
-searchInput.oninput=apply;
+
+searchInput.addEventListener("input", apply);
 apply();
 </script>
 
