@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OX400 Calibration Failure | Yokogawa Decision Tree</title>
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/venkatpalika-oss/analyzershub/discussions" target="_blank" rel="noopener">Discussion</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="alarms/yokogawa/decision-trees/index.html">Yokogawa Decision Trees</a><span>›</span>
+  <a href="analyzers/yokogawa/ox400.html">OX400</a><span>›</span>
+  <span class="current">Calibration Failure</span>
+</nav>
+
+<main class="container">
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">OX400 — Calibration Failure (Decision Tree)</h2>
+    <p class="muted" style="margin:8px 0 0;">Use when calibration doesn’t complete, won’t stabilize, or cannot reach span/zero.</p>
+
+    <div class="warn">
+      <b>Most common causes:</b> wrong gas/concentration, insufficient flow, leaking cal manifold, probe fouling.
+    </div>
+
+    <div class="action-row">
+      <a class="btn btn-ghost" href="alarms/yokogawa/decision-trees/index.html">← Back to Yokogawa Trees</a>
+      <a class="btn btn-ghost" href="analyzers/yokogawa/ox400.html">OX400 Main Page →</a>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card oxygen">
+      <h3>Decision Tree</h3>
+
+      <div class="step"><b>1) Analyzer stable before calibration?</b><br>
+        If unstable → fix unstable reading first (probe/purge/leaks).
+      </div>
+
+      <div class="step"><b>2) Gas correct?</b><br>
+        Confirm cylinder label, concentration, regulator type, correct connection point.
+      </div>
+
+      <div class="step"><b>3) Gas flow adequate?</b><br>
+        Confirm flow reaches probe (no blocked tube, no kinked line, regulator not closed).
+      </div>
+
+      <div class="step"><b>4) Leak test calibration path</b><br>
+        Leak test fittings/valves/manifold. Air ingress causes failure and wrong spans.
+      </div>
+
+      <div class="step"><b>5) Probe fouling</b><br>
+        Clean/inspect probe tip and protective cap. Heavy fouling prevents stable calibration.
+      </div>
+
+      <div class="step"><b>6) Stabilization time</b><br>
+        Allow enough time after switching gas. Avoid calibrating during process swings.
+      </div>
+
+      <div class="step"><b>7) Still failing?</b><br>
+        Check diagnostics for sensor health, wiring faults, or configuration mismatch. Escalate.
+      </div>
+    </div>
+
+    <div class="card oxygen">
+      <h3>Quick Checks</h3>
+      <ul class="list">
+        <li>Correct standard gas and regulator</li>
+        <li>Gas flowing to probe (confirm physically)</li>
+        <li>No leak in cal line/manifold</li>
+        <li>Probe tip not fouled/plugged</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="alarms/yokogawa/decision-trees/index.html">Yokogawa Trees</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
