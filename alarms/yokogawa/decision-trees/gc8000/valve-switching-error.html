@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GC8000 Valve Switching Error | Yokogawa Decision Tree</title>
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/venkatpalika-oss/analyzershub/discussions" target="_blank" rel="noopener">Discussion</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="alarms/yokogawa/decision-trees/index.html">Yokogawa Decision Trees</a><span>›</span>
+  <a href="analyzers/yokogawa/gc8000/gc8000.html">GC8000</a><span>›</span>
+  <span class="current">Valve Switching Error</span>
+</nav>
+
+<main class="container">
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">GC8000 — Valve Switching / Injection Error (Decision Tree)</h2>
+    <p class="muted" style="margin:8px 0 0;">Use when valves fail to switch, timing errors occur, or injections are inconsistent.</p>
+
+    <div class="warn">
+      <b>Golden rule:</b> A valve switching error can be mechanical, pneumatic, or electrical. Check actuation supply and timing first.
+    </div>
+
+    <div class="action-row">
+      <a class="btn btn-ghost" href="alarms/yokogawa/decision-trees/index.html">← Back to Yokogawa Trees</a>
+      <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/gc8000.html">GC8000 Main Page →</a>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card gc">
+      <h3>Decision Tree</h3>
+
+      <div class="step"><b>1) Actuation supply OK?</b><br>
+        If pneumatic valves used: check instrument air pressure/quality. If electric: check supply voltage.
+      </div>
+
+      <div class="step"><b>2) Valve command occurs?</b><br>
+        Confirm controller is issuing the switch command. Check timing/method step sequence.
+      </div>
+
+      <div class="step"><b>3) Mechanical sticking?</b><br>
+        If valve sticks: contamination, wear, moisture. Inspect, clean, replace seals as per maintenance.
+      </div>
+
+      <div class="step"><b>4) Solenoid/driver issue</b><br>
+        For pneumatic valves: solenoid coil/driver failure. Check coil, wiring, output status.
+      </div>
+
+      <div class="step"><b>5) Sample loop filling problem</b><br>
+        If injection inconsistent: check sample pressure, restriction, loop blockage, sample conditioning.
+      </div>
+
+      <div class="step"><b>6) After repair</b><br>
+        Run multiple cycles and confirm repeatability and stable chromatogram peaks.
+      </div>
+    </div>
+
+    <div class="card gc">
+      <h3>Fast Checks</h3>
+      <ul class="list">
+        <li>Instrument air pressure & dryness (if pneumatic)</li>
+        <li>Solenoid coil and wiring</li>
+        <li>Valve actuation response (listen/feel switching)</li>
+        <li>Sample pressure/flow and loop restrictions</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="alarms/yokogawa/decision-trees/index.html">Yokogawa Trees</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
