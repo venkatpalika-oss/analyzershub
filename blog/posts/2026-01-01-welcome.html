@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome | AnalyzersHub Blog</title>
+
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    .panel{background:#fff;border:1px solid #e0e6ec;border-radius:14px;padding:16px;
+      box-shadow:0 6px 18px rgba(0,0,0,.08);margin-top:14px}
+    .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .btnx{display:inline-block;text-decoration:none;font-weight:900;padding:10px 14px;border-radius:12px;
+      border:1px solid rgba(0,0,0,.12);transition:transform .15s ease, background .15s ease}
+    .btnx:hover{transform:translateY(-1px)}
+    .primary{background:#1f78b4;color:#fff}
+    .primary:hover{background:#155a8a}
+    .ghost{background:#fff;color:#0b3c5d}
+    .ghost:hover{background:#e9f2f9}
+    .meta{opacity:.8}
+  </style>
+</head>
+<body>
+
+<header class="site-header" style="position:sticky;top:0;z-index:999;box-shadow:0 2px 12px rgba(0,0,0,0.18);">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <h2 style="margin-top:18px;">Welcome to AnalyzersHub</h2>
+  <p class="meta">2026-01-01 • 3 min read</p>
+
+  <div class="panel">
+    <p class="muted">
+      This site is built for analyzer technicians. Each analyzer page will contain:
+      <b>working principle</b>, <b>components</b>, <b>calibration procedure</b>, and <b>major troubleshooting</b>.
+      Alarm issues are organized into <b>decision trees</b> for faster field diagnosis.
+    </p>
+
+    <h3 style="margin-top:14px;color:#0b3c5d;">How to use the site</h3>
+    <ul>
+      <li>Start at <b>Analyzer Search</b> and open your model.</li>
+      <li>Check <b>Major Troubleshooting</b> first for quick checks.</li>
+      <li>Use <b>Alarm Decision Trees</b> when an alarm is active.</li>
+      <li>Use <b>Contact</b> to request new analyzers or report fixes.</li>
+    </ul>
+
+    <div class="row">
+      <a class="btnx primary" href="analyzers.html">Go to Analyzer Search →</a>
+      <a class="btnx ghost" href="blog/index.html">Back to Blog →</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
 
