@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P-500 Erratic Results | Decision Tree</title>
+
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="alarms/flash-point/p500/decision-trees/index.html">P-500 Trees</a><span>›</span>
+  <span class="current">Erratic Results</span>
+</nav>
+
+<main class="container">
+
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">Decision Tree: Erratic / Non-repeatable Results</h2>
+    <p class="muted" style="margin-top:8px;">
+      Symptom: different flash point values for repeats, poor repeatability, inconsistent trends.
+    </p>
+
+    <div class="action-row">
+      <a class="btn btn-ghost" href="alarms/flash-point/p500/decision-trees/index.html">← Back to Trees</a>
+      <a class="btn btn-ghost" href="alarms/flash-point/p500/alarm-codes.html">← Alarm Codes</a>
+      <a class="btn btn-ghost" href="analyzers/flash-point/p500/p500.html">P-500 Main Page →</a>
+    </div>
+
+    <div class="warn">
+      <b>Most common causes:</b> contaminated cup, inconsistent sample volume, wrong method parameters, drafts/venting effects.
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Step-by-step isolation</h3>
+
+    <div class="step"><b>1)</b> Verify test method settings:
+      <ul class="list">
+        <li>Correct program (open/closed cup mode per your analyzer configuration).</li>
+        <li>Ramp rate and ignition interval match standard practice.</li>
+        <li>Correct sample volume setting (if configurable).</li>
+      </ul>
+    </div>
+
+    <div class="step"><b>2)</b> Control sample handling:
+      <ul class="list">
+        <li>Use the same sample source and minimize evaporation before test.</li>
+        <li>Ensure consistent fill volume each run.</li>
+        <li>Avoid cross-contamination (use clean tools and containers).</li>
+      </ul>
+    </div>
+
+    <div class="step"><b>3)</b> Cleanliness check (highest impact):
+      <ul class="list">
+        <li>Clean and dry the sample cup thoroughly.</li>
+        <li>Inspect lid seal / rim for residue or damage.</li>
+        <li>Clean ignition area and sensor window if vapor deposits exist.</li>
+      </ul>
+    </div>
+
+    <div class="step"><b>4)</b> Heating stability:
+      <ul class="list">
+        <li>Confirm temperature ramp is smooth (no oscillation).</li>
+        <li>Check for drafts/strong airflow affecting heat distribution.</li>
+        <li>Verify temperature sensor reading against external reference if possible.</li>
+      </ul>
+    </div>
+
+    <div class="step"><b>5)</b> Confirm with a reference material:
+      <ul class="list">
+        <li>Run certified flash point reference sample.</li>
+        <li>If reference is stable but product is not → sample variation/handling is the root cause.</li>
+        <li>If reference is unstable too → suspect method settings, heating control, ignition/detection system.</li>
+      </ul>
+    </div>
+
+    <div class="step"><b>6)</b> Corrective actions:
+      <ul class="list">
+        <li>Standardize sample volume and cup cleaning procedure.</li>
+        <li>Repair/replace sensor/ignition components if contamination persists.</li>
+        <li>Service heater control loop if ramp instability is seen.</li>
+      </ul>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
