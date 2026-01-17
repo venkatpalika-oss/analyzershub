@@ -8,23 +8,33 @@
   <base href="/analyzershub/">
   <link rel="stylesheet" href="assets/css/style.css">
 
+  <!-- Home wallpaper hero overrides -->
   <style>
-    /* Make home hero slightly shorter */
-    .hero{ min-height:210px; }
-    .home-actions{ margin-top:-16px; position:relative; z-index:5; }
-    .home-actions .panel{ padding:12px; }
-    .home-actions .action-row{ margin:0; justify-content:center; }
-
-    /* Data flow card – smaller image */
-    .dataflow img{
-      max-width:560px;
-      width:100%;
-      height:auto;
-      display:block;
-      margin:12px auto 0;
-      border-radius:12px;
-      border:1px solid #e0e6ec;
-      box-shadow:0 6px 18px rgba(0,0,0,.08);
+    .hero{
+      position:relative;
+      min-height:320px;
+      display:flex;
+      align-items:center;
+      color:#fff;
+      background-image:
+        linear-gradient(
+          rgba(11,60,93,.78),
+          rgba(11,60,93,.65)
+        ),
+        url("assets/images/industrial-analyzer-wallpaper.webp");
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+    }
+    .hero h2,
+    .hero p{
+      text-shadow:0 3px 16px rgba(0,0,0,.75);
+    }
+    .hero .btn{
+      box-shadow:0 6px 18px rgba(0,0,0,.35);
+    }
+    @media(max-width:768px){
+      .hero{min-height:260px;background-position:center top}
     }
   </style>
 </head>
@@ -48,9 +58,10 @@
   <div class="hero-inner">
     <h2>Industrial Analyzer Knowledge Hub</h2>
     <p>
-      Troubleshooting guides, working principles, calibration procedures, and alarm decision trees —
-      built for analyzer technicians.
+      Working principles, calibration procedures, troubleshooting guides,
+      alarm codes, and decision trees — built by technicians, for technicians.
     </p>
+
     <div class="action-row">
       <a class="btn btn-primary" href="analyzers.html">Browse All Analyzers →</a>
       <a class="btn btn-ghost" href="analyzers.html?category=gc">GC Hub →</a>
@@ -61,83 +72,75 @@
 
 <main class="container">
 
-  <!-- Quick actions (won't hide behind hero) -->
-  <div class="home-actions">
-    <div class="panel">
-      <div class="action-row">
-        <a class="btn btn-primary" href="analyzers.html">🔎 Analyzer Search</a>
-        <a class="btn btn-ghost" href="analyzers.html?category=gc">🧪 GC</a>
-        <a class="btn btn-ghost" href="analyzers.html?category=oxygen">🫁 Oxygen</a>
-        <a class="btn btn-ghost" href="analyzers/flash-point/index.html">🔥 Flash Point</a>
-        <a class="btn btn-ghost" href="blog/index.html">📝 Blog</a>
-        <a class="btn btn-ghost" href="contact.html">✉️ Contact</a>
-      </div>
+  <!-- Quick Navigation -->
+  <div class="panel" style="margin-top:-18px;">
+    <div class="action-row" style="justify-content:center">
+      <a class="btn btn-primary" href="analyzers.html">🔎 Analyzer Search</a>
+      <a class="btn btn-ghost" href="analyzers.html?category=gc">🧪 Gas Chromatographs</a>
+      <a class="btn btn-ghost" href="analyzers.html?category=oxygen">🫁 Oxygen</a>
+      <a class="btn btn-ghost" href="analyzers/flash-point/index.html">🔥 Flash Point</a>
+      <a class="btn btn-ghost" href="blog/index.html">📝 Blog</a>
+      <a class="btn btn-ghost" href="contact.html">✉️ Contact</a>
     </div>
   </div>
 
-  <h2 style="margin:18px 0 8px;color:#0b3c5d;">Browse by Manufacturer</h2>
+  <h2 style="margin:20px 0 8px;color:#0b3c5d;">Browse by Manufacturer</h2>
   <p class="muted" style="margin:0 0 14px;">
-    Choose a manufacturer to open their analyzer pages. Use Analyzer Search for full model list.
+    Select a manufacturer to explore analyzers, alarm codes, and decision trees.
   </p>
 
   <div class="grid">
 
     <div class="card yokogawa">
       <h3>Yokogawa</h3>
-      <p>ZR22G, OX400, GC8000 and related troubleshooting + alarm decision trees.</p>
+      <p>ZR22G, OX400, GC8000 — oxygen and GC analyzers with deep troubleshooting.</p>
       <div class="action-row">
         <a class="btn btn-primary" href="analyzers.html?filter=yokogawa">Open Yokogawa →</a>
-        <a class="btn btn-ghost" href="analyzers.html?category=oxygen">Oxygen Hub →</a>
       </div>
     </div>
 
     <div class="card abb">
       <h3>ABB</h3>
-      <p>PGC5000B/C, PGC5007B, Portable NGC and more — guides and alarm trees.</p>
+      <p>PGC5000 series, sulfur GC, portable NGC — field-proven process analytics.</p>
       <div class="action-row">
         <a class="btn btn-primary" href="analyzers.html?filter=abb">Open ABB →</a>
-        <a class="btn btn-ghost" href="analyzers.html?category=gc">GC Hub →</a>
       </div>
     </div>
 
     <div class="card siemens">
       <h3>Siemens</h3>
-      <p>MAXUM Edition II — working principle, calibration, troubleshooting, alarms.</p>
+      <p>MAXUM Edition II — modular GC with alarms, calibration, and trees.</p>
       <div class="action-row">
         <a class="btn btn-primary" href="analyzers.html?filter=siemens">Open Siemens →</a>
-        <a class="btn btn-ghost" href="analyzers/siemens/maxum-ii/maxum-ii.html">MAXUM II →</a>
       </div>
     </div>
 
     <div class="card">
       <h3>AMETEK</h3>
-      <p>933 Series Oxygen Analyzer — calibration + common fault decision trees.</p>
+      <p>933 oxygen analyzer and 888 tail gas analyzer — SRU focused diagnostics.</p>
       <div class="action-row">
         <a class="btn btn-primary" href="analyzers.html?filter=ametek">Open AMETEK →</a>
-        <a class="btn btn-ghost" href="analyzers/ametek/933/933.html">AMETEK 933 →</a>
       </div>
     </div>
 
     <div class="card">
       <h3>Flash Point</h3>
-      <p>P-500 series — method references, calibration materials, repeatability guidance.</p>
+      <p>P-500 series — ASTM methods, calibration materials, repeatability guidance.</p>
       <div class="action-row">
         <a class="btn btn-primary" href="analyzers/flash-point/index.html">Flash Point Hub →</a>
-        <a class="btn btn-ghost" href="analyzers/flash-point/p500/p500.html">P-500 →</a>
       </div>
     </div>
 
   </div>
 
-  <div class="panel dataflow" style="margin-top:18px;">
+  <div class="panel" style="margin-top:20px;">
     <h2 style="margin:0;color:#0b3c5d;">Analyzer Data Flow to DCS</h2>
     <p class="muted" style="margin-top:8px;">
-      Typical signal & communication flow from field analyzers to PLC/DCS and historian.
+      Typical flow from field analyzers → sample conditioning → analyzer → PLC/DCS → historian.
     </p>
-    <img src="assets/images/data_flow_to_dcs.png" alt="Analyzer data flow to DCS">
-    <p class="muted" style="margin-top:10px;font-size:.85rem;">
-      If you created this graphic yourself (or generated it), it’s safe to use. Avoid copying diagrams from manuals unless permission exists.
-    </p>
+    <img src="assets/images/data_flow_to_dcs.png"
+         alt="Analyzer data flow to DCS"
+         style="max-width:560px;width:100%;display:block;margin:14px auto;border-radius:12px;">
   </div>
 
 </main>
