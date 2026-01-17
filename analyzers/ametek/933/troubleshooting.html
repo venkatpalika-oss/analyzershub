@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMETEK 933 Troubleshooting | AnalyzersHub</title>
+
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="analyzers.html?filter=ametek">AMETEK</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="analyzers.html">Analyzers</a><span>›</span>
+  <a href="analyzers/ametek/933/933.html">AMETEK 933</a><span>›</span>
+  <span class="current">Troubleshooting</span>
+</nav>
+
+<section class="hero-search">
+  <div class="hero-inner">
+    <h2>AMETEK 933 — Troubleshooting Guide</h2>
+    <p>
+      Symptom-based field troubleshooting for AMETEK 933 oxygen analyzers.
+      Always verify sample integrity before suspecting the sensor.
+    </p>
+
+    <div class="action-row">
+      <a class="btn btn-ghost" href="analyzers/ametek/933/933.html">← Back to Analyzer</a>
+      <a class="btn btn-primary" href="alarms/ametek/933/alarm-codes.html">Alarm Codes →</a>
+      <a class="btn btn-ghost" href="alarms/ametek/933/decision-trees/index.html">Decision Trees →</a>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+
+  <div class="warn">
+    <b>Field rule:</b> Incorrect sample flow or air leakage will cause false
+    oxygen readings. Fix the sample system first.
+  </div>
+
+  <!-- Quick Checks -->
+  <div class="panel">
+    <h3>Quick Checks (Before Detailed Troubleshooting)</h3>
+    <ul class="list">
+      <li>Confirm analyzer warm-up completed</li>
+      <li>Verify sample flow and pressure</li>
+      <li>Check for air leakage at fittings and valves</li>
+      <li>Inspect filters for blockage</li>
+      <li>Verify correct calibration gases</li>
+    </ul>
+  </div>
+
+  <!-- High O2 -->
+  <div class="panel">
+    <h3>Symptom: High Oxygen Reading</h3>
+    <ul class="list">
+      <li><b>Check</b>: sample system leaks (most common cause)</li>
+      <li><b>Check</b>: probe insertion depth</li>
+      <li><b>Check</b>: calibration drift</li>
+      <li><b>Likely cause</b>: air ingress or actual process upset</li>
+      <li><b>Fix</b>: leak test system, recalibrate, verify process conditions</li>
+    </ul>
+    <div class="action-row">
+      <a class="btn btn-primary"
+         href="alarms/ametek/933/decision-trees/high-oxygen-reading.html">
+        High O₂ Decision Tree →
+      </a>
+    </div>
+  </div>
+
+  <!-- Low O2 -->
+  <div class="panel">
+    <h3>Symptom: Low or Zero Oxygen Reading</h3>
+    <ul class="list">
+      <li><b>Check</b>: sample flow restriction or blockage</li>
+      <li><b>Check</b>: sensor response with span gas</li>
+      <li><b>Check</b>: condensation or contamination</li>
+      <li><b>Likely cause</b>: sensor aging, blocked sample path</li>
+      <li><b>Fix</b>: restore flow, clean sample system, replace sensor if required</li>
+    </ul>
+  </div>
+
+  <!-- Unstable -->
+  <div class="panel">
+    <h3>Symptom: Unstable / Noisy Signal</h3>
+    <ul class="list">
+      <li><b>Check</b>: sample pressure fluctuation</li>
+      <li><b>Check</b>: moisture in sample gas</li>
+      <li><b>Check</b>: grounding and shielding</li>
+      <li><b>Likely cause</b>: sample instability or electrical noise</li>
+      <li><b>Fix</b>: stabilize pressure, improve drainage, correct grounding</li>
+    </ul>
+  </div>
+
+  <!-- Calibration -->
+  <div class="panel">
+    <h3>Symptom: Calibration Failure</h3>
+    <ul class="list">
+      <li><b>Check</b>: correct zero/span gas and regulator</li>
+      <li><b>Check</b>: leaks in calibration manifold</li>
+      <li><b>Check</b>: sufficient warm-up time</li>
+      <li><b>Likely cause</b>: incorrect gas, leaking valve, sensor degradation</li>
+      <li><b>Fix</b>: verify gases, leak test, repeat calibration</li>
+    </ul>
+    <div class="action-row">
+      <a class="btn btn-primary"
+         href="alarms/ametek/933/decision-trees/calibration-failure.html">
+        Calibration Decision Tree →
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <b>AnalyzersHub</b><br>
+    <span class="muted">Built for Analyzer Technicians</span>
+  </div>
+</footer>
+
+</body>
+</html>
