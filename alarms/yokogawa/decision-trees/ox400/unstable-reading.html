@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OX400 Unstable Reading | Yokogawa Decision Tree</title>
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/venkatpalika-oss/analyzershub/discussions" target="_blank" rel="noopener">Discussion</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="alarms/yokogawa/decision-trees/index.html">Yokogawa Decision Trees</a><span>›</span>
+  <a href="analyzers/yokogawa/ox400.html">OX400</a><span>›</span>
+  <span class="current">Unstable Reading</span>
+</nav>
+
+<main class="container">
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">OX400 — Unstable O₂ Reading (Decision Tree)</h2>
+    <p class="muted" style="margin:8px 0 0;">Use when O₂ fluctuates, spikes, or won’t stabilize.</p>
+
+    <div class="warn">
+      <b>Golden rule:</b> Unstable O₂ is often due to <b>probe fouling</b>, <b>leaky calibration path</b>, or <b>purge problems</b>.
+    </div>
+
+    <div class="action-row">
+      <a class="btn btn-ghost" href="alarms/yokogawa/decision-trees/index.html">← Back to Yokogawa Trees</a>
+      <a class="btn btn-ghost" href="analyzers/yokogawa/ox400.html">OX400 Main Page →</a>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card oxygen">
+      <h3>Decision Tree</h3>
+
+      <div class="step"><b>1) Process stable?</b><br>
+        Confirm combustion/process stable (draft, fuel/air, load changes). If process is unstable, O₂ will be unstable.
+      </div>
+
+      <div class="step"><b>2) Probe condition / filter</b><br>
+        Inspect and clean/replace if dust/ash buildup. Plugging creates slow and unstable behavior.
+      </div>
+
+      <div class="step"><b>3) Purge air (if equipped)</b><br>
+        Confirm purge air pressure/flow and purge valve operation. No purge → probe fouls quickly.
+      </div>
+
+      <div class="step"><b>4) Calibration manifold leak</b><br>
+        A leaking cal valve/fitting can allow air ingress causing unstable O₂. Leak test cal line and isolate.
+      </div>
+
+      <div class="step"><b>5) Electronics / grounding</b><br>
+        Check cable shielding, grounding, loose terminals, moisture ingress. Electrical noise can create fluctuations.
+      </div>
+
+      <div class="step"><b>6) Still unstable?</b><br>
+        Verify sensor health via diagnostics, compare with portable reading after stabilizing, then escalate.
+      </div>
+    </div>
+
+    <div class="card oxygen">
+      <h3>Fast Checks</h3>
+      <ul class="list">
+        <li>Probe cap/filter condition</li>
+        <li>Purge air pressure/flow</li>
+        <li>Cal line valves/fittings leak test</li>
+        <li>Grounding/shielding and terminal tightness</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="alarms/yokogawa/decision-trees/index.html">Yokogawa Trees</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
