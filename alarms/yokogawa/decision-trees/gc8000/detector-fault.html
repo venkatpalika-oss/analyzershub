@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GC8000 Detector Fault | Yokogawa Decision Tree</title>
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/venkatpalika-oss/analyzershub/discussions" target="_blank" rel="noopener">Discussion</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="alarms/yokogawa/decision-trees/index.html">Yokogawa Decision Trees</a><span>›</span>
+  <a href="analyzers/yokogawa/gc8000/gc8000.html">GC8000</a><span>›</span>
+  <span class="current">Detector Fault</span>
+</nav>
+
+<main class="container">
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">GC8000 — Detector Fault / Noise / No Signal (Decision Tree)</h2>
+    <p class="muted" style="margin:8px 0 0;">Use when detector alarms occur, baseline is noisy, or peaks disappear.</p>
+
+    <div class="warn">
+      <b>Golden rule:</b> Confirm carrier/sample stability before blaming the detector.
+      Many “detector faults” are actually <b>carrier instability</b> or <b>contamination</b>.
+    </div>
+
+    <div class="action-row">
+      <a class="btn btn-ghost" href="alarms/yokogawa/decision-trees/index.html">← Back to Yokogawa Trees</a>
+      <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/gc8000.html">GC8000 Main Page →</a>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card gc">
+      <h3>Decision Tree</h3>
+
+      <div class="step"><b>1) Carrier stable?</b><br>
+        If carrier pressure/flow unstable → fix carrier first (see Carrier Pressure Low tree).
+      </div>
+
+      <div class="step"><b>2) Baseline noise sudden?</b><br>
+        Sudden noise often indicates moisture/contamination or grounding/shielding problems.
+      </div>
+
+      <div class="step"><b>3) Electrical checks</b><br>
+        Check grounding, shield continuity, loose terminals, power supply stability.
+      </div>
+
+      <div class="step"><b>4) Contamination</b><br>
+        Check for wet/dirty sample, carryover, failed filters/traps. Contamination affects detector response.
+      </div>
+
+      <div class="step"><b>5) Detector module health</b><br>
+        Review diagnostics and status values. If detector output flat/no response even with stable conditions → suspect detector electronics.
+      </div>
+
+      <div class="step"><b>6) After fix</b><br>
+        Run stable cycles and verify repeatability, baseline stability, and expected peak response.
+      </div>
+    </div>
+
+    <div class="card gc">
+      <h3>Fast Checks</h3>
+      <ul class="list">
+        <li>Carrier stability and leaks</li>
+        <li>Sample dryness/conditioning</li>
+        <li>Grounding/shielding and terminal tightness</li>
+        <li>Diagnostics: detector signal level and alarms</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="alarms/yokogawa/decision-trees/index.html">Yokogawa Trees</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
