@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MAXUM Edition II Alarm Codes | AnalyzersHub</title>
+
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="analyzers.html">Analyzers</a><span>›</span>
+  <a href="analyzers/siemens/maxum-ii/maxum-ii.html">MAXUM II</a><span>›</span>
+  <span class="current">Alarm Codes</span>
+</nav>
+
+<main class="container">
+
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">Siemens MAXUM Edition II — Alarm Codes (Quick Actions)</h2>
+    <p class="muted" style="margin-top:8px;">
+      Practical “first actions” for common MAXUM alarm situations. Use decision trees for full isolation.
+    </p>
+
+    <div class="action-row">
+      <a class="btn btn-ghost" href="analyzers/siemens/maxum-ii/maxum-ii.html">← Back to MAXUM II</a>
+      <a class="btn btn-primary" href="alarms/siemens/maxum-ii/decision-trees/index.html">Decision Trees →</a>
+    </div>
+
+    <div class="field-tip">
+      <b>Field tip:</b> If multiple alarms appear together, start with <b>carrier + sample conditioning</b>.
+      Fix pressure/flow stability before calibration or detector replacement.
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <div class="card siemens">
+      <h3>Carrier / Pressure / Flow</h3>
+      <ul class="list">
+        <li><b>Carrier Pressure Low/High</b> — confirm supply, regulator stability, leaks, filter restriction</li>
+        <li><b>Flow Controller Fault</b> — check controller status, setpoints, valve response, sensor wiring</li>
+        <li><b>Leak Suspected</b> — soap test fittings, verify column/valve block connections, check vent lines</li>
+      </ul>
+      <p class="muted" style="margin:8px 0 0;">
+        First action: verify pressure is stable (no hunting). Unstable pressure causes retention time shift + noisy baseline.
+      </p>
+    </div>
+
+    <div class="card siemens">
+      <h3>Oven / Temperature</h3>
+      <ul class="list">
+        <li><b>Oven Not Ready</b> — heater output, temp sensor, control loop, fan/airflow (if present)</li>
+        <li><b>Temperature Deviation</b> — check setpoint vs actual, sensor drift, wiring, controller tuning</li>
+      </ul>
+      <p class="muted" style="margin:8px 0 0;">
+        First action: confirm oven temperature is stable at setpoint before judging chromatogram quality.
+      </p>
+    </div>
+
+    <div class="card siemens">
+      <h3>Detector / Signal Quality</h3>
+      <ul class="list">
+        <li><b>Baseline Noise/Drift</b> — carrier purity, leaks, detector contamination, grounding</li>
+        <li><b>Detector Fault</b> — electronics, sensor, power supplies, module seating</li>
+        <li><b>Signal Out of Range</b> — incorrect gain settings, detector issue, wiring problem</li>
+      </ul>
+      <div class="action-row">
+        <a class="btn btn-ghost" href="alarms/siemens/maxum-ii/decision-trees/baseline-noise-drift.html">Baseline Tree →</a>
+      </div>
+    </div>
+
+    <div class="card siemens">
+      <h3>Method / Results</h3>
+      <ul class="list">
+        <li><b>Retention Time Shift</b> — carrier flow change, column/oven temp drift, pressure instability</li>
+        <li><b>Poor Repeatability</b> — injection valve wear, sample pressure instability, contamination</li>
+        <li><b>Missing Peaks</b> — stream selection, valve timing, column degradation, sample issue</li>
+      </ul>
+      <div class="action-row">
+        <a class="btn btn-ghost" href="alarms/siemens/maxum-ii/decision-trees/retention-time-shift.html">RT Shift Tree →</a>
+        <a class="btn btn-ghost" href="alarms/siemens/maxum-ii/decision-trees/poor-repeatability.html">Repeatability Tree →</a>
+      </div>
+    </div>
+
+    <div class="card siemens">
+      <h3>FID Specific (if installed)</h3>
+      <ul class="list">
+        <li><b>FID Flameout</b> — fuel/air pressures, ignition, dirty jet, flow imbalance</li>
+        <li><b>FID Ignition Fail</b> — igniter issue, gas supply problem, wet/contaminated lines</li>
+      </ul>
+      <div class="action-row">
+        <a class="btn btn-ghost" href="alarms/siemens/maxum-ii/decision-trees/fid-flameout.html">FID Tree →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="muted" style="margin-top:18px;font-size:.85rem;">
+    ⚠️ Reference only. Always follow site safety rules and manufacturer documentation.
+  </p>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
