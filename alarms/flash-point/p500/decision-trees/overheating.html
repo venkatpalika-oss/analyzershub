@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P-500 Overheating | Decision Tree</title>
+
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="alarms/flash-point/p500/decision-trees/index.html">P-500 Trees</a><span>›</span>
+  <span class="current">Overheating</span>
+</nav>
+
+<main class="container">
+
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">Decision Tree: Overheating / Temperature Fault</h2>
+    <p class="muted" style="margin-top:8px;">
+      Symptom: temperature overshoot, over-temp alarm, unstable heating, or “temperature error”.
+    </p>
+
+    <div class="action-row">
+      <a class="btn btn-ghost" href="alarms/flash-point/p500/decision-trees/index.html">← Back to Trees</a>
+      <a class="btn btn-ghost" href="alarms/flash-point/p500/alarm-codes.html">← Alarm Codes</a>
+      <a class="btn btn-ghost" href="analyzers/flash-point/p500/p500.html">P-500 Main Page →</a>
+    </div>
+
+    <div class="warn">
+      <b>Safety:</b> Do not bypass thermal protection. Allow cooldown before inspection. Follow site hot-surface precautions.
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Step-by-step isolation</h3>
+
+    <div class="step"><b>1)</b> Confirm setpoints and method parameters (target temps, ramp rate, ignition interval). Wrong method can force overheating.</div>
+
+    <div class="step"><b>2)</b> Verify temperature sensor integrity:
+      <ul class="list">
+        <li>Check sensor connector seating (RTD/TC).</li>
+        <li>Look for broken wires, loose terminals, moisture ingress.</li>
+        <li>Compare reading with an external thermometer (if possible).</li>
+      </ul>
+    </div>
+
+    <div class="step"><b>3)</b> Check heater control output:
+      <ul class="list">
+        <li>If SSR/relay is stuck ON → temperature will runaway.</li>
+        <li>Inspect SSR/relay for shorted output or overheating.</li>
+        <li>Check controller output LED/status vs actual heater power.</li>
+      </ul>
+    </div>
+
+    <div class="step"><b>4)</b> Inspect airflow/venting and enclosure:
+      <ul class="list">
+        <li>Ensure vents are not blocked.</li>
+        <li>Confirm enclosure fan (if present) is running.</li>
+        <li>Check that lid seals are correct and not causing abnormal heat trapping (as per design).</li>
+      </ul>
+    </div>
+
+    <div class="step"><b>5)</b> Run a controlled test:
+      <ul class="list">
+        <li>Start with a lower ramp rate.</li>
+        <li>Monitor temperature trend for overshoot.</li>
+        <li>If overshoot repeats → tune/repair control loop (sensor/controller/SSR).</li>
+      </ul>
+    </div>
+
+    <div class="step"><b>6)</b> Corrective actions:
+      <ul class="list">
+        <li>Replace faulty temp sensor or damaged wiring.</li>
+        <li>Replace SSR/relay if stuck or unstable.</li>
+        <li>Validate with a reference material after repair.</li>
+      </ul>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
