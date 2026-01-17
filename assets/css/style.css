@@ -42,6 +42,7 @@ img{max-width:100%;height:auto;display:block}
 .site-nav a.active{
   background:rgba(255,255,255,.14);
   border:1px solid rgba(255,255,255,.18);
+  <a href="analyzers.html" class="active">Knowledge Base</a>
   text-decoration:none
 }
 @media(max-width:800px){
