@@ -1,147 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Yokogawa OX400 Oxygen Analyzer | AnalyzersHub</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yokogawa OX400 | AnalyzersHub</title>
 
-    <meta name="description" content="Yokogawa OX400 oxygen analyzer overview, specifications, alarms, and troubleshooting for analyzer technicians.">
-    <meta name="keywords" content="Yokogawa OX400, oxygen analyzer, combustion oxygen measurement">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="../../assets/css/style.css">
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
 
-<header>
-    <h1>AnalyzersHub</h1>
-    <nav>
-        <a href="../../index.html">Home</a>
-        <a href="../../analyzers.html">Analyzers</a>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/venkatpalika-oss/analyzershub/discussions" target="_blank" rel="noopener">Discussion</a>
     </nav>
+  </div>
 </header>
 
-<main>
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="analyzers.html">Analyzer Search</a><span>›</span>
+  <a href="analyzers.html?vendor=yokogawa">Yokogawa</a><span>›</span>
+  <span class="current">OX400</span>
+</nav>
 
-    <h2>Yokogawa OX400 Oxygen Analyzer</h2>
+<main class="container">
 
-    <section>
-        <h3>Analyzer Overview</h3>
-        <p>
-            The Yokogawa OX400 is a robust oxygen analyzer designed for continuous
-            oxygen measurement in combustion and industrial process applications.
-            It is widely used where reliable oxygen monitoring is required for
-            efficiency and safety.
-        </p>
-    </section>
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">Yokogawa OX400 — In-situ Oxygen Analyzer</h2>
+    <p class="muted" style="margin:8px 0 0;">
+      In-situ oxygen analyzer for combustion optimization (boilers/heaters).
+      Technician focus: probe condition, purge/filters, calibration gas handling, and stable installation conditions.
+    </p>
 
-    <section>
-        <h3>Key Features</h3>
-        <ul>
-            <li>Reliable oxygen measurement technology</li>
-            <li>Stable performance in harsh environments</li>
-            <li>Suitable for combustion and process monitoring</li>
-            <li>Low maintenance with proper calibration</li>
-        </ul>
-    </section>
+    <div class="action-row">
+      <a class="btn btn-ghost" href="analyzers.html">← Back to Search</a>
+      <a class="btn btn-primary" href="analyzers/yokogawa/alarms/ox400/index.html">Alarm Decision Trees →</a>
+      <a class="btn btn-ghost" href="analyzers/yokogawa/alarms/ox400/alarm-codes.html">Alarm Codes →</a>
+    </div>
 
-    <section>
-        <h3>Typical Applications</h3>
-        <ul>
-            <li>Boilers and furnaces</li>
-            <li>Process heaters</li>
-            <li>Incinerators</li>
-            <li>Industrial combustion systems</li>
-        </ul>
-    </section>
+    <div class="warn">
+      <b>Technician rule:</b> For unstable O₂, check <b>probe/filter condition</b> and <b>calibration line leaks</b> first.
+      Don’t adjust calibration until the signal is stable.
+    </div>
+  </div>
 
-    <section>
-        <h3>Common Alarms & Troubleshooting</h3>
+  <div class="grid">
 
-        <table border="1" cellpadding="8" cellspacing="0">
-            <thead>
-                <tr>
-                    <th>Alarm</th>
-                    <th>Description</th>
-                    <th>Diagnosis</th>
-                </tr>
-            </thead>
-            <tbody>
+    <div class="card oxygen">
+      <h3>Working Principle</h3>
+      <p>
+        OX400 is an in-situ oxygen analyzer typically based on zirconia sensing.
+        It measures oxygen at the probe tip and converts it into a stable O₂ output for combustion control.
+      </p>
+      <ul class="list">
+        <li><b>Measured value:</b> oxygen concentration (O₂) in flue gas.</li>
+        <li><b>Key requirement:</b> stable probe temperature and a clean sensing surface.</li>
+        <li><b>Accuracy depends on:</b> probe condition, installation position, calibration integrity, and stable furnace conditions.</li>
+      </ul>
+    </div>
 
-                <tr>
-                    <td>
-                        <a href="../../alarms/yokogawa/ox400-heater-error.html">
-                            Heater Error
-                        </a>
-                    </td>
-                    <td>Sensor heater malfunction or open circuit</td>
-                    <td>
-                        <a href="../../alarms/yokogawa/decision-trees/ox400-heater-error.html">
-                            Start Diagnosis
-                        </a>
-                    </td>
-                </tr>
+    <div class="card oxygen">
+      <h3>Main Components (Field Focus)</h3>
+      <ul class="list">
+        <li><b>Probe/sensor assembly:</b> sensing element, protective filter, mounting flange.</li>
+        <li><b>Electronics/transmitter:</b> display, diagnostics, outputs, comms.</li>
+        <li><b>Calibration system:</b> cal gas port(s), tubing, valves/solenoids (if equipped).</li>
+        <li><b>Purge/cleaning (if equipped):</b> purge air path, purge valve, filters.</li>
+        <li><b>Wiring & outputs:</b> 4–20 mA, relays, Modbus/Ethernet depending on configuration.</li>
+      </ul>
+    </div>
 
-                <tr>
-                    <td>
-                        <a href="../../alarms/yokogawa/ox400-no-signal.html">
-                            No Oxygen Signal
-                        </a>
-                    </td>
-                    <td>No valid oxygen measurement available</td>
-                    <td>
-                        <a href="../../alarms/yokogawa/decision-trees/ox400-no-signal.html">
-                            Start Diagnosis
-                        </a>
-                    </td>
-                </tr>
+    <div class="card oxygen">
+      <h3>Calibration Procedure (Technician Sequence)</h3>
+      <div class="step"><b>1)</b> Confirm analyzer stabilized (warm-up complete / stable trend).</div>
+      <div class="step"><b>2)</b> Check probe/filter: clean if heavily fouled; ensure no plugging.</div>
+      <div class="step"><b>3)</b> Leak check calibration lines (most common reason for bad calibration).</div>
+      <div class="step"><b>4)</b> Apply calibration gas (low/zero O₂ as per plant practice). Wait for stabilization.</div>
+      <div class="step"><b>5)</b> Apply span gas. Wait for stabilization. Confirm reading matches standard.</div>
+      <div class="step"><b>6)</b> Return to process. Verify stable output and correct DCS scaling.</div>
+      <p class="muted">Tip: If signal is unstable, extend stabilization time and confirm there are no leaks.</p>
+    </div>
 
-                <tr>
-                    <td>
-                        <a href="../../alarms/yokogawa/ox400-calibration-failure.html">
-                            Calibration Failure
-                        </a>
-                    </td>
-                    <td>Zero or span calibration unsuccessful</td>
-                    <td>
-                        <a href="../../alarms/yokogawa/decision-trees/ox400-calibration-failure.html">
-                            Start Diagnosis
-                        </a>
-                    </td>
-                </tr>
+    <div class="card oxygen">
+      <h3>Major Troubleshooting (Top Issues + Fast Checks)</h3>
+      <ul class="list">
+        <li><b>O₂ reading unstable:</b> probe fouling, leaks, purge issues, unstable process conditions.</li>
+        <li><b>Slow response:</b> plugged filter, heavy dust, installation location issues.</li>
+        <li><b>Wrong O₂ vs portable analyzer:</b> compare after stable period; check calibration gas and leaks.</li>
+        <li><b>Calibration fails:</b> incorrect gas, insufficient flow, leaks, not enough stabilization time.</li>
+        <li><b>DCS mismatch:</b> scaling/range incorrect, comms mapping, output wiring.</li>
+      </ul>
 
-                <tr>
-                    <td>
-                        <a href="../../alarms/yokogawa/ox400-high-drift.html">
-                            High Drift / Unstable Reading
-                        </a>
-                    </td>
-                    <td>Reading unstable or drifting beyond limits</td>
-                    <td>
-                        <a href="../../alarms/yokogawa/decision-trees/ox400-high-drift.html">
-                            Start Diagnosis
-                        </a>
-                    </td>
-                </tr>
+      <div class="action-row" style="margin-top:10px;">
+        <a class="btn btn-ghost" href="analyzers/yokogawa/alarms/ox400/index.html">Use Decision Trees →</a>
+      </div>
+    </div>
 
-            </tbody>
-        </table>
-    </section>
+  </div>
 
-    <section>
-        <h3>Maintenance & Calibration Notes</h3>
-        <ul>
-            <li>Ensure reference air path is clean and unobstructed</li>
-            <li>Perform calibration at stable process conditions</li>
-            <li>Inspect sensor wiring and heater resistance periodically</li>
-            <li>Check flue gas temperature against analyzer limits</li>
-        </ul>
-    </section>
+  <!-- Discussion -->
+  <div class="panel">
+    <h3 style="margin:0;color:#0b3c5d;">Discussion</h3>
+    <p class="muted" style="margin:8px 0 0;">
+      Share OX400 troubleshooting tips (fouling, calibration leaks, unstable O₂). (Requires GitHub login.)
+    </p>
+
+    <script src="https://utteranc.es/client.js"
+            repo="venkatpalika-oss/analyzershub"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
 
 </main>
 
-<footer>
-    <p>© 2026 AnalyzersHub.com | Built for Analyzer Technicians</p>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
 </footer>
 
 </body>
