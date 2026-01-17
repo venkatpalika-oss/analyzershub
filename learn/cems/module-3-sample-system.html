@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn | CEMS Module 3: Sample System Basics | AnalyzersHub</title>
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Knowledge Base</a>
+      <a href="troubleshooting/index.html">Troubleshooting</a>
+      <a href="cems/index.html">CEMS</a>
+      <a href="learn/index.html" class="active">Learn</a>
+      <a href="community/index.html">Community</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="resources/index.html">Resources</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero-search">
+  <div class="hero-inner">
+    <h2>CEMS Fundamentals — Module 3: Sample System Basics</h2>
+    <p>The sample system causes most “analyzer problems”. Learn to diagnose it like a pro.</p>
+    <div class="action-row">
+      <a class="btn btn-ghost" href="learn/index.html">← Back to Learn</a>
+      <a class="btn btn-ghost" href="learn/cems/module-2-wet-vs-dry.html">← Module 2</a>
+      <a class="btn btn-primary" href="learn/cems/module-4-calibration-quality.html">Next: Module 4 →</a>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+
+  <div class="panel">
+    <h3>Sample path (think in blocks)</h3>
+    <div class="step">
+      Stack/Process → Probe → Heated Line → Filter(s) → Pump/Flow Control →
+      Conditioning (chiller/dryer) → Analyzer → Vent/Return
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Most common field failures</h3>
+    <div class="grid">
+
+      <div class="card">
+        <h4>Probe Plugging</h4>
+        <p>Low flow, slow response, unstable readings. Usually dust/ash/salts buildup.</p>
+      </div>
+
+      <div class="card">
+        <h4>Cold Spots / Heater Failure</h4>
+        <p>Condensation forms, causing drift, noise, corrosion, and repeated calibration failure.</p>
+      </div>
+
+      <div class="card">
+        <h4>Filter Restriction</h4>
+        <p>Pressure drop increases, pump works harder, response time becomes slow.</p>
+      </div>
+
+      <div class="card">
+        <h4>Leaks (Air Ingress)</h4>
+        <p>False O₂, dilution of gas analyzers, unstable baseline. Leak test is mandatory.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Technician troubleshooting method (sample system)</h3>
+    <ol class="list">
+      <li>Confirm flow at analyzer inlet (not just pump running)</li>
+      <li>Check filters and DP (if available)</li>
+      <li>Inspect chiller temperature and drain</li>
+      <li>Check heated line temperature and continuity</li>
+      <li>Perform leak test (calibration manifold + sample path)</li>
+      <li>Verify stable readings using calibration gas</li>
+    </ol>
+  </div>
+
+  <div class="warn">
+    <b>Rule:</b> If response is slow, fix flow restriction first.
+    If readings drift, suspect condensation/leaks before electronics.
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <b>AnalyzersHub</b><br>
+    <span class="muted">Built for Analyzer Technicians</span>
+  </div>
+</footer>
+
+</body>
+</html>
