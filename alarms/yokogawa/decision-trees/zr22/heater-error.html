@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZR22G Heater Error | Yokogawa Decision Tree</title>
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/venkatpalika-oss/analyzershub/discussions" target="_blank" rel="noopener">Discussion</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="alarms/yokogawa/decision-trees/index.html">Yokogawa Decision Trees</a><span>›</span>
+  <a href="analyzers/yokogawa/zr22g.html">ZR22G</a><span>›</span>
+  <span class="current">Heater Error</span>
+</nav>
+
+<main class="container">
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">ZR22G — Heater Error / Temperature Not Ready (Decision Tree)</h2>
+    <p class="muted" style="margin:8px 0 0;">Use this when heater alarms appear, warm-up never completes, or temperature is unstable.</p>
+
+    <div class="warn">
+      <b>Safety:</b> Isolate power before opening terminals. Heater circuits can be high temperature/high power.
+    </div>
+
+    <div class="action-row">
+      <a class="btn btn-ghost" href="alarms/yokogawa/decision-trees/index.html">← Back to Yokogawa Trees</a>
+      <a class="btn btn-ghost" href="analyzers/yokogawa/zr22g.html">ZR22G Main Page →</a>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card oxygen">
+      <h3>Decision Tree</h3>
+
+      <div class="step"><b>1) Power supply OK?</b><br>
+        Confirm correct incoming voltage, breakers/fuses OK, no loose terminals.
+      </div>
+
+      <div class="step"><b>2) Heater output present?</b><br>
+        Check if heater output/SSR/relay is switching. If no switching → suspect controller/SSR/relay output.
+      </div>
+
+      <div class="step"><b>3) Wiring/connector condition</b><br>
+        Inspect heater wiring, connectors, terminal tightness, signs of overheating/corrosion/water ingress.
+      </div>
+
+      <div class="step"><b>4) Heater element continuity</b><br>
+        Check heater resistance/continuity (as per service practice). Open circuit → heater element failure.
+      </div>
+
+      <div class="step"><b>5) Temperature sensor issue?</b><br>
+        If heater is heating but temperature reading abnormal/unstable → suspect temp sensor, wiring, or bad connection.
+      </div>
+
+      <div class="step"><b>6) Environmental causes</b><br>
+        Extremely cold ambient, damaged insulation, or water ingress can prevent reaching temperature.
+      </div>
+
+      <div class="step"><b>7) After repair</b><br>
+        Re-energize, allow warm-up completion, then verify stable O₂ reading before calibration.
+      </div>
+    </div>
+
+    <div class="card oxygen">
+      <h3>Common Root Causes</h3>
+      <ul class="list">
+        <li>Heater element open-circuit</li>
+        <li>Loose/burnt terminals or connector corrosion</li>
+        <li>SSR/relay failure (no heater drive)</li>
+        <li>Temperature sensor wiring fault</li>
+        <li>Water ingress in junction box</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="alarms/yokogawa/decision-trees/index.html">Yokogawa Trees</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
