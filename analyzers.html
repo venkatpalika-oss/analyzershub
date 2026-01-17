@@ -7,6 +7,26 @@
 
 <base href="/analyzershub/">
 <link rel="stylesheet" href="assets/css/style.css">
+
+<!-- SEO Structured Data -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"CollectionPage",
+  "@id":"https://venkatpalika-oss.github.io/analyzershub/analyzers.html#page",
+  "name":"Analyzer Search",
+  "url":"https://venkatpalika-oss.github.io/analyzershub/analyzers.html",
+  "isPartOf":{"@id":"https://venkatpalika-oss.github.io/analyzershub/#website"},
+  "about":[
+    {"@type":"Thing","name":"Industrial analyzers"},
+    {"@type":"Thing","name":"Troubleshooting"},
+    {"@type":"Thing","name":"Alarm codes"},
+    {"@type":"Thing","name":"Decision trees"},
+    {"@type":"Thing","name":"Calibration"}
+  ]
+}
+</script>
+
 </head>
 
 <body>
@@ -169,6 +189,11 @@ const searchInput = document.getElementById("searchInput");
 const cards = [...document.querySelectorAll("#cards .card")];
 const buttons = [...document.querySelectorAll(".filter-btn")];
 let active = "all";
+
+/* 🔍 URL ?q= support (for SEO SearchAction) */
+const p = new URLSearchParams(location.search);
+const qParam = (p.get("q") || "").trim();
+if (qParam) searchInput.value = qParam;
 
 function apply(){
   const q = (searchInput.value || "").toLowerCase().trim();
