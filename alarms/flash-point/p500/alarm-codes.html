@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P-500 Alarm Codes | AnalyzersHub</title>
+
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="analyzers.html">Analyzers</a><span>›</span>
+  <a href="analyzers/flash-point/p500/p500.html">P-500</a><span>›</span>
+  <span class="current">Alarm Codes</span>
+</nav>
+
+<main class="container">
+
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">Flash Point Analyzer P-500 — Alarm Codes (Quick Actions)</h2>
+    <p class="muted" style="margin-top:8px;">
+      Practical “first actions” for common P-500 alarms. Use decision trees for step-by-step isolation.
+    </p>
+
+    <div class="action-row">
+      <a class="btn btn-ghost" href="analyzers/flash-point/p500/p500.html">← Back to P-500</a>
+      <a class="btn btn-primary" href="alarms/flash-point/p500/decision-trees/index.html">Decision Trees →</a>
+    </div>
+
+    <div class="warn">
+      <b>Technician rule:</b> Fix <b>sample condition + cleanliness + enclosure interlocks</b> first.
+      Many “faults” are caused by contamination, incorrect sample volume, or doors/interlocks not seated.
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Ignition / Flame Detection</h3>
+      <ul class="list">
+        <li><b>No Ignition Detected</b> — check ignition source (spark/electrode), wiring, and detector cleanliness.</li>
+        <li><b>Weak/Intermittent Spark</b> — inspect electrode gap, carbon deposits, and HV supply.</li>
+        <li><b>Flame/Optical Sensor Fault</b> — clean lens/sensor, verify alignment, check cable seating.</li>
+      </ul>
+      <div class="action-row">
+        <a class="btn btn-ghost" href="alarms/flash-point/p500/decision-trees/no-ignition.html">No Ignition Tree →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Temperature / Heating</h3>
+      <ul class="list">
+        <li><b>Overheating</b> — check heater control, SSR/relay, temperature sensor connection, airflow/venting.</li>
+        <li><b>Temperature Not Rising</b> — verify heater power, fuse, wiring, controller output.</li>
+        <li><b>Temp Sensor Error</b> — loose RTD/TC wiring, sensor open/short, moisture ingress.</li>
+      </ul>
+      <div class="action-row">
+        <a class="btn btn-ghost" href="alarms/flash-point/p500/decision-trees/overheating.html">Overheating Tree →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Test Sequence / Interlocks</h3>
+      <ul class="list">
+        <li><b>Test Aborted / Safety Interlock</b> — check enclosure door switch, emergency stop, lid sensor.</li>
+        <li><b>Sample Not Ready</b> — confirm sample cup seated, correct fill volume, no spillage.</li>
+        <li><b>Motor/Actuator Fault</b> — check ignition arm / lid actuator movement (if equipped).</li>
+      </ul>
+      <p class="muted" style="margin:8px 0 0;">Tip: many aborts are from door/lid switches not fully engaged.</p>
+    </div>
+
+    <div class="card">
+      <h3>Quality / Repeatability</h3>
+      <ul class="list">
+        <li><b>Erratic / Non-repeatable Results</b> — sample contamination, dirty cup, unstable ramp rate, drafts.</li>
+        <li><b>Results Too High/Low</b> — verify method settings, sample volume, reference material validity.</li>
+      </ul>
+      <div class="action-row">
+        <a class="btn btn-ghost" href="alarms/flash-point/p500/decision-trees/erratic-results.html">Erratic Results Tree →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="muted" style="margin-top:18px;font-size:.85rem;">
+    ⚠️ Reference only. Always follow site safety rules and manufacturer documentation.
+  </p>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
