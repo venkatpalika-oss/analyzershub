@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P-500 No Ignition Detected | Decision Tree</title>
+
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="alarms/flash-point/p500/decision-trees/index.html">P-500 Trees</a><span>›</span>
+  <span class="current">No Ignition Detected</span>
+</nav>
+
+<main class="container">
+
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">Decision Tree: No Ignition Detected</h2>
+    <p class="muted" style="margin-top:8px;">
+      Symptom: ignition never occurs, or analyzer does not detect a flash event.
+    </p>
+
+    <div class="action-row">
+      <a class="btn btn-ghost" href="alarms/flash-point/p500/decision-trees/index.html">← Back to Trees</a>
+      <a class="btn btn-ghost" href="alarms/flash-point/p500/alarm-codes.html">← Alarm Codes</a>
+      <a class="btn btn-ghost" href="analyzers/flash-point/p500/p500.html">P-500 Main Page →</a>
+    </div>
+
+    <div class="warn">
+      <b>Safety:</b> Ensure enclosure closed, ventilation OK, and follow site rules before any ignition tests.
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Step-by-step isolation</h3>
+
+    <div class="step"><b>1)</b> Confirm the correct method/program is selected (closed cup/open cup settings, ramp rate, ignition interval).</div>
+
+    <div class="step"><b>2)</b> Verify sample cup is clean, dry, properly seated, and filled to correct volume (no spills on rim or lid seal).</div>
+
+    <div class="step"><b>3)</b> Check enclosure door/lid interlock: ensure switches fully engaged (many “no ignition” events are blocked by interlock).</div>
+
+    <div class="step"><b>4)</b> Perform ignition check:
+      <ul class="list">
+        <li>Inspect ignition electrode/spark tip condition (carbon deposits, damage).</li>
+        <li>Confirm electrode gap and positioning (as per manual).</li>
+        <li>Verify ignition wiring connectors seated and dry.</li>
+      </ul>
+    </div>
+
+    <div class="step"><b>5)</b> If spark is weak/intermittent:
+      <ul class="list">
+        <li>Check HV ignition supply output (if test point available).</li>
+        <li>Inspect cable insulation for cracking or moisture.</li>
+        <li>Verify proper grounding/earthing.</li>
+      </ul>
+    </div>
+
+    <div class="step"><b>6)</b> If ignition occurs but is not detected:
+      <ul class="list">
+        <li>Clean flame/optical sensor window/lens.</li>
+        <li>Check sensor alignment and cable seating.</li>
+        <li>Verify detector status in diagnostics.</li>
+      </ul>
+    </div>
+
+    <div class="step"><b>7)</b> Final validation:
+      <ul class="list">
+        <li>Run a certified reference material to confirm detection and repeatability.</li>
+        <li>If still failing, replace ignition electrode and/or detector module per manual.</li>
+      </ul>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
