@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AMETEK 933 Alarm Codes | AnalyzersHub</title>
+
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="analyzers.html">Analyzers</a><span>›</span>
+  <a href="analyzers/ametek/933/933.html">AMETEK 933</a><span>›</span>
+  <span class="current">Alarm Codes</span>
+</nav>
+
+<main class="container">
+
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">AMETEK 933 — Alarm Codes (Quick Actions)</h2>
+    <p class="muted" style="margin-top:8px;">
+      Common AMETEK 933 alarm conditions with recommended first checks. Use decision trees for step-by-step isolation.
+    </p>
+
+    <div class="action-row">
+      <a class="btn btn-ghost" href="analyzers/ametek/933/933.html">← Back to AMETEK 933</a>
+      <a class="btn btn-primary" href="alarms/ametek/933/decision-trees/index.html">Decision Trees →</a>
+    </div>
+
+    <div class="field-tip">
+      <b>Field tip:</b> For oxygen analyzers, solve <b>flow/leaks/moisture</b> before touching calibration or sensor replacement.
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Flow / Sample System</h3>
+      <ul class="list">
+        <li><b>Low / No Flow</b> — confirm sample supply, filter blockage, regulator setpoint, pump operation</li>
+        <li><b>Flow unstable</b> — regulator hunting, leaks, pump weak, condensation</li>
+        <li><b>High DP / Filter blocked</b> — replace/clean filter, check sample particulate</li>
+      </ul>
+      <div class="action-row">
+        <a class="btn btn-ghost" href="alarms/ametek/933/decision-trees/low-no-flow.html">Flow Tree →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Reading Quality</h3>
+      <ul class="list">
+        <li><b>Unstable reading</b> — moisture, leaks, unstable flow, loose wiring, grounding</li>
+        <li><b>Slow response</b> — long lines, restrictions, weak pump, moisture separation issue</li>
+      </ul>
+      <div class="action-row">
+        <a class="btn btn-ghost" href="alarms/ametek/933/decision-trees/unstable-reading.html">Unstable Tree →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>High O₂ Bias</h3>
+      <ul class="list">
+        <li><b>O₂ reading too high</b> — air ingress/leaks, cracked tubing, loose fittings, sample dilution</li>
+        <li><b>Span seems high but process stable</b> — verify calibration gas and sample integrity</li>
+      </ul>
+      <div class="action-row">
+        <a class="btn btn-ghost" href="alarms/ametek/933/decision-trees/high-o2-bias-air-ingress.html">Air Ingress Tree →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Calibration / Sensor Health</h3>
+      <ul class="list">
+        <li><b>Calibration failure</b> — wrong gas, leaking cal manifold, insufficient warm-up, sensor aging</li>
+        <li><b>Zero/Span won’t stabilize</b> — flow/leaks/moisture first, then sensor</li>
+      </ul>
+      <div class="action-row">
+        <a class="btn btn-ghost" href="alarms/ametek/933/decision-trees/calibration-failure.html">Calibration Tree →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="muted" style="margin-top:18px;font-size:.85rem;">
+    ⚠️ Reference only. Always follow site safety rules and manufacturer documentation.
+  </p>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
