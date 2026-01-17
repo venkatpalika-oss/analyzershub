@@ -16,9 +16,8 @@
     <a class="brand" href="index.html">AnalyzersHub</a>
     <nav class="site-nav">
       <a href="index.html">Home</a>
-      <a href="analyzers.html">Search All Analyzers</a>
+      <a href="analyzers.html" class="active">Search All Analyzers</a>
       <a href="analyzers.html?category=gc">GC Hub</a>
-      <a href="guides/gc/chromatogram-guide.html">Chromatogram Guide</a>
       <a href="blog/index.html">Blog</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -28,36 +27,47 @@
 <main class="container">
 
   <h2 style="margin:18px 0 6px;">Analyzer Search</h2>
-  <p class="muted" style="margin:0 0 14px;">Search by model, vendor, or type (GC / Oxygen)</p>
+  <p class="muted" style="margin:0 0 14px;">
+    Search by model, manufacturer, or analyzer type
+  </p>
 
+  <!-- Search -->
   <div class="search-wrap">
-    <input id="searchInput" class="search-input" placeholder="Search… (ZR22G, OX400, GC8000, PGC5000B, ABB, Siemens)">
+    <input id="searchInput" class="search-input"
+           placeholder="Search… (ZR22G, OX400, GC8000, P-500, ABB, Siemens)">
   </div>
 
+  <!-- Filters -->
   <div class="filter-bar">
     <button class="filter-btn active" data-filter="all">All</button>
     <button class="filter-btn" data-filter="gc">GC</button>
     <button class="filter-btn" data-filter="oxygen">Oxygen</button>
-    <button class="filter-btn" data-filter="abb">ABB</button>
+    <button class="filter-btn" data-filter="flash">Flash Point</button>
     <button class="filter-btn" data-filter="yokogawa">Yokogawa</button>
+    <button class="filter-btn" data-filter="abb">ABB</button>
     <button class="filter-btn" data-filter="siemens">Siemens</button>
-    <button class="filter-btn" data-filter="agilent">Agilent</button>
   </div>
 
+  <!-- Analyzer Cards -->
   <div class="grid" id="cards">
 
-    <!-- Yokogawa -->
-    <div class="card yokogawa oxygen" data-tag="yokogawa oxygen" data-search="yokogawa zr22g oxygen zirconia">
+    <!-- ================= YOKOGAWA ================= -->
+
+    <div class="card yokogawa oxygen"
+         data-tag="yokogawa oxygen"
+         data-search="yokogawa zr22g zirconia oxygen">
       <h3>Yokogawa ZR22G</h3>
       <p>Zirconia oxygen analyzer for combustion control.</p>
       <div class="action-row">
         <a class="btn btn-primary" href="analyzers/yokogawa/zr22g.html">Open →</a>
         <a class="btn btn-ghost" href="alarms/yokogawa/alarm-codes/zr22g-alarm-codes.html">Alarm Codes →</a>
-        <a class="btn btn-ghost" href="alarms/yokogawa/decision-trees/zr22g/calibration-failure.html">Trees →</a>
+        <a class="btn btn-ghost" href="alarms/yokogawa/decision-trees/zr22g/index.html">Trees →</a>
       </div>
     </div>
 
-    <div class="card yokogawa oxygen" data-tag="yokogawa oxygen" data-search="yokogawa ox400 oxygen analyzer">
+    <div class="card yokogawa oxygen"
+         data-tag="yokogawa oxygen"
+         data-search="yokogawa ox400 oxygen">
       <h3>Yokogawa OX400</h3>
       <p>In-situ oxygen analyzer for boilers and furnaces.</p>
       <div class="action-row">
@@ -67,66 +77,56 @@
       </div>
     </div>
 
-    <div class="card yokogawa gc" data-tag="yokogawa gc" data-search="yokogawa gc8000 process gas chromatograph gc">
+    <div class="card yokogawa gc"
+         data-tag="yokogawa gc"
+         data-search="yokogawa gc8000 gas chromatograph">
       <h3>Yokogawa GC8000</h3>
-      <p>Process gas chromatograph for continuous online gas composition monitoring.</p>
+      <p>Process gas chromatograph for continuous online analysis.</p>
       <div class="action-row">
         <a class="btn btn-primary" href="analyzers/yokogawa/gc8000/gc8000.html">Open →</a>
         <a class="btn btn-ghost" href="alarms/yokogawa/decision-trees/gc8000/carrier-pressure-low.html">Trees →</a>
       </div>
     </div>
 
-    <!-- ABB GC -->
-    <div class="card abb gc" data-tag="abb gc" data-search="abb pgc5000b smart oven gc">
-      <h3>ABB PGC5000B (Smart Oven)</h3>
-      <p>Process GC smart oven series.</p>
+    <!-- ================= FLASH POINT ================= -->
+
+    <div class="card flash"
+         data-tag="flash"
+         data-search="flash point analyzer p-500 p500">
+      <h3>Flash Point Analyzer P-500</h3>
+      <p>Automatic flash point analyzer for liquid safety testing.</p>
       <div class="action-row">
-        <a class="btn btn-primary" href="analyzers/abb/gc/pgc5000b/pgc5000b.html">Open →</a>
-        <a class="btn btn-ghost" href="analyzers/abb/gc/pgc5000b/alarms/index.html">Alarms →</a>
+        <a class="btn btn-primary"
+           href="analyzers/flash-point/p500/p500.html">Open →</a>
+        <a class="btn btn-ghost"
+           href="alarms/flash-point/p500/alarm-codes.html">Alarm Codes →</a>
+        <a class="btn btn-ghost"
+           href="alarms/flash-point/p500/decision-trees/index.html">Trees →</a>
       </div>
     </div>
 
-    <div class="card abb gc" data-tag="abb gc" data-search="abb pgc5000c smart oven gc">
-      <h3>ABB PGC5000C (Smart Oven)</h3>
-      <p>Process GC smart oven series.</p>
+    <!-- ================= ABB GC ================= -->
+
+    <div class="card abb gc"
+         data-tag="abb gc"
+         data-search="abb pgc5000b smart oven gc">
+      <h3>ABB PGC5000B</h3>
+      <p>Process GC – Smart Oven Series.</p>
       <div class="action-row">
-        <a class="btn btn-primary" href="analyzers/abb/gc/pgc5000c/pgc5000c.html">Open →</a>
-        <a class="btn btn-ghost" href="analyzers/abb/gc/pgc5000c/alarms/index.html">Alarms →</a>
+        <a class="btn btn-primary"
+           href="analyzers/abb/gc/pgc5000b/pgc5000b.html">Open →</a>
       </div>
     </div>
 
-    <div class="card abb gc" data-tag="abb gc" data-search="abb pgc5007b total sulfur gc">
-      <h3>ABB PGC5007B (Total Sulfur)</h3>
-      <p>Configured for total sulfur analysis applications.</p>
-      <div class="action-row">
-        <a class="btn btn-primary" href="analyzers/abb/gc/pgc5007b/pgc5007b.html">Open →</a>
-        <a class="btn btn-ghost" href="analyzers/abb/gc/pgc5007b/alarms/index.html">Alarms →</a>
-      </div>
-    </div>
+    <!-- ================= SIEMENS ================= -->
 
-    <div class="card abb gc" data-tag="abb gc" data-search="abb portable ngc natural gas chromatograph">
-      <h3>ABB Portable NGC</h3>
-      <p>Portable natural gas chromatograph for field verification.</p>
-      <div class="action-row">
-        <a class="btn btn-primary" href="analyzers/abb/gc/portable-ngc/portable-ngc.html">Open →</a>
-        <a class="btn btn-ghost" href="analyzers/abb/gc/portable-ngc/alarms/index.html">Alarms →</a>
-      </div>
-    </div>
-
-    <!-- Siemens placeholders -->
-    <div class="card siemens gc" data-tag="siemens gc" data-search="siemens maxum edition ii gc">
+    <div class="card siemens gc"
+         data-tag="siemens gc"
+         data-search="siemens maxum edition ii gc">
       <h3>Siemens MAXUM Edition II</h3>
-      <p>Process gas chromatograph (page to be added).</p>
+      <p>Process gas chromatograph (page coming soon).</p>
       <div class="action-row">
-        <a class="btn btn-ghost" href="analyzers.html">Coming soon</a>
-      </div>
-    </div>
-
-    <div class="card siemens gc" data-tag="siemens gc" data-search="siemens sitrans cv wobbe calorific value gc">
-      <h3>Siemens SITRANS CV</h3>
-      <p>Wobbe / calorific value process GC (page to be added).</p>
-      <div class="action-row">
-        <a class="btn btn-ghost" href="analyzers.html">Coming soon</a>
+        <span class="btn btn-ghost">Coming soon</span>
       </div>
     </div>
 
@@ -135,21 +135,23 @@
 
 <footer class="site-footer">
   <div class="site-footer-inner">
-    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div>
+      <b>AnalyzersHub</b><br>
+      <span class="muted">Built for Analyzer Technicians</span>
+    </div>
     <div class="footer-links">
-  <a href="index.html">Home</a>
-  <a href="analyzers.html">Search</a>
-  <a href="disclaimer.html">Disclaimer</a>
-</div>
-
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
   </div>
 </footer>
 
+<!-- Search + Filter Script -->
 <script>
 const searchInput = document.getElementById("searchInput");
 const cards = [...document.querySelectorAll("#cards .card")];
 const buttons = [...document.querySelectorAll(".filter-btn")];
-
 let active = "all";
 
 function apply(){
@@ -157,30 +159,21 @@ function apply(){
   cards.forEach(c=>{
     const tag = (c.dataset.tag || "").toLowerCase();
     const text = (c.dataset.search || "").toLowerCase();
-    const matchesFilter = (active === "all") || tag.includes(active);
-    const matchesSearch = !q || text.includes(q);
-    c.classList.toggle("is-hidden", !(matchesFilter && matchesSearch));
+    const okFilter = (active === "all") || tag.includes(active);
+    const okSearch = !q || text.includes(q);
+    c.classList.toggle("is-hidden", !(okFilter && okSearch));
   });
 }
 
 function setFilter(v){
   active = v;
-  buttons.forEach(b => b.classList.toggle("active", b.dataset.filter === v));
+  buttons.forEach(b=>b.classList.toggle("active", b.dataset.filter===v));
   apply();
 }
 
-buttons.forEach(b => b.addEventListener("click", ()=> setFilter(b.dataset.filter)));
+buttons.forEach(b=>b.addEventListener("click",()=>setFilter(b.dataset.filter)));
 searchInput.addEventListener("input", apply);
-
-(function init(){
-  const p = new URLSearchParams(location.search);
-  let v = (p.get("vendor") || p.get("filter") || "").toLowerCase().trim();
-  let c = (p.get("category") || "").toLowerCase().trim();
-
-  if (v) setFilter(v);
-  else if (c) setFilter(c);
-  else apply();
-})();
+apply();
 </script>
 
 </body>
