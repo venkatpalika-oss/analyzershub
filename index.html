@@ -65,22 +65,43 @@
 </header>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero"
+  style="
+    min-height:360px;
+    display:flex;
+    align-items:center;
+    background:
+      linear-gradient(rgba(11,60,93,0.85), rgba(11,60,93,0.65)),
+      url('assets/images/home-hero.png');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+  "
+>
   <div class="hero-inner">
-    <h2>Industrial Analyzer Knowledge Hub</h2>
-    <p>
-      Working principles, components, calibration procedures,
-      troubleshooting guides, alarm codes, and decision trees —
-      built by technicians, for technicians.
+    <h2 style="color:#fff;text-shadow:0 3px 16px rgba(0,0,0,.8);">
+      Industrial Analyzer Knowledge Hub
+    </h2>
+
+    <p style="color:#fff;text-shadow:0 3px 16px rgba(0,0,0,.8);max-width:900px;">
+      Working principles, calibration procedures, troubleshooting guides,
+      alarm codes, and decision trees — built for analyzer technicians.
     </p>
 
     <div class="action-row">
-      <a class="btn btn-primary" href="analyzers.html">Browse All Analyzers →</a>
-      <a class="btn btn-ghost" href="analyzers.html?category=gc">GC Hub →</a>
-      <a class="btn btn-ghost" href="analyzers.html?category=oxygen">Oxygen Hub →</a>
+      <a class="btn btn-primary" href="analyzers.html">
+        Browse All Analyzers →
+      </a>
+      <a class="btn btn-ghost" href="analyzers.html?category=gc">
+        GC Hub →
+      </a>
+      <a class="btn btn-ghost" href="analyzers.html?category=oxygen">
+        Oxygen Hub →
+      </a>
     </div>
   </div>
 </section>
+
 
 <main class="container">
 
