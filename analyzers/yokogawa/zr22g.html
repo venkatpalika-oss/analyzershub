@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yokogawa ZR22G | AnalyzersHub</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yokogawa ZR22G | AnalyzersHub</title>
 
-  <base href="/analyzershub/">
-  <link rel="stylesheet" href="assets/css/style.css" />
+<!-- GitHub Pages base -->
+<base href="/analyzershub/">
+
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -17,124 +19,126 @@
     <nav class="site-nav">
       <a href="index.html">Home</a>
       <a href="analyzers.html">Analyzer Search</a>
-      <a href="blog/index.html">Blog</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://github.com/venkatpalika-oss/analyzershub/discussions" target="_blank" rel="noopener">Discussion</a>
+      <a href="analyzers.html?filter=yokogawa">Yokogawa</a>
     </nav>
   </div>
 </header>
 
-<nav class="crumbs" aria-label="Breadcrumb">
+<nav class="crumbs">
   <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers.html">Analyzer Search</a><span>›</span>
-  <a href="analyzers.html?vendor=yokogawa">Yokogawa</a><span>›</span>
-  <span class="current">ZR22G</span>
+  <a href="analyzers.html">Analyzers</a><span>›</span>
+  <span class="current">Yokogawa ZR22G</span>
 </nav>
 
-<main class="container">
-
-  <div class="panel">
-    <h2 style="margin:0;color:#0b3c5d;">Yokogawa ZR22G — Zirconia Oxygen Analyzer</h2>
-    <p class="muted" style="margin:8px 0 0;">
-      In-situ zirconia O₂ analyzer used for combustion control (boilers, heaters, furnaces).
-      Technician focus: probe condition, heater stability, reference air, calibration gas integrity, and drift control.
+<section class="hero">
+  <div class="hero-inner">
+    <h2>Yokogawa ZR22G</h2>
+    <p>
+      Zirconia in-situ oxygen analyzer for combustion control in boilers,
+      furnaces, heaters, and process kilns.
     </p>
 
     <div class="action-row">
-      <a class="btn btn-ghost" href="analyzers.html">← Back to Search</a>
-      <a class="btn btn-primary" href="alarms/yokogawa/decision-trees/index.html">Yokogawa Decision Trees Hub →</a>
-      <a class="btn btn-ghost" href="alarms/yokogawa/decision-trees/zr22g/calibration-failure.html">ZR22G Trees →</a>
-      <a class="btn btn-ghost" href="alarms/yokogawa/alarm-codes/zr22g-alarm-codes.html">Alarm Codes →</a>
+      <a class="btn btn-primary" href="alarms/yokogawa/alarm-codes/zr22g-alarm-codes.html">
+        Alarm Codes →
+      </a>
+      <a class="btn btn-ghost" href="alarms/yokogawa/decision-trees/zr22g/index.html">
+        Decision Trees →
+      </a>
+      <a class="btn btn-ghost" href="analyzers.html">
+        Back to Search →
+      </a>
     </div>
+  </div>
+</section>
+
+<main class="container">
+
+  <!-- Working Principle -->
+  <div class="panel">
+    <h3>Working Principle</h3>
+    <p>
+      The ZR22G operates on the zirconium dioxide (ZrO₂) solid electrolyte
+      principle. When heated to approximately 700°C, the zirconia sensor
+      generates an EMF proportional to the difference in oxygen partial
+      pressure between the process gas and the reference air.
+    </p>
+    <p>
+      This voltage is converted by the transmitter into oxygen concentration
+      using the Nernst equation.
+    </p>
+  </div>
+
+  <!-- Main Components -->
+  <div class="panel">
+    <h3>Main Components</h3>
+    <ul class="list">
+      <li>Zirconia sensor cell</li>
+      <li>Heater assembly (maintains sensor temperature)</li>
+      <li>Reference air system</li>
+      <li>Detector probe (in-situ mounting)</li>
+      <li>ZR transmitter / converter</li>
+      <li>Signal cables and junction box</li>
+    </ul>
+  </div>
+
+  <!-- Calibration -->
+  <div class="panel">
+    <h3>Calibration Procedure</h3>
+    <ol class="list">
+      <li>Ensure stable process conditions and normal sensor temperature</li>
+      <li>Perform <b>Zero calibration</b> using nitrogen or instrument air</li>
+      <li>Apply <b>Span gas</b> (typically 2–8% O₂)</li>
+      <li>Allow readings to stabilize before accepting calibration</li>
+      <li>Verify calibration results against expected values</li>
+    </ol>
 
     <div class="warn">
-      <b>Technician rule:</b> If O₂ is unstable or drifting, check <b>probe condition + reference air + heater stability</b> first.
-      Don’t calibrate until the reading is stable.
+      Field Tip: Frequent calibration failures often indicate sensor aging,
+      reference air blockage, or heater degradation.
     </div>
   </div>
 
-  <div class="grid">
-
-    <div class="card oxygen">
-      <h3>Working Principle</h3>
-      <p>
-        ZR22G uses a <b>zirconia sensor</b> (solid electrolyte) that generates an electrical signal based on the
-        difference in oxygen concentration between <b>process gas</b> and <b>reference air</b>.
-      </p>
-      <ul class="list">
-        <li><b>Sensor output</b> changes with oxygen partial pressure difference (process vs reference).</li>
-        <li><b>Heater</b> maintains sensor temperature for stable, correct measurement.</li>
-        <li><b>Accuracy depends on</b> clean probe, stable temperature, proper reference air, and correct calibration gas.</li>
-      </ul>
-    </div>
-
-    <div class="card oxygen">
-      <h3>Main Components (Field Focus)</h3>
-      <ul class="list">
-        <li><b>Probe / sensor assembly:</b> zirconia cell, protective filter/cap, mounting hardware.</li>
-        <li><b>Heater & temperature control:</b> heater element, temperature sensor, controller.</li>
-        <li><b>Reference air system:</b> reference air line, filter, flow control (clean/dry air).</li>
-        <li><b>Calibration system:</b> calibration gas connection, tubing, valves/solenoids (if equipped).</li>
-        <li><b>Converter/transmitter:</b> display/HMI, outputs, diagnostics, DCS communication.</li>
-      </ul>
-    </div>
-
-    <div class="card oxygen">
-      <h3>Calibration Procedure (Technician Sequence)</h3>
-      <div class="step"><b>1)</b> Warm-up complete: confirm heater OK and reading stable.</div>
-      <div class="step"><b>2)</b> Verify reference air: clean, dry, flowing (no blockage/leaks).</div>
-      <div class="step"><b>3)</b> Check probe/filter condition: no heavy dust buildup or plugging.</div>
-      <div class="step"><b>4)</b> Apply <b>Zero/Low O₂</b> calibration gas (as per plant practice). Wait stabilization.</div>
-      <div class="step"><b>5)</b> Apply <b>Span</b> calibration gas. Wait stabilization. Adjust span value if required.</div>
-      <div class="step"><b>6)</b> Return to process. Verify stable reading and output to DCS.</div>
-      <p class="muted">Tip: If you see unstable O₂ during calibration, fix probe/heater/reference air first.</p>
-    </div>
-
-    <div class="card oxygen">
-      <h3>Major Troubleshooting (Top Issues + Fast Checks)</h3>
-      <ul class="list">
-        <li><b>High drift / unstable O₂:</b> probe contamination, reference air leak/blockage, heater instability.</li>
-        <li><b>Slow response:</b> plugged filter/cap, heavy dust, long diffusion time due to blockage.</li>
-        <li><b>Heater error / temp not ready:</b> heater element failure, wiring, controller, power supply.</li>
-        <li><b>Calibration failure:</b> wrong gas, leaks in cal line, insufficient stabilization time, unstable sensor temp.</li>
-        <li><b>DCS mismatch:</b> scaling/range, output wiring, comms mapping.</li>
-      </ul>
-
-      <div class="action-row" style="margin-top:10px;">
-        <a class="btn btn-ghost" href="alarms/yokogawa/decision-trees/zr22g/high-drift.html">High Drift Tree →</a>
-        <a class="btn btn-ghost" href="alarms/yokogawa/decision-trees/zr22g/heater-error.html">Heater Error Tree →</a>
-        <a class="btn btn-ghost" href="alarms/yokogawa/decision-trees/zr22g/no-response.html">No Response Tree →</a>
-      </div>
-    </div>
-
-  </div>
-
+  <!-- Major Troubleshooting -->
   <div class="panel">
-    <h3 style="margin:0;color:#0b3c5d;">Discussion</h3>
-    <p class="muted" style="margin:8px 0 0;">
-      Share ZR22G troubleshooting tips (heater issues, drift, calibration experience). (Requires GitHub login.)
-    </p>
+    <h3>Major Troubleshooting Areas</h3>
+    <ul class="list">
+      <li><b>High Drift</b> – sensor aging, contamination, unstable reference air</li>
+      <li><b>Calibration Failure</b> – incorrect gas, leaks, poor flow control</li>
+      <li><b>Heater Error</b> – heater burnout, wiring issues, controller fault</li>
+      <li><b>Low EMF</b> – cracked sensor, process oxygen imbalance</li>
+      <li><b>Signal Noise</b> – grounding or shielding problems</li>
+    </ul>
+  </div>
 
-    <script src="https://utteranc.es/client.js"
-            repo="venkatpalika-oss/analyzershub"
-            issue-term="pathname"
-            theme="github-light"
-            crossorigin="anonymous"
-            async>
-    </script>
+  <!-- Navigation -->
+  <div class="panel">
+    <h3>Quick Navigation</h3>
+    <div class="action-row">
+      <a class="btn btn-primary" href="alarms/yokogawa/alarm-codes/zr22g-alarm-codes.html">
+        ZR22G Alarm Codes
+      </a>
+      <a class="btn btn-ghost" href="alarms/yokogawa/decision-trees/zr22g/index.html">
+        ZR22G Decision Trees
+      </a>
+      <a class="btn btn-ghost" href="analyzers/yokogawa/ox400.html">
+        Next: OX400 →
+      </a>
+    </div>
   </div>
 
 </main>
 
 <footer class="site-footer">
   <div class="site-footer-inner">
-    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div>
+      <b>AnalyzersHub</b><br>
+      <span class="muted">Built for Analyzer Technicians</span>
+    </div>
     <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="analyzers.html">Search</a>
-      <a href="alarms/yokogawa/decision-trees/index.html">Yokogawa Trees</a>
-      <a href="blog/index.html">Blog</a>
-      <a href="contact.html">Contact</a>
+      <a href="disclaimer.html">Disclaimer</a>
     </div>
   </div>
 </footer>
