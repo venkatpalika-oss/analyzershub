@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>AMETEK 933 Series | AnalyzersHub</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMETEK 933 Oxygen Analyzer | AnalyzersHub</title>
 
 <base href="/analyzershub/">
-<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -17,8 +17,7 @@
     <nav class="site-nav">
       <a href="index.html">Home</a>
       <a href="analyzers.html">Analyzer Search</a>
-      <a href="disclaimer.html">Disclaimer</a>
-      <a href="contact.html">Contact</a>
+      <a href="analyzers.html?filter=ametek">AMETEK</a>
     </nav>
   </div>
 </header>
@@ -26,126 +25,133 @@
 <nav class="crumbs">
   <a href="index.html">Home</a><span>›</span>
   <a href="analyzers.html">Analyzers</a><span>›</span>
-  <span class="current">AMETEK 933 Series</span>
+  <span class="current">AMETEK 933 Oxygen Analyzer</span>
 </nav>
 
-<section class="hero">
+<!-- HERO -->
+<section class="hero-search">
   <div class="hero-inner">
-    <h2>AMETEK 933 Series (Oxygen Analyzer)</h2>
+    <h2>AMETEK 933 Oxygen Analyzer</h2>
     <p>
-      Oxygen measurement system commonly used for combustion control and process monitoring.
-      Typical installations include boilers, furnaces, incinerators, and gas streams where O₂ is critical.
+      Continuous oxygen measurement for combustion control,
+      inerting, and process safety applications.
     </p>
 
     <div class="action-row">
-      <a class="btn btn-ghost" href="analyzers.html?category=oxygen">← Oxygen Hub</a>
-      <a class="btn btn-ghost" href="analyzers.html">← Analyzer Search</a>
-      <a class="btn btn-ghost" href="alarms/ametek/933/alarm-codes.html">Alarm Codes →</a>
-      <a class="btn btn-primary" href="alarms/ametek/933/decision-trees/index.html">Decision Trees →</a>
-    </div>
-
-    <div class="field-tip">
-      <b>Field tip:</b> If O₂ readings are unstable, check <b>sample system</b> first (leaks, moisture, filters, flow, pressure).
-      Sensor replacement should be the last step after verifying the basics.
+      <a class="btn btn-primary"
+         href="analyzers/ametek/933/troubleshooting.html">
+        Troubleshooting →
+      </a>
+      <a class="btn btn-ghost"
+         href="alarms/ametek/933/alarm-codes.html">
+        Alarm Codes →
+      </a>
+      <a class="btn btn-ghost"
+         href="alarms/ametek/933/decision-trees/index.html">
+        Decision Trees →
+      </a>
+      <a class="btn btn-ghost"
+         href="analyzers.html">
+        Back to Search →
+      </a>
     </div>
   </div>
 </section>
 
 <main class="container">
 
+  <!-- Working Principle -->
   <div class="panel">
-    <h3>Working Principle (General)</h3>
+    <h3>Working Principle</h3>
     <p>
-      The AMETEK 933 Series measures oxygen concentration by sensing oxygen partial pressure or oxygen-related electrochemical response
-      (depending on the specific 933 configuration). The analyzer conditions the sample gas (flow/pressure/temperature) and converts the
-      sensor output into oxygen concentration. Output is typically available as 4–20 mA and/or digital communication for the DCS/PLC.
+      The AMETEK 933 Oxygen Analyzer measures oxygen concentration
+      using electrochemical or zirconia-based sensor technology
+      (depending on configuration).
     </p>
+    <p>
+      Oxygen partial pressure differences between the process gas
+      and reference environment generate a signal proportional
+      to oxygen concentration, which is converted to a process output.
+    </p>
+  </div>
+
+  <!-- Components -->
+  <div class="panel">
+    <h3>Main Components</h3>
     <ul class="list">
-      <li><b>Stable sampling</b> (flow + pressure + dryness) is essential for stable O₂ readings.</li>
-      <li><b>Calibration</b> validates the measurement scale using known gases (zero/span).</li>
-      <li><b>Diagnostics</b> usually include sensor health, flow, temperature, and system alarms.</li>
+      <li>Oxygen sensor (electrochemical / zirconia)</li>
+      <li>Sample conditioning system</li>
+      <li>Flow control and filtration</li>
+      <li>Analyzer electronics and signal processing</li>
+      <li>Analyzer controller / display</li>
+      <li>Analog & digital outputs</li>
     </ul>
+  </div>
+
+  <!-- Calibration -->
+  <div class="panel">
+    <h3>Calibration Procedure</h3>
+    <ol class="list">
+      <li>Allow analyzer to complete warm-up</li>
+      <li>Verify sample flow and pressure stability</li>
+      <li>Apply <b>Zero gas</b> (nitrogen or oxygen-free gas)</li>
+      <li>Apply <b>Span gas</b> (typically 5–20% O₂)</li>
+      <li>Confirm stable readings before accepting calibration</li>
+      <li>Return analyzer to process and verify normal operation</li>
+    </ol>
 
     <div class="warn">
-      <b>Note:</b> Exact sensor type and calibration details can vary by 933 version. This guide is written to match common field practice.
-      If you share the exact model/options, I can tailor it precisely.
+      Frequent calibration drift often indicates
+      sensor aging or sample system leakage.
     </div>
   </div>
 
+  <!-- Troubleshooting -->
   <div class="panel">
-    <h3>Main Components (Technician View)</h3>
+    <h3>Major Troubleshooting Areas</h3>
     <ul class="list">
-      <li><b>Analyzer cabinet / transmitter</b> (HMI, controller, I/O)</li>
-      <li><b>O₂ sensor assembly</b> (measurement cell + wiring)</li>
-      <li><b>Sample system</b> (filter, regulator, flow control, tubing)</li>
-      <li><b>Sample pump</b> (if fitted) and moisture separation (if fitted)</li>
-      <li><b>Heater/temperature control</b> (if sensor requires controlled temperature)</li>
-      <li><b>Calibration gas manifold</b> (zero/span valves, restrictors)</li>
-      <li><b>Outputs to DCS</b> (4–20 mA, alarms, Modbus/serial/Ethernet if available)</li>
-    </ul>
-  </div>
-
-  <div class="panel">
-    <h3>Calibration Procedure (Zero + Span)</h3>
-
-    <div class="step"><b>1)</b> Warm-up & stabilize: let the analyzer reach normal operating temperature/ready status.</div>
-    <div class="step"><b>2)</b> Confirm sample flow: stable flow/pressure and no leaks. Replace/clean filters if DP is high.</div>
-    <div class="step"><b>3)</b> Apply <b>Zero gas</b>: typically N₂ (or certified low-O₂ gas) as per site practice. Wait for stable reading.</div>
-    <div class="step"><b>4)</b> Perform <b>Zero adjustment</b> (if your procedure allows). Record pre/post values.</div>
-    <div class="step"><b>5)</b> Apply <b>Span gas</b>: certified O₂ in N₂ (or air as span if permitted by site SOP). Wait for stabilization.</div>
-    <div class="step"><b>6)</b> Perform <b>Span adjustment</b>. Record cylinder details (concentration, expiry, certificate).</div>
-    <div class="step"><b>7)</b> Return to sample and verify: confirm reading returns smoothly and remains stable.</div>
-
-    <div class="field-tip">
-      <b>Best practice:</b> If zero/span won’t stabilize, do not force calibration. Fix sample conditioning, leaks, and sensor health first.
-    </div>
-  </div>
-
-  <div class="panel">
-    <h3>Major Troubleshooting (Top Field Issues)</h3>
-    <ul class="list">
-      <li><b>Unstable O₂ reading</b> — sample leaks, moisture, unstable flow/pressure, pump issues, loose electrical connections</li>
-      <li><b>High O₂ bias</b> — air ingress/leaks, cracked tubing, loose fittings, sample dilution</li>
-      <li><b>Low O₂ bias</b> — blocked filter, low sample flow, wrong calibration gas, span gas depleted</li>
-      <li><b>Slow response</b> — long sample lines, plugged filters, weak pump, condensation, manifold restriction</li>
-      <li><b>Calibration failure</b> — wrong gas, leaking cal manifold, sensor aging, insufficient warm-up time</li>
-      <li><b>Communication/4–20 issues</b> — scaling mismatch, wiring polarity, loop power problems, grounding</li>
+      <li><b>High Oxygen Reading</b> – air leakage, process upset</li>
+      <li><b>Low Oxygen Reading</b> – sensor degradation, flow loss</li>
+      <li><b>Calibration Failure</b> – incorrect gas, leaks</li>
+      <li><b>Unstable Signal</b> – moisture ingress, electrical noise</li>
+      <li><b>Analyzer Offline</b> – power or electronics issue</li>
     </ul>
 
-    <div class="warn">
-      <b>Quick check order:</b> 1) flow/pressure 2) leaks 3) moisture/filters 4) calibration gas validity 5) sensor health.
-    </div>
-  </div>
-
-  <div class="panel">
-    <h3>Quick Links</h3>
     <div class="action-row">
-      <a class="btn btn-ghost" href="alarms/ametek/933/alarm-codes.html">Alarm Codes →</a>
-      <a class="btn btn-primary" href="alarms/ametek/933/decision-trees/index.html">Decision Trees →</a>
+      <a class="btn btn-primary"
+         href="analyzers/ametek/933/troubleshooting.html">
+        Full Troubleshooting Guide →
+      </a>
     </div>
   </div>
 
+  <!-- Reference -->
   <div class="panel">
-    <h3>Discussion</h3>
-    <p class="muted">Share AMETEK 933 field experience, calibration practices, and troubleshooting tips. (GitHub login required.)</p>
-    <script src="https://utteranc.es/client.js"
-            repo="venkatpalika-oss/analyzershub"
-            issue-term="pathname"
-            theme="github-light"
-            crossorigin="anonymous"
-            async>
-    </script>
+    <h3>Reference & Best Practices</h3>
+    <div class="action-row">
+      <a class="btn btn-primary"
+         href="analyzers/ametek/933/trends.html">
+        Trends & Response Guide →
+      </a>
+      <a class="btn btn-ghost"
+         href="alarms/ametek/933/alarm-codes.html">
+        Alarm Codes →
+      </a>
+      <a class="btn btn-ghost"
+         href="alarms/ametek/933/decision-trees/index.html">
+        Decision Trees →
+      </a>
+    </div>
   </div>
-
-  <p class="muted" style="margin-top:18px;font-size:.85rem;">
-    ⚠️ Reference only. Always follow site safety rules and manufacturer documentation.
-  </p>
 
 </main>
 
 <footer class="site-footer">
   <div class="site-footer-inner">
-    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div>
+      <b>AnalyzersHub</b><br>
+      <span class="muted">Built for Analyzer Technicians</span>
+    </div>
     <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="analyzers.html">Search</a>
