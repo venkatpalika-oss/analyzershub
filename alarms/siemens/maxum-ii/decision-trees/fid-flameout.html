@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MAXUM II FID Flameout | Decision Tree</title>
+
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="alarms/siemens/maxum-ii/decision-trees/index.html">MAXUM Trees</a><span>›</span>
+  <span class="current">FID Flameout</span>
+</nav>
+
+<main class="container">
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">Decision Tree: FID Flameout (If FID Installed)</h2>
+    <p class="muted" style="margin-top:8px;">Symptom: flame out alarm, ignition fails, unstable FID signal.</p>
+    <div class="action-row">
+      <a class="btn btn-ghost" href="alarms/siemens/maxum-ii/decision-trees/index.html">← Back to Trees</a>
+      <a class="btn btn-ghost" href="alarms/siemens/maxum-ii/alarm-codes.html">← Alarm Codes</a>
+      <a class="btn btn-ghost" href="analyzers/siemens/maxum-ii/maxum-ii.html">MAXUM II Main →</a>
+    </div>
+    <div class="warn"><b>Safety:</b> Follow site rules for hydrogen/fuel gas. Verify leak-free before ignition attempts.</div>
+  </div>
+
+  <div class="panel">
+    <h3>Step-by-step isolation</h3>
+
+    <div class="step"><b>1)</b> Verify fuel gas and air supply pressures/flows are correct and stable (no regulator hunting).</div>
+
+    <div class="step"><b>2)</b> Confirm ignition sequence: igniter working, wiring seated, controller not inhibiting ignition due to interlock.</div>
+
+    <div class="step"><b>3)</b> Check for contamination:
+      <ul class="list">
+        <li>Dirty jet/nozzle causes unstable flame.</li>
+        <li>Moisture or oil in gas lines can cause flameout.</li>
+      </ul>
+    </div>
+
+    <div class="step"><b>4)</b> Inspect for leaks and venting: ensure exhaust path is clear and properly routed.</div>
+
+    <div class="step"><b>5)</b> Validate with stable standard run: if flame holds but signal unstable → check electrometer/grounding.</div>
+
+    <div class="step"><b>6)</b> Corrective actions:
+      <ul class="list">
+        <li>Stabilize fuel/air regulators; replace clogged filters.</li>
+        <li>Clean/replace FID jet as per manual.</li>
+        <li>Verify detector electronics and grounding.</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
