@@ -311,3 +311,46 @@ img{max-width:100%;height:auto;display:block}
     background-position: center top;
   }
 }
+/* =========================================
+   ANALYZER SEARCH HERO
+========================================= */
+
+.hero-search {
+  position: relative;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+
+  background:
+    linear-gradient(
+      rgba(11,60,93,0.88),
+      rgba(11,60,93,0.70)
+    ),
+    url("../images/home-hero.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Text clarity */
+.hero-search h2,
+.hero-search p {
+  color: #fff;
+  text-shadow: 0 3px 16px rgba(0,0,0,0.8);
+}
+
+/* Slightly tighter spacing */
+.hero-search .hero-inner {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+/* Mobile tuning */
+@media (max-width: 768px) {
+  .hero-search {
+    min-height: 200px;
+    background-position: center top;
+  }
+}
