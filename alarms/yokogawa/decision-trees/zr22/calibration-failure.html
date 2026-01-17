@@ -1,1 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZR22G Calibration Failure | Yokogawa Decision Tree</title>
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/venkatpalika-oss/analyzershub/discussions" target="_blank" rel="noopener">Discussion</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="alarms/yokogawa/decision-trees/index.html">Yokogawa Decision Trees</a><span>›</span>
+  <a href="analyzers/yokogawa/zr22g.html">ZR22G</a><span>›</span>
+  <span class="current">Calibration Failure</span>
+</nav>
+
+<main class="container">
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">ZR22G — Calibration Failure (Decision Tree)</h2>
+    <p class="muted" style="margin:8px 0 0;">
+      Use this when the analyzer rejects calibration, won’t stabilize, or span/zero won’t reach target.
+    </p>
+
+    <div class="warn">
+      <b>Golden rule:</b> Do not calibrate until the reading is stable and the heater/reference air are OK.
+      Calibration failure is usually caused by <b>unstable sensor temperature</b>, <b>bad reference air</b>, or <b>leaky calibration setup</b>.
+    </div>
+
+    <div class="action-row">
+      <a class="btn btn-ghost" href="alarms/yokogawa/decision-trees/index.html">← Back to Yokogawa Trees</a>
+      <a class="btn btn-ghost" href="analyzers/yokogawa/zr22g.html">ZR22G Main Page →</a>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card oxygen">
+      <h3>Decision Tree</h3>
+
+      <div class="step"><b>1) Warm-up / Heater OK?</b><br>
+        If heater alarm exists or temperature not stable → go to <b>Heater Error</b> page and fix heater first.
+      </div>
+
+      <div class="step"><b>2) Reading stable in process?</b><br>
+        If O₂ reading fluctuates heavily → fix stability first (probe fouling, reference air, leaks). Do not calibrate yet.
+      </div>
+
+      <div class="step"><b>3) Calibration gas correct and flowing?</b><br>
+        Confirm cylinder concentration matches the procedure, regulator OK, flow sufficient, no blocked tubing.
+      </div>
+
+      <div class="step"><b>4) Leak check calibration line</b><br>
+        Apply soap test / pressure hold test on tubing, fittings, manifold. Any leak → fix and retry.
+      </div>
+
+      <div class="step"><b>5) Reference air OK?</b><br>
+        Ensure clean/dry reference air path (filter not clogged, tubing not kinked, flow present). Blocked/leaky reference air causes calibration failure/drift.
+      </div>
+
+      <div class="step"><b>6) Probe / filter condition</b><br>
+        If dust/ash buildup or plugged filter cap → clean/replace. Plugging causes slow response and “no stabilize” during cal.
+      </div>
+
+      <div class="step"><b>7) Stabilization time sufficient?</b><br>
+        Allow enough time after switching gas. In dusty service, stabilization may take longer.
+      </div>
+
+      <div class="step"><b>8) Still failing?</b><br>
+        Suspect sensor aging, damaged cell, wiring issues, or incorrect setup parameters (range/units). Record diagnostics and escalate.
+      </div>
+
+      <div class="warn" style="margin-top:12px;">
+        <b>Field tip:</b> If span gas cannot reach target, 80% of cases are <b>cal gas leak/flow issue</b> or <b>probe blockage</b>.
+      </div>
+    </div>
+
+    <div class="card oxygen">
+      <h3>Quick Checks (Before Re-Cal)</h3>
+      <ul class="list">
+        <li>Heater status normal, temperature stable</li>
+        <li>Reference air clean/dry, filter OK, no leak</li>
+        <li>Calibration gas correct concentration & flow</li>
+        <li>No leaks in calibration tubing/manifold</li>
+        <li>Probe tip/filter cap clean</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="alarms/yokogawa/decision-trees/index.html">Yokogawa Trees</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
 
