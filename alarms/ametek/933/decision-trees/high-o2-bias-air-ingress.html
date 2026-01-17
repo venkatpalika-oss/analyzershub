@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AMETEK 933 High O₂ Bias | Decision Tree</title>
+
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="alarms/ametek/933/decision-trees/index.html">AMETEK 933 Trees</a><span>›</span>
+  <span class="current">High O₂ Bias (Air Ingress)</span>
+</nav>
+
+<main class="container">
+
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">Decision Tree: High O₂ Bias (Air Ingress / Dilution)</h2>
+    <p class="muted" style="margin-top:8px;">Symptom: O₂ reads higher than expected; process stable but analyzer high.</p>
+    <div class="action-row">
+      <a class="btn btn-ghost" href="alarms/ametek/933/decision-trees/index.html">← Back to Trees</a>
+      <a class="btn btn-ghost" href="alarms/ametek/933/alarm-codes.html">← Alarm Codes</a>
+      <a class="btn btn-ghost" href="analyzers/ametek/933/933.html">AMETEK 933 Main →</a>
+    </div>
+    <div class="warn"><b>Key idea:</b> Most high bias is from air leaks into a negative-pressure or low-pressure sample system.</div>
+  </div>
+
+  <div class="panel">
+    <h3>Isolation steps</h3>
+
+    <div class="step"><b>1)</b> Compare reading on <b>calibration span gas</b>. If span is correct, the sensor is likely OK → suspect sample leak/dilution.</div>
+
+    <div class="step"><b>2)</b> Leak check sample system:
+      <ul class="list">
+        <li>Check fittings from probe/sample point to analyzer</li>
+        <li>Check filter bowls, drain points, unions</li>
+        <li>Check any flexible tubing or cracked lines</li>
+      </ul>
+    </div>
+
+    <div class="step"><b>3)</b> Check sample pressure regime:
+      <ul class="list">
+        <li>If sample line is under suction (pump pulling), small leaks pull air in → high O₂.</li>
+        <li>Stabilize with correct regulator/flow and minimize suction leakage points.</li>
+      </ul>
+    </div>
+
+    <div class="step"><b>4)</b> Confirm sample integrity:
+      <ul class="list">
+        <li>Ensure sample point not drawing ambient air (bad probe sealing)</li>
+        <li>Confirm purge/vent lines not open to atmosphere incorrectly</li>
+      </ul>
+    </div>
+
+    <div class="step"><b>5)</b> If no leak found:
+      <ul class="list">
+        <li>Verify calibration gas values and regulator accuracy</li>
+        <li>Check sensor drift/aging if both process and cal are high</li>
+      </ul>
+    </div>
+
+    <div class="field-tip">
+      <b>Field tip:</b> If the analyzer is high only when sample flow is low, suspect a leak at a fitting or drain point. Fix flow first and re-check bias.
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
