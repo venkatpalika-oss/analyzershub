@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn | CEMS Module 5: Alarm Philosophy | AnalyzersHub</title>
+
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Knowledge Base</a>
+      <a href="troubleshooting/index.html">Troubleshooting</a>
+      <a href="cems/index.html">CEMS</a>
+      <a href="learn/index.html" class="active">Learn</a>
+      <a href="community/index.html">Community</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="resources/index.html">Resources</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero-search">
+  <div class="hero-inner">
+    <h2>CEMS Fundamentals — Module 5: Alarm Philosophy</h2>
+    <p>
+      How to design and interpret alarms so technicians respond correctly,
+      reduce false alarms, and protect data validity.
+    </p>
+    <div class="action-row">
+      <a class="btn btn-primary" href="learn/index.html">← Back to Learn</a>
+      <a class="btn btn-ghost" href="troubleshooting/index.html">Troubleshooting Hub →</a>
+      <a class="btn btn-ghost" href="learn/cems/module-6-dahs-fundamentals.html">Next: DAHS →</a>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+
+  <div class="panel">
+    <h3>Why alarm philosophy matters</h3>
+    <p>
+      Poor alarms create noise, bad decisions, and compliance risk.
+      Good alarms guide the technician to the right action quickly.
+    </p>
+  </div>
+
+  <div class="panel">
+    <h3>Three alarm categories (practical)</h3>
+    <div class="grid">
+      <div class="card">
+        <h4>Process / Measurement Alarms</h4>
+        <p>High/low readings, instability, drift trend warnings.</p>
+        <ul class="list">
+          <li>Action: Verify signal + compare with calibration</li>
+          <li>Likely causes: process upset, leaks, restriction</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>System / Utility Alarms</h4>
+        <p>Low sample flow, heater fault, chiller high temp, pump fault.</p>
+        <ul class="list">
+          <li>Action: Fix utilities and sample system first</li>
+          <li>Likely causes: plugging, heater failure, drains</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Data / Communication Alarms</h4>
+        <p>DAHS offline, comm error, invalid flags, time sync issues.</p>
+        <ul class="list">
+          <li>Action: Verify network + mapping + timestamps</li>
+          <li>Likely causes: resets, IP changes, scaling</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Good alarm rules (field-friendly)</h3>
+    <ul class="list">
+      <li><b>Alarms must be actionable</b> — each alarm should suggest first checks</li>
+      <li><b>Avoid duplicate alarms</b> — one root alarm should drive others</li>
+      <li><b>Use delays</b> — ignore short spikes during switching or warm-up</li>
+      <li><b>Separate “warning” and “shutdown”</b> — not everything is critical</li>
+      <li><b>Link alarms to decision trees</b> — reduce guesswork</li>
+    </ul>
+    <div class="step">
+      <b>Example:</b> “Sample Flow Low” should come before “Unstable Reading”.
+      Fix flow first, then evaluate reading stability.
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Alarm response method</h3>
+    <ol class="list">
+      <li>Confirm alarm is real (not maintenance / calibration state)</li>
+      <li>Check utilities (power, air, temps, flow)</li>
+      <li>Inspect sample system (probe, heaters, filters, condensation)</li>
+      <li>Run a quick zero/span verification</li>
+      <li>Verify DAHS flags and reporting status</li>
+    </ol>
+  </div>
+
+  <div class="warn">
+    Alarm floods usually mean missing delays, missing state logic (calibration/warm-up),
+    or poor prioritization — fix philosophy, not only symptoms.
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <b>AnalyzersHub</b><br>
+    <span class="muted">Built for Analyzer Technicians</span>
+  </div>
+</footer>
+
+</body>
+</html>
