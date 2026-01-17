@@ -37,12 +37,13 @@
     <h2 style="margin:0;color:#0b3c5d;">Yokogawa ZR22G — Zirconia Oxygen Analyzer</h2>
     <p class="muted" style="margin:8px 0 0;">
       In-situ zirconia O₂ analyzer used for combustion control (boilers, heaters, furnaces).
-      Technician focus: probe condition, heater stability, reference air, calibration gas handling, and drift control.
+      Technician focus: probe condition, heater stability, reference air, calibration gas integrity, and drift control.
     </p>
 
     <div class="action-row">
       <a class="btn btn-ghost" href="analyzers.html">← Back to Search</a>
-      <a class="btn btn-primary" href="analyzers/yokogawa/alarms/zr22g/index.html">Alarm Decision Trees →</a>
+      <a class="btn btn-primary" href="alarms/yokogawa/decision-trees/index.html">Yokogawa Decision Trees Hub →</a>
+      <a class="btn btn-ghost" href="alarms/yokogawa/decision-trees/zr22g/calibration-failure.html">ZR22G Trees →</a>
       <a class="btn btn-ghost" href="analyzers/yokogawa/alarms/zr22g/alarm-codes.html">Alarm Codes →</a>
     </div>
 
@@ -73,7 +74,7 @@
         <li><b>Probe / sensor assembly:</b> zirconia cell, protective filter/cap, mounting hardware.</li>
         <li><b>Heater & temperature control:</b> heater element, temperature sensor, controller.</li>
         <li><b>Reference air system:</b> reference air line, filter, flow control (clean/dry air).</li>
-        <li><b>Calibration system:</b> calibration gas connection, solenoid/valves (if equipped), tubing.</li>
+        <li><b>Calibration system:</b> calibration gas connection, tubing, valves/solenoids (if equipped).</li>
         <li><b>Converter/transmitter:</b> display/HMI, outputs, diagnostics, DCS communication.</li>
       </ul>
     </div>
@@ -93,14 +94,16 @@
       <h3>Major Troubleshooting (Top Issues + Fast Checks)</h3>
       <ul class="list">
         <li><b>High drift / unstable O₂:</b> probe contamination, reference air leak/blockage, heater instability.</li>
-        <li><b>Slow response:</b> plugged filter/cap, heavy dust, long sample diffusion time due to blockage.</li>
-        <li><b>Heater error / low temp:</b> heater element failure, wiring, controller, power supply.</li>
+        <li><b>Slow response:</b> plugged filter/cap, heavy dust, long diffusion time due to blockage.</li>
+        <li><b>Heater error / temp not ready:</b> heater element failure, wiring, controller, power supply.</li>
         <li><b>Calibration failure:</b> wrong gas, leaks in cal line, insufficient stabilization time, unstable sensor temp.</li>
-        <li><b>DCS mismatch:</b> scaling, range, output wiring, comms mapping.</li>
+        <li><b>DCS mismatch:</b> scaling/range, output wiring, comms mapping.</li>
       </ul>
 
       <div class="action-row" style="margin-top:10px;">
-        <a class="btn btn-ghost" href="analyzers/yokogawa/alarms/zr22g/index.html">Use Decision Trees →</a>
+        <a class="btn btn-ghost" href="alarms/yokogawa/decision-trees/zr22g/high-drift.html">High Drift Tree →</a>
+        <a class="btn btn-ghost" href="alarms/yokogawa/decision-trees/zr22g/heater-error.html">Heater Error Tree →</a>
+        <a class="btn btn-ghost" href="alarms/yokogawa/decision-trees/zr22g/no-response.html">No Response Tree →</a>
       </div>
     </div>
 
@@ -130,6 +133,7 @@
     <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="analyzers.html">Search</a>
+      <a href="alarms/yokogawa/decision-trees/index.html">Yokogawa Trees</a>
       <a href="blog/index.html">Blog</a>
       <a href="contact.html">Contact</a>
     </div>
