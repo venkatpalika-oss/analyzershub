@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MAXUM II Baseline Noise/Drift | Decision Tree</title>
+
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="alarms/siemens/maxum-ii/decision-trees/index.html">MAXUM Trees</a><span>›</span>
+  <span class="current">Baseline Noise/Drift</span>
+</nav>
+
+<main class="container">
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">Decision Tree: Baseline Noise / Drift</h2>
+    <p class="muted" style="margin-top:8px;">Symptom: baseline unstable, noisy, drifting, poor integration or false peaks.</p>
+    <div class="action-row">
+      <a class="btn btn-ghost" href="alarms/siemens/maxum-ii/decision-trees/index.html">← Back to Trees</a>
+      <a class="btn btn-ghost" href="alarms/siemens/maxum-ii/alarm-codes.html">← Alarm Codes</a>
+      <a class="btn btn-ghost" href="analyzers/siemens/maxum-ii/maxum-ii.html">MAXUM II Main →</a>
+    </div>
+    <div class="warn"><b>Rule:</b> If baseline is noisy, do not recalibrate. Fix stability first.</div>
+  </div>
+
+  <div class="panel">
+    <h3>Step-by-step isolation</h3>
+
+    <div class="step"><b>1)</b> Check carrier supply: correct gas type, sufficient pressure, regulator not hunting, filters not saturated.</div>
+
+    <div class="step"><b>2)</b> Leak check: soap test external fittings (carrier/sample), verify column/valve block connections, confirm vent lines are not blocked.</div>
+
+    <div class="step"><b>3)</b> Verify oven temperature stability: confirm setpoint reached and stable; check heater/sensor wiring if fluctuating.</div>
+
+    <div class="step"><b>4)</b> Confirm detector baseline with <b>carrier only</b> (no sample): if still noisy → detector/flow/temperature issue; if stable → sample contamination/conditioning issue.</div>
+
+    <div class="step"><b>5)</b> Sample conditioning check: liquids/condensation, dirty filters, unstable sample pressure/flow, fast loop issues, heat tracing issues.</div>
+
+    <div class="step"><b>6)</b> Electrical checks: verify grounding/earthing, check for loose detector signal cables, inspect power supply stability.</div>
+
+    <div class="step"><b>7)</b> Corrective actions:
+      <ul class="list">
+        <li>Replace carrier filters / purifiers if contamination suspected.</li>
+        <li>Fix leaks and stabilize regulator/flow control.</li>
+        <li>Clean/inspect detector module (per manual) and verify again.</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
