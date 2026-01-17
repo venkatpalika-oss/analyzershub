@@ -15,13 +15,13 @@
   <div class="site-header-inner">
     <a class="brand" href="index.html">AnalyzersHub</a>
     <nav class="site-nav">
-  <a href="index.html">Home</a>
-  <a href="analyzers.html">Analyzer Search</a>
-  <a href="blog/index.html">Blog</a>
-  <a href="contact.html">Contact</a>
-  <a href="https://github.com/venkatpalika-oss/analyzershub/discussions" target="_blank" rel="noopener">Discussion</a>
-</nav>
-
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search All Analyzers</a>
+      <a href="analyzers.html?category=gc">GC Hub</a>
+      <a href="guides/gc/chromatogram-guide.html">Chromatogram Guide</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </div>
 </header>
 
@@ -31,7 +31,7 @@
   <p class="muted" style="margin:0 0 14px;">Search by model, vendor, or type (GC / Oxygen)</p>
 
   <div class="search-wrap">
-    <input id="searchInput" class="search-input" placeholder="Search… (GC8000, PGC5000B, ABB, Yokogawa, Siemens, Hobré)">
+    <input id="searchInput" class="search-input" placeholder="Search… (ZR22G, OX400, GC8000, PGC5000B, ABB, Siemens)">
   </div>
 
   <div class="filter-bar">
@@ -42,7 +42,6 @@
     <button class="filter-btn" data-filter="yokogawa">Yokogawa</button>
     <button class="filter-btn" data-filter="siemens">Siemens</button>
     <button class="filter-btn" data-filter="agilent">Agilent</button>
-    <button class="filter-btn" data-filter="hobre">Hobré</button>
   </div>
 
   <div class="grid" id="cards">
@@ -53,6 +52,8 @@
       <p>Zirconia oxygen analyzer for combustion control.</p>
       <div class="action-row">
         <a class="btn btn-primary" href="analyzers/yokogawa/zr22g.html">Open →</a>
+        <a class="btn btn-ghost" href="alarms/yokogawa/alarm-codes/zr22g-alarm-codes.html">Alarm Codes →</a>
+        <a class="btn btn-ghost" href="alarms/yokogawa/decision-trees/zr22g/calibration-failure.html">Trees →</a>
       </div>
     </div>
 
@@ -61,6 +62,8 @@
       <p>In-situ oxygen analyzer for boilers and furnaces.</p>
       <div class="action-row">
         <a class="btn btn-primary" href="analyzers/yokogawa/ox400.html">Open →</a>
+        <a class="btn btn-ghost" href="alarms/yokogawa/alarm-codes/ox400-alarm-codes.html">Alarm Codes →</a>
+        <a class="btn btn-ghost" href="alarms/yokogawa/decision-trees/ox400/unstable-reading.html">Trees →</a>
       </div>
     </div>
 
@@ -69,7 +72,7 @@
       <p>Process gas chromatograph for continuous online gas composition monitoring.</p>
       <div class="action-row">
         <a class="btn btn-primary" href="analyzers/yokogawa/gc8000/gc8000.html">Open →</a>
-        <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/alarms/index.html">Alarms →</a>
+        <a class="btn btn-ghost" href="alarms/yokogawa/decision-trees/gc8000/carrier-pressure-low.html">Trees →</a>
       </div>
     </div>
 
@@ -110,32 +113,20 @@
       </div>
     </div>
 
-    <!-- Siemens -->
-    <div class="card siemens gc" data-tag="siemens gc" data-search="siemens maxum edition ii maxum ii process gas chromatograph gc">
+    <!-- Siemens placeholders -->
+    <div class="card siemens gc" data-tag="siemens gc" data-search="siemens maxum edition ii gc">
       <h3>Siemens MAXUM Edition II</h3>
-      <p>Flexible and reliable process GC for online gas composition monitoring.</p>
+      <p>Process gas chromatograph (page to be added).</p>
       <div class="action-row">
-        <a class="btn btn-primary" href="analyzers/siemens/maxum-ii/maxum-ii.html">Open →</a>
-        <a class="btn btn-ghost" href="analyzers/siemens/maxum-ii/alarms/index.html">Alarms →</a>
+        <a class="btn btn-ghost" href="analyzers.html">Coming soon</a>
       </div>
     </div>
 
-    <div class="card siemens gc" data-tag="siemens gc" data-search="siemens sitrans cv wobbe index calorific value ccv gc">
+    <div class="card siemens gc" data-tag="siemens gc" data-search="siemens sitrans cv wobbe calorific value gc">
       <h3>Siemens SITRANS CV</h3>
-      <p>Process GC for calorific value and Wobbe index measurement.</p>
+      <p>Wobbe / calorific value process GC (page to be added).</p>
       <div class="action-row">
-        <a class="btn btn-primary" href="analyzers/siemens/sitrans-cv/sitrans-cv.html">Open →</a>
-        <a class="btn btn-ghost" href="analyzers/siemens/sitrans-cv/alarms/index.html">Alarms →</a>
-      </div>
-    </div>
-
-    <!-- Hobré -->
-    <div class="card hobre gc" data-tag="hobre gc" data-search="hobre hobré wobbe index analyzer calorific value cv">
-      <h3>Hobré Wobbe Index Analyzer</h3>
-      <p>Online Wobbe index / calorific value measurement system (sampling & stability focused).</p>
-      <div class="action-row">
-        <a class="btn btn-primary" href="analyzers/hobre/wobbe-index/wobbe-index.html">Open →</a>
-        <a class="btn btn-ghost" href="analyzers/hobre/wobbe-index/alarms/index.html">Alarms →</a>
+        <a class="btn btn-ghost" href="analyzers.html">Coming soon</a>
       </div>
     </div>
 
@@ -148,8 +139,8 @@
     <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="analyzers.html">Search</a>
+      <a href="alarms/yokogawa/decision-trees/index.html">Yokogawa Trees</a>
       <a href="guides/gc/chromatogram-guide.html">Chromatograms</a>
-      <a href="guides/gc/abb-gc-alarm-codes.html">ABB GC Codes</a>
     </div>
   </div>
 </footer>
@@ -181,7 +172,6 @@ function setFilter(v){
 buttons.forEach(b => b.addEventListener("click", ()=> setFilter(b.dataset.filter)));
 searchInput.addEventListener("input", apply);
 
-/* URL filters: vendor=abb / filter=abb / category=gc */
 (function init(){
   const p = new URLSearchParams(location.search);
   let v = (p.get("vendor") || p.get("filter") || "").toLowerCase().trim();
