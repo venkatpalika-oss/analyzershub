@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MAXUM II Decision Trees | AnalyzersHub</title>
+
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="alarms/siemens/maxum-ii/alarm-codes.html">MAXUM Alarm Codes</a><span>›</span>
+  <span class="current">Decision Trees</span>
+</nav>
+
+<main class="container">
+
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">Siemens MAXUM II — Alarm Decision Trees</h2>
+    <p class="muted" style="margin-top:8px;">
+      Start with utilities and stability before touching calibration factors.
+    </p>
+
+    <div class="action-row">
+      <a class="btn btn-ghost" href="analyzers/siemens/maxum-ii/maxum-ii.html">← Back to MAXUM II</a>
+      <a class="btn btn-ghost" href="alarms/siemens/maxum-ii/alarm-codes.html">← Alarm Codes</a>
+    </div>
+
+    <div class="warn">
+      <b>Rule:</b> If retention times are shifting, do not re-identify peaks yet.
+      Fix <b>carrier flow/pressure</b> and <b>oven temperature</b> stability first.
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <div class="card siemens">
+      <h3>Baseline Noise / Drift</h3>
+      <p>Noise, unstable baseline, drifting signal, poor integration.</p>
+      <div class="action-row">
+        <a class="btn btn-primary" href="alarms/siemens/maxum-ii/decision-trees/baseline-noise-drift.html">Open →</a>
+      </div>
+    </div>
+
+    <div class="card siemens">
+      <h3>Retention Time Shift</h3>
+      <p>Peak timing shifts vs reference; peak ID becomes wrong.</p>
+      <div class="action-row">
+        <a class="btn btn-primary" href="alarms/siemens/maxum-ii/decision-trees/retention-time-shift.html">Open →</a>
+      </div>
+    </div>
+
+    <div class="card siemens">
+      <h3>Poor Repeatability</h3>
+      <p>Repeat injections vary; unstable composition results.</p>
+      <div class="action-row">
+        <a class="btn btn-primary" href="alarms/siemens/maxum-ii/decision-trees/poor-repeatability.html">Open →</a>
+      </div>
+    </div>
+
+    <div class="card siemens">
+      <h3>FID Flameout (if FID installed)</h3>
+      <p>FID flame not stable or ignition fails.</p>
+      <div class="action-row">
+        <a class="btn btn-primary" href="alarms/siemens/maxum-ii/decision-trees/fid-flameout.html">Open →</a>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
