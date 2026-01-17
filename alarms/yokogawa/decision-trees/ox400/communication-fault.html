@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OX400 Communication Fault | Yokogawa Decision Tree</title>
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/venkatpalika-oss/analyzershub/discussions" target="_blank" rel="noopener">Discussion</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="alarms/yokogawa/decision-trees/index.html">Yokogawa Decision Trees</a><span>›</span>
+  <a href="analyzers/yokogawa/ox400.html">OX400</a><span>›</span>
+  <span class="current">Communication Fault</span>
+</nav>
+
+<main class="container">
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">OX400 — Communication Fault / No Update to DCS (Decision Tree)</h2>
+    <p class="muted" style="margin:8px 0 0;">Use when DCS shows bad quality, comms alarm, or values are frozen.</p>
+
+    <div class="action-row">
+      <a class="btn btn-ghost" href="alarms/yokogawa/decision-trees/index.html">← Back to Yokogawa Trees</a>
+      <a class="btn btn-ghost" href="analyzers/yokogawa/ox400.html">OX400 Main Page →</a>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card oxygen">
+      <h3>Decision Tree</h3>
+
+      <div class="step"><b>1) Local value changes?</b><br>
+        If local display changes normally but DCS is frozen → issue is output/comms, not measurement.
+      </div>
+
+      <div class="step"><b>2) Output type?</b><br>
+        Identify if site uses <b>4–20mA</b> or <b>digital (Modbus/Ethernet)</b>. Follow relevant steps below.
+      </div>
+
+      <div class="step"><b>3) For 4–20mA</b><br>
+        Check wiring polarity, loop power, terminal tightness, and that DCS AI card is healthy.
+        Confirm range/scaling matches analyzer configuration.
+      </div>
+
+      <div class="step"><b>4) For digital comms</b><br>
+        Check IP/serial settings, cable, switch port, link LEDs, and that polling is active.
+        Confirm register mapping and quality/status bits.
+      </div>
+
+      <div class="step"><b>5) Analyzer diagnostics</b><br>
+        Confirm no internal error flags. Reboot only if permitted by site procedure.
+      </div>
+
+      <div class="step"><b>6) Still failing?</b><br>
+        Capture settings screenshots/logs (IP, mapping, scale) and escalate to controls/instrument team.
+      </div>
+    </div>
+
+    <div class="card oxygen">
+      <h3>Fast Checks</h3>
+      <ul class="list">
+        <li>Compare local reading vs DCS reading</li>
+        <li>Check loop power / AI card / wiring (4–20mA)</li>
+        <li>Check network link/ping and mapping (digital)</li>
+        <li>Confirm range/scaling matches</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="alarms/yokogawa/decision-trees/index.html">Yokogawa Trees</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
