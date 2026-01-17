@@ -5,38 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AnalyzersHub | Industrial Analyzer Knowledge Hub</title>
 
-<!-- IMPORTANT: base path for GitHub Pages -->
+<!-- IMPORTANT for GitHub Pages -->
 <base href="/analyzershub/">
 
 <link rel="stylesheet" href="assets/css/style.css">
 
-<!-- Home hero background -->
+<!-- HOME PAGE HERO BANNER -->
 <style>
 .hero{
   position:relative;
-  min-height:320px;
+  min-height:340px;
   display:flex;
   align-items:center;
   color:#fff;
+
   background-image:
     linear-gradient(
-      rgba(11,60,93,.78),
-      rgba(11,60,93,.65)
+      rgba(11,60,93,0.80),
+      rgba(11,60,93,0.65)
     ),
-    url("assets/images/industrial-analyzer-wallpaper.webp");
+    url("assets/images/home-hero.webp");
+
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
 }
+
 .hero h2,
 .hero p{
   text-shadow:0 3px 16px rgba(0,0,0,.75);
 }
+
 .hero .btn{
   box-shadow:0 6px 18px rgba(0,0,0,.35);
 }
+
 @media(max-width:768px){
-  .hero{min-height:260px;background-position:center top}
+  .hero{
+    min-height:260px;
+    background-position:center top;
+  }
 }
 </style>
 </head>
@@ -106,7 +114,7 @@
 
     <div class="card abb">
       <h3>ABB</h3>
-      <p>AZ Series, PGC5000B/C, sulfur GC, portable NGC.</p>
+      <p>AZ Series, PGC5000B/C, PGC5007B, Portable NGC.</p>
       <div class="action-row">
         <a class="btn btn-primary" href="analyzers.html?filter=abb">Open ABB →</a>
       </div>
@@ -114,7 +122,7 @@
 
     <div class="card siemens">
       <h3>Siemens</h3>
-      <p>MAXUM Edition II, SITRANS CV — process GC platforms.</p>
+      <p>MAXUM Edition II, SITRANS CV — process gas chromatographs.</p>
       <div class="action-row">
         <a class="btn btn-primary" href="analyzers.html?filter=siemens">Open Siemens →</a>
       </div>
@@ -122,7 +130,7 @@
 
     <div class="card">
       <h3>AMETEK</h3>
-      <p>933 oxygen analyzer, 888 tail gas analyzer (SRU).</p>
+      <p>933 Oxygen Analyzer, 888 Tail Gas Analyzer (SRU).</p>
       <div class="action-row">
         <a class="btn btn-primary" href="analyzers.html?filter=ametek">Open AMETEK →</a>
       </div>
@@ -142,7 +150,7 @@
   <div class="panel" style="margin-top:22px;">
     <h2 style="margin:0;color:#0b3c5d;">Analyzer Data Flow to DCS</h2>
     <p class="muted" style="margin-top:8px;">
-      Typical signal path from field analyzers → sample systems → analyzer →
+      Typical flow from field analyzers → sample systems → analyzer →
       PLC/DCS → historian.
     </p>
     <img src="assets/images/data_flow_to_dcs.png"
