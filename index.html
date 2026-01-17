@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AnalyzersHub | Industrial Analyzer Knowledge Hub</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AnalyzersHub | Industrial Analyzer Knowledge Hub</title>
 
-  <base href="/analyzershub/">
-  <link rel="stylesheet" href="assets/css/style.css">
+<!-- IMPORTANT: base path for GitHub Pages -->
+<base href="/analyzershub/">
 
-  <!-- Home wallpaper hero overrides -->
-  <style>
-    .hero{
-      position:relative;
-      min-height:320px;
-      display:flex;
-      align-items:center;
-      color:#fff;
-      background-image:
-        linear-gradient(
-          rgba(11,60,93,.78),
-          rgba(11,60,93,.65)
-        ),
-        url("assets/images/industrial-analyzer-wallpaper.webp");
-      background-size:cover;
-      background-position:center;
-      background-repeat:no-repeat;
-    }
-    .hero h2,
-    .hero p{
-      text-shadow:0 3px 16px rgba(0,0,0,.75);
-    }
-    .hero .btn{
-      box-shadow:0 6px 18px rgba(0,0,0,.35);
-    }
-    @media(max-width:768px){
-      .hero{min-height:260px;background-position:center top}
-    }
-  </style>
+<link rel="stylesheet" href="assets/css/style.css">
+
+<!-- Home hero background -->
+<style>
+.hero{
+  position:relative;
+  min-height:320px;
+  display:flex;
+  align-items:center;
+  color:#fff;
+  background-image:
+    linear-gradient(
+      rgba(11,60,93,.78),
+      rgba(11,60,93,.65)
+    ),
+    url("assets/images/industrial-analyzer-wallpaper.webp");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+.hero h2,
+.hero p{
+  text-shadow:0 3px 16px rgba(0,0,0,.75);
+}
+.hero .btn{
+  box-shadow:0 6px 18px rgba(0,0,0,.35);
+}
+@media(max-width:768px){
+  .hero{min-height:260px;background-position:center top}
+}
+</style>
 </head>
 
 <body>
@@ -54,12 +56,14 @@
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
     <h2>Industrial Analyzer Knowledge Hub</h2>
     <p>
-      Working principles, calibration procedures, troubleshooting guides,
-      alarm codes, and decision trees — built by technicians, for technicians.
+      Working principles, components, calibration procedures,
+      troubleshooting guides, alarm codes, and decision trees —
+      built by technicians, for technicians.
     </p>
 
     <div class="action-row">
@@ -72,28 +76,29 @@
 
 <main class="container">
 
-  <!-- Quick Navigation -->
+  <!-- QUICK ACTIONS -->
   <div class="panel" style="margin-top:-18px;">
     <div class="action-row" style="justify-content:center">
       <a class="btn btn-primary" href="analyzers.html">🔎 Analyzer Search</a>
       <a class="btn btn-ghost" href="analyzers.html?category=gc">🧪 Gas Chromatographs</a>
-      <a class="btn btn-ghost" href="analyzers.html?category=oxygen">🫁 Oxygen</a>
+      <a class="btn btn-ghost" href="analyzers.html?category=oxygen">🫁 Oxygen Analyzers</a>
       <a class="btn btn-ghost" href="analyzers/flash-point/index.html">🔥 Flash Point</a>
       <a class="btn btn-ghost" href="blog/index.html">📝 Blog</a>
       <a class="btn btn-ghost" href="contact.html">✉️ Contact</a>
     </div>
   </div>
 
-  <h2 style="margin:20px 0 8px;color:#0b3c5d;">Browse by Manufacturer</h2>
+  <!-- MANUFACTURERS -->
+  <h2 style="margin:22px 0 8px;color:#0b3c5d;">Browse by Manufacturer</h2>
   <p class="muted" style="margin:0 0 14px;">
-    Select a manufacturer to explore analyzers, alarm codes, and decision trees.
+    Select a manufacturer to explore analyzers, alarms, and decision trees.
   </p>
 
   <div class="grid">
 
     <div class="card yokogawa">
       <h3>Yokogawa</h3>
-      <p>ZR22G, OX400, GC8000 — oxygen and GC analyzers with deep troubleshooting.</p>
+      <p>ZR22G, OX400, TDLS8000, GC8000 — oxygen, TDLS, and GC analyzers.</p>
       <div class="action-row">
         <a class="btn btn-primary" href="analyzers.html?filter=yokogawa">Open Yokogawa →</a>
       </div>
@@ -101,7 +106,7 @@
 
     <div class="card abb">
       <h3>ABB</h3>
-      <p>PGC5000 series, sulfur GC, portable NGC — field-proven process analytics.</p>
+      <p>AZ Series, PGC5000B/C, sulfur GC, portable NGC.</p>
       <div class="action-row">
         <a class="btn btn-primary" href="analyzers.html?filter=abb">Open ABB →</a>
       </div>
@@ -109,7 +114,7 @@
 
     <div class="card siemens">
       <h3>Siemens</h3>
-      <p>MAXUM Edition II — modular GC with alarms, calibration, and trees.</p>
+      <p>MAXUM Edition II, SITRANS CV — process GC platforms.</p>
       <div class="action-row">
         <a class="btn btn-primary" href="analyzers.html?filter=siemens">Open Siemens →</a>
       </div>
@@ -117,7 +122,7 @@
 
     <div class="card">
       <h3>AMETEK</h3>
-      <p>933 oxygen analyzer and 888 tail gas analyzer — SRU focused diagnostics.</p>
+      <p>933 oxygen analyzer, 888 tail gas analyzer (SRU).</p>
       <div class="action-row">
         <a class="btn btn-primary" href="analyzers.html?filter=ametek">Open AMETEK →</a>
       </div>
@@ -125,7 +130,7 @@
 
     <div class="card">
       <h3>Flash Point</h3>
-      <p>P-500 series — ASTM methods, calibration materials, repeatability guidance.</p>
+      <p>P-500 series — ASTM methods, calibration reference materials.</p>
       <div class="action-row">
         <a class="btn btn-primary" href="analyzers/flash-point/index.html">Flash Point Hub →</a>
       </div>
@@ -133,10 +138,12 @@
 
   </div>
 
-  <div class="panel" style="margin-top:20px;">
+  <!-- DATA FLOW -->
+  <div class="panel" style="margin-top:22px;">
     <h2 style="margin:0;color:#0b3c5d;">Analyzer Data Flow to DCS</h2>
     <p class="muted" style="margin-top:8px;">
-      Typical flow from field analyzers → sample conditioning → analyzer → PLC/DCS → historian.
+      Typical signal path from field analyzers → sample systems → analyzer →
+      PLC/DCS → historian.
     </p>
     <img src="assets/images/data_flow_to_dcs.png"
          alt="Analyzer data flow to DCS"
