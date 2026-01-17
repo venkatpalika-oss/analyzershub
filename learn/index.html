@@ -29,16 +29,17 @@
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero-search">
   <div class="hero-inner">
     <h2>Learn: CEMS Fundamentals</h2>
     <p>
-      Training-style basics for technicians and engineers — understand how CEMS
-      works, why it fails, and how to keep data valid and reliable.
+      Structured, technician-focused training modules to understand
+      Continuous Emission Monitoring Systems from the field perspective.
     </p>
 
     <div class="action-row">
-      <a class="btn btn-primary" href="cems/index.html">Go to CEMS Hub →</a>
+      <a class="btn btn-primary" href="cems/index.html">CEMS Hub →</a>
       <a class="btn btn-ghost" href="analyzers.html">Analyzer Knowledge Base →</a>
     </div>
   </div>
@@ -46,140 +47,99 @@
 
 <main class="container">
 
+  <!-- INTRO -->
   <div class="panel">
-    <h3>What you’ll learn here</h3>
-    <ul class="list">
-      <li>What a CEMS system is (and what each block does)</li>
-      <li>Wet vs dry basis, moisture and O₂ correction</li>
-      <li>Calibration, drift, and data validity concepts</li>
-      <li>Common field failure modes and how to prevent them</li>
-      <li>How to think like a CEMS troubleshooter (system view)</li>
-    </ul>
-  </div>
-
-  <div class="panel">
-    <h3>CEMS Block Diagram (Simple Explanation)</h3>
-    <div class="step">
-      <b>Stack/Process</b> → Probe → Heated Line → Sample Conditioning
-      (filter/chiller/dryer) → Analyzer (SO₂/NOx/CO/CO₂/O₂) → DAHS/PLC/DCS →
-      Reporting / Historian
-    </div>
-    <p class="muted">
-      Many “analyzer problems” are actually caused by the probe, sample line,
-      conditioning system, utilities, or DAHS signal handling.
-    </p>
-  </div>
-
-  <div class="panel">
-    <h3>Module 1: Key CEMS Terms</h3>
-    <div class="grid">
-      <div class="card">
-        <h4>Span & Zero</h4>
-        <p>
-          Zero verifies baseline. Span verifies sensitivity.
-          Both must stabilize and be repeatable.
-        </p>
-      </div>
-      <div class="card">
-        <h4>Drift</h4>
-        <p>
-          Change in reading during a defined period.
-          Drift usually points to contamination, leaks, or aging.
-        </p>
-      </div>
-      <div class="card">
-        <h4>Validity / Flags</h4>
-        <p>
-          Data becomes invalid during calibrations, faults,
-          warm-up, or unstable conditions.
-        </p>
-      </div>
-      <div class="card">
-        <h4>Response Time</h4>
-        <p>
-          How fast the analyzer reaches a stable value.
-          Often slowed by sample restrictions or condensation.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="panel">
-    <h3>Module 2: Wet vs Dry Basis (Field Meaning)</h3>
+    <h3>Training Structure</h3>
     <p>
-      Emission values may be reported on a <b>wet basis</b> (includes water vapor)
-      or a <b>dry basis</b> (water removed). Conditioning method and reporting rules
-      decide which basis is used.
+      These learning modules are designed to be read in sequence.
+      Each module builds on the previous one and focuses on
+      <b>how CEMS actually behaves in the field</b>.
     </p>
-    <div class="step">
-      <b>Field tip:</b> If moisture enters the analyzer or sample line,
-      readings can drift, become noisy, or calibration can fail.
-    </div>
   </div>
 
+  <!-- MODULES -->
   <div class="panel">
-    <h3>Module 3: Sample System Fundamentals</h3>
-    <ul class="list">
-      <li><b>Probe plugging</b> → low flow, slow response, unstable readings</li>
-      <li><b>Cold spots</b> in heated line → condensation → drift/noise</li>
-      <li><b>Filters</b> → restriction → slow response / pump strain</li>
-      <li><b>Leaks</b> → air ingress → false oxygen / dilution effects</li>
-      <li><b>Chiller/dryer issues</b> → water carryover → analyzer damage</li>
-    </ul>
-    <div class="action-row">
-      <a class="btn btn-primary" href="troubleshooting/index.html">Troubleshooting Hub →</a>
-    </div>
-  </div>
+    <h3>CEMS Fundamentals – Core Modules</h3>
 
-  <div class="panel">
-    <h3>Module 4: Calibration Quality (What “Good” Looks Like)</h3>
     <div class="grid">
+
+      <!-- Module 1 -->
       <div class="card">
-        <h4>Stable</h4>
-        <p>Reading settles and stays steady during zero/span application.</p>
+        <h4>Module 1: Key CEMS Terms</h4>
+        <p>
+          Understand zero, span, drift, validity, response time,
+          ranges, and reporting terms used in CEMS work.
+        </p>
+        <div class="action-row">
+          <a class="btn btn-primary"
+             href="learn/cems/module-1-key-terms.html">
+            Start Module 1 →
+          </a>
+        </div>
       </div>
+
+      <!-- Module 2 -->
       <div class="card">
-        <h4>Repeatable</h4>
-        <p>Repeated span checks give similar results within expected tolerance.</p>
+        <h4>Module 2: Wet vs Dry Basis</h4>
+        <p>
+          Learn how moisture affects reported values,
+          why numbers change, and where technicians get trapped.
+        </p>
+        <div class="action-row">
+          <a class="btn btn-primary"
+             href="learn/cems/module-2-wet-vs-dry.html">
+            Start Module 2 →
+          </a>
+        </div>
       </div>
+
+      <!-- Module 3 -->
       <div class="card">
-        <h4>Fast Enough</h4>
-        <p>Response time is consistent; slow response suggests restrictions.</p>
+        <h4>Module 3: Sample System Basics</h4>
+        <p>
+          The most important module — probes, heated lines,
+          filters, chillers, leaks, and flow problems.
+        </p>
+        <div class="action-row">
+          <a class="btn btn-primary"
+             href="learn/cems/module-3-sample-system.html">
+            Start Module 3 →
+          </a>
+        </div>
       </div>
+
+      <!-- Module 4 -->
       <div class="card">
-        <h4>Traceable</h4>
-        <p>Calibration gases are correct, valid, and properly regulated.</p>
+        <h4>Module 4: Calibration Quality</h4>
+        <p>
+          What good calibration looks like,
+          common failure causes, and verification techniques.
+        </p>
+        <div class="action-row">
+          <a class="btn btn-primary"
+             href="learn/cems/module-4-calibration-quality.html">
+            Start Module 4 →
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="warn">
-      If calibration fails repeatedly, suspect <b>sample conditioning</b> and
-      <b>leaks</b> first — not the analyzer electronics.
+
     </div>
   </div>
 
+  <!-- NEXT -->
   <div class="panel">
-    <h3>Module 5: The Technician’s Troubleshooting Method</h3>
-    <ol class="list">
-      <li><b>Confirm the symptom</b> (trend, alarms, process context)</li>
-      <li><b>Verify utilities</b> (power, instrument air, temps, flow)</li>
-      <li><b>Check sample system</b> (probe → line → conditioning → flow)</li>
-      <li><b>Check calibration path</b> (gas, regulator, manifold, valves)</li>
-      <li><b>Only then</b> suspect analyzer hardware/software</li>
-      <li><b>Verify recovery</b> with stable trend + repeat checks</li>
-    </ol>
-  </div>
-
-  <div class="panel">
-    <h3>Next Lessons (Coming Soon)</h3>
+    <h3>What’s Coming Next</h3>
     <div class="chip-row">
-      <span class="chip">ISO 14181: QAL1 / QAL2 / QAL3</span>
-      <span class="chip">Drift & Linearity Concepts</span>
-      <span class="chip">DAHS Basics</span>
-      <span class="chip">CEMS Alarm Strategy</span>
-      <span class="chip">Common Root Causes</span>
+      <span class="chip">ISO 14181 – QAL1 / QAL2 / QAL3</span>
+      <span class="chip">CEMS Alarm Philosophy</span>
+      <span class="chip">DAHS Fundamentals</span>
+      <span class="chip">Root Cause Analysis</span>
+      <span class="chip">Field Case Studies</span>
     </div>
+
     <p class="muted" style="margin-top:10px;">
-      We can build these as individual pages under <b>/learn/cems/</b>.
+      These modules will expand the training path under
+      <b>/learn/cems/</b>.
     </p>
   </div>
 
@@ -203,4 +163,3 @@
 
 </body>
 </html>
-
