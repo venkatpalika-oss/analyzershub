@@ -8,6 +8,7 @@
   <base href="/analyzershub/">
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
 
 <header class="site-header">
@@ -16,71 +17,116 @@
     <nav class="site-nav">
       <a href="index.html">Home</a>
       <a href="analyzers.html">Analyzer Search</a>
-      <a href="analyzers.html?category=gc">GC Hub</a>
-      <a href="guides/gc/chromatogram-guide.html">Chromatogram Guide</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/venkatpalika-oss/analyzershub/discussions" target="_blank" rel="noopener">Discussion</a>
     </nav>
   </div>
 </header>
 
 <nav class="crumbs" aria-label="Breadcrumb">
   <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers.html?category=gc">GC Hub</a><span>›</span>
+  <a href="analyzers.html">Analyzer Search</a><span>›</span>
   <a href="analyzers.html?vendor=siemens">Siemens</a><span>›</span>
   <span class="current">MAXUM Edition II</span>
 </nav>
 
 <main class="container">
-  <h2 style="margin-top:18px;">Siemens MAXUM Edition II — Process Gas Chromatograph</h2>
-  <p class="muted">
-    Troubleshooting reference for analyzer technicians: sampling, carrier stability, oven temperature stability,
-    valve sequencing, alarms, and communication to DCS/PLC.
-  </p>
 
-  <div class="action-row">
-    <a class="btn btn-ghost" href="analyzers.html">← Back to Search</a>
-    <a class="btn btn-primary" href="analyzers/siemens/maxum-ii/alarms/index.html">Alarm Decision Trees →</a>
-    <a class="btn btn-ghost" href="analyzers/siemens/maxum-ii/alarm-codes.html">Alarm Codes →</a>
-    <a class="btn btn-ghost" href="guides/gc/chromatogram-guide.html">Chromatogram Guide →</a>
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">Siemens MAXUM Edition II — Process Gas Chromatograph</h2>
+    <p class="muted" style="margin:8px 0 0;">
+      Online process GC for continuous gas composition monitoring.
+      Technician focus: sampling quality, carrier gas stability, valve switching, oven stability, detector stability, and DCS communications.
+    </p>
+
+    <div class="action-row">
+      <a class="btn btn-ghost" href="analyzers.html">← Back to Search</a>
+      <a class="btn btn-primary" href="analyzers/siemens/maxum-ii/alarms/index.html">Alarm Decision Trees →</a>
+      <a class="btn btn-ghost" href="guides/gc/chromatogram-guide.html">Chromatogram Guide →</a>
+    </div>
+
+    <div class="warn">
+      <b>Technician rule:</b> Always fix <b>sample conditioning + carrier pressure/flow stability</b> first.
+      Most GC “faults” are caused by wet/dirty sample, pressure hunting, leaks, or valve timing issues.
+    </div>
   </div>
 
-  <div class="warn">
-    <b>Best practice:</b> For most GC issues, first stabilize <b>carrier pressure</b> and <b>sampling conditioning</b>.
-    Many “GC faults” are actually sampling/utility problems.
-  </div>
+  <div class="grid">
 
-  <div class="grid" style="margin-top:14px;">
     <div class="card gc">
-      <h3>Common Symptoms</h3>
-      <p><b>No peaks:</b> carrier low, valve not switching, sample blocked.</p>
-      <p><b>Retention time shift:</b> oven instability or carrier hunting.</p>
-      <p><b>Repeatability poor:</b> sampling contamination, pressure instability, or sticking valves.</p>
+      <h3>Working Principle</h3>
+      <p>
+        The GC separates gas components in one or more <b>columns</b> and measures each component using a <b>detector</b>.
+        Each analysis cycle typically runs: <b>inject sample → separate → detect peaks → calculate composition</b>.
+      </p>
+      <ul class="list">
+        <li><b>Separation:</b> components travel at different speeds through the column(s).</li>
+        <li><b>Detection:</b> detector creates a signal producing peaks (chromatogram).</li>
+        <li><b>Calculation:</b> peak area → concentration using calibration factors/response factors.</li>
+      </ul>
+      <p class="muted"><b>Accuracy depends on:</b> stable carrier flow, stable oven temperature, clean sample, and consistent valve switching.</p>
     </div>
 
     <div class="card gc">
-      <h3>Recommended Troubleshooting Order</h3>
-      <div class="step"><b>1)</b> Check alarms and last analysis time</div>
-      <div class="step"><b>2)</b> Stabilize carrier (no hunting)</div>
-      <div class="step"><b>3)</b> Check sample conditioning (filters, traps, drains)</div>
-      <div class="step"><b>4)</b> Confirm oven stable at setpoint</div>
-      <div class="step"><b>5)</b> Confirm valve switching / method timing</div>
+      <h3>Main Components (Field Focus)</h3>
+      <ul class="list">
+        <li><b>Sample system:</b> sample probe/tap, filters/coalescers, regulators, restrictors, drains.</li>
+        <li><b>Carrier gas system:</b> carrier supply/regulators, traps/filters (if used), leak-tight fittings.</li>
+        <li><b>Valves & sample loop:</b> injection valve(s), switching valve(s), loop volume, timing.</li>
+        <li><b>Oven & temperature control:</b> heater, temp sensor, controller (stability = stable retention time).</li>
+        <li><b>Columns:</b> column module(s), restrictions, fittings.</li>
+        <li><b>Detector(s):</b> detector module + electronics (noise/instability affects peak area).</li>
+        <li><b>Controller & comms:</b> HMI/controller, alarms/status, network/OPC/Modbus mapping.</li>
+      </ul>
     </div>
 
     <div class="card gc">
-      <h3>Quick Links</h3>
-      <p>Go directly to the decision tree that matches your symptom.</p>
-      <div class="action-row">
-        <a class="btn btn-ghost" href="analyzers/siemens/maxum-ii/alarms/carrier-pressure.html">Carrier / Pressure →</a>
-        <a class="btn btn-ghost" href="analyzers/siemens/maxum-ii/alarms/oven-temperature.html">Oven / Temp →</a>
-        <a class="btn btn-ghost" href="analyzers/siemens/maxum-ii/alarms/valve-sequence.html">Valve / Sequence →</a>
-        <a class="btn btn-ghost" href="analyzers/siemens/maxum-ii/alarms/communications.html">Comms / DCS →</a>
+      <h3>Calibration Procedure (Technician Sequence)</h3>
+      <div class="step"><b>1)</b> Confirm stable operation: no sample/carrier/oven alarms; stable cycle time.</div>
+      <div class="step"><b>2)</b> Verify carrier pressure/flow is stable (no hunting). Leak check if instability exists.</div>
+      <div class="step"><b>3)</b> Verify sampling is dry/clean (filters, drains, no liquid carryover).</div>
+      <div class="step"><b>4)</b> Apply certified calibration standard. Allow <b>2–3 stable runs</b>.</div>
+      <div class="step"><b>5)</b> Update response factors/calibration factors per method; save and document.</div>
+      <div class="step"><b>6)</b> Run verification standard. Confirm % error is within acceptance criteria.</div>
+      <div class="step"><b>7)</b> Return to process. Confirm stable chromatogram and DCS values/quality.</div>
+      <p class="muted">Tip: If retention time drifts or peak area is unstable, stop calibration and fix carrier/oven/sample issues first.</p>
+    </div>
+
+    <div class="card gc">
+      <h3>Major Troubleshooting (Top Issues + Fast Checks)</h3>
+      <ul class="list">
+        <li><b>Retention time shift:</b> oven temperature drift, carrier flow/pressure change, column aging.</li>
+        <li><b>Peak area unstable / noisy baseline:</b> carrier instability, leaks, contamination, detector noise.</li>
+        <li><b>Missing peaks / low response:</b> injection valve/loop issue, restriction, sample not reaching GC, detector fault.</li>
+        <li><b>Repeatability poor:</b> valve timing, pressure hunting, wet sample, filter saturation.</li>
+        <li><b>Results wrong only in DCS:</b> mapping/scaling, wrong register/point, quality bit handling.</li>
+      </ul>
+
+      <div class="action-row" style="margin-top:10px;">
+        <a class="btn btn-ghost" href="analyzers/siemens/maxum-ii/alarms/index.html">Use Decision Trees →</a>
+        <a class="btn btn-ghost" href="guides/gc/chromatogram-guide.html">Chromatogram Guide →</a>
       </div>
     </div>
+
   </div>
 
-  <div class="action-row" style="margin-top:18px;">
-    <a class="btn btn-primary" href="index.html">Home</a>
-    <a class="btn btn-ghost" href="analyzers.html">Analyzer Search</a>
+  <!-- Discussion -->
+  <div class="panel">
+    <h3 style="margin:0;color:#0b3c5d;">Discussion</h3>
+    <p class="muted" style="margin:8px 0 0;">
+      Share MAXUM II troubleshooting tips (valves, peaks, retention time issues) and calibration experience. (Requires GitHub login.)
+    </p>
+
+    <script src="https://utteranc.es/client.js"
+            repo="venkatpalika-oss/analyzershub"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
   </div>
+
 </main>
 
 <footer class="site-footer">
@@ -89,7 +135,8 @@
     <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="analyzers.html">Search</a>
-      <a href="analyzers/siemens/maxum-ii/alarms/index.html">MAXUM II Alarms</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
     </div>
   </div>
 </footer>
