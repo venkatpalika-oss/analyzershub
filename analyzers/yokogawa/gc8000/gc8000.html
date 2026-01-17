@@ -5,10 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yokogawa GC8000 | AnalyzersHub</title>
 
-  <!-- IMPORTANT: fixes all navigation paths on GitHub Pages project site -->
   <base href="/analyzershub/">
-
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
@@ -19,72 +17,112 @@
     <nav class="site-nav">
       <a href="index.html">Home</a>
       <a href="analyzers.html">Analyzer Search</a>
-      <a href="analyzers.html?category=gc">GC Hub</a>
-      <a href="guides/gc/chromatogram-guide.html">Chromatogram Guide</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/venkatpalika-oss/analyzershub/discussions" target="_blank" rel="noopener">Discussion</a>
     </nav>
   </div>
 </header>
 
 <nav class="crumbs" aria-label="Breadcrumb">
   <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers.html?category=gc">GC Hub</a><span>›</span>
+  <a href="analyzers.html">Analyzer Search</a><span>›</span>
   <a href="analyzers.html?vendor=yokogawa">Yokogawa</a><span>›</span>
   <span class="current">GC8000</span>
 </nav>
 
 <main class="container">
 
-  <h2 style="margin-top:18px;">Yokogawa GC8000 — Process Gas Chromatograph</h2>
-  <p class="muted">
-    Technician-ready troubleshooting: sampling, carrier stability, oven stability, valve sequencing, alarms and communication to DCS.
-  </p>
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">Yokogawa GC8000 — Process Gas Chromatograph</h2>
+    <p class="muted" style="margin:8px 0 0;">
+      Online GC for continuous gas composition monitoring (refinery / gas plant / fuel gas / process control).
+      Focus: sampling, carrier gas, valves, oven stability, detector stability, and DCS communication.
+    </p>
 
-  <div class="action-row">
-    <a class="btn btn-ghost" href="analyzers.html">← Back to Search</a>
-    <a class="btn btn-primary" href="analyzers/yokogawa/gc8000/alarms/index.html">Alarm Decision Trees →</a>
-    <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/alarm-codes.html">Alarm Codes →</a>
-    <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/sampling-system.html">Sampling System →</a>
-  </div>
+    <div class="action-row">
+      <a class="btn btn-ghost" href="analyzers.html">← Back to Search</a>
+      <a class="btn btn-primary" href="analyzers/yokogawa/gc8000/alarms/index.html">Alarm Decision Trees →</a>
+      <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/alarm-codes.html">Alarm Codes →</a>
+    </div>
 
-  <div class="warn">
-    <b>Best practice:</b> If results look wrong, first stabilize <b>carrier pressure</b> and <b>sampling conditioning</b>.
-    Many “GC problems” are actually sampling problems.
+    <div class="warn">
+      <b>Technician rule:</b> Fix <b>carrier gas + sampling</b> issues first. Most GC alarms are caused by
+      pressure/flow instability, contamination, or switching/valve issues — not electronics.
+    </div>
   </div>
 
   <div class="grid">
 
     <div class="card gc">
-      <h3>Common Symptoms</h3>
-      <p><b>No peaks:</b> carrier low / valve not switching / sample blocked.</p>
-      <p><b>Retention shift:</b> oven instability or carrier hunting.</p>
-      <p><b>Baseline noise:</b> contamination / detector / grounding.</p>
+      <h3>Working Principle</h3>
+      <p>
+        GC separates gas components in a <b>column</b> and measures each component using a <b>detector</b>.
+        The instrument runs a cycle: inject sample → separate in column → detect peaks → calculate composition.
+      </p>
+      <ul class="list">
+        <li><b>Separation:</b> components travel at different speeds through the column.</li>
+        <li><b>Detection:</b> detector converts eluting components into a signal (peaks).</li>
+        <li><b>Calculation:</b> peak areas are converted to composition using calibration factors.</li>
+      </ul>
+      <p class="muted"><b>Accuracy depends on:</b> stable carrier flow/pressure, clean sample, consistent valve switching, and stable oven temperature.</p>
     </div>
 
     <div class="card gc">
-      <h3>Recommended Troubleshooting Order</h3>
-      <div class="step"><b>1)</b> Check alarms + last good analysis time</div>
-      <div class="step"><b>2)</b> Check carrier stability (no hunting)</div>
-      <div class="step"><b>3)</b> Check sample conditioning + filters</div>
-      <div class="step"><b>4)</b> Confirm oven temperature stable</div>
-      <div class="step"><b>5)</b> Confirm valve switching + method timing</div>
+      <h3>Main Components (Field Focus)</h3>
+      <ul class="list">
+        <li><b>Sample system:</b> sample conditioning, filters, regulators, restriction, drains.</li>
+        <li><b>Carrier gas system:</b> carrier supply, regulators, traps/filters (if used).</li>
+        <li><b>Injection & switching valves:</b> sample loop, rotary/solenoid valves, timing.</li>
+        <li><b>Oven / temperature control:</b> heater, sensors, controller.</li>
+        <li><b>Column & detector:</b> column module + detector electronics.</li>
+        <li><b>Controller & comms:</b> HMI/controller, I/O, Modbus/OPC/Ethernet, alarms.</li>
+      </ul>
     </div>
 
     <div class="card gc">
-      <h3>Quick Links</h3>
-      <p>Go directly to decision trees for the most common categories.</p>
-      <div class="action-row">
-        <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/alarms/carrier-pressure.html">Carrier / Pressure →</a>
-        <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/alarms/oven-temperature.html">Oven / Temp →</a>
-        <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/alarms/valve-sequence.html">Valve / Sequence →</a>
-        <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/alarms/communications.html">Comms / DCS →</a>
+      <h3>Calibration Procedure (Technician Sequence)</h3>
+      <div class="step"><b>1)</b> Confirm analyzer running stable cycles (no carrier/sample alarms).</div>
+      <div class="step"><b>2)</b> Verify carrier pressure/flow stable (no hunting), leaks checked.</div>
+      <div class="step"><b>3)</b> Apply calibration standard (certified gas). Allow stable runs (2–3).</div>
+      <div class="step"><b>4)</b> Update calibration factors / response factors (as per method).</div>
+      <div class="step"><b>5)</b> Run verification standard. Compare % error to acceptance.</div>
+      <div class="step"><b>6)</b> Return to process sample, confirm stable trend and DCS updates.</div>
+      <p class="muted">Tip: If peaks shift or area is unstable, do not calibrate—fix sampling/flow/valves first.</p>
+    </div>
+
+    <div class="card gc">
+      <h3>Major Troubleshooting (Top Issues)</h3>
+      <ul class="list">
+        <li><b>Unstable composition / noisy peaks:</b> carrier instability, leaks, contamination, detector drift.</li>
+        <li><b>Retention time shift:</b> oven temp drift, carrier flow change, column aging.</li>
+        <li><b>Missing peaks / low response:</b> injection valve issue, loop not filling, restriction, detector fault.</li>
+        <li><b>Repeatability bad:</b> valve timing, pressure hunting, sample conditioning.</li>
+        <li><b>DCS not updating:</b> comms mapping/scaling, quality bit, polling interval.</li>
+      </ul>
+
+      <div class="action-row" style="margin-top:10px;">
+        <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/alarms/index.html">Use Decision Trees →</a>
+        <a class="btn btn-ghost" href="guides/gc/chromatogram-guide.html">Chromatogram Guide →</a>
       </div>
     </div>
 
   </div>
 
-  <div class="action-row" style="margin-top:18px;">
-    <a class="btn btn-primary" href="index.html">Home</a>
-    <a class="btn btn-ghost" href="analyzers.html">Analyzer Search</a>
+  <!-- Discussion -->
+  <div class="panel">
+    <h3 style="margin:0;color:#0b3c5d;">Discussion</h3>
+    <p class="muted" style="margin:8px 0 0;">
+      Share GC8000 troubleshooting tips, valve issues, peak problems, and calibration experiences. (Requires GitHub login.)
+    </p>
+
+    <script src="https://utteranc.es/client.js"
+            repo="venkatpalika-oss/analyzershub"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
   </div>
 
 </main>
@@ -95,7 +133,8 @@
     <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="analyzers.html">Search</a>
-      <a href="analyzers/yokogawa/gc8000/alarms/index.html">GC8000 Alarms</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
     </div>
   </div>
 </footer>
