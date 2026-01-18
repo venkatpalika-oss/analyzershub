@@ -1,54 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Knowledge Base | AnalyzersHub</title>
-<base href="/analyzershub/">
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowledge Base | AnalyzersHub</title>
+
+  <base href="/analyzershub/">
+
+  <!-- ✅ CSS only in HEAD (cache bust optional) -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
 
-<body>
-<header class="site-header">
-  <div class="site-header-inner">
-    <a class="brand" href="index.html">AnalyzersHub</a>
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Analyzers</a>
-      <a href="knowledge/index.html" class="active">Knowledge Base</a>
-      <a href="community/index.html">Community</a>
-    </nav>
-  </div>
-</header>
+<body data-page="kb">
 
-<section class="hero-search">
-  <div class="hero-inner">
-    <h2>Knowledge Base</h2>
-    <p>Curated field experience turned into practical analyzer guidance.</p>
-  </div>
-</section>
+  <!-- ✅ CENTRAL HEADER -->
+  <div id="siteHeader"></div>
 
-<main class="container">
+  <section class="hero-search">
+    <div class="hero-inner">
+      <h2>Knowledge Base</h2>
+      <p>Curated field experience turned into practical analyzer guidance.</p>
+    </div>
+  </section>
 
-<div class="post-grid">
+  <main class="container">
 
-  <div class="post-card">
-    <h3>ZR22G – False Low Oxygen Due to Condensation</h3>
-    <p class="post-meta">Category: Oxygen Analyzer · Field Experience</p>
-    <p>Real-world case showing how condensation caused stable but incorrect readings.</p>
-    <a class="btn btn-primary"
-       href="knowledge/articles/sample-condensation-zr22g.html">
-       Read Article →
-    </a>
-  </div>
+    <div class="post-grid">
 
-</div>
+      <div class="post-card">
+        <h3>ZR22G – False Low Oxygen Due to Condensation</h3>
+        <p class="post-meta">Category: Oxygen Analyzer · Field Experience</p>
+        <p>Real-world case showing how condensation caused stable but incorrect readings.</p>
+        <a class="btn btn-primary" href="knowledge/articles/sample-condensation-zr22g.html">
+          Read Article →
+        </a>
+      </div>
 
-</main>
+    </div>
 
-<footer class="site-footer">
-  <div class="site-footer-inner">
-    <span class="muted">Field experience, structured and verified</span>
-  </div>
-</footer>
+  </main>
+
+  <!-- ✅ CENTRAL FOOTER -->
+  <div id="siteFooter"></div>
+
+  <!-- ✅ LOAD HEADER/FOOTER -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
+
 </body>
 </html>
