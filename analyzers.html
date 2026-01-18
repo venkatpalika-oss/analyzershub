@@ -6,214 +6,150 @@
   <title>Analyzer Search | AnalyzersHub</title>
 
   <base href="/analyzershub/">
-
-  <!-- ✅ CSS must be only in HEAD -->
   <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
-
-  <!-- SEO Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"CollectionPage",
-    "@id":"https://venkatpalika-oss.github.io/analyzershub/analyzers.html#page",
-    "name":"Analyzer Search",
-    "url":"https://venkatpalika-oss.github.io/analyzershub/analyzers.html",
-    "isPartOf":{"@id":"https://venkatpalika-oss.github.io/analyzershub/#website"},
-    "about":[
-      {"@type":"Thing","name":"Industrial analyzers"},
-      {"@type":"Thing","name":"Troubleshooting"},
-      {"@type":"Thing","name":"Alarm codes"},
-      {"@type":"Thing","name":"Decision trees"},
-      {"@type":"Thing","name":"Calibration"}
-    ]
-  }
-  </script>
 </head>
 
-<body data-page="kb">
+<body data-page="analyzers">
 
-<!-- ✅ CENTRAL HEADER -->
-<div id="siteHeader"></div>
+  <!-- CENTRAL HEADER -->
+  <div id="siteHeader"></div>
 
-<!-- Hero -->
-<section class="hero-search">
-  <div class="hero-inner">
-    <h2>Analyzer Search</h2>
-    <p>
-      Browse analyzers by manufacturer, type, and model.
-      Access working principles, calibration, troubleshooting,
-      alarms, and decision trees.
-    </p>
-  </div>
-</section>
+  <section class="hero-search">
+    <div class="hero-inner">
+      <h2>Analyzer Knowledge Base</h2>
+      <p>
+        Field-focused guides, troubleshooting, alarms, and decision trees
+        for industrial process analyzers.
+      </p>
+    </div>
+  </section>
 
-<main class="container">
+  <main class="container">
 
-  <!-- SEARCH -->
-  <div class="search-wrap">
-    <input
-      id="searchInput"
-      class="search-input"
-      placeholder="Search… (ZR22G, GC8000, AMETEK 888, Siemens MAXUM)">
-  </div>
+    <!-- ================= GAS CHROMATOGRAPHS ================= -->
+    <div class="panel">
+      <h3>Gas Chromatographs (GC)</h3>
 
-  <!-- FILTERS -->
-  <div class="filter-bar">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="gc">GC</button>
-    <button class="filter-btn" data-filter="oxygen">Oxygen</button>
-    <button class="filter-btn" data-filter="ametek">AMETEK</button>
-    <button class="filter-btn" data-filter="yokogawa">Yokogawa</button>
-    <button class="filter-btn" data-filter="abb">ABB</button>
-    <button class="filter-btn" data-filter="siemens">Siemens</button>
-  </div>
+      <div class="grid">
 
-  <!-- Analyzer Cards -->
-  <div class="grid" id="cards">
+        <div class="card gc">
+          <h4>ABB PGC5000B – Smart Oven GC</h4>
+          <p>Process GC troubleshooting: sampling, carrier, oven, valves, DCS.</p>
+          <a class="btn btn-primary" href="analyzers/abb/gc/pgc5000b/pgc5000b.html">Open →</a>
+        </div>
 
-    <!-- YOKOGAWA -->
-    <div class="card yokogawa oxygen"
-         data-tag="yokogawa oxygen"
-         data-search="yokogawa zr22g zirconia oxygen">
-      <h3>Yokogawa ZR22G</h3>
-      <p>Zirconia oxygen analyzer for combustion control.</p>
-      <div class="action-row">
-        <a class="btn btn-primary" href="analyzers/yokogawa/zr22g.html">Open →</a>
+        <div class="card gc">
+          <h4>ABB PGC5000C – Smart Oven GC</h4>
+          <p>Decision-tree driven troubleshooting for Smart Oven series.</p>
+          <a class="btn btn-primary" href="analyzers/abb/gc/pgc5000c/pgc5000c.html">Open →</a>
+        </div>
+
+        <div class="card gc">
+          <h4>ABB PGC5007B – Total Sulfur GC</h4>
+          <p>SRU / sulfur-specific GC configuration and stability focus.</p>
+          <a class="btn btn-primary" href="analyzers/abb/gc/pgc5007b/pgc5007b.html">Open →</a>
+        </div>
+
+        <div class="card gc">
+          <h4>ABB Portable NGC</h4>
+          <p>Field GC setup, repeatability, leaks, and portability issues.</p>
+          <a class="btn btn-primary" href="analyzers/abb/gc/portable-ngc/portable-ngc.html">Open →</a>
+        </div>
+
       </div>
     </div>
 
-    <div class="card yokogawa oxygen"
-         data-tag="yokogawa oxygen"
-         data-search="yokogawa ox400 oxygen">
-      <h3>Yokogawa OX400</h3>
-      <p>In-situ oxygen analyzer for boilers and furnaces.</p>
-      <div class="action-row">
-        <a class="btn btn-primary" href="analyzers/yokogawa/ox400.html">Open →</a>
+    <!-- ================= WOBBE INDEX ================= -->
+    <div class="panel">
+      <h3>Wobbe Index Analyzers</h3>
+
+      <div class="grid">
+        <div class="card gc">
+          <h4>Hobré Wobbe Index Analyzer</h4>
+          <p>Wobbe measurement, stability, conditioning, and DCS integration.</p>
+          <a class="btn btn-primary" href="analyzers/hobre/wobbe-index/wobbe-index.html">Open →</a>
+        </div>
       </div>
     </div>
 
-    <div class="card yokogawa gc"
-         data-tag="yokogawa gc"
-         data-search="yokogawa gc8000 gas chromatograph">
-      <h3>Yokogawa GC8000</h3>
-      <p>Online process gas chromatograph.</p>
-      <div class="action-row">
-        <a class="btn btn-primary" href="analyzers/yokogawa/gc8000/gc8000.html">Open →</a>
-        <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/alarms/index.html">Alarms →</a>
+    <!-- ================= OXYGEN ANALYZERS ================= -->
+    <div class="panel">
+      <h3>Oxygen Analyzers</h3>
+
+      <div class="grid">
+
+        <div class="card">
+          <h4>ABB AZ10</h4>
+          <p>Entry-level oxygen analyzer for combustion monitoring.</p>
+          <a class="btn btn-primary" href="analyzers/abb/az/az10/az10.html">Open →</a>
+        </div>
+
+        <div class="card">
+          <h4>ABB AZ20</h4>
+          <p>Mid-range oxygen analyzer with extended diagnostics.</p>
+          <a class="btn btn-primary" href="analyzers/abb/az/az20/az20.html">Open →</a>
+        </div>
+
+        <div class="card">
+          <h4>ABB AZ25</h4>
+          <p>Enhanced combustion oxygen analyzer.</p>
+          <a class="btn btn-primary" href="analyzers/abb/az/az25/az25.html">Open →</a>
+        </div>
+
+        <div class="card">
+          <h4>ABB AZ30</h4>
+          <p>High-performance oxygen analyzer with fast response.</p>
+          <a class="btn btn-primary" href="analyzers/abb/az/az30/az30.html">Open →</a>
+        </div>
+
+        <div class="card">
+          <h4>ABB AZ40</h4>
+          <p>Premium oxygen analyzer with full diagnostics.</p>
+          <a class="btn btn-primary" href="analyzers/abb/az/az40/az40.html">Open →</a>
+        </div>
+
+        <div class="card">
+          <h4>AMETEK 933 Oxygen Analyzer</h4>
+          <p>Combustion, inerting, and process safety oxygen measurement.</p>
+          <a class="btn btn-primary" href="analyzers/ametek/933/933.html">Open →</a>
+        </div>
+
       </div>
     </div>
 
-    <!-- ABB GC -->
-    <div class="card abb gc"
-         data-tag="abb gc"
-         data-search="abb pgc5000b smart oven">
-      <h3>ABB PGC5000B</h3>
-      <p>Smart oven process GC series.</p>
-      <div class="action-row">
-        <a class="btn btn-primary" href="analyzers/abb/gc/pgc5000b/pgc5000b.html">Open →</a>
-        <a class="btn btn-ghost" href="analyzers/abb/gc/pgc5000b/alarms/index.html">Alarms →</a>
+    <!-- ================= SRU / TAIL GAS ================= -->
+    <div class="panel">
+      <h3>Sulfur Recovery / Tail Gas</h3>
+
+      <div class="grid">
+        <div class="card">
+          <h4>AMETEK 888 Tail Gas Analyzer</h4>
+          <p>SRU sulfur monitoring, calibration, and decision trees.</p>
+          <a class="btn btn-primary" href="analyzers/ametek/888/888.html">Open →</a>
+        </div>
       </div>
     </div>
 
-    <!-- SIEMENS -->
-    <div class="card siemens gc"
-         data-tag="siemens gc"
-         data-search="siemens maxum edition ii maxum gc">
-      <h3>Siemens MAXUM Edition II</h3>
-      <p>High-performance process gas chromatograph.</p>
-      <div class="action-row">
-        <a class="btn btn-primary" href="analyzers/siemens/maxum/maxum.html">Open →</a>
+    <!-- ================= FLASH POINT ================= -->
+    <div class="panel">
+      <h3>Flash Point Analyzers</h3>
+
+      <div class="grid">
+        <div class="card">
+          <h4>Flash Point Analyzer P-500</h4>
+          <p>ASTM methods, CRM verification, repeatability & alarms.</p>
+          <a class="btn btn-primary" href="analyzers/flash-point/p500/p500.html">Open →</a>
+        </div>
       </div>
     </div>
 
-    <div class="card siemens gc"
-         data-tag="siemens gc"
-         data-search="siemens sitrans cv wobbe calorific value">
-      <h3>Siemens SITRANS CV</h3>
-      <p>Wobbe index & calorific value GC.</p>
-      <div class="action-row">
-        <a class="btn btn-primary" href="analyzers/siemens/sitrans-cv/sitrans-cv.html">Open →</a>
-      </div>
-    </div>
+  </main>
 
-    <!-- AMETEK -->
-    <div class="card ametek gc"
-         data-tag="ametek gc"
-         data-search="ametek 888 tail gas analyzer sru sulfur">
-      <h3>AMETEK 888 Tail Gas Analyzer</h3>
-      <p>Continuous sulfur monitoring for SRU tail gas.</p>
-      <div class="action-row">
-        <a class="btn btn-primary" href="analyzers/ametek/888/888.html">Open →</a>
-        <a class="btn btn-ghost" href="alarms/ametek/888/alarm-codes.html">Alarms →</a>
-      </div>
-    </div>
+  <!-- CENTRAL FOOTER -->
+  <div id="siteFooter"></div>
 
-    <div class="card ametek oxygen"
-         data-tag="ametek oxygen"
-         data-search="ametek 933 oxygen analyzer">
-      <h3>AMETEK 933 Oxygen Analyzer</h3>
-      <p>Continuous oxygen measurement for process control.</p>
-      <div class="action-row">
-        <a class="btn btn-primary" href="analyzers/ametek/933/933.html">Open →</a>
-        <a class="btn btn-ghost" href="alarms/ametek/933/alarm-codes.html">Alarms →</a>
-      </div>
-    </div>
-
-  </div>
-</main>
-
-<!-- ✅ CENTRAL FOOTER -->
-<div id="siteFooter"></div>
-
-<!-- ✅ LOAD HEADER/FOOTER -->
-<script src="assets/js/includes.js?v=2026-01-18"></script>
-
-<script>
-const searchInput = document.getElementById("searchInput");
-const cards = [...document.querySelectorAll("#cards .card")];
-const buttons = [...document.querySelectorAll(".filter-btn")];
-
-let active = "all";
-
-/* URL support: ?q=, ?filter=, ?category= */
-(function initFromUrl(){
-  const p = new URLSearchParams(location.search);
-
-  const qParam = (p.get("q") || "").trim();
-  if (qParam) searchInput.value = qParam;
-
-  const f = (p.get("filter") || "").trim().toLowerCase();
-  const c = (p.get("category") || "").trim().toLowerCase();
-
-  if (f) active = f;
-  else if (c) active = c;
-})();
-
-function apply(){
-  const q = (searchInput.value || "").toLowerCase().trim();
-
-  cards.forEach(c=>{
-    const tag = (c.dataset.tag || "").toLowerCase();
-    const text = (c.dataset.search || "").toLowerCase();
-
-    const okFilter = (active === "all") || tag.includes(active);
-    const okSearch = !q || text.includes(q);
-
-    c.classList.toggle("is-hidden", !(okFilter && okSearch));
-  });
-}
-
-function setActive(val){
-  active = val;
-  buttons.forEach(b => b.classList.toggle("active", b.dataset.filter === val));
-  apply();
-}
-
-buttons.forEach(b => b.addEventListener("click", ()=> setActive(b.dataset.filter)));
-searchInput.addEventListener("input", apply);
-
-setActive(active);
-</script>
+  <!-- INCLUDE LOADER -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
