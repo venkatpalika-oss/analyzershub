@@ -19,7 +19,8 @@ img{max-width:100%;height:auto;display:block}
 .muted{opacity:.85}
 
 /* =========================
-   HEADER (GLOBAL – FIXED)
+   HEADER (GLOBAL – HARD FIX)
+   (Prevents faded / transparent header issue)
 ========================= */
 .site-header{
   position:sticky;
@@ -30,6 +31,10 @@ img{max-width:100%;height:auto;display:block}
   filter:none !important;
   backdrop-filter:none !important;
   box-shadow:0 2px 14px rgba(0,0,0,.22) !important;
+}
+.site-header *{
+  filter:none !important;
+  opacity:1 !important;
 }
 
 .site-header-inner{
@@ -109,6 +114,7 @@ img{max-width:100%;height:auto;display:block}
     url("../images/home-hero.png");
   background-size:cover;
   background-position:center;
+  background-repeat:no-repeat;
 }
 
 .hero-inner{
@@ -152,6 +158,7 @@ img{max-width:100%;height:auto;display:block}
     url("../images/home-hero.png");
   background-size:cover;
   background-position:center;
+  background-repeat:no-repeat;
 }
 
 .hero-search .hero-inner{
@@ -238,10 +245,12 @@ img{max-width:100%;height:auto;display:block}
 .action-row{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
 
 .btn{
+  display:inline-block;
   padding:10px 14px;
   border-radius:10px;
   font-weight:900;
   border:1px solid rgba(0,0,0,.12);
+  cursor:pointer;
   transition:transform .15s ease, background .15s ease;
 }
 
@@ -254,8 +263,7 @@ img{max-width:100%;height:auto;display:block}
 .btn-ghost:hover{background:#e9f2f9}
 
 /* =========================
-   SEARCH BAR + FILTERS (FIX)
-   (This is what you were missing)
+   SEARCH BAR + FILTERS
 ========================= */
 .search-wrap{
   margin:16px 0 10px;
@@ -308,7 +316,6 @@ img{max-width:100%;height:auto;display:block}
   border-color:#1f78b4;
 }
 
-/* JS hide class */
 .is-hidden{display:none}
 
 /* =========================
@@ -362,6 +369,38 @@ img{max-width:100%;height:auto;display:block}
 }
 
 .post-meta{font-size:.9rem;font-weight:800;opacity:.8}
+
+/* =========================
+   FORMS (CONTACT FIX)
+========================= */
+.form{
+  max-width:600px;
+  margin-top:10px;
+}
+
+.form label{
+  display:block;
+  font-weight:900;
+  color:#0b3c5d;
+  margin:10px 0 6px;
+}
+
+.form input,.form textarea,.form select{
+  width:100%;
+  padding:12px;
+  border-radius:12px;
+  border:1px solid #cfd8e3;
+  font:inherit;
+  background:#fff;
+}
+
+.form textarea{min-height:140px;resize:vertical}
+
+.form input:focus,.form textarea:focus,.form select:focus{
+  outline:none;
+  border-color:#1f78b4;
+  box-shadow:0 0 0 4px rgba(31,120,180,.18);
+}
 
 /* =========================
    FOOTER
