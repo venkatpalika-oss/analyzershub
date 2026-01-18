@@ -254,6 +254,64 @@ img{max-width:100%;height:auto;display:block}
 .btn-ghost:hover{background:#e9f2f9}
 
 /* =========================
+   SEARCH BAR + FILTERS (FIX)
+   (This is what you were missing)
+========================= */
+.search-wrap{
+  margin:16px 0 10px;
+  display:flex;
+  justify-content:center;
+}
+
+.search-input{
+  width:100%;
+  max-width:820px;
+  padding:14px 16px;
+  border-radius:12px;
+  border:1px solid #cfd8e3;
+  font-size:1rem;
+  background:#fff;
+}
+
+.search-input:focus{
+  outline:none;
+  border-color:#1f78b4;
+  box-shadow:0 0 0 4px rgba(31,120,180,.18);
+}
+
+.filter-bar{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:center;
+  margin-bottom:24px;
+}
+
+.filter-btn{
+  padding:9px 16px;
+  border-radius:999px;
+  border:1px solid #cfd8e3;
+  background:#fff;
+  font-weight:800;
+  cursor:pointer;
+  transition:background .15s ease, transform .15s ease;
+}
+
+.filter-btn:hover{
+  transform:translateY(-1px);
+  background:#f0f7ff;
+}
+
+.filter-btn.active{
+  background:#1f78b4;
+  color:#fff;
+  border-color:#1f78b4;
+}
+
+/* JS hide class */
+.is-hidden{display:none}
+
+/* =========================
    LISTS & INFO
 ========================= */
 .list{padding-left:18px}
