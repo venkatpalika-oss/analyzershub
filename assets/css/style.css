@@ -1,146 +1,98 @@
 /* =========================================================
-   AnalyzersHub - Global Styles (FINAL STABLE)
+   AnalyzersHub - Global Styles (FINAL CLEAN)
    File: assets/css/style.css
 ========================================================= */
 
-/* =========================
-   BASE
-========================= */
+/* Base */
 *{box-sizing:border-box}
 body{
-  margin:0;
   font-family:Arial, sans-serif;
+  margin:0;
   background:#f5f7fa;
-  color:#222;
+  color:#222
 }
-a{color:#1f78b4;text-decoration:none}
-a:hover{text-decoration:underline}
+a{color:#1f78b4}
+.muted{opacity:.9}
 img{max-width:100%;height:auto;display:block}
-.muted{opacity:.85}
 
 /* =========================
-   HEADER (GLOBAL – FIXED)
+   HEADER (PROFESSIONAL)
 ========================= */
 .site-header{
-  position:sticky;
-  top:0;
-  z-index:9999;
-  background:#0b3c5d !important;
-  opacity:1 !important;
-  filter:none !important;
-  backdrop-filter:none !important;
-  box-shadow:0 2px 14px rgba(0,0,0,.22) !important;
+  position:sticky;top:0;z-index:999;
+  background:#0b3c5d;color:#fff;
+  box-shadow:0 2px 12px rgba(0,0,0,.18)
 }
-
 .site-header-inner{
-  max-width:1200px;
-  margin:0 auto;
-  padding:12px 16px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
+  max-width:1200px;margin:0 auto;padding:12px 16px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px
 }
-
 .brand{
-  color:#fff;
-  font-weight:900;
-  font-size:1.2rem;
+  color:#fff;text-decoration:none;
+  font-weight:900;font-size:1.2rem;
   letter-spacing:.2px;
-  display:flex;
-  flex-direction:column;
-  line-height:1.1;
+  display:flex;flex-direction:column;line-height:1.1
 }
-
 .brand-sub{
-  font-size:.72rem;
-  font-weight:700;
-  opacity:.75;
-  letter-spacing:.4px;
+  font-size:.72rem;font-weight:700;opacity:.75;letter-spacing:.4px
 }
-
 .site-nav{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  align-items:center;
+  display:flex;flex-wrap:wrap;gap:12px;align-items:center
 }
-
 .site-nav a{
-  color:#fff;
-  font-weight:800;
-  padding:8px 12px;
-  border-radius:8px;
-  opacity:.95;
+  color:#fff;text-decoration:none;font-weight:800;
+  padding:8px 12px;border-radius:8px;opacity:.95
 }
-
-.site-nav a:hover{
-  background:rgba(255,255,255,.12);
-  text-decoration:none;
-}
-
+.site-nav a:hover{background:rgba(255,255,255,.12)}
 .site-nav a.active{
   background:rgba(255,255,255,.18);
-  border:1px solid rgba(255,255,255,.25);
+  border:1px solid rgba(255,255,255,.25)
 }
-
 .nav-sep{
-  width:1px;
-  height:18px;
+  width:1px;height:18px;
   background:rgba(255,255,255,.35);
-  margin:0 6px;
+  margin:0 6px
 }
-
 @media(max-width:900px){
-  .site-header-inner{flex-direction:column;align-items:flex-start}
   .brand-sub,.nav-sep{display:none}
+  .site-header-inner{flex-direction:column;align-items:flex-start}
 }
 
 /* =========================
-   HERO – HOME
+   HERO (HOME)
 ========================= */
 .hero{
-  min-height:360px;
+  min-height:320px;
   display:flex;
   align-items:center;
   color:#fff;
   background:
-    linear-gradient(rgba(11,60,93,.85), rgba(11,60,93,.65)),
-    url("../images/home-hero.png");
+    linear-gradient(rgba(11,60,93,.75), rgba(11,60,93,.65)),
+    url("../images/industrial-analyzer-wallpaper.webp");
   background-size:cover;
   background-position:center;
 }
-
-.hero-inner{
-  max-width:1200px;
-  margin:0 auto;
-  padding:24px 16px;
-}
-
+.hero-inner{max-width:1200px;margin:0 auto;padding:22px 16px}
 .hero h2{
   margin:0 0 8px;
-  font-size:2.2rem;
+  font-size:2.1rem;
   line-height:1.1;
-  text-shadow:0 2px 14px rgba(0,0,0,.7);
+  text-shadow:0 2px 14px rgba(0,0,0,.7)
 }
-
 .hero p{
-  max-width:900px;
+  max-width:860px;
   font-size:1.05rem;
-  text-shadow:0 2px 12px rgba(0,0,0,.7);
+  opacity:.95;
+  text-shadow:0 2px 12px rgba(0,0,0,.7)
 }
-
-.hero .btn{
-  box-shadow:0 4px 14px rgba(0,0,0,.35);
-}
-
+.hero .btn{box-shadow:0 4px 14px rgba(0,0,0,.35)}
 @media(max-width:768px){
   .hero{min-height:260px}
   .hero h2{font-size:1.8rem}
 }
 
 /* =========================
-   HERO – SEARCH / KB
+   HERO (ANALYZER SEARCH)
 ========================= */
 .hero-search{
   min-height:240px;
@@ -153,82 +105,53 @@ img{max-width:100%;height:auto;display:block}
   background-size:cover;
   background-position:center;
 }
-
-.hero-search .hero-inner{
-  max-width:1200px;
-  margin:0 auto;
-  padding:20px 16px;
-}
-
 .hero-search h2,
 .hero-search p{
   color:#fff;
-  text-shadow:0 3px 16px rgba(0,0,0,.8);
+  text-shadow:0 3px 16px rgba(0,0,0,.8)
 }
 
 /* =========================
    CONTAINERS
 ========================= */
-.container{
-  max-width:1200px;
-  margin:0 auto;
-  padding:0 16px 44px;
-}
+.container{max-width:1200px;margin:0 auto;padding:0 16px 44px}
 
 /* =========================
-   PANELS
+   PANELS & CARDS
 ========================= */
 .panel{
-  background:#fff;
-  border:1px solid #e0e6ec;
-  border-radius:14px;
-  padding:16px;
+  background:#fff;border:1px solid #e0e6ec;
+  border-radius:14px;padding:16px;
   box-shadow:0 6px 18px rgba(0,0,0,.08);
-  margin-top:16px;
+  margin-top:14px
 }
-
-/* =========================
-   GRID & CARDS
-========================= */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:16px;
-  margin-top:10px;
+  gap:16px;margin-top:10px
 }
-
 .card{
-  background:#fff;
-  border-radius:14px;
+  background:#fff;border-radius:14px;
   border:1px solid #e0e6ec;
   box-shadow:0 4px 14px rgba(0,0,0,.08);
-  padding:16px;
-  position:relative;
-  transition:transform .18s ease, box-shadow .18s ease;
+  padding:16px;position:relative;
+  transition:transform .18s ease, box-shadow .18s ease
 }
-
 .card:hover{
   transform:translateY(-3px);
-  box-shadow:0 12px 28px rgba(0,0,0,.14);
+  box-shadow:0 12px 28px rgba(0,0,0,.14)
 }
-
 .card::before{
-  content:"";
-  position:absolute;
-  top:0;left:0;
-  width:100%;
-  height:7px;
-  background:#d1d5db;
+  content:"";position:absolute;top:0;left:0;
+  width:100%;height:7px;background:#d1d5db
 }
-
 .card h3,.card h4{margin:8px 0;color:#0b3c5d}
 .card p{margin:0 0 12px;font-size:.95rem}
 
-/* Brand strips */
+/* Category strips */
 .card.yokogawa::before{background:linear-gradient(90deg,#0b3c5d,#1f78b4)}
 .card.abb::before{background:linear-gradient(90deg,#1f78b4,#0b3c5d)}
 .card.siemens::before{background:linear-gradient(90deg,#2e7d32,#1f78b4)}
-.card.ametek::before{background:linear-gradient(90deg,#374151,#111827)}
 .card.gc::before{background:linear-gradient(90deg,#2e7d32,#6fcf97)}
 .card.oxygen::before{background:linear-gradient(90deg,#1f78b4,#6fb6e9)}
 
@@ -236,20 +159,13 @@ img{max-width:100%;height:auto;display:block}
    BUTTONS
 ========================= */
 .action-row{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
-
 .btn{
-  padding:10px 14px;
-  border-radius:10px;
-  font-weight:900;
-  border:1px solid rgba(0,0,0,.12);
-  transition:transform .15s ease, background .15s ease;
+  padding:10px 14px;border-radius:10px;
+  font-weight:900;text-decoration:none;
+  border:1px solid rgba(0,0,0,.12)
 }
-
-.btn:hover{transform:translateY(-1px)}
-
 .btn-primary{background:#1f78b4;color:#fff}
 .btn-primary:hover{background:#155a8a}
-
 .btn-ghost{background:#fff;color:#0b3c5d}
 .btn-ghost:hover{background:#e9f2f9}
 
@@ -258,52 +174,23 @@ img{max-width:100%;height:auto;display:block}
 ========================= */
 .list{padding-left:18px}
 .list li{margin:6px 0}
-
 .step{
   background:#f6fbff;
   border-left:4px solid #1f78b4;
-  padding:12px;
-  border-radius:10px;
-  margin:10px 0;
+  padding:12px;border-radius:10px;margin:10px 0
 }
-
 .warn{
   background:#fff7ed;
   border-left:4px solid #f59e0b;
-  padding:12px;
-  border-radius:10px;
-  margin:14px 0;
+  padding:12px;border-radius:10px;margin:14px 0
 }
-
 .field-tip{
   background:#f0f9ff;
   border-left:4px solid #1f78b4;
   color:#0b3c5d;
-  padding:12px;
-  border-radius:10px;
-  margin:14px 0;
-  font-weight:800;
+  padding:12px;border-radius:10px;
+  margin:14px 0;font-weight:800
 }
-
-/* =========================
-   BLOG
-========================= */
-.post-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:14px;
-  margin-top:14px;
-}
-
-.post-card{
-  background:#fff;
-  border:1px solid #e0e6ec;
-  border-radius:14px;
-  padding:14px;
-  box-shadow:0 6px 18px rgba(0,0,0,.06);
-}
-
-.post-meta{font-size:.9rem;font-weight:800;opacity:.8}
 
 /* =========================
    FOOTER
@@ -311,40 +198,17 @@ img{max-width:100%;height:auto;display:block}
 .site-footer{
   margin-top:40px;
   background:#eef2f6;
-  border-top:1px solid #d9e2ec;
+  border-top:1px solid #d9e2ec
 }
-
 .site-footer-inner{
-  max-width:1200px;
-  margin:0 auto;
+  max-width:1200px;margin:0 auto;
   padding:16px;
-  display:flex;
-  flex-wrap:wrap;
-  gap:18px;
-  justify-content:space-between;
+  display:flex;flex-wrap:wrap;
+  justify-content:space-between;gap:18px
 }
-
 .footer-links{display:flex;gap:12px;flex-wrap:wrap}
-.footer-links a{color:#0b3c5d;font-weight:800}
-/* =========================================
-   HARD OVERRIDE – HEADER COLOR FIX
-   (must be LAST in file)
-========================================= */
-
-header,
-.site-header,
-.site-header * {
-  background-color:#0b3c5d !important;
-  opacity:1 !important;
-  filter:none !important;
-  backdrop-filter:none !important;
+.footer-links a{
+  color:#0b3c5d;
+  text-decoration:none;font-weight:800
 }
-
-.site-nav a{
-  color:#ffffff !important;
-}
-
-.brand,
-.brand-sub{
-  color:#ffffff !important;
-}
+.footer-links a:hover{text-decoration:underline}
