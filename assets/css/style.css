@@ -7,6 +7,7 @@
    BASE
 ========================= */
 *{box-sizing:border-box}
+html,body{height:100%}
 body{
   margin:0;
   font-family:Arial, sans-serif;
@@ -19,22 +20,21 @@ img{max-width:100%;height:auto;display:block}
 .muted{opacity:.85}
 
 /* =========================
-   HEADER (GLOBAL – HARD FIX)
-   (Prevents faded / transparent header issue)
+   HEADER (GLOBAL – SOLID)
 ========================= */
 .site-header{
   position:sticky;
   top:0;
   z-index:9999;
-  background:#0b3c5d !important;
+  background:#0b3c5d !important;  /* force solid header everywhere */
   opacity:1 !important;
   filter:none !important;
   backdrop-filter:none !important;
   box-shadow:0 2px 14px rgba(0,0,0,.22) !important;
 }
+
 .site-header *{
   filter:none !important;
-  opacity:1 !important;
 }
 
 .site-header-inner{
@@ -77,6 +77,7 @@ img{max-width:100%;height:auto;display:block}
   padding:8px 12px;
   border-radius:8px;
   opacity:.95;
+  text-decoration:none;
 }
 
 .site-nav a:hover{
@@ -103,12 +104,14 @@ img{max-width:100%;height:auto;display:block}
 
 /* =========================
    HERO – HOME
+   (Uses assets/images/home-hero.png)
 ========================= */
 .hero{
   min-height:360px;
   display:flex;
   align-items:center;
   color:#fff;
+
   background:
     linear-gradient(rgba(11,60,93,.85), rgba(11,60,93,.65)),
     url("../images/home-hero.png");
@@ -134,6 +137,7 @@ img{max-width:100%;height:auto;display:block}
   max-width:900px;
   font-size:1.05rem;
   text-shadow:0 2px 12px rgba(0,0,0,.7);
+  opacity:.95;
 }
 
 .hero .btn{
@@ -141,20 +145,21 @@ img{max-width:100%;height:auto;display:block}
 }
 
 @media(max-width:768px){
-  .hero{min-height:260px}
+  .hero{min-height:260px;background-position:center top}
   .hero h2{font-size:1.8rem}
 }
 
 /* =========================
-   HERO – SEARCH / KB
+   HERO – INNER PAGES (Search/Knowledge/etc)
 ========================= */
 .hero-search{
   min-height:240px;
   display:flex;
   align-items:center;
   color:#fff;
+
   background:
-    linear-gradient(rgba(11,60,93,.88), rgba(11,60,93,.7)),
+    linear-gradient(rgba(11,60,93,.88), rgba(11,60,93,.70)),
     url("../images/home-hero.png");
   background-size:cover;
   background-position:center;
@@ -181,6 +186,20 @@ img{max-width:100%;height:auto;display:block}
   margin:0 auto;
   padding:0 16px 44px;
 }
+
+/* =========================
+   BREADCRUMBS
+========================= */
+.crumbs{
+  max-width:1200px;
+  margin:12px auto 0;
+  padding:0 16px;
+  font-weight:800;
+  opacity:.9;
+}
+.crumbs a{color:#1f78b4}
+.crumbs span{margin:0 6px}
+.crumbs .current{color:#0b3c5d}
 
 /* =========================
    PANELS
@@ -211,6 +230,7 @@ img{max-width:100%;height:auto;display:block}
   box-shadow:0 4px 14px rgba(0,0,0,.08);
   padding:16px;
   position:relative;
+  overflow:hidden;
   transition:transform .18s ease, box-shadow .18s ease;
 }
 
@@ -229,9 +249,9 @@ img{max-width:100%;height:auto;display:block}
 }
 
 .card h3,.card h4{margin:8px 0;color:#0b3c5d}
-.card p{margin:0 0 12px;font-size:.95rem}
+.card p{margin:0 0 12px;font-size:.95rem;opacity:.92}
 
-/* Brand strips */
+/* Brand / category strips */
 .card.yokogawa::before{background:linear-gradient(90deg,#0b3c5d,#1f78b4)}
 .card.abb::before{background:linear-gradient(90deg,#1f78b4,#0b3c5d)}
 .card.siemens::before{background:linear-gradient(90deg,#2e7d32,#1f78b4)}
@@ -242,7 +262,12 @@ img{max-width:100%;height:auto;display:block}
 /* =========================
    BUTTONS
 ========================= */
-.action-row{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+.action-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:14px 0;
+}
 
 .btn{
   display:inline-block;
@@ -250,11 +275,12 @@ img{max-width:100%;height:auto;display:block}
   border-radius:10px;
   font-weight:900;
   border:1px solid rgba(0,0,0,.12);
-  cursor:pointer;
-  transition:transform .15s ease, background .15s ease;
+  transition:transform .15s ease, background .15s ease, box-shadow .15s ease;
+  text-decoration:none;
 }
 
 .btn:hover{transform:translateY(-1px)}
+.btn:focus{outline:none;box-shadow:0 0 0 4px rgba(31,120,180,.18)}
 
 .btn-primary{background:#1f78b4;color:#fff}
 .btn-primary:hover{background:#155a8a}
@@ -319,9 +345,9 @@ img{max-width:100%;height:auto;display:block}
 .is-hidden{display:none}
 
 /* =========================
-   LISTS & INFO
+   LISTS & INFO BLOCKS
 ========================= */
-.list{padding-left:18px}
+.list{padding-left:18px;margin:10px 0 0}
 .list li{margin:6px 0}
 
 .step{
@@ -351,7 +377,7 @@ img{max-width:100%;height:auto;display:block}
 }
 
 /* =========================
-   BLOG
+   BLOG / KNOWLEDGE LISTING
 ========================= */
 .post-grid{
   display:grid;
@@ -366,41 +392,15 @@ img{max-width:100%;height:auto;display:block}
   border-radius:14px;
   padding:14px;
   box-shadow:0 6px 18px rgba(0,0,0,.06);
+  transition:transform .18s ease, box-shadow .18s ease;
 }
 
-.post-meta{font-size:.9rem;font-weight:800;opacity:.8}
-
-/* =========================
-   FORMS (CONTACT FIX)
-========================= */
-.form{
-  max-width:600px;
-  margin-top:10px;
+.post-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 28px rgba(0,0,0,.14);
 }
 
-.form label{
-  display:block;
-  font-weight:900;
-  color:#0b3c5d;
-  margin:10px 0 6px;
-}
-
-.form input,.form textarea,.form select{
-  width:100%;
-  padding:12px;
-  border-radius:12px;
-  border:1px solid #cfd8e3;
-  font:inherit;
-  background:#fff;
-}
-
-.form textarea{min-height:140px;resize:vertical}
-
-.form input:focus,.form textarea:focus,.form select:focus{
-  outline:none;
-  border-color:#1f78b4;
-  box-shadow:0 0 0 4px rgba(31,120,180,.18);
-}
+.post-meta{font-size:.9rem;font-weight:800;opacity:.8;margin:0 0 10px}
 
 /* =========================
    FOOTER
@@ -419,7 +419,18 @@ img{max-width:100%;height:auto;display:block}
   flex-wrap:wrap;
   gap:18px;
   justify-content:space-between;
+  align-items:center;
 }
 
-.footer-links{display:flex;gap:12px;flex-wrap:wrap}
-.footer-links a{color:#0b3c5d;font-weight:800}
+.footer-links{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.footer-links a{
+  color:#0b3c5d;
+  font-weight:800;
+  text-decoration:none;
+}
+.footer-links a:hover{text-decoration:underline}
