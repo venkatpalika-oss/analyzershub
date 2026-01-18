@@ -1,123 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MAXUM II Alarms | AnalyzersHub</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siemens MAXUM II — Alarm Decision Trees | AnalyzersHub</title>
 
-  <link rel="stylesheet" href="../../../../../assets/css/style.css" />
-
-  <style>
-    header{ position: sticky; top:0; z-index:999; box-shadow:0 2px 12px rgba(0,0,0,0.18); }
-    .wrap{ max-width:1100px; margin:0 auto; padding:18px 16px 40px; }
-    .breadcrumbs{ font-size:.95rem; margin:8px 0 14px; }
-    .breadcrumbs a{ color:#1f78b4; text-decoration:none; font-weight:800; }
-    .breadcrumbs a:hover{ text-decoration:underline; }
-
-    .hero-mini{
-      background:#0b3c5d; color:#fff; border-radius:12px;
-      padding:18px; box-shadow:0 6px 18px rgba(0,0,0,0.12);
-      margin-bottom:16px;
-    }
-    .hero-mini h2{ margin:0 0 6px; color:#fff; }
-    .hero-mini p{ margin:0; opacity:.95; }
-
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap:16px;
-      margin-top:14px;
-    }
-    .card{
-      background:#fff; border:1px solid #e0e6ec; border-radius:12px;
-      padding:16px; box-shadow:0 4px 14px rgba(0,0,0,0.08);
-      transition: transform .18s ease, box-shadow .18s ease;
-      position:relative; overflow:hidden;
-      background-image: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(245,248,252,0.98));
-    }
-    .card:hover{ transform: translateY(-3px); box-shadow:0 10px 26px rgba(0,0,0,0.14); }
-    .card::before{
-      content:""; position:absolute; top:0; left:0; width:100%; height:7px;
-      background: linear-gradient(90deg, #2e7d32, #6fcf97);
-    }
-    .card h3{ margin: 6px 0 8px; color:#0b3c5d; }
-    .card p{ margin:0 0 12px; color:#333; line-height:1.45; font-size:.95rem; }
-
-    .btn{
-      display:inline-block; padding:10px 14px; border-radius:8px;
-      font-weight:900; text-decoration:none; border:1px solid rgba(0,0,0,0.10);
-    }
-    .btn-primary{ background:#1f78b4; color:#fff; }
-    .btn-primary:hover{ background:#155a8a; }
-    .btn-ghost{ background:#fff; color:#0b3c5d; }
-    .btn-ghost:hover{ background:#e9f2f9; }
-
-    .note{
-      background:#fff7ed; border-left:4px solid #f59e0b;
-      padding:12px; border-radius:10px; margin:14px 0;
-    }
-  </style>
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-<header>
-  <h1>AnalyzersHub</h1>
-  <nav>
-    <a href="../../../../../index.html">Home</a>
-    <a href="../../../../../analyzers.html">Analyzer Search</a>
-  </nav>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="analyzers.html?category=gc">GC Hub</a>
+    </nav>
+  </div>
 </header>
 
-<main class="wrap">
-  <div class="breadcrumbs">
-    <a href="../../../../../index.html">Home</a> →
-    <a href="../../../../../analyzers.html">Analyzer Search</a> →
-    <a href="../maxum-ii.html">Siemens MAXUM II</a> →
-    <span>Alarms</span>
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="analyzers.html">Analyzer Search</a><span>›</span>
+  <a href="analyzers/siemens/maxum-ii/maxum-ii.html">Siemens MAXUM II</a><span>›</span>
+  <span class="current">Alarms</span>
+</nav>
+
+<section class="hero-search">
+  <div class="hero-inner">
+    <h2>Siemens MAXUM II — Alarm Decision Trees</h2>
+    <p>
+      Symptom-based troubleshooting guides for MAXUM II gas chromatographs.
+      Select the alarm category below to follow a step-by-step decision tree.
+    </p>
+
+    <div class="action-row">
+      <a class="btn btn-ghost" href="analyzers/siemens/maxum-ii/maxum-ii.html">← Back to Analyzer</a>
+      <a class="btn btn-ghost" href="analyzers.html">Analyzer Search</a>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+
+  <div class="warn">
+    <b>Before you start:</b> record the exact alarm text and time, verify carrier/sample pressures,
+    and follow site safety procedures for gas handling.
   </div>
 
-  <section class="hero-mini">
-    <h2>Siemens MAXUM Edition II — Alarm Decision Trees</h2>
-    <p>Pick the symptom/alarm category below. Each page is a step-by-step decision tree for fast troubleshooting.</p>
-  </section>
+  <div class="grid">
 
-  <div class="note">
-    <b>Before you start:</b> record alarm text + time, confirm sample/carrier pressures, and follow site safety rules for gas handling.
-  </div>
-
-  <section class="grid">
-
-    <div class="card">
+    <div class="card gc">
       <h3>Carrier Pressure / Flow Low</h3>
-      <p>No peaks, unstable retention, or “carrier low” type alarms. Covers regulators, leaks, and supply issues.</p>
-      <a class="btn btn-primary" href="carrier-pressure-low.html">Open Decision Tree →</a>
+      <p>
+        No peaks, unstable retention times, baseline issues, or carrier supply alarms.
+        Covers regulators, leaks, restrictions, and supply problems.
+      </p>
+      <a class="btn btn-primary"
+         href="analyzers/siemens/maxum-ii/alarms/carrier-pressure-low.html">
+         Open Decision Tree →
+      </a>
     </div>
 
-    <div class="card">
+    <div class="card gc">
       <h3>Oven Temperature Fault</h3>
-      <p>Oven not ready, over/under temperature, slow ramp, unstable temperature or heater/sensor issues.</p>
-      <a class="btn btn-primary" href="oven-temperature-fault.html">Open Decision Tree →</a>
+      <p>
+        Oven not ready, over/under temperature, slow heating, unstable temperature,
+        or heater / temperature sensor faults.
+      </p>
+      <a class="btn btn-primary"
+         href="analyzers/siemens/maxum-ii/alarms/oven-temperature-fault.html">
+         Open Decision Tree →
+      </a>
     </div>
 
-    <div class="card">
+    <div class="card gc">
       <h3>Valve Actuation / Sequence Fault</h3>
-      <p>Injection/valve timing problems, valves not switching, pneumatic supply problems, sticky/failed valves.</p>
-      <a class="btn btn-primary" href="valve-actuation-fault.html">Open Decision Tree →</a>
+      <p>
+        Injection or switching problems, valves not actuating,
+        pneumatic supply issues, or sticky/failed valves.
+      </p>
+      <a class="btn btn-primary"
+         href="analyzers/siemens/maxum-ii/alarms/valve-actuation-fault.html">
+         Open Decision Tree →
+      </a>
     </div>
 
-    <div class="card">
+    <div class="card gc">
       <h3>Detector Not Ready / Baseline Fault</h3>
-      <p>No baseline, noisy baseline, saturated signal, detector warm-up not complete, or detector module issues.</p>
-      <a class="btn btn-primary" href="detector-not-ready.html">Open Decision Tree →</a>
+      <p>
+        Missing or noisy baseline, saturated signal,
+        detector warm-up not complete, or detector module alarms.
+      </p>
+      <a class="btn btn-primary"
+         href="analyzers/siemens/maxum-ii/alarms/detector-not-ready-baseline-fault.html">
+         Open Decision Tree →
+      </a>
     </div>
 
-  </section>
-
-  <div style="margin-top:18px;">
-    <a class="btn btn-ghost" href="../maxum-ii.html">← Back to MAXUM II Page</a>
   </div>
+
 </main>
 
-<footer>Built for Analyzer Technicians</footer>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div>
+      <b>AnalyzersHub</b><br>
+      <span class="muted">Built for Analyzer Technicians</span>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
