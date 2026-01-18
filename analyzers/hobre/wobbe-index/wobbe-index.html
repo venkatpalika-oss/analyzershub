@@ -1,84 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hobré Wobbe Index Analyzer | AnalyzersHub</title>
 
   <base href="/analyzershub/">
-  <link rel="stylesheet" href="assets/css/style.css" />
-
-  <style>
-    /* Page-only enhancements (safe, won't break your global style.css) */
-    .hero{
-      background: linear-gradient(135deg, #0b3c5d 0%, #1f78b4 100%);
-      color:#fff;
-      border-radius:14px;
-      padding:18px 18px 16px;
-      box-shadow:0 10px 26px rgba(0,0,0,.14);
-      margin-top:14px;
-    }
-    .hero h2{margin:0;color:#fff}
-    .hero p{margin:8px 0 0;opacity:.95;max-width:950px}
-    .pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-    .pill{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:8px 10px;border-radius:999px;
-      background:rgba(255,255,255,.12);
-      border:1px solid rgba(255,255,255,.18);
-      font-weight:800;
-    }
-    .kpi{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap:12px;
-      margin-top:14px;
-    }
-    .kpi .kcard{
-      background:#fff;border:1px solid #e0e6ec;border-radius:12px;
-      padding:14px;box-shadow:0 4px 14px rgba(0,0,0,.08);
-    }
-    .kpi .kcard b{color:#0b3c5d}
-    .table{
-      width:100%;
-      border-collapse:collapse;
-      margin-top:10px;
-      overflow:hidden;
-      border-radius:12px;
-      border:1px solid #e0e6ec;
-      background:#fff;
-      box-shadow:0 4px 14px rgba(0,0,0,.08);
-    }
-    .table th,.table td{
-      padding:12px 12px;
-      border-bottom:1px solid #eef2f6;
-      vertical-align:top;
-      text-align:left;
-    }
-    .table th{background:#f5f7fa;color:#0b3c5d;font-weight:900}
-    .table tr:last-child td{border-bottom:none}
-    .callout{
-      background:#fff;border:1px solid #e0e6ec;border-radius:12px;
-      padding:14px;box-shadow:0 4px 14px rgba(0,0,0,.08);
-      margin-top:14px;
-    }
-    .callout h3{margin:0 0 10px;color:#0b3c5d}
-    .checklist{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap:10px;
-      margin-top:10px;
-    }
-    .chk{
-      background:#f8fafc;border:1px solid #e6edf5;border-radius:12px;
-      padding:12px;
-    }
-    .chk b{color:#0b3c5d}
-    .minor{opacity:.92}
-    .tight{margin:8px 0 0}
-    .tagline{opacity:.92;font-weight:700}
-    .btn-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
-  </style>
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
 
 <body>
@@ -95,218 +23,128 @@
   </div>
 </header>
 
-<nav class="crumbs" aria-label="Breadcrumb">
+<nav class="crumbs">
   <a href="index.html">Home</a><span>›</span>
   <a href="analyzers.html">Analyzer Search</a><span>›</span>
   <a href="analyzers.html?filter=hobre">Hobré</a><span>›</span>
   <span class="current">Wobbe Index Analyzer</span>
 </nav>
 
-<main class="container">
-
-  <!-- HERO -->
-  <section class="hero">
+<section class="hero-search">
+  <div class="hero-inner">
     <h2>Hobré — Wobbe Index Analyzer</h2>
-    <p class="tagline">
-      Practical troubleshooting + calibration notes for stable <b>Wobbe Index / Calorific Value</b> output to DCS.
-      Built for field technicians.
+    <p>
+      Field-focused troubleshooting and calibration guidance for stable
+      <b>Wobbe Index / Calorific Value</b> output to DCS.
     </p>
 
-    <div class="pill-row" aria-label="Quick facts">
-      <span class="pill">⚙️ Fuel gas quality</span>
-      <span class="pill">📉 Stability-focused</span>
-      <span class="pill">💧 Sensitive to moisture/liquid</span>
-      <span class="pill">📡 DCS integration</span>
-    </div>
-
-    <div class="btn-row">
+    <div class="action-row">
       <a class="btn btn-ghost" href="analyzers.html">← Back to Search</a>
       <a class="btn btn-primary" href="analyzers/hobre/wobbe-index/alarms/index.html">Alarm Decision Trees →</a>
       <a class="btn btn-ghost" href="analyzers/hobre/wobbe-index/alarm-codes.html">Alarm Codes →</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- QUICK KPI -->
-  <section class="kpi" aria-label="Quick overview">
-    <div class="kcard">
-      <b>Primary output</b><br>
-      Wobbe Index / CV to support burner control and fuel blending decisions.
-    </div>
-    <div class="kcard">
-      <b>Top 3 field causes</b><br>
-      Moisture, liquid carryover, pressure hunting (regulator instability).
-    </div>
-    <div class="kcard">
-      <b>Fix order</b><br>
-      Sampling → Pressure/Flow → Stability/Temp → Calibration → DCS mapping.
-    </div>
-    <div class="kcard">
-      <b>Technician rule</b><br>
-      If it’s unstable: <b>don’t calibrate yet</b>. Stabilize the sample first.
-    </div>
-  </section>
+<main class="container">
 
-  <!-- PRIORITY WARNING -->
-  <div class="warn" style="margin-top:14px;">
-    <b>Technician priority:</b> If Wobbe is unstable or incorrect, check <b>sample conditioning (moisture/liquid)</b>
-    and <b>pressure stability</b> first. Calibration should be done only after stability is confirmed.
+  <div class="grid">
+    <div class="card gc">
+      <h3>Primary Output</h3>
+      <p>Continuous Wobbe Index / CV for burner control and fuel blending.</p>
+    </div>
+    <div class="card gc">
+      <h3>Top Field Causes</h3>
+      <p>Moisture, liquid carryover, pressure hunting.</p>
+    </div>
+    <div class="card gc">
+      <h3>Fix Order</h3>
+      <p>Sampling → Pressure → Stability → Calibration → DCS</p>
+    </div>
+    <div class="card gc">
+      <h3>Technician Rule</h3>
+      <p>If unstable — <b>do not calibrate yet</b>.</p>
+    </div>
   </div>
 
-  <!-- WORKING PRINCIPLE -->
-  <section class="callout">
+  <div class="warn">
+    <b>Technician priority:</b> Incorrect Wobbe values are almost always caused by
+    <b>sample conditioning</b> or <b>pressure instability</b>.
+    Fix these before calibration.
+  </div>
+
+  <div class="panel">
     <h3>Working Principle (Technician View)</h3>
-    <p class="minor">
-      A Wobbe Index analyzer provides a continuous indication of fuel-gas quality. Wobbe Index helps combustion systems
-      maintain stable heat input because it relates energy flow through a nozzle/orifice at a given pressure.
+    <p class="muted">
+      Wobbe Index represents the energy flow through a burner or orifice at a given pressure.
+      It allows combustion systems to maintain stable heat input despite fuel composition changes.
     </p>
-    <p class="minor tight">
-      <b>Concept:</b> Wobbe Index = Heating Value / √(Specific Gravity)
-    </p>
-    <div class="checklist">
-      <div class="chk">
-        <b>What affects accuracy</b><br>
-        Sample moisture, liquid carryover, pressure/flow instability, temperature drift, contamination.
-      </div>
-      <div class="chk">
-        <b>Why output jumps</b><br>
-        Usually sample quality change or pressure hunting — not “electronics failure”.
-      </div>
-      <div class="chk">
-        <b>What to verify first</b><br>
-        Stable sample flow, dry sample, stable regulator, stable reading trend.
-      </div>
-    </div>
-  </section>
+    <ul class="list">
+      <li><b>Accuracy depends on</b>: dry sample, stable pressure, clean conditioning</li>
+      <li><b>Instability usually means</b>: moisture, liquid, or regulator hunting</li>
+      <li><b>Electronics failures</b>: rare compared to sample-related issues</li>
+    </ul>
+  </div>
 
-  <!-- COMPONENTS -->
-  <section class="callout">
+  <div class="panel">
     <h3>Main Components (Field Focus)</h3>
-    <table class="table" aria-label="Main components table">
-      <thead>
-        <tr>
-          <th style="width:32%;">Section</th>
-          <th>What it includes</th>
-          <th style="width:28%;">Common field issues</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><b>Sampling system</b></td>
-          <td>Sample tap/probe, tubing, isolation valves, sample flow path</td>
-          <td>Leaks, restrictions, wrong pressure, dead legs</td>
-        </tr>
-        <tr>
-          <td><b>Conditioning</b></td>
-          <td>Filters/coalescers, moisture control, drains, heat tracing (if used)</td>
-          <td>Liquid carryover, blocked drains, wet gas, plugged filters</td>
-        </tr>
-        <tr>
-          <td><b>Pressure/flow control</b></td>
-          <td>Regulators, restrictors/needle valves, flow indicators</td>
-          <td>Regulator hunting, unstable supply, incorrect setpoints</td>
-        </tr>
-        <tr>
-          <td><b>Measurement module</b></td>
-          <td>Sensing/measurement section + internal calculations</td>
-          <td>Drift due to contamination, instability due to sample quality</td>
-        </tr>
-        <tr>
-          <td><b>Electronics & comms</b></td>
-          <td>Controller, I/O, Modbus/OPC/Ethernet, alarms/status signals</td>
-          <td>Wrong mapping/scaling, quality bit mismatch, network issues</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+    <ul class="list">
+      <li><b>Sampling system</b> – probe, tubing, isolation valves</li>
+      <li><b>Conditioning</b> – filters, coalescers, drains, heat tracing</li>
+      <li><b>Pressure / flow control</b> – regulators, restrictors</li>
+      <li><b>Measurement module</b> – sensing and calculation</li>
+      <li><b>Electronics & comms</b> – controller, I/O, Modbus/OPC</li>
+    </ul>
+  </div>
 
-  <!-- CALIBRATION -->
-  <section class="callout">
+  <div class="panel">
     <h3>Calibration Procedure (Field Standard)</h3>
-    <p class="minor">
-      Use your site’s approved method and reference gases/standards. The steps below are a technician sequence to avoid
-      repeated failures and unstable post-calibration output.
-    </p>
-    <div class="checklist">
-      <div class="chk"><b>1) Stabilize first</b><br>Ensure no sampling/pressure alarms. Confirm stable trend locally.</div>
-      <div class="chk"><b>2) Verify flow/pressure</b><br>Correct regulator setting, no hunting, filters/drains OK.</div>
-      <div class="chk"><b>3) Apply reference</b><br>Apply zero/reference condition and wait for stabilization.</div>
-      <div class="chk"><b>4) Span/verification</b><br>Apply span/reference point and verify response and stability.</div>
-      <div class="chk"><b>5) Return to process</b><br>Allow reading to settle. Confirm within expected limits.</div>
-      <div class="chk"><b>6) Confirm DCS</b><br>Check scaling + quality/status. Record results in calibration log.</div>
+    <ol class="list">
+      <li>Confirm stable sample and pressure (no active alarms)</li>
+      <li>Verify filters, drains, and regulator stability</li>
+      <li>Apply reference / zero condition and allow stabilization</li>
+      <li>Apply span / reference point and verify response</li>
+      <li>Return to process and confirm stable trend</li>
+      <li>Verify DCS scaling and quality flags</li>
+    </ol>
+
+    <div class="warn">
+      Calibrating an unstable analyzer will temporarily “fix” the value
+      and guarantee another failure later.
     </div>
+  </div>
 
-    <div class="warn" style="margin-top:12px;">
-      <b>Don’t calibrate if:</b> sample is wet, drains are blocked, pressure is hunting, or readings are not stable.
-      Fix those first or calibration will “look good” temporarily and fail again.
-    </div>
-  </section>
+  <div class="panel">
+    <h3>Major Troubleshooting (Fast Isolation)</h3>
+    <ul class="list">
+      <li><b>Fluctuating Wobbe</b> → pressure hunting, wet sample</li>
+      <li><b>Wrong vs lab</b> → stabilize first, then check DCS scaling</li>
+      <li><b>Sudden jump</b> → liquid carryover or process upset</li>
+      <li><b>Calibration won’t hold</b> → unstable sample or leaks</li>
+      <li><b>No DCS update</b> → mapping, scaling, protocol mismatch</li>
+      <li><b>Slow drift</b> → moisture ingress, contamination, temperature</li>
+    </ul>
+  </div>
 
-  <!-- MAJOR TROUBLESHOOTS -->
-  <section class="callout">
-    <h3>Major Troubleshoots (Top Problems + Fast Checks)</h3>
-
-    <div class="checklist">
-      <div class="chk">
-        <b>1) Wobbe value fluctuates</b><br>
-        Check regulator hunting, sample moisture/liquid, filter saturation, drains.
-        Use decision tree: <a href="analyzers/hobre/wobbe-index/alarms/carrier-pressure.html">Pressure/Flow</a> →
-        <a href="analyzers/hobre/wobbe-index/alarms/valve-sequence.html">Sampling</a>.
-      </div>
-
-      <div class="chk">
-        <b>2) Wobbe wrong vs lab</b><br>
-        Confirm stable sample first. Then verify DCS scaling/mapping and any calculation parameters.
-        Compare after stable period (not one moment).
-      </div>
-
-      <div class="chk">
-        <b>3) Sudden step change</b><br>
-        Most likely process composition change or liquid carryover during upset.
-        Inspect drains and conditioning immediately.
-      </div>
-
-      <div class="chk">
-        <b>4) Calibration fails / won’t hold</b><br>
-        Wrong reference flow/pressure, leaks, wet sample, or unstable trend.
-        Stabilize → retry calibration.
-      </div>
-
-      <div class="chk">
-        <b>5) DCS not updating / bad quality</b><br>
-        Verify network/protocol, mapping, scaling and quality bit handling.
-        Use: <a href="analyzers/hobre/wobbe-index/alarms/communications.html">Comms / DCS</a>.
-      </div>
-
-      <div class="chk">
-        <b>6) Slow drift over days</b><br>
-        Check moisture ingress, filter condition, contamination, temperature drift.
-        Confirm cabinet ventilation and stable ambient conditions.
-      </div>
-    </div>
-  </section>
-
-  <!-- QUICK LINKS -->
-  <section class="callout">
+  <div class="panel">
     <h3>Quick Links</h3>
     <div class="action-row">
-      <a class="btn btn-primary" href="analyzers/hobre/wobbe-index/alarms/index.html">Alarm Decision Trees →</a>
+      <a class="btn btn-primary" href="analyzers/hobre/wobbe-index/alarms/index.html">Decision Trees →</a>
       <a class="btn btn-ghost" href="analyzers/hobre/wobbe-index/alarm-codes.html">Alarm Codes →</a>
       <a class="btn btn-ghost" href="analyzers/hobre/wobbe-index/alarms/carrier-pressure.html">Pressure / Flow →</a>
-      <a class="btn btn-ghost" href="analyzers/hobre/wobbe-index/alarms/valve-sequence.html">Sampling / Conditioning →</a>
+      <a class="btn btn-ghost" href="analyzers/hobre/wobbe-index/alarms/valve-sequence.html">Sampling →</a>
       <a class="btn btn-ghost" href="analyzers/hobre/wobbe-index/alarms/communications.html">Comms / DCS →</a>
     </div>
-  </section>
-
-  <div class="action-row" style="margin-top:18px;">
-    <a class="btn btn-primary" href="index.html">Home</a>
-    <a class="btn btn-ghost" href="analyzers.html">Analyzer Search</a>
   </div>
 
 </main>
 
 <footer class="site-footer">
   <div class="site-footer-inner">
-    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div>
+      <b>AnalyzersHub</b><br>
+      <span class="muted">Built for Analyzer Technicians</span>
+    </div>
     <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="analyzers.html">Search</a>
