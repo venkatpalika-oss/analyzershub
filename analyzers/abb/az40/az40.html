@@ -1,72 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>ABB AZ40 | AnalyzersHub</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-/* Same CSS as AZ20-AZ30 */
-body {margin:0; font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif; background:#f4f6f9; color:#1f2937;}
-header {background:#1e3a8a; color:#fff; padding:18px 40px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000; box-shadow:0 2px 8px rgba(0,0,0,0.15);}
-header h1{margin:0; font-size:1.7rem;}
-header nav a{color:#fff; text-decoration:none; margin-left:25px; font-weight:600;}
-header nav a:hover{text-decoration:underline;}
-.hero{background:linear-gradient(135deg,#1e3a8a,#2563eb); padding:60px 20px; text-align:center; color:#fff;}
-.hero h2{font-size:2.5rem; margin-bottom:10px; text-shadow:0 2px 6px rgba(0,0,0,0.6),0 0 12px rgba(255,255,255,0.15);}
-.hero p{font-size:1.1rem; margin-bottom:20px; color:#e5e7eb; text-shadow:0 1px 4px rgba(0,0,0,0.6);}
-.hero a{background:#2563eb; color:#fff; padding:12px 30px; border-radius:8px; text-decoration:none; font-weight:600;}
-.hero a:hover{background:#1e40af;}
-main{padding:50px 20px; max-width:1100px; margin:auto;}
-h3.section-title{text-align:center; font-size:1.8rem; color:#1e3a8a; margin-bottom:40px;}
-.card{background:#fff; border-radius:14px; padding:25px 20px; box-shadow:0 8px 20px rgba(0,0,0,0.08); border-top:4px solid #1e3a8a; margin-bottom:20px;}
-.card h4{margin:0 0 8px; font-size:1.25rem; color:#1e3a8a;}
-.card p{margin:0 0 12px; font-size:0.95rem; line-height:1.5;}
-.card a{font-weight:600; color:#1e3a8a; text-decoration:none;}
-.card a:hover{text-decoration:underline;}
-footer{background:#1e3a8a; color:#fff; text-align:center; padding:20px; margin-top:50px; font-size:0.9rem;}
-@media (max-width:768px){.hero h2{font-size:2rem;}.hero p{font-size:1rem;}}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ABB AZ40 | AnalyzersHub</title>
+
+  <base href="/analyzershub/">
+
+  <!-- ✅ Global CSS only (cache bust) -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
-<body>
 
-<header>
-<h1>AnalyzersHub</h1>
-<nav>
-<a href="../../index.html">Home</a>
-<a href="../../analyzers.html">Analyzer Search</a>
+<body data-page="analyzers">
+
+<!-- ✅ CENTRAL HEADER -->
+<div id="siteHeader"></div>
+
+<!-- Breadcrumb -->
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="analyzers.html?filter=abb">ABB</a><span>›</span>
+  <span class="current">AZ40</span>
 </nav>
-</header>
 
-<section class="hero">
-<h2>ABB AZ40</h2>
-<p>Top-tier oxygen analyzer for maximum accuracy and full diagnostics suite.</p>
-<a href="../az10/alarms/index.html">View Common Alarms →</a>
+<!-- Hero -->
+<section class="hero-search">
+  <div class="hero-inner">
+    <h2>ABB AZ40</h2>
+    <p>Top-tier oxygen analyzer for maximum accuracy and full diagnostics suite.</p>
+
+    <div class="action-row">
+      <!-- shared AZ alarms folder -->
+      <a class="btn btn-primary" href="analyzers/abb/az10/alarms/index.html">View Common Alarms →</a>
+      <a class="btn btn-ghost" href="analyzers.html?filter=abb">Back to ABB →</a>
+      <a class="btn btn-ghost" href="analyzers.html?category=oxygen">Oxygen Hub →</a>
+    </div>
+  </div>
 </section>
 
-<main>
-<h3 class="section-title">Troubleshooting & Procedures</h3>
-<div class="card">
-<h4>Overview</h4>
-<p>The ABB AZ40 is the premium model with full diagnostics, highest accuracy, and fast response for complex industrial and emissions monitoring.</p>
-</div>
-<div class="card">
-<h4>Calibration</h4>
-<p>Perform zero, span, and reference gas calibration; verify sensor health and heater performance using diagnostics.</p>
-</div>
-<div class="card">
-<h4>Maintenance</h4>
-<p>Regular inspections, preventive maintenance, and reference gas verification ensure optimal analyzer operation.</p>
-</div>
-<div class="card">
-<h4>Common Alarms</h4>
-<p>All AZ Series alarms are in the common alarm folder.</p>
-<a href="../az10/alarms/index.html">Go to Alarms →</a>
-</div>
+<main class="container">
+
+  <div class="panel">
+    <h3 style="margin:0;color:#0b3c5d;">Troubleshooting & Procedures</h3>
+    <p class="muted" style="margin:8px 0 0;">
+      Field-focused guidance for high-accuracy combustion and emissions O₂ measurement.
+      Use diagnostics + trending to catch problems early.
+    </p>
+  </div>
+
+  <div class="grid">
+
+    <div class="card oxygen">
+      <h3>Overview</h3>
+      <p>
+        The ABB AZ40 is the premium AZ-series model with full diagnostics and fast response.
+        In most real failures, the root cause is still external:
+        <b>sample condition</b>, <b>leaks</b>, <b>plugging/restrictions</b>, <b>heater instability</b>,
+        or <b>reference path issues</b>.
+      </p>
+      <div class="field-tip">
+        <b>Best practice:</b> Trend O₂ value, sensor temperature, heater power, and any “quality/status” flags
+        instead of relying only on alarms.
+      </div>
+    </div>
+
+    <div class="card oxygen">
+      <h3>Calibration</h3>
+      <div class="step"><b>1)</b> Confirm stable probe/sensor temperature (no oscillation).</div>
+      <div class="step"><b>2)</b> Verify sample path: no leaks, no blockage, good flow/aspiration.</div>
+      <div class="step"><b>3)</b> Run <b>zero</b> and <b>span</b> with adequate stabilization time.</div>
+      <div class="step"><b>4)</b> Verify reference checks (air/reference) as per manual.</div>
+      <div class="step"><b>5)</b> Confirm diagnostics/health status after calibration.</div>
+
+      <div class="warn" style="margin-top:12px;">
+        <b>Warning:</b> If span or drift fails, do not keep recalibrating.
+        Fix moisture ingress, leaks, restrictions, or pressure instability first.
+      </div>
+    </div>
+
+    <div class="card oxygen">
+      <h3>Maintenance</h3>
+      <ul class="list">
+        <li>Inspect probe tip / filter condition and clean per site practice</li>
+        <li>Check heater & temperature stability trends</li>
+        <li>Inspect cables, grounding, and cabinet environment (heat/dust/moisture)</li>
+        <li>Verify reference path is clean, dry, and not restricted</li>
+        <li>After any work: leak test and verify response with a check gas</li>
+      </ul>
+    </div>
+
+    <div class="card oxygen">
+      <h3>Common Alarms</h3>
+      <p>All ABB AZ-series alarms (AZ10 / AZ20 / AZ25 / AZ30 / AZ40) are in the shared alarms folder.</p>
+
+      <div class="action-row">
+        <a class="btn btn-primary" href="analyzers/abb/az10/alarms/index.html">Go to Alarms →</a>
+      </div>
+    </div>
+
+  </div>
+
 </main>
 
-<footer>
-© 2026 AnalyzersHub.com | Industrial Analyzer Knowledge Base
-</footer>
+<!-- ✅ CENTRAL FOOTER -->
+<div id="siteFooter"></div>
+
+<!-- ✅ LOAD HEADER/FOOTER -->
+<script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
