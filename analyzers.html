@@ -1,155 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Analyzer Search | AnalyzersHub</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analyzer Search | AnalyzersHub</title>
 
-  <base href="/analyzershub/">
-  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
+<meta name="description" content="Browse industrial analyzers by type, brand, and application. Troubleshooting guides and alarm decision trees for analyzer technicians.">
+
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body data-page="analyzers">
+<body>
 
-  <!-- CENTRAL HEADER -->
-  <div id="siteHeader"></div>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html" class="active">Analyzer Search</a>
+      <a href="analyzers.html?category=gc">GC Hub</a>
+      <a href="analyzers.html?category=cems">CEMS</a>
+    </nav>
+  </div>
+</header>
 
-  <section class="hero-search">
-    <div class="hero-inner">
-      <h2>Analyzer Knowledge Base</h2>
-      <p>
-        Field-focused guides, troubleshooting, alarms, and decision trees
-        for industrial process analyzers.
-      </p>
-    </div>
-  </section>
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <span class="current">Analyzer Search</span>
+</nav>
 
-  <main class="container">
+<main class="container">
 
-    <!-- ================= GAS CHROMATOGRAPHS ================= -->
-    <div class="panel">
-      <h3>Gas Chromatographs (GC)</h3>
+  <!-- HERO -->
+  <div class="panel">
+    <h2>Analyzer Knowledge Hub</h2>
+    <p class="muted">
+      Select an analyzer to access overviews, alarm decision trees, troubleshooting guides,
+      and technician best practices.
+    </p>
+  </div>
 
-      <div class="grid">
+  <!-- GC ANALYZERS -->
+  <div class="panel">
+    <h3>Gas Chromatographs (GC)</h3>
 
-        <div class="card gc">
-          <h4>ABB PGC5000B – Smart Oven GC</h4>
-          <p>Process GC troubleshooting: sampling, carrier, oven, valves, DCS.</p>
-          <a class="btn btn-primary" href="analyzers/abb/gc/pgc5000b/pgc5000b.html">Open →</a>
-        </div>
+    <div class="card-grid">
 
-        <div class="card gc">
-          <h4>ABB PGC5000C – Smart Oven GC</h4>
-          <p>Decision-tree driven troubleshooting for Smart Oven series.</p>
-          <a class="btn btn-primary" href="analyzers/abb/gc/pgc5000c/pgc5000c.html">Open →</a>
-        </div>
-
-        <div class="card gc">
-          <h4>ABB PGC5007B – Total Sulfur GC</h4>
-          <p>SRU / sulfur-specific GC configuration and stability focus.</p>
-          <a class="btn btn-primary" href="analyzers/abb/gc/pgc5007b/pgc5007b.html">Open →</a>
-        </div>
-
-        <div class="card gc">
-          <h4>ABB Portable NGC</h4>
-          <p>Field GC setup, repeatability, leaks, and portability issues.</p>
-          <a class="btn btn-primary" href="analyzers/abb/gc/portable-ngc/portable-ngc.html">Open →</a>
-        </div>
-
+      <div class="card gc">
+        <h4>Siemens MAXUM Edition II</h4>
+        <p class="muted">Process GC for refinery, petrochemical, and gas applications.</p>
+        <a class="btn btn-primary" href="analyzers/siemens/maxum-ii/troubleshooting.html">
+          Open Analyzer →
+        </a>
       </div>
-    </div>
 
-    <!-- ================= WOBBE INDEX ================= -->
-    <div class="panel">
-      <h3>Wobbe Index Analyzers</h3>
-
-      <div class="grid">
-        <div class="card gc">
-          <h4>Hobré Wobbe Index Analyzer</h4>
-          <p>Wobbe measurement, stability, conditioning, and DCS integration.</p>
-          <a class="btn btn-primary" href="analyzers/hobre/wobbe-index/wobbe-index.html">Open →</a>
-        </div>
+      <div class="card gc">
+        <h4>ABB PGC Series</h4>
+        <p class="muted">On-line process gas chromatographs.</p>
+        <span class="tag coming">Coming Soon</span>
       </div>
-    </div>
 
-    <!-- ================= OXYGEN ANALYZERS ================= -->
-    <div class="panel">
-      <h3>Oxygen Analyzers</h3>
-
-      <div class="grid">
-
-        <div class="card">
-          <h4>ABB AZ10</h4>
-          <p>Entry-level oxygen analyzer for combustion monitoring.</p>
-          <a class="btn btn-primary" href="analyzers/abb/az/az10/az10.html">Open →</a>
-        </div>
-
-        <div class="card">
-          <h4>ABB AZ20</h4>
-          <p>Mid-range oxygen analyzer with extended diagnostics.</p>
-          <a class="btn btn-primary" href="analyzers/abb/az/az20/az20.html">Open →</a>
-        </div>
-
-        <div class="card">
-          <h4>ABB AZ25</h4>
-          <p>Enhanced combustion oxygen analyzer.</p>
-          <a class="btn btn-primary" href="analyzers/abb/az/az25/az25.html">Open →</a>
-        </div>
-
-        <div class="card">
-          <h4>ABB AZ30</h4>
-          <p>High-performance oxygen analyzer with fast response.</p>
-          <a class="btn btn-primary" href="analyzers/abb/az/az30/az30.html">Open →</a>
-        </div>
-
-        <div class="card">
-          <h4>ABB AZ40</h4>
-          <p>Premium oxygen analyzer with full diagnostics.</p>
-          <a class="btn btn-primary" href="analyzers/abb/az/az40/az40.html">Open →</a>
-        </div>
-
-        <div class="card">
-          <h4>AMETEK 933 Oxygen Analyzer</h4>
-          <p>Combustion, inerting, and process safety oxygen measurement.</p>
-          <a class="btn btn-primary" href="analyzers/ametek/933/933.html">Open →</a>
-        </div>
-
+      <div class="card gc">
+        <h4>Yokogawa GC8000</h4>
+        <p class="muted">Modular GC platform for complex process streams.</p>
+        <span class="tag coming">Coming Soon</span>
       </div>
+
     </div>
+  </div>
 
-    <!-- ================= SRU / TAIL GAS ================= -->
-    <div class="panel">
-      <h3>Sulfur Recovery / Tail Gas</h3>
+  <!-- WOBBE / CV -->
+  <div class="panel">
+    <h3>Wobbe Index & Calorific Value</h3>
 
-      <div class="grid">
-        <div class="card">
-          <h4>AMETEK 888 Tail Gas Analyzer</h4>
-          <p>SRU sulfur monitoring, calibration, and decision trees.</p>
-          <a class="btn btn-primary" href="analyzers/ametek/888/888.html">Open →</a>
-        </div>
+    <div class="card-grid">
+
+      <div class="card">
+        <h4>Hobré Wobbe Index Analyzer</h4>
+        <p class="muted">Wobbe, CV, and gas quality measurement.</p>
+        <a class="btn btn-primary" href="analyzers/hobre/wobbe-index/wobbe-index.html">
+          Open Analyzer →
+        </a>
       </div>
+
     </div>
+  </div>
 
-    <!-- ================= FLASH POINT ================= -->
-    <div class="panel">
-      <h3>Flash Point Analyzers</h3>
+  <!-- OXYGEN / COMBUSTION -->
+  <div class="panel">
+    <h3>Oxygen & Combustion Analyzers</h3>
 
-      <div class="grid">
-        <div class="card">
-          <h4>Flash Point Analyzer P-500</h4>
-          <p>ASTM methods, CRM verification, repeatability & alarms.</p>
-          <a class="btn btn-primary" href="analyzers/flash-point/p500/p500.html">Open →</a>
-        </div>
+    <div class="card-grid">
+
+      <div class="card">
+        <h4>Rosemount 6888</h4>
+        <p class="muted">Zirconia oxygen analyzer for boilers and furnaces.</p>
+        <a class="btn btn-primary" href="analyzers/rosemount/6888/overview.html">
+          Open Analyzer →
+        </a>
       </div>
+
     </div>
+  </div>
 
-  </main>
+  <!-- CEMS -->
+  <div class="panel">
+    <h3>CEMS & Emissions</h3>
 
-  <!-- CENTRAL FOOTER -->
-  <div id="siteFooter"></div>
+    <div class="card-grid">
 
-  <!-- INCLUDE LOADER -->
-  <script src="assets/js/includes.js?v=2026-01-18"></script>
+      <div class="card">
+        <h4>AMETEK CEMS</h4>
+        <p class="muted">Continuous emissions monitoring systems.</p>
+        <span class="tag coming">Coming Soon</span>
+      </div>
+
+      <div class="card">
+        <h4>DURAG D-EMS</h4>
+        <p class="muted">Dust and opacity monitoring systems.</p>
+        <span class="tag coming">Coming Soon</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FIELD NOTE -->
+  <div class="note">
+    <b>Tip for technicians:</b>  
+    Always start with alarms and sampling stability before calibration or configuration changes.
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div>
+      <b>AnalyzersHub</b><br>
+      <span class="muted">Built for Analyzer Technicians</span>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzers</a>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
