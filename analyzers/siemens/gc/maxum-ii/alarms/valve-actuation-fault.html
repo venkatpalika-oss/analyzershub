@@ -1,138 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MAXUM II | Valve Actuation / Sequence Fault</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAXUM II — Valve Actuation / Sequence Fault | Decision Tree | AnalyzersHub</title>
 
-  <link rel="stylesheet" href="../../../../../assets/css/style.css" />
-
-  <style>
-    header{ position: sticky; top:0; z-index:999; box-shadow:0 2px 12px rgba(0,0,0,0.18); }
-    .wrap{ max-width:1100px; margin:0 auto; padding:18px 16px 40px; }
-    .breadcrumbs{ font-size:.95rem; margin:8px 0 14px; }
-    .breadcrumbs a{ color:#1f78b4; text-decoration:none; font-weight:800; }
-    .breadcrumbs a:hover{ text-decoration:underline; }
-
-    .title{ background:#0b3c5d; color:#fff; border-radius:12px; padding:16px; box-shadow:0 6px 18px rgba(0,0,0,0.12); margin-bottom:14px; }
-    .title h2{ margin:0 0 6px; color:#fff; }
-    .title p{ margin:0; opacity:.95; }
-
-    .tree{
-      background:#fff; border:1px solid #e0e6ec; border-radius:12px;
-      padding:16px; box-shadow:0 4px 14px rgba(0,0,0,0.08);
-      position:relative; overflow:hidden;
-      background-image: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(245,248,252,0.98));
-    }
-    .tree::before{ content:""; position:absolute; top:0; left:0; width:100%; height:7px; background: linear-gradient(90deg, #2e7d32, #6fcf97); }
-
-    .q{ margin:14px 0; padding:12px; border-left:4px solid #1f78b4; background:#f6fbff; border-radius:10px; }
-    .q b{ color:#0b3c5d; }
-    ul{ margin:10px 0 0 18px; }
-    li{ margin:6px 0; }
-
-    .warn{ background:#fff7ed; border-left:4px solid #f59e0b; padding:12px; border-radius:10px; margin:14px 0; }
-    .ok{ background:#ecfdf5; border-left:4px solid #10b981; padding:12px; border-radius:10px; margin:14px 0; }
-    .bad{ background:#fef2f2; border-left:4px solid #ef4444; padding:12px; border-radius:10px; margin:14px 0; }
-
-    .btn{ display:inline-block; padding:10px 14px; border-radius:8px; font-weight:900; text-decoration:none; border:1px solid rgba(0,0,0,0.10); }
-    .btn-primary{ background:#1f78b4; color:#fff; }
-    .btn-primary:hover{ background:#155a8a; }
-    .btn-ghost{ background:#fff; color:#0b3c5d; }
-    .btn-ghost:hover{ background:#e9f2f9; }
-  </style>
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-<header>
-  <h1>AnalyzersHub</h1>
-  <nav>
-    <a href="../../../../../index.html">Home</a>
-    <a href="../../../../../analyzers.html">Analyzer Search</a>
-  </nav>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="analyzers.html?category=gc">GC Hub</a>
+    </nav>
+  </div>
 </header>
 
-<main class="wrap">
-  <div class="breadcrumbs">
-    <a href="../../../../../index.html">Home</a> →
-    <a href="../../../../../analyzers.html">Analyzer Search</a> →
-    <a href="../maxum-ii.html">Siemens MAXUM II</a> →
-    <a href="index.html">Alarms</a> →
-    <span>Valve Actuation / Sequence Fault</span>
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="analyzers.html">Analyzer Search</a><span>›</span>
+  <a href="analyzers/siemens/maxum-ii/maxum-ii.html">Siemens MAXUM II</a><span>›</span>
+  <a href="analyzers/siemens/maxum-ii/alarms/index.html">Alarms</a><span>›</span>
+  <span class="current">Valve Actuation / Sequence Fault</span>
+</nav>
+
+<main class="container">
+
+  <div class="panel">
+    <h2>Valve Actuation / Sequence Fault — Decision Tree</h2>
+    <p class="muted">
+      Use this guide when valves are not switching, injection events are missing,
+      timing is incorrect, sequence errors occur, or pneumatic supply issues are suspected.
+    </p>
   </div>
 
-  <section class="title">
-    <h2>Valve Actuation / Sequence Fault — Decision Tree</h2>
-    <p>Use when: no injection events, wrong timing, valves not switching, sequence error, pneumatic supply issues.</p>
-  </section>
+  <div class="warn">
+    <b>Safety:</b> Pneumatic lines may be pressurized.
+    Follow site isolation procedures and vent safely before disconnecting any tubing.
+  </div>
 
-  <section class="tree">
-    <div class="warn"><b>Safety:</b> Pneumatic lines may be pressurized. Follow isolation rules. Vent safely before disconnecting.</div>
+  <div class="step">
+    <b>Q1)</b> Do you hear or observe valve switching during a run?
+    <ul class="list">
+      <li><b>YES:</b> Go to Q4 (timing or internal valve issue).</li>
+      <li><b>NO:</b> Go to Q2.</li>
+    </ul>
+  </div>
 
-    <div class="q">
-      <b>Q1 — Do you hear/observe valve switching during a run?</b>
-      <ul>
-        <li><b>YES:</b> Go to Q4 (timing/leak/internal valve issue).</li>
-        <li><b>NO:</b> Go to Q2.</li>
-      </ul>
-    </div>
+  <div class="step">
+    <b>Q2)</b> Is the pneumatic supply (instrument air or valve supply) present and within range?
+    <ul class="list">
+      <li><b>YES:</b> Go to Q3.</li>
+      <li><b>NO:</b> Restore supply. Check regulator, filter, water trap, and isolation valves, then retry run.</li>
+    </ul>
+  </div>
 
-    <div class="q">
-      <b>Q2 — Is pneumatic supply (instrument air or valve supply) present and within range?</b>
-      <ul>
-        <li><b>YES:</b> Go to Q3.</li>
-        <li><b>NO:</b> Restore supply, check regulator, filter, water trap, and shut valves → retry run.</li>
-      </ul>
-    </div>
+  <div class="step">
+    <b>Q3)</b> Are solenoid indicators or diagnostics showing actuation commands?
+    <ul class="list">
+      <li><b>YES:</b> Solenoid or valve actuator may be stuck or faulty. Inspect wiring and service or replace as needed.</li>
+      <li><b>NO:</b> Method or configuration may not be initiating the valve sequence. Verify method schedule, run state, and interlocks.</li>
+    </ul>
+  </div>
 
-    <div class="q">
-      <b>Q3 — Are solenoid indicators/diagnostics showing actuation commands?</b>
-      <ul>
-        <li><b>YES:</b> Solenoid may be stuck/faulty or valve actuator stuck → service/replace solenoid/actuator, check wiring.</li>
-        <li><b>NO:</b> Method/config may not be starting valve sequence → verify method schedule, run state, and interlocks.</li>
-      </ul>
-    </div>
+  <div class="step">
+    <b>Q4)</b> Are peaks missing or incorrect even though valves are switching?
+    <ul class="list">
+      <li><b>YES:</b> Suspect internal valve leak, wrong timing, or contamination → go to Q5.</li>
+      <li><b>NO:</b> Issue may be intermittent. Check alarm log timing and repeat the run while monitoring valve events.</li>
+    </ul>
+  </div>
 
-    <div class="q">
-      <b>Q4 — Are peaks missing/incorrect despite valves switching?</b>
-      <ul>
-        <li><b>YES:</b> Suspect internal valve leak, wrong timing, or contamination → go to Q5.</li>
-        <li><b>NO:</b> Issue may be intermittent. Check alarm log timing and repeat run while monitoring valve events.</li>
-      </ul>
-    </div>
+  <div class="step">
+    <b>Q5)</b> Do retention times shift suddenly or do peaks appear in the wrong order?
+    <ul class="list">
+      <li><b>YES:</b> Verify method timing and sequence against the last known good configuration. Restore from backup if needed.</li>
+      <li><b>NO:</b> Leak test the valve manifold and fittings. Inspect for contamination, oil, or water in pneumatic lines.</li>
+    </ul>
+  </div>
 
-    <div class="q">
-      <b>Q5 — Do retention times shift suddenly or peaks appear in wrong order?</b>
-      <ul>
-        <li><b>YES:</b> Verify method timing/sequence vs last known good. Restore method from backup if changed.</li>
-        <li><b>NO:</b> Leak test valve manifold and fittings. Inspect for contamination/oil/water in pneumatic lines.</li>
-      </ul>
-    </div>
+  <div class="panel">
+    <h3>Verification</h3>
+    <ul class="list">
+      <li>Valve events occur consistently in each run.</li>
+      <li>Peak order and retention times return to normal range.</li>
+      <li>Repeatability improves over <b>2–3 runs</b>.</li>
+    </ul>
+  </div>
 
-    <div class="ok">
-      <b>Verification:</b>
-      <ul>
-        <li>Valve events occur consistently in each run.</li>
-        <li>Peak order and retention time return to normal range.</li>
-        <li>Repeatability improves (2–3 runs).</li>
-      </ul>
-    </div>
+  <div class="warn">
+    <b>If still failing:</b>
+    <ul class="list">
+      <li>Capture diagnostics: valve event log, method name, and alarm text.</li>
+      <li>Escalate to maintenance or vendor for suspected internal valve leakage or I/O module fault.</li>
+    </ul>
+  </div>
 
-    <div class="bad">
-      <b>If still failing:</b>
-      <ul>
-        <li>Capture diagnostics: valve event log, method name, alarm text.</li>
-        <li>Escalate: possible internal valve leakage or controller/IO module fault.</li>
-      </ul>
-    </div>
+  <div class="action-row">
+    <a class="btn btn-ghost" href="analyzers/siemens/maxum-ii/alarms/index.html">
+      ← Back to MAXUM II Alarms
+    </a>
+    <a class="btn btn-primary" href="analyzers/siemens/maxum-ii/maxum-ii.html">
+      MAXUM II Page →
+    </a>
+  </div>
 
-    <div style="margin-top:14px;">
-      <a class="btn btn-ghost" href="index.html">← Back to MAXUM II Alarms</a>
-      <a class="btn btn-primary" href="../maxum-ii.html">MAXUM II Page →</a>
-    </div>
-  </section>
 </main>
 
-<footer>Built for Analyzer Technicians</footer>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div>
+      <b>AnalyzersHub</b><br>
+      <span class="muted">Built for Analyzer Technicians</span>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
