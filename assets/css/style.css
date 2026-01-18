@@ -326,3 +326,25 @@ img{max-width:100%;height:auto;display:block}
 
 .footer-links{display:flex;gap:12px;flex-wrap:wrap}
 .footer-links a{color:#0b3c5d;font-weight:800}
+/* =========================================
+   HARD OVERRIDE – HEADER COLOR FIX
+   (must be LAST in file)
+========================================= */
+
+header,
+.site-header,
+.site-header * {
+  background-color:#0b3c5d !important;
+  opacity:1 !important;
+  filter:none !important;
+  backdrop-filter:none !important;
+}
+
+.site-nav a{
+  color:#ffffff !important;
+}
+
+.brand,
+.brand-sub{
+  color:#ffffff !important;
+}
