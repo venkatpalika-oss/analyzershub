@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAXUM II — No Peaks Detected | Decision Tree | AnalyzersHub</title>
+
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="analyzers.html?category=gc">GC Hub</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="analyzers.html">Analyzer Search</a><span>›</span>
+  <a href="analyzers/siemens/maxum-ii/maxum-ii.html">Siemens MAXUM II</a><span>›</span>
+  <a href="analyzers/siemens/maxum-ii/alarms/index.html">Alarms</a><span>›</span>
+  <span class="current">No Peaks Detected</span>
+</nav>
+
+<main class="container">
+
+  <div class="panel">
+    <h2>No Peaks Detected — Decision Tree</h2>
+    <p class="muted">
+      Use this guide when chromatograms show <b>no peaks</b>,
+      flat baseline, missing injections, or zero response across runs.
+    </p>
+  </div>
+
+  <div class="warn">
+    <b>Field rule:</b> “No peaks” is almost always caused by
+    <b>carrier gas</b>, <b>valve actuation</b>, or <b>detector readiness</b>.
+    Do not change calibration first.
+  </div>
+
+  <div class="step">
+    <b>Q1)</b> Is the carrier gas pressure and flow present and stable?
+    <ul class="list">
+      <li><b>YES:</b> Go to Q2.</li>
+      <li><b>NO:</b> Restore carrier supply, check regulator, filters, and leaks.
+        Re-run analysis after stabilization.</li>
+    </ul>
+  </div>
+
+  <div class="step">
+    <b>Q2)</b> Are valves switching during the run (audible or in diagnostics)?
+    <ul class="list">
+      <li><b>YES:</b> Go to Q3.</li>
+      <li><b>NO:</b> Check pneumatic supply, solenoids, and method sequence.
+        Use the <a href="analyzers/siemens/maxum-ii/alarms/valve-actuation-fault.html">Valve Actuation Decision Tree</a>.</li>
+    </ul>
+  </div>
+
+  <div class="step">
+    <b>Q3)</b> Is the detector “Ready” and baseline visible?
+    <ul class="list">
+      <li><b>YES:</b> Go to Q4.</li>
+      <li><b>NO:</b> Detector not warmed up, faulted, or saturated.
+        Use the <a href="analyzers/siemens/maxum-ii/alarms/detector-not-ready.html">Detector Not Ready Decision Tree</a>.</li>
+    </ul>
+  </div>
+
+  <div class="step">
+    <b>Q4)</b> Is sample actually reaching the column?
+    <ul class="list">
+      <li><b>YES:</b> Go to Q5.</li>
+      <li><b>NO:</b> Check sample supply pressure, blocked filters, closed valves,
+        or incorrect sample selection stream.</li>
+    </ul>
+  </div>
+
+  <div class="step">
+    <b>Q5)</b> Are method parameters correct (injection timing, column assignment)?
+    <ul class="list">
+      <li><b>YES:</b> Go to Q6.</li>
+      <li><b>NO:</b> Restore last known good method or load backup configuration.</li>
+    </ul>
+  </div>
+
+  <div class="step">
+    <b>Q6)</b> Is the detector signal connected and scaled correctly?
+    <ul class="list">
+      <li><b>YES:</b> Go to Verification.</li>
+      <li><b>NO:</b> Check detector wiring, signal path, and channel assignment.</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <h3>Verification</h3>
+    <ul class="list">
+      <li>Baseline stable and visible before injection.</li>
+      <li>Peaks appear with expected retention times.</li>
+      <li>Repeatability confirmed over <b>2–3 runs</b>.</li>
+    </ul>
+  </div>
+
+  <div class="warn">
+    <b>If still no peaks:</b>
+    <ul class="list">
+      <li>Capture chromatogram, detector status, and valve event logs.</li>
+      <li>Record carrier pressure, flow, and sample conditions.</li>
+      <li>Escalate for possible column damage, internal valve leakage,
+          or detector electronics fault.</li>
+    </ul>
+  </div>
+
+  <div class="action-row">
+    <a class="btn btn-ghost" href="analyzers/siemens/maxum-ii/alarms/index.html">
+      ← Back to MAXUM II Alarms
+    </a>
+    <a class="btn btn-primary" href="analyzers/siemens/maxum-ii/maxum-ii.html">
+      MAXUM II Page →
+    </a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div>
+      <b>AnalyzersHub</b><br>
+      <span class="muted">Built for Analyzer Technicians</span>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
