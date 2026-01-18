@@ -6,23 +6,37 @@
 <title>Contact | AnalyzersHub</title>
 
 <base href="/analyzershub/">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header class="site-header">
   <div class="site-header-inner">
-    <a class="brand" href="index.html">AnalyzersHub</a>
+
+    <a class="brand" href="index.html">
+      AnalyzersHub
+      <span class="brand-sub">Industrial Analyzer Knowledge</span>
+    </a>
+
     <nav class="site-nav">
       <a href="index.html">Home</a>
-      <a href="analyzers.html">Analyzer Search</a>
+      <a href="analyzers.html">Knowledge Base</a>
+      <a href="learn/index.html">Learn</a>
+      <a href="community/index.html">Community</a>
+
+      <span class="nav-sep"></span>
+
       <a href="blog/index.html">Blog</a>
       <a href="contact.html" class="active">Contact</a>
+      <a href="disclaimer.html">Disclaimer</a>
     </nav>
+
   </div>
 </header>
 
+<!-- BREADCRUMB -->
 <nav class="crumbs">
   <a href="index.html">Home</a><span>›</span>
   <span class="current">Contact</span>
@@ -32,50 +46,61 @@
 
   <div class="panel">
     <h2 style="margin:0;color:#0b3c5d;">Contact AnalyzersHub</h2>
-    <p class="muted" style="margin-top:8px;">
-      Have a question, suggestion, correction, or want to contribute?
-      Send a message below.
+
+    <p class="muted" style="margin-top:8px;max-width:720px;">
+      Have a question, suggestion, correction, or want to contribute
+      field experience to AnalyzersHub?  
+      Send us a message below.
     </p>
 
-    <!-- ✅ FORM -->
+    <!-- CONTACT FORM -->
     <form class="form"
           action="https://formspree.io/f/REPLACE_WITH_YOUR_ID"
           method="POST">
 
-      <label>Your Name</label>
-      <input type="text" name="name" required>
+      <label for="name">Your Name</label>
+      <input id="name" type="text" name="name" placeholder="Your full name" required>
 
-      <label>Email Address</label>
-      <input type="email" name="email" required>
+      <label for="email">Email Address</label>
+      <input id="email" type="email" name="email" placeholder="you@example.com" required>
 
-      <label>Message</label>
-      <textarea name="message" placeholder="Write your message here..." required></textarea>
+      <label for="message">Message</label>
+      <textarea id="message"
+                name="message"
+                placeholder="Write your message here…"
+                required></textarea>
 
-      <!-- Optional context -->
+      <!-- Context -->
       <input type="hidden" name="source" value="AnalyzersHub Contact Page">
 
       <div class="action-row">
-        <button class="btn btn-primary" type="submit">Send Message</button>
+        <button class="btn btn-primary" type="submit">
+          Send Message
+        </button>
       </div>
     </form>
 
-    <p class="muted" style="margin-top:12px;font-size:.85rem;">
-      ⚠️ This form is for general communication only.
-      Do not share confidential plant or safety-critical information.
+    <p class="muted" style="margin-top:14px;font-size:.85rem;max-width:720px;">
+      ⚠️ This form is for general communication only.  
+      Do not share confidential plant data, safety-critical details,
+      or proprietary information.
     </p>
   </div>
 
 </main>
 
+<!-- FOOTER -->
 <footer class="site-footer">
   <div class="site-footer-inner">
     <div>
       <b>AnalyzersHub</b><br>
-      <span class="muted">Built for Analyzer Technicians</span>
+      <span class="muted">By Technicians. For Analyzers.</span>
     </div>
     <div class="footer-links">
       <a href="index.html">Home</a>
-      <a href="analyzers.html">Search</a>
+      <a href="analyzers.html">Knowledge Base</a>
+      <a href="community/index.html">Community</a>
+      <a href="blog/index.html">Blog</a>
       <a href="disclaimer.html">Disclaimer</a>
     </div>
   </div>
