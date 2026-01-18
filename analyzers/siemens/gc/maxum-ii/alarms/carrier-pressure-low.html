@@ -1,149 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MAXUM II | Carrier Pressure/Flow Low</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAXUM II – Carrier Pressure / Flow Low | Decision Tree | AnalyzersHub</title>
 
-  <link rel="stylesheet" href="../../../../../assets/css/style.css" />
-
-  <style>
-    header{ position: sticky; top:0; z-index:999; box-shadow:0 2px 12px rgba(0,0,0,0.18); }
-    .wrap{ max-width:1100px; margin:0 auto; padding:18px 16px 40px; }
-    .breadcrumbs{ font-size:.95rem; margin:8px 0 14px; }
-    .breadcrumbs a{ color:#1f78b4; text-decoration:none; font-weight:800; }
-    .breadcrumbs a:hover{ text-decoration:underline; }
-
-    .title{
-      background:#0b3c5d; color:#fff; border-radius:12px;
-      padding:16px; box-shadow:0 6px 18px rgba(0,0,0,0.12);
-      margin-bottom:14px;
-    }
-    .title h2{ margin:0 0 6px; color:#fff; }
-    .title p{ margin:0; opacity:.95; }
-
-    .tree{
-      background:#fff; border:1px solid #e0e6ec; border-radius:12px;
-      padding:16px; box-shadow:0 4px 14px rgba(0,0,0,0.08);
-      position:relative; overflow:hidden;
-      background-image: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(245,248,252,0.98));
-    }
-    .tree::before{
-      content:""; position:absolute; top:0; left:0; width:100%; height:7px;
-      background: linear-gradient(90deg, #2e7d32, #6fcf97);
-    }
-
-    .q{ margin:14px 0; padding:12px; border-left:4px solid #1f78b4; background:#f6fbff; border-radius:10px; }
-    .q b{ color:#0b3c5d; }
-    ul{ margin:10px 0 0 18px; }
-    li{ margin:6px 0; }
-
-    .ok{ background:#ecfdf5; border-left:4px solid #10b981; padding:12px; border-radius:10px; margin:14px 0; }
-    .warn{ background:#fff7ed; border-left:4px solid #f59e0b; padding:12px; border-radius:10px; margin:14px 0; }
-    .bad{ background:#fef2f2; border-left:4px solid #ef4444; padding:12px; border-radius:10px; margin:14px 0; }
-
-    .btn{
-      display:inline-block; padding:10px 14px; border-radius:8px; font-weight:900;
-      text-decoration:none; border:1px solid rgba(0,0,0,0.10);
-    }
-    .btn-primary{ background:#1f78b4; color:#fff; }
-    .btn-primary:hover{ background:#155a8a; }
-    .btn-ghost{ background:#fff; color:#0b3c5d; }
-    .btn-ghost:hover{ background:#e9f2f9; }
-  </style>
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-<header>
-  <h1>AnalyzersHub</h1>
-  <nav>
-    <a href="../../../../../index.html">Home</a>
-    <a href="../../../../../analyzers.html">Analyzer Search</a>
-  </nav>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="analyzers.html?category=gc">GC Hub</a>
+    </nav>
+  </div>
 </header>
 
-<main class="wrap">
-  <div class="breadcrumbs">
-    <a href="../../../../../index.html">Home</a> →
-    <a href="../../../../../analyzers.html">Analyzer Search</a> →
-    <a href="../maxum-ii.html">Siemens MAXUM II</a> →
-    <a href="index.html">Alarms</a> →
-    <span>Carrier Pressure/Flow Low</span>
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="analyzers.html">Analyzers</a><span>›</span>
+  <a href="analyzers/siemens/maxum-ii/maxum-ii.html">Siemens MAXUM II</a><span>›</span>
+  <a href="analyzers/siemens/maxum-ii/alarms/index.html">Alarms</a><span>›</span>
+  <span class="current">Carrier Pressure / Flow Low</span>
+</nav>
+
+<main class="container">
+
+  <section class="hero-search">
+    <div class="hero-inner">
+      <h2>Carrier Pressure / Flow Low — Decision Tree</h2>
+      <p>
+        Use this decision tree when you observe <b>no peaks</b>,
+        <b>unstable retention times</b>, <b>baseline issues</b>,
+        or carrier supply–related alarms on a Siemens MAXUM II GC.
+      </p>
+
+      <div class="action-row">
+        <a class="btn btn-ghost" href="analyzers/siemens/maxum-ii/alarms/index.html">← Back to Alarms</a>
+        <a class="btn btn-primary" href="analyzers/siemens/maxum-ii/maxum-ii.html">MAXUM II Overview →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="warn">
+    <b>Safety:</b> Carrier gas handling must follow site safety rules.
+    Leak-test using approved methods only and vent safely.
   </div>
 
-  <section class="title">
-    <h2>Carrier Pressure / Flow Low — Decision Tree</h2>
-    <p>Use when: no peaks, unstable retention, baseline issues, or carrier supply alarms.</p>
-  </section>
+  <div class="panel">
+    <h3>Q1 — Is the carrier cylinder / regulator pressure adequate?</h3>
+    <ul class="list">
+      <li><b>YES:</b> Proceed to Q2.</li>
+      <li><b>NO:</b> Replace or restore cylinder supply, fully open valves,
+          set correct regulator outlet pressure, then recheck alarm.</li>
+    </ul>
+  </div>
 
-  <section class="tree">
-    <div class="warn"><b>Safety:</b> Carrier gas handling must follow site rules. Check for leaks using approved method. Vent safely.</div>
+  <div class="panel">
+    <h3>Q2 — Is the carrier pressure stable (no hunting or oscillation)?</h3>
+    <ul class="list">
+      <li><b>YES:</b> Proceed to Q3.</li>
+      <li><b>NO:</b> Suspect regulator creep/failure or restriction.
+          Replace regulator, inspect filters/restrictors, check for icing,
+          then recheck pressure.</li>
+    </ul>
+  </div>
 
-    <div class="q">
-      <b>Q1 — Is the carrier cylinder/regulator pressure adequate?</b>
-      <ul>
-        <li><b>YES:</b> Go to Q2.</li>
-        <li><b>NO:</b> Replace/restore cylinder supply, open valves fully, set correct regulator outlet pressure → then recheck alarm.</li>
-      </ul>
-    </div>
+  <div class="panel">
+    <h3>Q3 — Any audible leak, odor, or positive leak-test result?</h3>
+    <ul class="list">
+      <li><b>YES:</b> Tighten fittings, replace ferrules, and leak-test again.
+          Pay special attention to valve manifolds, detector fittings,
+          and column connections.</li>
+      <li><b>NO:</b> Proceed to Q4.</li>
+    </ul>
+  </div>
 
-    <div class="q">
-      <b>Q2 — Is carrier pressure stable (not hunting/oscillating)?</b>
-      <ul>
-        <li><b>YES:</b> Go to Q3.</li>
-        <li><b>NO:</b> Suspect regulator creep/failure or restriction. Replace regulator, check filters/restrictors, confirm no icing → recheck.</li>
-      </ul>
-    </div>
+  <div class="panel">
+    <h3>Q4 — Is there a blockage or restriction?</h3>
+    <ul class="list">
+      <li><b>YES:</b> Replace clogged filters or restrictors,
+          drain moisture traps, inspect tubing for kinks,
+          then recheck pressure and flow.</li>
+      <li><b>NO:</b> Proceed to Q5.</li>
+    </ul>
+  </div>
 
-    <div class="q">
-      <b>Q3 — Any audible leak / smell / leak-test positive around fittings?</b>
-      <ul>
-        <li><b>YES:</b> Tighten fittings, replace ferrules, leak test again. Pay attention to valve manifold, detector fittings, column connections.</li>
-        <li><b>NO:</b> Go to Q4.</li>
-      </ul>
-    </div>
+  <div class="panel">
+    <h3>Q5 — Does the method require a specific carrier and flow setpoint?</h3>
+    <ul class="list">
+      <li><b>YES:</b> Confirm correct carrier gas type and flow setpoint
+          per method. Incorrect carrier or flow will cause poor or missing peaks.</li>
+      <li><b>NO / Unknown:</b> Verify method configuration against the last
+          known-good backup.</li>
+    </ul>
+  </div>
 
-    <div class="q">
-      <b>Q4 — Is there a blockage/restriction (filters, restrictors, moisture trap)?</b>
-      <ul>
-        <li><b>YES:</b> Replace clogged filters/restrictors, drain traps, check tubing kinks → recheck pressure/flow.</li>
-        <li><b>NO:</b> Go to Q5.</li>
-      </ul>
-    </div>
+  <div class="panel">
+    <h3>Verification Checklist</h3>
+    <ul class="list">
+      <li>Carrier pressure stable for at least <b>10–15 minutes</b></li>
+      <li>Baseline stable and retention times close to normal</li>
+      <li>Run 2–3 repeatability cycles and confirm peak presence</li>
+    </ul>
+  </div>
 
-    <div class="q">
-      <b>Q5 — Does the method require a specific carrier and flow setpoint?</b>
-      <ul>
-        <li><b>YES:</b> Confirm correct carrier gas type and setpoint per method. Wrong gas/flow causes bad peaks or no peaks.</li>
-        <li><b>NO / Unknown:</b> Verify method configuration and compare with last known good backup.</li>
-      </ul>
-    </div>
+  <div class="panel">
+    <h3>If the Problem Persists</h3>
+    <ul class="list">
+      <li>Capture alarm text and diagnostics screenshots</li>
+      <li>Record carrier supply pressure and regulator outlet pressure</li>
+      <li>Escalate to maintenance or vendor support —
+          suspected internal leak, valve block leak, or module fault</li>
+    </ul>
+  </div>
 
-    <div class="ok">
-      <b>Verification:</b>
-      <ul>
-        <li>Carrier pressure stable for at least 10–15 minutes.</li>
-        <li>Baseline stable and retention times return close to normal.</li>
-        <li>Run a repeatability test (2–3 runs) and confirm peaks appear.</li>
-      </ul>
-    </div>
-
-    <div class="bad">
-      <b>If still failing:</b>
-      <ul>
-        <li>Capture alarm text + diagnostics screenshots.</li>
-        <li>Record carrier supply pressure, regulator outlet pressure, and any flow readings.</li>
-        <li>Escalate to maintenance/vendor: suspected internal leak, valve block leak, or module fault.</li>
-      </ul>
-    </div>
-
-    <div style="margin-top:14px;">
-      <a class="btn btn-ghost" href="index.html">← Back to MAXUM II Alarms</a>
-      <a class="btn btn-primary" href="../maxum-ii.html">MAXUM II Page →</a>
-    </div>
-  </section>
 </main>
 
-<footer>Built for Analyzer Technicians</footer>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div>
+      <b>AnalyzersHub</b><br>
+      <span class="muted">Built for Analyzer Technicians</span>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+      <a href="analyzers/siemens/maxum-ii/alarms/index.html">MAXUM II Alarms</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
