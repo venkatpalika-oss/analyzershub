@@ -1,72 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>ABB AZ25 | AnalyzersHub</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-/* Same CSS as AZ20 for consistency */
-body {margin:0; font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif; background:#f4f6f9; color:#1f2937;}
-header {background:#1e3a8a; color:#fff; padding:18px 40px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000; box-shadow:0 2px 8px rgba(0,0,0,0.15);}
-header h1{margin:0; font-size:1.7rem;}
-header nav a{color:#fff; text-decoration:none; margin-left:25px; font-weight:600;}
-header nav a:hover{text-decoration:underline;}
-.hero{background:linear-gradient(135deg,#1e3a8a,#2563eb); padding:60px 20px; text-align:center; color:#fff;}
-.hero h2{font-size:2.5rem; margin-bottom:10px; text-shadow:0 2px 6px rgba(0,0,0,0.6),0 0 12px rgba(255,255,255,0.15);}
-.hero p{font-size:1.1rem; margin-bottom:20px; color:#e5e7eb; text-shadow:0 1px 4px rgba(0,0,0,0.6);}
-.hero a{background:#2563eb; color:#fff; padding:12px 30px; border-radius:8px; text-decoration:none; font-weight:600;}
-.hero a:hover{background:#1e40af;}
-main{padding:50px 20px; max-width:1100px; margin:auto;}
-h3.section-title{text-align:center; font-size:1.8rem; color:#1e3a8a; margin-bottom:40px;}
-.card{background:#fff; border-radius:14px; padding:25px 20px; box-shadow:0 8px 20px rgba(0,0,0,0.08); border-top:4px solid #1e3a8a; margin-bottom:20px;}
-.card h4{margin:0 0 8px; font-size:1.25rem; color:#1e3a8a;}
-.card p{margin:0 0 12px; font-size:0.95rem; line-height:1.5;}
-.card a{font-weight:600; color:#1e3a8a; text-decoration:none;}
-.card a:hover{text-decoration:underline;}
-footer{background:#1e3a8a; color:#fff; text-align:center; padding:20px; margin-top:50px; font-size:0.9rem;}
-@media (max-width:768px){.hero h2{font-size:2rem;}.hero p{font-size:1rem;}}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ABB AZ25 | AnalyzersHub</title>
+
+  <base href="/analyzershub/">
+
+  <!-- ✅ Global CSS only -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
-<body>
 
-<header>
-<h1>AnalyzersHub</h1>
-<nav>
-<a href="../../index.html">Home</a>
-<a href="../../analyzers.html">Analyzer Search</a>
+<body data-page="analyzers">
+
+<!-- ✅ CENTRAL HEADER -->
+<div id="siteHeader"></div>
+
+<!-- Breadcrumb -->
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="analyzers.html?filter=abb">ABB</a><span>›</span>
+  <span class="current">AZ25</span>
 </nav>
-</header>
 
-<section class="hero">
-<h2>ABB AZ25</h2>
-<p>Mid-range oxygen analyzer supporting more complex combustion processes.</p>
-<a href="../az10/alarms/index.html">View Common Alarms →</a>
+<!-- Hero -->
+<section class="hero-search">
+  <div class="hero-inner">
+    <h2>ABB AZ25</h2>
+    <p>Mid-range oxygen analyzer for more complex combustion processes.</p>
+
+    <div class="action-row">
+      <!-- Shared AZ alarm folder -->
+      <a class="btn btn-primary" href="analyzers/abb/az10/alarms/index.html">
+        View Common Alarms →
+      </a>
+      <a class="btn btn-ghost" href="analyzers.html?filter=abb">Back to ABB →</a>
+      <a class="btn btn-ghost" href="analyzers.html?category=oxygen">Oxygen Hub →</a>
+    </div>
+  </div>
 </section>
 
-<main>
-<h3 class="section-title">Troubleshooting & Procedures</h3>
-<div class="card">
-<h4>Overview</h4>
-<p>The ABB AZ25 is ideal for industrial combustion monitoring with mid-level accuracy and enhanced diagnostics.</p>
-</div>
-<div class="card">
-<h4>Calibration</h4>
-<p>Zero, span, and reference gas calibration per manufacturer instructions. Use diagnostics to confirm sensor performance.</p>
-</div>
-<div class="card">
-<h4>Maintenance</h4>
-<p>Regular sensor checks, heater validation, and reference gas inspection are recommended.</p>
-</div>
-<div class="card">
-<h4>Common Alarms</h4>
-<p>All AZ Series alarms are in the common alarm folder.</p>
-<a href="../az10/alarms/index.html">Go to Alarms →</a>
-</div>
+<main class="container">
+
+  <div class="panel">
+    <h3 style="margin:0;color:#0b3c5d;">Troubleshooting & Procedures</h3>
+    <p class="muted" style="margin:8px 0 0;">
+      Field-oriented guidance covering operation, calibration, maintenance, and shared AZ alarms.
+    </p>
+  </div>
+
+  <div class="grid">
+
+    <div class="card oxygen">
+      <h3>Overview</h3>
+      <p>
+        The ABB AZ25 is designed for industrial combustion monitoring where
+        higher stability and enhanced diagnostics are required compared to entry-level analyzers.
+      </p>
+    </div>
+
+    <div class="card oxygen">
+      <h3>Calibration</h3>
+      <p>
+        Perform <b>zero</b>, <b>span</b>, and <b>reference gas</b> calibration as per manufacturer instructions.
+        Use diagnostic menus to confirm sensor response and stability.
+      </p>
+      <div class="step">
+        <b>Field tip:</b> Frequent calibration failures usually indicate
+        leaks, moisture ingress, reference path restriction, or heater instability.
+      </div>
+    </div>
+
+    <div class="card oxygen">
+      <h3>Maintenance</h3>
+      <p>
+        Routine maintenance improves reliability and reduces nuisance alarms.
+      </p>
+      <ul class="list">
+        <li>Inspect sensor condition and response time</li>
+        <li>Verify heater temperature stability</li>
+        <li>Check sample filters and flow</li>
+        <li>Confirm reference gas/air path is clean and dry</li>
+        <li>Inspect wiring and grounding</li>
+      </ul>
+    </div>
+
+    <div class="card oxygen">
+      <h3>Common Alarms</h3>
+      <p>
+        AZ-series alarms (AZ10 / AZ20 / AZ25) share common diagnostics and logic.
+      </p>
+      <div class="action-row">
+        <a class="btn btn-primary" href="analyzers/abb/az10/alarms/index.html">
+          Go to Alarms →
+        </a>
+      </div>
+    </div>
+
+  </div>
+
 </main>
 
-<footer>
-© 2026 AnalyzersHub.com | Industrial Analyzer Knowledge Base
-</footer>
+<!-- ✅ CENTRAL FOOTER -->
+<div id="siteFooter"></div>
+
+<!-- ✅ LOAD HEADER / FOOTER -->
+<script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
