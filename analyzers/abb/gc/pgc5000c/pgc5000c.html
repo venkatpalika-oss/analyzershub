@@ -6,27 +6,15 @@
 <title>ABB PGC5000C Smart Oven | AnalyzersHub</title>
 
 <base href="/analyzershub/">
-<link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
+
+<!-- ✅ CSS only in HEAD -->
+<link rel="stylesheet" href="assets/css/style.css?v=2026-01-18" />
 </head>
-<body>
 
-<header class="site-header">
-  <div class="site-header-inner">
-    <a class="brand" href="index.html">
-      AnalyzersHub
-      <span class="brand-sub">Industrial Analyzer Knowledge</span>
-    </a>
+<body data-page="analyzers">
 
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Search</a>
-      <a href="analyzers.html?category=gc">GC Hub</a>
-      <a href="guides/gc/abb-gc-alarm-codes.html">ABB GC Codes</a>
-    </nav>
-  </div>
-</header>
-
+<!-- ✅ CENTRAL HEADER -->
+<div id="siteHeader"></div>
 
 <nav class="crumbs" aria-label="Breadcrumb">
   <a href="index.html">Home</a><span>›</span>
@@ -35,17 +23,32 @@
 </nav>
 
 <main class="container">
+
   <h2 style="margin-top:18px;">ABB PGC5000C — Smart Oven Series</h2>
-  <p class="muted">Process GC troubleshooting: sampling, carrier stability, oven control, valves, and communications.</p>
+  <p class="muted">
+    Process GC troubleshooting: sampling, carrier stability, oven control,
+    valves, and communications.
+  </p>
 
   <div class="action-row">
-    <a class="btn btn-primary" href="analyzers/abb/gc/pgc5000c/alarms/index.html">Alarm Decision Trees →</a>
-    <a class="btn btn-ghost" href="guides/gc/abb-gc-alarm-codes.html">ABB GC Alarm Codes →</a>
-    <a class="btn btn-ghost" href="guides/gc/chromatogram-guide.html">Chromatogram Guide →</a>
-    <a class="btn btn-ghost" href="analyzers.html">← Back to Search</a>
+    <a class="btn btn-primary" href="analyzers/abb/gc/pgc5000c/alarms/index.html">
+      Alarm Decision Trees →
+    </a>
+    <a class="btn btn-ghost" href="guides/gc/abb-gc-alarm-codes.html">
+      ABB GC Alarm Codes →
+    </a>
+    <a class="btn btn-ghost" href="guides/gc/chromatogram-guide.html">
+      Chromatogram Guide →
+    </a>
+    <a class="btn btn-ghost" href="analyzers.html">
+      ← Back to Search
+    </a>
   </div>
 
-  <div class="warn"><b>Safety:</b> follow site procedures for hazardous gases. Isolate, depressurize, and leak test after maintenance.</div>
+  <div class="warn">
+    <b>Safety:</b> follow site procedures for hazardous gases.
+    Isolate, depressurize, and leak test after maintenance.
+  </div>
 
   <div class="card gc">
     <h3>Recommended Troubleshooting Flow</h3>
@@ -55,18 +58,14 @@
     <div class="step"><b>4)</b> Confirm oven temperature stable at setpoint</div>
     <div class="step"><b>5)</b> Verify valve switching; instrument air clean/dry</div>
   </div>
+
 </main>
 
-<footer class="site-footer">
-  <div class="site-footer-inner">
-    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Search</a>
-      <a href="analyzers/abb/gc/pgc5000c/alarms/index.html">PGC5000C Alarms</a>
-    </div>
-  </div>
-</footer>
+<!-- ✅ CENTRAL FOOTER -->
+<div id="siteFooter"></div>
+
+<!-- ✅ LOAD HEADER / FOOTER -->
+<script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
