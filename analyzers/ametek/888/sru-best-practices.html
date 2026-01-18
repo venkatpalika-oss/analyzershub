@@ -1,87 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SRU Analyzer Best Practices | AnalyzersHub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SRU Analyzer Best Practices | AnalyzersHub</title>
 
-<base href="/analyzershub/">
-<link rel="stylesheet" href="assets/css/style.css">
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
 
-<body>
+<body data-page="analyzers">
 
-<header class="site-header">
-  <div class="site-header-inner">
-    <a class="brand" href="index.html">AnalyzersHub</a>
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Analyzer Search</a>
-    </nav>
-  </div>
-</header>
+  <!-- ✅ CENTRAL HEADER -->
+  <div id="siteHeader"></div>
 
-<nav class="crumbs">
-  <a href="index.html">Home</a><span>›</span>
-  <span class="current">SRU Best Practices</span>
-</nav>
+  <!-- Breadcrumb -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a><span>›</span>
+    <a href="analyzers.html">Analyzer Search</a><span>›</span>
+    <a href="analyzers.html?filter=ametek">AMETEK</a><span>›</span>
+    <a href="analyzers/ametek/888/888.html">AMETEK 888</a><span>›</span>
+    <span class="current">SRU Best Practices</span>
+  </nav>
 
-<main class="container">
+  <main class="container">
 
-<div class="panel">
-  <h2>SRU Analyzer Best Practices</h2>
-  <p class="muted">
-    Proven field practices for tail gas analyzers
-    in sulfur recovery units.
-  </p>
-</div>
+    <section class="panel">
+      <h2 style="margin:0;color:#0b3c5d;">SRU Analyzer Best Practices</h2>
+      <p class="muted" style="margin-top:10px;">
+        Proven field practices for tail gas analyzers in Sulfur Recovery Units (SRU).
+        Focus: sample system temperature control, contamination prevention, calibration discipline,
+        and using trends to detect early issues.
+      </p>
 
-<div class="panel">
-  <h3>Sample System</h3>
-  <ul class="list">
-    <li>Maintain sample temperature above sulfur dew point</li>
-    <li>Minimize dead volume and cold spots</li>
-    <li>Use corrosion-resistant materials</li>
-  </ul>
-</div>
+      <div class="action-row" style="margin-top:12px;">
+        <a class="btn btn-primary" href="analyzers/ametek/888/888.html">Back to AMETEK 888 →</a>
+        <a class="btn btn-ghost" href="analyzers.html">Back to Search →</a>
+      </div>
+    </section>
 
-<div class="panel">
-  <h3>Calibration Strategy</h3>
-  <ul class="list">
-    <li>Use certified sulfur calibration gases</li>
-    <li>Perform calibration during stable SRU operation</li>
-    <li>Trend before and after calibration</li>
-  </ul>
-</div>
+    <section class="panel">
+      <h3 style="margin-top:0;">1) Sample System (Most SRU Issues Start Here)</h3>
+      <ul class="list">
+        <li><b>Keep temperature above sulfur dew point</b> across probe, line, filter, and analyzer inlet.</li>
+        <li><b>Eliminate cold spots</b> (poor insulation, exposed fittings, unheated valves, metal junctions).</li>
+        <li><b>Minimize dead volume</b> to improve response time and prevent sulfur deposition pockets.</li>
+        <li><b>Use corrosion-resistant materials</b> suitable for sulfur service (avoid incompatible elastomers).</li>
+        <li><b>Confirm stable sample flow</b> and verify no restrictions or plugging at probe/filter.</li>
+      </ul>
 
-<div class="panel">
-  <h3>Operational Tips</h3>
-  <ul class="list">
-    <li>Do not ignore slow drift — it indicates contamination</li>
-    <li>Investigate analyzer alarms immediately</li>
-    <li>Correlate analyzer trends with SRU process data</li>
-  </ul>
+      <div class="warn">
+        <b>Field reality:</b> A “good reading” can still be wrong if sulfur is condensing upstream.
+        Condensation causes slow drift, sticky response, and unstable calibration.
+      </div>
+    </section>
 
-  <div class="warn">
-    Analyzer problems in SRU are usually sample-system related,
-    not analyzer electronics failures.
-  </div>
-</div>
+    <section class="panel">
+      <h3 style="margin-top:0;">2) Calibration Strategy (Do It When the Process Is Stable)</h3>
+      <ul class="list">
+        <li>Use <b>certified sulfur calibration gases</b> and track cylinder expiry / traceability.</li>
+        <li>Calibrate only when SRU is stable; avoid start-up or rapid load changes.</li>
+        <li>Trend <b>before and after</b> calibration to confirm the analyzer returned to the same baseline behavior.</li>
+        <li>Confirm calibration gas flow / switching valves are healthy (no leaks, no sticking).</li>
+        <li>If calibration keeps failing: treat it as a <b>sample system temperature / contamination</b> alarm first.</li>
+      </ul>
 
-<div class="action-row">
-  <a class="btn btn-primary"
-     href="analyzers/ametek/888/888.html">
-     Back to AMETEK 888 →
-  </a>
-</div>
+      <div class="step">
+        <b>Best habit:</b> Keep a small log: date/time, gas used, result, and “process condition note”.
+        This helps you prove drift vs process upset.
+      </div>
+    </section>
 
-</main>
+    <section class="panel">
+      <h3 style="margin-top:0;">3) Operations & Trending (Catch Issues Early)</h3>
+      <ul class="list">
+        <li><b>Do not ignore slow drift</b> — it usually indicates contamination or temperature instability.</li>
+        <li>Investigate analyzer alarms quickly; SRU analyzers “snowball” when deposits build up.</li>
+        <li>Correlate analyzer trend with SRU process: incinerator conditions, air demand, tail gas flow changes.</li>
+        <li>Watch for <b>slow response</b> as an early warning of deposition/restriction.</li>
+        <li>After maintenance: leak test + confirm heat trace works end-to-end.</li>
+      </ul>
 
-<footer class="site-footer">
-  <div class="site-footer-inner">
-    <b>AnalyzersHub</b>
-  </div>
-</footer>
+      <div class="warn">
+        <b>Reminder:</b> In SRU service, analyzer problems are usually <b>sample-system related</b>,
+        not electronics failures.
+      </div>
+    </section>
+
+    <section class="panel">
+      <h3 style="margin-top:0;">4) Quick Checklist (Use During Night Shifts)</h3>
+      <div class="grid">
+        <div class="card">
+          <h4>Temperature</h4>
+          <p class="muted">Probe + line + filter + analyzer inlet all hot & stable (no cold fittings).</p>
+        </div>
+        <div class="card">
+          <h4>Flow</h4>
+          <p class="muted">Stable sample flow, no plugging, no sudden DP rise, no hunting pressure.</p>
+        </div>
+        <div class="card">
+          <h4>Leaks</h4>
+          <p class="muted">No leaks at fittings/regulators; calibration gas switching OK.</p>
+        </div>
+        <div class="card">
+          <h4>Trend</h4>
+          <p class="muted">Compare with last stable period; check response time and drift.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="action-row">
+      <a class="btn btn-primary" href="analyzers/ametek/888/888.html">Back to AMETEK 888 →</a>
+      <a class="btn btn-ghost" href="analyzers/ametek/888/troubleshooting.html">Troubleshooting →</a>
+      <a class="btn btn-ghost" href="analyzers/ametek/888/trends.html">Trends & Response Guide →</a>
+    </div>
+
+  </main>
+
+  <!-- ✅ CENTRAL FOOTER -->
+  <div id="siteFooter"></div>
+
+  <!-- ✅ LOAD HEADER/FOOTER -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
