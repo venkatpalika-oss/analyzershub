@@ -1,98 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AMETEK 933 Trends & Response | AnalyzersHub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMETEK 933 Trends & Response | AnalyzersHub</title>
 
-<base href="/analyzershub/">
-<link rel="stylesheet" href="assets/css/style.css">
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
 
-<body>
+<body data-page="analyzers">
 
-<!--#include virtual="/analyzershub/includes/header.html" -->
-  <div class="site-header-inner">
-    <a class="brand" href="index.html">AnalyzersHub</a>
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Analyzer Search</a>
-    </nav>
-  </div>
-</header>
+  <!-- ✅ CENTRAL HEADER -->
+  <div id="siteHeader"></div>
 
-<nav class="crumbs">
-  <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers.html">Analyzers</a><span>›</span>
-  <a href="analyzers/ametek/933/933.html">AMETEK 933</a><span>›</span>
-  <span class="current">Trends & Response</span>
-</nav>
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a><span>›</span>
+    <a href="analyzers.html">Analyzer Search</a><span>›</span>
+    <a href="analyzers/ametek/933/933.html">AMETEK 933</a><span>›</span>
+    <span class="current">Trends & Response</span>
+  </nav>
 
-<main class="container">
+  <main class="container">
 
-<div class="panel">
-  <h2>AMETEK 933 — Trends & Response Guide</h2>
-  <p class="muted">
-    Understanding normal trend behavior helps distinguish
-    analyzer issues from real process changes.
-  </p>
-</div>
+    <div class="panel">
+      <h2>AMETEK 933 — Trends & Response Guide</h2>
+      <p class="muted">
+        Understanding normal trend behavior helps distinguish
+        analyzer issues from real process changes.
+      </p>
+    </div>
 
-<div class="panel">
-  <h3>Typical Response Characteristics</h3>
-  <ul class="list">
-    <li>Initial response: <b>10–30 seconds</b></li>
-    <li>90% response time (T90): <b>1–3 minutes</b></li>
-    <li>Full stabilization: <b>3–5 minutes</b></li>
-  </ul>
+    <div class="panel">
+      <h3>Typical Response Characteristics</h3>
+      <ul class="list">
+        <li>Initial response: <b>10–30 seconds</b></li>
+        <li>90% response time (T90): <b>1–3 minutes</b></li>
+        <li>Full stabilization: <b>3–5 minutes</b></li>
+      </ul>
 
-  <div class="warn">
-    Slower response usually indicates sample flow restriction
-    or sensor aging.
-  </div>
-</div>
+      <div class="warn">
+        Slower response usually indicates sample flow restriction,
+        sensor aging, or sample system contamination.
+      </div>
+    </div>
 
-<div class="panel">
-  <h3>Normal Trend Patterns</h3>
-  <ul class="list">
-    <li>Smooth response to load or air changes</li>
-    <li>Stable baseline after calibration</li>
-    <li>No oscillation during steady operation</li>
-  </ul>
-</div>
+    <div class="panel">
+      <h3>Normal Trend Patterns</h3>
+      <ul class="list">
+        <li>Smooth response to load or air changes</li>
+        <li>Stable baseline after calibration</li>
+        <li>No oscillation during steady operation</li>
+      </ul>
+    </div>
 
-<div class="panel">
-  <h3>Abnormal Trend Patterns</h3>
-  <ul class="list">
-    <li><b>Flat line</b> → blocked sample or dead sensor</li>
-    <li><b>Noisy trend</b> → moisture or electrical interference</li>
-    <li><b>Slow drift</b> → air leakage or sensor aging</li>
-    <li><b>Sudden spike</b> → process upset or leak introduction</li>
-  </ul>
-</div>
+    <div class="panel">
+      <h3>Abnormal Trend Patterns</h3>
+      <ul class="list">
+        <li><b>Flat line</b> → blocked sample or dead sensor</li>
+        <li><b>Noisy trend</b> → moisture ingress or electrical interference</li>
+        <li><b>Slow drift</b> → air leakage or sensor aging</li>
+        <li><b>Sudden spike</b> → real process upset or leak introduction</li>
+      </ul>
+    </div>
 
-<div class="action-row">
-  <a class="btn btn-primary"
-     href="analyzers/ametek/933/troubleshooting.html">
-     Troubleshooting →
-  </a>
-  <a class="btn btn-ghost"
-     href="alarms/ametek/933/decision-trees/index.html">
-     Decision Trees →
-  </a>
-  <a class="btn btn-ghost"
-     href="analyzers/ametek/933/933.html">
-     ← Back to Analyzer
-  </a>
-</div>
+    <div class="action-row">
+      <a class="btn btn-primary"
+         href="analyzers/ametek/933/troubleshooting.html">
+         Troubleshooting →
+      </a>
+      <a class="btn btn-ghost"
+         href="alarms/ametek/933/decision-trees/index.html">
+         Decision Trees →
+      </a>
+      <a class="btn btn-ghost"
+         href="analyzers/ametek/933/933.html">
+         ← Back to Analyzer
+      </a>
+    </div>
 
-</main>
+  </main>
 
-<footer class="site-footer">
-  <div class="site-footer-inner">
-    <b>AnalyzersHub</b>
-  </div>
-</footer>
+  <!-- ✅ CENTRAL FOOTER -->
+  <div id="siteFooter"></div>
+
+  <!-- ✅ LOAD CENTRAL INCLUDES -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
