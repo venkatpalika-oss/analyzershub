@@ -355,3 +355,56 @@ img{max-width:100%;height:auto;display:block}
     background-position: center top;
   }
 }
+/* =========================================
+   PROFESSIONAL HEADER REFINEMENT
+========================================= */
+
+.brand{
+  display:flex;
+  flex-direction:column;
+  line-height:1.1;
+}
+
+.brand-sub{
+  font-size:.72rem;
+  font-weight:700;
+  opacity:.75;
+  letter-spacing:.4px;
+}
+
+.site-nav{
+  align-items:center;
+}
+
+.site-nav a{
+  padding:8px 12px;
+  border-radius:8px;
+  transition:background .15s ease, opacity .15s ease;
+}
+
+.site-nav a:hover{
+  background:rgba(255,255,255,.12);
+  text-decoration:none;
+}
+
+.site-nav a.active{
+  background:rgba(255,255,255,.18);
+  border:1px solid rgba(255,255,255,.25);
+}
+
+/* Separator */
+.nav-sep{
+  width:1px;
+  height:18px;
+  background:rgba(255,255,255,.35);
+  margin:0 6px;
+}
+
+/* Mobile cleanup */
+@media(max-width:900px){
+  .brand-sub{display:none}
+  .nav-sep{display:none}
+  .site-nav{
+    gap:8px;
+  }
+}
