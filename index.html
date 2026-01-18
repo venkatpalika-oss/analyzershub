@@ -7,8 +7,20 @@
 
 <!-- IMPORTANT for GitHub Pages -->
 <base href="/analyzershub/">
-
 <link rel="stylesheet" href="assets/css/style.css">
+
+<!-- Ensure wallpaper works even if CSS image is wrong -->
+<style>
+/* Force wallpaper on home only (safe) */
+.hero{
+  background:
+    linear-gradient(rgba(11,60,93,.70), rgba(11,60,93,.55)),
+    url("assets/images/home-hero.png");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+</style>
 </head>
 
 <body>
@@ -33,7 +45,7 @@
   </div>
 </header>
 
-<!-- HERO (Wallpaper Hero from CSS) -->
+<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
     <h2>Industrial Analyzer Knowledge Hub</h2>
@@ -41,7 +53,6 @@
       Working principles, calibration procedures, troubleshooting guides,
       alarm codes, and decision trees — built by technicians, for technicians.
     </p>
-
     <div class="action-row">
       <a class="btn btn-primary" href="analyzers.html">Browse All Analyzers →</a>
       <a class="btn btn-ghost" href="analyzers.html?category=gc">GC Hub →</a>
@@ -52,58 +63,77 @@
 
 <main class="container">
 
-  <!-- QUICK ACTIONS (no negative margin to avoid overlap) -->
+  <!-- QUICK ACTIONS -->
   <div class="panel">
     <div class="action-row" style="justify-content:center">
       <a class="btn btn-primary" href="analyzers.html">🔎 Knowledge Base</a>
+      <a class="btn btn-ghost" href="analyzers.html?category=gc">🧪 Gas Chromatographs</a>
+      <a class="btn btn-ghost" href="analyzers.html?category=oxygen">🫁 Oxygen</a>
       <a class="btn btn-ghost" href="learn/index.html">🎓 Learn</a>
-      <a class="btn btn-ghost" href="community/index.html">💬 Community</a>
+      <a class="btn btn-ghost" href="cems/index.html">🌫️ CEMS Hub</a>
       <a class="btn btn-ghost" href="blog/index.html">📝 Blog</a>
       <a class="btn btn-ghost" href="contact.html">✉️ Contact</a>
     </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="panel">
+    <h2 style="margin-top:0;color:#0b3c5d;">About AnalyzersHub</h2>
+    <p>
+      AnalyzersHub is a dedicated knowledge and collaboration platform built by analyzer technicians, for analyzers.
+    </p>
+    <p>
+      We focus on real-world challenges faced in the field—installation, calibration, troubleshooting, maintenance,
+      and performance optimization of industrial gas and liquid analyzers. Our goal is to bridge the gap between manuals
+      and real operating conditions by sharing hands-on experience, best practices, and practical solutions.
+    </p>
+    <p class="muted" style="margin-bottom:0;">
+      <b>By Technicians. For Analyzers.</b>
+    </p>
   </div>
 
   <!-- WHY ANALYZERS MATTER -->
   <div class="panel">
     <h2 style="margin-top:0;color:#0b3c5d;">Why Analyzers Are Crucial</h2>
     <p class="muted">
-      Industrial analyzers are the “eyes” of combustion control, emissions compliance,
-      product quality, and unit reliability. A single analyzer failure can lead to
-      poor control, environmental exceedances, unit trips, or production losses.
+      Industrial analyzers are the “eyes” of combustion control, emissions compliance, product quality, and unit reliability.
+      A single analyzer failure can cause poor control, environmental exceedances, SRU instability, unit trips, or production losses.
     </p>
 
     <div class="grid">
       <div class="card">
-        <h3>Safety & Compliance</h3>
-        <p>Accurate measurements support safe operation and regulatory compliance.</p>
+        <h3>Compliance & Environment</h3>
+        <p>CEMS and process analyzers protect the plant from environmental penalties and exceedances.</p>
       </div>
       <div class="card">
-        <h3>Efficiency & Cost</h3>
-        <p>Stable analyzers optimize fuel usage and improve process efficiency.</p>
+        <h3>Process Performance</h3>
+        <p>Accurate measurement improves combustion efficiency, optimizes fuel usage, and stabilizes operations.</p>
       </div>
       <div class="card">
-        <h3>Reliability</h3>
-        <p>Good diagnostics and maintenance prevent repeat failures and downtime.</p>
+        <h3>Reliability & Profit</h3>
+        <p>Better analyzer reliability reduces downtime, improves product quality, and prevents repeat failures.</p>
       </div>
+    </div>
+
+    <div class="field-tip">
+      <b>Field Tip:</b> Most “analyzer problems” are actually sample system or utilities issues.
+      Always check probe, filters, flow, pressure, heat tracing, leaks, and condensate first.
     </div>
   </div>
 
-  <!-- CAREER PATH MAP -->
+  <!-- CAREER PATH -->
   <div class="panel">
     <h2 style="margin-top:0;color:#0b3c5d;">Career Path Map</h2>
-    <p class="muted">
-      A common growth journey for analyzer professionals:
-    </p>
+    <p class="muted">A common growth journey for analyzer professionals:</p>
     <div class="chip-row">
       <div class="chip">Technician</div>
       <div class="chip">→ Specialist</div>
       <div class="chip">→ Reliability / SME</div>
       <div class="chip">→ Consultant / Trainer</div>
     </div>
-
-    <div class="field-tip">
-      <b>Field Tip:</b> Build a habit of saving alarm screenshots, trends, and root causes —
-      this becomes your personal “field manual”.
+    <div class="warn">
+      Pay and demand increase significantly when you can handle: sample systems + calibration strategy + root cause analysis +
+      DCS/PLC integration + compliance documentation.
     </div>
   </div>
 
@@ -117,7 +147,7 @@
 
     <div class="card yokogawa">
       <h3>Yokogawa</h3>
-      <p>ZR22G, OX400, TDLS, GC8000 — oxygen and GC analyzers.</p>
+      <p>ZR22G, OX400, TDLS, GC8000.</p>
       <div class="action-row">
         <a class="btn btn-primary" href="analyzers.html?filter=yokogawa">Open Yokogawa →</a>
       </div>
@@ -133,7 +163,7 @@
 
     <div class="card siemens">
       <h3>Siemens</h3>
-      <p>MAXUM Edition II, SITRANS CV — process gas chromatographs.</p>
+      <p>MAXUM Edition II, SITRANS CV.</p>
       <div class="action-row">
         <a class="btn btn-primary" href="analyzers.html?filter=siemens">Open Siemens →</a>
       </div>
@@ -163,7 +193,6 @@
     <p class="muted" style="margin-top:8px;">
       Typical flow from field analyzers → sample systems → analyzer → PLC/DCS → historian.
     </p>
-
     <img src="assets/images/data_flow_to_dcs.png"
          alt="Analyzer data flow to DCS"
          style="max-width:560px;width:100%;display:block;margin:14px auto;border-radius:12px;">
@@ -180,6 +209,8 @@
     <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="analyzers.html">Knowledge Base</a>
+      <a href="learn/index.html">Learn</a>
+      <a href="community/index.html">Community</a>
       <a href="blog/index.html">Blog</a>
       <a href="contact.html">Contact</a>
       <a href="disclaimer.html">Disclaimer</a>
