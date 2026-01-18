@@ -1,94 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AMETEK 888 Trends & Response | AnalyzersHub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMETEK 888 Trends & Response | AnalyzersHub</title>
 
-<base href="/analyzershub/">
-<link rel="stylesheet" href="assets/css/style.css">
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
 
-<body>
+<body data-page="analyzers">
 
-<header class="site-header">
-  <div class="site-header-inner">
-    <a class="brand" href="index.html">AnalyzersHub</a>
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Analyzer Search</a>
-    </nav>
-  </div>
-</header>
+  <!-- ✅ CENTRAL HEADER -->
+  <div id="siteHeader"></div>
 
-<nav class="crumbs">
-  <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers.html">Analyzers</a><span>›</span>
-  <a href="analyzers/ametek/888/888.html">AMETEK 888</a><span>›</span>
-  <span class="current">Trends & Response</span>
-</nav>
+  <!-- Breadcrumb -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a><span>›</span>
+    <a href="analyzers.html">Analyzer Search</a><span>›</span>
+    <a href="analyzers.html?filter=ametek">AMETEK</a><span>›</span>
+    <a href="analyzers/ametek/888/888.html">AMETEK 888</a><span>›</span>
+    <span class="current">Trends &amp; Response</span>
+  </nav>
 
-<main class="container">
+  <main class="container">
 
-<div class="panel">
-  <h2>AMETEK 888 — Trend & Response Time Guide</h2>
-  <p class="muted">
-    Understanding analyzer dynamics helps differentiate
-    real SRU process upsets from analyzer issues.
-  </p>
-</div>
+    <section class="panel">
+      <h2 style="margin:0;color:#0b3c5d;">AMETEK 888 — Trend &amp; Response Time Guide</h2>
+      <p class="muted" style="margin-top:10px;">
+        Understanding analyzer dynamics helps differentiate real SRU process upsets
+        from sample-system or analyzer issues. Use this as a technician quick reference.
+      </p>
 
-<div class="panel">
-  <h3>Typical Response Characteristics</h3>
-  <ul class="list">
-    <li>Initial response: <b>30–60 seconds</b></li>
-    <li>90% response time (T90): <b>2–5 minutes</b></li>
-    <li>Full stabilization: <b>5–10 minutes</b></li>
-  </ul>
+      <div class="action-row" style="margin-top:12px;">
+        <a class="btn btn-primary" href="analyzers/ametek/888/888.html">Back to AMETEK 888 →</a>
+        <a class="btn btn-ghost" href="analyzers/ametek/888/troubleshooting.html">Troubleshooting →</a>
+        <a class="btn btn-ghost" href="alarms/ametek/888/decision-trees/index.html">Decision Trees →</a>
+        <a class="btn btn-ghost" href="analyzers.html">Back to Search →</a>
+      </div>
+    </section>
 
-  <div class="warn">
-    Slower response usually indicates sample line fouling,
-    sulfur condensation, or heater performance issues.
-  </div>
-</div>
+    <section class="panel">
+      <h3 style="margin-top:0;">Typical Response Characteristics</h3>
+      <ul class="list">
+        <li>Initial response: <b>30–60 seconds</b></li>
+        <li>90% response time (T90): <b>2–5 minutes</b></li>
+        <li>Full stabilization: <b>5–10 minutes</b></li>
+      </ul>
 
-<div class="panel">
-  <h3>Normal Trend Behavior</h3>
-  <ul class="list">
-    <li>Smooth trend following SRU load changes</li>
-    <li>No oscillation during steady operation</li>
-    <li>Stable baseline after calibration</li>
-  </ul>
-</div>
+      <div class="warn">
+        <b>Slower response</b> usually indicates sample line fouling, sulfur condensation,
+        restrictions, or heater performance issues.
+      </div>
+    </section>
 
-<div class="panel">
-  <h3>Abnormal Trend Patterns</h3>
-  <ul class="list">
-    <li><b>Flat line</b> → sample blockage or probe plugging</li>
-    <li><b>Slow ramp</b> → sulfur deposition in sample system</li>
-    <li><b>Noisy signal</b> → grounding or detector contamination</li>
-    <li><b>Sudden step change</b> → actual process upset</li>
-  </ul>
-</div>
+    <section class="panel">
+      <h3 style="margin-top:0;">Normal Trend Behavior</h3>
+      <ul class="list">
+        <li>Smooth trend following SRU load changes</li>
+        <li>No oscillation during steady operation</li>
+        <li>Stable baseline after calibration</li>
+        <li>Repeatable step response during verification gas checks</li>
+      </ul>
 
-<div class="action-row">
-  <a class="btn btn-primary"
-     href="alarms/ametek/888/decision-trees/index.html">
-     Decision Trees →
-  </a>
-  <a class="btn btn-ghost"
-     href="analyzers/ametek/888/888.html">
-     ← Back to Analyzer
-  </a>
-</div>
+      <div class="step">
+        <b>Quick check:</b> If process is steady, the analyzer should also be steady.
+        Persistent drift in steady operation usually means contamination or temperature instability.
+      </div>
+    </section>
 
-</main>
+    <section class="panel">
+      <h3 style="margin-top:0;">Abnormal Trend Patterns (What They Usually Mean)</h3>
+      <ul class="list">
+        <li><b>Flat line</b> → sample blockage, probe plugging, flow loss, or signal hold</li>
+        <li><b>Slow ramp</b> → sulfur deposition, cold spot, restricted filter/line</li>
+        <li><b>Noisy signal</b> → grounding/shielding issue, unstable pressure/flow, detector contamination</li>
+        <li><b>Sudden step change</b> → likely real process upset (confirm with other plant tags)</li>
+        <li><b>Saw-tooth / hunting</b> → pressure hunting, regulator instability, switching valve issue</li>
+      </ul>
+    </section>
 
-<footer class="site-footer">
-  <div class="site-footer-inner">
-    <b>AnalyzersHub</b>
-  </div>
-</footer>
+    <section class="panel">
+      <h3 style="margin-top:0;">Field Checks When Response Is Slow</h3>
+      <div class="grid">
+        <div class="card">
+          <h4>Temperature</h4>
+          <p class="muted">Verify heat trace end-to-end. Check for cold fittings and exposed metal junctions.</p>
+        </div>
+        <div class="card">
+          <h4>Flow / Restrictions</h4>
+          <p class="muted">Confirm stable sample flow. Inspect filters, probe, line restrictions, and DP increase.</p>
+        </div>
+        <div class="card">
+          <h4>Leaks / Dilution</h4>
+          <p class="muted">Leak check sample system. Leaks can cause dilution and unstable readings.</p>
+        </div>
+        <div class="card">
+          <h4>Calibration Gas Test</h4>
+          <p class="muted">Apply span gas and watch response speed. Slow response on span = sample system problem.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="action-row">
+      <a class="btn btn-primary" href="alarms/ametek/888/decision-trees/index.html">Decision Trees →</a>
+      <a class="btn btn-ghost" href="analyzers/ametek/888/888.html">← Back to Analyzer</a>
+    </div>
+
+  </main>
+
+  <!-- ✅ CENTRAL FOOTER -->
+  <div id="siteFooter"></div>
+
+  <!-- ✅ LOAD HEADER/FOOTER -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
