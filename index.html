@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AnalyzersHub | Industrial Analyzer Knowledge Hub</title>
 
+<!-- IMPORTANT for GitHub Pages -->
 <base href="/analyzershub/">
+
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -13,16 +15,17 @@
 
 <header class="site-header">
   <div class="site-header-inner">
-    <div class="brand">
+    <a class="brand" href="index.html">
       AnalyzersHub
       <span class="brand-sub">Industrial Analyzer Knowledge</span>
-    </div>
+    </a>
 
     <nav class="site-nav">
       <a href="index.html" class="active">Home</a>
       <a href="analyzers.html">Knowledge Base</a>
       <a href="learn/index.html">Learn</a>
       <a href="community/index.html">Community</a>
+      <span class="nav-sep"></span>
       <a href="blog/index.html">Blog</a>
       <a href="contact.html">Contact</a>
       <a href="disclaimer.html">Disclaimer</a>
@@ -30,7 +33,7 @@
   </div>
 </header>
 
-<!-- HERO -->
+<!-- HERO (Wallpaper Hero from CSS) -->
 <section class="hero">
   <div class="hero-inner">
     <h2>Industrial Analyzer Knowledge Hub</h2>
@@ -49,49 +52,121 @@
 
 <main class="container">
 
+  <!-- QUICK ACTIONS (no negative margin to avoid overlap) -->
   <div class="panel">
-    <h3>Why Industrial Analyzers Matter</h3>
-    <p>
-      Industrial analyzers are critical for safety, efficiency, compliance,
-      and product quality. From combustion control to emissions monitoring,
-      they are the eyes of modern process plants.
-    </p>
+    <div class="action-row" style="justify-content:center">
+      <a class="btn btn-primary" href="analyzers.html">🔎 Knowledge Base</a>
+      <a class="btn btn-ghost" href="learn/index.html">🎓 Learn</a>
+      <a class="btn btn-ghost" href="community/index.html">💬 Community</a>
+      <a class="btn btn-ghost" href="blog/index.html">📝 Blog</a>
+      <a class="btn btn-ghost" href="contact.html">✉️ Contact</a>
+    </div>
   </div>
 
-  <h2 style="margin-top:28px;color:#0b3c5d;">Browse by Manufacturer</h2>
+  <!-- WHY ANALYZERS MATTER -->
+  <div class="panel">
+    <h2 style="margin-top:0;color:#0b3c5d;">Why Analyzers Are Crucial</h2>
+    <p class="muted">
+      Industrial analyzers are the “eyes” of combustion control, emissions compliance,
+      product quality, and unit reliability. A single analyzer failure can lead to
+      poor control, environmental exceedances, unit trips, or production losses.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Safety & Compliance</h3>
+        <p>Accurate measurements support safe operation and regulatory compliance.</p>
+      </div>
+      <div class="card">
+        <h3>Efficiency & Cost</h3>
+        <p>Stable analyzers optimize fuel usage and improve process efficiency.</p>
+      </div>
+      <div class="card">
+        <h3>Reliability</h3>
+        <p>Good diagnostics and maintenance prevent repeat failures and downtime.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CAREER PATH MAP -->
+  <div class="panel">
+    <h2 style="margin-top:0;color:#0b3c5d;">Career Path Map</h2>
+    <p class="muted">
+      A common growth journey for analyzer professionals:
+    </p>
+    <div class="chip-row">
+      <div class="chip">Technician</div>
+      <div class="chip">→ Specialist</div>
+      <div class="chip">→ Reliability / SME</div>
+      <div class="chip">→ Consultant / Trainer</div>
+    </div>
+
+    <div class="field-tip">
+      <b>Field Tip:</b> Build a habit of saving alarm screenshots, trends, and root causes —
+      this becomes your personal “field manual”.
+    </div>
+  </div>
+
+  <!-- MANUFACTURERS -->
+  <h2 style="margin:22px 0 8px;color:#0b3c5d;">Browse by Manufacturer</h2>
+  <p class="muted" style="margin:0 0 14px;">
+    Select a manufacturer to explore analyzers, alarms, troubleshooting, and decision trees.
+  </p>
 
   <div class="grid">
+
     <div class="card yokogawa">
       <h3>Yokogawa</h3>
-      <p>Oxygen, TDLS, and GC analyzers.</p>
+      <p>ZR22G, OX400, TDLS, GC8000 — oxygen and GC analyzers.</p>
       <div class="action-row">
-        <a class="btn btn-primary" href="analyzers.html?filter=yokogawa">Explore →</a>
+        <a class="btn btn-primary" href="analyzers.html?filter=yokogawa">Open Yokogawa →</a>
       </div>
     </div>
 
     <div class="card abb">
       <h3>ABB</h3>
-      <p>PGC series, AZ oxygen analyzers.</p>
+      <p>AZ Series, PGC5000B/C, PGC5007B, Portable NGC.</p>
       <div class="action-row">
-        <a class="btn btn-primary" href="analyzers.html?filter=abb">Explore →</a>
+        <a class="btn btn-primary" href="analyzers.html?filter=abb">Open ABB →</a>
       </div>
     </div>
 
     <div class="card siemens">
       <h3>Siemens</h3>
-      <p>MAXUM II and SITRANS CV.</p>
+      <p>MAXUM Edition II, SITRANS CV — process gas chromatographs.</p>
       <div class="action-row">
-        <a class="btn btn-primary" href="analyzers.html?filter=siemens">Explore →</a>
+        <a class="btn btn-primary" href="analyzers.html?filter=siemens">Open Siemens →</a>
       </div>
     </div>
 
     <div class="card ametek">
       <h3>AMETEK</h3>
-      <p>933 Oxygen, 888 Tail Gas.</p>
+      <p>933 Oxygen Analyzer, 888 Tail Gas Analyzer (SRU).</p>
       <div class="action-row">
-        <a class="btn btn-primary" href="analyzers.html?filter=ametek">Explore →</a>
+        <a class="btn btn-primary" href="analyzers.html?filter=ametek">Open AMETEK →</a>
       </div>
     </div>
+
+    <div class="card">
+      <h3>Flash Point</h3>
+      <p>P-500 series — ASTM methods, calibration reference materials.</p>
+      <div class="action-row">
+        <a class="btn btn-primary" href="analyzers/flash-point/index.html">Flash Point Hub →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DATA FLOW -->
+  <div class="panel" style="margin-top:22px;">
+    <h2 style="margin:0;color:#0b3c5d;">Analyzer Data Flow to DCS</h2>
+    <p class="muted" style="margin-top:8px;">
+      Typical flow from field analyzers → sample systems → analyzer → PLC/DCS → historian.
+    </p>
+
+    <img src="assets/images/data_flow_to_dcs.png"
+         alt="Analyzer data flow to DCS"
+         style="max-width:560px;width:100%;display:block;margin:14px auto;border-radius:12px;">
   </div>
 
 </main>
@@ -100,7 +175,14 @@
   <div class="site-footer-inner">
     <div>
       <b>AnalyzersHub</b><br>
-      <span class="muted">By Technicians. For Analyzers.</span>
+      <span class="muted">Built for Analyzer Technicians</span>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Knowledge Base</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="disclaimer.html">Disclaimer</a>
     </div>
   </div>
 </footer>
