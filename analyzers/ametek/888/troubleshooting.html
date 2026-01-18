@@ -1,178 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AMETEK 888 Troubleshooting | AnalyzersHub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMETEK 888 Troubleshooting | AnalyzersHub</title>
 
-<base href="/analyzershub/">
-<link rel="stylesheet" href="assets/css/style.css">
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
 
-<body>
+<body data-page="analyzers">
 
-<header class="site-header">
-  <div class="site-header-inner">
-    <a class="brand" href="index.html">AnalyzersHub</a>
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Analyzer Search</a>
-      <a href="analyzers.html?filter=ametek">AMETEK</a>
-    </nav>
-  </div>
-</header>
+  <!-- ✅ CENTRAL HEADER -->
+  <div id="siteHeader"></div>
 
-<nav class="crumbs">
-  <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers.html">Analyzers</a><span>›</span>
-  <a href="analyzers/ametek/888/888.html">AMETEK 888</a><span>›</span>
-  <span class="current">Troubleshooting</span>
-</nav>
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a><span>›</span>
+    <a href="analyzers.html">Analyzer Search</a><span>›</span>
+    <a href="analyzers.html?filter=ametek">AMETEK</a><span>›</span>
+    <a href="analyzers/ametek/888/888.html">AMETEK 888</a><span>›</span>
+    <span class="current">Troubleshooting</span>
+  </nav>
 
-<section class="hero-search">
-  <div class="hero-inner">
-    <h2>AMETEK 888 — Troubleshooting Guide</h2>
-    <p>
-      Field-first troubleshooting for SRU tail gas analyzers.
-      Start with sample conditioning, temperature, and flow.
-    </p>
-    <div class="action-row">
-      <a class="btn btn-ghost" href="analyzers/ametek/888/888.html">← Back to Analyzer</a>
-      <a class="btn btn-primary" href="alarms/ametek/888/alarm-codes.html">Alarm Codes →</a>
-      <a class="btn btn-ghost" href="alarms/ametek/888/decision-trees/index.html">Decision Trees →</a>
+  <section class="hero-search">
+    <div class="hero-inner">
+      <h2>AMETEK 888 — Troubleshooting Guide</h2>
+      <p>
+        Field-first troubleshooting for SRU tail gas analyzers.
+        Start with sample conditioning, temperature, and flow.
+      </p>
+      <div class="action-row">
+        <a class="btn btn-ghost" href="analyzers/ametek/888/888.html">← Back to Analyzer</a>
+        <a class="btn btn-primary" href="alarms/ametek/888/alarm-codes.html">Alarm Codes →</a>
+        <a class="btn btn-ghost" href="alarms/ametek/888/decision-trees/index.html">Decision Trees →</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<main class="container">
+  <main class="container">
 
-  <div class="field-tip">
-    <b>Field rule:</b> If temperature/flow is not correct, readings are not valid.
-    Fix <b>sample integrity</b> before suspecting analyzer electronics.
-  </div>
-
-  <!-- Quick Checks -->
-  <div class="panel">
-    <h3>Quick Checks (Do these first)</h3>
-    <ul class="list">
-      <li><b>Safety</b>: confirm SRU area safety, permits, and isolation rules.</li>
-      <li><b>Sample temperature</b>: verify heater setpoint vs actual; check for cold spots.</li>
-      <li><b>Sample flow</b>: confirm flow indication; check restrictions.</li>
-      <li><b>Leaks</b>: check sample system for air ingress (especially at fittings/manifolds).</li>
-      <li><b>Filters</b>: check filter ΔP / condition; replace if fouled.</li>
-      <li><b>Calibration gases</b>: verify correct cylinder and regulator stability.</li>
-    </ul>
-  </div>
-
-  <!-- Symptom-based troubleshooting -->
-  <div class="panel">
-    <h3>Symptom: Low / Zero Reading</h3>
-    <ul class="list">
-      <li><b>Check</b>: sample flow low? filter clogged? probe plugged?</li>
-      <li><b>Check</b>: sample temperature low? condensation/sulfur dropout likely.</li>
-      <li><b>Check</b>: cal valve stuck in zero? manifold leakage?</li>
-      <li><b>Likely cause</b>: probe/line plugging, sulfur deposition, cold spot, valve fault.</li>
-      <li><b>Fix</b>: restore heat, clean/replace filters, verify blowback (if available), verify valves return to process.</li>
-    </ul>
-    <div class="action-row">
-      <a class="btn btn-primary" href="alarms/ametek/888/decision-trees/sample-blockage.html">Sample Blockage Tree →</a>
-      <a class="btn btn-ghost" href="alarms/ametek/888/decision-trees/heater-temperature-fault.html">Heater/Temp Tree →</a>
+    <div class="field-tip">
+      <b>Field rule:</b> If temperature/flow is not correct, readings are not valid.
+      Fix <b>sample integrity</b> before suspecting analyzer electronics.
     </div>
-  </div>
 
-  <div class="panel">
-    <h3>Symptom: High Sulfur Reading / Sudden Step Change</h3>
-    <ul class="list">
-      <li><b>Check</b>: validate with span gas (does it track expected value?).</li>
-      <li><b>Check</b>: process upset? compare SRU parameters and any redundant analyzer.</li>
-      <li><b>Check</b>: air leakage can bias reading depending on measurement method/config.</li>
-      <li><b>Likely cause</b>: real SRU upset, calibration drift, sample contamination.</li>
-      <li><b>Fix</b>: confirm calibration, inspect sample system, correlate with DCS trends.</li>
-    </ul>
-    <div class="action-row">
-      <a class="btn btn-primary" href="alarms/ametek/888/decision-trees/high-sulfur-reading.html">High Sulfur Tree →</a>
-      <a class="btn btn-ghost" href="analyzers/ametek/888/trends.html">Trends & Response Guide →</a>
+    <!-- Quick Checks -->
+    <div class="panel">
+      <h3>Quick Checks (Do these first)</h3>
+      <ul class="list">
+        <li><b>Safety</b>: confirm SRU area safety, permits, and isolation rules.</li>
+        <li><b>Sample temperature</b>: verify heater setpoint vs actual; check for cold spots.</li>
+        <li><b>Sample flow</b>: confirm flow indication; check restrictions.</li>
+        <li><b>Leaks</b>: check sample system for air ingress (especially at fittings/manifolds).</li>
+        <li><b>Filters</b>: check filter ΔP / condition; replace if fouled.</li>
+        <li><b>Calibration gases</b>: verify correct cylinder and regulator stability.</li>
+      </ul>
     </div>
-  </div>
 
-  <div class="panel">
-    <h3>Symptom: Unstable / Noisy Reading</h3>
-    <ul class="list">
-      <li><b>Check</b>: sample pressure fluctuation (regulator hunting, restriction).</li>
-      <li><b>Check</b>: water/moisture ingress; confirm heater temps and drains.</li>
-      <li><b>Check</b>: grounding/shielding; inspect cable routing near VFD/motors.</li>
-      <li><b>Likely cause</b>: sample instability, moisture, electrical noise, detector contamination.</li>
-      <li><b>Fix</b>: stabilize pressure, correct heat, improve grounding/shielding, clean sample path.</li>
-    </ul>
-  </div>
-
-  <div class="panel">
-    <h3>Symptom: Slow Response / Sluggish Trend</h3>
-    <ul class="list">
-      <li><b>Check</b>: long sample line, dead volume, partially plugged probe/filter.</li>
-      <li><b>Check</b>: sulfur deposition (common SRU) causing adsorption and delay.</li>
-      <li><b>Likely cause</b>: restrictions, cold spots, internal fouling.</li>
-      <li><b>Fix</b>: clean/replace probe and filters, eliminate cold spots, verify heater performance.</li>
-    </ul>
-    <div class="action-row">
-      <a class="btn btn-ghost" href="analyzers/ametek/888/trends.html">Trends & Response Guide →</a>
+    <!-- Symptom-based troubleshooting -->
+    <div class="panel">
+      <h3>Symptom: Low / Zero Reading</h3>
+      <ul class="list">
+        <li><b>Check</b>: sample flow low? filter clogged? probe plugged?</li>
+        <li><b>Check</b>: sample temperature low? condensation/sulfur dropout likely.</li>
+        <li><b>Check</b>: cal valve stuck in zero? manifold leakage?</li>
+        <li><b>Likely cause</b>: probe/line plugging, sulfur deposition, cold spot, valve fault.</li>
+        <li><b>Fix</b>: restore heat, clean/replace filters, verify blowback (if available), verify valves return to process.</li>
+      </ul>
+      <div class="action-row">
+        <a class="btn btn-primary" href="alarms/ametek/888/decision-trees/sample-blockage.html">Sample Blockage Tree →</a>
+        <a class="btn btn-ghost" href="alarms/ametek/888/decision-trees/heater-temperature-fault.html">Heater/Temp Tree →</a>
+      </div>
     </div>
-  </div>
 
-  <div class="panel">
-    <h3>Symptom: Calibration Failure</h3>
-    <ul class="list">
-      <li><b>Check</b>: correct gas cylinder + concentration? regulator stable?</li>
-      <li><b>Check</b>: cal line leaks? cal valve passing or stuck?</li>
-      <li><b>Check</b>: sample system still contaminated/sulfur dropout?</li>
-      <li><b>Likely cause</b>: wrong gas, leaking manifold, insufficient warm-up, sample contamination.</li>
-      <li><b>Fix</b>: verify cylinder, leak test manifold, restore proper temperature/flow, repeat calibration.</li>
-    </ul>
-    <div class="action-row">
-      <a class="btn btn-primary" href="alarms/ametek/888/decision-trees/calibration-failure.html">Calibration Failure Tree →</a>
+    <div class="panel">
+      <h3>Symptom: High Sulfur Reading / Sudden Step Change</h3>
+      <ul class="list">
+        <li><b>Check</b>: validate with span gas (does it track expected value?).</li>
+        <li><b>Check</b>: process upset? compare SRU parameters and any redundant analyzer.</li>
+        <li><b>Check</b>: air leakage can bias reading depending on measurement method/config.</li>
+        <li><b>Likely cause</b>: real SRU upset, calibration drift, sample contamination.</li>
+        <li><b>Fix</b>: confirm calibration, inspect sample system, correlate with DCS trends.</li>
+      </ul>
+      <div class="action-row">
+        <a class="btn btn-primary" href="alarms/ametek/888/decision-trees/high-sulfur-reading.html">High Sulfur Tree →</a>
+        <a class="btn btn-ghost" href="analyzers/ametek/888/trends.html">Trends & Response Guide →</a>
+      </div>
     </div>
-  </div>
 
-  <div class="panel">
-    <h3>Symptom: Analyzer Offline / No Output</h3>
-    <ul class="list">
-      <li><b>Check</b>: power supply, fuses, UPS, internal breaker.</li>
-      <li><b>Check</b>: I/O wiring to DCS (4–20 mA loop power, AO range, scaling).</li>
-      <li><b>Check</b>: network/Modbus settings if digital communication used.</li>
-      <li><b>Likely cause</b>: power fault, controller fault, loop wiring issue.</li>
-      <li><b>Fix</b>: restore power, verify loop, check configuration, reboot only after confirming stable utilities.</li>
-    </ul>
-  </div>
-
-  <!-- Best Practices Links -->
-  <div class="panel">
-    <h3>SRU Field Best Practices</h3>
-    <p class="muted">
-      Tail gas analyzers fail most often because of sample system design/maintenance.
-      Use this guide to prevent recurring issues.
-    </p>
-    <div class="action-row">
-      <a class="btn btn-primary" href="analyzers/ametek/888/sru-best-practices.html">SRU Best Practices →</a>
-      <a class="btn btn-ghost" href="alarms/ametek/888/alarm-codes.html">Alarm Codes →</a>
-      <a class="btn btn-ghost" href="alarms/ametek/888/decision-trees/index.html">Decision Trees →</a>
+    <div class="panel">
+      <h3>Symptom: Unstable / Noisy Reading</h3>
+      <ul class="list">
+        <li><b>Check</b>: sample pressure fluctuation (regulator hunting, restriction).</li>
+        <li><b>Check</b>: water/moisture ingress; confirm heater temps and drains.</li>
+        <li><b>Check</b>: grounding/shielding; inspect cable routing near VFD/motors.</li>
+        <li><b>Likely cause</b>: sample instability, moisture, electrical noise, detector contamination.</li>
+        <li><b>Fix</b>: stabilize pressure, correct heat, improve grounding/shielding, clean sample path.</li>
+      </ul>
     </div>
-  </div>
 
-</main>
+    <div class="panel">
+      <h3>Symptom: Slow Response / Sluggish Trend</h3>
+      <ul class="list">
+        <li><b>Check</b>: long sample line, dead volume, partially plugged probe/filter.</li>
+        <li><b>Check</b>: sulfur deposition (common SRU) causing adsorption and delay.</li>
+        <li><b>Likely cause</b>: restrictions, cold spots, internal fouling.</li>
+        <li><b>Fix</b>: clean/replace probe and filters, eliminate cold spots, verify heater performance.</li>
+      </ul>
+      <div class="action-row">
+        <a class="btn btn-ghost" href="analyzers/ametek/888/trends.html">Trends & Response Guide →</a>
+      </div>
+    </div>
 
-<footer class="site-footer">
-  <div class="site-footer-inner">
-    <div>
-      <b>AnalyzersHub</b><br>
-      <span class="muted">Built for Analyzer Technicians</span>
+    <div class="panel">
+      <h3>Symptom: Calibration Failure</h3>
+      <ul class="list">
+        <li><b>Check</b>: correct gas cylinder + concentration? regulator stable?</li>
+        <li><b>Check</b>: cal line leaks? cal valve passing or stuck?</li>
+        <li><b>Check</b>: sample system still contaminated/sulfur dropout?</li>
+        <li><b>Likely cause</b>: wrong gas, leaking manifold, insufficient warm-up, sample contamination.</li>
+        <li><b>Fix</b>: verify cylinder, leak test manifold, restore proper temperature/flow, repeat calibration.</li>
+      </ul>
+      <div class="action-row">
+        <a class="btn btn-primary" href="alarms/ametek/888/decision-trees/calibration-failure.html">Calibration Failure Tree →</a>
+      </div>
     </div>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Search</a>
-      <a href="disclaimer.html">Disclaimer</a>
+
+    <div class="panel">
+      <h3>Symptom: Analyzer Offline / No Output</h3>
+      <ul class="list">
+        <li><b>Check</b>: power supply, fuses, UPS, internal breaker.</li>
+        <li><b>Check</b>: I/O wiring to DCS (4–20 mA loop power, AO range, scaling).</li>
+        <li><b>Check</b>: network/Modbus settings if digital communication used.</li>
+        <li><b>Likely cause</b>: power fault, controller fault, loop wiring issue.</li>
+        <li><b>Fix</b>: restore power, verify loop, check configuration, reboot only after confirming stable utilities.</li>
+      </ul>
     </div>
-  </div>
-</footer>
+
+    <div class="panel">
+      <h3>SRU Field Best Practices</h3>
+      <p class="muted">
+        Tail gas analyzers fail most often because of sample system design/maintenance.
+        Use this guide to prevent recurring issues.
+      </p>
+      <div class="action-row">
+        <a class="btn btn-primary" href="analyzers/ametek/888/sru-best-practices.html">SRU Best Practices →</a>
+        <a class="btn btn-ghost" href="alarms/ametek/888/alarm-codes.html">Alarm Codes →</a>
+        <a class="btn btn-ghost" href="alarms/ametek/888/decision-trees/index.html">Decision Trees →</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ✅ CENTRAL FOOTER -->
+  <div id="siteFooter"></div>
+
+  <!-- ✅ LOAD CENTRAL INCLUDES -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
