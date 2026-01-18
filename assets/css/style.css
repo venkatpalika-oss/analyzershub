@@ -59,6 +59,15 @@ img{max-width:100%;height:auto;display:block}
 }
 
 /* =========================
+   FIX: Prevent Hero Overlap
+   (sticky header overlaps next section)
+========================= */
+.site-header + .hero,
+.site-header + .hero-search{
+  padding-top:72px; /* matches header height */
+}
+
+/* =========================
    HERO (HOME)
 ========================= */
 .hero{
