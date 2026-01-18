@@ -1,152 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MAXUM II | Detector Not Ready / Baseline Fault</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAXUM II – Detector Not Ready / Baseline Fault | AnalyzersHub</title>
 
-  <link rel="stylesheet" href="../../../../../assets/css/style.css" />
-
-  <style>
-    header{ position: sticky; top:0; z-index:999; box-shadow:0 2px 12px rgba(0,0,0,0.18); }
-    .wrap{ max-width:1100px; margin:0 auto; padding:18px 16px 40px; }
-    .breadcrumbs{ font-size:.95rem; margin:8px 0 14px; }
-    .breadcrumbs a{ color:#1f78b4; text-decoration:none; font-weight:800; }
-    .breadcrumbs a:hover{ text-decoration:underline; }
-
-    .title{ background:#0b3c5d; color:#fff; border-radius:12px; padding:16px; box-shadow:0 6px 18px rgba(0,0,0,0.12); margin-bottom:14px; }
-    .title h2{ margin:0 0 6px; color:#fff; }
-    .title p{ margin:0; opacity:.95; }
-
-    .tree{
-      background:#fff; border:1px solid #e0e6ec; border-radius:12px;
-      padding:16px; box-shadow:0 4px 14px rgba(0,0,0,0.08);
-      position:relative; overflow:hidden;
-      background-image: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(245,248,252,0.98));
-    }
-    .tree::before{ content:""; position:absolute; top:0; left:0; width:100%; height:7px; background: linear-gradient(90deg, #2e7d32, #6fcf97); }
-
-    .q{ margin:14px 0; padding:12px; border-left:4px solid #1f78b4; background:#f6fbff; border-radius:10px; }
-    .q b{ color:#0b3c5d; }
-    ul{ margin:10px 0 0 18px; }
-    li{ margin:6px 0; }
-
-    .warn{ background:#fff7ed; border-left:4px solid #f59e0b; padding:12px; border-radius:10px; margin:14px 0; }
-    .ok{ background:#ecfdf5; border-left:4px solid #10b981; padding:12px; border-radius:10px; margin:14px 0; }
-    .bad{ background:#fef2f2; border-left:4px solid #ef4444; padding:12px; border-radius:10px; margin:14px 0; }
-
-    .btn{ display:inline-block; padding:10px 14px; border-radius:8px; font-weight:900; text-decoration:none; border:1px solid rgba(0,0,0,0.10); }
-    .btn-primary{ background:#1f78b4; color:#fff; }
-    .btn-primary:hover{ background:#155a8a; }
-    .btn-ghost{ background:#fff; color:#0b3c5d; }
-    .btn-ghost:hover{ background:#e9f2f9; }
-  </style>
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-<header>
-  <h1>AnalyzersHub</h1>
-  <nav>
-    <a href="../../../../../index.html">Home</a>
-    <a href="../../../../../analyzers.html">Analyzer Search</a>
-  </nav>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Analyzer Search</a>
+      <a href="analyzers.html?category=gc">GC Hub</a>
+    </nav>
+  </div>
 </header>
 
-<main class="wrap">
-  <div class="breadcrumbs">
-    <a href="../../../../../index.html">Home</a> →
-    <a href="../../../../../analyzers.html">Analyzer Search</a> →
-    <a href="../maxum-ii.html">Siemens MAXUM II</a> →
-    <a href="index.html">Alarms</a> →
-    <span>Detector Not Ready / Baseline Fault</span>
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="analyzers.html">Analyzer Search</a><span>›</span>
+  <a href="analyzers/siemens/maxum-ii/maxum-ii.html">Siemens MAXUM II</a><span>›</span>
+  <a href="analyzers/siemens/maxum-ii/alarms/index.html">Alarms</a><span>›</span>
+  <span class="current">Detector Not Ready / Baseline Fault</span>
+</nav>
+
+<section class="hero-search">
+  <div class="hero-inner">
+    <h2>Detector Not Ready / Baseline Fault</h2>
+    <p>
+      Use this decision tree when the baseline is missing, noisy, saturated,
+      warm-up does not complete, or detector fault alarms occur.
+    </p>
+
+    <div class="action-row">
+      <a class="btn btn-ghost" href="analyzers/siemens/maxum-ii/alarms/index.html">← Back to Alarms</a>
+      <a class="btn btn-primary" href="analyzers/siemens/maxum-ii/maxum-ii.html">MAXUM II Overview →</a>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+
+  <div class="warn">
+    <b>Safety:</b> Some MAXUM II detectors operate at high temperature or current.
+    Follow plant safety rules and OEM instructions before opening detector modules.
   </div>
 
-  <section class="title">
-    <h2>Detector Not Ready / Baseline Fault — Decision Tree</h2>
-    <p>Use when: no baseline, noisy baseline, saturated signal, warm-up not complete, detector fault/alarm.</p>
-  </section>
+  <div class="panel">
+    <h3>Q1 — Has the detector completed warm-up / stabilization?</h3>
+    <ul class="list">
+      <li><b>Yes:</b> Proceed to Q2</li>
+      <li><b>No:</b> Allow full warm-up, confirm stable power and no repeated restarts</li>
+    </ul>
+  </div>
 
-  <section class="tree">
-    <div class="warn"><b>Safety:</b> Some detectors use high temperature/current. Follow OEM and plant rules before opening modules.</div>
+  <div class="panel">
+    <h3>Q2 — Is carrier gas stable and correct for the method?</h3>
+    <ul class="list">
+      <li><b>Yes:</b> Proceed to Q3</li>
+      <li><b>No:</b> Restore correct carrier type, pressure, and flow</li>
+    </ul>
+  </div>
 
-    <div class="q">
-      <b>Q1 — Has the detector completed warm-up / stabilization time?</b>
-      <ul>
-        <li><b>YES:</b> Go to Q2.</li>
-        <li><b>NO:</b> Allow full warm-up. Confirm stable power and no repeated restarts → recheck baseline.</li>
-      </ul>
-    </div>
+  <div class="panel">
+    <h3>Q3 — What is the baseline condition?</h3>
+    <ul class="list">
+      <li><b>Saturated (pegged high/low):</b> Suspect wiring, configuration error, or contamination → Q4</li>
+      <li><b>Noisy:</b> Suspect flow instability, leaks, grounding issues → Q5</li>
+    </ul>
+  </div>
 
-    <div class="q">
-      <b>Q2 — Is carrier gas stable and correct for the method?</b>
-      <ul>
-        <li><b>YES:</b> Go to Q3.</li>
-        <li><b>NO:</b> Restore carrier pressure/flow and correct gas type → baseline often becomes stable after correction.</li>
-      </ul>
-    </div>
+  <div class="panel">
+    <h3>Q4 — Any recent maintenance or configuration changes?</h3>
+    <ul class="list">
+      <li><b>Yes:</b> Restore last known good backup, verify detector wiring and method settings</li>
+      <li><b>No:</b> Inspect for contamination and check detector diagnostics</li>
+    </ul>
+  </div>
 
-    <div class="q">
-      <b>Q3 — Is baseline saturated (pegged high/low) or extremely noisy?</b>
-      <ul>
-        <li><b>SATURATED:</b> Suspect wrong wiring/module fault, severe contamination, or wrong flows → go to Q4.</li>
-        <li><b>NOISY:</b> Suspect flow instability, leaks, grounding/shielding, contamination → go to Q5.</li>
-      </ul>
-    </div>
+  <div class="panel">
+    <h3>Q5 — Leak, stability, and noise checks</h3>
+    <ul class="list">
+      <li>Leak test detector, column, and valve manifold fittings</li>
+      <li>Verify stable pressures (no regulator hunting)</li>
+      <li>Check grounding and cable shielding</li>
+      <li>If issues found → correct and re-evaluate baseline</li>
+    </ul>
+  </div>
 
-    <div class="q">
-      <b>Q4 — Any recent maintenance or configuration change?</b>
-      <ul>
-        <li><b>YES:</b> Recheck detector connections, method settings, and restore last known good configuration/backup.</li>
-        <li><b>NO:</b> Inspect for contamination in sample path; verify detector module diagnostics for fault codes.</li>
-      </ul>
-    </div>
+  <div class="panel">
+    <h3>Q6 — Do detector self-diagnostics show a module fault?</h3>
+    <ul class="list">
+      <li><b>Yes:</b> Plan detector module service or replacement</li>
+      <li><b>No:</b> Perform controlled purge/cleanup per OEM and monitor trend</li>
+    </ul>
+  </div>
 
-    <div class="q">
-      <b>Q5 — Leak test and stability check</b>
-      <ul>
-        <li>Leak test around detector/column fittings and valve manifold.</li>
-        <li>Confirm pressures stable (no hunting).</li>
-        <li>Check grounding and cable shielding (noise issues).</li>
-      </ul>
-      <ul>
-        <li><b>If leak/noise found:</b> fix leak/grounding → recheck baseline.</li>
-        <li><b>If no issue found:</b> go to Q6.</li>
-      </ul>
-    </div>
+  <div class="panel">
+    <h3>Verification</h3>
+    <ul class="list">
+      <li>Baseline stable for at least 10–15 minutes</li>
+      <li>Repeat runs show consistent peak area and retention time</li>
+      <li>No recurring detector alarms after multiple cycles</li>
+    </ul>
+  </div>
 
-    <div class="q">
-      <b>Q6 — Does detector self-diagnostics indicate module fault?</b>
-      <ul>
-        <li><b>YES:</b> Plan module service/swap or vendor support.</li>
-        <li><b>NO:</b> Perform controlled purge/cleanup as per OEM method and monitor baseline trend.</li>
-      </ul>
-    </div>
+  <div class="panel warn">
+    <h3>If Still Failing</h3>
+    <ul class="list">
+      <li>Capture baseline screenshots and detector diagnostics</li>
+      <li>Record carrier pressure, flow, and sample conditions</li>
+      <li>Escalate to maintenance or vendor — suspected detector or electronics fault</li>
+    </ul>
+  </div>
 
-    <div class="ok">
-      <b>Verification:</b>
-      <ul>
-        <li>Baseline stable for 10–15 minutes.</li>
-        <li>Repeat run gives consistent peak area and RT.</li>
-        <li>No recurring detector alarms after 2–3 cycles.</li>
-      </ul>
-    </div>
+  <div class="action-row">
+    <a class="btn btn-ghost" href="analyzers/siemens/maxum-ii/alarms/index.html">← Back to Alarms</a>
+    <a class="btn btn-primary" href="analyzers/siemens/maxum-ii/maxum-ii.html">MAXUM II Page →</a>
+  </div>
 
-    <div class="bad">
-      <b>If still failing:</b>
-      <ul>
-        <li>Capture diagnostics: baseline screenshot, detector status, alarm text/time.</li>
-        <li>Record carrier pressure/flow and sample conditions.</li>
-        <li>Escalate: suspected detector module failure, contamination, or electronics issue.</li>
-      </ul>
-    </div>
-
-    <div style="margin-top:14px;">
-      <a class="btn btn-ghost" href="index.html">← Back to MAXUM II Alarms</a>
-      <a class="btn btn-primary" href="../maxum-ii.html">MAXUM II Page →</a>
-    </div>
-  </section>
 </main>
 
-<footer>Built for Analyzer Technicians</footer>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div>
+      <b>AnalyzersHub</b><br>
+      <span class="muted">Built for Analyzer Technicians</span>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="analyzers.html">Search</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
