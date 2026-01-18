@@ -1,30 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hobré Wobbe Analyzer Alarm Codes | AnalyzersHub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hobré Wobbe Analyzer Alarm Codes | AnalyzersHub</title>
 
-<base href="/analyzershub/">
-<link rel="stylesheet" href="assets/css/style.css">
-
-<style>
-.wrap{max-width:1100px;margin:0 auto;padding:20px}
-.hero{background:#0b3c5d;color:#fff;border-radius:12px;padding:20px}
-.hero h2{margin:0;color:#fff}
-.hero p{margin-top:8px;opacity:.95}
-.section{background:#fff;border:1px solid #e0e6ec;border-radius:12px;padding:16px;margin-top:16px;box-shadow:0 4px 14px rgba(0,0,0,.08)}
-.section h3{margin-top:0;color:#0b3c5d}
-ul{margin-left:18px}
-li{margin:6px 0}
-.btn-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-.btn{padding:10px 14px;border-radius:8px;font-weight:900;text-decoration:none;border:1px solid rgba(0,0,0,.12)}
-.btn-primary{background:#1f78b4;color:#fff}
-.btn-primary:hover{background:#155a8a}
-.btn-ghost{background:#fff;color:#0b3c5d}
-.btn-ghost:hover{background:#e9f2f9}
-.small{font-size:.95rem;opacity:.95}
-</style>
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
 
 <body>
@@ -48,61 +30,77 @@ li{margin:6px 0}
   <span class="current">Alarm Codes</span>
 </nav>
 
-<main class="wrap">
-  <section class="hero">
-    <h2>Hobré Wobbe Index Analyzer — Alarm Codes (Categories)</h2>
-    <p class="small">Quick reference to common alarm groups and first actions for stable Wobbe/CV measurement.</p>
+<section class="hero-search">
+  <div class="hero-inner">
+    <h2>Hobré Wobbe Index Analyzer — Alarm Codes</h2>
+    <p>
+      Category-level alarm reference with practical field actions
+      for stable Wobbe and calorific value measurement.
+    </p>
 
-    <div class="btn-row">
+    <div class="action-row">
       <a class="btn btn-ghost" href="analyzers/hobre/wobbe-index/wobbe-index.html">← Back to Analyzer</a>
-      <a class="btn btn-primary" href="analyzers/hobre/wobbe-index/alarms/index.html">Alarm Decision Trees →</a>
+      <a class="btn btn-primary" href="analyzers/hobre/wobbe-index/alarms/index.html">Decision Trees →</a>
       <a class="btn btn-ghost" href="analyzers.html">Back to Search</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section">
+<main class="container">
+
+  <div class="panel">
     <h3>Typical Alarm Categories</h3>
-    <ul>
-      <li><b>Sample Conditioning</b> – moisture / liquid carryover, filter blockage, drain issues</li>
+    <ul class="list">
+      <li><b>Sample Conditioning</b> – moisture, liquid carryover, filter blockage, drain issues</li>
       <li><b>Pressure / Flow</b> – regulator hunting, restrictions, leaks, low supply pressure</li>
-      <li><b>Temperature / Stability</b> – internal temperature deviation / cabinet overheating</li>
-      <li><b>Calculation / Quality</b> – unstable output, invalid inputs, wrong scaling to DCS</li>
-      <li><b>Communication / Output</b> – network, Modbus/OPC, mapping, quality/status mismatch</li>
+      <li><b>Temperature / Stability</b> – cabinet or internal temperature deviation</li>
+      <li><b>Calculation / Quality</b> – unstable output, invalid inputs, incorrect CV/Wobbe calculation</li>
+      <li><b>Communication / Output</b> – Modbus/OPC issues, scaling, mapping, quality/status mismatch</li>
     </ul>
-  </section>
+  </div>
 
-  <section class="section">
-    <h3>Major Causes in the Field (Most Common)</h3>
-    <ul>
-      <li><b>Liquid carryover</b> from sample line → causes sudden jumps/incorrect Wobbe</li>
-      <li><b>Moisture</b> / dewpoint issues → unstable reading, sensor drift</li>
-      <li><b>Pressure hunting</b> at regulator → fluctuating outputs</li>
-      <li><b>Wrong scaling/mapping</b> → value looks wrong only at DCS</li>
+  <div class="panel">
+    <h3>Most Common Field Causes</h3>
+    <ul class="list">
+      <li><b>Liquid carryover</b> → sudden jumps or incorrect Wobbe values</li>
+      <li><b>Moisture / dewpoint problems</b> → unstable or drifting output</li>
+      <li><b>Pressure hunting</b> → fluctuating Wobbe/CV</li>
+      <li><b>DCS scaling errors</b> → analyzer looks correct locally but wrong in control room</li>
     </ul>
-  </section>
+  </div>
 
-  <section class="section">
-    <h3>Calibration Notes (Quick)</h3>
-    <ul>
-      <li>Calibrate only after <b>sample is stable</b> and no conditioning alarms exist.</li>
-      <li>Use correct <b>reference gases/standards</b> as per site procedure.</li>
-      <li>After calibration, verify <b>stability over time</b> and confirm DCS scaling/quality.</li>
+  <div class="panel">
+    <h3>Calibration Notes</h3>
+    <ul class="list">
+      <li>Calibrate only after <b>sample, pressure, and temperature are stable</b></li>
+      <li>Do not calibrate while conditioning or pressure alarms are active</li>
+      <li>After calibration, confirm <b>trend stability over time</b>, not a single value</li>
+      <li>Always verify DCS scaling and quality flags post-calibration</li>
     </ul>
-  </section>
+  </div>
 
-  <section class="section">
-    <h3>Field Best Practice</h3>
-    <ul>
-      <li>Fix <b>sampling & pressure stability</b> before touching calculation/output settings.</li>
-      <li>After maintenance, verify with <b>stable trend</b> (not just one reading).</li>
-      <li>Compare with lab only after conditioning is verified.</li>
+  <div class="panel">
+    <h3>Field Best Practices</h3>
+    <ul class="list">
+      <li>Fix <b>sampling and pressure</b> issues before touching calculation or outputs</li>
+      <li>After maintenance, allow sufficient stabilization time</li>
+      <li>Compare to lab results only after analyzer stability is confirmed</li>
     </ul>
-  </section>
+
+    <div class="warn">
+      <b>Rule of thumb:</b> 90% of Wobbe alarms originate from the sample system,
+      not the analyzer electronics.
+    </div>
+  </div>
+
 </main>
 
 <footer class="site-footer">
   <div class="site-footer-inner">
-    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
+    <div>
+      <b>AnalyzersHub</b><br>
+      <span class="muted">Built for Analyzer Technicians</span>
+    </div>
     <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="analyzers.html">Search</a>
