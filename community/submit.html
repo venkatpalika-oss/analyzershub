@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Submit Discussion | AnalyzersHub</title>
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html">AnalyzersHub</a>
+  </div>
+</header>
+
+<main class="container">
+
+  <div class="panel">
+    <h2>Submit a Question or Experience</h2>
+    <p class="muted">
+      Submissions are reviewed before publishing.
+      No confidential plant data please.
+    </p>
+
+    <form class="form"
+      action="https://formspree.io/f/mjgggojo"
+      method="POST">
+
+      <label>Your Name (optional)</label>
+      <input type="text" name="name">
+
+      <label>Email (optional – for follow-up)</label>
+      <input type="email" name="email">
+
+      <label>Analyzer / System</label>
+      <input type="text" name="analyzer" required>
+
+      <label>Topic Type</label>
+      <select name="topic">
+        <option>Troubleshooting</option>
+        <option>Calibration</option>
+        <option>Alarms</option>
+        <option>CEMS Compliance</option>
+        <option>Sampling System</option>
+        <option>Field Experience</option>
+      </select>
+
+      <label>Description</label>
+      <textarea name="message" required></textarea>
+
+      <input type="hidden" name="source" value="AnalyzersHub Community">
+
+      <div class="action-row">
+        <button class="btn btn-primary" type="submit">
+          Submit →
+        </button>
+        <a class="btn btn-ghost" href="community/index.html">
+          Cancel
+        </a>
+      </div>
+    </form>
+
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <span class="muted">Moderated for quality and accuracy</span>
+  </div>
+</footer>
+
+</body>
+</html>
