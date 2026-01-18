@@ -6,8 +6,10 @@
   <title>Analyzer Search | AnalyzersHub</title>
 
   <base href="/analyzershub/">
-  <!-- Cache-bust CSS here (NOT inside header) -->
-  
+
+  <!-- ✅ CSS must be only in HEAD -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
+
   <!-- SEO Structured Data -->
   <script type="application/ld+json">
   {
@@ -28,32 +30,10 @@
   </script>
 </head>
 
-<body>
+<body data-page="kb">
 
-<header class="site-header">
-  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
-  <div class="site-header-inner">
-
-    <a class="brand" href="index.html">
-      AnalyzersHub
-      <span class="brand-sub">Industrial Analyzer Knowledge</span>
-    </a>
-
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html" class="active">Knowledge Base</a>
-      <a href="learn/index.html">Learn</a>
-      <a href="community/index.html">Community</a>
-
-      <span class="nav-sep"></span>
-
-      <a href="blog/index.html">Blog</a>
-      <a href="contact.html">Contact</a>
-      <a href="disclaimer.html">Disclaimer</a>
-    </nav>
-
-  </div>
-</header>
+<!-- ✅ CENTRAL HEADER -->
+<div id="siteHeader"></div>
 
 <!-- Hero -->
 <section class="hero-search">
@@ -182,23 +162,11 @@
   </div>
 </main>
 
-<footer class="site-footer">
-  <div class="site-footer-inner">
-    <div>
-      <b>AnalyzersHub</b><br>
-      <span class="muted">Built for Analyzer Technicians</span>
-    </div>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Knowledge Base</a>
-      <a href="learn/index.html">Learn</a>
-      <a href="community/index.html">Community</a>
-      <a href="blog/index.html">Blog</a>
-      <a href="contact.html">Contact</a>
-      <a href="disclaimer.html">Disclaimer</a>
-    </div>
-  </div>
-</footer>
+<!-- ✅ CENTRAL FOOTER -->
+<div id="siteFooter"></div>
+
+<!-- ✅ LOAD HEADER/FOOTER -->
+<script src="assets/js/includes.js?v=2026-01-18"></script>
 
 <script>
 const searchInput = document.getElementById("searchInput");
@@ -241,13 +209,9 @@ function setActive(val){
   apply();
 }
 
-buttons.forEach(b => {
-  b.addEventListener("click", ()=> setActive(b.dataset.filter));
-});
-
+buttons.forEach(b => b.addEventListener("click", ()=> setActive(b.dataset.filter)));
 searchInput.addEventListener("input", apply);
 
-/* set initial filter button highlight */
 setActive(active);
 </script>
 
