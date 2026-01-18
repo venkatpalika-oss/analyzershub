@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | AnalyzersHub</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | AnalyzersHub</title>
 
-<base href="/analyzershub/">
-<link rel="stylesheet" href="assets/css/style.css">
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    .panel{background:#fff;border:1px solid #e0e6ec;border-radius:14px;padding:16px;
+      box-shadow:0 6px 18px rgba(0,0,0,.08);margin-top:14px}
+    label{display:block;font-weight:900;color:#0b3c5d;margin:10px 0 6px}
+    input, textarea{
+      width:100%;padding:12px;border-radius:12px;border:1px solid #d9e2ea;
+      font:inherit;outline:none;background:#fff
+    }
+    textarea{min-height:140px;resize:vertical}
+    .hint{opacity:.85;margin-top:6px}
+    .btnx{display:inline-block;text-decoration:none;font-weight:900;padding:10px 14px;border-radius:12px;
+      border:1px solid rgba(0,0,0,.12);transition:transform .15s ease, background .15s ease}
+    .btnx:hover{transform:translateY(-1px)}
+    .primary{background:#1f78b4;color:#fff}
+    .primary:hover{background:#155a8a}
+    .ghost{background:#fff;color:#0b3c5d}
+    .ghost:hover{background:#e9f2f9}
+    .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+  </style>
 </head>
-
 <body>
 
 <header class="site-header">
@@ -19,65 +38,57 @@
       <a href="index.html">Home</a>
       <a href="analyzers.html">Analyzer Search</a>
       <a href="blog/index.html">Blog</a>
-      <a href="contact.html" class="active">Contact</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
-<nav class="crumbs">
-  <a href="index.html">Home</a><span>›</span>
-  <span class="current">Contact</span>
-</nav>
-
 <main class="container">
+  <h2 style="margin-top:18px;">Contact Us</h2>
+  <p class="muted">Send a request, suggest an analyzer page, or report an issue with a procedure/decision tree.</p>
 
   <div class="panel">
-    <h2 style="margin:0;color:#0b3c5d;">Contact AnalyzersHub</h2>
-    <p class="muted" style="margin-top:8px;">
-      Have a question, suggestion, correction, or want to contribute?
-      Send a message below.
-    </p>
+    <!-- OPTION A (Recommended): Formspree / Getform / Basin. Replace ACTION after you create it -->
+    <form action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST">
+      <label for="name">Your Name</label>
+      <input id="name" name="name" placeholder="Name" required>
 
-    <!-- ✅ FORM -->
-    <form class="form"
-          action="https://formspree.io/f/mjgggojo"
-          method="POST">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="name@email.com" required>
 
-      <label>Your Name</label>
-      <input type="text" name="name" required>
+      <label for="topic">Topic</label>
+      <input id="topic" name="topic" placeholder="Example: ZR22G calibration issue / GC8000 alarm">
 
-      <label>Email Address</label>
-      <input type="email" name="email" required>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Describe the issue, alarm, symptoms, what you checked…" required></textarea>
 
-      <label>Message</label>
-      <textarea name="message" placeholder="Write your message here..." required></textarea>
-
-      <!-- Optional context -->
-      <input type="hidden" name="source" value="AnalyzersHub Contact Page">
-
-      <div class="action-row">
-        <button class="btn btn-primary" type="submit">Send Message</button>
+      <div class="row">
+        <button class="btnx primary" type="submit">Send Message</button>
+        <a class="btnx ghost" href="analyzers.html">Back to Analyzer Search</a>
       </div>
-    </form>
 
-    <p class="muted" style="margin-top:12px;font-size:.85rem;">
-      ⚠️ This form is for general communication only.
-      Do not share confidential plant or safety-critical information.
-    </p>
+      <p class="hint">
+        Tip: To make this work on GitHub Pages, create a free form endpoint (Formspree/Getform/Basin) and paste its URL in the form action.
+      </p>
+    </form>
   </div>
 
+  <div class="panel">
+    <h3 style="margin:0;color:#0b3c5d;">Alternative</h3>
+    <p class="muted" style="margin:8px 0 0;">
+      If you prefer email link instead of forms: create a mailto link like:
+      <br><b>support@analyzershub.com</b> (or any email you want).
+    </p>
+  </div>
 </main>
 
 <footer class="site-footer">
   <div class="site-footer-inner">
-    <div>
-      <b>AnalyzersHub</b><br>
-      <span class="muted">Built for Analyzer Technicians</span>
-    </div>
+    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
     <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="analyzers.html">Search</a>
-      <a href="disclaimer.html">Disclaimer</a>
+      <a href="blog/index.html">Blog</a>
     </div>
   </div>
 </footer>
