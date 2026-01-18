@@ -355,10 +355,7 @@ img{max-width:100%;height:auto;display:block}
     background-position: center top;
   }
 }
-/* =========================================
-   PROFESSIONAL HEADER REFINEMENT
-========================================= */
-
+/* PROFESSIONAL HEADER */
 .brand{
   display:flex;
   flex-direction:column;
@@ -372,19 +369,13 @@ img{max-width:100%;height:auto;display:block}
   letter-spacing:.4px;
 }
 
-.site-nav{
-  align-items:center;
-}
-
 .site-nav a{
   padding:8px 12px;
   border-radius:8px;
-  transition:background .15s ease, opacity .15s ease;
 }
 
 .site-nav a:hover{
   background:rgba(255,255,255,.12);
-  text-decoration:none;
 }
 
 .site-nav a.active{
@@ -392,7 +383,6 @@ img{max-width:100%;height:auto;display:block}
   border:1px solid rgba(255,255,255,.25);
 }
 
-/* Separator */
 .nav-sep{
   width:1px;
   height:18px;
@@ -400,11 +390,6 @@ img{max-width:100%;height:auto;display:block}
   margin:0 6px;
 }
 
-/* Mobile cleanup */
 @media(max-width:900px){
-  .brand-sub{display:none}
-  .nav-sep{display:none}
-  .site-nav{
-    gap:8px;
-  }
+  .brand-sub,.nav-sep{display:none}
 }
