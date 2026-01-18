@@ -1,58 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hobré Wobbe Communication / DCS | Decision Tree | AnalyzersHub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hobré Wobbe Communication / DCS | Decision Tree | AnalyzersHub</title>
 
-<base href="/analyzershub/">
-<link rel="stylesheet" href="assets/css/style.css">
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
-<body>
 
-<header class="site-header"><div class="site-header-inner">
-  <a class="brand" href="index.html">AnalyzersHub</a>
-  <nav class="site-nav"><a href="index.html">Home</a><a href="analyzers.html">Analyzer Search</a><a href="analyzers.html?category=gc">GC Hub</a></nav>
-</div></header>
+<body data-page="analyzers">
 
-<nav class="crumbs" aria-label="Breadcrumb">
-  <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers/hobre/wobbe-index/wobbe-index.html">Wobbe Index Analyzer</a><span>›</span>
-  <a href="analyzers/hobre/wobbe-index/alarms/index.html">Alarms</a><span>›</span>
-  <span class="current">Communication / DCS</span>
-</nav>
+  <!-- ✅ CENTRAL HEADER -->
+  <div id="siteHeader"></div>
 
-<main class="container">
-  <h2 style="margin-top:18px;">Decision Tree: Communication / DCS</h2>
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a><span>›</span>
+    <a href="analyzers/hobre/wobbe-index/wobbe-index.html">Wobbe Index Analyzer</a><span>›</span>
+    <a href="analyzers/hobre/wobbe-index/alarms/index.html">Alarms</a><span>›</span>
+    <span class="current">Communication / DCS</span>
+  </nav>
 
-  <div class="action-row">
-    <a class="btn btn-ghost" href="analyzers/hobre/wobbe-index/alarms/index.html">← Back to Alarms Hub</a>
-    <a class="btn btn-primary" href="analyzers/hobre/wobbe-index/alarm-codes.html">Alarm Codes →</a>
-    <a class="btn btn-ghost" href="analyzers/hobre/wobbe-index/wobbe-index.html">Back to Analyzer</a>
-  </div>
+  <main class="container">
+    <h2 style="margin-top:18px;">Decision Tree: Communication / DCS</h2>
 
-  <div class="warn"><b>Goal:</b> stable DCS updates (value + quality + correct scaling).</div>
+    <div class="action-row">
+      <a class="btn btn-ghost" href="analyzers/hobre/wobbe-index/alarms/index.html">← Back to Alarms Hub</a>
+      <a class="btn btn-primary" href="analyzers/hobre/wobbe-index/alarm-codes.html">Alarm Codes →</a>
+      <a class="btn btn-ghost" href="analyzers/hobre/wobbe-index/wobbe-index.html">Back to Analyzer</a>
+    </div>
 
-  <div class="step"><b>1)</b> Confirm Wobbe value is stable locally first (trend is steady).</div>
-  <div class="step"><b>2)</b> Check network: link lights, correct IP/subnet/gateway, ping test.</div>
-  <div class="step"><b>3)</b> Confirm protocol settings (Modbus/OPC/etc.) match DCS.</div>
-  <div class="step"><b>4)</b> Verify mapping/scaling/data types + quality/status mapping.</div>
-  <div class="step"><b>5)</b> Confirm polling interval matches analyzer update rate.</div>
+    <div class="warn"><b>Goal:</b> stable DCS updates (value + quality + correct scaling).</div>
 
-  <div class="card gc" style="margin-top:16px;">
-    <h3>Major Troubleshooting</h3>
-    <ul style="margin-left:18px;">
-      <li><b>Stale values:</b> network/protocol service down, wrong port, wrong mapping.</li>
-      <li><b>Wrong values:</b> scaling mismatch or wrong register offset/data type.</li>
-      <li><b>Bad quality:</b> quality mapping/polling mismatch.</li>
-    </ul>
-  </div>
-</main>
+    <div class="step"><b>1)</b> Confirm Wobbe value is stable locally first (trend is steady).</div>
+    <div class="step"><b>2)</b> Check network: link lights, correct IP/subnet/gateway, ping test.</div>
+    <div class="step"><b>3)</b> Confirm protocol settings (Modbus/OPC/etc.) match DCS.</div>
+    <div class="step"><b>4)</b> Verify mapping/scaling/data types + quality/status mapping.</div>
+    <div class="step"><b>5)</b> Confirm polling interval matches analyzer update rate.</div>
 
-<footer class="site-footer"><div class="site-footer-inner">
-  <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
-  <div class="footer-links"><a href="index.html">Home</a><a href="analyzers.html">Search</a></div>
-</div></footer>
+    <div class="card gc" style="margin-top:16px;">
+      <h3>Major Troubleshooting</h3>
+      <ul style="margin-left:18px;">
+        <li><b>Stale values:</b> network/protocol service down, wrong port, wrong mapping.</li>
+        <li><b>Wrong values:</b> scaling mismatch or wrong register offset/data type.</li>
+        <li><b>Bad quality:</b> quality mapping/polling mismatch.</li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- ✅ CENTRAL FOOTER -->
+  <div id="siteFooter"></div>
+
+  <!-- ✅ LOAD HEADER/FOOTER -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
