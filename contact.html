@@ -1,122 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | AnalyzersHub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | AnalyzersHub</title>
 
-<base href="/analyzershub/">
-<link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
+  <base href="/analyzershub/">
+
+  <!-- ✅ CSS only in HEAD -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
 
-<body>
+<body data-page="contact">
 
-<!-- HEADER -->
-<header class="site-header">
-  <div class="site-header-inner">
+  <!-- ✅ CENTRAL HEADER -->
+  <div id="siteHeader"></div>
 
-    <a class="brand" href="index.html">
-      AnalyzersHub
-      <span class="brand-sub">Industrial Analyzer Knowledge</span>
-    </a>
-
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Knowledge Base</a>
-      <a href="learn/index.html">Learn</a>
-      <a href="community/index.html">Community</a>
-
-      <span class="nav-sep"></span>
-
-      <a href="blog/index.html">Blog</a>
-      <a href="contact.html" class="active">Contact</a>
-      <a href="disclaimer.html">Disclaimer</a>
-    </nav>
-
-  </div>
-</header>
-
-<!-- BREADCRUMB -->
-<nav class="crumbs">
-  <a href="index.html">Home</a><span>›</span>
-  <span class="current">Contact</span>
-</nav>
-
-<main class="container">
-<section class="panel">
-  <h2>Contact Us</h2>
-  <p class="muted">
-    Have a technical question, contribution, or feedback?
-    Send us a message — we’ll respond.
-  </p>
-
-  <form
-    class="form"
-    action="https://formspree.io/f/mjgggojo"
-    method="POST"
-  >
-
-    <label for="name">Your Name</label>
-    <input
-      type="text"
-      id="name"
-      name="name"
-      placeholder="Your full name"
-      required
-    >
-
-    <label for="email">Email Address</label>
-    <input
-      type="email"
-      id="email"
-      name="email"
-      placeholder="your@email.com"
-      required
-    >
-
-    <label for="message">Message</label>
-    <textarea
-      id="message"
-      name="message"
-      placeholder="Write your message here..."
-      required
-    ></textarea>
-
-    <div class="action-row">
-      <button type="submit" class="btn btn-primary">
-        Send Message
-      </button>
+  <!-- Hero -->
+  <section class="hero-search">
+    <div class="hero-inner">
+      <h2>Contact</h2>
+      <p>
+        Technical questions, contributions, or feedback —
+        reach out and we’ll respond.
+      </p>
     </div>
+  </section>
 
-  </form>
-</section>
+  <main class="container">
 
+    <section class="panel">
+      <h2>Contact Us</h2>
+      <p class="muted">
+        Have a technical question, contribution, or feedback?
+        Send us a message — we’ll respond.
+      </p>
 
-    <p class="muted" style="margin-top:14px;font-size:.85rem;max-width:720px;">
-      ⚠️ This form is for general communication only.  
-      Do not share confidential plant data, safety-critical details,
-      or proprietary information.
-    </p>
-  </div>
+      <form
+        class="form"
+        action="https://formspree.io/f/mjgggojo"
+        method="POST"
+      >
 
-</main>
+        <label for="name">Your Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your full name"
+          required
+        >
 
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="site-footer-inner">
-    <div>
-      <b>AnalyzersHub</b><br>
-      <span class="muted">By Technicians. For Analyzers.</span>
-    </div>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Knowledge Base</a>
-      <a href="community/index.html">Community</a>
-      <a href="blog/index.html">Blog</a>
-      <a href="disclaimer.html">Disclaimer</a>
-    </div>
-  </div>
-</footer>
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="your@email.com"
+          required
+        >
+
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Write your message here..."
+          required
+        ></textarea>
+
+        <div class="action-row">
+          <button type="submit" class="btn btn-primary">
+            Send Message
+          </button>
+        </div>
+
+      </form>
+
+      <p class="muted" style="margin-top:14px;font-size:.85rem;max-width:720px;">
+        ⚠️ This form is for general communication only.
+        Do not share confidential plant data, safety-critical details,
+        or proprietary information.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- ✅ CENTRAL FOOTER -->
+  <div id="siteFooter"></div>
+
+  <!-- ✅ LOAD HEADER / FOOTER -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
