@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>AnalyzersHub | Industrial Analyzer Knowledge Hub</title>
 
 <!-- IMPORTANT for GitHub Pages -->
@@ -10,233 +11,157 @@
 
 <link rel="stylesheet" href="assets/css/style.css">
 
-<!-- SEO Structured Data (JSON-LD) -->
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@graph":[
-    {
-      "@type":"Organization",
-      "@id":"https://venkatpalika-oss.github.io/analyzershub/#org",
-      "name":"AnalyzersHub",
-      "url":"https://venkatpalika-oss.github.io/analyzershub/"
-    },
-    {
-      "@type":"WebSite",
-      "@id":"https://venkatpalika-oss.github.io/analyzershub/#website",
-      "url":"https://venkatpalika-oss.github.io/analyzershub/",
-      "name":"AnalyzersHub",
-      "publisher":{"@id":"https://venkatpalika-oss.github.io/analyzershub/#org"},
-      "potentialAction":{
-        "@type":"SearchAction",
-        "target":"https://venkatpalika-oss.github.io/analyzershub/analyzers.html?q={search_term_string}",
-        "query-input":"required name=search_term_string"
-      }
-    },
-    {
-      "@type":"WebPage",
-      "@id":"https://venkatpalika-oss.github.io/analyzershub/index.html#page",
-      "name":"Industrial Analyzer Knowledge Hub",
-      "url":"https://venkatpalika-oss.github.io/analyzershub/index.html",
-      "isPartOf":{"@id":"https://venkatpalika-oss.github.io/analyzershub/#website"},
-      "about":[
-        {"@type":"Thing","name":"Industrial analyzers"},
-        {"@type":"Thing","name":"Troubleshooting"},
-        {"@type":"Thing","name":"Alarm codes"},
-        {"@type":"Thing","name":"Decision trees"},
-        {"@type":"Thing","name":"Calibration"}
-      ]
-    }
-  ]
-}
-</script>
-
-<!-- HOME PAGE HERO BANNER -->
+<!-- HOME HERO -->
 <style>
 .hero{
-  position:relative;
-  min-height:340px;
+  min-height:360px;
   display:flex;
   align-items:center;
   color:#fff;
-
-  background-image:
-    linear-gradient(
-      rgba(11,60,93,0.80),
-      rgba(11,60,93,0.65)
-    ),
-    url("assets/images/home-hero.webp");
-
+  background:
+    linear-gradient(rgba(11,60,93,0.85), rgba(11,60,93,0.65)),
+    url("assets/images/home-hero.png");
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
 }
-
-.hero h2,
-.hero p{
-  text-shadow:0 3px 16px rgba(0,0,0,.75);
-}
-
-.hero .btn{
-  box-shadow:0 6px 18px rgba(0,0,0,.35);
-}
-
-@media(max-width:768px){
-  .hero{
-    min-height:260px;
-    background-position:center top;
-  }
+.hero h2,.hero p{
+  text-shadow:0 3px 18px rgba(0,0,0,.8);
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header class="site-header">
   <div class="site-header-inner">
     <a class="brand" href="index.html">AnalyzersHub</a>
     <nav class="site-nav">
-  <a href="index.html">Home</a>
-  <a href="analyzers.html">Knowledge Base</a>
-  <a href="troubleshooting/index.html">Troubleshooting</a>
-  <a href="cems/index.html">CEMS</a>
-  <a href="learn/index.html">Learn</a>
-  <a href="community/index.html">Community</a>
-  <a href="blog/index.html">Blog</a>
-  <a href="resources/index.html">Resources</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
+      <a href="index.html" class="active">Home</a>
+      <a href="analyzers.html">Knowledge Base</a>
+      <a href="analyzers.html?category=gc">Troubleshooting</a>
+      <a href="analyzers.html?category=cems">CEMS</a>
+      <a href="learn/index.html">Learn</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="hero"
-  style="
-    min-height:360px;
-    display:flex;
-    align-items:center;
-    background:
-      linear-gradient(rgba(11,60,93,0.85), rgba(11,60,93,0.65)),
-      url('assets/images/home-hero.png');
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-  "
->
+<section class="hero">
   <div class="hero-inner">
-    <h2 style="color:#fff;text-shadow:0 3px 16px rgba(0,0,0,.8);">
-      Industrial Analyzer Knowledge Hub
-    </h2>
-
-    <p style="color:#fff;text-shadow:0 3px 16px rgba(0,0,0,.8);max-width:900px;">
+    <h2>Industrial Analyzer Knowledge Hub</h2>
+    <p>
       Working principles, calibration procedures, troubleshooting guides,
-      alarm codes, and decision trees — built for analyzer technicians.
+      alarm decision trees, and real-world analyzer experience —
+      built by technicians, for analyzers.
     </p>
 
     <div class="action-row">
-      <a class="btn btn-primary" href="analyzers.html">
-        Browse All Analyzers →
-      </a>
-      <a class="btn btn-ghost" href="analyzers.html?category=gc">
-        GC Hub →
-      </a>
-      <a class="btn btn-ghost" href="analyzers.html?category=oxygen">
-        Oxygen Hub →
-      </a>
+      <a class="btn btn-primary" href="analyzers.html">Browse All Analyzers →</a>
+      <a class="btn btn-ghost" href="learn/index.html">Learn Fundamentals →</a>
+      <a class="btn btn-ghost" href="blog/index.html">Field Stories →</a>
     </div>
   </div>
 </section>
 
-
 <main class="container">
 
-  <!-- QUICK ACTIONS -->
-  <div class="panel" style="margin-top:-18px;">
-    <div class="action-row" style="justify-content:center">
-      <a class="btn btn-primary" href="analyzers.html">🔎 Analyzer Search</a>
-      <a class="btn btn-ghost" href="analyzers.html?category=gc">🧪 Gas Chromatographs</a>
-      <a class="btn btn-ghost" href="analyzers.html?category=oxygen">🫁 Oxygen Analyzers</a>
-      <a class="btn btn-ghost" href="analyzers/flash-point/index.html">🔥 Flash Point</a>
-      <a class="btn btn-ghost" href="blog/index.html">📝 Blog</a>
-      <a class="btn btn-ghost" href="contact.html">✉️ Contact</a>
-    </div>
-  </div>
-
-  <!-- MANUFACTURERS -->
-  <h2 style="margin:22px 0 8px;color:#0b3c5d;">Browse by Manufacturer</h2>
-  <p class="muted" style="margin:0 0 14px;">
-    Select a manufacturer to explore analyzers, alarms, and decision trees.
+<!-- WHY ANALYZERS MATTER -->
+<section class="panel">
+  <h2>Why Industrial Analyzers Are Critical</h2>
+  <p>
+    Industrial analyzers are the <b>eyes and ears of a plant</b>.
+    They influence combustion efficiency, product quality,
+    safety systems, and environmental compliance.
   </p>
+  <p>
+    When analyzers drift, fail, or mislead,
+    the consequences are real — fuel loss, false alarms,
+    shutdowns, and regulatory penalties.
+  </p>
+</section>
 
+<!-- VALUE GRID -->
+<section class="panel">
   <div class="grid">
-
-    <div class="card yokogawa">
-      <h3>Yokogawa</h3>
-      <p>ZR22G, OX400, TDLS8000, GC8000 — oxygen, TDLS, and GC analyzers.</p>
-      <div class="action-row">
-        <a class="btn btn-primary" href="analyzers.html?filter=yokogawa">Open Yokogawa →</a>
-      </div>
-    </div>
-
-    <div class="card abb">
-      <h3>ABB</h3>
-      <p>AZ Series, PGC5000B/C, PGC5007B, Portable NGC.</p>
-      <div class="action-row">
-        <a class="btn btn-primary" href="analyzers.html?filter=abb">Open ABB →</a>
-      </div>
-    </div>
-
-    <div class="card siemens">
-      <h3>Siemens</h3>
-      <p>MAXUM Edition II, SITRANS CV — process gas chromatographs.</p>
-      <div class="action-row">
-        <a class="btn btn-primary" href="analyzers.html?filter=siemens">Open Siemens →</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>AMETEK</h3>
-      <p>933 Oxygen Analyzer, 888 Tail Gas Analyzer (SRU).</p>
-      <div class="action-row">
-        <a class="btn btn-primary" href="analyzers.html?filter=ametek">Open AMETEK →</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Flash Point</h3>
-      <p>P-500 series — ASTM methods, calibration reference materials.</p>
-      <div class="action-row">
-        <a class="btn btn-primary" href="analyzers/flash-point/index.html">Flash Point Hub →</a>
-      </div>
-    </div>
-
+    <div class="card"><h4>💰 Economic Impact</h4><p>Fuel optimization, yield protection, catalyst life.</p></div>
+    <div class="card"><h4>⚠️ Safety</h4><p>Oxygen, toxic gas & explosive monitoring.</p></div>
+    <div class="card"><h4>🌍 Compliance</h4><p>CEMS accuracy protects permits & reporting.</p></div>
+    <div class="card"><h4>📊 Control</h4><p>Control loops depend on analyzer truth.</p></div>
   </div>
+</section>
 
-  <!-- DATA FLOW -->
-  <div class="panel" style="margin-top:22px;">
-    <h2 style="margin:0;color:#0b3c5d;">Analyzer Data Flow to DCS</h2>
-    <p class="muted" style="margin-top:8px;">
-      Typical flow from field analyzers → sample systems → analyzer →
-      PLC/DCS → historian.
-    </p>
-    <img src="assets/images/data_flow_to_dcs.png"
-         alt="Analyzer data flow to DCS"
-         style="max-width:560px;width:100%;display:block;margin:14px auto;border-radius:12px;">
+<!-- CAREER VALUE -->
+<section class="panel">
+  <h2>Analyzer Skills = High-Value Expertise</h2>
+  <p>
+    Analyzer work combines instrumentation, chemistry,
+    sampling systems, utilities, and process knowledge.
+  </p>
+  <div class="step">
+    Analyzer expertise is rare — and therefore valuable.
   </div>
+</section>
+
+<!-- MISCONCEPTIONS -->
+<section class="panel">
+  <h2>Common Analyzer Misconceptions</h2>
+  <ul class="list">
+    <li>“If it shows a value, it must be correct”</li>
+    <li>“Calibration fixes the problem”</li>
+    <li>“The analyzer is faulty”</li>
+    <li>“Software is the main issue”</li>
+    <li>“Analyzers run themselves after commissioning”</li>
+  </ul>
+  <div class="step">
+    Most analyzer problems come from the <b>sample system</b>,
+    not the analyzer.
+  </div>
+</section>
+
+<!-- CAREER PATH -->
+<section class="panel">
+  <h2>Analyzer Career Path</h2>
+  <div class="grid">
+    <div class="card"><h4>🔧 Technician</h4><p>Calibration, checks, maintenance.</p></div>
+    <div class="card"><h4>🎯 Specialist</h4><p>Advanced troubleshooting & startups.</p></div>
+    <div class="card"><h4>📊 Reliability Engineer</h4><p>Performance, trends, prevention.</p></div>
+    <div class="card"><h4>🧠 Consultant / SME</h4><p>Multi-plant expertise & training.</p></div>
+  </div>
+</section>
+
+<!-- MANUFACTURERS -->
+<section>
+  <h2>Browse by Manufacturer</h2>
+  <div class="grid">
+    <div class="card yokogawa"><h3>Yokogawa</h3><a class="btn btn-primary" href="analyzers.html?filter=yokogawa">Open →</a></div>
+    <div class="card abb"><h3>ABB</h3><a class="btn btn-primary" href="analyzers.html?filter=abb">Open →</a></div>
+    <div class="card siemens"><h3>Siemens</h3><a class="btn btn-primary" href="analyzers.html?filter=siemens">Open →</a></div>
+    <div class="card"><h3>AMETEK</h3><a class="btn btn-primary" href="analyzers.html?filter=ametek">Open →</a></div>
+  </div>
+</section>
+
+<!-- DATA FLOW -->
+<section class="panel">
+  <h2>Analyzer Data Flow to DCS</h2>
+  <img src="assets/images/data_flow_to_dcs.png"
+       alt="Analyzer Data Flow"
+       style="max-width:560px;width:100%;display:block;margin:14px auto;border-radius:12px;">
+</section>
 
 </main>
 
+<!-- FOOTER -->
 <footer class="site-footer">
   <div class="site-footer-inner">
-    <div>
-      <b>AnalyzersHub</b><br>
-      <span class="muted">Built for Analyzer Technicians</span>
-    </div>
+    <div><b>AnalyzersHub</b><br><span class="muted">By Technicians. For Analyzers.</span></div>
     <div class="footer-links">
       <a href="index.html">Home</a>
-      <a href="analyzers.html">Search</a>
+      <a href="analyzers.html">Knowledge Base</a>
       <a href="blog/index.html">Blog</a>
       <a href="contact.html">Contact</a>
       <a href="disclaimer.html">Disclaimer</a>
