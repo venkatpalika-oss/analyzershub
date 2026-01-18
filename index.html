@@ -1,63 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AnalyzersHub | Industrial Analyzer Knowledge Hub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AnalyzersHub | Industrial Analyzer Knowledge Hub</title>
 
-<!-- GitHub Pages base -->
-<base href="/analyzershub/">
+  <!-- GitHub Pages base -->
+  <base href="/analyzershub/">
 
-<!-- ✅ Keep CSS only here (cache busting) -->
+  <!-- ✅ CSS must be in HEAD only -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 
-
-<!-- Home Hero -->
-<style>
-.hero{
-  min-height:360px;
-  display:flex;
-  align-items:center;
-  color:#fff;
-  background:
-    linear-gradient(rgba(11,60,93,0.85), rgba(11,60,93,0.65)),
-    url("assets/images/home-hero.png");
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
-}
-.hero h2,.hero p{
-  text-shadow:0 3px 18px rgba(0,0,0,.8);
-}
-</style>
+  <!-- Home Hero (keep inline – overrides safely) -->
+  <style>
+    .hero{
+      min-height:360px;
+      display:flex;
+      align-items:center;
+      color:#fff;
+      background:
+        linear-gradient(rgba(11,60,93,0.85), rgba(11,60,93,0.65)),
+        url("assets/images/home-hero.png");
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+    }
+    .hero h2,.hero p{
+      text-shadow:0 3px 18px rgba(0,0,0,.8);
+    }
+  </style>
 </head>
 
-<body>
+<body data-page="home">
 
-<!-- HEADER -->
-<header class="site-header">
-  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
-  <div class="site-header-inner">
-
-    <a class="brand" href="index.html">
-      AnalyzersHub
-      <span class="brand-sub">Industrial Analyzer Knowledge</span>
-    </a>
-
-    <nav class="site-nav">
-      <a href="index.html" class="active">Home</a>
-      <a href="analyzers.html">Knowledge Base</a>
-      <a href="learn/index.html">Learn</a>
-      <a href="community/index.html">Community</a>
-
-      <span class="nav-sep"></span>
-
-      <a href="blog/index.html">Blog</a>
-      <a href="contact.html">Contact</a>
-      <a href="disclaimer.html">Disclaimer</a>
-    </nav>
-
-  </div>
-</header>
+<!-- ✅ CENTRAL HEADER -->
+<div id="siteHeader"></div>
 
 <!-- HERO -->
 <section class="hero">
@@ -181,7 +158,7 @@
         <h3>Siemens</h3>
         <a class="btn btn-primary" href="analyzers.html?filter=siemens">Open →</a>
       </div>
-      <div class="card">
+      <div class="card ametek">
         <h3>AMETEK</h3>
         <a class="btn btn-primary" href="analyzers.html?filter=ametek">Open →</a>
       </div>
@@ -198,23 +175,11 @@
 
 </main>
 
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="site-footer-inner">
-    <div>
-      <b>AnalyzersHub</b><br>
-      <span class="muted">By Technicians. For Analyzers.</span>
-    </div>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Knowledge Base</a>
-      <a href="community/index.html">Community</a>
-      <a href="blog/index.html">Blog</a>
-      <a href="contact.html">Contact</a>
-      <a href="disclaimer.html">Disclaimer</a>
-    </div>
-  </div>
-</footer>
+<!-- ✅ CENTRAL FOOTER -->
+<div id="siteFooter"></div>
+
+<!-- ✅ loader for header/footer + active nav -->
+<script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
