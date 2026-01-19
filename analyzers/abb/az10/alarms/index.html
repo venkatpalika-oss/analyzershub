@@ -1,54 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>ABB AZ10 Alarms | AnalyzersHub</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>ABB AZ10 Alarm Decision Trees | AnalyzersHub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- IMPORTANT: base path -->
-<base href="/analyzershub/">
+  <meta name="description"
+        content="ABB AZ10 oxygen analyzer alarm troubleshooting. Common alarm explanations, field checks, corrective actions, and decision tree navigation.">
 
-<link rel="stylesheet" href="assets/css/style.css">
-
-<style>
-body {margin:0; font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif; background:#f4f6f9; color:#1f2937;}
-header {background:#1e3a8a; color:#fff; padding:18px 40px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000;}
-header h1{margin:0; font-size:1.7rem;}
-header nav a{color:#fff; text-decoration:none; margin-left:25px; font-weight:600;}
-header nav a:hover{text-decoration:underline;}
-main{padding:50px 20px; max-width:900px; margin:auto;}
-h2{text-align:center; font-size:2rem; color:#1e3a8a; margin-bottom:40px;}
-ul{list-style:none; padding:0;}
-li{background:#fff; margin-bottom:20px; padding:20px; border-radius:12px; border-left:4px solid #1e3a8a; box-shadow:0 6px 18px rgba(0,0,0,0.08);}
-li a{text-decoration:none; color:#1e3a8a; font-weight:600;}
-li a:hover{text-decoration:underline;}
-footer{background:#1e3a8a; color:#fff; text-align:center; padding:20px; margin-top:50px;}
-</style>
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
 
-<body>
+<body data-page="alarms">
 
-<header>
-<h1>AnalyzersHub</h1>
-<nav>
-  <a href="analyzers/abb/az10/">← Back to AZ10</a>
-  <a href="analyzers.html">Analyzer Search</a>
+<!-- ================= CENTRAL HEADER ================= -->
+<div id="siteHeader"></div>
+
+<!-- ================= BREADCRUMBS ================= -->
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="analyzers.html">Analyzer Search</a><span>›</span>
+  <a href="analyzers/abb/az10/">ABB AZ10</a><span>›</span>
+  <span class="current">Alarms</span>
 </nav>
-</header>
 
-<main>
-<h2>ABB AZ10 Alarm Decision Trees</h2>
-<ul>
-<li><a href="calibration-fault.html">Calibration Fault</a></li>
-<li><a href="sensor-fault.html">Sensor Fault</a></li>
-<li><a href="heater-fault.html">Heater Fault</a></li>
-<li><a href="reference-gas-fault.html">Reference Gas Fault</a></li>
-</ul>
+<main class="container">
+
+  <!-- ================= INTRO ================= -->
+  <div class="panel">
+    <h2>ABB AZ10 – Alarm Decision Trees</h2>
+    <p class="muted">
+      Select an alarm to view detailed troubleshooting guidance,
+      field checks, and corrective actions.
+      These alarms are common across ABB AZ-series analyzers.
+    </p>
+
+    <div class="warn">
+      <b>Technician note:</b>
+      Always verify sample condition, heater status, and reference air
+      before replacing sensors or electronics.
+    </div>
+  </div>
+
+  <!-- ================= ALARM LIST ================= -->
+  <div class="panel">
+    <h3>Common ABB AZ10 Alarms</h3>
+
+    <ul class="list">
+      <li>
+        <a href="alarms/abb/no-signal.html">
+          No Oxygen Signal
+        </a>
+      </li>
+      <li>
+        <a href="alarms/abb/heater-error.html">
+          Heater Error
+        </a>
+      </li>
+      <li>
+        <a href="alarms/abb/calibration-failure.html">
+          Calibration Failure
+        </a>
+      </li>
+      <li>
+        <a href="alarms/abb/low-sensor-response.html">
+          Low Sensor Response
+        </a>
+      </li>
+      <li>
+        <a href="alarms/abb/reference-air-fault.html">
+          Reference Air Fault
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ================= NAVIGATION ================= -->
+  <div class="panel">
+    <div class="action-row">
+      <a class="btn btn-ghost" href="analyzers/abb/az10/">
+        ← Back to AZ10 Overview
+      </a>
+
+      <a class="btn btn-ghost" href="alarms/abb/">
+        All ABB Alarms →
+      </a>
+
+      <a class="btn btn-ghost" href="analyzers.html?filter=abb">
+        ABB Analyzer Search →
+      </a>
+    </div>
+  </div>
+
 </main>
 
-<footer>
-© 2026 AnalyzersHub.com | Industrial Analyzer Knowledge Base
-</footer>
+<!-- ================= CENTRAL FOOTER ================= -->
+<div id="siteFooter"></div>
+
+<script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
