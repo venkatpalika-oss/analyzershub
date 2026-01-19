@@ -1,47 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agilent 8860 GC | AnalyzersHub</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <base href="/analyzershub/">
-  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
+  <base href="/analyzershub/" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body data-page="analyzers">
+<body>
 
+<!-- ✅ CENTRAL HEADER -->
 <div id="siteHeader"></div>
 
-<nav class="crumbs">
+<!-- ================= BREADCRUMBS ================= -->
+<nav class="crumbs" aria-label="Breadcrumb">
   <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers/agilent/">Agilent</a><span>›</span>
-  <a href="analyzers/agilent/gc/">Gas Chromatographs</a><span>›</span>
-  <span class="current">8860</span>
+  <a href="analyzers.html">Analyzer Search</a><span>›</span>
+  <a href="analyzers/agilent/gc/">Agilent GC</a><span>›</span>
+  <span class="current">8860 GC</span>
 </nav>
 
-<section class="hero-search">
-  <div class="hero-inner">
-    <h2>Agilent 8860 Gas Chromatograph</h2>
-    <p>Compact and cost-effective GC for routine analytical applications.</p>
+<main class="container">
+
+  <!-- ================= OVERVIEW ================= -->
+  <div class="panel">
+    <h2>Agilent 8860 — Flexible Process Gas Chromatograph</h2>
+    <p class="muted">
+      Mid-range gas chromatograph supporting multiple detectors and configurations.
+      Commonly used in refinery, petrochemical, and laboratory process support applications.
+    </p>
 
     <div class="action-row">
-      <a class="btn btn-primary" href="analyzers/agilent/gc/alarms/">
-        View Common Alarms →
-      </a>
-      <a class="btn btn-ghost" href="analyzers/agilent/gc/">
-        Back to Agilent GC →
-      </a>
-      <a class="btn btn-ghost" href="analyzers.html">
-        Analyzer Search →
-      </a>
+      <a class="btn btn-ghost" href="analyzers/agilent/gc/">← Back to Agilent GC</a>
+      <a class="btn btn-primary" href="alarms/agilent/gc/">Alarm Decision Trees →</a>
+    </div>
+
+    <div class="warn">
+      <b>Technician rule:</b> When results become unstable, check
+      <b>carrier pressure, injection repeatability, and leaks</b> before touching methods or calibration.
     </div>
   </div>
-</section>
 
+  <!-- ================= CONTENT GRID ================= -->
+  <div class="grid">
 
+    <div class="card gc">
+      <h3>Working Principle</h3>
+      <p>
+        The Agilent 8860 separates gas components in a temperature-controlled column
+        and detects them using standard GC detectors (FID, TCD, etc.).
+      </p>
+      <ul class="list">
+        <li><b>Injection:</b> sample introduced via inlet or valve</li>
+        <li><b>Separation:</b> components separate in the column</li>
+        <li><b>Detection:</b> detector converts components to peaks</li>
+        <li><b>Calculation:</b> peak area → concentration</li>
+      </ul>
+    </div>
+
+    <div class="card gc">
+      <h3>Main Components (Field Focus)</h3>
+      <ul class="list">
+        <li>Sample inlet / injection system</li>
+        <li>Carrier gas supply & regulators</li>
+        <li>Oven & temperature controller</li>
+        <li>Column(s) & detector module(s)</li>
+        <li>Electronics, HMI & communications</li>
+      </ul>
+    </div>
+
+    <div class="card gc">
+      <h3>Calibration Procedure (Recommended)</h3>
+      <div class="step"><b>1)</b> Confirm stable baseline and repeatable cycles</div>
+      <div class="step"><b>2)</b> Leak-check inlet, column, and fittings</div>
+      <div class="step"><b>3)</b> Apply certified calibration gas</div>
+      <div class="step"><b>4)</b> Run 2–3 stable injections</div>
+      <div class="step"><b>5)</b> Save factors only after repeatability is confirmed</div>
+    </div>
+
+    <div class="card gc">
+      <h3>Major Troubleshooting Areas</h3>
+      <ul class="list">
+        <li><b>Poor repeatability:</b> inlet issues, pressure instability</li>
+        <li><b>RT shift:</b> oven temperature drift, carrier flow change</li>
+        <li><b>No / low response:</b> detector fault, blocked inlet</li>
+        <li><b>No data to DCS:</b> comms mapping or scaling issues</li>
+      </ul>
+    </div>
+
+  </div>
+
+</main>
+
+<!-- ✅ CENTRAL FOOTER -->
 <div id="siteFooter"></div>
-<script src="assets/js/includes.js?v=2026-01-18"></script>
+<script src="assets/js/includes.js"></script>
 
 </body>
 </html>
