@@ -3,27 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Analyzer Search | AnalyzersHub</title>
 
-<meta name="description" content="Browse industrial analyzers by type, brand, and application. Troubleshooting guides and alarm decision trees for analyzer technicians.">
+<title>Analyzer Search | AnalyzersHub</title>
+<meta name="description"
+      content="Browse industrial analyzers by type, brand, and application. Troubleshooting guides and alarm decision trees for analyzer technicians.">
 
 <base href="/analyzershub/">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
 
-<body>
+<body data-page="analyzers">
 
-<header class="site-header">
-  <div class="site-header-inner">
-    <a class="brand" href="index.html">AnalyzersHub</a>
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html" class="active">Analyzer Search</a>
-      <a href="analyzers.html?category=gc">GC Hub</a>
-      <a href="analyzers.html?category=cems">CEMS</a>
-    </nav>
-  </div>
-</header>
+<!-- CENTRAL HEADER -->
+<div id="siteHeader"></div>
 
 <nav class="crumbs">
   <a href="index.html">Home</a><span>›</span>
@@ -32,17 +24,17 @@
 
 <main class="container">
 
-  <!-- HERO -->
-  <div class="panel">
+  <!-- INTRO -->
+  <section class="panel">
     <h2>Analyzer Knowledge Hub</h2>
     <p class="muted">
-      Select an analyzer to access overviews, alarm decision trees, troubleshooting guides,
-      and technician best practices.
+      Select an analyzer to access overviews, alarm decision trees,
+      troubleshooting guides, and technician best practices.
     </p>
-  </div>
+  </section>
 
-  <!-- GC ANALYZERS -->
-  <div class="panel">
+  <!-- GC -->
+  <section class="panel">
     <h3>Gas Chromatographs (GC)</h3>
 
     <div class="card-grid">
@@ -50,8 +42,9 @@
       <div class="card gc">
         <h4>Siemens MAXUM Edition II</h4>
         <p class="muted">Process GC for refinery, petrochemical, and gas applications.</p>
-        <a class="btn btn-primary" href="analyzers/siemens/maxum-ii/troubleshooting.html">
-          Open Analyzer →
+        <a class="btn btn-primary"
+           href="analyzers/siemens/maxum-ii/troubleshooting.html">
+          View Troubleshooting →
         </a>
       </div>
 
@@ -68,48 +61,45 @@
       </div>
 
     </div>
-  </div>
+  </section>
 
-  <!-- WOBBE / CV -->
-  <div class="panel">
+  <!-- WOBBE -->
+  <section class="panel">
     <h3>Wobbe Index & Calorific Value</h3>
 
     <div class="card-grid">
-
       <div class="card">
         <h4>Hobré Wobbe Index Analyzer</h4>
         <p class="muted">Wobbe, CV, and gas quality measurement.</p>
-        <a class="btn btn-primary" href="analyzers/hobre/wobbe-index/wobbe-index.html">
+        <a class="btn btn-primary"
+           href="analyzers/hobre/wobbe-index/wobbe-index.html">
           Open Analyzer →
         </a>
       </div>
-
     </div>
-  </div>
+  </section>
 
-  <!-- OXYGEN / COMBUSTION -->
-  <div class="panel">
+  <!-- OXYGEN -->
+  <section class="panel">
     <h3>Oxygen & Combustion Analyzers</h3>
 
     <div class="card-grid">
-
-      <div class="card">
+      <div class="card oxygen">
         <h4>Rosemount 6888</h4>
         <p class="muted">Zirconia oxygen analyzer for boilers and furnaces.</p>
-        <a class="btn btn-primary" href="analyzers/rosemount/6888/overview.html">
+        <a class="btn btn-primary"
+           href="analyzers/rosemount/6888/overview.html">
           Open Analyzer →
         </a>
       </div>
-
     </div>
-  </div>
+  </section>
 
   <!-- CEMS -->
-  <div class="panel">
+  <section class="panel">
     <h3>CEMS & Emissions</h3>
 
     <div class="card-grid">
-
       <div class="card">
         <h4>AMETEK CEMS</h4>
         <p class="muted">Continuous emissions monitoring systems.</p>
@@ -121,30 +111,20 @@
         <p class="muted">Dust and opacity monitoring systems.</p>
         <span class="tag coming">Coming Soon</span>
       </div>
-
     </div>
-  </div>
+  </section>
 
-  <!-- FIELD NOTE -->
+  <!-- TECH TIP -->
   <div class="note">
-    <b>Tip for technicians:</b>  
+    <b>Tip for technicians:</b>
     Always start with alarms and sampling stability before calibration or configuration changes.
   </div>
 
 </main>
 
-<footer class="site-footer">
-  <div class="site-footer-inner">
-    <div>
-      <b>AnalyzersHub</b><br>
-      <span class="muted">Built for Analyzer Technicians</span>
-    </div>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Analyzers</a>
-    </div>
-  </div>
-</footer>
+<!-- CENTRAL FOOTER -->
+<div id="siteFooter"></div>
 
+<script src="assets/js/includes.js?v=2026-01-18"></script>
 </body>
 </html>
