@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="description"
-        content="Common alarms, symptoms, and troubleshooting guidance for Agilent gas chromatographs.">
+        content="Common alarms and troubleshooting guidance for Agilent gas chromatographs used in industrial and laboratory applications.">
 
   <base href="/analyzershub/">
   <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
@@ -14,132 +14,77 @@
 
 <body data-page="alarms">
 
-<!-- CENTRAL HEADER -->
 <div id="siteHeader"></div>
 
-<!-- BREADCRUMBS -->
-<nav class="crumbs">
-  <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers.html">Analyzer Search</a><span>›</span>
-  <a href="analyzers/agilent/">Agilent</a><span>›</span>
-  <a href="analyzers/agilent/gc/">Gas Chromatographs</a><span>›</span>
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="/analyzershub/index.html">Home</a><span>›</span>
+  <a href="/analyzershub/analyzers.html">Analyzer Search</a><span>›</span>
+  <a href="/analyzershub/analyzers/agilent/">Agilent</a><span>›</span>
+  <a href="/analyzershub/analyzers/agilent/gc/">Gas Chromatographs</a><span>›</span>
   <span class="current">Alarms</span>
 </nav>
 
-<!-- HERO -->
 <section class="hero-search">
   <div class="hero-inner">
-    <h2>Agilent Gas Chromatograph – Alarm Hub</h2>
+    <h2>Agilent GC – Alarm Hub</h2>
     <p>
-      Problem-oriented troubleshooting for Agilent GCs.
-      Start with the symptom and follow field-proven diagnostics.
+      Field-proven troubleshooting guidance for common Agilent GC alarm conditions.
     </p>
-
-    <div class="action-row">
-      <a class="btn btn-ghost" href="analyzers/agilent/gc/">
-        ← Back to Agilent GC
-      </a>
-      <a class="btn btn-ghost" href="analyzers.html">
-        Analyzer Search
-      </a>
-    </div>
   </div>
 </section>
 
 <main class="container">
 
-  <!-- HOW TO USE -->
-  <div class="panel">
-    <h3>How to use this alarm hub</h3>
-    <ol class="list">
-      <li>Identify the alarm or symptom shown by the GC</li>
-      <li>Confirm utilities, carrier gas, and sample system first</li>
-      <li>Follow checks in the listed order</li>
-      <li>Verify recovery with stable chromatograms</li>
-    </ol>
+  <div class="grid">
 
-    <div class="warn">
-      <b>Field rule:</b>
-      GC alarms are most often caused by
-      <b>sample system issues</b>,
-      <b>carrier instability</b>, or
-      <b>valve problems</b> — not electronics.
+    <div class="card">
+      <h4>Calibration Failure</h4>
+      <p class="muted">GC fails to meet expected response during calibration.</p>
+      <a class="btn btn-primary" href="/analyzershub/alarms/agilent/gc/calibration-failure.html">
+        Open →
+      </a>
     </div>
+
+    <div class="card">
+      <h4>No Detector Signal</h4>
+      <p class="muted">No response from FID, TCD, or other detector.</p>
+      <a class="btn btn-primary" href="/analyzershub/alarms/agilent/gc/no-detector-signal.html">
+        Open →
+      </a>
+    </div>
+
+    <div class="card">
+      <h4>Unstable Baseline</h4>
+      <p class="muted">Noise, drift, or fluctuating baseline.</p>
+      <a class="btn btn-primary" href="/analyzershub/alarms/agilent/gc/unstable-baseline.html">
+        Open →
+      </a>
+    </div>
+
+    <div class="card">
+      <h4>Injection Fault</h4>
+      <p class="muted">Poor repeatability or missing peaks.</p>
+      <a class="btn btn-primary" href="/analyzershub/alarms/agilent/gc/injection-fault.html">
+        Open →
+      </a>
+    </div>
+
   </div>
 
-  <!-- ALARM LIST -->
   <div class="panel">
-    <h3>Agilent GC Alarm Categories</h3>
-
-    <div class="grid">
-
-      <div class="card gc">
-        <h4>No Peaks / Missing Peaks</h4>
-        <p>Chromatogram runs but expected components do not appear.</p>
-        <a class="btn btn-primary" href="alarms/agilent/gc/no-peaks.html">
-          Open →
-        </a>
-      </div>
-
-      <div class="card gc">
-        <h4>Poor Repeatability / High RSD</h4>
-        <p>Consecutive runs show unstable peak areas or concentrations.</p>
-        <a class="btn btn-primary" href="alarms/agilent/gc/poor-repeatability.html">
-          Open →
-        </a>
-      </div>
-
-      <div class="card gc">
-        <h4>Retention Time Shift</h4>
-        <p>Peaks move earlier or later than expected.</p>
-        <a class="btn btn-primary" href="alarms/agilent/gc/retention-time-shift.html">
-          Open →
-        </a>
-      </div>
-
-      <div class="card gc">
-        <h4>Calibration Failure</h4>
-        <p>GC fails to meet expected response during calibration.</p>
-        <a class="btn btn-primary" href="alarms/agilent/gc/calibration-failure.html">
-          Open →
-        </a>
-      </div>
-
-      <div class="card gc">
-        <h4>Detector Fault</h4>
-        <p>Detector reports error, noise, or no signal.</p>
-        <a class="btn btn-primary" href="alarms/agilent/gc/detector-fault.html">
-          Open →
-        </a>
-      </div>
-
-      <div class="card gc">
-        <h4>Communication / Data Error</h4>
-        <p>Loss of communication or invalid GC data.</p>
-        <a class="btn btn-primary" href="alarms/agilent/gc/communication-error.html">
-          Open →
-        </a>
-      </div>
-
+    <div class="action-row">
+      <a class="btn btn-ghost" href="/analyzershub/analyzers/agilent/gc/">
+        ← Agilent GC Overview
+      </a>
+      <a class="btn btn-ghost" href="/analyzershub/analyzers.html">
+        Analyzer Search →
+      </a>
     </div>
-  </div>
-
-  <!-- APPLICABLE MODELS -->
-  <div class="panel">
-    <h3>Applicable Agilent GC Models</h3>
-    <ul class="list">
-      <li><a href="analyzers/agilent/gc/8850/">Agilent 8850 GC</a></li>
-      <li><a href="analyzers/agilent/gc/8860/">Agilent 8860 GC</a></li>
-      <li><a href="analyzers/agilent/gc/8890/">Agilent 8890 GC</a></li>
-      <li><a href="analyzers/agilent/gc/990micro/">Agilent 990 Micro GC</a></li>
-    </ul>
   </div>
 
 </main>
 
-<!-- CENTRAL FOOTER -->
 <div id="siteFooter"></div>
 <script src="assets/js/includes.js?v=2026-01-18"></script>
-
 </body>
 </html>
