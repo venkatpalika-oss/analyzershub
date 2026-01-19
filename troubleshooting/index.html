@@ -34,4 +34,115 @@
   <div class="panel">
     <h3>How to use this hub (fast)</h3>
     <ol class="list">
-      <li><b>C
+      <li><b>Confirm the symptom</b> using trend, alarms, and operator feedback</li>
+      <li><b>Check utilities</b> (power, instrument air, temperature, flow)</li>
+      <li><b>Check sample system</b> (probe → line → conditioning → flow)</li>
+      <li><b>Check calibration path</b> (gas, regulator, manifold, valves)</li>
+      <li><b>Verify recovery</b> with stable trend and repeat check</li>
+    </ol>
+
+    <div class="warn">
+      Most analyzer faults originate from <b>sample system issues</b>,
+      <b>condensation</b>, <b>leaks</b>, or <b>utility instability</b> — not electronics.
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Start by Symptom</h3>
+
+    <div class="grid">
+
+      <div class="card">
+        <h4>Reading Low / Zero</h4>
+        <p>Restriction, blockage, wrong range, wrong gas, or warm-up incomplete.</p>
+        <ul class="list">
+          <li>Verify flow at analyzer inlet</li>
+          <li>Check filters, DP, probe blockage</li>
+          <li>Confirm correct range and scaling</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h4>Reading High</h4>
+        <p>Air ingress, leaks, wrong span value, process upset, drift.</p>
+        <ul class="list">
+          <li>Leak test manifolds and sample lines</li>
+          <li>Compare against calibration gas</li>
+          <li>Check recent process changes</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h4>Unstable / Noisy Trend</h4>
+        <p>Pressure fluctuation, moisture carryover, unstable regulator.</p>
+        <ul class="list">
+          <li>Verify pressure and flow stability</li>
+          <li>Inspect moisture traps and heat tracing</li>
+          <li>Check grounding and shielding</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h4>Slow Response Time</h4>
+        <p>Restriction, long lines, low flow, weak pump.</p>
+        <ul class="list">
+          <li>Inspect filters and restrictions</li>
+          <li>Check pump health and flow</li>
+          <li>Verify heater temperatures</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h4>Calibration Failure</h4>
+        <p>Wrong gas, leaks, unstable regulator, warm-up incomplete.</p>
+        <ul class="list">
+          <li>Verify gas concentration and expiry</li>
+          <li>Leak test calibration manifold</li>
+          <li>Confirm valve switching</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h4>Communication / Data Gaps</h4>
+        <p>Network issues, mapping errors, DAHS flags.</p>
+        <ul class="list">
+          <li>Check IP, ports, comm status</li>
+          <li>Verify tag mapping and scaling</li>
+          <li>Confirm timestamps and quality bits</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Fast Links (Analyzer-specific troubleshooting)</h3>
+    <div class="action-row">
+      <a class="btn btn-primary" href="analyzers/ametek/888/troubleshooting.html">AMETEK 888 →</a>
+      <a class="btn btn-ghost" href="analyzers/ametek/933/troubleshooting.html">AMETEK 933 →</a>
+      <a class="btn btn-ghost" href="analyzers/yokogawa/zr22g/">ZR22G →</a>
+      <a class="btn btn-ghost" href="analyzers/yokogawa/ox400.html">OX400 →</a>
+    </div>
+    <p class="muted" style="margin-top:10px;">
+      Add analyzer-specific troubleshooting links as content expands.
+    </p>
+  </div>
+
+  <div class="panel">
+    <h3>Training Support</h3>
+    <div class="action-row">
+      <a class="btn btn-primary" href="learn/index.html">CEMS Fundamentals →</a>
+      <a class="btn btn-ghost" href="learn/cems/module-5-alarm-philosophy.html">Alarm Philosophy →</a>
+      <a class="btn btn-ghost" href="learn/cems/module-6-dahs-fundamentals.html">DAHS Fundamentals →</a>
+    </div>
+  </div>
+
+</main>
+
+<!-- ✅ CENTRAL FOOTER -->
+<div id="siteFooter"></div>
+
+<script src="assets/js/includes.js?v=2026-01-18"></script>
+
+</body>
+</html>
