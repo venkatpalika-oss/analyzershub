@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>AnalyzersHub | Industrial Analyzer Knowledge Hub</title>
+  <meta name="description"
+        content="AnalyzersHub is an industrial analyzer knowledge hub for technicians, covering working principles, calibration, troubleshooting, alarm decision trees, CEMS, and real plant experience." />
 
   <!-- GitHub Pages base -->
   <base href="/analyzershub/">
 
-  <!-- ✅ CSS must be in HEAD only -->
+  <!-- Global CSS -->
   <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 
-  <!-- Home Hero (keep inline – overrides safely) -->
+  <!-- Home hero override (intentional) -->
   <style>
     .hero{
       min-height:360px;
@@ -33,7 +36,7 @@
 
 <body data-page="home">
 
-<!-- ✅ CENTRAL HEADER -->
+<!-- CENTRAL HEADER -->
 <div id="siteHeader"></div>
 
 <!-- HERO -->
@@ -142,44 +145,20 @@
     </div>
   </section>
 
-  <!-- MANUFACTURERS -->
-  <section>
-    <h2>Browse by Manufacturer</h2>
-    <div class="grid">
-      <div class="card yokogawa">
-        <h3>Yokogawa</h3>
-        <a class="btn btn-primary" href="analyzers.html?filter=yokogawa">Open →</a>
-      </div>
-      <div class="card abb">
-        <h3>ABB</h3>
-        <a class="btn btn-primary" href="analyzers.html?filter=abb">Open →</a>
-      </div>
-      <div class="card siemens">
-        <h3>Siemens</h3>
-        <a class="btn btn-primary" href="analyzers.html?filter=siemens">Open →</a>
-      </div>
-      <div class="card ametek">
-        <h3>AMETEK</h3>
-        <a class="btn btn-primary" href="analyzers.html?filter=ametek">Open →</a>
-      </div>
-    </div>
-  </section>
-
   <!-- DATA FLOW -->
   <section class="panel">
     <h2>Analyzer Data Flow to DCS</h2>
     <img src="assets/images/data_flow_to_dcs.png"
-         alt="Analyzer Data Flow"
+         alt="Analyzer Data Flow to DCS"
+         loading="lazy"
          style="max-width:560px;width:100%;display:block;margin:14px auto;border-radius:12px;">
   </section>
 
 </main>
 
-<!-- ✅ CENTRAL FOOTER -->
+<!-- CENTRAL FOOTER -->
 <div id="siteFooter"></div>
 
-<!-- ✅ loader for header/footer + active nav -->
 <script src="assets/js/includes.js?v=2026-01-18"></script>
-
 </body>
 </html>
