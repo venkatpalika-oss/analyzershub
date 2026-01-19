@@ -1,47 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agilent 8890 GC | AnalyzersHub</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <base href="/analyzershub/">
-  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
+  <base href="/analyzershub/" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body data-page="analyzers">
+<body>
 
+<!-- ✅ CENTRAL HEADER -->
 <div id="siteHeader"></div>
 
-<nav class="crumbs">
+<!-- ================= BREADCRUMBS ================= -->
+<nav class="crumbs" aria-label="Breadcrumb">
   <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers/agilent/">Agilent</a><span>›</span>
-  <a href="analyzers/agilent/gc/">Gas Chromatographs</a><span>›</span>
-  <span class="current">8890</span>
+  <a href="analyzers.html">Analyzer Search</a><span>›</span>
+  <a href="analyzers/agilent/gc/">Agilent GC</a><span>›</span>
+  <span class="current">8890 GC</span>
 </nav>
 
-<section class="hero-search">
-  <div class="hero-inner">
-    <h2>Agilent 8890 Gas Chromatograph</h2>
-    <p>Compact and cost-effective GC for routine analytical applications.</p>
+<main class="container">
+
+  <!-- ================= OVERVIEW ================= -->
+  <div class="panel">
+    <h2>Agilent 8890 — Advanced Process Gas Chromatograph</h2>
+    <p class="muted">
+      High-end GC with advanced diagnostics, automation, and multi-detector capability.
+      Widely used in critical refinery, petrochemical, and analytical applications.
+    </p>
 
     <div class="action-row">
-      <a class="btn btn-primary" href="analyzers/agilent/gc/alarms/">
-        View Common Alarms →
-      </a>
-      <a class="btn btn-ghost" href="analyzers/agilent/gc/">
-        Back to Agilent GC →
-      </a>
-      <a class="btn btn-ghost" href="analyzers.html">
-        Analyzer Search →
-      </a>
+      <a class="btn btn-ghost" href="analyzers/agilent/gc/">← Back to Agilent GC</a>
+      <a class="btn btn-primary" href="alarms/agilent/gc/">Alarm Decision Trees →</a>
+    </div>
+
+    <div class="warn">
+      <b>Technician rule:</b> Advanced diagnostics help,
+      but <b>sampling, carrier gas, and valve stability</b> still cause most GC problems.
     </div>
   </div>
-</section>
 
+  <!-- ================= CONTENT GRID ================= -->
+  <div class="grid">
 
+    <div class="card gc">
+      <h3>Working Principle</h3>
+      <p>
+        The 8890 performs high-precision separation and detection of gas components
+        with enhanced control of temperature, pressure, and detector conditions.
+      </p>
+      <p class="muted">
+        Designed for high repeatability, low drift, and automated diagnostics.
+      </p>
+    </div>
+
+    <div class="card gc">
+      <h3>Main Components</h3>
+      <ul class="list">
+        <li>Advanced inlet & injection control</li>
+        <li>Electronic pressure control (EPC)</li>
+        <li>High-stability oven & thermal management</li>
+        <li>Multiple detector support</li>
+        <li>Controller, diagnostics & networking</li>
+      </ul>
+    </div>
+
+    <div class="card gc">
+      <h3>Calibration Best Practice</h3>
+      <div class="step"><b>1)</b> Verify EPC stability and pressure readings</div>
+      <div class="step"><b>2)</b> Confirm clean, stable baseline</div>
+      <div class="step"><b>3)</b> Run certified standard (multiple injections)</div>
+      <div class="step"><b>4)</b> Review diagnostics before accepting calibration</div>
+      <div class="step"><b>5)</b> Verify with independent check gas</div>
+    </div>
+
+    <div class="card gc">
+      <h3>Major Troubleshooting Areas</h3>
+      <ul class="list">
+        <li><b>Baseline noise:</b> contamination, grounding, detector aging</li>
+        <li><b>RT drift:</b> EPC drift, oven instability</li>
+        <li><b>Low response:</b> inlet restriction, detector fault</li>
+        <li><b>Intermittent alarms:</b> valve timing or pressure hunting</li>
+      </ul>
+    </div>
+
+  </div>
+
+</main>
+
+<!-- ✅ CENTRAL FOOTER -->
 <div id="siteFooter"></div>
-<script src="assets/js/includes.js?v=2026-01-18"></script>
+<script src="assets/js/includes.js"></script>
 
 </body>
 </html>
