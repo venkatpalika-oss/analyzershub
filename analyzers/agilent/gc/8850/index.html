@@ -1,47 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agilent 8850 GC | AnalyzersHub</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <base href="/analyzershub/">
-  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body data-page="analyzers">
+<body>
 
 <div id="siteHeader"></div>
 
 <nav class="crumbs">
   <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers/agilent/">Agilent</a><span>›</span>
-  <a href="analyzers/agilent/gc/">GC</a><span>›</span>
-  <span class="current">8850</span>
+  <a href="analyzers.html">Analyzer Search</a><span>›</span>
+  <a href="analyzers/agilent/gc/">Agilent GC</a><span>›</span>
+  <span class="current">8850 GC</span>
 </nav>
 
-<section class="hero-search">
-  <div class="hero-inner">
-    <h2>Agilent 8850 Gas Chromatograph</h2>
-    <p>Compact and cost-effective GC for routine analytical applications.</p>
+<main class="container">
+
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">Agilent 8850 — Gas Chromatograph</h2>
+    <p class="muted" style="margin:8px 0 0;">
+      Compact GC platform for routine laboratory and industrial gas analysis.
+      Focus: injection stability, carrier gas control, detector repeatability,
+      and basic method robustness.
+    </p>
 
     <div class="action-row">
-      <a class="btn btn-primary" href="analyzers/agilent/gc/alarms/">
-        View Common Alarms →
-      </a>
-      <a class="btn btn-ghost" href="analyzers/agilent/gc/">
-        Back to Agilent GC →
-      </a>
-      <a class="btn btn-ghost" href="analyzers.html">
-        Analyzer Search →
-      </a>
+      <a class="btn btn-ghost" href="analyzers.html">← Back to Search</a>
+      <a class="btn btn-primary" href="alarms/agilent/gc/">GC Alarm Decision Trees →</a>
+    </div>
+
+    <div class="warn">
+      <b>Technician rule:</b> If results drift or repeatability is poor,
+      check <b>carrier pressure, inlet leaks, and injection timing</b> before touching calibration.
     </div>
   </div>
-</section>
 
+  <div class="grid">
+
+    <div class="card gc">
+      <h3>Working Principle</h3>
+      <p>
+        The Agilent 8850 separates gas components in a chromatographic column
+        and detects them as peaks using detectors such as FID or TCD.
+      </p>
+      <ul class="list">
+        <li>Stable carrier gas flow is critical</li>
+        <li>Injection repeatability defines accuracy</li>
+        <li>Detector stability defines noise and drift</li>
+      </ul>
+    </div>
+
+    <div class="card gc">
+      <h3>Main Components (Field Focus)</h3>
+      <ul class="list">
+        <li>Sample inlet, split/splitless system</li>
+        <li>Carrier gas supply and EPC</li>
+        <li>Column oven and temperature control</li>
+        <li>Detector module (FID/TCD)</li>
+        <li>Controller, I/O, and data interface</li>
+      </ul>
+    </div>
+
+    <div class="card gc">
+      <h3>Calibration Procedure</h3>
+      <div class="step"><b>1)</b> Stabilize oven and detector temperatures</div>
+      <div class="step"><b>2)</b> Verify carrier pressure and flow</div>
+      <div class="step"><b>3)</b> Inject calibration standard (2–3 runs)</div>
+      <div class="step"><b>4)</b> Update response factors</div>
+      <div class="step"><b>5)</b> Verify repeatability and retention times</div>
+    </div>
+
+    <div class="card gc">
+      <h3>Major Troubleshooting</h3>
+      <ul class="list">
+        <li><b>No peaks:</b> inlet leak, injection failure, detector off</li>
+        <li><b>Poor repeatability:</b> pressure hunting, injector contamination</li>
+        <li><b>Retention shift:</b> oven instability, carrier flow change</li>
+      </ul>
+
+      <div class="action-row">
+        <a class="btn btn-ghost" href="alarms/agilent/gc/">Use Alarm Trees →</a>
+      </div>
+    </div>
+
+  </div>
+
+</main>
 
 <div id="siteFooter"></div>
-<script src="assets/js/includes.js?v=2026-01-18"></script>
-
+<script src="assets/js/includes.js"></script>
 </body>
 </html>
