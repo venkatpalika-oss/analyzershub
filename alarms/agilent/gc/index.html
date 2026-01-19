@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="description"
-        content="Common alarms and troubleshooting guidance for Agilent gas chromatographs used in industrial and laboratory applications.">
+        content="Alarm troubleshooting guidance for Agilent gas chromatographs including calibration, detector, communication, and chromatographic faults.">
 
   <base href="/analyzershub/">
   <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
@@ -14,8 +14,10 @@
 
 <body data-page="alarms">
 
+<!-- CENTRAL HEADER -->
 <div id="siteHeader"></div>
 
+<!-- BREADCRUMBS -->
 <nav class="crumbs" aria-label="Breadcrumb">
   <a href="/analyzershub/index.html">Home</a><span>›</span>
   <a href="/analyzershub/analyzers.html">Analyzer Search</a><span>›</span>
@@ -24,11 +26,13 @@
   <span class="current">Alarms</span>
 </nav>
 
+<!-- HERO -->
 <section class="hero-search">
   <div class="hero-inner">
     <h2>Agilent GC – Alarm Hub</h2>
     <p>
-      Field-proven troubleshooting guidance for common Agilent GC alarm conditions.
+      Field-proven troubleshooting guidance for common Agilent
+      gas chromatograph alarm conditions.
     </p>
   </div>
 </section>
@@ -46,25 +50,41 @@
     </div>
 
     <div class="card">
-      <h4>No Detector Signal</h4>
-      <p class="muted">No response from FID, TCD, or other detector.</p>
-      <a class="btn btn-primary" href="/analyzershub/alarms/agilent/gc/no-detector-signal.html">
+      <h4>Communication Error</h4>
+      <p class="muted">Loss of communication between GC, workstation, or DCS.</p>
+      <a class="btn btn-primary" href="/analyzershub/alarms/agilent/gc/communication-error.html">
         Open →
       </a>
     </div>
 
     <div class="card">
-      <h4>Unstable Baseline</h4>
-      <p class="muted">Noise, drift, or fluctuating baseline.</p>
-      <a class="btn btn-primary" href="/analyzershub/alarms/agilent/gc/unstable-baseline.html">
+      <h4>Detector Fault</h4>
+      <p class="muted">FID, TCD, or other detector failure or abnormal response.</p>
+      <a class="btn btn-primary" href="/analyzershub/alarms/agilent/gc/detector-fault.html">
         Open →
       </a>
     </div>
 
     <div class="card">
-      <h4>Injection Fault</h4>
-      <p class="muted">Poor repeatability or missing peaks.</p>
-      <a class="btn btn-primary" href="/analyzershub/alarms/agilent/gc/injection-fault.html">
+      <h4>No Peaks</h4>
+      <p class="muted">Chromatogram shows no component peaks.</p>
+      <a class="btn btn-primary" href="/analyzershub/alarms/agilent/gc/no-peaks.html">
+        Open →
+      </a>
+    </div>
+
+    <div class="card">
+      <h4>Poor Repeatability</h4>
+      <p class="muted">High variation between consecutive injections.</p>
+      <a class="btn btn-primary" href="/analyzershub/alarms/agilent/gc/poor-repeatability.html">
+        Open →
+      </a>
+    </div>
+
+    <div class="card">
+      <h4>Retention Time Shift</h4>
+      <p class="muted">Unexpected change in peak retention times.</p>
+      <a class="btn btn-primary" href="/analyzershub/alarms/agilent/gc/retention-time-shift.html">
         Open →
       </a>
     </div>
@@ -84,7 +104,9 @@
 
 </main>
 
+<!-- CENTRAL FOOTER -->
 <div id="siteFooter"></div>
+
 <script src="assets/js/includes.js?v=2026-01-18"></script>
 </body>
 </html>
