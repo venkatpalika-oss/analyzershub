@@ -14,17 +14,20 @@
 
 <body data-page="alarms">
 
+<!-- ✅ CENTRAL HEADER -->
 <div id="siteHeader"></div>
 
-<nav class="crumbs">
-  <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers.html">Analyzer Search</a><span>›</span>
-  <a href="analyzers/agilent/">Agilent</a><span>›</span>
-  <a href="analyzers/agilent/gc/">Gas Chromatographs</a><span>›</span>
-  <a href="alarms/agilent/gc/">Alarms</a><span>›</span>
+<!-- ================= BREADCRUMBS ================= -->
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="/analyzershub/index.html">Home</a><span>›</span>
+  <a href="/analyzershub/analyzers.html">Analyzer Search</a><span>›</span>
+  <a href="/analyzershub/analyzers/agilent/">Agilent</a><span>›</span>
+  <a href="/analyzershub/analyzers/agilent/gc/">Gas Chromatographs</a><span>›</span>
+  <a href="/analyzershub/alarms/agilent/gc/">Alarms</a><span>›</span>
   <span class="current">Calibration Failure</span>
 </nav>
 
+<!-- ================= HERO ================= -->
 <section class="hero-search">
   <div class="hero-inner">
     <h2>Calibration Failure</h2>
@@ -32,6 +35,7 @@
   </div>
 </section>
 
+<!-- ================= CONTENT ================= -->
 <main class="container">
 
   <div class="panel">
@@ -40,23 +44,38 @@
       <li>Incorrect or expired calibration gas</li>
       <li>Unstable baseline or detector fault</li>
       <li>Injection repeatability issues</li>
-      <li>Leaks or restrictions</li>
+      <li>Leaks or restrictions in the sample path</li>
     </ol>
   </div>
 
   <div class="panel">
     <h3>Corrective Actions</h3>
     <ul class="list">
-      <li>Verify calibration gas concentration and expiry</li>
-      <li>Stabilize system before calibration</li>
-      <li>Repair leaks and confirm injection stability</li>
-      <li>Repeat calibration after corrections</li>
+      <li>Verify calibration gas concentration and expiry date</li>
+      <li>Allow GC to stabilize fully before calibration</li>
+      <li>Leak-check injection, columns, and fittings</li>
+      <li>Repeat calibration after corrective actions</li>
     </ul>
+  </div>
+
+  <!-- ================= NAVIGATION ================= -->
+  <div class="panel">
+    <div class="action-row">
+      <a class="btn btn-ghost" href="/analyzershub/alarms/agilent/gc/">
+        ← All Agilent GC Alarms
+      </a>
+      <a class="btn btn-ghost" href="/analyzershub/analyzers/agilent/gc/">
+        Agilent GC Overview →
+      </a>
+    </div>
   </div>
 
 </main>
 
+<!-- ✅ CENTRAL FOOTER -->
 <div id="siteFooter"></div>
+
 <script src="assets/js/includes.js?v=2026-01-18"></script>
+
 </body>
 </html>
