@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Siemens MAXUM Edition II | AnalyzersHub</title>
+  <meta name="description"
+        content="Siemens MAXUM Edition II process gas chromatograph. Working principle, calibration, troubleshooting, alarm decision trees, and technician best practices." />
+
+  <!-- GitHub Pages base -->
+  <base href="/analyzershub/">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
+</head>
+
+<body data-page="analyzers">
+
+<!-- CENTRAL HEADER -->
+<div id="siteHeader"></div>
+
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="analyzers.html">Analyzer Search</a><span>›</span>
+  <a href="analyzers.html?vendor=siemens">Siemens</a><span>›</span>
+  <span class="current">MAXUM Edition II</span>
+</nav>
+
+<main class="container">
+
+  <!-- INTRO -->
+  <section class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">Siemens MAXUM Edition II</h2>
+    <p class="muted" style="margin:8px 0 0;">
+      Industrial process gas chromatograph used in refineries, petrochemical plants,
+      and gas processing units. Focus on sampling stability, carrier gas integrity,
+      oven control, valve timing, detector performance, and DCS communication.
+    </p>
+
+    <div class="action-row">
+      <a class="btn btn-ghost" href="analyzers.html">← Back to Search</a>
+      <a class="btn btn-primary" href="analyzers/siemens/maxum-ii/alarms/index.html">
+        Alarm Decision Trees →
+      </a>
+      <a class="btn btn-ghost" href="analyzers/siemens/maxum-ii/alarm-codes.html">
+        Alarm Codes →
+      </a>
+    </div>
+
+    <div class="warn">
+      <b>Technician rule:</b>
+      MAXUM performance depends heavily on <b>carrier gas quality</b> and
+      <b>sample conditioning</b>. Most repeatability and drift issues originate upstream.
+    </div>
+  </section>
+
+  <!-- CORE CONTENT -->
+  <section class="grid">
+
+    <div class="card gc">
+      <h3>Working Principle</h3>
+      <p>
+        The MAXUM separates process gas components in chromatographic columns
+        and detects them using detectors such as TCD or FID.
+        Precise oven temperature and valve timing ensure repeatable retention times.
+      </p>
+      <ul class="list">
+        <li>Sample injection through timed valve sequences</li>
+        <li>Component separation in temperature-controlled columns</li>
+        <li>Peak detection and calculation using calibration factors</li>
+      </ul>
+    </div>
+
+    <div class="card gc">
+      <h3>Main Components</h3>
+      <ul class="list">
+        <li><b>Sample conditioning:</b> filters, regulators, heat tracing, drains</li>
+        <li><b>Carrier gas system:</b> carrier source, regulators, purification traps</li>
+        <li><b>Valves & loops:</b> injection and switching valves</li>
+        <li><b>Oven:</b> heater, sensors, and controller</li>
+        <li><b>Columns:</b> analytical and backflush columns</li>
+        <li><b>Detectors:</b> TCD, FID, electronics</li>
+        <li><b>Controller & comms:</b> MAXUM controller, I/O, network</li>
+      </ul>
+    </div>
+
+    <div class="card gc">
+      <h3>Calibration Procedure</h3>
+      <div class="step"><b>1)</b> Confirm analyzer is stable with no active sample or carrier alarms.</div>
+      <div class="step"><b>2)</b> Verify carrier and sample pressures are steady (no hunting).</div>
+      <div class="step"><b>3)</b> Run certified calibration gas for multiple repeatable cycles.</div>
+      <div class="step"><b>4)</b> Update response factors and save method configuration.</div>
+      <div class="step"><b>5)</b> Run validation gas and confirm results within limits.</div>
+      <div class="step"><b>6)</b> Return to process and verify DCS mapping, scaling, and quality bits.</div>
+    </div>
+
+    <div class="card gc">
+      <h3>Major Troubleshooting Areas</h3>
+      <ul class="list">
+        <li><b>Poor repeatability:</b> valve timing, pressure instability, moisture</li>
+        <li><b>Retention time drift:</b> oven temperature or carrier flow changes</li>
+        <li><b>Missing / low peaks:</b> valve leaks, restrictions, detector issues</li>
+        <li><b>DCS issues:</b> communication faults, bad scaling, quality bit errors</li>
+      </ul>
+
+      <div class="action-row" style="margin-top:10px;">
+        <a class="btn btn-ghost" href="analyzers/siemens/maxum-ii/alarms/index.html">
+          Use Decision Trees →
+        </a>
+        <a class="btn btn-ghost" href="guides/gc/chromatogram-guide.html">
+          Chromatogram Guide →
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- CENTRAL FOOTER -->
+<div id="siteFooter"></div>
+
+<script src="assets/js/includes.js?v=2026-01-18"></script>
+</body>
+</html>
