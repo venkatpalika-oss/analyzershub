@@ -6,7 +6,7 @@
 
   <title>AnalyzersHub | Industrial Analyzer Knowledge Hub</title>
   <meta name="description"
-        content="AnalyzersHub is an industrial analyzer knowledge hub for technicians, covering working principles, calibration, troubleshooting, alarm decision trees, CEMS, and real plant experience." />
+        content="AnalyzersHub is an industrial analyzer knowledge hub for technicians. Covers working principles, calibration, troubleshooting, alarm decision trees, CEMS, and real plant experience." />
 
   <!-- GitHub Pages base -->
   <base href="/analyzershub/">
@@ -14,7 +14,7 @@
   <!-- Global CSS -->
   <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 
-  <!-- Home hero override (intentional) -->
+  <!-- Home Hero Override -->
   <style>
     .hero{
       min-height:360px;
@@ -28,7 +28,8 @@
       background-position:center;
       background-repeat:no-repeat;
     }
-    .hero h2,.hero p{
+    .hero h2,
+    .hero p{
       text-shadow:0 3px 18px rgba(0,0,0,.8);
     }
   </style>
@@ -36,40 +37,54 @@
 
 <body data-page="home">
 
-<!-- CENTRAL HEADER -->
+<!-- =====================================================
+     CENTRAL HEADER
+====================================================== -->
 <div id="siteHeader"></div>
 
-<!-- HERO -->
+<!-- =====================================================
+     HERO
+====================================================== -->
 <section class="hero">
   <div class="hero-inner">
     <h2>Industrial Analyzer Knowledge Hub</h2>
     <p>
-      Working principles, calibration procedures, troubleshooting guides,
-      alarm decision trees, and real-world analyzer experience —
-      built by technicians, for analyzers.
+      Practical analyzer knowledge built from field experience —
+      covering working principles, calibration, troubleshooting,
+      alarm decision trees, and real-world plant challenges.
     </p>
 
     <div class="action-row">
-      <a class="btn btn-primary" href="analyzers.html">Browse All Analyzers →</a>
-      <a class="btn btn-ghost" href="learn/index.html">Learn Fundamentals →</a>
-      <a class="btn btn-ghost" href="community/index.html">Join Community →</a>
+      <a class="btn btn-primary" href="analyzers.html">
+        Browse All Analyzers →
+      </a>
+      <a class="btn btn-ghost" href="knowledge/index.html">
+        Knowledge Base →
+      </a>
+      <a class="btn btn-ghost" href="community/index.html">
+        Join Community →
+      </a>
     </div>
   </div>
 </section>
 
+<!-- =====================================================
+     MAIN CONTENT
+====================================================== -->
 <main class="container">
 
   <!-- WHY ANALYZERS MATTER -->
   <section class="panel">
     <h2>Why Industrial Analyzers Are Critical</h2>
     <p>
-      Industrial analyzers are the <b>eyes and ears of a plant</b>.
+      Industrial analyzers are the <b>eyes and ears of a process plant</b>.
       They directly influence combustion efficiency, product quality,
       safety systems, and environmental compliance.
     </p>
     <p>
-      Analyzer failures or incorrect measurements can lead to
-      fuel loss, false alarms, shutdowns, and regulatory penalties.
+      Incorrect analyzer readings can result in fuel losses,
+      unstable operation, false alarms, shutdowns,
+      and regulatory penalties.
     </p>
   </section>
 
@@ -82,43 +97,44 @@
       </div>
       <div class="card">
         <h4>⚠️ Safety</h4>
-        <p>Oxygen, toxic gas, and explosive monitoring.</p>
+        <p>Oxygen, toxic gas, and explosive atmosphere monitoring.</p>
       </div>
       <div class="card">
         <h4>🌍 Compliance</h4>
-        <p>CEMS accuracy protects permits and reporting.</p>
+        <p>CEMS accuracy protects permits and statutory reporting.</p>
       </div>
       <div class="card">
         <h4>📊 Control</h4>
-        <p>Control loops depend on analyzer truth.</p>
+        <p>Control loops depend on reliable analyzer measurements.</p>
       </div>
     </div>
   </section>
 
-  <!-- CAREER VALUE -->
+  <!-- ANALYZER SKILLS -->
   <section class="panel">
     <h2>Analyzer Skills Are High-Value Skills</h2>
     <p>
-      Analyzer work combines instrumentation, chemistry,
-      sampling systems, utilities, and process knowledge.
+      Analyzer engineering combines instrumentation, chemistry,
+      sampling systems, utilities, and deep process understanding.
     </p>
     <div class="step">
-      Analyzer expertise is rare — and therefore valuable.
+      Analyzer expertise is rare — and therefore highly valuable.
     </div>
   </section>
 
-  <!-- MISCONCEPTIONS -->
+  <!-- COMMON MISCONCEPTIONS -->
   <section class="panel">
     <h2>Common Analyzer Misconceptions</h2>
     <ul class="list">
       <li>“If it shows a value, it must be correct”</li>
-      <li>“Calibration fixes the problem”</li>
-      <li>“The analyzer is faulty”</li>
-      <li>“Software is the main issue”</li>
+      <li>“Calibration fixes all problems”</li>
+      <li>“The analyzer itself is faulty”</li>
+      <li>“Software is always the issue”</li>
       <li>“Analyzers run themselves after commissioning”</li>
     </ul>
     <div class="step">
-      Most analyzer problems originate in the <b>sample system</b>, not the analyzer.
+      In reality, most analyzer problems originate in the
+      <b>sample conditioning and utilities</b>, not the analyzer hardware.
     </div>
   </section>
 
@@ -135,12 +151,34 @@
         <p>Advanced troubleshooting and startups.</p>
       </div>
       <div class="card">
-        <h4>📊 Reliability Engineer</h4>
-        <p>Performance, trends, and prevention.</p>
+        <h4>📈 Reliability Engineer</h4>
+        <p>Performance monitoring, trends, and prevention.</p>
       </div>
       <div class="card">
         <h4>🧠 Consultant / SME</h4>
-        <p>Multi-plant expertise and training.</p>
+        <p>Multi-plant expertise, audits, and training.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK ACCESS -->
+  <section class="panel">
+    <h2>Quick Access</h2>
+    <div class="grid">
+      <div class="card">
+        <h4>Analyzer Search</h4>
+        <p>Browse analyzers by type, vendor, and application.</p>
+        <a class="btn btn-primary" href="analyzers.html">Open →</a>
+      </div>
+      <div class="card">
+        <h4>Knowledge Base</h4>
+        <p>Field experience, case studies, and root-cause lessons.</p>
+        <a class="btn btn-primary" href="knowledge/index.html">Open →</a>
+      </div>
+      <div class="card">
+        <h4>Guides</h4>
+        <p>Chromatograms, alarm interpretation, best practices.</p>
+        <a class="btn btn-primary" href="guides/index.html">Open →</a>
       </div>
     </div>
   </section>
@@ -156,9 +194,15 @@
 
 </main>
 
-<!-- CENTRAL FOOTER -->
+<!-- =====================================================
+     CENTRAL FOOTER
+====================================================== -->
 <div id="siteFooter"></div>
 
+<!-- =====================================================
+     HEADER / FOOTER LOADER
+====================================================== -->
 <script src="assets/js/includes.js?v=2026-01-18"></script>
+
 </body>
 </html>
