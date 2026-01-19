@@ -1,165 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Yokogawa ZR22G High Drift Alarm | AnalyzersHub</title>
+  <meta charset="UTF-8">
+  <title>Yokogawa – High Drift Alarm | AnalyzersHub</title>
 
-    <meta name="description" content="Yokogawa ZR22G high drift or unstable oxygen reading alarm troubleshooting. Causes, field checks, corrective actions, and decision tree.">
-    <meta name="keywords" content="ZR22G high drift, unstable oxygen reading, Yokogawa oxygen analyzer troubleshooting">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="High drift or unstable oxygen reading in Yokogawa analyzers. Causes, field checks, corrective actions, and troubleshooting guidance.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="assets/css/style.css">
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
 
-<body>
+<body data-page="alarms">
 
-<header>
-    <h1>AnalyzersHub</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="analyzers.html">Analyzers</a>
-        <a href="index.html">Yokogawa Alarms</a>
-    </nav>
-</header>
+<!-- CENTRAL HEADER -->
+<div id="siteHeader"></div>
 
-<main>
+<!-- BREADCRUMBS -->
+<nav class="crumbs">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="alarms/yokogawa/">Yokogawa Alarms</a><span>›</span>
+  <span class="current">High Drift</span>
+</nav>
 
-    <h2>Alarm: High Drift / Unstable Oxygen Reading</h2>
+<main class="container">
 
-    <p><strong>Manufacturer:</strong> Yokogawa</p>
-    <p><strong>Analyzer:</strong> ZR22G Zirconia Oxygen Analyzer</p>
-
-    <hr>
-
-    <section>
-        <h3>Alarm Description</h3>
-        <p>
-            The High Drift alarm indicates unstable or continuously drifting oxygen
-            readings that do not correlate with actual process conditions. This alarm
-            typically develops gradually and worsens over time if not corrected.
-        </p>
-    </section>
-
-    <section>
-        <h3>Typical Symptoms</h3>
-        <ul>
-            <li>Oxygen value slowly increases or decreases without process change</li>
-            <li>Large deviation between process oxygen and calibration gas value</li>
-            <li>Repeated calibration required to maintain accuracy</li>
-            <li>Reading fluctuates even at stable load conditions</li>
-        </ul>
-    </section>
-
-    <section>
-        <h3>Probable Causes (Most Common First)</h3>
-        <ol>
-            <li>Sensor probe contamination (dust, ash, corrosion)</li>
-            <li>Reference air leakage or blockage</li>
-            <li>Process temperature fluctuations at probe location</li>
-            <li>Electrical noise, poor grounding, or shielding issues</li>
-            <li>Aging or end-of-life zirconia sensor</li>
-        </ol>
-    </section>
-
-    <section>
-        <h3>Field Checks (Recommended Order)</h3>
-        <ul>
-            <li>Inspect probe tip for ash, soot, or corrosion buildup</li>
-            <li>Check reference air tubing for leaks, kinks, or blockage</li>
-            <li>Verify process temperature stability at the probe location</li>
-            <li>Inspect grounding, shielding, and cable routing</li>
-            <li>Review calibration history and drift trend</li>
-        </ul>
-    </section>
-
-    <section>
-        <h3>Corrective Actions</h3>
-        <ul>
-            <li>Clean probe tip or replace sensor if contaminated</li>
-            <li>Repair or replace damaged reference air tubing</li>
-            <li>Improve probe mounting location if temperature fluctuates</li>
-            <li>Correct earthing and remove electrical interference sources</li>
-            <li>Replace zirconia sensor if drift persists after maintenance</li>
-        </ul>
-    </section>
-
-    <section>
-        <h3>Impact on Measurement</h3>
-        <p>
-            High drift directly affects combustion efficiency, emissions compliance,
-            and process control. Ignoring this alarm can result in fuel wastage,
-            increased emissions, and unreliable analyzer data.
-        </p>
-    </section>
-
-    <section>
-        <h3>Decision Tree Diagnosis</h3>
-        <p>
-            Use the structured diagnostic flow below to quickly identify the root cause:
-        </p>
-        <p>
-            👉 <a href="decision-trees/zr22g-high-drift.html">
-            ZR22G High Drift Decision Tree
-            </a>
-        </p>
-    </section>
-
-    <section>
-        <h3>Related Pages</h3>
-        <ul>
-            <li>
-                <a href="analyzers/yokogawa/zr22g.html">
-                    Yokogawa ZR22G Analyzer Overview
-                </a>
-            </li>
-            <li>
-                <a href="heater-error.html">Heater Error Alarm</a>
-            </li>
-            <li>
-                <a href="calibration-failure.html">Calibration Failure Alarm</a>
-            </li>
-        </ul>
-    </section>
   <div class="panel">
-  <h3>Applicable Analyzers</h3>
-  <p class="muted">
-    This alarm condition is commonly observed in the following Yokogawa analyzers:
-  </p>
-
-  <ul class="list">
-    <li>
-      <a href="analyzers/yokogawa/zr22g/">
-        Yokogawa ZR22G – Zirconia Oxygen Analyzer
-      </a>
-    </li>
-    <li>
-      <a href="analyzers/yokogawa/ox400/">
-        Yokogawa OX400 – In-situ Oxygen Analyzer
-      </a>
-    </li>
-    <li>
-      <a href="analyzers/yokogawa/tdls8000/">
-        Yokogawa TDLS8000 – TDLAS Gas Analyzer
-      </a>
-    </li>
-  </ul>
-
-  <div class="action-row">
-    <a class="btn btn-ghost" href="alarms/yokogawa/">
-      ← All Yokogawa Alarms
-    </a>
-    <a class="btn btn-ghost" href="analyzers.html">
-      Analyzer Search
-    </a>
+    <h2>Alarm: High Drift / Unstable Oxygen Reading</h2>
+    <p class="muted">
+      Manufacturer: <b>Yokogawa</b>
+    </p>
   </div>
-</div>
+
+  <div class="panel">
+    <h3>Alarm Description</h3>
+    <p>
+      The High Drift alarm indicates unstable or continuously drifting oxygen
+      readings that do not correlate with actual process conditions. This condition
+      usually develops gradually and worsens over time if not corrected.
+    </p>
+  </div>
+
+  <div class="panel">
+    <h3>Typical Symptoms</h3>
+    <ul class="list">
+      <li>Oxygen value changes without process variation</li>
+      <li>Large deviation between process and calibration gas</li>
+      <li>Frequent recalibration required</li>
+      <li>Unstable readings at constant load</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <h3>Probable Causes (Most Common First)</h3>
+    <ol class="list">
+      <li>Sensor contamination (dust, ash, corrosion)</li>
+      <li>Reference air leakage or blockage</li>
+      <li>Process temperature instability</li>
+      <li>Electrical noise or grounding issues</li>
+      <li>End-of-life zirconia sensor</li>
+    </ol>
+  </div>
+
+  <div class="panel">
+    <h3>Field Checks</h3>
+    <ul class="list">
+      <li>Inspect probe tip for contamination</li>
+      <li>Verify reference air flow and tubing condition</li>
+      <li>Confirm stable temperature at probe location</li>
+      <li>Check grounding and shielding</li>
+      <li>Review drift trend history</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <h3>Corrective Actions</h3>
+    <ul class="list">
+      <li>Clean probe or replace sensor</li>
+      <li>Repair reference air system</li>
+      <li>Improve probe mounting conditions</li>
+      <li>Correct electrical interference</li>
+      <li>Replace aging zirconia sensor</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <h3>Impact on Measurement</h3>
+    <p>
+      High drift affects combustion efficiency, emissions compliance,
+      and process control accuracy. Ignoring this alarm can result in
+      fuel loss and unreliable analyzer data.
+    </p>
+  </div>
+
+  <div class="panel">
+    <h3>Applicable Analyzers</h3>
+    <ul class="list">
+      <li><a href="analyzers/yokogawa/zr22g/">Yokogawa ZR22G</a></li>
+      <li><a href="analyzers/yokogawa/ox400/">Yokogawa OX400</a></li>
+      <li><a href="analyzers/yokogawa/tdls8000/">Yokogawa TDLS8000</a></li>
+    </ul>
+
+    <div class="action-row">
+      <a class="btn btn-ghost" href="alarms/yokogawa/">
+        ← All Yokogawa Alarms
+      </a>
+      <a class="btn btn-ghost" href="analyzers.html">
+        Analyzer Search
+      </a>
+    </div>
+  </div>
 
 </main>
 
-<footer>
-    <p>© 2026 AnalyzersHub.com | Built for Analyzer Technicians</p>
-</footer>
+<!-- CENTRAL FOOTER -->
+<div id="siteFooter"></div>
+<script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
-
