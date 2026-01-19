@@ -1,47 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agilent 990 Micro GC | AnalyzersHub</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <base href="/analyzershub/">
-  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body data-page="analyzers">
+<body>
 
+<!-- CENTRAL HEADER -->
 <div id="siteHeader"></div>
 
-<nav class="crumbs">
+<!-- BREADCRUMBS -->
+<nav class="crumbs" aria-label="Breadcrumb">
   <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers/agilent/">Agilent</a><span>›</span>
-  <a href="analyzers/agilent/gc/">Gas Chromatographs</a><span>›</span>
+  <a href="analyzers.html">Analyzer Search</a><span>›</span>
+  <a href="analyzers/agilent/gc/">Agilent GC</a><span>›</span>
   <span class="current">990 Micro GC</span>
 </nav>
 
-<section class="hero-search">
-  <div class="hero-inner">
-    <h2>Agilent 990 Micro Gas Chromatograph</h2>
-    <p>Compact and cost-effective GC for routine analytical applications.</p>
+<main class="container">
+
+  <!-- INTRO PANEL -->
+  <div class="panel">
+    <h2 style="margin:0;color:#0b3c5d;">Agilent 990 Micro GC — Portable Gas Chromatograph</h2>
+    <p class="muted" style="margin:8px 0 0;">
+      Portable micro gas chromatograph for fast, on-site gas analysis.
+      Used in field surveys, temporary installations, process verification,
+      and rapid troubleshooting.
+    </p>
 
     <div class="action-row">
-      <a class="btn btn-primary" href="analyzers/agilent/gc/alarms/">
-        View Common Alarms →
-      </a>
-      <a class="btn btn-ghost" href="analyzers/agilent/gc/">
-        Back to Agilent GC →
-      </a>
-      <a class="btn btn-ghost" href="analyzers.html">
-        Analyzer Search →
-      </a>
+      <a class="btn btn-ghost" href="analyzers.html">← Back to Search</a>
+      <a class="btn btn-primary" href="alarms/agilent/gc/">GC Alarm Decision Trees →</a>
+      <a class="btn btn-ghost" href="guides/gc/chromatogram-guide.html">Chromatogram Guide →</a>
+    </div>
+
+    <div class="warn">
+      <b>Field rule:</b> Most 990 Micro GC issues are caused by
+      <b>sample moisture, pressure instability, or ambient temperature effects</b>,
+      not electronics or software.
     </div>
   </div>
-</section>
 
+  <!-- MAIN GRID -->
+  <div class="grid">
 
+    <!-- WORKING PRINCIPLE -->
+    <div class="card gc">
+      <h3>Working Principle</h3>
+      <p>
+        The Agilent 990 Micro GC separates gas components using
+        <b>micro-machined columns</b> housed in modular analytical channels.
+        Each module performs rapid separation and detection.
+      </p>
+      <ul class="list">
+        <li><b>Fast analysis:</b> short columns, quick cycle times</li>
+        <li><b>Module-based:</b> each channel operates independently</li>
+        <li><b>Portable operation:</b> sensitive to environment and sample quality</li>
+      </ul>
+      <p class="muted">
+        Accuracy depends heavily on <b>dry sample gas</b>, stable inlet pressure,
+        and consistent ambient temperature.
+      </p>
+    </div>
+
+    <!-- MAIN COMPONENTS -->
+    <div class="card gc">
+      <h3>Main Components (Field Focus)</h3>
+      <ul class="list">
+        <li><b>Sample inlet:</b> quick-connect fittings, filters</li>
+        <li><b>Pressure regulators:</b> inlet pressure control</li>
+        <li><b>Micro GC modules:</b> columns + detectors</li>
+        <li><b>Temperature control:</b> module heaters</li>
+        <li><b>Internal pump / carrier system</b></li>
+        <li><b>Controller & software:</b> local PC or embedded interface</li>
+      </ul>
+    </div>
+
+    <!-- CALIBRATION -->
+    <div class="card gc">
+      <h3>Calibration Procedure (Technician Sequence)</h3>
+      <div class="step"><b>1)</b> Power up and allow full thermal stabilization</div>
+      <div class="step"><b>2)</b> Verify inlet pressure (stable, within limits)</div>
+      <div class="step"><b>3)</b> Confirm sample gas is dry and filtered</div>
+      <div class="step"><b>4)</b> Apply certified calibration gas</div>
+      <div class="step"><b>5)</b> Run multiple cycles to confirm repeatability</div>
+      <div class="step"><b>6)</b> Save response factors and verify against standard</div>
+
+      <p class="muted">
+        Tip: If retention time or peak area varies between runs,
+        <b>do not calibrate</b>. Fix pressure or moisture issues first.
+      </p>
+    </div>
+
+    <!-- TROUBLESHOOTING -->
+    <div class="card gc">
+      <h3>Major Troubleshooting (Top Issues)</h3>
+      <ul class="list">
+        <li><b>No peaks:</b> blocked inlet, no sample flow, module not active</li>
+        <li><b>Unstable peaks:</b> moisture, pressure fluctuations</li>
+        <li><b>Retention time shift:</b> temperature instability, module aging</li>
+        <li><b>Poor repeatability:</b> regulator hunting, leaks</li>
+        <li><b>Communication loss:</b> USB / Ethernet / software timeout</li>
+      </ul>
+
+      <div class="action-row" style="margin-top:10px;">
+        <a class="btn btn-ghost" href="alarms/agilent/gc/">Use Alarm Trees →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DISCUSSION -->
+  <div class="panel">
+    <h3 style="margin:0;color:#0b3c5d;">Discussion</h3>
+    <p class="muted">
+      Share Agilent 990 Micro GC field experiences, moisture issues,
+      module behavior, and calibration tips. (GitHub login required.)
+    </p>
+
+    <script src="https://utteranc.es/client.js"
+            repo="venkatpalika-oss/analyzershub"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
 <div id="siteFooter"></div>
-<script src="assets/js/includes.js?v=2026-01-18"></script>
+<script src="assets/js/includes.js"></script>
 
 </body>
 </html>
