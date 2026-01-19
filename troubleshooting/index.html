@@ -6,28 +6,13 @@
 <title>Troubleshooting Hub | AnalyzersHub</title>
 
 <base href="/analyzershub/">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
 
-<body>
+<body data-page="troubleshooting">
 
-<header class="site-header">
-  <div class="site-header-inner">
-    <a class="brand" href="index.html">AnalyzersHub</a>
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Knowledge Base</a>
-      <a href="troubleshooting/index.html" class="active">Troubleshooting</a>
-      <a href="cems/index.html">CEMS</a>
-      <a href="learn/index.html">Learn</a>
-      <a href="community/index.html">Community</a>
-      <a href="blog/index.html">Blog</a>
-      <a href="resources/index.html">Resources</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+<!-- ✅ CENTRAL HEADER -->
+<div id="siteHeader"></div>
 
 <section class="hero-search">
   <div class="hero-inner">
@@ -37,7 +22,7 @@
       and verify the fix — using field-proven steps.
     </p>
     <div class="action-row">
-      <a class="btn btn-primary" href="analyzers.html">Go to Analyzer Search →</a>
+      <a class="btn btn-primary" href="analyzers.html">Analyzer Search →</a>
       <a class="btn btn-ghost" href="cems/index.html">CEMS Hub →</a>
       <a class="btn btn-ghost" href="learn/index.html">Learn (Training) →</a>
     </div>
@@ -49,125 +34,4 @@
   <div class="panel">
     <h3>How to use this hub (fast)</h3>
     <ol class="list">
-      <li><b>Confirm the symptom</b> using trend + alarms + operator feedback</li>
-      <li><b>Check utilities</b> (power, instrument air, temps, flow)</li>
-      <li><b>Check sample system</b> (probe → line → conditioning → flow)</li>
-      <li><b>Check calibration path</b> (gas, regulator, manifold, valves)</li>
-      <li><b>Verify recovery</b> with stable trend + repeat check</li>
-    </ol>
-    <div class="warn">
-      Most analyzer faults are caused by <b>sample system problems</b>, <b>condensation</b>,
-      <b>leaks</b>, or <b>utility instability</b> — not electronics.
-    </div>
-  </div>
-
-  <div class="panel">
-    <h3>Start by Symptom</h3>
-    <div class="grid">
-
-      <div class="card">
-        <h4>Reading Low / Zero</h4>
-        <p>Plugging, restriction, wrong range, wrong gas, or analyzer not warmed up.</p>
-        <ul class="list">
-          <li>Verify flow at analyzer inlet</li>
-          <li>Check filters/DP and probe blockage</li>
-          <li>Confirm correct range and scaling</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h4>Reading High</h4>
-        <p>Leaks (air ingress), process upset, wrong span value, drift.</p>
-        <ul class="list">
-          <li>Leak test manifolds and sample line</li>
-          <li>Compare with calibration gas response</li>
-          <li>Check process condition changes</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h4>Unstable / Noisy Trend</h4>
-        <p>Pressure fluctuations, moisture, unstable regulator, failing pump.</p>
-        <ul class="list">
-          <li>Check pressure/flow stability</li>
-          <li>Inspect moisture carryover</li>
-          <li>Check grounding / signal wiring</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h4>Slow Response Time</h4>
-        <p>Restriction, long lines, low flow, condensation, tired pump.</p>
-        <ul class="list">
-          <li>Inspect filters and restriction</li>
-          <li>Check pump health and flow</li>
-          <li>Confirm heater temperatures</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h4>Calibration Failure</h4>
-        <p>Wrong gas, leaking manifold, low flow, unstable regulator, warm-up not complete.</p>
-        <ul class="list">
-          <li>Verify cylinder concentration + expiry</li>
-          <li>Leak test calibration manifold</li>
-          <li>Confirm stable switching of solenoids</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h4>Communication / Data Gaps</h4>
-        <p>Network, mapping, DAHS tag issues, power resets, incorrect scaling.</p>
-        <ul class="list">
-          <li>Check comm status + IP/port</li>
-          <li>Verify tag mapping and scaling</li>
-          <li>Check timestamps / data flags</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="panel">
-    <h3>Fast Links (Analyzer-specific troubleshooting)</h3>
-    <div class="action-row">
-      <a class="btn btn-primary" href="analyzers/ametek/888/troubleshooting.html">AMETEK 888 →</a>
-      <a class="btn btn-ghost" href="analyzers/ametek/933/troubleshooting.html">AMETEK 933 →</a>
-      <a class="btn btn-ghost" href="analyzers/yokogawa/zr22g.html">ZR22G →</a>
-      <a class="btn btn-ghost" href="analyzers/yokogawa/ox400.html">OX400 →</a>
-    </div>
-    <p class="muted" style="margin-top:10px;">
-      Add more links here as you create troubleshooting pages for each analyzer.
-    </p>
-  </div>
-
-  <div class="panel">
-    <h3>Training support</h3>
-    <div class="action-row">
-      <a class="btn btn-primary" href="learn/index.html">Learn: CEMS Fundamentals →</a>
-      <a class="btn btn-ghost" href="learn/cems/module-5-alarm-philosophy.html">CEMS Alarm Philosophy →</a>
-      <a class="btn btn-ghost" href="learn/cems/module-6-dahs-fundamentals.html">DAHS Fundamentals →</a>
-    </div>
-  </div>
-
-</main>
-
-<footer class="site-footer">
-  <div class="site-footer-inner">
-    <div>
-      <b>AnalyzersHub</b><br>
-      <span class="muted">Built for Analyzer Technicians</span>
-    </div>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Knowledge Base</a>
-      <a href="cems/index.html">CEMS</a>
-      <a href="learn/index.html">Learn</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </div>
-</footer>
-
-</body>
-</html>
-
+      <li><b>C
