@@ -3,49 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yokogawa ZR22G – Alarm Decision Trees | AnalyzersHub</title>
+  <title>Yokogawa ZR22G | AnalyzersHub</title>
 
   <base href="/analyzershub/">
   <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
 
-<body data-page="alarms">
+<body data-page="analyzers">
 
+<!-- CENTRAL HEADER -->
 <div id="siteHeader"></div>
 
+<!-- BREADCRUMBS -->
 <nav class="crumbs">
   <a href="index.html">Home</a><span>›</span>
   <a href="analyzers.html">Analyzer Search</a><span>›</span>
-  <a href="analyzers/yokogawa/zr22g/">Yokogawa ZR22G</a><span>›</span>
-  <span class="current">Alarms</span>
+  <span class="current">Yokogawa ZR22G</span>
 </nav>
 
-<main class="container">
-  <div class="panel">
-    <h2>Yokogawa ZR22G – Alarm Decision Trees</h2>
-
-    <p class="muted">
-      Structured alarm decision trees for troubleshooting Yokogawa ZR22G
-      zirconia oxygen analyzers.
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <h2>Yokogawa ZR22G</h2>
+    <p>
+      Zirconia in-situ oxygen analyzer for combustion control in boilers,
+      furnaces, heaters, and process kilns.
     </p>
 
-    <div class="warn">
-      <b>Note:</b> Detailed alarm trees are under preparation.
-      This page is reserved for standardized troubleshooting content.
-    </div>
-
     <div class="action-row">
-      <a class="btn btn-ghost" href="analyzers/yokogawa/zr22g/">
-        ← Back to Analyzer
+      <a class="btn btn-primary" href="analyzers/yokogawa/zr22g/alarms/">
+        Alarm Decision Trees →
       </a>
       <a class="btn btn-ghost" href="analyzers.html">
-        Analyzer Search
+        Back to Analyzer Search →
       </a>
     </div>
   </div>
+</section>
+
+<main class="container">
+
+  <!-- Working Principle -->
+  <div class="panel">
+    <h3>Working Principle</h3>
+    <p>
+      The ZR22G operates on the zirconium dioxide (ZrO₂) solid electrolyte principle.
+      When heated to approximately 700 °C, the zirconia sensor generates an EMF
+      proportional to the difference in oxygen partial pressure between the process
+      gas and the reference air.
+    </p>
+    <p>
+      This voltage is converted by the transmitter into oxygen concentration using
+      the Nernst equation.
+    </p>
+  </div>
+
+  <!-- Main Components -->
+  <div class="panel">
+    <h3>Main Components</h3>
+    <ul class="list">
+      <li>Zirconia sensor cell</li>
+      <li>Heater assembly</li>
+      <li>Reference air system</li>
+      <li>In-situ probe assembly</li>
+      <li>ZR transmitter / converter</li>
+      <li>Signal and heater cabling</li>
+    </ul>
+  </div>
+
+  <!-- Calibration -->
+  <div class="panel">
+    <h3>Calibration Procedure</h3>
+    <ol class="list">
+      <li>Ensure stable process conditions and normal sensor temperature</li>
+      <li>Perform <b>zero calibration</b> using nitrogen or instrument air</li>
+      <li>Apply <b>span gas</b> (typically 2–8% O₂)</li>
+      <li>Allow readings to stabilize before accepting calibration</li>
+      <li>Verify readings against expected values</li>
+    </ol>
+
+    <div class="warn">
+      <b>Field tip:</b>
+      Frequent calibration failures often indicate sensor aging,
+      blocked reference air, or heater degradation.
+    </div>
+  </div>
+
+  <!-- Troubleshooting -->
+  <div class="panel">
+    <h3>Major Troubleshooting Areas</h3>
+    <ul class="list">
+      <li><b>High drift:</b> sensor aging, contamination, unstable reference air</li>
+      <li><b>Calibration failure:</b> incorrect gas, leaks, poor flow</li>
+      <li><b>Heater alarms:</b> heater burnout, wiring faults</li>
+      <li><b>Low EMF:</b> cracked sensor or process oxygen imbalance</li>
+      <li><b>Signal noise:</b> grounding or shielding issues</li>
+    </ul>
+  </div>
+
+  <!-- Navigation -->
+  <div class="panel">
+    <h3>Quick Navigation</h3>
+    <div class="action-row">
+      <a class="btn btn-primary" href="analyzers/yokogawa/zr22g/alarms/">
+        ZR22G Alarm Decision Trees
+      </a>
+      <a class="btn btn-ghost" href="analyzers/yokogawa/ox400/">
+        Next: Yokogawa OX400 →
+      </a>
+    </div>
+  </div>
+
 </main>
 
+<!-- CENTRAL FOOTER -->
 <div id="siteFooter"></div>
+
 <script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
