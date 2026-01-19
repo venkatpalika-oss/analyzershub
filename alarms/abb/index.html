@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ABB AZ10 – Alarm Decision Trees | AnalyzersHub</title>
+  <title>ABB Alarm Knowledge Base | AnalyzersHub</title>
+
+  <meta name="description"
+        content="ABB analyzer alarm knowledge base. Common alarm explanations, troubleshooting guides, and analyzer-specific alarm links for ABB oxygen and gas analyzers.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <base href="/analyzershub/">
@@ -11,47 +14,140 @@
 
 <body data-page="alarms">
 
+<!-- ================= CENTRAL HEADER ================= -->
 <div id="siteHeader"></div>
 
+<!-- ================= BREADCRUMBS ================= -->
 <nav class="crumbs">
   <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers.html">Analyzer Search</a><span>›</span>
-  <a href="analyzers/abb/az10/">ABB AZ10</a><span>›</span>
-  <span class="current">Alarms</span>
+  <span class="current">ABB Alarms</span>
 </nav>
 
 <main class="container">
 
+  <!-- ================= INTRO ================= -->
   <div class="panel">
-    <h2>ABB AZ10 – Common Alarms</h2>
+    <h2>ABB Alarm Knowledge Base</h2>
     <p class="muted">
-      Select an alarm to view detailed troubleshooting guidance.
-      These alarms are common across ABB AZ series oxygen analyzers.
+      Centralized alarm explanations and troubleshooting guidance for
+      ABB oxygen and gas analyzers.  
+      These alarms may apply across multiple ABB analyzer models.
+    </p>
+
+    <div class="warn">
+      <b>Important:</b>
+      Always confirm the analyzer model and configuration before applying
+      corrective actions.  
+      Use analyzer-specific alarm pages for guided diagnostics.
+    </div>
+  </div>
+
+  <!-- ================= COMMON ABB ALARMS ================= -->
+  <div class="panel">
+    <h3>Common ABB Alarms</h3>
+    <p class="muted">
+      These alarms are frequently observed across ABB AZ-series analyzers.
     </p>
 
     <ul class="list">
-      <li><a href="alarms/abb/no-signal.html">No Oxygen Signal</a></li>
-      <li><a href="alarms/abb/heater-error.html">Heater Error</a></li>
-      <li><a href="alarms/abb/calibration-failure.html">Calibration Failure</a></li>
-      <li><a href="alarms/abb/low-sensor-response.html">Low Sensor Response</a></li>
-      <li><a href="alarms/abb/reference-air-fault.html">Reference Air Fault</a></li>
+      <li>
+        <a href="alarms/abb/no-signal.html">
+          No Oxygen Signal
+        </a>
+      </li>
+      <li>
+        <a href="alarms/abb/heater-error.html">
+          Heater Error
+        </a>
+      </li>
+      <li>
+        <a href="alarms/abb/calibration-failure.html">
+          Calibration Failure
+        </a>
+      </li>
+      <li>
+        <a href="alarms/abb/low-sensor-response.html">
+          Low Sensor Response
+        </a>
+      </li>
+      <li>
+        <a href="alarms/abb/reference-air-fault.html">
+          Reference Air Fault
+        </a>
+      </li>
     </ul>
+  </div>
 
+  <!-- ================= ANALYZER-SPECIFIC ENTRY ================= -->
+  <div class="panel">
+    <h3>Analyzer-Specific Alarm Index</h3>
+    <p class="muted">
+      Select an analyzer to view alarms specific to that model.
+    </p>
+
+    <div class="grid">
+
+      <div class="card oxygen">
+        <h4>ABB AZ10</h4>
+        <p class="muted">
+          Entry-level zirconia oxygen analyzer.
+        </p>
+        <a class="btn btn-primary" href="analyzers/abb/az10/alarms/">
+          Open AZ10 Alarms →
+        </a>
+      </div>
+
+      <div class="card oxygen">
+        <h4>ABB AZ20</h4>
+        <p class="muted">
+          Advanced in-situ oxygen analyzer.
+        </p>
+        <a class="btn btn-primary" href="analyzers/abb/az20/alarms/">
+          Open AZ20 Alarms →
+        </a>
+      </div>
+
+      <div class="card oxygen">
+        <h4>ABB AZ30</h4>
+        <p class="muted">
+          High-performance zirconia oxygen analyzer.
+        </p>
+        <a class="btn btn-primary" href="analyzers/abb/az30/alarms/">
+          Open AZ30 Alarms →
+        </a>
+      </div>
+
+      <div class="card oxygen">
+        <h4>ABB AZ40</h4>
+        <p class="muted">
+          TDLAS-based gas analyzer for demanding applications.
+        </p>
+        <a class="btn btn-primary" href="analyzers/abb/az40/alarms/">
+          Open AZ40 Alarms →
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= NAVIGATION ================= -->
+  <div class="panel">
     <div class="action-row">
-      <a class="btn btn-ghost" href="analyzers/abb/az10/">
-        ← Back to AZ10
+      <a class="btn btn-ghost" href="analyzers.html">
+        Analyzer Search
       </a>
-      <a class="btn btn-ghost" href="alarms/abb/">
-        View All ABB Alarms →
+      <a class="btn btn-ghost" href="analyzers.html?filter=abb">
+        ABB Analyzers
       </a>
     </div>
   </div>
 
 </main>
 
+<!-- ================= CENTRAL FOOTER ================= -->
 <div id="siteFooter"></div>
+
 <script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
-
