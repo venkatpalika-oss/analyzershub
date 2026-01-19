@@ -6,7 +6,7 @@
 
 <title>Analyzer Search | AnalyzersHub</title>
 <meta name="description"
-      content="Browse industrial analyzers by type, brand, and application. Troubleshooting guides and alarm decision trees for analyzer technicians.">
+      content="Browse industrial analyzers by type, brand, and application. Technician-focused troubleshooting, alarm decision trees, and calibration guidance.">
 
 <base href="/analyzershub/">
 <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
@@ -17,7 +17,8 @@
 <!-- CENTRAL HEADER -->
 <div id="siteHeader"></div>
 
-<nav class="crumbs">
+<!-- BREADCRUMBS -->
+<nav class="crumbs" aria-label="Breadcrumb">
   <a href="index.html">Home</a><span>›</span>
   <span class="current">Analyzer Search</span>
 </nav>
@@ -28,96 +29,143 @@
   <section class="panel">
     <h2>Analyzer Knowledge Hub</h2>
     <p class="muted">
-      Select an analyzer to access overviews, alarm decision trees,
-      troubleshooting guides, and technician best practices.
+      Select an analyzer to access working principles, calibration procedures,
+      troubleshooting guides, alarm decision trees, and real-world technician insights.
     </p>
   </section>
 
-  <!-- GC -->
+  <!-- =====================================================
+       GAS CHROMATOGRAPHS (GC)
+  ====================================================== -->
   <section class="panel">
     <h3>Gas Chromatographs (GC)</h3>
 
     <div class="card-grid">
 
+      <!-- Siemens MAXUM -->
       <div class="card gc">
         <h4>Siemens MAXUM Edition II</h4>
-        <p class="muted">Process GC for refinery, petrochemical, and gas applications.</p>
+        <p class="muted">
+          Industrial process GC used in refineries, petrochemical plants,
+          and gas processing units.
+        </p>
         <a class="btn btn-primary"
-           href="analyzers/siemens/maxum-ii/troubleshooting.html">
-          View Troubleshooting →
+           href="analyzers/siemens/maxum-ii/">
+          Open Analyzer →
         </a>
       </div>
 
+      <!-- ABB PGC5000B -->
       <div class="card gc">
-        <h4>ABB PGC Series</h4>
-        <p class="muted">On-line process gas chromatographs.</p>
-        <span class="tag coming">Coming Soon</span>
+        <h4>ABB PGC5000B (Smart Oven)</h4>
+        <p class="muted">
+          Modular process GC with smart oven design and advanced diagnostics.
+        </p>
+        <a class="btn btn-primary"
+           href="analyzers/abb/gc/pgc5000b/">
+          Open Analyzer →
+        </a>
       </div>
 
+      <!-- Yokogawa GC8000 (placeholder) -->
       <div class="card gc">
         <h4>Yokogawa GC8000</h4>
-        <p class="muted">Modular GC platform for complex process streams.</p>
+        <p class="muted">
+          Modular GC platform for complex process stream analysis.
+        </p>
         <span class="tag coming">Coming Soon</span>
       </div>
 
     </div>
   </section>
 
-  <!-- WOBBE -->
+  <!-- =====================================================
+       WOBBE INDEX & CALORIFIC VALUE
+  ====================================================== -->
   <section class="panel">
     <h3>Wobbe Index & Calorific Value</h3>
 
     <div class="card-grid">
+
+      <!-- Hobré -->
       <div class="card">
         <h4>Hobré Wobbe Index Analyzer</h4>
-        <p class="muted">Wobbe, CV, and gas quality measurement.</p>
+        <p class="muted">
+          Wobbe Index, calorific value, and gas quality measurement.
+        </p>
         <a class="btn btn-primary"
            href="analyzers/hobre/wobbe-index/wobbe-index.html">
           Open Analyzer →
         </a>
       </div>
+
     </div>
   </section>
 
-  <!-- OXYGEN -->
+  <!-- =====================================================
+       OXYGEN & COMBUSTION ANALYZERS
+  ====================================================== -->
   <section class="panel">
     <h3>Oxygen & Combustion Analyzers</h3>
 
     <div class="card-grid">
+
+      <!-- Rosemount 6888 (placeholder unless index exists) -->
       <div class="card oxygen">
         <h4>Rosemount 6888</h4>
-        <p class="muted">Zirconia oxygen analyzer for boilers and furnaces.</p>
-        <a class="btn btn-primary"
-           href="analyzers/rosemount/6888/overview.html">
-          Open Analyzer →
-        </a>
+        <p class="muted">
+          Zirconia oxygen analyzer for boilers, heaters, and furnaces.
+        </p>
+        <span class="tag coming">Coming Soon</span>
       </div>
+
+      <!-- Yokogawa ZR22G (example future) -->
+      <div class="card oxygen">
+        <h4>Yokogawa ZR22G</h4>
+        <p class="muted">
+          In-situ zirconia oxygen analyzer with probe-based measurement.
+        </p>
+        <span class="tag coming">Coming Soon</span>
+      </div>
+
     </div>
   </section>
 
-  <!-- CEMS -->
+  <!-- =====================================================
+       CEMS & EMISSIONS
+  ====================================================== -->
   <section class="panel">
     <h3>CEMS & Emissions</h3>
 
     <div class="card-grid">
+
       <div class="card">
         <h4>AMETEK CEMS</h4>
-        <p class="muted">Continuous emissions monitoring systems.</p>
+        <p class="muted">
+          Continuous emissions monitoring systems for regulatory compliance.
+        </p>
         <span class="tag coming">Coming Soon</span>
       </div>
 
       <div class="card">
         <h4>DURAG D-EMS</h4>
-        <p class="muted">Dust and opacity monitoring systems.</p>
+        <p class="muted">
+          Dust, opacity, and particulate emissions monitoring systems.
+        </p>
         <span class="tag coming">Coming Soon</span>
       </div>
+
     </div>
   </section>
 
-  <!-- TECH TIP -->
+  <!-- =====================================================
+       TECHNICIAN NOTE
+  ====================================================== -->
   <div class="note">
     <b>Tip for technicians:</b>
-    Always start with alarms and sampling stability before calibration or configuration changes.
+    Analyzer issues are most often caused by sampling, utilities,
+    and process disturbances — not analyzer electronics.
+    Always verify sample conditioning and stability first.
   </div>
 
 </main>
@@ -125,6 +173,8 @@
 <!-- CENTRAL FOOTER -->
 <div id="siteFooter"></div>
 
+<!-- HEADER / FOOTER LOADER -->
 <script src="assets/js/includes.js?v=2026-01-18"></script>
+
 </body>
 </html>
