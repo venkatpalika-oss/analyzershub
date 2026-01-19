@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yokogawa ZR22G | AnalyzersHub</title>
@@ -10,25 +9,19 @@
   <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
 
-<body>
+<body data-page="analyzers">
 
-<header class="site-header">
-  <div class="site-header-inner">
-    <a class="brand" href="index.html">AnalyzersHub</a>
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Analyzer Search</a>
-      <a href="analyzers.html?filter=yokogawa">Yokogawa</a>
-    </nav>
-  </div>
-</header>
+<!-- CENTRAL HEADER -->
+<div id="siteHeader"></div>
 
+<!-- BREADCRUMBS -->
 <nav class="crumbs">
   <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers.html">Analyzers</a><span>›</span>
+  <a href="analyzers.html">Analyzer Search</a><span>›</span>
   <span class="current">Yokogawa ZR22G</span>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
     <h2>Yokogawa ZR22G</h2>
@@ -38,14 +31,11 @@
     </p>
 
     <div class="action-row">
-      <a class="btn btn-primary" href="alarms/yokogawa/alarm-codes/zr22g-alarm-codes.html">
-        Alarm Codes →
-      </a>
-      <a class="btn btn-ghost" href="alarms/yokogawa/decision-trees/zr22g/index.html">
-        Decision Trees →
+      <a class="btn btn-primary" href="analyzers/yokogawa/zr22g/alarms/">
+        Alarm Decision Trees →
       </a>
       <a class="btn btn-ghost" href="analyzers.html">
-        Back to Search →
+        Back to Analyzer Search →
       </a>
     </div>
   </div>
@@ -57,14 +47,14 @@
   <div class="panel">
     <h3>Working Principle</h3>
     <p>
-      The ZR22G operates on the zirconium dioxide (ZrO₂) solid electrolyte
-      principle. When heated to approximately 700°C, the zirconia sensor
-      generates an EMF proportional to the difference in oxygen partial
-      pressure between the process gas and the reference air.
+      The ZR22G operates on the zirconium dioxide (ZrO₂) solid electrolyte principle.
+      When heated to approximately 700 °C, the zirconia sensor generates an EMF
+      proportional to the difference in oxygen partial pressure between the process
+      gas and the reference air.
     </p>
     <p>
-      This voltage is converted by the transmitter into oxygen concentration
-      using the Nernst equation.
+      This voltage is converted by the transmitter into oxygen concentration using
+      the Nernst equation.
     </p>
   </div>
 
@@ -73,11 +63,11 @@
     <h3>Main Components</h3>
     <ul class="list">
       <li>Zirconia sensor cell</li>
-      <li>Heater assembly (maintains sensor temperature)</li>
+      <li>Heater assembly</li>
       <li>Reference air system</li>
-      <li>Detector probe (in-situ mounting)</li>
+      <li>In-situ probe assembly</li>
       <li>ZR transmitter / converter</li>
-      <li>Signal cables and junction box</li>
+      <li>Signal and heater cabling</li>
     </ul>
   </div>
 
@@ -86,27 +76,28 @@
     <h3>Calibration Procedure</h3>
     <ol class="list">
       <li>Ensure stable process conditions and normal sensor temperature</li>
-      <li>Perform <b>Zero calibration</b> using nitrogen or instrument air</li>
-      <li>Apply <b>Span gas</b> (typically 2–8% O₂)</li>
+      <li>Perform <b>zero calibration</b> using nitrogen or instrument air</li>
+      <li>Apply <b>span gas</b> (typically 2–8% O₂)</li>
       <li>Allow readings to stabilize before accepting calibration</li>
-      <li>Verify calibration results against expected values</li>
+      <li>Verify readings against expected values</li>
     </ol>
 
     <div class="warn">
-      Field Tip: Frequent calibration failures often indicate sensor aging,
-      reference air blockage, or heater degradation.
+      <b>Field tip:</b>
+      Frequent calibration failures often indicate sensor aging,
+      blocked reference air, or heater degradation.
     </div>
   </div>
 
-  <!-- Major Troubleshooting -->
+  <!-- Troubleshooting -->
   <div class="panel">
     <h3>Major Troubleshooting Areas</h3>
     <ul class="list">
-      <li><b>High Drift</b> – sensor aging, contamination, unstable reference air</li>
-      <li><b>Calibration Failure</b> – incorrect gas, leaks, poor flow control</li>
-      <li><b>Heater Error</b> – heater burnout, wiring issues, controller fault</li>
-      <li><b>Low EMF</b> – cracked sensor, process oxygen imbalance</li>
-      <li><b>Signal Noise</b> – grounding or shielding problems</li>
+      <li><b>High drift:</b> sensor aging, contamination, unstable reference air</li>
+      <li><b>Calibration failure:</b> incorrect gas, leaks, poor flow</li>
+      <li><b>Heater alarms:</b> heater burnout, wiring faults</li>
+      <li><b>Low EMF:</b> cracked sensor or process oxygen imbalance</li>
+      <li><b>Signal noise:</b> grounding or shielding issues</li>
     </ul>
   </div>
 
@@ -114,34 +105,21 @@
   <div class="panel">
     <h3>Quick Navigation</h3>
     <div class="action-row">
-      <a class="btn btn-primary" href="alarms/yokogawa/alarm-codes/zr22g-alarm-codes.html">
-        ZR22G Alarm Codes
+      <a class="btn btn-primary" href="analyzers/yokogawa/zr22g/alarms/">
+        ZR22G Alarm Decision Trees
       </a>
-      <a class="btn btn-ghost" href="alarms/yokogawa/decision-trees/zr22g/index.html">
-        ZR22G Decision Trees
-      </a>
-      <a class="btn btn-ghost" href="analyzers/yokogawa/ox400.html">
-        Next: OX400 →
+      <a class="btn btn-ghost" href="analyzers/yokogawa/ox400/">
+        Next: Yokogawa OX400 →
       </a>
     </div>
   </div>
 
 </main>
 
-<footer class="site-footer">
-  <div class="site-footer-inner">
-    <div>
-      <b>AnalyzersHub</b><br>
-      <span class="muted">Built for Analyzer Technicians</span>
-    </div>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Search</a>
-      <a href="disclaimer.html">Disclaimer</a>
-    </div>
-  </div>
-</footer>
+<!-- CENTRAL FOOTER -->
+<div id="siteFooter"></div>
+
+<script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
-
