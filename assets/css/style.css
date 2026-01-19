@@ -46,6 +46,32 @@ img{max-width:100%;height:auto;display:block}
   justify-content:space-between;
   gap:16px;
 }
+/* =========================
+   BRAND LOGO SUPPORT (FINAL)
+========================= */
+.site-logo{
+  height:42px;
+  width:auto;
+  display:block;
+}
+
+.brand{
+  flex-direction:row;       /* logo + text side-by-side */
+  align-items:center;
+  gap:12px;
+}
+
+.brand-text-wrap{
+  display:flex;
+  flex-direction:column;
+  line-height:1.1;
+}
+
+.brand-text{
+  color:#fff;
+  font-weight:900;
+  font-size:1.2rem;
+}
 
 .brand{
   color:#fff;
