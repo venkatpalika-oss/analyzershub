@@ -8,97 +8,97 @@
   <meta name="description"
         content="ABB AZ10 oxygen analyzer alarm troubleshooting. Common alarm explanations, field checks, corrective actions, and decision tree navigation.">
 
+  <!-- ✅ PROJECT BASE -->
   <base href="/analyzershub/">
+
+  <!-- ✅ GLOBAL CSS -->
   <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
 
 <body data-page="alarms">
 
-<!-- ================= CENTRAL HEADER ================= -->
-<div id="siteHeader"></div>
+  <!-- ================= CENTRAL HEADER ================= -->
+  <div id="siteHeader"></div>
 
-<!-- ================= BREADCRUMBS ================= -->
-<nav class="crumbs" aria-label="Breadcrumb">
-  <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers.html">Analyzer Search</a><span>›</span>
-  <a href="analyzers/abb/az10/">ABB AZ10</a><span>›</span>
-  <span class="current">Alarms</span>
-</nav>
+  <!-- ================= BREADCRUMBS ================= -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <a href="analyzers.html">Analyzer Search</a>
+    <span>›</span>
+    <a href="analyzers/abb/az10/">ABB AZ10</a>
+    <span>›</span>
+    <span class="current">Alarms</span>
+  </nav>
 
-<main class="container">
+  <main class="container">
 
-  <!-- ================= INTRO ================= -->
-  <div class="panel">
-    <h2>ABB AZ10 – Alarm Decision Trees</h2>
-    <p class="muted">
-      Select an alarm to view detailed troubleshooting guidance,
-      field checks, and corrective actions.
-      These alarms are common across ABB AZ-series analyzers.
-    </p>
+    <!-- ================= INTRO ================= -->
+    <section class="panel">
+      <h2>ABB AZ10 – Alarm Decision Trees</h2>
+      <p class="muted">
+        Select an alarm to view detailed troubleshooting guidance,
+        field checks, and corrective actions based on real field experience.
+      </p>
 
-    <div class="warn">
-      <b>Technician note:</b>
-      Always verify sample condition, heater status, and reference air
-      before replacing sensors or electronics.
-    </div>
-  </div>
+      <div class="warn">
+        <b>Technician note:</b>
+        Always verify sample condition, heater status, and reference gas
+        before replacing sensors or electronics.
+      </div>
+    </section>
 
-  <!-- ================= ALARM LIST ================= -->
-  <div class="panel">
-    <h3>Common ABB AZ10 Alarms</h3>
+    <!-- ================= ALARM LIST ================= -->
+    <section class="panel">
+      <h3>Common ABB AZ10 Alarms</h3>
 
-    <ul class="list">
-      <li>
-        <a href="alarms/abb/no-signal.html">
-          No Oxygen Signal
+      <ul class="list">
+        <li>
+          <a href="analyzers/abb/az10/alarms/calibration-fault.html">
+            Calibration Fault
+          </a>
+        </li>
+
+        <li>
+          <a href="analyzers/abb/az10/alarms/heater-fault.html">
+            Heater Fault
+          </a>
+        </li>
+
+        <li>
+          <a href="analyzers/abb/az10/alarms/reference-gas-fault.html">
+            Reference Gas Fault
+          </a>
+        </li>
+
+        <li>
+          <a href="analyzers/abb/az10/alarms/sensor-fault.html">
+            Sensor Fault
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ================= NAVIGATION ================= -->
+    <section class="panel">
+      <div class="action-row">
+        <a class="btn btn-ghost" href="analyzers/abb/az10/">
+          ← Back to AZ10 Overview
         </a>
-      </li>
-      <li>
-        <a href="alarms/abb/heater-error.html">
-          Heater Error
+
+        <a class="btn btn-ghost" href="analyzers.html?filter=abb">
+          ABB Analyzer Search →
         </a>
-      </li>
-      <li>
-        <a href="alarms/abb/calibration-failure.html">
-          Calibration Failure
-        </a>
-      </li>
-      <li>
-        <a href="alarms/abb/low-sensor-response.html">
-          Low Sensor Response
-        </a>
-      </li>
-      <li>
-        <a href="alarms/abb/reference-air-fault.html">
-          Reference Air Fault
-        </a>
-      </li>
-    </ul>
-  </div>
+      </div>
+    </section>
 
-  <!-- ================= NAVIGATION ================= -->
-  <div class="panel">
-    <div class="action-row">
-      <a class="btn btn-ghost" href="analyzers/abb/az10/">
-        ← Back to AZ10 Overview
-      </a>
+  </main>
 
-      <a class="btn btn-ghost" href="alarms/abb/">
-        All ABB Alarms →
-      </a>
+  <!-- ================= CENTRAL FOOTER ================= -->
+  <div id="siteFooter"></div>
 
-      <a class="btn btn-ghost" href="analyzers.html?filter=abb">
-        ABB Analyzer Search →
-      </a>
-    </div>
-  </div>
-
-</main>
-
-<!-- ================= CENTRAL FOOTER ================= -->
-<div id="siteFooter"></div>
-
-<script src="assets/js/includes.js?v=2026-01-18"></script>
+  <!-- ================= LOAD HEADER / FOOTER ================= -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
