@@ -3,65 +3,136 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog | AnalyzersHub</title>
 
-  <base href="/analyzershub/">
+  <title>Blog | AnalyzersHub – By Technicians. For Analyzers.</title>
 
-  <!-- ✅ CSS only in HEAD (cache bust) -->
-  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
+  <meta name="description"
+        content="Read expert articles on industrial analyzers, gas analysis, CEMS, process monitoring, and real plant experience written by analyzer technicians." />
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 
-<body data-page="blog">
+<body>
 
-  <!-- ✅ CENTRAL HEADER -->
-  <div id="siteHeader"></div>
+<!-- =========================
+     HEADER
+========================= -->
+<header class="site-header">
+  <div class="site-header-inner">
 
-  <!-- Hero -->
-  <section class="hero-search">
-    <div class="hero-inner">
-      <h2>Blog</h2>
-      <p>Short field notes, troubleshooting stories, and calibration tips.</p>
-      <div class="action-row">
-        <a class="btn btn-primary" href="blog/posts/2026-01-01-welcome.html">Read the first post →</a>
-        <a class="btn btn-ghost" href="analyzers.html">Back to Analyzer Search</a>
-      </div>
-    </div>
+    <a class="brand" href="../index.html" aria-label="AnalyzersHub Home">
+      <!-- Paste your FINAL animated SVG logo with tagline here -->
+    </a>
+
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="../analyzers.html">Knowledge Base</a>
+      <a href="../learn/index.html">Learn</a>
+      <a href="../community/index.html">Community</a>
+      <span class="nav-sep"></span>
+      <a href="index.html" class="active">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- =========================
+     HERO
+========================= -->
+<section class="hero-search">
+  <div class="hero-inner">
+    <h2>AnalyzersHub Blog</h2>
+    <p>Insights, fundamentals, history, and real-world experience from analyzer technicians.</p>
+  </div>
+</section>
+
+<!-- =========================
+     BREADCRUMBS
+========================= -->
+<div class="crumbs">
+  <a href="../index.html">Home</a>
+  <span>›</span>
+  <span class="current">Blog</span>
+</div>
+
+<!-- =========================
+     BLOG LIST
+========================= -->
+<main class="container">
+
+  <section class="post-grid">
+
+    <!-- BLOG CARD 1 -->
+    <article class="post-card">
+      <p class="post-meta">Analyzer Fundamentals · History</p>
+      <h3>Why Industrial Analyzers Exist – The Origin Story</h3>
+      <p>
+        Understand how industrial analyzers evolved from manual sampling
+        and why real-time process analysis became essential.
+      </p>
+      <a class="btn btn-primary"
+         href="why-industrial-analyzers-exist.html">
+        Read Article
+      </a>
+    </article>
+
+    <!-- BLOG CARD 2 (COMING SOON) -->
+    <article class="post-card">
+      <p class="post-meta">Gas Analysis · Evolution</p>
+      <h3>Evolution of Gas Analyzers – From Manual Tubes to Smart Systems</h3>
+      <p>
+        A journey through the technological evolution of gas analyzers
+        and how modern systems transformed process control.
+      </p>
+      <span class="btn btn-ghost muted">
+        Coming Soon
+      </span>
+    </article>
+
+    <!-- BLOG CARD 3 (COMING SOON) -->
+    <article class="post-card">
+      <p class="post-meta">Process Safety · Compliance</p>
+      <h3>Why Online Analyzers Are Critical in Modern Plants</h3>
+      <p>
+        Learn why continuous measurement is vital for safety,
+        product quality, and environmental compliance.
+      </p>
+      <span class="btn btn-ghost muted">
+        Coming Soon
+      </span>
+    </article>
+
+    <!-- BLOG CARD 4 (COMING SOON) -->
+    <article class="post-card">
+      <p class="post-meta">Technician Insights</p>
+      <h3>Analyzer Reliability vs Accuracy – What Really Matters?</h3>
+      <p>
+        A technician’s perspective on why reliable data
+        matters more than datasheet accuracy.
+      </p>
+      <span class="btn btn-ghost muted">
+        Coming Soon
+      </span>
+    </article>
+
   </section>
 
-  <main class="container">
+</main>
 
-    <div class="post-grid">
-
-      <article class="post-card">
-        <h3>Welcome to AnalyzersHub Blog</h3>
-        <p class="post-meta">2026-01-01 • 3 min read</p>
-        <p class="muted">What this site is, how to use decision trees, and how to request new analyzers.</p>
-        <div class="action-row">
-          <a class="btn btn-ghost" href="blog/posts/2026-01-01-welcome.html">Open →</a>
-        </div>
-      </article>
-
-      <!-- Copy this card for every new post -->
-      <!--
-      <article class="post-card">
-        <h3>Post title</h3>
-        <p class="post-meta">YYYY-MM-DD • X min read</p>
-        <p class="muted">Short summary…</p>
-        <div class="action-row">
-          <a class="btn btn-ghost" href="blog/posts/YYYY-MM-DD-title.html">Open →</a>
-        </div>
-      </article>
-      -->
-
+<!-- =========================
+     FOOTER
+========================= -->
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <p class="muted">© AnalyzersHub — By Technicians. For Analyzers.</p>
+    <div class="footer-links">
+      <a href="../disclaimer.html">Disclaimer</a>
+      <a href="../contact.html">Contact</a>
     </div>
-
-  </main>
-
-  <!-- ✅ CENTRAL FOOTER -->
-  <div id="siteFooter"></div>
-
-  <!-- ✅ LOAD HEADER/FOOTER -->
-  <script src="assets/js/includes.js?v=2026-01-18"></script>
+  </div>
+</footer>
 
 </body>
 </html>
