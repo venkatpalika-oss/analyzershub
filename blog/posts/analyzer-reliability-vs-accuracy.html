@@ -54,29 +54,13 @@
   </script>
 
   <!-- ================= STYLES ================= -->
-  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="stylesheet" href="../../assets/css/style.css?v=2026-01-18">
 </head>
 
-<body>
+<body data-page="blog">
 
-<!-- ================= HEADER ================= -->
-<header class="site-header">
-  <div class="site-header-inner">
-    <a class="brand" href="../../index.html" aria-label="AnalyzersHub Home">
-      <!-- INLINE SVG LOGO (same as other pages) -->
-    </a>
-
-    <nav class="site-nav">
-      <a href="../../index.html">Home</a>
-      <a href="../../analyzers.html">Knowledge Base</a>
-      <a href="../../learn/index.html">Learn</a>
-      <a href="../../community/index.html">Community</a>
-      <span class="nav-sep"></span>
-      <a href="../index.html" class="active">Blog</a>
-      <a href="../../contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+<!-- ✅ CENTRAL HEADER (DO NOT CHANGE) -->
+<div id="siteHeader"></div>
 
 <!-- ================= HERO ================= -->
 <section class="hero-search">
@@ -87,7 +71,11 @@
 </section>
 
 <!-- ================= BREADCRUMBS ================= -->
-<div class="crumbs" id="auto-crumbs"></div>
+<nav class="crumbs">
+  <a href="../../index.html">Home</a><span>›</span>
+  <a href="../index.html">Blog</a><span>›</span>
+  <span class="current">Reliability vs Accuracy</span>
+</nav>
 
 <!-- ================= CONTENT ================= -->
 <main class="container">
@@ -106,7 +94,7 @@
 
     <p>
       Engineers often debate analyzer accuracy in decimals and percentages.
-      Technicians, however, face a different reality:
+      Technicians face a different reality:
       an analyzer that is perfectly accurate but frequently unavailable
       is practically useless.
     </p>
@@ -117,10 +105,9 @@
     </blockquote>
 
     <h2>What Is Accuracy?</h2>
-
     <p>
-      Accuracy refers to how close a measurement is to the true value.
-      It is usually defined under ideal laboratory conditions.
+      Accuracy describes how close a measurement is to the true value,
+      usually defined under ideal laboratory conditions.
     </p>
 
     <ul class="list">
@@ -130,117 +117,53 @@
       <li>Perfect calibration gases</li>
     </ul>
 
-    <p>
-      These conditions rarely exist in operating plants.
-    </p>
-
     <h2>What Is Reliability?</h2>
-
-    <p>
-      Reliability is the analyzer’s ability to:
-    </p>
-
     <ul class="list">
-      <li>Stay online</li>
-      <li>Provide consistent trends</li>
-      <li>Recover quickly from disturbances</li>
-      <li>Maintain measurement integrity over time</li>
+      <li>Staying online</li>
+      <li>Providing consistent trends</li>
+      <li>Recovering quickly from disturbances</li>
+      <li>Maintaining long-term stability</li>
     </ul>
 
     <div class="step">
       Reliability means operators trust the number they see.
     </div>
 
-    <h2>Why Reliability Matters More in Real Plants</h2>
+    <h2>Why Reliability Matters More</h2>
 
-    <h3>1. Control Needs Trends, Not Perfection</h3>
+    <h3>1. Control Needs Trends</h3>
     <p>
-      Process control reacts to trends.
-      A stable, repeatable signal is more valuable than a theoretically perfect one.
+      Control systems react to trends, not laboratory perfection.
     </p>
 
-    <h3>2. Alarms Depend on Availability</h3>
+    <h3>2. Alarms Require Availability</h3>
     <p>
-      An analyzer in maintenance mode cannot protect equipment or people.
-      Reliability ensures alarms are active when needed most.
+      An analyzer in maintenance mode cannot protect people or equipment.
     </p>
 
-    <h3>3. Environmental Compliance Is Continuous</h3>
+    <h3>3. Compliance Is Continuous</h3>
     <p>
-      Regulators care about data availability as much as accuracy.
-      Missing data periods often cause more trouble than small bias errors.
+      Regulators value data availability as much as accuracy.
     </p>
-
-    <h2>Common Causes of Poor Reliability</h2>
-
-    <ul class="list">
-      <li>Sample system design issues</li>
-      <li>Condensation and moisture ingress</li>
-      <li>Particulate fouling</li>
-      <li>Frequent calibration drift</li>
-      <li>Inadequate maintenance access</li>
-    </ul>
 
     <blockquote class="warn">
       Most analyzer failures are caused by sample systems — not analyzers.
     </blockquote>
 
-    <h2>The Technician’s Role</h2>
-
-    <ul class="list">
-      <li>Clean and heated sample lines</li>
-      <li>Maintained filters</li>
-      <li>Realistic calibration routines</li>
-      <li>Meaningful alarm limits</li>
-    </ul>
-
-    <div class="step">
-      A slightly less accurate analyzer that is always online
-      is more valuable than a highly accurate analyzer that frequently fails.
-    </div>
-
     <h2>Conclusion</h2>
-
     <p>
       Accuracy impresses on paper.
       Reliability delivers in the field.
     </p>
 
-    <p>
-      The best analyzer systems are those that technicians can keep running,
-      operators can trust, and plants can depend on.
-    </p>
-
   </article>
 </main>
 
-<!-- ================= FOOTER ================= -->
-<footer class="site-footer">
-  <div class="site-footer-inner">
-    <p class="muted">© AnalyzersHub — By Technicians. For Analyzers.</p>
-    <div class="footer-links">
-      <a href="../../disclaimer.html">Disclaimer</a>
-      <a href="../../contact.html">Contact</a>
-    </div>
-  </div>
-</footer>
+<!-- ✅ CENTRAL FOOTER -->
+<div id="siteFooter"></div>
 
-<!-- ================= BREADCRUMB SCRIPT ================= -->
-<script>
-(function(){
-  const crumbs = document.getElementById("auto-crumbs");
-  if(!crumbs) return;
-
-  const title = document.querySelector("h1")?.innerText || "Article";
-
-  crumbs.innerHTML =
-    '<a href="../../index.html">Home</a>' +
-    '<span>›</span>' +
-    '<a href="../index.html">Blog</a>' +
-    '<span>›</span>' +
-    '<span class="current">' + title + '</span>';
-})();
-</script>
+<!-- ✅ LOAD INCLUDES (CRITICAL) -->
+<script src="../../assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
