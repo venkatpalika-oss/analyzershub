@@ -86,5 +86,22 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  const crumbs = document.getElementById("auto-crumbs");
+  if(!crumbs) return;
+
+  const title = document.querySelector("h1")?.innerText || "Article";
+
+  crumbs.innerHTML = `
+    <a href="../../index.html">Home</a>
+    <span>›</span>
+    <a href="../index.html">Blog</a>
+    <span>›</span>
+    <span class="current">${title}</span>
+  `;
+})();
+</script>
+
 </body>
 </html>
