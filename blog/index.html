@@ -34,158 +34,158 @@
 
 <body data-page="blog">
 
-  <!-- ================= CENTRAL HEADER ================= -->
-  <div id="siteHeader"></div>
+<!-- ================= CENTRAL HEADER ================= -->
+<div id="siteHeader"></div>
 
-  <!-- ================= HERO ================= -->
-  <section class="hero-search">
-    <div class="hero-inner">
-      <h2>AnalyzersHub Blog</h2>
+<!-- ================= HERO ================= -->
+<section class="hero-search">
+  <div class="hero-inner">
+    <h2>AnalyzersHub Blog</h2>
+    <p>
+      Insights, fundamentals, history, and real-world experience
+      from analyzer technicians.
+    </p>
+  </div>
+</section>
+
+<!-- ================= BREADCRUMBS ================= -->
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="index.html">Home</a>
+  <span>›</span>
+  <span class="current">Blog</span>
+</nav>
+
+<!-- ================= MAIN CONTENT ================= -->
+<main class="container">
+
+  <!-- CATEGORY FILTERS -->
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="fundamentals">Fundamentals</button>
+    <button class="filter-btn" data-filter="evolution">Evolution</button>
+    <button class="filter-btn" data-filter="safety">Safety</button>
+  </div>
+
+  <!-- BLOG GRID -->
+  <section class="post-grid">
+
+    <!-- BLOG 1 -->
+    <article class="post-card" data-category="fundamentals">
+      <p class="post-meta">Analyzer Fundamentals · History</p>
+      <h3>Why Industrial Analyzers Exist – Beyond Compliance</h3>
       <p>
-        Insights, fundamentals, history, and real-world experience
-        from analyzer technicians.
+        Industrial analyzers exist not just for compliance, but for safety,
+        process stability, efficiency, and decision-making.
       </p>
-    </div>
+      <a class="btn btn-primary"
+         href="blog/posts/why-industrial-analyzers-exist.html">
+        Read Article
+      </a>
+    </article>
+
+    <!-- BLOG 2 -->
+    <article class="post-card" data-category="evolution">
+      <p class="post-meta">Gas Analysis · Evolution</p>
+      <h3>Evolution of Gas Analyzers – From Manual Tests to Smart Systems</h3>
+      <p>
+        The journey of gas analyzers from manual laboratory testing
+        to modern online and smart analyzer systems.
+      </p>
+      <a class="btn btn-primary"
+         href="blog/posts/evolution-of-gas-analyzers.html">
+        Read Article
+      </a>
+    </article>
+
+    <!-- BLOG 3 -->
+    <article class="post-card" data-category="safety">
+      <p class="post-meta">CEMS · Environmental Compliance</p>
+      <h3>Why CEMS Exists – Origin and Significance</h3>
+      <p>
+        Why continuous emission monitoring was introduced
+        and why availability matters more than perfection.
+      </p>
+      <a class="btn btn-primary"
+         href="blog/posts/why-cems-exists-origin-significance.html">
+        Read Article
+      </a>
+    </article>
+
+    <!-- BLOG 4 -->
+    <article class="post-card" data-category="fundamentals">
+      <p class="post-meta">Technician Insights · Reliability</p>
+      <h3>Analyzer Reliability vs Accuracy – What Really Matters?</h3>
+      <p>
+        Why analyzer reliability often matters more than accuracy
+        in real plant operating conditions.
+      </p>
+      <a class="btn btn-primary"
+         href="blog/posts/analyzer-reliability-vs-accuracy.html">
+        Read Article
+      </a>
+    </article>
+
+    <!-- BLOG 5 -->
+    <article class="post-card" data-category="safety">
+      <p class="post-meta">Process Monitoring · Safety</p>
+      <h3>Why Online Analyzers Are Critical in Modern Plants</h3>
+      <p>
+        Why real-time online analyzers are essential for safety,
+        control, quality, and compliance.
+      </p>
+      <a class="btn btn-primary"
+         href="blog/posts/why-online-analyzers-are-critical.html">
+        Read Article
+      </a>
+    </article>
+
+    <!-- BLOG 6 -->
+    <article class="post-card" data-category="fundamentals">
+      <p class="post-meta">Sampling Systems · Analyzer Fundamentals</p>
+      <h3>Analyzer Sampling Systems Explained – The Real Backbone</h3>
+      <p>
+        Why sampling systems matter more than the analyzer itself
+        and how technicians should design and maintain them.
+      </p>
+      <a class="btn btn-primary"
+         href="blog/posts/analyzer-sampling-systems-explained.html">
+        Read Article
+      </a>
+    </article>
+
   </section>
 
-  <!-- ================= BREADCRUMBS ================= -->
-  <nav class="crumbs" aria-label="Breadcrumb">
-    <a href="index.html">Home</a>
-    <span>›</span>
-    <span class="current">Blog</span>
-  </nav>
+</main>
 
-  <!-- ================= MAIN CONTENT ================= -->
-  <main class="container">
+<!-- ================= CENTRAL FOOTER ================= -->
+<div id="siteFooter"></div>
 
-    <!-- CATEGORY FILTERS -->
-    <div class="filter-bar">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="fundamentals">Fundamentals</button>
-      <button class="filter-btn" data-filter="evolution">Evolution</button>
-      <button class="filter-btn" data-filter="safety">Safety</button>
-    </div>
+<!-- ================= LOAD HEADER / FOOTER ================= -->
+<script src="assets/js/includes.js?v=2026-01-18"></script>
 
-    <!-- BLOG GRID -->
-    <section class="post-grid">
+<!-- ================= FILTER SCRIPT ================= -->
+<script>
+(function(){
+  const buttons = document.querySelectorAll(".filter-btn");
+  const posts = document.querySelectorAll(".post-card");
 
-      <!-- BLOG 1 -->
-      <article class="post-card" data-category="fundamentals">
-        <p class="post-meta">Analyzer Fundamentals · History</p>
-        <h3>Why Industrial Analyzers Exist – The Origin Story</h3>
-        <p>
-          Understand how industrial analyzers evolved from manual sampling
-          and why real-time process analysis became essential.
-        </p>
-        <a class="btn btn-primary"
-           href="blog/posts/why-industrial-analyzers-exist.html">
-          Read Article
-        </a>
-      </article>
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      buttons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
 
-      <!-- BLOG 2 -->
-      <article class="post-card" data-category="evolution">
-        <p class="post-meta">Gas Analysis · Evolution</p>
-        <h3>Evolution of Gas Analyzers – From Manual Tubes to Smart Systems</h3>
-        <p>
-          Explore the journey of gas analyzers from early manual methods
-          to modern smart, digital, and networked systems.
-        </p>
-        <a class="btn btn-primary"
-           href="blog/posts/evolution-of-gas-analyzers.html">
-          Read Article
-        </a>
-      </article>
+      const filter = btn.dataset.filter;
 
-      <!-- BLOG 3 -->
-      <article class="post-card" data-category="safety">
-        <p class="post-meta">CEMS · Environmental Compliance</p>
-        <h3>Why CEMS Exists – Origin and Significance</h3>
-        <p>
-          Learn why Continuous Emission Monitoring Systems were introduced
-          and why continuous monitoring is essential.
-        </p>
-        <a class="btn btn-primary"
-           href="blog/posts/why-cems-exists-origin-significance.html">
-          Read Article
-        </a>
-      </article>
-
-      <!-- BLOG 4 -->
-      <article class="post-card" data-category="fundamentals">
-        <p class="post-meta">Technician Insights · Reliability</p>
-        <h3>Analyzer Reliability vs Accuracy – What Really Matters?</h3>
-        <p>
-          Discover why analyzer reliability often matters more than accuracy
-          in real plant operating conditions.
-        </p>
-        <a class="btn btn-primary"
-           href="blog/posts/analyzer-reliability-vs-accuracy.html">
-          Read Article
-        </a>
-      </article>
-
-      <!-- BLOG 5 -->
-      <article class="post-card" data-category="safety">
-        <p class="post-meta">Process Monitoring · Safety</p>
-        <h3>Why Online Analyzers Are Critical in Modern Plants</h3>
-        <p>
-          Learn why real-time online analyzers are essential
-          for safety, quality, efficiency, and compliance.
-        </p>
-        <a class="btn btn-primary"
-           href="blog/posts/why-online-analyzers-are-critical.html">
-          Read Article
-        </a>
-      </article>
-
-      <!-- BLOG 6 -->
-      <article class="post-card" data-category="fundamentals">
-        <p class="post-meta">Sampling Systems · Analyzer Fundamentals</p>
-        <h3>Analyzer Sampling Systems Explained – The Real Backbone</h3>
-        <p>
-          Understand why sampling systems matter more than the analyzer itself
-          and how technicians should design and maintain them.
-        </p>
-        <a class="btn btn-primary"
-           href="blog/posts/analyzer-sampling-systems-explained.html">
-          Read Article
-        </a>
-      </article>
-
-    </section>
-
-  </main>
-
-  <!-- ================= CENTRAL FOOTER ================= -->
-  <div id="siteFooter"></div>
-
-  <!-- ================= LOAD HEADER / FOOTER ================= -->
-  <script src="assets/js/includes.js?v=2026-01-18"></script>
-
-  <!-- ================= FILTER SCRIPT ================= -->
-  <script>
-  (function(){
-    const buttons = document.querySelectorAll(".filter-btn");
-    const posts = document.querySelectorAll(".post-card");
-
-    buttons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        buttons.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-
-        const filter = btn.dataset.filter;
-
-        posts.forEach(post => {
-          post.style.display =
-            (filter === "all" || post.dataset.category === filter)
-            ? ""
-            : "none";
-        });
+      posts.forEach(post => {
+        post.style.display =
+          (filter === "all" || post.dataset.category === filter)
+          ? ""
+          : "none";
       });
     });
-  })();
-  </script>
+  });
+})();
+</script>
 
 </body>
 </html>
