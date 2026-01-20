@@ -9,7 +9,26 @@
   <meta name="description"
         content="A practical explanation of analyzer sampling systems, why they matter more than the analyzer itself, and how technicians should design and maintain them." />
 
-  <!-- GOOGLE BLOGPOSTING SCHEMA -->
+  <!-- ================= PROJECT BASE (REQUIRED) ================= -->
+  <base href="/analyzershub/">
+
+  <!-- ================= SECURITY HEADERS ================= -->
+  <meta http-equiv="Content-Security-Policy"
+        content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline';
+        img-src 'self' data:;
+        connect-src 'self';
+        object-src 'none';
+        base-uri 'self';
+        frame-ancestors 'none';
+        ">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+  <!-- ================= BLOGPOSTING SCHEMA ================= -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -38,30 +57,16 @@
   }
   </script>
 
-  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <!-- ================= STYLES ================= -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18" />
 </head>
-<body>
 
-<header class="site-header">
-  <div class="site-header-inner">
+<body data-page="blog">
 
-    <a class="brand" href="../../index.html" aria-label="AnalyzersHub Home">
-      <!-- Paste your FINAL animated SVG logo with tagline here -->
-    </a>
+<!-- ================= CENTRAL HEADER ================= -->
+<div id="siteHeader"></div>
 
-    <nav class="site-nav">
-      <a href="../../index.html">Home</a>
-      <a href="../../analyzers.html">Knowledge Base</a>
-      <a href="../../learn/index.html">Learn</a>
-      <a href="../../community/index.html">Community</a>
-      <span class="nav-sep"></span>
-      <a href="../index.html" class="active">Blog</a>
-      <a href="../../contact.html">Contact</a>
-    </nav>
-
-  </div>
-</header>
-
+<!-- ================= HERO ================= -->
 <section class="hero-search">
   <div class="hero-inner">
     <h2>Analyzer Sampling Systems</h2>
@@ -69,11 +74,11 @@
   </div>
 </section>
 
-<!-- AUTO BREADCRUMBS -->
+<!-- ================= BREADCRUMBS ================= -->
 <div class="crumbs" id="auto-crumbs"></div>
 
+<!-- ================= CONTENT ================= -->
 <main class="container">
-
 <article class="panel">
 
 <p class="post-meta">
@@ -218,19 +223,15 @@ is the key to mastering analyzer performance.
 </p>
 
 </article>
-
 </main>
 
-<footer class="site-footer">
-  <div class="site-footer-inner">
-    <p class="muted">© AnalyzersHub — By Technicians. For Analyzers.</p>
-    <div class="footer-links">
-      <a href="../../disclaimer.html">Disclaimer</a>
-      <a href="../../contact.html">Contact</a>
-    </div>
-  </div>
-</footer>
+<!-- ================= CENTRAL FOOTER ================= -->
+<div id="siteFooter"></div>
 
+<!-- ================= LOAD HEADER / FOOTER ================= -->
+<script src="assets/js/includes.js?v=2026-01-18"></script>
+
+<!-- ================= BREADCRUMB SCRIPT ================= -->
 <script>
 (function(){
   const crumbs = document.getElementById("auto-crumbs");
@@ -238,13 +239,12 @@ is the key to mastering analyzer performance.
 
   const title = document.querySelector("h1")?.innerText || "Article";
 
-  crumbs.innerHTML = `
-    <a href="../../index.html">Home</a>
-    <span>›</span>
-    <a href="../index.html">Blog</a>
-    <span>›</span>
-    <span class="current">${title}</span>
-  `;
+  crumbs.innerHTML =
+    '<a href="index.html">Home</a>' +
+    '<span>›</span>' +
+    '<a href="blog/index.html">Blog</a>' +
+    '<span>›</span>' +
+    '<span class="current">' + title + '</span>';
 })();
 </script>
 
