@@ -54,12 +54,12 @@
   </script>
 
   <!-- ================= STYLES ================= -->
-  <link rel="stylesheet" href="../../assets/css/style.css?v=2026-01-18">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=2026-01-18" />
 </head>
 
 <body data-page="blog">
 
-<!-- ✅ CENTRAL HEADER (SAME AS OTHER PAGES) -->
+<!-- ================= CENTRAL HEADER ================= -->
 <div id="siteHeader"></div>
 
 <!-- ================= HERO ================= -->
@@ -71,11 +71,7 @@
 </section>
 
 <!-- ================= BREADCRUMBS ================= -->
-<nav class="crumbs">
-  <a href="../../index.html">Home</a><span>›</span>
-  <a href="../index.html">Blog</a><span>›</span>
-  <span class="current">Why CEMS Exists</span>
-</nav>
+<div class="crumbs" id="auto-crumbs"></div>
 
 <!-- ================= CONTENT ================= -->
 <main class="container">
@@ -93,9 +89,10 @@
     </strong></p>
 
     <p>
-      Continuous Emission Monitoring Systems (CEMS) exist because
-      periodic testing could not represent real plant operation.
-      Regulators, operators, and communities required continuous visibility.
+      Continuous Emission Monitoring Systems (CEMS) did not appear
+      because technology improved alone.
+      They were created because industries, regulators,
+      and the public needed trustworthy, continuous emissions data.
     </p>
 
     <blockquote class="field-tip">
@@ -103,38 +100,129 @@
     </blockquote>
 
     <h2>Before CEMS: Periodic Sampling</h2>
+
     <p>
-      Earlier compliance relied on manual stack testing.
-      While accurate at that moment, it provided no insight
-      into day-to-day emissions.
+      Historically, emissions compliance relied on manual stack testing
+      and periodic sampling.
+      Measurements were taken:
     </p>
 
-    <h2>Why Continuous Monitoring Became Necessary</h2>
     <ul class="list">
-      <li>Environmental protection</li>
-      <li>Regulatory confidence</li>
-      <li>Operator awareness</li>
+      <li>Once per quarter or year</li>
+      <li>Under controlled test conditions</li>
+      <li>Often announced in advance</li>
+    </ul>
+
+    <p>
+      While these tests could show compliance at that moment,
+      they provided no visibility into day-to-day plant operation.
+    </p>
+
+    <h2>The Compliance Gap</h2>
+
+    <p>
+      Regulators began to recognize a major problem:
+      emissions could remain compliant during testing
+      and exceed limits the rest of the time.
+    </p>
+
+    <div class="step">
+      Occasional testing could not represent continuous operation.
+    </div>
+
+    <h2>Why Continuous Monitoring Became Necessary</h2>
+
+    <h3>1. Environmental Protection</h3>
+    <p>
+      Air quality impacts communities continuously,
+      not only during scheduled tests.
+      Continuous monitoring provides transparency and accountability.
+    </p>
+
+    <h3>2. Regulatory Confidence</h3>
+    <p>
+      Regulators need confidence that limits are respected
+      during startups, shutdowns, and upset conditions.
+    </p>
+
+    <h3>3. Operator Awareness</h3>
+    <p>
+      Operators can only control what they can see.
+      Real-time emissions data enables immediate corrective action.
+    </p>
+
+    <h2>What CEMS Actually Measures</h2>
+
+    <ul class="list">
+      <li>SO₂, NOx, CO, CO₂</li>
+      <li>O₂ for normalization</li>
+      <li>Flow, temperature, pressure</li>
+      <li>Opacity or particulate matter</li>
     </ul>
 
     <blockquote class="warn">
       CEMS is a system — analyzers, sampling, calibration, and data handling.
     </blockquote>
 
+    <h2>Why Reliability Matters More Than Accuracy in CEMS</h2>
+
+    <p>
+      Regulatory frameworks emphasize data availability.
+      A slightly biased but continuous measurement
+      is more valuable than an accurate system that frequently fails.
+    </p>
+
+    <h2>The Technician’s Role in CEMS</h2>
+
+    <ul class="list">
+      <li>Maintaining sample probes and lines</li>
+      <li>Preventing condensation and plugging</li>
+      <li>Ensuring calibration systems function correctly</li>
+      <li>Maintaining analyzer uptime</li>
+    </ul>
+
+    <div class="step">
+      A CEMS is only as reliable as the technician maintaining it.
+    </div>
+
     <h2>Conclusion</h2>
+
     <p>
       CEMS exists because occasional measurement was not enough.
-      Continuous monitoring protects the environment
-      and improves operational accountability.
+      Continuous monitoring protects the environment,
+      supports compliance, and drives better plant operation.
+    </p>
+
+    <p>
+      CEMS is not just a regulatory requirement —
+      it is an operational responsibility.
     </p>
 
   </article>
 </main>
 
-<!-- ================= FOOTER ================= -->
+<!-- ================= CENTRAL FOOTER ================= -->
 <div id="siteFooter"></div>
 
-<!-- ================= INCLUDES ================= -->
+<!-- ================= LOAD HEADER / FOOTER ================= -->
 <script src="../../assets/js/includes.js?v=2026-01-18"></script>
+
+<!-- ================= BREADCRUMB SCRIPT ================= -->
+<script>
+(function(){
+  const crumbs = document.getElementById("auto-crumbs");
+  if(!crumbs) return;
+
+  const title = document.querySelector("h1")?.innerText || "Article";
+
+  crumbs.innerHTML =
+    '<a href="../../index.html">Home</a>' +
+    '<span>›</span>' +
+    '<a href="../index.html">Blog</a>' +
+    '<span>›</span>' +
+    '<span class="current">' + title + '</span>';
+})();
+</script>
 
 </body>
 </html>
