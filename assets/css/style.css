@@ -522,12 +522,5 @@ img{max-width:100%;height:auto;display:block}
   text-decoration:none;
 }
 .footer-links a:hover{text-decoration:underline}
-/* =========================
-   HEADER LOGO ALIGNMENT FIX
-========================= */
 
-.site-header .brand,
-.site-header .logo {
-  position: relative;
-  top: 4px;   /* 👈 adjust: try 3px–6px */
 }
