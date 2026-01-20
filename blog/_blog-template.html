@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title><!-- BLOG TITLE --> | AnalyzersHub</title>
+
+  <meta name="description"
+        content="<!-- BLOG META DESCRIPTION -->" />
+
+  <!-- ================= SECURITY HEADERS ================= -->
+  <meta http-equiv="Content-Security-Policy"
+        content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline';
+        img-src 'self' data:;
+        object-src 'none';
+        base-uri 'self';
+        frame-ancestors 'none';
+        ">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+  <!-- ================= BLOGPOSTING SCHEMA ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "<!-- BLOG TITLE -->",
+    "description": "<!-- BLOG META DESCRIPTION -->",
+    "author": {
+      "@type": "Organization",
+      "name": "AnalyzersHub",
+      "url": "https://venkatpalika-oss.github.io/analyzershub/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AnalyzersHub",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://venkatpalika-oss.github.io/analyzershub/assets/images/favicon.png"
+      }
+    },
+    "datePublished": "YYYY-MM-DD",
+    "dateModified": "YYYY-MM-DD",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "<!-- FULL BLOG URL -->"
+    }
+  }
+  </script>
+
+  <!-- ================= STYLES ================= -->
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="../../index.html" aria-label="AnalyzersHub Home">
+      <!-- INLINE SVG LOGO HERE -->
+    </a>
+
+    <nav class="site-nav">
+      <a href="../../index.html">Home</a>
+      <a href="../../analyzers.html">Knowledge Base</a>
+      <a href="../../learn/index.html">Learn</a>
+      <a href="../../community/index.html">Community</a>
+      <span class="nav-sep"></span>
+      <a href="../index.html" class="active">Blog</a>
+      <a href="../../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero-search">
+  <div class="hero-inner">
+    <h2><!-- SHORT HERO TITLE --></h2>
+    <p><!-- HERO SUBTITLE --></p>
+  </div>
+</section>
+
+<!-- ================= BREADCRUMBS ================= -->
+<div class="crumbs" id="auto-crumbs"></div>
+
+<!-- ================= CONTENT ================= -->
+<main class="container">
+  <article class="panel">
+
+    <p class="post-meta">
+      <!-- CATEGORY · TAGS -->
+    </p>
+
+    <h1><!-- BLOG TITLE --></h1>
+
+    <!-- BLOG CONTENT START -->
+
+    <p><strong>Intro paragraph.</strong></p>
+
+    <h2>Section Heading</h2>
+    <p>Section content.</p>
+
+    <ul class="list">
+      <li>Point one</li>
+      <li>Point two</li>
+    </ul>
+
+    <blockquote class="field-tip">
+      Technician insight or field note.
+    </blockquote>
+
+    <h2>Conclusion</h2>
+    <p>Final takeaway.</p>
+
+    <!-- BLOG CONTENT END -->
+
+  </article>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <p class="muted">© AnalyzersHub — By Technicians. For Analyzers.</p>
+    <div class="footer-links">
+      <a href="../../disclaimer.html">Disclaimer</a>
+      <a href="../../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= BREADCRUMB SCRIPT ================= -->
+<script>
+(function(){
+  const crumbs = document.getElementById("auto-crumbs");
+  if(!crumbs) return;
+
+  const title = document.querySelector("h1")?.innerText || "Article";
+
+  crumbs.innerHTML =
+    '<a href="../../index.html">Home</a>' +
+    '<span>›</span>' +
+    '<a href="../index.html">Blog</a>' +
+    '<span>›</span>' +
+    '<span class="current">' + title + '</span>';
+})();
+</script>
+
+</body>
+</html>
