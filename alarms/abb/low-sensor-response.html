@@ -2,59 +2,115 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ABB Low Sensor Response | AnalyzersHub</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description"
-        content="ABB low sensor response alarm troubleshooting for AZ-series and TDLAS analyzers.">
+  <title>Low Sensor Response | ABB AZ10 Alarms | AnalyzersHub</title>
 
+  <meta name="description"
+        content="ABB AZ10 low sensor response alarm troubleshooting. Causes, field checks, and corrective actions for weak or slow zirconia sensor response.">
+
+  <!-- ✅ PROJECT BASE -->
   <base href="/analyzershub/">
+
+  <!-- ✅ GLOBAL CSS -->
   <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
 
 <body data-page="alarms">
 
-<div id="siteHeader"></div>
+  <!-- ================= CENTRAL HEADER ================= -->
+  <div id="siteHeader"></div>
 
-<nav class="crumbs">
-  <a href="index.html">Home</a><span>›</span>
-  <a href="alarms/abb/">ABB Alarms</a><span>›</span>
-  <span class="current">Low Sensor Response</span>
-</nav>
+  <!-- ================= BREADCRUMBS ================= -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <a href="analyzers.html">Analyzer Search</a>
+    <span>›</span>
+    <a href="analyzers/abb/az10/">ABB AZ10</a>
+    <span>›</span>
+    <a href="analyzers/abb/az10/alarms/">Alarms</a>
+    <span>›</span>
+    <span class="current">Low Sensor Response</span>
+  </nav>
 
-<main class="container">
+  <main class="container">
 
-  <div class="panel">
-    <h2>Alarm: Low Sensor Response</h2>
-    <p class="muted">
-      Common in zirconia and TDLAS analyzers when signal strength is reduced.
-    </p>
-  </div>
+    <!-- ================= INTRO ================= -->
+    <section class="panel">
+      <h2>Low Sensor Response — ABB AZ10</h2>
+      <p class="muted">
+        This alarm indicates that the zirconia oxygen sensor response
+        is weak, slow, or outside expected limits during operation
+        or calibration.
+      </p>
+    </section>
 
-  <div class="panel">
-    <h3>Probable Causes</h3>
-    <ul class="list">
-      <li>Sensor aging or contamination</li>
-      <li>Optical window fouling (TDLAS)</li>
-      <li>Low process gas flow</li>
-      <li>Sample path blockage</li>
-      <li>Incorrect installation</li>
-    </ul>
-  </div>
+    <!-- ================= CAUSES ================= -->
+    <section class="panel">
+      <h3>Probable Causes</h3>
+      <ul class="list">
+        <li>Sensor aging or loss of sensitivity</li>
+        <li>Sensor contamination from dust, sulfur, or corrosives</li>
+        <li>Low or unstable process gas flow at the probe</li>
+        <li>Partial blockage of the sensor tip or diffusion path</li>
+        <li>Incorrect probe installation or mounting angle</li>
+      </ul>
+    </section>
 
-  <div class="panel">
-    <h3>Corrective Actions</h3>
-    <ul class="list">
-      <li>Clean or replace sensor / optics</li>
-      <li>Verify probe alignment</li>
-      <li>Restore process gas flow</li>
-    </ul>
-  </div>
+    <!-- ================= FIELD CHECKS ================= -->
+    <section class="panel">
+      <h3>Field Checks</h3>
+      <ul class="list">
+        <li>Verify process gas flow and velocity at the probe</li>
+        <li>Inspect sensor tip for fouling or deposits</li>
+        <li>Confirm probe orientation and insertion depth</li>
+        <li>Check reference air flow and heater status</li>
+        <li>Perform a response test using calibration gas</li>
+      </ul>
+    </section>
 
-</main>
+    <!-- ================= ACTIONS ================= -->
+    <section class="panel">
+      <h3>Corrective Actions</h3>
+      <ul class="list">
+        <li>Clean or replace the zirconia sensor</li>
+        <li>Restore proper process gas flow conditions</li>
+        <li>Correct probe installation or alignment</li>
+        <li>Replace sensor if response remains slow or unstable</li>
+      </ul>
+    </section>
 
-<div id="siteFooter"></div>
-<script src="assets/js/includes.js?v=2026-01-18"></script>
+    <!-- ================= TECHNICIAN NOTE ================= -->
+    <div class="warn">
+      <b>Technician note:</b>
+      Low sensor response alarms are often secondary effects of
+      poor process conditions or contamination. Always address
+      the root cause before replacing sensors.
+    </div>
+
+    <!-- ================= NAV ================= -->
+    <section class="panel">
+      <div class="action-row">
+        <a class="btn btn-ghost"
+           href="analyzers/abb/az10/alarms/">
+          ← Back to AZ10 Alarms
+        </a>
+
+        <a class="btn btn-ghost"
+           href="analyzers/abb/az10/">
+          ← Back to AZ10 Overview
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= CENTRAL FOOTER ================= -->
+  <div id="siteFooter"></div>
+
+  <!-- ================= LOAD INCLUDES ================= -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
