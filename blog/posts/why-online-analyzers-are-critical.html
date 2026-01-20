@@ -9,7 +9,12 @@
   <meta name="description"
         content="Understand why online analyzers are critical for safety, control, quality, and environmental compliance in modern industrial plants." />
 
-  <!-- GOOGLE BLOGPOSTING SCHEMA -->
+  <base href="/analyzershub/">
+
+  <!-- GLOBAL CSS -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
+
+  <!-- BLOGPOSTING SCHEMA -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -26,7 +31,7 @@
       "name": "AnalyzersHub",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://venkatpalika-oss.github.io/analyzershub/assets/images/favicon.png"
+        "url": "https://venkatpalika-oss.github.io/analyzershub/assets/images/logo.svg"
       }
     },
     "datePublished": "2026-01-20",
@@ -60,32 +65,14 @@
     }]
   }
   </script>
-
-  <link rel="stylesheet" href="../../assets/css/style.css" />
 </head>
 
-<body>
+<body data-page="blog">
 
-<header class="site-header">
-  <div class="site-header-inner">
+<!-- ================= CENTRAL HEADER ================= -->
+<div id="siteHeader"></div>
 
-    <a class="brand" href="../../index.html" aria-label="AnalyzersHub Home">
-      <!-- Paste your FINAL animated SVG logo with tagline here -->
-    </a>
-
-    <nav class="site-nav">
-      <a href="../../index.html">Home</a>
-      <a href="../../analyzers.html">Knowledge Base</a>
-      <a href="../../learn/index.html">Learn</a>
-      <a href="../../community/index.html">Community</a>
-      <span class="nav-sep"></span>
-      <a href="../index.html" class="active">Blog</a>
-      <a href="../../contact.html">Contact</a>
-    </nav>
-
-  </div>
-</header>
-
+<!-- ================= HERO ================= -->
 <section class="hero-search">
   <div class="hero-inner">
     <h2>Online Analyzers</h2>
@@ -93,9 +80,10 @@
   </div>
 </section>
 
-<!-- AUTO BREADCRUMBS -->
+<!-- ================= BREADCRUMBS ================= -->
 <div class="crumbs" id="auto-crumbs"></div>
 
+<!-- ================= CONTENT ================= -->
 <main class="container">
 
 <article class="panel">
@@ -251,19 +239,15 @@ safely, and responsibly.
 </p>
 
 </article>
-
 </main>
 
-<footer class="site-footer">
-  <div class="site-footer-inner">
-    <p class="muted">© AnalyzersHub — By Technicians. For Analyzers.</p>
-    <div class="footer-links">
-      <a href="../../disclaimer.html">Disclaimer</a>
-      <a href="../../contact.html">Contact</a>
-    </div>
-  </div>
-</footer>
+<!-- ================= CENTRAL FOOTER ================= -->
+<div id="siteFooter"></div>
 
+<!-- ================= LOAD HEADER / FOOTER ================= -->
+<script src="assets/js/includes.js?v=2026-01-18"></script>
+
+<!-- ================= BREADCRUMB SCRIPT ================= -->
 <script>
 (function(){
   const crumbs = document.getElementById("auto-crumbs");
@@ -271,13 +255,12 @@ safely, and responsibly.
 
   const title = document.querySelector("h1")?.innerText || "Article";
 
-  crumbs.innerHTML = `
-    <a href="../../index.html">Home</a>
-    <span>›</span>
-    <a href="../index.html">Blog</a>
-    <span>›</span>
-    <span class="current">${title}</span>
-  `;
+  crumbs.innerHTML =
+    '<a href="../../index.html">Home</a>' +
+    '<span>›</span>' +
+    '<a href="../index.html">Blog</a>' +
+    '<span>›</span>' +
+    '<span class="current">' + title + '</span>';
 })();
 </script>
 
