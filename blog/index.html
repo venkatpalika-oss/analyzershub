@@ -9,19 +9,35 @@
   <meta name="description"
         content="Read expert articles on industrial analyzers, gas analysis, CEMS, process monitoring, and real plant experience written by analyzer technicians." />
 
-  <!-- ✅ PROJECT BASE -->
+  <!-- ================= SECURITY HEADERS ================= -->
+  <meta http-equiv="Content-Security-Policy"
+        content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline';
+        img-src 'self' data:;
+        connect-src 'self';
+        object-src 'none';
+        base-uri 'self';
+        frame-ancestors 'none';
+        ">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+  <!-- ================= PROJECT BASE ================= -->
   <base href="/analyzershub/">
 
-  <!-- ✅ GLOBAL CSS -->
+  <!-- ================= GLOBAL CSS ================= -->
   <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
 
 <body data-page="blog">
 
-  <!-- ✅ CENTRAL HEADER -->
+  <!-- ================= CENTRAL HEADER ================= -->
   <div id="siteHeader"></div>
 
-  <!-- ✅ HERO -->
+  <!-- ================= HERO ================= -->
   <section class="hero-search">
     <div class="hero-inner">
       <h2>AnalyzersHub Blog</h2>
@@ -32,14 +48,14 @@
     </div>
   </section>
 
-  <!-- ✅ BREADCRUMBS -->
+  <!-- ================= BREADCRUMBS ================= -->
   <nav class="crumbs" aria-label="Breadcrumb">
     <a href="index.html">Home</a>
     <span>›</span>
     <span class="current">Blog</span>
   </nav>
 
-  <!-- ✅ MAIN CONTENT -->
+  <!-- ================= MAIN CONTENT ================= -->
   <main class="container">
 
     <!-- CATEGORY FILTERS -->
@@ -141,13 +157,13 @@
 
   </main>
 
-  <!-- ✅ CENTRAL FOOTER -->
+  <!-- ================= CENTRAL FOOTER ================= -->
   <div id="siteFooter"></div>
 
-  <!-- ✅ LOAD HEADER / FOOTER -->
+  <!-- ================= LOAD HEADER / FOOTER ================= -->
   <script src="assets/js/includes.js?v=2026-01-18"></script>
 
-  <!-- ✅ FILTER SCRIPT -->
+  <!-- ================= FILTER SCRIPT ================= -->
   <script>
   (function(){
     const buttons = document.querySelectorAll(".filter-btn");
@@ -161,11 +177,10 @@
         const filter = btn.dataset.filter;
 
         posts.forEach(post => {
-          if(filter === "all" || post.dataset.category === filter){
-            post.style.display = "";
-          } else {
-            post.style.display = "none";
-          }
+          post.style.display =
+            (filter === "all" || post.dataset.category === filter)
+            ? ""
+            : "none";
         });
       });
     });
