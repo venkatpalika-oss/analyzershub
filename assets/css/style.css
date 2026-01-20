@@ -26,7 +26,7 @@ img{max-width:100%;height:auto;display:block}
   position:sticky;
   top:0;
   z-index:9999;
-  background:#0b3c5d !important;  /* force solid header everywhere */
+  background:#0b3c5d !important;
   opacity:1 !important;
   filter:none !important;
   backdrop-filter:none !important;
@@ -46,19 +46,25 @@ img{max-width:100%;height:auto;display:block}
   justify-content:space-between;
   gap:16px;
 }
+
 /* =========================
-   BRAND LOGO SUPPORT (FINAL)
+   BRAND / LOGO (FINAL FIXED)
 ========================= */
+.brand{
+  display:flex;
+  flex-direction:row;      /* logo + text side by side */
+  align-items:center;
+  gap:12px;
+  color:#fff;
+  font-weight:900;
+  letter-spacing:.2px;
+  text-decoration:none;
+}
+
 .site-logo{
   height:42px;
   width:auto;
   display:block;
-}
-
-.brand{
-  flex-direction:row;       /* logo + text side-by-side */
-  align-items:center;
-  gap:12px;
 }
 
 .brand-text-wrap{
@@ -73,16 +79,6 @@ img{max-width:100%;height:auto;display:block}
   font-size:1.2rem;
 }
 
-.brand{
-  color:#fff;
-  font-weight:900;
-  font-size:1.2rem;
-  letter-spacing:.2px;
-  display:flex;
-  flex-direction:column;
-  line-height:1.1;
-}
-
 .brand-sub{
   font-size:.72rem;
   font-weight:700;
@@ -90,6 +86,9 @@ img{max-width:100%;height:auto;display:block}
   letter-spacing:.4px;
 }
 
+/* =========================
+   NAVIGATION
+========================= */
 .site-nav{
   display:flex;
   flex-wrap:wrap;
@@ -124,20 +123,24 @@ img{max-width:100%;height:auto;display:block}
 }
 
 @media(max-width:900px){
-  .site-header-inner{flex-direction:column;align-items:flex-start}
-  .brand-sub,.nav-sep{display:none}
+  .site-header-inner{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .brand-sub,
+  .nav-sep{
+    display:none;
+  }
 }
 
 /* =========================
    HERO – HOME
-   (Uses assets/images/home-hero.png)
 ========================= */
 .hero{
   min-height:360px;
   display:flex;
   align-items:center;
   color:#fff;
-
   background:
     linear-gradient(rgba(11,60,93,.85), rgba(11,60,93,.65)),
     url("images/home-hero.png");
@@ -171,19 +174,21 @@ img{max-width:100%;height:auto;display:block}
 }
 
 @media(max-width:768px){
-  .hero{min-height:260px;background-position:center top}
+  .hero{
+    min-height:260px;
+    background-position:center top;
+  }
   .hero h2{font-size:1.8rem}
 }
 
 /* =========================
-   HERO – INNER PAGES (Search/Knowledge/etc)
+   HERO – INNER PAGES
 ========================= */
 .hero-search{
   min-height:240px;
   display:flex;
   align-items:center;
   color:#fff;
-
   background:
     linear-gradient(rgba(11,60,93,.88), rgba(11,60,93,.70)),
     url("images/home-hero.png");
@@ -274,10 +279,19 @@ img{max-width:100%;height:auto;display:block}
   background:#d1d5db;
 }
 
-.card h3,.card h4{margin:8px 0;color:#0b3c5d}
-.card p{margin:0 0 12px;font-size:.95rem;opacity:.92}
+.card h3,
+.card h4{
+  margin:8px 0;
+  color:#0b3c5d;
+}
 
-/* Brand / category strips */
+.card p{
+  margin:0 0 12px;
+  font-size:.95rem;
+  opacity:.92;
+}
+
+/* Brand strips */
 .card.yokogawa::before{background:linear-gradient(90deg,#0b3c5d,#1f78b4)}
 .card.abb::before{background:linear-gradient(90deg,#1f78b4,#0b3c5d)}
 .card.siemens::before{background:linear-gradient(90deg,#2e7d32,#1f78b4)}
@@ -306,7 +320,10 @@ img{max-width:100%;height:auto;display:block}
 }
 
 .btn:hover{transform:translateY(-1px)}
-.btn:focus{outline:none;box-shadow:0 0 0 4px rgba(31,120,180,.18)}
+.btn:focus{
+  outline:none;
+  box-shadow:0 0 0 4px rgba(31,120,180,.18);
+}
 
 .btn-primary{background:#1f78b4;color:#fff}
 .btn-primary:hover{background:#155a8a}
@@ -315,7 +332,7 @@ img{max-width:100%;height:auto;display:block}
 .btn-ghost:hover{background:#e9f2f9}
 
 /* =========================
-   SEARCH BAR + FILTERS
+   SEARCH / FILTERS
 ========================= */
 .search-wrap{
   margin:16px 0 10px;
@@ -371,7 +388,7 @@ img{max-width:100%;height:auto;display:block}
 .is-hidden{display:none}
 
 /* =========================
-   LISTS & INFO BLOCKS
+   LISTS / INFO
 ========================= */
 .list{padding-left:18px;margin:10px 0 0}
 .list li{margin:6px 0}
@@ -403,7 +420,7 @@ img{max-width:100%;height:auto;display:block}
 }
 
 /* =========================
-   BLOG / KNOWLEDGE LISTING
+   BLOG / KNOWLEDGE
 ========================= */
 .post-grid{
   display:grid;
@@ -426,7 +443,12 @@ img{max-width:100%;height:auto;display:block}
   box-shadow:0 12px 28px rgba(0,0,0,.14);
 }
 
-.post-meta{font-size:.9rem;font-weight:800;opacity:.8;margin:0 0 10px}
+.post-meta{
+  font-size:.9rem;
+  font-weight:800;
+  opacity:.8;
+  margin:0 0 10px;
+}
 
 /* =========================
    FOOTER
