@@ -1,44 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Sensor Fault | ABB AZ10 Alarms</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body{margin:0;font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;background:#f4f6f9;color:#1f2937;}
-header{background:#1e3a8a;color:#fff;padding:18px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;}
-header h1{margin:0;font-size:1.7rem;}
-header nav a{color:#fff;text-decoration:none;margin-left:25px;font-weight:600;}
-header nav a:hover{text-decoration:underline;}
-main{padding:50px 20px; max-width:900px;margin:auto;}
-h2{text-align:center;color:#1e3a8a;margin-bottom:30px;}
-ul{line-height:1.6;}
-footer{background:#1e3a8a;color:#fff;text-align:center;padding:20px;margin-top:50px;}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sensor Fault | ABB AZ10 Alarms | AnalyzersHub</title>
+
+  <!-- ✅ PROJECT BASE -->
+  <base href="/analyzershub/">
+
+  <!-- ✅ GLOBAL CSS -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
-<body>
 
-<header>
-<h1>AnalyzersHub</h1>
-<nav>
-<a href="index.html">Back to Alarms</a>
-<a href="az10.html">Back to AZ10</a>
-</nav>
-</header>
+<body data-page="alarms">
 
-<main>
-<h2>Sensor Fault Decision Tree</h2>
-<ul>
-<li>Check sensor wiring and connectors for proper connection.</li>
-<li>Inspect sensor for contamination or physical damage.</li>
-<li>Reset the analyzer and monitor sensor readings.</li>
-<li>If fault persists → Replace sensor according to manufacturer instructions.</li>
-</ul>
-</main>
+  <!-- ================= CENTRAL HEADER ================= -->
+  <div id="siteHeader"></div>
 
-<footer>
-© 2026 AnalyzersHub.com
-</footer>
+  <!-- ================= BREADCRUMBS ================= -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <a href="analyzers.html">Analyzers</a>
+    <span>›</span>
+    <a href="analyzers/abb/az10/">ABB AZ10</a>
+    <span>›</span>
+    <span class="current">Sensor Fault</span>
+  </nav>
+
+  <!-- ================= MAIN ================= -->
+  <main class="container">
+
+    <section class="panel">
+      <h2>Sensor Fault — ABB AZ10</h2>
+
+      <p class="muted">
+        This alarm indicates a problem with the zirconia oxygen sensor
+        or its signal path. Sensor condition and wiring integrity
+        are critical for stable measurement.
+      </p>
+
+      <div class="card">
+        <h3>Recommended Diagnostic Sequence</h3>
+
+        <div class="step">
+          <b>1)</b> Check sensor wiring, connectors, and terminal blocks
+          for looseness, corrosion, or damage.
+        </div>
+
+        <div class="step">
+          <b>2)</b> Inspect the sensor for contamination, cracking,
+          or physical damage caused by process conditions.
+        </div>
+
+        <div class="step">
+          <b>3)</b> Reset the analyzer and observe sensor warm-up behavior
+          and output stability.
+        </div>
+
+        <div class="step">
+          <b>4)</b> Verify heater operation and reference gas flow,
+          as these can trigger false sensor fault indications.
+        </div>
+
+        <div class="step">
+          <b>5)</b> If the fault persists after checks,
+          replace the sensor according to ABB service instructions.
+        </div>
+      </div>
+
+      <div class="warn">
+        <b>Technician note:</b>
+        Many “sensor faults” are secondary effects of heater,
+        reference air, or sampling problems — verify those first.
+      </div>
+
+      <div class="action-row">
+        <a class="btn btn-ghost" href="analyzers/abb/az10/alarms/">
+          ← Back to AZ10 Alarms
+        </a>
+        <a class="btn btn-ghost" href="analyzers/abb/az10/">
+          ← Back to AZ10 Analyzer
+        </a>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ================= CENTRAL FOOTER ================= -->
+  <div id="siteFooter"></div>
+
+  <!-- ================= LOAD HEADER / FOOTER ================= -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
