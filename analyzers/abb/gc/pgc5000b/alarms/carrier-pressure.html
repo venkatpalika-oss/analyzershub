@@ -1,58 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PGC5000B Carrier / Pressure | Decision Tree | AnalyzersHub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<base href="/analyzershub/">
-<link rel="stylesheet" href="assets/css/style.css">
+  <title>Carrier / Pressure Fault | ABB PGC5000B | AnalyzersHub</title>
+
+  <meta name="description"
+        content="ABB PGC5000B carrier gas pressure troubleshooting. Decision tree for carrier stability, regulator hunting, leaks, and flow-related GC issues.">
+
+  <!-- ✅ PROJECT BASE -->
+  <base href="/analyzershub/">
+
+  <!-- ✅ GLOBAL CSS -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
-<body>
 
-<header class="site-header">
-  <div class="site-header-inner">
-    <a class="brand" href="index.html">AnalyzersHub</a>
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Search</a>
-      <a href="analyzers.html?category=gc">GC Hub</a>
-    </nav>
-  </div>
-</header>
+<body data-page="alarms">
 
-<nav class="crumbs" aria-label="Breadcrumb">
-  <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers.html?vendor=abb">ABB</a><span>›</span>
-  <a href="analyzers/abb/gc/pgc5000b/pgc5000b.html">PGC5000B</a><span>›</span>
-  <a href="analyzers/abb/gc/pgc5000b/alarms/index.html">Alarms</a><span>›</span>
-  <span class="current">Carrier / Pressure</span>
-</nav>
+  <!-- ================= CENTRAL HEADER ================= -->
+  <div id="siteHeader"></div>
 
-<main class="container">
-  <h2 style="margin-top:18px;">Decision Tree: Carrier / Pressure / Flow</h2>
+  <!-- ================= BREADCRUMBS ================= -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <a href="analyzers.html">Analyzer Search</a>
+    <span>›</span>
+    <a href="analyzers/abb/gc/pgc5000b/">ABB PGC5000B</a>
+    <span>›</span>
+    <a href="analyzers/abb/gc/pgc5000b/alarms/">Alarms</a>
+    <span>›</span>
+    <span class="current">Carrier / Pressure</span>
+  </nav>
 
-  <div class="action-row">
-    <a class="btn btn-ghost" href="analyzers/abb/gc/pgc5000b/alarms/index.html">← Back to Alarms Hub</a>
-    <a class="btn btn-primary" href="guides/gc/abb-gc-alarm-codes.html">ABB GC Codes →</a>
-    <a class="btn btn-ghost" href="guides/gc/chromatogram-guide.html">Chromatogram Guide</a>
-  </div>
+  <!-- ================= MAIN ================= -->
+  <main class="container">
 
-  <div class="warn"><b>Goal:</b> stabilize carrier pressure (no hunting) and remove leaks before changing method settings.</div>
+    <section class="panel">
+      <h2>Decision Tree — Carrier / Pressure / Flow</h2>
 
-  <div class="step"><b>1)</b> Confirm carrier cylinder pressure is adequate and isolation valves are open.</div>
-  <div class="step"><b>2)</b> Check regulator stability (no oscillation). Replace/repair if hunting.</div>
-  <div class="step"><b>3)</b> Leak test carrier line connections and manifold fittings.</div>
-  <div class="step"><b>4)</b> Verify carrier inlet pressure at analyzer is within spec and steady.</div>
-  <div class="step"><b>5)</b> Run 2–3 cycles and confirm peaks return + repeatability improves.</div>
-</main>
+      <p class="muted">
+        This decision tree focuses on stabilizing carrier gas pressure and flow.
+        Most GC instability issues originate from carrier supply problems
+        rather than method or detector configuration.
+      </p>
 
-<footer class="site-footer">
-  <div class="site-footer-inner">
-    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
-    <div class="footer-links"><a href="index.html">Home</a><a href="analyzers.html">Search</a></div>
-  </div>
-</footer>
+      <div class="action-row">
+        <a class="btn btn-ghost"
+           href="analyzers/abb/gc/pgc5000b/alarms/">
+          ← Back to Alarms Hub
+        </a>
+
+        <a class="btn btn-primary"
+           href="guides/gc/abb-gc-alarm-codes.html">
+          ABB GC Alarm Codes →
+        </a>
+
+        <a class="btn btn-ghost"
+           href="guides/gc/chromatogram-guide.html">
+          Chromatogram Guide
+        </a>
+      </div>
+
+      <div class="warn">
+        <b>Goal:</b>
+        Stabilize carrier pressure (no hunting) and eliminate leaks
+        before changing GC methods or calibration parameters.
+      </div>
+
+      <div class="card gc">
+        <h3>Recommended Troubleshooting Sequence</h3>
+
+        <div class="step">
+          <b>1)</b> Confirm carrier cylinder pressure is adequate and
+          all isolation valves are fully open.
+        </div>
+
+        <div class="step">
+          <b>2)</b> Check regulator stability.
+          Any pressure hunting or oscillation indicates a faulty regulator.
+        </div>
+
+        <div class="step">
+          <b>3)</b> Leak-test all carrier line connections,
+          manifolds, and fittings using approved leak-detection methods.
+        </div>
+
+        <div class="step">
+          <b>4)</b> Verify carrier inlet pressure at the analyzer
+          is within specification and remains steady over time.
+        </div>
+
+        <div class="step">
+          <b>5)</b> Run 2–3 analysis cycles and confirm
+          peak shape, retention time, and repeatability return to normal.
+        </div>
+      </div>
+
+      <div class="warn">
+        <b>Technician note:</b>
+        Never compensate for unstable carrier pressure by adjusting
+        method parameters. Fix the supply first.
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ================= CENTRAL FOOTER ================= -->
+  <div id="siteFooter"></div>
+
+  <!-- ================= LOAD HEADER / FOOTER ================= -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
