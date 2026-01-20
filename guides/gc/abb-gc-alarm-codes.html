@@ -1,70 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ABB GC Alarm Codes | AnalyzersHub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<base href="/analyzershub/">
-<link rel="stylesheet" href="assets/css/style.css">
+  <title>ABB GC Alarm Codes | AnalyzersHub</title>
+
+  <meta name="description"
+        content="Common ABB gas chromatograph alarm codes with symptoms, causes, and first troubleshooting checks for analyzer technicians." />
+
+  <!-- ================= BASE (DO NOT CHANGE) ================= -->
+  <base href="/analyzershub/">
+
+  <!-- ================= GLOBAL CSS ================= -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
-<body>
 
-<header class="site-header">
-  <div class="site-header-inner">
-    <a class="brand" href="index.html">AnalyzersHub</a>
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Search All Analyzers</a>
-      <a href="analyzers.html?category=gc">GC Hub</a>
-    </nav>
+<body data-page="guides">
+
+<!-- ================= CENTRAL HEADER ================= -->
+<div id="siteHeader"></div>
+
+<!-- ================= HERO ================= -->
+<section class="hero-search">
+  <div class="hero-inner">
+    <h2>ABB GC Alarm Codes</h2>
+    <p>Shared alarm patterns and first troubleshooting checks.</p>
   </div>
-</header>
+</section>
 
-<nav class="crumbs" aria-label="Breadcrumb">
-  <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers.html?category=gc">GC Hub</a><span>›</span>
-  <span class="current">ABB GC Alarm Codes</span>
-</nav>
+<!-- ================= BREADCRUMBS ================= -->
+<div class="crumbs" id="auto-crumbs"></div>
 
+<!-- ================= CONTENT ================= -->
 <main class="container">
-  <h2 style="margin-top:18px;">ABB GC Alarm Codes (Shared)</h2>
 
-  <div class="card abb">
-    <h3>Carrier / Pressure / Flow</h3>
-    <p>Symptoms: no peaks, unstable baseline, retention shifts.</p>
-    <p>First checks: carrier cylinder, regulator stability, leaks, pressure hunting.</p>
-  </div>
+  <article class="panel">
 
-  <div class="card abb">
-    <h3>Oven / Temperature</h3>
-    <p>Symptoms: oven not ready, heater fault, drift/repeatability issues.</p>
-    <p>First checks: setpoint vs actual, heater power, sensor integrity, airflow.</p>
-  </div>
+    <p class="post-meta">
+      Gas Chromatographs · ABB · Alarm Troubleshooting
+    </p>
 
-  <div class="card abb">
-    <h3>Valve / Sequence</h3>
-    <p>Symptoms: injection failure, stuck valve, timing faults.</p>
-    <p>First checks: instrument air, solenoids, valve actuation, method timing.</p>
-  </div>
+    <h1>ABB GC Alarm Codes (Shared)</h1>
 
-  <div class="card abb">
-    <h3>Communication / DCS</h3>
-    <p>Symptoms: stale values, bad quality, missing updates.</p>
-    <p>First checks: IP/network, mapping, protocol service, update cycle timing.</p>
-  </div>
+    <div class="card abb">
+      <h3>Carrier / Pressure / Flow</h3>
+      <p><b>Symptoms:</b> No peaks, unstable baseline, retention time shifts.</p>
+      <p><b>First checks:</b> Carrier cylinder pressure, regulator stability, leaks, pressure hunting.</p>
+    </div>
+
+    <div class="card abb">
+      <h3>Oven / Temperature</h3>
+      <p><b>Symptoms:</b> Oven not ready, heater fault, drift or repeatability issues.</p>
+      <p><b>First checks:</b> Setpoint vs actual temperature, heater power, sensor integrity, airflow.</p>
+    </div>
+
+    <div class="card abb">
+      <h3>Valve / Sequence</h3>
+      <p><b>Symptoms:</b> Injection failure, stuck valve, sequence timing faults.</p>
+      <p><b>First checks:</b> Instrument air, solenoids, valve actuation, method timing.</p>
+    </div>
+
+    <div class="card abb">
+      <h3>Communication / DCS</h3>
+      <p><b>Symptoms:</b> Stale values, bad quality flags, missing updates.</p>
+      <p><b>First checks:</b> IP/network, protocol service, mapping, update cycle timing.</p>
+    </div>
+
+  </article>
+
 </main>
 
-<footer class="site-footer">
-  <div class="site-footer-inner">
-    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Search</a>
-      <a href="guides/gc/chromatogram-guide.html">Chromatograms</a>
-    </div>
-  </div>
-</footer>
+<!-- ================= CENTRAL FOOTER ================= -->
+<div id="siteFooter"></div>
+
+<!-- ================= LOAD HEADER / FOOTER ================= -->
+<script src="assets/js/includes.js?v=2026-01-18"></script>
+
+<!-- ================= BREADCRUMB SCRIPT ================= -->
+<script>
+(function(){
+  const crumbs = document.getElementById("auto-crumbs");
+  if(!crumbs) return;
+
+  crumbs.innerHTML =
+    '<a href="index.html">Home</a>' +
+    '<span>›</span>' +
+    '<a href="analyzers.html?category=gc">GC Hub</a>' +
+    '<span>›</span>' +
+    '<span class="current">ABB GC Alarm Codes</span>';
+})();
+</script>
 
 </body>
 </html>
