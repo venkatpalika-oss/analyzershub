@@ -2,66 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ABB Calibration Failure Alarm | AnalyzersHub</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description"
-        content="ABB calibration failure alarm troubleshooting. Causes, checks, and corrective actions for ABB AZ-series analyzers.">
+  <title>Calibration Fault | ABB AZ10 Alarms | AnalyzersHub</title>
 
+  <meta name="description"
+        content="ABB AZ10 calibration fault troubleshooting. Causes, field checks, and corrective actions for zirconia oxygen analyzer calibration failures.">
+
+  <!-- ✅ PROJECT BASE -->
   <base href="/analyzershub/">
+
+  <!-- ✅ GLOBAL CSS -->
   <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
 
 <body data-page="alarms">
 
-<div id="siteHeader"></div>
+  <!-- ================= CENTRAL HEADER ================= -->
+  <div id="siteHeader"></div>
 
-<nav class="crumbs">
-  <a href="index.html">Home</a><span>›</span>
-  <a href="alarms/abb/">ABB Alarms</a><span>›</span>
-  <span class="current">Calibration Failure</span>
-</nav>
+  <!-- ================= BREADCRUMBS ================= -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <a href="analyzers.html">Analyzer Search</a>
+    <span>›</span>
+    <a href="analyzers/abb/az10/">ABB AZ10</a>
+    <span>›</span>
+    <a href="analyzers/abb/az10/alarms/">Alarms</a>
+    <span>›</span>
+    <span class="current">Calibration Fault</span>
+  </nav>
 
-<main class="container">
+  <main class="container">
 
-  <div class="panel">
-    <h2>Alarm: Calibration Failure</h2>
-    <p class="muted">
-      <b>Applicable Analyzers:</b> AZ10, AZ20, AZ25, AZ30, AZ40
-    </p>
-  </div>
+    <!-- ================= INTRO ================= -->
+    <section class="panel">
+      <h2>Calibration Fault — ABB AZ10</h2>
+      <p class="muted">
+        This alarm indicates that the analyzer failed to complete
+        a zero or span calibration within acceptable limits.
+      </p>
+    </section>
 
-  <div class="panel">
-    <h3>Probable Causes</h3>
-    <ul class="list">
-      <li>Calibration gas not reaching the sensor</li>
-      <li>Incorrect or expired calibration gas</li>
-      <li>Calibration solenoid valve failure</li>
-      <li>Leaks or blockage in calibration tubing</li>
-      <li>Slow or degraded sensor response</li>
-    </ul>
-  </div>
+    <!-- ================= CAUSES ================= -->
+    <section class="panel">
+      <h3>Probable Causes</h3>
+      <ul class="list">
+        <li>Calibration gas not reaching the sensor</li>
+        <li>Incorrect, expired, or contaminated calibration gas</li>
+        <li>Calibration solenoid valve not operating</li>
+        <li>Leaks or blockage in calibration tubing</li>
+        <li>Slow or degraded sensor response</li>
+      </ul>
+    </section>
 
-  <div class="panel">
-    <h3>Corrective Actions</h3>
-    <ul class="list">
-      <li>Verify calibration gas pressure and flow</li>
-      <li>Check calibration valve operation</li>
-      <li>Replace tubing or fittings</li>
-      <li>Replace sensor if response is slow</li>
-    </ul>
-  </div>
+    <!-- ================= ACTIONS ================= -->
+    <section class="panel">
+      <h3>Corrective Actions</h3>
+      <ul class="list">
+        <li>Verify calibration gas pressure and flow rate</li>
+        <li>Confirm correct gas concentration and cylinder validity</li>
+        <li>Check calibration valve actuation and piping</li>
+        <li>Leak-test calibration lines and fittings</li>
+        <li>Replace sensor if response time is excessive</li>
+      </ul>
+    </section>
 
-  <div class="panel">
-    <div class="action-row">
-      <a class="btn btn-ghost" href="alarms/abb/">← All ABB Alarms</a>
+    <!-- ================= TECHNICIAN NOTE ================= -->
+    <div class="warn">
+      <b>Technician note:</b>
+      Calibration failures are often secondary to reference air,
+      heater, or sampling issues. Verify those first before replacing sensors.
     </div>
-  </div>
 
-</main>
-
-<div id="siteFooter"></div>
-<script src="assets/js/includes.js?v=2026-01-18"></script>
-
-</body>
-</html>
+    <!-- ================= NAV ================= -->
+    <section class="panel">
+      <div class="action-row">
+        <a clas
