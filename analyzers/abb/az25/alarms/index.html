@@ -8,93 +8,101 @@
   <meta name="description"
         content="ABB AZ25 TDLAS analyzer alarm troubleshooting. Common alarm explanations, field checks, corrective actions, and decision tree navigation.">
 
+  <!-- ✅ PROJECT BASE -->
   <base href="/analyzershub/">
+
+  <!-- ✅ GLOBAL CSS -->
   <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
 
 <body data-page="alarms">
 
-<!-- ================= CENTRAL HEADER ================= -->
-<div id="siteHeader"></div>
+  <!-- ================= CENTRAL HEADER ================= -->
+  <div id="siteHeader"></div>
 
-<!-- ================= BREADCRUMBS ================= -->
-<nav class="crumbs">
-  <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers.html">Analyzer Search</a><span>›</span>
-  <a href="analyzers/abb/az25/">ABB AZ25</a><span>›</span>
-  <span class="current">Alarms</span>
-</nav>
+  <!-- ================= BREADCRUMBS ================= -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <a href="analyzers.html">Analyzer Search</a>
+    <span>›</span>
+    <a href="analyzers/abb/az25/">ABB AZ25</a>
+    <span>›</span>
+    <span class="current">Alarms</span>
+  </nav>
 
-<main class="container">
+  <main class="container">
 
-  <!-- ================= INTRO ================= -->
-  <div class="panel">
-    <h2>ABB AZ25 – Alarm Decision Trees</h2>
-    <p class="muted">
-      Alarm troubleshooting guidance for ABB AZ25 TDLAS analyzers.
-      These alarms are commonly related to optical path, signal strength,
-      alignment, and process conditions.
-    </p>
+    <!-- ================= INTRO ================= -->
+    <section class="panel">
+      <h2>ABB AZ25 – Alarm Decision Trees</h2>
+      <p class="muted">
+        Alarm troubleshooting guidance for ABB AZ25 TDLAS analyzers.
+        These alarms are commonly related to optical path condition,
+        signal strength, alignment, purge flow, and process disturbances.
+      </p>
 
-    <div class="warn">
-      <b>Technician note:</b>
-      AZ25 alarms are often caused by beam attenuation, window fouling,
-      purge issues, or process disturbances.
-      Always verify optical path condition before replacing hardware.
-    </div>
-  </div>
+      <div class="warn">
+        <b>Technician note:</b>
+        AZ25 alarms are often caused by beam attenuation, window fouling,
+        purge issues, or process upsets. Always verify the optical path
+        before replacing analyzer hardware.
+      </div>
+    </section>
 
-  <!-- ================= ALARM LIST ================= -->
-  <div class="panel">
-    <h3>Common ABB AZ25 Alarms</h3>
+    <!-- ================= ALARM LIST ================= -->
+    <section class="panel">
+      <h3>Common ABB AZ25 Alarms</h3>
 
-    <ul class="list">
-      <li>
-        <a href="alarms/abb/no-signal.html">
-          No Signal / Beam Lost
+      <ul class="list">
+
+        <li>
+          <a href="analyzers/abb/az25/alarms/no-signal.html">
+            No Signal / Beam Lost
+          </a>
+        </li>
+
+        <li>
+          <a href="analyzers/abb/az25/alarms/low-signal-strength.html">
+            Low Signal Strength / Attenuation
+          </a>
+        </li>
+
+        <li>
+          <a href="analyzers/abb/az25/alarms/calibration-fault.html">
+            Calibration Fault
+          </a>
+        </li>
+
+        <li>
+          <a href="analyzers/abb/az25/alarms/purge-fault.html">
+            Purge / Reference Path Fault
+          </a>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- ================= NAVIGATION ================= -->
+    <section class="panel">
+      <div class="action-row">
+        <a class="btn btn-ghost" href="analyzers/abb/az25/">
+          ← Back to AZ25 Overview
         </a>
-      </li>
-      <li>
-        <a href="alarms/abb/low-sensor-response.html">
-          Low Signal Strength / Attenuation
+
+        <a class="btn btn-ghost" href="analyzers.html?filter=abb">
+          ABB Analyzer Search →
         </a>
-      </li>
-      <li>
-        <a href="alarms/abb/calibration-failure.html">
-          Calibration Failure
-        </a>
-      </li>
-      <li>
-        <a href="alarms/abb/reference-air-fault.html">
-          Purge / Reference Path Fault
-        </a>
-      </li>
-    </ul>
-  </div>
+      </div>
+    </section>
 
-  <!-- ================= NAVIGATION ================= -->
-  <div class="panel">
-    <div class="action-row">
-      <a class="btn btn-ghost" href="analyzers/abb/az25/">
-        ← Back to AZ25 Overview
-      </a>
+  </main>
 
-      <a class="btn btn-ghost" href="alarms/abb/">
-        All ABB Alarms →
-      </a>
+  <!-- ================= CENTRAL FOOTER ================= -->
+  <div id="siteFooter"></div>
 
-      <a class="btn btn-ghost" href="analyzers.html?filter=abb">
-        ABB Analyzer Search →
-      </a>
-    </div>
-  </div>
-
-</main>
-
-<!-- ================= CENTRAL FOOTER ================= -->
-<div id="siteFooter"></div>
-
-<script src="assets/js/includes.js?v=2026-01-18"></script>
+  <!-- ================= LOAD HEADER / FOOTER ================= -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
