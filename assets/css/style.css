@@ -1,5 +1,5 @@
 /* =========================================================
-   AnalyzersHub - Global Styles (FINAL STABLE)
+   AnalyzersHub - Global Styles (FINAL STABLE + ANIMATED LOGO)
    File: assets/css/style.css
 ========================================================= */
 
@@ -48,7 +48,7 @@ img{max-width:100%;height:auto;display:block}
 }
 
 /* =========================
-   BRAND / LOGO (FULL LOGO ENABLED)
+   BRAND / LOGO (ANIMATED SVG)
 ========================= */
 .brand{
   display:flex;
@@ -61,31 +61,37 @@ img{max-width:100%;height:auto;display:block}
   text-decoration:none;
 }
 
-/* Old simple logo (kept for compatibility) */
-.site-logo{
-  height:42px;
-  width:auto;
+/* Animated inline SVG logo */
+.site-logo-animated{
   display:block;
-}
-
-/* NEW: Full logo (icon + text + tagline) */
-.site-logo-full{
-  height:52px;        /* exact visual match */
+  height:48px;
   width:auto;
-  display:block;
+  max-width:260px;
 }
 
 /* Tablet */
 @media(max-width:992px){
-  .site-logo-full{height:46px}
+  .site-logo-animated{
+    height:44px;
+  }
 }
 
 /* Mobile */
 @media(max-width:600px){
-  .site-logo-full{height:38px}
+  .site-logo-animated{
+    height:38px;
+  }
 }
 
-/* Disable HTML text branding (logo already contains text) */
+/* Accessibility: Reduce motion */
+@media (prefers-reduced-motion: reduce){
+  .site-logo-animated *{
+    animation:none !important;
+    transition:none !important;
+  }
+}
+
+/* Disable any old text branding */
 .brand-text-wrap,
 .brand-text,
 .brand-sub{
@@ -133,9 +139,7 @@ img{max-width:100%;height:auto;display:block}
     flex-direction:column;
     align-items:flex-start;
   }
-  .nav-sep{
-    display:none;
-  }
+  .nav-sep{display:none}
 }
 
 /* =========================
