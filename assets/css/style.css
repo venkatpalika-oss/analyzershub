@@ -48,7 +48,7 @@ img{max-width:100%;height:auto;display:block}
 }
 
 /* =========================
-   BRAND / LOGO (ANIMATED SVG)
+   BRAND / LOGO (ANIMATED SVG + TAGLINE)
 ========================= */
 .brand{
   display:flex;
@@ -61,25 +61,25 @@ img{max-width:100%;height:auto;display:block}
   text-decoration:none;
 }
 
-/* Animated inline SVG logo */
+/* Animated inline SVG logo (WITH TAGLINE) */
 .site-logo-animated{
   display:block;
-  height:52px;
+  height:60px;              /* increased to fit tagline */
   width:auto;
-  max-width:260px;
+  max-width:280px;
 }
 
 /* Tablet */
 @media(max-width:992px){
   .site-logo-animated{
-    height:44px;
+    height:52px;
   }
 }
 
 /* Mobile */
 @media(max-width:600px){
   .site-logo-animated{
-    height:38px;
+    height:48px;
   }
 }
 
