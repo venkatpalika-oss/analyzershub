@@ -1,60 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chromatogram Interpretation Guide | AnalyzersHub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<base href="/analyzershub/">
-<link rel="stylesheet" href="assets/css/style.css">
+  <title>Chromatogram Interpretation Guide | AnalyzersHub</title>
+
+  <meta name="description"
+        content="Practical chromatogram interpretation guide for GC technicians. Common symptoms, causes, and quick diagnostic checks." />
+
+  <!-- ================= BASE (DO NOT CHANGE) ================= -->
+  <base href="/analyzershub/">
+
+  <!-- ================= GLOBAL CSS ================= -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
-<body>
 
-<header class="site-header">
-  <div class="site-header-inner">
-    <a class="brand" href="index.html">AnalyzersHub</a>
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Search All Analyzers</a>
-      <a href="analyzers.html?category=gc">GC Hub</a>
-    </nav>
+<body data-page="guides">
+
+<!-- ================= CENTRAL HEADER ================= -->
+<div id="siteHeader"></div>
+
+<!-- ================= HERO ================= -->
+<section class="hero-search">
+  <div class="hero-inner">
+    <h2>Chromatogram Interpretation</h2>
+    <p>Practical GC troubleshooting through chromatogram patterns.</p>
   </div>
-</header>
+</section>
 
-<nav class="crumbs" aria-label="Breadcrumb">
-  <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers.html?category=gc">GC Hub</a><span>›</span>
-  <span class="current">Chromatogram Guide</span>
-</nav>
+<!-- ================= BREADCRUMBS ================= -->
+<div class="crumbs" id="auto-crumbs"></div>
 
+<!-- ================= CONTENT ================= -->
 <main class="container">
-  <h2 style="margin-top:18px;">Chromatogram Interpretation Guide</h2>
 
-  <div class="warn"><b>Tip:</b> Always stabilize sampling + carrier first. GC problems are often sampling problems.</div>
+  <article class="panel">
 
-  <div class="card gc">
-    <h3>Quick Checks</h3>
-    <p><b>No peaks:</b> sample blocked / valve not switching / carrier low.</p>
-    <p><b>Retention shift:</b> oven temp unstable / carrier pressure hunting.</p>
-    <p><b>Noisy baseline:</b> contamination / detector issue / grounding.</p>
-  </div>
+    <p class="post-meta">
+      Gas Chromatography · Chromatograms · Technician Guide
+    </p>
 
-  <div class="card gc">
-    <h3>Repeatability Rule</h3>
-    <p>After maintenance, confirm <b>2–3 stable consecutive runs</b> before releasing results.</p>
-  </div>
+    <h1>Chromatogram Interpretation Guide</h1>
+
+    <div class="warn">
+      <b>Tip:</b> Always stabilize sampling and carrier first.  
+      Most GC problems are sampling problems — not detector problems.
+    </div>
+
+    <div class="card gc">
+      <h3>Quick Checks</h3>
+      <p><b>No peaks:</b> Sample blocked, valve not switching, carrier pressure low.</p>
+      <p><b>Retention time shift:</b> Oven temperature unstable, carrier pressure hunting.</p>
+      <p><b>Noisy baseline:</b> Contamination, detector issue, grounding or shielding problem.</p>
+    </div>
+
+    <div class="card gc">
+      <h3>Repeatability Rule</h3>
+      <p>
+        After maintenance, confirm
+        <b>2–3 stable consecutive runs</b>
+        before releasing analyzer results to operations.
+      </p>
+    </div>
+
+  </article>
+
 </main>
 
-<footer class="site-footer">
-  <div class="site-footer-inner">
-    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Search</a>
-      <a href="guides/gc/abb-gc-alarm-codes.html">ABB GC Codes</a>
-    </div>
-  </div>
-</footer>
+<!-- ================= CENTRAL FOOTER ================= -->
+<div id="siteFooter"></div>
+
+<!-- ================= LOAD HEADER / FOOTER ================= -->
+<script src="assets/js/includes.js?v=2026-01-18"></script>
+
+<!-- ================= BREADCRUMB SCRIPT ================= -->
+<script>
+(function(){
+  const crumbs = document.getElementById("auto-crumbs");
+  if(!crumbs) return;
+
+  crumbs.innerHTML =
+    '<a href="index.html">Home</a>' +
+    '<span>›</span>' +
+    '<a href="analyzers.html?category=gc">GC Hub</a>' +
+    '<span>›</span>' +
+    '<span class="current">Chromatogram Guide</span>';
+})();
+</script>
 
 </body>
 </html>
