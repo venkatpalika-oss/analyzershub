@@ -2,58 +2,121 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ABB Reference Air Fault | AnalyzersHub</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description"
-        content="ABB reference air or purge fault alarm troubleshooting for AZ-series analyzers.">
+  <title>Reference Air Fault | ABB AZ10 Alarms | AnalyzersHub</title>
 
+  <meta name="description"
+        content="ABB AZ10 reference air fault troubleshooting. Causes, field checks, and corrective actions when reference air supply is lost or restricted.">
+
+  <!-- ✅ PROJECT BASE -->
   <base href="/analyzershub/">
+
+  <!-- ✅ GLOBAL CSS -->
   <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
 
 <body data-page="alarms">
 
-<div id="siteHeader"></div>
+  <!-- ================= CENTRAL HEADER ================= -->
+  <div id="siteHeader"></div>
 
-<nav class="crumbs">
-  <a href="index.html">Home</a><span>›</span>
-  <a href="alarms/abb/">ABB Alarms</a><span>›</span>
-  <span class="current">Reference Air / Purge Fault</span>
-</nav>
+  <!-- ================= BREADCRUMBS ================= -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <a href="analyzers.html">Analyzer Search</a>
+    <span>›</span>
+    <a href="analyzers/abb/az10/">ABB AZ10</a>
+    <span>›</span>
+    <a href="analyzers/abb/az10/alarms/">Alarms</a>
+    <span>›</span>
+    <span class="current">Reference Air Fault</span>
+  </nav>
 
-<main class="container">
+  <main class="container">
 
-  <div class="panel">
-    <h2>Alarm: Reference Air / Purge Fault</h2>
-    <p class="muted">
-      Reference air or purge supply is critical for accurate analyzer operation.
-    </p>
-  </div>
+    <!-- ================= INTRO ================= -->
+    <section class="panel">
+      <h2>Reference Air Fault — ABB AZ10</h2>
+      <p class="muted">
+        This alarm indicates that the analyzer reference air supply
+        is missing, restricted, or contaminated.
+        Stable reference air is essential for accurate zirconia
+        oxygen measurement.
+      </p>
 
-  <div class="panel">
-    <h3>Probable Causes</h3>
-    <ul class="list">
-      <li>Reference air filter blocked</li>
-      <li>Loss of reference air supply</li>
-      <li>Purge solenoid valve failure</li>
-      <li>Leaks or broken tubing</li>
-    </ul>
-  </div>
+      <div class="warn">
+        <b>Impact:</b>
+        Oxygen measurement may drift or become unstable
+        while this alarm is active.
+      </div>
+    </section>
 
-  <div class="panel">
-    <h3>Corrective Actions</h3>
-    <ul class="list">
-      <li>Restore reference air supply</li>
-      <li>Replace filters</li>
-      <li>Repair tubing or valves</li>
-    </ul>
-  </div>
+    <!-- ================= CAUSES ================= -->
+    <section class="panel">
+      <h3>Probable Causes</h3>
+      <ul class="list">
+        <li>Reference air filter blocked or saturated</li>
+        <li>Loss of reference air supply pressure</li>
+        <li>Purge or reference solenoid valve not operating</li>
+        <li>Leaks, kinks, or broken reference air tubing</li>
+        <li>Moisture or dust ingress into reference path</li>
+      </ul>
+    </section>
 
-</main>
+    <!-- ================= FIELD CHECKS ================= -->
+    <section class="panel">
+      <h3>Field Checks</h3>
+      <ul class="list">
+        <li>Verify reference air supply pressure and flow</li>
+        <li>Inspect and replace reference air filters if required</li>
+        <li>Check purge / reference solenoid valve operation</li>
+        <li>Inspect tubing for leaks, blockage, or damage</li>
+        <li>Confirm reference air exhaust flow is present</li>
+      </ul>
+    </section>
 
-<div id="siteFooter"></div>
-<script src="assets/js/includes.js?v=2026-01-18"></script>
+    <!-- ================= ACTIONS ================= -->
+    <section class="panel">
+      <h3>Corrective Actions</h3>
+      <ul class="list">
+        <li>Restore clean, dry reference air supply</li>
+        <li>Replace blocked or contaminated filters</li>
+        <li>Repair or replace damaged tubing or fittings</li>
+        <li>Replace faulty purge / reference solenoid valves</li>
+      </ul>
+    </section>
+
+    <!-- ================= TECHNICIAN NOTE ================= -->
+    <div class="warn">
+      <b>Technician note:</b>
+      Many reference air faults are caused by moisture ingress
+      or neglected filters. Regular inspection prevents repeat alarms.
+    </div>
+
+    <!-- ================= NAV ================= -->
+    <section class="panel">
+      <div class="action-row">
+        <a class="btn btn-ghost"
+           href="analyzers/abb/az10/alarms/">
+          ← Back to AZ10 Alarms
+        </a>
+
+        <a class="btn btn-ghost"
+           href="analyzers/abb/az10/">
+          ← Back to AZ10 Overview
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= CENTRAL FOOTER ================= -->
+  <div id="siteFooter"></div>
+
+  <!-- ================= LOAD INCLUDES ================= -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
