@@ -38,6 +38,29 @@
   }
   </script>
 
+  <!-- FAQ SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "What is more important: analyzer reliability or accuracy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In real industrial plants, analyzer reliability is more important because an accurate analyzer that is frequently offline provides no usable information."
+      }
+    },{
+      "@type": "Question",
+      "name": "Why do operators prefer reliable analyzers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Operators depend on stable, continuous analyzer readings for control and safety decisions rather than laboratory-level accuracy."
+      }
+    }]
+  }
+  </script>
+
   <link rel="stylesheet" href="../../assets/css/style.css" />
 </head>
 
@@ -75,31 +98,133 @@
 
 <main class="container">
 
-  <article class="panel">
+<article class="panel">
 
-    <p class="post-meta">
-      Technician Insights · Analyzer Fundamentals · Reliability
-    </p>
+<p class="post-meta">
+Technician Insights · Analyzer Fundamentals · Reliability
+</p>
 
-    <h1>Analyzer Reliability vs Accuracy – What Really Matters?</h1>
+<h1>Analyzer Reliability vs Accuracy – What Really Matters?</h1>
 
-    <p><strong>
-      In analyzer datasheets, accuracy is highlighted.
-      In real plants, reliability decides success or failure.
-    </strong></p>
+<p><strong>
+In analyzer datasheets, accuracy gets the spotlight.
+In real plants, reliability decides everything.
+</strong></p>
 
-    <p>
-      An analyzer that is extremely accurate but frequently offline
-      offers little value to operators or compliance systems.
-    </p>
+<p>
+Engineers often debate analyzer accuracy in decimals and percentages.
+Technicians, however, face a different reality:
+an analyzer that is perfectly accurate but frequently unavailable
+is practically useless.
+</p>
 
-    <blockquote class="field-tip">
-      An accurate analyzer that is down gives zero value.
-    </blockquote>
+<blockquote class="field-tip">
+An accurate analyzer that is down gives zero value.
+A reliable analyzer gives usable information every day.
+</blockquote>
 
-    <!-- (rest of article content unchanged) -->
+<h2>What Is Accuracy?</h2>
 
-  </article>
+<p>
+Accuracy refers to how close a measurement is to the true value.
+It is usually defined under ideal laboratory conditions.
+</p>
+
+<ul class="list">
+  <li>Clean samples</li>
+  <li>Stable temperature</li>
+  <li>Controlled pressure</li>
+  <li>Perfect calibration gases</li>
+</ul>
+
+<p>
+These conditions rarely exist in operating plants.
+</p>
+
+<h2>What Is Reliability?</h2>
+
+<p>
+Reliability is the analyzer’s ability to:
+</p>
+
+<ul class="list">
+  <li>Stay online</li>
+  <li>Provide consistent trends</li>
+  <li>Recover quickly from disturbances</li>
+  <li>Maintain measurement integrity over time</li>
+</ul>
+
+<div class="step">
+Reliability means operators trust the number they see.
+</div>
+
+<h2>Why Reliability Matters More in Real Plants</h2>
+
+<h3>1. Control Needs Trends, Not Perfection</h3>
+<p>
+Process control reacts to trends.
+A stable, repeatable signal is more valuable than a theoretically perfect one.
+</p>
+
+<h3>2. Alarms Depend on Availability</h3>
+<p>
+An analyzer in maintenance mode cannot protect equipment or people.
+Reliability ensures alarms are active when needed most.
+</p>
+
+<h3>3. Environmental Compliance Is Continuous</h3>
+<p>
+Regulators care about data availability as much as accuracy.
+Missing data periods often cause more trouble than small bias errors.
+</p>
+
+<h2>Common Causes of Poor Reliability</h2>
+
+<ul class="list">
+  <li>Sample system design issues</li>
+  <li>Condensation and moisture ingress</li>
+  <li>Particulate fouling</li>
+  <li>Frequent calibration drift</li>
+  <li>Inadequate maintenance access</li>
+</ul>
+
+<blockquote class="warn">
+Most analyzer failures are caused by sample systems — not analyzers.
+</blockquote>
+
+<h2>The Technician’s Role</h2>
+
+<p>
+Technicians play a direct role in analyzer reliability by ensuring:
+</p>
+
+<ul class="list">
+  <li>Sample lines are clean and heated where required</li>
+  <li>Filters are maintained</li>
+  <li>Calibration routines are realistic</li>
+  <li>Alarm limits are meaningful</li>
+</ul>
+
+<h2>Balancing Accuracy and Reliability</h2>
+
+<div class="step">
+A slightly less accurate analyzer that is always online
+is more valuable than a highly accurate analyzer that frequently fails.
+</div>
+
+<h2>Conclusion</h2>
+
+<p>
+Accuracy impresses on paper.
+Reliability delivers in the field.
+</p>
+
+<p>
+The best analyzer systems are those that technicians can keep running,
+operators can trust, and plants can depend on.
+</p>
+
+</article>
 
 </main>
 
@@ -113,7 +238,6 @@
   </div>
 </footer>
 
-<!-- AUTO BREADCRUMB SCRIPT -->
 <script>
 (function(){
   const crumbs = document.getElementById("auto-crumbs");
