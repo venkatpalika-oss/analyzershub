@@ -139,7 +139,9 @@ img{max-width:100%;height:auto;display:block}
     flex-direction:column;
     align-items:flex-start;
   }
-  .nav-sep{display:none}
+  .nav-sep{
+    display:none;
+  }
 }
 
 /* =========================
@@ -307,6 +309,35 @@ img{max-width:100%;height:auto;display:block}
 .card.ametek::before{background:linear-gradient(90deg,#374151,#111827)}
 .card.gc::before{background:linear-gradient(90deg,#2e7d32,#6fcf97)}
 .card.oxygen::before{background:linear-gradient(90deg,#1f78b4,#6fb6e9)}
+
+/* =========================
+   INDEX / HOME CARD ICONS (REDUCED SIZE)
+========================= */
+.card svg,
+.card img.icon,
+.card .icon{
+  width:32px;
+  height:32px;
+  margin-bottom:10px;
+}
+
+@media(max-width:992px){
+  .card svg,
+  .card img.icon,
+  .card .icon{
+    width:28px;
+    height:28px;
+  }
+}
+
+@media(max-width:600px){
+  .card svg,
+  .card img.icon,
+  .card .icon{
+    width:24px;
+    height:24px;
+  }
+}
 
 /* =========================
    BUTTONS
