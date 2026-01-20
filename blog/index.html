@@ -1,199 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Blog | AnalyzersHub – By Technicians. For Analyzers.</title>
 
   <meta name="description"
         content="Read expert articles on industrial analyzers, gas analysis, CEMS, process monitoring, and real plant experience written by analyzer technicians." />
 
-  <!-- Global CSS (UNIFORM, ABSOLUTE PATH) -->
-  <link rel="stylesheet" href="/analyzershub/assets/css/style.css" />
+  <!-- ✅ PROJECT BASE -->
+  <base href="/analyzershub/">
+
+  <!-- ✅ GLOBAL CSS -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
 
-<body>
+<body data-page="blog">
 
-<!-- ================= HEADER ================= -->
-<header class="site-header">
-  <div class="site-header-inner">
+  <!-- ✅ CENTRAL HEADER -->
+  <div id="siteHeader"></div>
 
-    <!-- BRAND / LOGO (CANONICAL) -->
-    <a class="brand" href="/analyzershub/index.html" aria-label="AnalyzersHub Home">
-      <img
-        src="/analyzershub/assets/images/logo.svg"
-        alt="AnalyzersHub – By Technicians. For Analyzers."
-        class="site-logo"
-      />
-    </a>
-
-    <!-- NAVIGATION -->
-    <nav class="site-nav">
-      <a href="/analyzershub/index.html">Home</a>
-      <a href="/analyzershub/analyzers.html">Knowledge Base</a>
-      <a href="/analyzershub/learn/index.html">Learn</a>
-      <a href="/analyzershub/community/index.html">Community</a>
-      <span class="nav-sep"></span>
-      <a href="/analyzershub/blog/index.html" class="active">Blog</a>
-      <a href="/analyzershub/contact.html">Contact</a>
-    </nav>
-
-  </div>
-</header>
-
-<!-- ================= HERO ================= -->
-<section class="hero-search">
-  <div class="hero-inner">
-    <h2>AnalyzersHub Blog</h2>
-    <p>Insights, fundamentals, history, and real-world experience from analyzer technicians.</p>
-  </div>
-</section>
-
-<!-- ================= BREADCRUMBS ================= -->
-<div class="crumbs">
-  <a href="/analyzershub/index.html">Home</a>
-  <span>›</span>
-  <span class="current">Blog</span>
-</div>
-
-<!-- ================= MAIN ================= -->
-<main class="container">
-
-  <!-- CATEGORY FILTERS -->
-  <div class="filter-bar">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="fundamentals">Fundamentals</button>
-    <button class="filter-btn" data-filter="evolution">Evolution</button>
-    <button class="filter-btn" data-filter="safety">Safety</button>
-  </div>
-
-  <!-- BLOG GRID -->
-  <section class="post-grid">
-
-    <!-- BLOG 1 -->
-    <article class="post-card" data-category="fundamentals">
-      <p class="post-meta">Analyzer Fundamentals · History</p>
-      <h3>Why Industrial Analyzers Exist – The Origin Story</h3>
+  <!-- ✅ HERO -->
+  <section class="hero-search">
+    <div class="hero-inner">
+      <h2>AnalyzersHub Blog</h2>
       <p>
-        Understand how industrial analyzers evolved from manual sampling
-        and why real-time process analysis became essential.
+        Insights, fundamentals, history, and real-world experience
+        from analyzer technicians.
       </p>
-      <a class="btn btn-primary"
-         href="/analyzershub/blog/posts/why-industrial-analyzers-exist.html">
-        Read Article
-      </a>
-    </article>
-
-    <!-- BLOG 2 -->
-    <article class="post-card" data-category="evolution">
-      <p class="post-meta">Gas Analysis · Evolution</p>
-      <h3>Evolution of Gas Analyzers – From Manual Tubes to Smart Systems</h3>
-      <p>
-        Explore the journey of gas analyzers from early manual methods
-        to modern smart, digital, and networked systems.
-      </p>
-      <a class="btn btn-primary"
-         href="/analyzershub/blog/posts/evolution-of-gas-analyzers.html">
-        Read Article
-      </a>
-    </article>
-
-    <!-- BLOG 3 -->
-    <article class="post-card" data-category="safety">
-      <p class="post-meta">CEMS · Environmental Compliance</p>
-      <h3>Why CEMS Exists – Origin and Significance</h3>
-      <p>
-        Learn why Continuous Emission Monitoring Systems were introduced
-        and why continuous monitoring is essential.
-      </p>
-      <a class="btn btn-primary"
-         href="/analyzershub/blog/posts/why-cems-exists-origin-significance.html">
-        Read Article
-      </a>
-    </article>
-
-    <!-- BLOG 4 -->
-    <article class="post-card" data-category="fundamentals">
-      <p class="post-meta">Technician Insights · Reliability</p>
-      <h3>Analyzer Reliability vs Accuracy – What Really Matters?</h3>
-      <p>
-        Discover why analyzer reliability often matters more than accuracy
-        in real plant operating conditions.
-      </p>
-      <a class="btn btn-primary"
-         href="/analyzershub/blog/posts/analyzer-reliability-vs-accuracy.html">
-        Read Article
-      </a>
-    </article>
-
-    <!-- BLOG 5 -->
-    <article class="post-card" data-category="safety">
-      <p class="post-meta">Process Monitoring · Safety</p>
-      <h3>Why Online Analyzers Are Critical in Modern Plants</h3>
-      <p>
-        Learn why real-time online analyzers are essential
-        for safety, quality, efficiency, and compliance.
-      </p>
-      <a class="btn btn-primary"
-         href="/analyzershub/blog/posts/why-online-analyzers-are-critical.html">
-        Read Article
-      </a>
-    </article>
-
-    <!-- BLOG 6 -->
-    <article class="post-card" data-category="fundamentals">
-      <p class="post-meta">Sampling Systems · Analyzer Fundamentals</p>
-      <h3>Analyzer Sampling Systems Explained – The Real Backbone</h3>
-      <p>
-        Understand why sampling systems matter more than the analyzer itself
-        and how technicians should design and maintain them.
-      </p>
-      <a class="btn btn-primary"
-         href="/analyzershub/blog/posts/analyzer-sampling-systems-explained.html">
-        Read Article
-      </a>
-    </article>
-
+    </div>
   </section>
 
-</main>
+  <!-- ✅ BREADCRUMBS -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <span class="current">Blog</span>
+  </nav>
 
-<!-- ================= FOOTER ================= -->
-<footer class="site-footer">
-  <div class="site-footer-inner">
-    <p class="muted">© AnalyzersHub — By Technicians. For Analyzers.</p>
-    <div class="footer-links">
-      <a href="/analyzershub/disclaimer.html">Disclaimer</a>
-      <a href="/analyzershub/contact.html">Contact</a>
+  <!-- ✅ MAIN CONTENT -->
+  <main class="container">
+
+    <!-- CATEGORY FILTERS -->
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="fundamentals">Fundamentals</button>
+      <button class="filter-btn" data-filter="evolution">Evolution</button>
+      <button class="filter-btn" data-filter="safety">Safety</button>
     </div>
-  </div>
-</footer>
 
-<!-- ================= FILTER SCRIPT ================= -->
-<script>
-(function(){
-  const buttons = document.querySelectorAll(".filter-btn");
-  const posts = document.querySelectorAll(".post-card");
+    <!-- BLOG GRID -->
+    <section class="post-grid">
 
-  buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      buttons.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
+      <!-- BLOG 1 -->
+      <article class="post-card" data-category="fundamentals">
+        <p class="post-meta">Analyzer Fundamentals · History</p>
+        <h3>Why Industrial Analyzers Exist – The Origin Story</h3>
+        <p>
+          Understand how industrial analyzers evolved from manual sampling
+          and why real-time process analysis became essential.
+        </p>
+        <a class="btn btn-primary"
+           href="blog/posts/why-industrial-analyzers-exist.html">
+          Read Article
+        </a>
+      </article>
 
-      const filter = btn.dataset.filter;
+      <!-- BLOG 2 -->
+      <article class="post-card" data-category="evolution">
+        <p class="post-meta">Gas Analysis · Evolution</p>
+        <h3>Evolution of Gas Analyzers – From Manual Tubes to Smart Systems</h3>
+        <p>
+          Explore the journey of gas analyzers from early manual methods
+          to modern smart, digital, and networked systems.
+        </p>
+        <a class="btn btn-primary"
+           href="blog/posts/evolution-of-gas-analyzers.html">
+          Read Article
+        </a>
+      </article>
 
-      posts.forEach(post => {
-        if(filter === "all" || post.dataset.category === filter){
-          post.style.display = "";
-        } else {
-          post.style.display = "none";
-        }
+      <!-- BLOG 3 -->
+      <article class="post-card" data-category="safety">
+        <p class="post-meta">CEMS · Environmental Compliance</p>
+        <h3>Why CEMS Exists – Origin and Significance</h3>
+        <p>
+          Learn why Continuous Emission Monitoring Systems were introduced
+          and why continuous monitoring is essential.
+        </p>
+        <a class="btn btn-primary"
+           href="blog/posts/why-cems-exists-origin-significance.html">
+          Read Article
+        </a>
+      </article>
+
+      <!-- BLOG 4 -->
+      <article class="post-card" data-category="fundamentals">
+        <p class="post-meta">Technician Insights · Reliability</p>
+        <h3>Analyzer Reliability vs Accuracy – What Really Matters?</h3>
+        <p>
+          Discover why analyzer reliability often matters more than accuracy
+          in real plant operating conditions.
+        </p>
+        <a class="btn btn-primary"
+           href="blog/posts/analyzer-reliability-vs-accuracy.html">
+          Read Article
+        </a>
+      </article>
+
+      <!-- BLOG 5 -->
+      <article class="post-card" data-category="safety">
+        <p class="post-meta">Process Monitoring · Safety</p>
+        <h3>Why Online Analyzers Are Critical in Modern Plants</h3>
+        <p>
+          Learn why real-time online analyzers are essential
+          for safety, quality, efficiency, and compliance.
+        </p>
+        <a class="btn btn-primary"
+           href="blog/posts/why-online-analyzers-are-critical.html">
+          Read Article
+        </a>
+      </article>
+
+      <!-- BLOG 6 -->
+      <article class="post-card" data-category="fundamentals">
+        <p class="post-meta">Sampling Systems · Analyzer Fundamentals</p>
+        <h3>Analyzer Sampling Systems Explained – The Real Backbone</h3>
+        <p>
+          Understand why sampling systems matter more than the analyzer itself
+          and how technicians should design and maintain them.
+        </p>
+        <a class="btn btn-primary"
+           href="blog/posts/analyzer-sampling-systems-explained.html">
+          Read Article
+        </a>
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- ✅ CENTRAL FOOTER -->
+  <div id="siteFooter"></div>
+
+  <!-- ✅ LOAD HEADER / FOOTER -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
+
+  <!-- ✅ FILTER SCRIPT -->
+  <script>
+  (function(){
+    const buttons = document.querySelectorAll(".filter-btn");
+    const posts = document.querySelectorAll(".post-card");
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        buttons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const filter = btn.dataset.filter;
+
+        posts.forEach(post => {
+          if(filter === "all" || post.dataset.category === filter){
+            post.style.display = "";
+          } else {
+            post.style.display = "none";
+          }
+        });
       });
     });
-  });
-})();
-</script>
+  })();
+  </script>
 
 </body>
 </html>
