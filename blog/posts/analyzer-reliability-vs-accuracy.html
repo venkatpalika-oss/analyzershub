@@ -13,19 +13,18 @@
   <meta http-equiv="Content-Security-Policy"
         content="
         default-src 'self';
-        script-src 'self';
-        style-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline';
         img-src 'self' data:;
         object-src 'none';
         base-uri 'self';
         frame-ancestors 'none';
         ">
-
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 
-  <!-- ================= STRUCTURED DATA ================= -->
+  <!-- ================= BLOGPOSTING SCHEMA ================= -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -54,38 +53,17 @@
   }
   </script>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [{
-      "@type": "Question",
-      "name": "What is more important: analyzer reliability or accuracy?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "In real industrial plants, analyzer reliability is more important because an accurate analyzer that is frequently offline provides no usable information."
-      }
-    },{
-      "@type": "Question",
-      "name": "Why do operators prefer reliable analyzers?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Operators depend on stable, continuous analyzer readings for control and safety decisions rather than laboratory-level accuracy."
-      }
-    }]
-  }
-  </script>
-
   <!-- ================= STYLES ================= -->
   <link rel="stylesheet" href="../../assets/css/style.css" />
 </head>
 
 <body>
 
+<!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="site-header-inner">
     <a class="brand" href="../../index.html" aria-label="AnalyzersHub Home">
-      <!-- Inline SVG logo -->
+      <!-- INLINE SVG LOGO (same as other pages) -->
     </a>
 
     <nav class="site-nav">
@@ -100,6 +78,7 @@
   </div>
 </header>
 
+<!-- ================= HERO ================= -->
 <section class="hero-search">
   <div class="hero-inner">
     <h2>Reliability vs Accuracy</h2>
@@ -107,8 +86,10 @@
   </div>
 </section>
 
+<!-- ================= BREADCRUMBS ================= -->
 <div class="crumbs" id="auto-crumbs"></div>
 
+<!-- ================= CONTENT ================= -->
 <main class="container">
   <article class="panel">
 
@@ -149,7 +130,15 @@
       <li>Perfect calibration gases</li>
     </ul>
 
+    <p>
+      These conditions rarely exist in operating plants.
+    </p>
+
     <h2>What Is Reliability?</h2>
+
+    <p>
+      Reliability is the analyzer’s ability to:
+    </p>
 
     <ul class="list">
       <li>Stay online</li>
@@ -162,6 +151,54 @@
       Reliability means operators trust the number they see.
     </div>
 
+    <h2>Why Reliability Matters More in Real Plants</h2>
+
+    <h3>1. Control Needs Trends, Not Perfection</h3>
+    <p>
+      Process control reacts to trends.
+      A stable, repeatable signal is more valuable than a theoretically perfect one.
+    </p>
+
+    <h3>2. Alarms Depend on Availability</h3>
+    <p>
+      An analyzer in maintenance mode cannot protect equipment or people.
+      Reliability ensures alarms are active when needed most.
+    </p>
+
+    <h3>3. Environmental Compliance Is Continuous</h3>
+    <p>
+      Regulators care about data availability as much as accuracy.
+      Missing data periods often cause more trouble than small bias errors.
+    </p>
+
+    <h2>Common Causes of Poor Reliability</h2>
+
+    <ul class="list">
+      <li>Sample system design issues</li>
+      <li>Condensation and moisture ingress</li>
+      <li>Particulate fouling</li>
+      <li>Frequent calibration drift</li>
+      <li>Inadequate maintenance access</li>
+    </ul>
+
+    <blockquote class="warn">
+      Most analyzer failures are caused by sample systems — not analyzers.
+    </blockquote>
+
+    <h2>The Technician’s Role</h2>
+
+    <ul class="list">
+      <li>Clean and heated sample lines</li>
+      <li>Maintained filters</li>
+      <li>Realistic calibration routines</li>
+      <li>Meaningful alarm limits</li>
+    </ul>
+
+    <div class="step">
+      A slightly less accurate analyzer that is always online
+      is more valuable than a highly accurate analyzer that frequently fails.
+    </div>
+
     <h2>Conclusion</h2>
 
     <p>
@@ -169,9 +206,15 @@
       Reliability delivers in the field.
     </p>
 
+    <p>
+      The best analyzer systems are those that technicians can keep running,
+      operators can trust, and plants can depend on.
+    </p>
+
   </article>
 </main>
 
+<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
   <div class="site-footer-inner">
     <p class="muted">© AnalyzersHub — By Technicians. For Analyzers.</p>
@@ -182,6 +225,7 @@
   </div>
 </footer>
 
+<!-- ================= BREADCRUMB SCRIPT ================= -->
 <script>
 (function(){
   const crumbs = document.getElementById("auto-crumbs");
