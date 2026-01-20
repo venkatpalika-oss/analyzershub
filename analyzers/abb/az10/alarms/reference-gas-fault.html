@@ -1,44 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Reference Gas Fault | ABB AZ10 Alarms</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body{margin:0;font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;background:#f4f6f9;color:#1f2937;}
-header{background:#1e3a8a;color:#fff;padding:18px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;}
-header h1{margin:0;font-size:1.7rem;}
-header nav a{color:#fff;text-decoration:none;margin-left:25px;font-weight:600;}
-header nav a:hover{text-decoration:underline;}
-main{padding:50px 20px; max-width:900px;margin:auto;}
-h2{text-align:center;color:#1e3a8a;margin-bottom:30px;}
-ul{line-height:1.6;}
-footer{background:#1e3a8a;color:#fff;text-align:center;padding:20px;margin-top:50px;}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Reference Gas Fault | ABB AZ10 Alarms | AnalyzersHub</title>
+
+  <!-- ✅ PROJECT BASE -->
+  <base href="/analyzershub/">
+
+  <!-- ✅ GLOBAL CSS -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
-<body>
 
-<header>
-<h1>AnalyzersHub</h1>
-<nav>
-<a href="index.html">Back to Alarms</a>
-<a href="az10.html">Back to AZ10</a>
-</nav>
-</header>
+<body data-page="alarms">
 
-<main>
-<h2>Reference Gas Fault Decision Tree</h2>
-<ul>
-<li>Check reference gas cylinder pressure and regulator settings.</li>
-<li>Verify gas supply tubing for leaks or blockages.</li>
-<li>Ensure reference gas flow reaches the sensor.</li>
-<li>If fault persists → Replace regulator or tubing and re-test.</li>
-</ul>
-</main>
+  <!-- ================= CENTRAL HEADER ================= -->
+  <div id="siteHeader"></div>
 
-<footer>
-© 2026 AnalyzersHub.com
-</footer>
+  <!-- ================= BREADCRUMBS ================= -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <a href="analyzers.html">Analyzers</a>
+    <span>›</span>
+    <a href="analyzers/abb/az10/">ABB AZ10</a>
+    <span>›</span>
+    <span class="current">Reference Gas Fault</span>
+  </nav>
+
+  <!-- ================= MAIN ================= -->
+  <main class="container">
+
+    <section class="panel">
+      <h2>Reference Gas Fault — ABB AZ10</h2>
+
+      <p class="muted">
+        This alarm indicates a problem with the reference gas supply
+        reaching the zirconia sensor. Accurate oxygen measurement
+        depends on a stable and clean reference gas path.
+      </p>
+
+      <div class="card">
+        <h3>Recommended Diagnostic Sequence</h3>
+
+        <div class="step">
+          <b>1)</b> Check reference gas cylinder pressure and confirm
+          the regulator is set to the correct outlet pressure.
+        </div>
+
+        <div class="step">
+          <b>2)</b> Inspect reference gas tubing for leaks, kinks,
+          condensation, or blockages.
+        </div>
+
+        <div class="step">
+          <b>3)</b> Verify that reference gas flow reaches the sensor
+          and that flow is within the manufacturer’s recommended range.
+        </div>
+
+        <div class="step">
+          <b>4)</b> Check reference gas filters (if fitted) for clogging
+          or contamination.
+        </div>
+
+        <div class="step">
+          <b>5)</b> If the fault persists, replace the regulator or tubing
+          and re-test the system.
+        </div>
+      </div>
+
+      <div class="warn">
+        <b>Technician note:</b>
+        Reference gas faults are often caused by empty cylinders,
+        blocked tubing, or incorrect regulator settings — not sensor failure.
+      </div>
+
+      <div class="action-row">
+        <a class="btn btn-ghost" href="analyzers/abb/az10/alarms/">
+          ← Back to AZ10 Alarms
+        </a>
+        <a class="btn btn-ghost" href="analyzers/abb/az10/">
+          ← Back to AZ10 Analyzer
+        </a>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ================= CENTRAL FOOTER ================= -->
+  <div id="siteFooter"></div>
+
+  <!-- ================= LOAD HEADER / FOOTER ================= -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
