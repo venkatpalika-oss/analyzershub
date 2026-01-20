@@ -1,77 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Submit Discussion | AnalyzersHub</title>
-<base href="/analyzershub/">
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Submit Discussion | AnalyzersHub</title>
+
+  <!-- ✅ PROJECT BASE -->
+  <base href="/analyzershub/">
+
+  <!-- ✅ GLOBAL CSS (ONLY ONCE, ONLY IN HEAD) -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
 
-<body>
+<body data-page="submit-discussion">
 
-<header class="site-header">
-<link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
-  <div class="site-header-inner">
-    <a class="brand" href="index.html">AnalyzersHub</a>
-  </div>
-</header>
+  <!-- ✅ CENTRAL HEADER -->
+  <div id="siteHeader"></div>
 
-<main class="container">
+  <!-- ✅ BREADCRUMBS -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <a href="community/index.html">Community</a>
+    <span>›</span>
+    <span class="current">Submit Discussion</span>
+  </nav>
 
-  <div class="panel">
-    <h2>Submit a Question or Experience</h2>
-    <p class="muted">
-      Submissions are reviewed before publishing.
-      No confidential plant data please.
-    </p>
+  <!-- ================= MAIN ================= -->
+  <main class="container">
 
-    <form class="form"
-      action="https://formspree.io/f/mjgggojo"
-      method="POST">
+    <section class="panel">
+      <h2>Submit a Question or Experience</h2>
+      <p class="muted">
+        Submissions are reviewed before publishing.
+        Please do not share confidential plant data.
+      </p>
 
-      <label>Your Name (optional)</label>
-      <input type="text" name="name">
+      <form
+        class="form"
+        action="https://formspree.io/f/mjgggojo"
+        method="POST"
+      >
 
-      <label>Email (optional – for follow-up)</label>
-      <input type="email" name="email">
+        <label for="name">Your Name (optional)</label>
+        <input type="text" id="name" name="name">
 
-      <label>Analyzer / System</label>
-      <input type="text" name="analyzer" required>
+        <label for="email">Email (optional – for follow-up)</label>
+        <input type="email" id="email" name="email">
 
-      <label>Topic Type</label>
-      <select name="topic">
-        <option>Troubleshooting</option>
-        <option>Calibration</option>
-        <option>Alarms</option>
-        <option>CEMS Compliance</option>
-        <option>Sampling System</option>
-        <option>Field Experience</option>
-      </select>
+        <label for="analyzer">Analyzer / System</label>
+        <input type="text" id="analyzer" name="analyzer" required>
 
-      <label>Description</label>
-      <textarea name="message" required></textarea>
+        <label for="topic">Topic Type</label>
+        <select id="topic" name="topic">
+          <option>Troubleshooting</option>
+          <option>Calibration</option>
+          <option>Alarms</option>
+          <option>CEMS Compliance</option>
+          <option>Sampling System</option>
+          <option>Field Experience</option>
+        </select>
 
-      <input type="hidden" name="source" value="AnalyzersHub Community">
+        <label for="message">Description</label>
+        <textarea id="message" name="message" required></textarea>
 
-      <div class="action-row">
-        <button class="btn btn-primary" type="submit">
-          Submit →
-        </button>
-        <a class="btn btn-ghost" href="community/index.html">
-          Cancel
-        </a>
-      </div>
-    </form>
+        <input type="hidden" name="source" value="AnalyzersHub Community">
 
-  </div>
+        <div class="action-row">
+          <button class="btn btn-primary" type="submit">
+            Submit →
+          </button>
+          <a class="btn btn-ghost" href="community/index.html">
+            Cancel
+          </a>
+        </div>
 
-</main>
+      </form>
+    </section>
 
-<footer class="site-footer">
-  <div class="site-footer-inner">
-    <span class="muted">Moderated for quality and accuracy</span>
-  </div>
-</footer>
+  </main>
+
+  <!-- ✅ CENTRAL FOOTER -->
+  <div id="siteFooter"></div>
+
+  <!-- ✅ LOAD HEADER / FOOTER ONCE -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
