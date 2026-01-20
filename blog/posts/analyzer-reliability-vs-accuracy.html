@@ -9,6 +9,9 @@
   <meta name="description"
         content="Learn the real difference between analyzer reliability and accuracy, and why reliability matters more than accuracy in real plant operating conditions." />
 
+  <!-- ================= PROJECT BASE (REQUIRED) ================= -->
+  <base href="/analyzershub/">
+
   <!-- ================= SECURITY HEADERS ================= -->
   <meta http-equiv="Content-Security-Policy"
         content="
@@ -16,6 +19,7 @@
         script-src 'self' 'unsafe-inline';
         style-src 'self' 'unsafe-inline';
         img-src 'self' data:;
+        connect-src 'self';
         object-src 'none';
         base-uri 'self';
         frame-ancestors 'none';
@@ -54,12 +58,12 @@
   </script>
 
   <!-- ================= STYLES ================= -->
-  <link rel="stylesheet" href="../../assets/css/style.css?v=2026-01-18">
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18" />
 </head>
 
 <body data-page="blog">
 
-<!-- ✅ CENTRAL HEADER (DO NOT CHANGE) -->
+<!-- ================= CENTRAL HEADER ================= -->
 <div id="siteHeader"></div>
 
 <!-- ================= HERO ================= -->
@@ -71,11 +75,7 @@
 </section>
 
 <!-- ================= BREADCRUMBS ================= -->
-<nav class="crumbs">
-  <a href="../../index.html">Home</a><span>›</span>
-  <a href="../index.html">Blog</a><span>›</span>
-  <span class="current">Reliability vs Accuracy</span>
-</nav>
+<div class="crumbs" id="auto-crumbs"></div>
 
 <!-- ================= CONTENT ================= -->
 <main class="container">
@@ -94,7 +94,7 @@
 
     <p>
       Engineers often debate analyzer accuracy in decimals and percentages.
-      Technicians face a different reality:
+      Technicians, however, face a different reality:
       an analyzer that is perfectly accurate but frequently unavailable
       is practically useless.
     </p>
@@ -105,9 +105,10 @@
     </blockquote>
 
     <h2>What Is Accuracy?</h2>
+
     <p>
-      Accuracy describes how close a measurement is to the true value,
-      usually defined under ideal laboratory conditions.
+      Accuracy refers to how close a measurement is to the true value.
+      It is usually defined under ideal laboratory conditions.
     </p>
 
     <ul class="list">
@@ -117,53 +118,112 @@
       <li>Perfect calibration gases</li>
     </ul>
 
+    <p>
+      These conditions rarely exist in operating plants.
+    </p>
+
     <h2>What Is Reliability?</h2>
+
+    <p>
+      Reliability is the analyzer’s ability to:
+    </p>
+
     <ul class="list">
-      <li>Staying online</li>
-      <li>Providing consistent trends</li>
-      <li>Recovering quickly from disturbances</li>
-      <li>Maintaining long-term stability</li>
+      <li>Stay online</li>
+      <li>Provide consistent trends</li>
+      <li>Recover quickly from disturbances</li>
+      <li>Maintain measurement integrity over time</li>
     </ul>
 
     <div class="step">
       Reliability means operators trust the number they see.
     </div>
 
-    <h2>Why Reliability Matters More</h2>
+    <h2>Why Reliability Matters More in Real Plants</h2>
 
-    <h3>1. Control Needs Trends</h3>
+    <h3>1. Control Needs Trends, Not Perfection</h3>
     <p>
-      Control systems react to trends, not laboratory perfection.
+      Process control reacts to trends.
+      A stable, repeatable signal is more valuable than a theoretically perfect one.
     </p>
 
-    <h3>2. Alarms Require Availability</h3>
+    <h3>2. Alarms Depend on Availability</h3>
     <p>
-      An analyzer in maintenance mode cannot protect people or equipment.
+      An analyzer in maintenance mode cannot protect equipment or people.
+      Reliability ensures alarms are active when needed most.
     </p>
 
-    <h3>3. Compliance Is Continuous</h3>
+    <h3>3. Environmental Compliance Is Continuous</h3>
     <p>
-      Regulators value data availability as much as accuracy.
+      Regulators care about data availability as much as accuracy.
+      Missing data periods often cause more trouble than small bias errors.
     </p>
+
+    <h2>Common Causes of Poor Reliability</h2>
+
+    <ul class="list">
+      <li>Sample system design issues</li>
+      <li>Condensation and moisture ingress</li>
+      <li>Particulate fouling</li>
+      <li>Frequent calibration drift</li>
+      <li>Inadequate maintenance access</li>
+    </ul>
 
     <blockquote class="warn">
       Most analyzer failures are caused by sample systems — not analyzers.
     </blockquote>
 
+    <h2>The Technician’s Role</h2>
+
+    <ul class="list">
+      <li>Clean and heated sample lines</li>
+      <li>Maintained filters</li>
+      <li>Realistic calibration routines</li>
+      <li>Meaningful alarm limits</li>
+    </ul>
+
+    <div class="step">
+      A slightly less accurate analyzer that is always online
+      is more valuable than a highly accurate analyzer that frequently fails.
+    </div>
+
     <h2>Conclusion</h2>
+
     <p>
       Accuracy impresses on paper.
       Reliability delivers in the field.
     </p>
 
+    <p>
+      The best analyzer systems are those that technicians can keep running,
+      operators can trust, and plants can depend on.
+    </p>
+
   </article>
 </main>
 
-<!-- ✅ CENTRAL FOOTER -->
+<!-- ================= CENTRAL FOOTER ================= -->
 <div id="siteFooter"></div>
 
-<!-- ✅ LOAD INCLUDES (CRITICAL) -->
-<script src="../../assets/js/includes.js?v=2026-01-18"></script>
+<!-- ================= LOAD HEADER / FOOTER ================= -->
+<script src="assets/js/includes.js?v=2026-01-18"></script>
+
+<!-- ================= BREADCRUMB SCRIPT ================= -->
+<script>
+(function(){
+  const crumbs = document.getElementById("auto-crumbs");
+  if(!crumbs) return;
+
+  const title = document.querySelector("h1")?.innerText || "Article";
+
+  crumbs.innerHTML =
+    '<a href="index.html">Home</a>' +
+    '<span>›</span>' +
+    '<a href="blog/index.html">Blog</a>' +
+    '<span>›</span>' +
+    '<span class="current">' + title + '</span>';
+})();
+</script>
 
 </body>
 </html>
