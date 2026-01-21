@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>pH Measurement – Field Reality for Technicians | AnalyzersHub</title>
+
+  <meta name="description"
+        content="Practical pH measurement guide for technicians. Covers real field problems, sensor behavior, calibration reality, installation mistakes, and troubleshooting beyond theory." />
+
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18" />
+</head>
+
+<body data-page="guides">
+
+  <!-- ✅ CENTRAL HEADER -->
+  <div id="siteHeader"></div>
+
+  <!-- BREADCRUMBS -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a><span>›</span>
+    <a href="guides/index.html">Guides</a><span>›</span>
+    <a href="guides/ph/index.html">pH Measurement</a><span>›</span>
+    <span class="current">Field Reality</span>
+  </nav>
+
+  <main class="container">
+
+    <!-- INTRO PANEL -->
+    <div class="panel">
+      <h2 style="margin:0;color:#0b3c5d;">
+        pH Measurement – Field Reality (For Technicians)
+      </h2>
+
+      <p class="muted" style="margin:8px 0 0;">
+        pH measurement looks simple in textbooks, but in real plants it is one
+        of the <b>most failure-prone liquid measurements</b>.
+        This guide explains what actually causes unstable, drifting,
+        or incorrect pH readings in the field.
+      </p>
+
+      <div class="warn" style="margin-top:10px;">
+        <b>Core truth:</b> If a pH reading is wrong, the problem is almost
+        always the <b>sensor or the process</b>, not the analyzer electronics.
+      </div>
+    </div>
+
+    <div class="grid">
+
+      <!-- PRINCIPLE -->
+      <div class="card gc">
+        <h3>Basic Working Principle (Short & Practical)</h3>
+        <p>
+          A pH sensor measures the voltage difference between a measuring
+          electrode and a reference electrode. This voltage is converted
+          into pH by the analyzer using calibration data and temperature
+          compensation.
+        </p>
+        <ul class="list">
+          <li>The signal is <b>very small (mV level)</b>.</li>
+          <li>Any contamination, moisture, or leakage severely affects accuracy.</li>
+          <li>The analyzer only interprets the signal — it cannot fix a bad sensor.</li>
+        </ul>
+      </div>
+
+      <!-- WHY PH FAILS -->
+      <div class="card gc">
+        <h3>Why pH Measurement Fails in Real Plants</h3>
+        <ul class="list">
+          <li><b>Sensor fouling:</b> coating from solids, oil, bio-growth.</li>
+          <li><b>Reference poisoning:</b> sulphides, heavy metals, proteins.</li>
+          <li><b>Dry electrode:</b> poor wetting, long shutdowns.</li>
+          <li><b>Temperature effects:</b> slow response in cold processes.</li>
+          <li><b>Installation issues:</b> air bubbles, dead zones, poor flow.</li>
+        </ul>
+      </div>
+
+      <!-- CALIBRATION REALITY -->
+      <div class="card gc">
+        <h3>Calibration – Reality vs Expectation</h3>
+        <p>
+          Calibration does not repair a bad sensor. It only aligns the
+          analyzer to the sensor’s current condition.
+        </p>
+        <ul class="list">
+          <li>Frequent calibration usually indicates <b>sensor aging</b>.</li>
+          <li>Good sensors hold calibration for weeks to months.</li>
+          <li>Always use <b>fresh buffers</b> and allow full stabilization.</li>
+          <li>Slope and zero outside limits = sensor replacement.</li>
+        </ul>
+      </div>
+
+      <!-- TROUBLESHOOTING ORDER -->
+      <div class="card gc">
+        <h3>Correct Troubleshooting Order</h3>
+        <ul class="list">
+          <li><b>1)</b> Inspect sensor physically (glass, junction, fouling).</li>
+          <li><b>2)</b> Check installation (immersion depth, bubbles, flow).</li>
+          <li><b>3)</b> Verify temperature measurement.</li>
+          <li><b>4)</b> Perform buffer check (not full calibration).</li>
+          <li><b>5)</b> Only then check transmitter, wiring, grounding.</li>
+        </ul>
+
+        <div class="warn" style="margin-top:10px;">
+          <b>Common mistake:</b> Replacing analyzers repeatedly without fixing
+          sensor or process issues.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- PRACTICAL ADVICE -->
+    <div class="panel">
+      <h3 style="margin:0;color:#0b3c5d;">Technician Advice</h3>
+      <ul class="list" style="margin-top:8px;">
+        <li>Keep spare sensors — not spare transmitters.</li>
+        <li>Document sensor life vs process conditions.</li>
+        <li>Do not clean glass aggressively; gentle rinsing only.</li>
+        <li>Trust trend stability more than single pH values.</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <!-- ✅ CENTRAL FOOTER -->
+  <div id="siteFooter"></div>
+
+  <!-- ✅ LOAD HEADER/FOOTER -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
+
+</body>
+</html>
