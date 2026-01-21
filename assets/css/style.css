@@ -133,6 +133,64 @@ img{max-width:100%;height:auto;display:block}
   background:rgba(255,255,255,.35);
   margin:0 6px;
 }
+/* =========================
+   DOMAIN SEARCH (HEADER DROPDOWN)
+========================= */
+
+/* Container for dropdown item */
+.site-nav .nav-item{
+  position:relative;
+}
+
+/* Domain Search label – styled EXACTLY like nav links */
+.site-nav .nav-link{
+  color:#fff;
+  font-weight:800;
+  padding:8px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  opacity:.95;
+  white-space:nowrap;
+}
+
+/* Hover style to match links */
+.site-nav .nav-link:hover{
+  background:rgba(255,255,255,.12);
+}
+
+/* Show dropdown on hover */
+.site-nav .has-dropdown:hover .dropdown{
+  display:block;
+}
+
+/* Dropdown panel */
+.site-nav .dropdown{
+  display:none;
+  position:absolute;
+  top:100%;
+  left:0;
+  margin-top:6px;
+  min-width:220px;
+  background:#ffffff;
+  border-radius:8px;
+  box-shadow:0 6px 18px rgba(0,0,0,.22);
+  z-index:9999;
+}
+
+/* Dropdown links */
+.site-nav .dropdown a{
+  display:block;
+  padding:10px 14px;
+  color:#0b3c5d;
+  font-weight:800;
+  text-decoration:none;
+  border-radius:0;
+}
+
+/* Dropdown hover */
+.site-nav .dropdown a:hover{
+  background:#f0f4f8;
+}
 
 @media(max-width:900px){
   .site-header-inner{
