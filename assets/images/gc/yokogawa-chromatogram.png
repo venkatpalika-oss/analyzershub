@@ -1,1 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="420" viewBox="0 0 1200 420"
+     xmlns="http://www.w3.org/2000/svg"
+     role="img"
+     aria-label="Yokogawa GC chromatogram reference">
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="420" fill="#ffffff"/>
+
+  <!-- Axes -->
+  <line x1="80" y1="60" x2="80" y2="340" stroke="#374151" stroke-width="2"/>
+  <line x1="80" y1="340" x2="1120" y2="340" stroke="#374151" stroke-width="2"/>
+
+  <!-- Axis labels -->
+  <text x="30" y="210" transform="rotate(-90 30,210)"
+        font-size="14" fill="#374151" font-weight="700">
+    Detector Response
+  </text>
+
+  <text x="560" y="390"
+        font-size="14" fill="#374151" font-weight="700">
+    Time →
+  </text>
+
+  <!-- Baseline -->
+  <line x1="80" y1="300" x2="1120" y2="300"
+        stroke="#9ca3af" stroke-width="1.5"
+        stroke-dasharray="4 4"/>
+
+  <!-- Peaks (schematic Gaussian shapes) -->
+  <path d="M140 300 C155 300 165 250 180 240 C195 250 205 300 220 300"
+        fill="none" stroke="#1f78b4" stroke-width="3"/>
+
+  <path d="M260 300 C280 300 295 220 315 200 C335 220 350 300 370 300"
+        fill="none" stroke="#1f78b4" stroke-width="3"/>
+
+  <path d="M420 300 C440 300 455 210 475 190 C495 210 510 300 530 300"
+        fill="none" stroke="#1f78b4" stroke-width="3"/>
+
+  <path d="M600 300 C620 300 635 230 655 215 C675 230 690 300 710 300"
+        fill="none" stroke="#1f78b4" stroke-width="3"/>
+
+  <path d="M760 300 C785 300 805 240 825 225 C845 240 865 300 890 300"
+        fill="none" stroke="#1f78b4" stroke-width="3"/>
+
+  <path d="M930 300 C955 300 980 260 1000 250 C1020 260 1045 300 1070 300"
+        fill="none" stroke="#1f78b4" stroke-width="3"/>
+
+  <!-- Peak labels -->
+  <text x="180" y="230" font-size="12" fill="#374151">Peak 1</text>
+  <text x="315" y="190" font-size="12" fill="#374151">Peak 2</text>
+  <text x="475" y="180" font-size="12" fill="#374151">Peak 3</text>
+  <text x="655" y="205" font-size="12" fill="#374151">Peak 4</text>
+  <text x="825" y="215" font-size="12" fill="#374151">Peak 5</text>
+  <text x="1000" y="240" font-size="12" fill="#374151">Peak 6</text>
+
+  <!-- Notes -->
+  <text x="80" y="360" font-size="12" fill="#6b7280">
+    Reference only — peak order, height, and retention depend on method & configuration
+  </text>
+
+</svg>
 
