@@ -37,27 +37,23 @@
       </h2>
 
       <p class="muted" style="margin:8px 0 0;">
-        This page provides <b>technician-focused alarm decision trees</b> for the
-        Servomex 4900 multigas analyzer. Follow the sequence strictly to avoid
-        unnecessary sensor replacement or recalibration.
+        Technician-first alarm handling using <b>decision-tree logic</b>.
+        Follow the sequence strictly to avoid unnecessary calibration or
+        sensor replacement.
       </p>
 
       <div class="action-row">
-        <a class="btn btn-ghost"
-           href="analyzers/servomex/4900/index.html">
+        <a class="btn btn-ghost" href="analyzers/servomex/4900/index.html">
           ← Back to Analyzer
         </a>
-        <a class="btn btn-ghost"
-           href="analyzers.html?vendor=servomex">
+        <a class="btn btn-ghost" href="analyzers.html?vendor=servomex">
           Servomex Analyzers →
         </a>
       </div>
 
       <div class="warn">
-        <b>Technician rule:</b>
-        Never acknowledge alarms blindly.
-        <b>Flow stability and sample condition</b> must be verified before
-        calibration or sensor replacement.
+        <b>Golden rule:</b>
+        Always stabilize <b>sample flow & pressure</b> before acting on alarms.
       </div>
     </div>
 
@@ -66,87 +62,113 @@
     ====================================================== -->
     <div class="grid">
 
-      <!-- SAMPLE FLOW ALARM -->
+      <!-- =================================================
+           SAMPLE FLOW ALARM
+      ================================================== -->
       <div class="card gas">
         <h3>Sample Flow Alarm</h3>
+        <p class="muted">Insufficient or unstable sample flow.</p>
 
-        <p class="muted">
-          Indicates insufficient or unstable sample flow reaching the analyzer.
-        </p>
+        <!-- SVG DECISION TREE -->
+        <svg viewBox="0 0 420 240" width="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arr1" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+              <path d="M0,0 L8,4 L0,8 Z" fill="#0b3c5d"/>
+            </marker>
+          </defs>
 
-        <ul class="list">
-          <li><b>Check 1:</b> Sample source pressure available?</li>
-          <li><b>Check 2:</b> Filters blocked or wet?</li>
-          <li><b>Check 3:</b> Regulator hunting or unstable?</li>
-          <li><b>Check 4:</b> Sample pump (if used) running?</li>
-        </ul>
+          <rect x="120" y="10" width="180" height="40" rx="8" fill="#e3f2fd" stroke="#0b3c5d"/>
+          <text x="210" y="36" text-anchor="middle">Flow Alarm Active</text>
+
+          <line x1="210" y1="50" x2="210" y2="80" stroke="#0b3c5d" marker-end="url(#arr1)"/>
+
+          <rect x="40" y="80" width="160" height="50" rx="8" fill="#fff3e0" stroke="#ef6c00"/>
+          <text x="120" y="110" text-anchor="middle">Check source pressure</text>
+
+          <rect x="220" y="80" width="160" height="50" rx="8" fill="#fff3e0" stroke="#ef6c00"/>
+          <text x="300" y="110" text-anchor="middle">Check filters / drains</text>
+
+          <line x1="120" y1="130" x2="120" y2="170" stroke="#0b3c5d" marker-end="url(#arr1)"/>
+          <line x1="300" y1="130" x2="300" y2="170" stroke="#0b3c5d" marker-end="url(#arr1)"/>
+
+          <rect x="120" y="170" width="180" height="50" rx="8" fill="#e8f5e9" stroke="#2e7d32"/>
+          <text x="210" y="200" text-anchor="middle">Stabilize flow → Clear alarm</text>
+        </svg>
 
         <div class="warn">
-          <b>Do not:</b> Calibrate with unstable flow.
-          This will create false drift and repeat alarms.
+          <b>Do not calibrate</b> with unstable flow.
         </div>
       </div>
 
-      <!-- OXYGEN SENSOR FAULT -->
+      <!-- =================================================
+           OXYGEN SENSOR FAULT
+      ================================================== -->
       <div class="card gas">
         <h3>Oxygen Sensor Fault</h3>
+        <p class="muted">Paramagnetic O₂ signal outside limits.</p>
 
-        <p class="muted">
-          Paramagnetic oxygen sensor signal is outside acceptable limits.
-        </p>
+        <svg viewBox="0 0 420 240" width="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+              <path d="M0,0 L8,4 L0,8 Z" fill="#0b3c5d"/>
+            </marker>
+          </defs>
 
-        <ul class="list">
-          <li><b>Check 1:</b> Sample flow stable and within specification?</li>
-          <li><b>Check 2:</b> Zero gas truly oxygen-free?</li>
-          <li><b>Check 3:</b> Moisture contamination present?</li>
-          <li><b>Check 4:</b> Sensor ageing or mechanical damage?</li>
-        </ul>
+          <rect x="120" y="10" width="180" height="40" rx="8" fill="#e3f2fd" stroke="#0b3c5d"/>
+          <text x="210" y="36" text-anchor="middle">O₂ Sensor Alarm</text>
+
+          <line x1="210" y1="50" x2="210" y2="80" stroke="#0b3c5d" marker-end="url(#arr2)"/>
+
+          <rect x="40" y="80" width="160" height="50" rx="8" fill="#fff3e0" stroke="#ef6c00"/>
+          <text x="120" y="110" text-anchor="middle">Verify flow stability</text>
+
+          <rect x="220" y="80" width="160" height="50" rx="8" fill="#fff3e0" stroke="#ef6c00"/>
+          <text x="300" y="110" text-anchor="middle">Check zero gas purity</text>
+
+          <line x1="210" y1="130" x2="210" y2="170" stroke="#0b3c5d" marker-end="url(#arr2)"/>
+
+          <rect x="120" y="170" width="180" height="50" rx="8" fill="#fdecea" stroke="#c62828"/>
+          <text x="210" y="200" text-anchor="middle">Inspect / replace sensor</text>
+        </svg>
 
         <div class="warn">
-          <b>Sensor replacement</b> should be the last step,
-          not the first reaction.
+          Sensor replacement is the <b>last step</b>, not the first.
         </div>
       </div>
 
-      <!-- IR CHANNEL FAULT -->
-      <div class="card gas">
-        <h3>IR Channel Fault (CO / CO₂)</h3>
-
-        <p class="muted">
-          Infrared signal is weak, unstable, or outside calibrated range.
-        </p>
-
-        <ul class="list">
-          <li><b>Check 1:</b> Sample pressure within design limits?</li>
-          <li><b>Check 2:</b> Optical cell contamination?</li>
-          <li><b>Check 3:</b> Calibration gas concentration correct?</li>
-          <li><b>Check 4:</b> Electronics temperature stable?</li>
-        </ul>
-
-        <div class="warn">
-          IR channels are sensitive to pressure and temperature changes.
-          Stabilize process before recalibration.
-        </div>
-      </div>
-
-      <!-- COMMUNICATION ALARM -->
+      <!-- =================================================
+           COMMUNICATION ALARM
+      ================================================== -->
       <div class="card gas">
         <h3>Communication Alarm</h3>
+        <p class="muted">Analyzer data not updating in DCS.</p>
 
-        <p class="muted">
-          Analyzer data not updating in DCS or SCADA.
-        </p>
+        <svg viewBox="0 0 420 220" width="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arr3" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+              <path d="M0,0 L8,4 L0,8 Z" fill="#0b3c5d"/>
+            </marker>
+          </defs>
 
-        <ul class="list">
-          <li><b>Check 1:</b> Analyzer powered and running?</li>
-          <li><b>Check 2:</b> Ethernet cable / switch status?</li>
-          <li><b>Check 3:</b> IP address and subnet correct?</li>
-          <li><b>Check 4:</b> DCS mapping, scaling, and quality bits?</li>
-        </ul>
+          <rect x="120" y="10" width="180" height="40" rx="8" fill="#e3f2fd" stroke="#0b3c5d"/>
+          <text x="210" y="36" text-anchor="middle">Comm Alarm</text>
+
+          <line x1="210" y1="50" x2="210" y2="80" stroke="#0b3c5d" marker-end="url(#arr3)"/>
+
+          <rect x="40" y="80" width="160" height="50" rx="8" fill="#fff3e0" stroke="#ef6c00"/>
+          <text x="120" y="110" text-anchor="middle">Check power / LAN</text>
+
+          <rect x="220" y="80" width="160" height="50" rx="8" fill="#fff3e0" stroke="#ef6c00"/>
+          <text x="300" y="110" text-anchor="middle">Verify IP / DCS mapping</text>
+
+          <line x1="210" y1="130" x2="210" y2="170" stroke="#0b3c5d" marker-end="url(#arr3)"/>
+
+          <rect x="120" y="170" width="180" height="40" rx="8" fill="#e8f5e9" stroke="#2e7d32"/>
+          <text x="210" y="195" text-anchor="middle">Restore comms</text>
+        </svg>
 
         <div class="warn">
-          Many “analyzer faults” are actually
-          <b>DCS mapping or quality bit issues</b>.
+          Many comm alarms are <b>DCS quality-bit issues</b>, not analyzer faults.
         </div>
       </div>
 
@@ -158,8 +180,8 @@
     <div class="panel">
       <h3 style="margin:0;color:#0b3c5d;">Discussion</h3>
       <p class="muted" style="margin:8px 0 0;">
-        Share Servomex 4900 alarm experiences, root causes,
-        and plant-specific fixes. (Requires GitHub login.)
+        Share Servomex 4900 alarm root causes and plant fixes.
+        (Requires GitHub login.)
       </p>
 
       <script src="https://utteranc.es/client.js"
