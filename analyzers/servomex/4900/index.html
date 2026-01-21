@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Servomex 4900 Multigas Analyzer | AnalyzersHub</title>
 
-  <!-- ✅ BASE PATH (MANDATORY) -->
+  <!-- ✅ BASE PATH -->
   <base href="/analyzershub/">
 
   <!-- ✅ GLOBAL CSS -->
@@ -55,7 +55,7 @@
 
       <div class="warn">
         <b>Technician rule:</b>
-        For unstable readings, always check
+        If readings are unstable, always check
         <b>sample conditioning, pressure stability, and moisture</b>
         before calibration or sensor replacement.
       </div>
@@ -70,18 +70,19 @@
       <div class="card gas">
         <h3>Working Principle</h3>
         <p>
-          The Servomex 4900 combines two independent physical measurement principles:
+          The Servomex 4900 uses two independent physical principles for
+          continuous gas measurement.
         </p>
         <ul class="list">
           <li>
             <b>Paramagnetic O₂:</b>
             Oxygen molecules are attracted into a magnetic field,
-            producing a signal proportional to concentration.
+            generating a signal proportional to concentration.
           </li>
           <li>
             <b>NDIR (CO / CO₂):</b>
-            Infrared absorption at specific wavelengths is used
-            to determine gas concentration.
+            Infrared absorption at specific wavelengths determines
+            gas concentration.
           </li>
         </ul>
       </div>
@@ -94,39 +95,50 @@
           <li><b>Flow control:</b> capillaries / flow restrictors.</li>
           <li><b>Measurement modules:</b> paramagnetic O₂ sensor, IR cell.</li>
           <li><b>Electronics:</b> signal conditioning & processing.</li>
-          <li><b>Controller & comms:</b> local display, I/O, Ethernet.</li>
+          <li><b>Controller & comms:</b> display, I/O, Ethernet.</li>
         </ul>
       </div>
 
       <!-- CALIBRATION -->
       <div class="card gas">
         <h3>Calibration Procedure</h3>
-        <div class="step"><b>1)</b> Ensure analyzer is stable (no flow alarms).</div>
-        <div class="step"><b>2)</b> Verify sample and calibration gas pressure.</div>
+        <div class="step"><b>1)</b> Confirm analyzer is stable (no flow alarms).</div>
+        <div class="step"><b>2)</b> Verify sample & calibration gas pressure.</div>
         <div class="step"><b>3)</b> Apply zero gas and allow stabilization.</div>
         <div class="step"><b>4)</b> Apply span gas and verify response.</div>
         <div class="step"><b>5)</b> Return to process and confirm DCS values.</div>
       </div>
 
-      <!-- TROUBLESHOOTING -->
+      <!-- MAJOR TROUBLESHOOTING -->
       <div class="card gas">
         <h3>Major Troubleshooting</h3>
         <ul class="list">
           <li><b>Unstable readings:</b> pressure hunting, wet sample, leaks.</li>
           <li><b>Slow response:</b> blocked filters or restricted flow.</li>
           <li><b>High drift:</b> sensor ageing or contamination.</li>
-          <li><b>No DCS update:</b> comms, mapping, or quality-bit issues.</li>
+          <li><b>No DCS update:</b> comms, scaling, or quality-bit issues.</li>
         </ul>
 
         <div class="action-row" style="margin-top:10px;">
           <a class="btn btn-ghost"
              href="analyzers/servomex/4900/alarms/index.html">
-            Use Decision Trees →
+            Use Alarm Decision Trees →
           </a>
-          <a class="btn btn-ghost"
-             href="guides/process-analyzer-sampling.html">
-            Sampling Best Practices →
-          </a>
+        </div>
+      </div>
+
+      <!-- MAINTENANCE -->
+      <div class="card gas">
+        <h3>Maintenance (Field Practice)</h3>
+        <ul class="list">
+          <li><b>Daily:</b> Check sample flow, pressure, and alarms.</li>
+          <li><b>Weekly:</b> Inspect filters, drains, and fittings.</li>
+          <li><b>Monthly:</b> Leak test sample system, verify calibration.</li>
+          <li><b>Annually:</b> Sensor health check and validation.</li>
+        </ul>
+
+        <div class="warn">
+          Poor maintenance causes more analyzer faults than electronics failure.
         </div>
       </div>
 
@@ -138,7 +150,7 @@
     <div class="panel">
       <h3 style="margin:0;color:#0b3c5d;">Discussion</h3>
       <p class="muted" style="margin:8px 0 0;">
-        Share Servomex 4900 field experience, calibration tips,
+        Share Servomex 4900 field experience, calibration issues,
         sensor failures, and plant-specific fixes.
         (Requires GitHub login.)
       </p>
