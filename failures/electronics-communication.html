@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Electronics & Communication Failures | AnalyzersHub</title>
+
+  <meta name="description"
+        content="Electronics and communication failures in industrial analyzers. Learn common symptoms, root causes, troubleshooting order, and field-proven best practices." />
+
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18" />
+</head>
+
+<body data-page="failure-electronics">
+
+  <!-- CENTRAL HEADER -->
+  <div id="siteHeader"></div>
+
+  <!-- BREADCRUMBS -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a><span>›</span>
+    <a href="failures/index.html">Common Failures</a><span>›</span>
+    <span class="current">Electronics & Communication</span>
+  </nav>
+
+  <main class="container">
+
+    <!-- INTRO -->
+    <div class="panel">
+      <h2 style="margin:0;color:#0b3c5d;">
+        Electronics & Communication Failures
+      </h2>
+
+      <p class="muted">
+        Electronics and communication issues are often
+        <b>misdiagnosed as analyzer faults</b>.
+        In reality, many failures originate from
+        <b>power quality, grounding, cabling, or configuration</b> —
+        not from defective analyzer hardware.
+      </p>
+
+      <div class="warn">
+        <b>Field rule:</b>
+        If multiple analyzers show intermittent issues,
+        suspect utilities and grounding before electronics.
+      </div>
+    </div>
+
+    <!-- SYMPTOMS -->
+    <div class="panel">
+      <h3>Typical Symptoms</h3>
+      <ul class="list">
+        <li>Intermittent analyzer trips or resets</li>
+        <li>Frozen values on DCS / SCADA</li>
+        <li>Loss of communication alarms</li>
+        <li>Random I/O errors or checksum faults</li>
+        <li>Analyzer works locally but not remotely</li>
+      </ul>
+    </div>
+
+    <!-- ROOT CAUSES -->
+    <div class="panel">
+      <h3>Common Root Causes</h3>
+      <ul class="list">
+        <li>Unstable or noisy power supply</li>
+        <li>Improper earthing or multiple ground points</li>
+        <li>Loose or corroded terminals</li>
+        <li>Incorrect communication settings</li>
+        <li>Electromagnetic interference (EMI)</li>
+        <li>Aging or failing power supplies</li>
+      </ul>
+    </div>
+
+    <!-- FAILURE MODES -->
+    <div class="panel">
+      <h3>Frequent Failure Modes</h3>
+      <ul class="list">
+        <li><b>Power dips:</b> cause analyzer reboots or logic faults</li>
+        <li><b>Ground loops:</b> introduce noise into signals</li>
+        <li><b>Loose connections:</b> create intermittent faults</li>
+        <li><b>EMI pickup:</b> corrupts communication data</li>
+        <li><b>Configuration mismatch:</b> causes DCS misinterpretation</li>
+      </ul>
+    </div>
+
+    <!-- TROUBLESHOOTING -->
+    <div class="panel">
+      <h3>Correct Troubleshooting Order</h3>
+      <div class="step"><b>1)</b> Verify power quality and voltage stability</div>
+      <div class="step"><b>2)</b> Check earthing continuity and single-point grounding</div>
+      <div class="step"><b>3)</b> Inspect terminals, connectors, and cable glands</div>
+      <div class="step"><b>4)</b> Validate communication parameters end-to-end</div>
+      <div class="step"><b>5)</b> Review error logs and event history</div>
+      <div class="step"><b>6)</b> Replace electronics only after external causes are ruled out</div>
+    </div>
+
+    <!-- DESIGN MISTAKES -->
+    <div class="panel">
+      <h3>Common Design & Installation Mistakes</h3>
+      <ul class="list">
+        <li>No UPS or power conditioning</li>
+        <li>Shared grounding with high-power equipment</li>
+        <li>Signal cables routed near power cables</li>
+        <li>No strain relief on terminal connections</li>
+        <li>Lack of EMI shielding in analyzer shelters</li>
+      </ul>
+    </div>
+
+    <!-- BEST PRACTICES -->
+    <div class="panel">
+      <h3>Best Practices</h3>
+      <ul class="list">
+        <li>Provide clean, conditioned power to analyzers</li>
+        <li>Implement proper single-point grounding</li>
+        <li>Use shielded cables and correct termination</li>
+        <li>Document all communication settings</li>
+        <li>Trend communication health parameters</li>
+      </ul>
+    </div>
+
+    <!-- BACK LINK -->
+    <div class="panel">
+      <div class="action-row">
+        <a class="btn btn-ghost" href="failures/index.html">
+          ← Back to Common Failures
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- CENTRAL FOOTER -->
+  <div id="siteFooter"></div>
+
+  <!-- LOAD HEADER / FOOTER -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
+
+</body>
+</html>
