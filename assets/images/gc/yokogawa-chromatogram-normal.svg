@@ -1,46 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1200" height="420" viewBox="0 0 1200 420"
- xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 900 360"
+     width="100%"
+     height="auto">
 
-<style>
-  .axis{stroke:#374151;stroke-width:2}
-  .baseline{stroke:#9ca3af;stroke-dasharray:4 4}
-  .peak{fill:none;stroke:#1f78b4;stroke-width:3;cursor:pointer}
-  .label{font-size:12px;fill:#374151;cursor:pointer}
-  .info{display:none}
-  .peak:hover + .info,
-  .label:hover + .info{display:block}
-</style>
+  <defs>
+    <style>
+      .axis { stroke:#333; stroke-width:2; }
+      .grid { stroke:#e0e0e0; stroke-width:1; }
+      .peak { fill:none; stroke:#2e7d32; stroke-width:3; }
+      .label { font-size:14px; fill:#0b3c5d; font-weight:700; }
+      .muted { font-size:12px; fill:#555; }
+    </style>
+  </defs>
 
-<!-- Axes -->
-<line x1="80" y1="60" x2="80" y2="340" class="axis"/>
-<line x1="80" y1="340" x2="1120" y2="340" class="axis"/>
+  <!-- Axes -->
+  <line x1="60" y1="300" x2="860" y2="300" class="axis"/>
+  <line x1="60" y1="40"  x2="60"  y2="300" class="axis"/>
 
-<!-- Labels -->
-<text x="30" y="210" transform="rotate(-90 30,210)" font-size="14" font-weight="700">Detector Response</text>
-<text x="560" y="390" font-size="14" font-weight="700">Time →</text>
+  <!-- Grid lines -->
+  <line x1="60" y1="240" x2="860" y2="240" class="grid"/>
+  <line x1="60" y1="180" x2="860" y2="180" class="grid"/>
+  <line x1="60" y1="120" x2="860" y2="120" class="grid"/>
 
-<!-- Baseline -->
-<line x1="80" y1="300" x2="1120" y2="300" class="baseline"/>
+  <!-- Chromatogram curve -->
+  <path class="peak"
+        d="M60 300
+           C140 300, 160 260, 180 180
+           C195 120, 215 120, 230 180
+           C250 300, 300 300, 340 260
+           C360 220, 380 160, 400 140
+           C420 120, 440 120, 460 150
+           C490 300, 560 300, 620 260
+           C650 230, 670 200, 690 190
+           C710 180, 730 180, 750 210
+           C780 300, 820 300, 860 300" />
 
-<!-- Peak 1 -->
-<path d="M150 300 C165 300 175 250 190 240 C205 250 215 300 230 300" class="peak"/>
-<text x="180" y="230" class="label">Peak 1</text>
-<text x="140" y="210" class="info">✔ Stable retention time</text>
+  <!-- Labels -->
+  <text x="450" y="30" class="label" text-anchor="middle">
+    Typical Stable GC Chromatogram
+  </text>
 
-<!-- Peak 2 -->
-<path d="M300 300 C320 300 335 220 355 200 C375 220 390 300 410 300" class="peak"/>
-<text x="345" y="190" class="label">Peak 2</text>
-<text x="300" y="170" class="info">✔ Sharp & symmetric</text>
+  <text x="450" y="340" class="muted" text-anchor="middle">
+    Time &amp; Retention Order
+  </text>
 
-<!-- Peak 3 -->
-<path d="M480 300 C500 300 515 210 535 190 C555 210 570 300 590 300" class="peak"/>
-<text x="525" y="180" class="label">Peak 3</text>
-<text x="480" y="160" class="info">✔ Normal detector response</text>
+  <text x="15" y="170" class="muted" transform="rotate(-90 15,170)">
+    Detector Response
+  </text>
 
-<!-- Note -->
-<text x="80" y="365" font-size="12" fill="#6b7280">
-Reference chromatogram — pattern recognition only
-</text>
+  <!-- Peak labels -->
+  <text x="200" y="165" class="muted">Peak 1</text>
+  <text x="395" y="125" class="muted">Peak 2</text>
+  <text x="685" y="185" class="muted">Peak 3</text>
 
 </svg>
