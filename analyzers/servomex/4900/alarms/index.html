@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servomex 4900 Alarm Decision Trees | AnalyzersHub</title>
+
+  <!-- ✅ BASE PATH -->
+  <base href="/analyzershub/">
+
+  <!-- ✅ GLOBAL CSS -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18" />
+</head>
+
+<body data-page="analyzers">
+
+  <!-- ✅ CENTRAL HEADER -->
+  <div id="siteHeader"></div>
+
+  <!-- ✅ BREADCRUMBS -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a><span>›</span>
+    <a href="analyzers.html">Analyzer Search</a><span>›</span>
+    <a href="analyzers.html?vendor=servomex">Servomex</a><span>›</span>
+    <a href="analyzers/servomex/4900/index.html">4900</a><span>›</span>
+    <span class="current">Alarms</span>
+  </nav>
+
+  <main class="container">
+
+    <!-- =====================================================
+         HEADER PANEL
+    ====================================================== -->
+    <div class="panel">
+      <h2 style="margin:0;color:#0b3c5d;">
+        Servomex 4900 — Alarm Decision Trees
+      </h2>
+
+      <p class="muted" style="margin:8px 0 0;">
+        This page provides <b>technician-focused alarm decision trees</b> for the
+        Servomex 4900 multigas analyzer. Follow the sequence strictly to avoid
+        unnecessary sensor replacement or recalibration.
+      </p>
+
+      <div class="action-row">
+        <a class="btn btn-ghost"
+           href="analyzers/servomex/4900/index.html">
+          ← Back to Analyzer
+        </a>
+        <a class="btn btn-ghost"
+           href="analyzers.html?vendor=servomex">
+          Servomex Analyzers →
+        </a>
+      </div>
+
+      <div class="warn">
+        <b>Technician rule:</b>
+        Never acknowledge alarms blindly.
+        <b>Flow stability and sample condition</b> must be verified before
+        calibration or sensor replacement.
+      </div>
+    </div>
+
+    <!-- =====================================================
+         ALARM GRID
+    ====================================================== -->
+    <div class="grid">
+
+      <!-- SAMPLE FLOW ALARM -->
+      <div class="card gas">
+        <h3>Sample Flow Alarm</h3>
+
+        <p class="muted">
+          Indicates insufficient or unstable sample flow reaching the analyzer.
+        </p>
+
+        <ul class="list">
+          <li><b>Check 1:</b> Sample source pressure available?</li>
+          <li><b>Check 2:</b> Filters blocked or wet?</li>
+          <li><b>Check 3:</b> Regulator hunting or unstable?</li>
+          <li><b>Check 4:</b> Sample pump (if used) running?</li>
+        </ul>
+
+        <div class="warn">
+          <b>Do not:</b> Calibrate with unstable flow.
+          This will create false drift and repeat alarms.
+        </div>
+      </div>
+
+      <!-- OXYGEN SENSOR FAULT -->
+      <div class="card gas">
+        <h3>Oxygen Sensor Fault</h3>
+
+        <p class="muted">
+          Paramagnetic oxygen sensor signal is outside acceptable limits.
+        </p>
+
+        <ul class="list">
+          <li><b>Check 1:</b> Sample flow stable and within specification?</li>
+          <li><b>Check 2:</b> Zero gas truly oxygen-free?</li>
+          <li><b>Check 3:</b> Moisture contamination present?</li>
+          <li><b>Check 4:</b> Sensor ageing or mechanical damage?</li>
+        </ul>
+
+        <div class="warn">
+          <b>Sensor replacement</b> should be the last step,
+          not the first reaction.
+        </div>
+      </div>
+
+      <!-- IR CHANNEL FAULT -->
+      <div class="card gas">
+        <h3>IR Channel Fault (CO / CO₂)</h3>
+
+        <p class="muted">
+          Infrared signal is weak, unstable, or outside calibrated range.
+        </p>
+
+        <ul class="list">
+          <li><b>Check 1:</b> Sample pressure within design limits?</li>
+          <li><b>Check 2:</b> Optical cell contamination?</li>
+          <li><b>Check 3:</b> Calibration gas concentration correct?</li>
+          <li><b>Check 4:</b> Electronics temperature stable?</li>
+        </ul>
+
+        <div class="warn">
+          IR channels are sensitive to pressure and temperature changes.
+          Stabilize process before recalibration.
+        </div>
+      </div>
+
+      <!-- COMMUNICATION ALARM -->
+      <div class="card gas">
+        <h3>Communication Alarm</h3>
+
+        <p class="muted">
+          Analyzer data not updating in DCS or SCADA.
+        </p>
+
+        <ul class="list">
+          <li><b>Check 1:</b> Analyzer powered and running?</li>
+          <li><b>Check 2:</b> Ethernet cable / switch status?</li>
+          <li><b>Check 3:</b> IP address and subnet correct?</li>
+          <li><b>Check 4:</b> DCS mapping, scaling, and quality bits?</li>
+        </ul>
+
+        <div class="warn">
+          Many “analyzer faults” are actually
+          <b>DCS mapping or quality bit issues</b>.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- =====================================================
+         DISCUSSION
+    ====================================================== -->
+    <div class="panel">
+      <h3 style="margin:0;color:#0b3c5d;">Discussion</h3>
+      <p class="muted" style="margin:8px 0 0;">
+        Share Servomex 4900 alarm experiences, root causes,
+        and plant-specific fixes. (Requires GitHub login.)
+      </p>
+
+      <script src="https://utteranc.es/client.js"
+              repo="venkatpalika-oss/analyzershub"
+              issue-term="pathname"
+              theme="github-light"
+              crossorigin="anonymous"
+              async>
+      </script>
+    </div>
+
+  </main>
+
+  <!-- ✅ CENTRAL FOOTER -->
+  <div id="siteFooter"></div>
+
+  <!-- ✅ LOAD HEADER / FOOTER -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
+
+</body>
+</html>
