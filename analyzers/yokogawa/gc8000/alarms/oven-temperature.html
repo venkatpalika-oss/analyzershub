@@ -1,71 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GC8000 Oven Temperature | Decision Tree | AnalyzersHub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<base href="/analyzershub/">
-<link rel="stylesheet" href="assets/css/style.css">
+  <title>GC8000 Oven Temperature | Decision Tree | AnalyzersHub</title>
+
+  <base href="/analyzershub/">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
-<body>
 
-<header class="site-header">
-  <div class="site-header-inner">
-    <a class="brand" href="index.html">AnalyzersHub</a>
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Search</a>
-      <a href="analyzers.html?category=gc">GC Hub</a>
-    </nav>
-  </div>
-</header>
+<body data-page="decision-tree">
 
-<nav class="crumbs" aria-label="Breadcrumb">
-  <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers.html?category=gc">GC Hub</a><span>›</span>
-  <a href="analyzers/yokogawa/gc8000/gc8000.html">GC8000</a><span>›</span>
-  <a href="analyzers/yokogawa/gc8000/alarms/index.html">Alarms</a><span>›</span>
-  <span class="current">Oven / Temperature</span>
-</nav>
+  <!-- ✅ CENTRAL HEADER -->
+  <div id="siteHeader"></div>
 
-<main class="container">
-  <h2 style="margin-top:18px;">Decision Tree: Oven / Temperature</h2>
+  <!-- ✅ BREADCRUMBS -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a><span>›</span>
+    <a href="analyzers.html?category=gc">GC Hub</a><span>›</span>
+    <a href="analyzers/yokogawa/gc8000/gc8000.html">GC8000</a><span>›</span>
+    <a href="analyzers/yokogawa/gc8000/alarms/index.html">Alarms</a><span>›</span>
+    <span class="current">Oven / Temperature</span>
+  </nav>
 
-  <div class="action-row">
-    <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/alarms/index.html">← Back to Alarms Hub</a>
-    <a class="btn btn-primary" href="analyzers/yokogawa/gc8000/alarm-codes.html">Alarm Codes →</a>
-    <a class="btn btn-ghost" href="guides/gc/chromatogram-guide.html">Chromatogram Guide</a>
-  </div>
+  <main class="container">
 
-  <div class="warn">
-    <b>Goal:</b> stabilize oven temperature at setpoint (no oscillation) before judging repeatability or peak shifts.
-  </div>
+    <h2 style="margin-top:18px;">
+      Decision Tree: Oven / Temperature
+    </h2>
 
-  <div class="step"><b>1)</b> Confirm the alarm type: “Oven Not Ready”, “Heater Fault”, or “Temp Deviation”. Note timestamp.</div>
-  <div class="step"><b>2)</b> Compare <b>Setpoint vs Actual</b>. If Actual is far below setpoint, suspect heater/power path.</div>
-  <div class="step"><b>3)</b> Check for airflow/ventilation issues: blocked vents, fan failure, cabinet overheating.</div>
-  <div class="step"><b>4)</b> If temperature hunts (up/down): check sensor integrity, loose connections, controller tuning (if accessible).</div>
-  <div class="step"><b>5)</b> After fixing: wait for stabilization, then run <b>2–3 cycles</b> and confirm stable retention time.</div>
+    <div class="action-row">
+      <a class="btn btn-ghost"
+         href="analyzers/yokogawa/gc8000/alarms/index.html">
+        ← Back to Alarms Hub
+      </a>
 
-  <div class="card gc" style="margin-top:16px;">
-    <h3>Quick Symptoms → Likely Cause</h3>
-    <p><b>Oven never reaches setpoint:</b> heater/power, relay, blown fuse, or airflow too high.</p>
-    <p><b>Oven overshoots and hunts:</b> sensor issue, loose wiring, tuning/control instability.</p>
-    <p><b>Retention time shift:</b> temperature instability or carrier pressure hunting (check both).</p>
-  </div>
-</main>
+      <a class="btn btn-primary"
+         href="analyzers/yokogawa/gc8000/alarm-codes.html">
+        Alarm Codes →
+      </a>
 
-<footer class="site-footer">
-  <div class="site-footer-inner">
-    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Search</a>
-      <a href="analyzers/yokogawa/gc8000/alarms/index.html">GC8000 Alarms</a>
+      <a class="btn btn-ghost"
+         href="guides/gc/chromatogram-guide.html">
+        Chromatogram Guide
+      </a>
     </div>
-  </div>
-</footer>
+
+    <div class="warn">
+      <b>Goal:</b>
+      Stabilize oven temperature at setpoint
+      (no oscillation) before judging repeatability
+      or retention-time shifts.
+    </div>
+
+    <div class="step">
+      <b>1)</b> Confirm the alarm type:
+      “Oven Not Ready”, “Heater Fault”, or
+      “Temperature Deviation”. Note the timestamp.
+    </div>
+
+    <div class="step">
+      <b>2)</b> Compare <b>Setpoint vs Actual</b>.
+      If Actual is far below setpoint,
+      suspect heater or power path issues.
+    </div>
+
+    <div class="step">
+      <b>3)</b> Check airflow and ventilation:
+      blocked vents, fan failure,
+      or cabinet overheating.
+    </div>
+
+    <div class="step">
+      <b>4)</b> If temperature hunts (up/down):
+      check sensor integrity, loose connections,
+      and controller tuning (if accessible).
+    </div>
+
+    <div class="step">
+      <b>5)</b> After fixing, allow stabilization,
+      then run <b>2–3 cycles</b> and confirm
+      stable retention time.
+    </div>
+
+    <div class="card gc" style="margin-top:16px;">
+      <h3>Quick Symptoms → Likely Cause</h3>
+      <p><b>Oven never reaches setpoint:</b> heater or power fault, relay issue, blown fuse, or excessive airflow.</p>
+      <p><b>Oven overshoots and hunts:</b> temperature sensor issue, loose wiring, or control instability.</p>
+      <p><b>Retention time shift:</b> oven instability or carrier pressure hunting (check both).</p>
+    </div>
+
+  </main>
+
+  <!-- ✅ CENTRAL FOOTER -->
+  <div id="siteFooter"></div>
+
+  <!-- ✅ LOAD HEADER / FOOTER -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
