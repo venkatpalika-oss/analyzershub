@@ -10,6 +10,39 @@
 
   <!-- Global styles -->
   <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
+
+  <!-- SVG click-to-zoom support (added safely) -->
+  <style>
+    .svg-zoom-wrap{
+      overflow-x:auto;
+      cursor:zoom-in;
+    }
+    .svg-modal{
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,0.85);
+      display:none;
+      z-index:99999;
+    }
+    .svg-modal.active{ display:flex; }
+    .svg-modal-content{
+      margin:auto;
+      background:#fff;
+      padding:16px;
+      max-width:95%;
+      max-height:95%;
+      overflow:auto;
+      border-radius:6px;
+    }
+    .svg-modal-close{
+      position:fixed;
+      top:14px;
+      right:18px;
+      font-size:26px;
+      color:#fff;
+      cursor:pointer;
+    }
+  </style>
 </head>
 
 <body data-page="analyzers">
@@ -59,6 +92,7 @@
   <h3>Sample Flow Alarm</h3>
   <p class="muted">Flow below design limit or unstable (pressure hunting).</p>
 
+  <div class="svg-zoom-wrap" onclick="openSvgModal(this)">
   <svg viewBox="0 0 900 520" width="100%" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <marker id="af1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
@@ -91,6 +125,7 @@
     <rect x="560" y="400" width="260" height="60" rx="10" fill="#e8f5e9" stroke="#2e7d32"/>
     <text x="690" y="435" text-anchor="middle">Stabilize flow → Alarm clears</text>
   </svg>
+  </div>
 
   <div class="note">
     <b>Typical root causes:</b><br>
@@ -108,6 +143,7 @@
   <h3>Oxygen Sensor Fault (Paramagnetic)</h3>
   <p class="muted">O₂ signal unstable or outside physical limits.</p>
 
+  <div class="svg-zoom-wrap" onclick="openSvgModal(this)">
   <svg viewBox="0 0 900 520" width="100%" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <marker id="af2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
@@ -135,6 +171,7 @@
     <rect x="560" y="260" width="260" height="60" rx="10" fill="#fdecea" stroke="#c62828"/>
     <text x="690" y="295" text-anchor="middle">Sensor ageing / damage</text>
   </svg>
+  </div>
 
   <div class="note">
     <b>Typical root causes:</b><br>
@@ -152,6 +189,7 @@
   <h3>Communication Alarm</h3>
   <p class="muted">Analyzer values not updating in DCS.</p>
 
+  <div class="svg-zoom-wrap" onclick="openSvgModal(this)">
   <svg viewBox="0 0 900 420" width="100%" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <marker id="af3" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
@@ -179,6 +217,7 @@
     <rect x="560" y="260" width="260" height="60" rx="10" fill="#fdecea" stroke="#c62828"/>
     <text x="690" y="295" text-anchor="middle">Network / power issue</text>
   </svg>
+  </div>
 
   <div class="note">
     <b>Typical root causes:</b><br>
@@ -194,10 +233,33 @@
 
 </main>
 
+<!-- ================= SVG ZOOM MODAL ================= -->
+<div id="svgModal" class="svg-modal" onclick="closeSvgModal()">
+  <div class="svg-modal-close">✕</div>
+  <div class="svg-modal-content" id="svgModalContent"></div>
+</div>
+
 <!-- ================= CENTRAL FOOTER ================= -->
 <div id="siteFooter"></div>
 
 <script src="assets/js/includes.js?v=2026-01-18"></script>
+
+<script>
+function openSvgModal(el){
+  const svg = el.querySelector('svg').cloneNode(true);
+  const modal = document.getElementById('svgModal');
+  const content = document.getElementById('svgModalContent');
+  content.innerHTML = '';
+  content.appendChild(svg);
+  modal.classList.add('active');
+}
+function closeSvgModal(){
+  document.getElementById('svgModal').classList.remove('active');
+}
+document.addEventListener('keydown', e=>{
+  if(e.key === 'Escape') closeSvgModal();
+});
+</script>
 
 </body>
 </html>
