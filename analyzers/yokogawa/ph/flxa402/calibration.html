@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Yokogawa FLXA402 pH Calibration | Step-by-Step | AnalyzersHub</title>
+
+  <meta name="description"
+        content="Step-by-step pH calibration procedure for Yokogawa FLXA402 analyzer. Covers buffer selection, slope checks, acceptance limits, and field best practices." />
+
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18" />
+</head>
+
+<body data-page="analyzers">
+
+  <div id="siteHeader"></div>
+
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a><span>›</span>
+    <a href="analyzers.html">Analyzer Search</a><span>›</span>
+    <a href="analyzers/yokogawa/ph/flxa402/flxa402.html">FLXA402</a><span>›</span>
+    <span class="current">Calibration</span>
+  </nav>
+
+  <main class="container">
+
+    <div class="panel">
+      <h2 style="margin:0;color:#0b3c5d;">
+        Yokogawa FLXA402 — pH Calibration
+      </h2>
+
+      <p class="muted" style="margin:8px 0 0;">
+        Correct calibration procedure for FLXA402 pH / ORP analyzers.
+        Calibration aligns the transmitter to the sensor condition —
+        it does not repair a damaged sensor.
+      </p>
+
+      <div class="warn" style="margin-top:10px;">
+        <b>Important:</b> Frequent calibration indicates sensor aging or process issues.
+      </div>
+    </div>
+
+    <div class="grid">
+
+      <div class="card gc">
+        <h3>Preparation</h3>
+        <ul class="list">
+          <li>Ensure stable process or remove sensor from process.</li>
+          <li>Use fresh, unopened buffer solutions.</li>
+          <li>Confirm correct temperature compensation.</li>
+          <li>Rinse sensor with clean water (do not wipe glass).</li>
+        </ul>
+      </div>
+
+      <div class="card gc">
+        <h3>2-Point Calibration (Recommended)</h3>
+        <div class="step"><b>1)</b> Immerse sensor in first buffer (pH 7).</div>
+        <div class="step"><b>2)</b> Wait until reading stabilizes completely.</div>
+        <div class="step"><b>3)</b> Accept first calibration point.</div>
+        <div class="step"><b>4)</b> Rinse sensor and immerse in second buffer (pH 4 or 9).</div>
+        <div class="step"><b>5)</b> Accept second point after stabilization.</div>
+      </div>
+
+      <div class="card gc">
+        <h3>Acceptance Criteria</h3>
+        <ul class="list">
+          <li>Slope typically between 90–105%.</li>
+          <li>Zero offset within manufacturer limits.</li>
+          <li>Slow stabilization = fouled or aged sensor.</li>
+        </ul>
+      </div>
+
+      <div class="card gc">
+        <h3>Post-Calibration Checks</h3>
+        <ul class="list">
+          <li>Return sensor to process carefully.</li>
+          <li>Observe pH trend stability.</li>
+          <li>Confirm correct 4–20 mA scaling.</li>
+          <li>Document slope, offset, date, buffer batch.</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </main>
+
+  <div id="siteFooter"></div>
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
+
+</body>
+</html>
