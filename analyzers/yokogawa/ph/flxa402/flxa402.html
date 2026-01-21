@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yokogawa FLXA402 pH / ORP Analyzer | AnalyzersHub</title>
+
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18" />
+</head>
+
+<body data-page="analyzers">
+
+  <!-- ✅ CENTRAL HEADER -->
+  <div id="siteHeader"></div>
+
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a><span>›</span>
+    <a href="analyzers.html">Analyzer Search</a><span>›</span>
+    <a href="analyzers.html?vendor=yokogawa">Yokogawa</a><span>›</span>
+    <span class="current">FLXA402 (pH / ORP)</span>
+  </nav>
+
+  <main class="container">
+
+    <div class="panel">
+      <h2 style="margin:0;color:#0b3c5d;">
+        Yokogawa FLXA402 — pH / ORP Analyzer
+      </h2>
+
+      <p class="muted" style="margin:8px 0 0;">
+        Modular liquid analyzer for pH and ORP measurement.
+        Used in utilities, refineries, chemical plants, water treatment,
+        and critical process applications where electrode health and sample
+        condition dominate measurement reliability.
+      </p>
+
+      <div class="action-row">
+        <a class="btn btn-ghost" href="analyzers.html">← Back to Search</a>
+        <a class="btn btn-primary" href="analyzers/yokogawa/ph/flxa402/alarms/index.html">
+          Alarm Decision Trees →
+        </a>
+        <a class="btn btn-ghost" href="guides/ph/ph-calibration-guide.html">
+          pH Calibration Guide →
+        </a>
+      </div>
+
+      <div class="warn">
+        <b>Technician rule:</b> 90% of pH problems are caused by
+        <b>electrode condition, fouling, reference poisoning, or sample issues</b>,
+        not the transmitter.
+      </div>
+    </div>
+
+    <div class="grid">
+
+      <div class="card gc">
+        <h3>Working Principle</h3>
+        <p>
+          pH measurement is based on the potential difference between a
+          measuring electrode and a reference electrode. The FLXA402
+          converts this millivolt signal into pH after temperature compensation.
+        </p>
+        <ul class="list">
+          <li><b>Glass electrode</b> develops voltage proportional to hydrogen ion activity.</li>
+          <li><b>Reference electrode</b> provides stable comparison potential.</li>
+          <li><b>Temperature sensor</b> compensates slope changes.</li>
+          <li><b>Transmitter</b> converts mV → pH using calibration data.</li>
+        </ul>
+      </div>
+
+      <div class="card gc">
+        <h3>Main Components</h3>
+        <ul class="list">
+          <li><b>pH / ORP sensor:</b> glass bulb, reference junction, temperature element.</li>
+          <li><b>Sensor cable:</b> high impedance, moisture-sensitive.</li>
+          <li><b>Process fitting:</b> immersion, insertion, or flow assembly.</li>
+          <li><b>FLXA402 transmitter:</b> input module, CPU, display.</li>
+          <li><b>Power & I/O:</b> 4–20 mA, digital comms, alarm relays.</li>
+        </ul>
+      </div>
+
+      <div class="card gc">
+        <h3>Calibration Procedure</h3>
+        <div class="step"><b>1)</b> Inspect sensor for coating, cracks, or dry bulb.</div>
+        <div class="step"><b>2)</b> Rinse electrode with clean water (never wipe glass).</div>
+        <div class="step"><b>3)</b> Perform 2-point calibration using fresh buffer solutions.</div>
+        <div class="step"><b>4)</b> Allow readings to stabilize fully before accepting points.</div>
+        <div class="step"><b>5)</b> Check slope and zero values; replace sensor if out of limits.</div>
+        <div class="step"><b>6)</b> Return to process and monitor stability.</div>
+      </div>
+
+      <div class="card gc">
+        <h3>Major Troubleshooting</h3>
+        <ul class="list">
+          <li><b>Slow response:</b> fouled electrode, aged glass, low temperature.</li>
+          <li><b>Drifting pH:</b> reference poisoning, junction blockage.</li>
+          <li><b>Unstable reading:</b> air bubbles, grounding issues, dry sensor.</li>
+          <li><b>No change with process:</b> broken glass bulb or cable fault.</li>
+        </ul>
+
+        <div class="action-row" style="margin-top:10px;">
+          <a class="btn btn-ghost"
+             href="analyzers/yokogawa/ph/flxa402/alarms/index.html">
+            Use Decision Trees →
+          </a>
+          <a class="btn btn-ghost"
+             href="guides/ph/ph-sensor-failures.html">
+            Common pH Sensor Failures →
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Discussion -->
+    <div class="panel">
+      <h3 style="margin:0;color:#0b3c5d;">Discussion</h3>
+      <p class="muted" style="margin:8px 0 0;">
+        Share FLXA402 pH issues, electrode life problems, calibration drift,
+        and real plant experiences. (Requires GitHub login.)
+      </p>
+
+      <script src="https://utteranc.es/client.js"
+              repo="venkatpalika-oss/analyzershub"
+              issue-term="pathname"
+              theme="github-light"
+              crossorigin="anonymous"
+              async>
+      </script>
+    </div>
+
+  </main>
+
+  <!-- ✅ CENTRAL FOOTER -->
+  <div id="siteFooter"></div>
+
+  <!-- ✅ LOAD HEADER/FOOTER -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
+
+</body>
+</html>
