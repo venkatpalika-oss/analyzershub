@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servomex 4900 Multigas Analyzer | AnalyzersHub</title>
+
+  <!-- ✅ BASE PATH (MANDATORY) -->
+  <base href="/analyzershub/">
+
+  <!-- ✅ GLOBAL CSS -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18" />
+</head>
+
+<body data-page="analyzers">
+
+  <!-- ✅ CENTRAL HEADER -->
+  <div id="siteHeader"></div>
+
+  <!-- ✅ BREADCRUMBS -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a><span>›</span>
+    <a href="analyzers.html">Analyzer Search</a><span>›</span>
+    <a href="analyzers.html?vendor=servomex">Servomex</a><span>›</span>
+    <span class="current">4900</span>
+  </nav>
+
+  <main class="container">
+
+    <!-- =====================================================
+         HEADER PANEL
+    ====================================================== -->
+    <div class="panel">
+      <h2 style="margin:0;color:#0b3c5d;">
+        Servomex 4900 — Multigas Process Analyzer
+      </h2>
+
+      <p class="muted" style="margin:8px 0 0;">
+        Continuous multigas analyzer using <b>paramagnetic oxygen</b> and
+        <b>NDIR infrared</b> measurement technologies. Widely used in
+        hydrogen plants, refineries, SMRs, and air separation units.
+      </p>
+
+      <div class="action-row">
+        <a class="btn btn-ghost" href="analyzers.html">← Back to Search</a>
+        <a class="btn btn-primary"
+           href="analyzers/servomex/4900/alarms/index.html">
+          Alarm Decision Trees →
+        </a>
+        <a class="btn btn-ghost"
+           href="guides/process-analyzer-sampling.html">
+          Sampling Guide →
+        </a>
+      </div>
+
+      <div class="warn">
+        <b>Technician rule:</b>
+        For unstable readings, always check
+        <b>sample conditioning, pressure stability, and moisture</b>
+        before calibration or sensor replacement.
+      </div>
+    </div>
+
+    <!-- =====================================================
+         MAIN GRID
+    ====================================================== -->
+    <div class="grid">
+
+      <!-- WORKING PRINCIPLE -->
+      <div class="card gas">
+        <h3>Working Principle</h3>
+        <p>
+          The Servomex 4900 combines two independent physical measurement principles:
+        </p>
+        <ul class="list">
+          <li>
+            <b>Paramagnetic O₂:</b>
+            Oxygen molecules are attracted into a magnetic field,
+            producing a signal proportional to concentration.
+          </li>
+          <li>
+            <b>NDIR (CO / CO₂):</b>
+            Infrared absorption at specific wavelengths is used
+            to determine gas concentration.
+          </li>
+        </ul>
+      </div>
+
+      <!-- MAIN COMPONENTS -->
+      <div class="card gas">
+        <h3>Main Components</h3>
+        <ul class="list">
+          <li><b>Sample conditioning:</b> filters, regulators, drains.</li>
+          <li><b>Flow control:</b> capillaries / flow restrictors.</li>
+          <li><b>Measurement modules:</b> paramagnetic O₂ sensor, IR cell.</li>
+          <li><b>Electronics:</b> signal conditioning & processing.</li>
+          <li><b>Controller & comms:</b> local display, I/O, Ethernet.</li>
+        </ul>
+      </div>
+
+      <!-- CALIBRATION -->
+      <div class="card gas">
+        <h3>Calibration Procedure</h3>
+        <div class="step"><b>1)</b> Ensure analyzer is stable (no flow alarms).</div>
+        <div class="step"><b>2)</b> Verify sample and calibration gas pressure.</div>
+        <div class="step"><b>3)</b> Apply zero gas and allow stabilization.</div>
+        <div class="step"><b>4)</b> Apply span gas and verify response.</div>
+        <div class="step"><b>5)</b> Return to process and confirm DCS values.</div>
+      </div>
+
+      <!-- TROUBLESHOOTING -->
+      <div class="card gas">
+        <h3>Major Troubleshooting</h3>
+        <ul class="list">
+          <li><b>Unstable readings:</b> pressure hunting, wet sample, leaks.</li>
+          <li><b>Slow response:</b> blocked filters or restricted flow.</li>
+          <li><b>High drift:</b> sensor ageing or contamination.</li>
+          <li><b>No DCS update:</b> comms, mapping, or quality-bit issues.</li>
+        </ul>
+
+        <div class="action-row" style="margin-top:10px;">
+          <a class="btn btn-ghost"
+             href="analyzers/servomex/4900/alarms/index.html">
+            Use Decision Trees →
+          </a>
+          <a class="btn btn-ghost"
+             href="guides/process-analyzer-sampling.html">
+            Sampling Best Practices →
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- =====================================================
+         DISCUSSION
+    ====================================================== -->
+    <div class="panel">
+      <h3 style="margin:0;color:#0b3c5d;">Discussion</h3>
+      <p class="muted" style="margin:8px 0 0;">
+        Share Servomex 4900 field experience, calibration tips,
+        sensor failures, and plant-specific fixes.
+        (Requires GitHub login.)
+      </p>
+
+      <script src="https://utteranc.es/client.js"
+              repo="venkatpalika-oss/analyzershub"
+              issue-term="pathname"
+              theme="github-light"
+              crossorigin="anonymous"
+              async>
+      </script>
+    </div>
+
+  </main>
+
+  <!-- ✅ CENTRAL FOOTER -->
+  <div id="siteFooter"></div>
+
+  <!-- ✅ LOAD HEADER / FOOTER -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
+
+</body>
+</html>
