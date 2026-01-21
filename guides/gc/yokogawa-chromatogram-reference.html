@@ -48,9 +48,18 @@
     <li>Repeatable peak area between runs</li>
   </ul>
 
+  <!-- EXISTING IMAGE (UNCHANGED) -->
   <div class="card gc">
     <img src="images/gc/yokogawa-chromatogram.png"
          alt="Yokogawa GC Chromatogram Reference">
+  </div>
+
+  <!-- ADDITIVE: SCHEMATIC SVG REFERENCE -->
+  <div class="card gc" style="margin-top:14px;">
+    <p class="muted"><b>Schematic reference (zoomable)</b></p>
+    <object type="image/svg+xml"
+            data="assets/images/gc/yokogawa-chromatogram-normal.svg"
+            width="100%"></object>
   </div>
 </section>
 
@@ -59,6 +68,7 @@
 
   <div class="grid">
 
+    <!-- EXISTING CARDS (UNCHANGED) -->
     <div class="card gc">
       <h4>Baseline Noise / Drift</h4>
       <ul class="list">
@@ -93,6 +103,39 @@
         <li>Moisture ingress</li>
         <li>Valve leakage</li>
       </ul>
+    </div>
+
+  </div>
+
+  <!-- ADDITIVE: FAULT SCHEMATIC CHROMATOGRAMS -->
+  <div class="grid" style="margin-top:16px;">
+
+    <div class="card gc">
+      <h4>Schematic — Baseline Noise</h4>
+      <object type="image/svg+xml"
+              data="assets/images/gc/yokogawa-chromatogram-noise.svg"
+              width="100%"></object>
+    </div>
+
+    <div class="card gc">
+      <h4>Schematic — Retention Time Shift</h4>
+      <object type="image/svg+xml"
+              data="assets/images/gc/yokogawa-chromatogram-rt-shift.svg"
+              width="100%"></object>
+    </div>
+
+    <div class="card gc">
+      <h4>Schematic — Peak Tailing</h4>
+      <object type="image/svg+xml"
+              data="assets/images/gc/yokogawa-chromatogram-tailing.svg"
+              width="100%"></object>
+    </div>
+
+    <div class="card gc">
+      <h4>Schematic — Missing Peaks</h4>
+      <object type="image/svg+xml"
+              data="assets/images/gc/yokogawa-chromatogram-missing-peaks.svg"
+              width="100%"></object>
     </div>
 
   </div>
