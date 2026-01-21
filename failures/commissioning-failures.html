@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Commissioning Failures | AnalyzersHub</title>
+
+  <meta name="description"
+        content="Analyzer failures caused by poor commissioning practices. Covers common mistakes, symptoms, root causes, and correct commissioning sequence." />
+
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18" />
+</head>
+
+<body data-page="failure-commissioning">
+
+  <!-- CENTRAL HEADER -->
+  <div id="siteHeader"></div>
+
+  <!-- BREADCRUMBS -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a><span>›</span>
+    <a href="failures/index.html">Common Failures</a><span>›</span>
+    <span class="current">Commissioning Failures</span>
+  </nav>
+
+  <main class="container">
+
+    <!-- INTRO -->
+    <div class="panel">
+      <h2 style="margin:0;color:#0b3c5d;">
+        Commissioning Failures
+      </h2>
+
+      <p class="muted">
+        Commissioning is where analyzer reliability is either
+        <b>built correctly</b> or <b>damaged permanently</b>.
+        Many analyzers fail repeatedly not because of design,
+        but because of poor first-time setup.
+      </p>
+
+      <div class="warn">
+        <b>Field reality:</b>
+        A badly commissioned analyzer will never behave like a stable one,
+        no matter how many times it is calibrated.
+      </div>
+    </div>
+
+    <!-- SYMPTOMS -->
+    <div class="panel">
+      <h3>Typical Symptoms After Startup</h3>
+      <ul class="list">
+        <li>Analyzer never stabilizes</li>
+        <li>Frequent alarms from day one</li>
+        <li>Calibration values drift rapidly</li>
+        <li>Mismatch between analyzer and lab results</li>
+        <li>Operators lose confidence in readings</li>
+      </ul>
+    </div>
+
+    <!-- ROOT CAUSES -->
+    <div class="panel">
+      <h3>Common Commissioning Mistakes</h3>
+      <ul class="list">
+        <li>Commissioning before sampling system is ready</li>
+        <li>No verification of utilities under load</li>
+        <li>Skipping soak-in and stabilization time</li>
+        <li>Incorrect configuration of ranges and alarms</li>
+        <li>Calibrating immediately after startup</li>
+        <li>Rushing handover to operations</li>
+      </ul>
+    </div>
+
+    <!-- FAILURE MODES -->
+    <div class="panel">
+      <h3>Frequent Commissioning Failure Modes</h3>
+      <ul class="list">
+        <li><b>False baseline:</b> analyzer learns wrong “normal”</li>
+        <li><b>Sensor shock:</b> exposure to harsh gas too early</li>
+        <li><b>Bad alarm tuning:</b> nuisance alarms from day one</li>
+        <li><b>Hidden leaks:</b> missed during rushed testing</li>
+        <li><b>Documentation gaps:</b> future troubleshooting becomes guesswork</li>
+      </ul>
+    </div>
+
+    <!-- CORRECT SEQUENCE -->
+    <div class="panel">
+      <h3>Correct Commissioning Sequence</h3>
+      <div class="step"><b>1)</b> Complete mechanical installation & leak checks</div>
+      <div class="step"><b>2)</b> Verify utilities under actual operating conditions</div>
+      <div class="step"><b>3)</b> Flush and stabilize sampling system</div>
+      <div class="step"><b>4)</b> Power up analyzer and allow thermal stabilization</div>
+      <div class="step"><b>5)</b> Observe trends before any calibration</div>
+      <div class="step"><b>6)</b> Perform gentle calibration and verification</div>
+      <div class="step"><b>7)</b> Tune alarms based on real process behavior</div>
+    </div>
+
+    <!-- DESIGN & PROJECT ISSUES -->
+    <div class="panel">
+      <h3>Project-Level Causes</h3>
+      <ul class="list">
+        <li>Commissioning scheduled too early in project timeline</li>
+        <li>Lack of analyzer-specific expertise onsite</li>
+        <li>No ownership between EPC and operations</li>
+        <li>Incomplete documentation and drawings</li>
+      </ul>
+    </div>
+
+    <!-- BEST PRACTICES -->
+    <div class="panel">
+      <h3>Best Practices</h3>
+      <ul class="list">
+        <li>Commission sampling and utilities before analyzer</li>
+        <li>Allow sufficient stabilization time</li>
+        <li>Document “as-left” conditions clearly</li>
+        <li>Train operators during commissioning</li>
+        <li>Do not rush handover</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <!-- CENTRAL FOOTER -->
+  <div id="siteFooter"></div>
+
+  <!-- LOAD HEADER / FOOTER -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
+
+</body>
+</html>
