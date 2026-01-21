@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sampling System Failures | AnalyzersHub</title>
+
+  <meta name="description"
+        content="Most analyzer problems originate in sampling systems. Learn common sampling system failures, symptoms, root causes, and correct troubleshooting order." />
+
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18" />
+</head>
+
+<body data-page="failure-sampling">
+
+  <!-- CENTRAL HEADER -->
+  <div id="siteHeader"></div>
+
+  <!-- BREADCRUMBS -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a><span>›</span>
+    <a href="failures/index.html">Common Failures</a><span>›</span>
+    <span class="current">Sampling System Failures</span>
+  </nav>
+
+  <main class="container">
+
+    <!-- INTRO -->
+    <div class="panel">
+      <h2 style="margin:0;color:#0b3c5d;">
+        Sampling System Failures
+      </h2>
+
+      <p class="muted">
+        The sampling system is the <b>most neglected</b> part of an analyzer installation.
+        More than <b>70% of analyzer issues</b> originate upstream of the analyzer —
+        not inside it.
+      </p>
+
+      <div class="warn">
+        <b>Field rule:</b>
+        If the sample is wrong, the analyzer can only report the wrong value accurately.
+      </div>
+    </div>
+
+    <!-- SYMPTOMS -->
+    <div class="panel">
+      <h3>Typical Symptoms</h3>
+      <ul class="list">
+        <li>Unstable or noisy readings</li>
+        <li>Slow analyzer response</li>
+        <li>Frequent calibration failures</li>
+        <li>Analyzer works with calibration gas but not process gas</li>
+        <li>Random alarms with no process change</li>
+      </ul>
+    </div>
+
+    <!-- ROOT CAUSES -->
+    <div class="panel">
+      <h3>Common Root Causes</h3>
+      <ul class="list">
+        <li>Plugged or partially blocked sample probes</li>
+        <li>Condensation in sample lines</li>
+        <li>Leaks allowing ambient air ingress</li>
+        <li>Incorrect sample line material</li>
+        <li>Long sample transport time</li>
+        <li>Incorrect probe location or orientation</li>
+      </ul>
+    </div>
+
+    <!-- FAILURE MODES -->
+    <div class="panel">
+      <h3>Frequent Sampling Failure Modes</h3>
+      <ul class="list">
+        <li><b>Water carryover:</b> floods filters, sensors, and valves</li>
+        <li><b>Dust carryover:</b> blocks probes and filters</li>
+        <li><b>Adsorption:</b> reactive gases lost in tubing</li>
+        <li><b>Air dilution:</b> leaks reduce gas concentration</li>
+        <li><b>Dead volume:</b> causes slow and misleading readings</li>
+      </ul>
+    </div>
+
+    <!-- TROUBLESHOOTING -->
+    <div class="panel">
+      <h3>Correct Troubleshooting Order</h3>
+      <div class="step"><b>1)</b> Inspect probe condition and insertion depth</div>
+      <div class="step"><b>2)</b> Check sample line routing, slope, and insulation</div>
+      <div class="step"><b>3)</b> Verify all fittings for leaks</div>
+      <div class="step"><b>4)</b> Inspect filters, knock-out pots, and drains</div>
+      <div class="step"><b>5)</b> Measure actual sample flow and response time</div>
+      <div class="step"><b>6)</b> Only then inspect analyzer internals</div>
+    </div>
+
+    <!-- DESIGN MISTAKES -->
+    <div class="panel">
+      <h3>Common Design Mistakes</h3>
+      <ul class="list">
+        <li>Using tubing incompatible with H₂S or NH₃</li>
+        <li>No provision for moisture removal</li>
+        <li>Overly long sample lines</li>
+        <li>No sample flow indication</li>
+        <li>Ignoring ambient temperature effects</li>
+      </ul>
+    </div>
+
+    <!-- BEST PRACTICES -->
+    <div class="panel">
+      <h3>Best Practices</h3>
+      <ul class="list">
+        <li>Design sampling systems before selecting analyzers</li>
+        <li>Always assume moisture and dust are present</li>
+        <li>Keep sample paths short and simple</li>
+        <li>Install visible flow indication</li>
+        <li>Treat sampling as critical instrumentation</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <!-- CENTRAL FOOTER -->
+  <div id="siteFooter"></div>
+
+  <!-- LOAD HEADER / FOOTER -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
+
+</body>
+</html>
