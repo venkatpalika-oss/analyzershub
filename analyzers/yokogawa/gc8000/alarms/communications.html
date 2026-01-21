@@ -1,71 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GC8000 Communication / DCS | Decision Tree | AnalyzersHub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<base href="/analyzershub/">
-<link rel="stylesheet" href="assets/css/style.css">
+  <title>GC8000 Communication / DCS | Decision Tree | AnalyzersHub</title>
+
+  <base href="/analyzershub/">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
-<body>
 
-<header class="site-header">
-  <div class="site-header-inner">
-    <a class="brand" href="index.html">AnalyzersHub</a>
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Search</a>
-      <a href="analyzers.html?category=gc">GC Hub</a>
-    </nav>
-  </div>
-</header>
+<body data-page="decision-tree">
 
-<nav class="crumbs" aria-label="Breadcrumb">
-  <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers.html?category=gc">GC Hub</a><span>›</span>
-  <a href="analyzers/yokogawa/gc8000/gc8000.html">GC8000</a><span>›</span>
-  <a href="analyzers/yokogawa/gc8000/alarms/index.html">Alarms</a><span>›</span>
-  <span class="current">Communication / DCS</span>
-</nav>
+  <!-- ✅ CENTRAL HEADER -->
+  <div id="siteHeader"></div>
 
-<main class="container">
-  <h2 style="margin-top:18px;">Decision Tree: Communication / DCS</h2>
+  <!-- ✅ BREADCRUMBS -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a><span>›</span>
+    <a href="analyzers.html?category=gc">GC Hub</a><span>›</span>
+    <a href="analyzers/yokogawa/gc8000/gc8000.html">GC8000</a><span>›</span>
+    <a href="analyzers/yokogawa/gc8000/alarms/index.html">Alarms</a><span>›</span>
+    <span class="current">Communication / DCS</span>
+  </nav>
 
-  <div class="action-row">
-    <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/alarms/index.html">← Back to Alarms Hub</a>
-    <a class="btn btn-primary" href="analyzers/yokogawa/gc8000/alarm-codes.html">Alarm Codes →</a>
-    <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/gc8000.html">Back to GC8000</a>
-  </div>
+  <main class="container">
 
-  <div class="warn">
-    <b>Goal:</b> restore stable updates to DCS/PLC/Historians (values + quality + update timing).
-  </div>
+    <h2 style="margin-top:18px;">
+      Decision Tree: Communication / DCS
+    </h2>
 
-  <div class="step"><b>1)</b> Confirm the analyzer is running analysis normally (latest run time updating).</div>
-  <div class="step"><b>2)</b> Check network basics: link lights, correct IP/subnet/gateway, ping from the same network.</div>
-  <div class="step"><b>3)</b> Verify protocol settings: Modbus TCP / OPC / serial gateway settings match the DCS configuration.</div>
-  <div class="step"><b>4)</b> Verify mapping: tag/register list, data types, scaling, and “quality/status” mapping.</div>
-  <div class="step"><b>5)</b> Confirm update cycle: GC cycle time vs DCS polling time (avoid too-fast polling causing timeouts).</div>
+    <div class="action-row">
+      <a class="btn btn-ghost"
+         href="analyzers/yokogawa/gc8000/alarms/index.html">
+        ← Back to Alarms Hub
+      </a>
 
-  <div class="card gc" style="margin-top:16px;">
-    <h3>Quick Symptoms → Likely Cause</h3>
-    <p><b>All values stale:</b> IP/network, service down, wrong protocol port.</p>
-    <p><b>Values update but wrong:</b> mapping/register offset, scaling, wrong data type.</p>
-    <p><b>Bad quality only:</b> quality/status mapping, handshake, polling mismatch.</p>
-  </div>
-</main>
+      <a class="btn btn-primary"
+         href="analyzers/yokogawa/gc8000/alarm-codes.html">
+        Alarm Codes →
+      </a>
 
-<footer class="site-footer">
-  <div class="site-footer-inner">
-    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Search</a>
-      <a href="analyzers/yokogawa/gc8000/alarms/index.html">GC8000 Alarms</a>
+      <a class="btn btn-ghost"
+         href="analyzers/yokogawa/gc8000/gc8000.html">
+        Back to GC8000
+      </a>
     </div>
-  </div>
-</footer>
+
+    <div class="warn">
+      <b>Goal:</b>
+      Restore stable updates to DCS / PLC / Historians
+      (values, quality, and update timing).
+    </div>
+
+    <div class="step">
+      <b>1)</b> Confirm the analyzer is running analysis normally
+      (latest run time updating).
+    </div>
+
+    <div class="step">
+      <b>2)</b> Check network basics:
+      link lights, correct IP / subnet / gateway,
+      and ping from the same network.
+    </div>
+
+    <div class="step">
+      <b>3)</b> Verify protocol settings:
+      Modbus TCP / OPC / serial gateway settings
+      match the DCS configuration.
+    </div>
+
+    <div class="step">
+      <b>4)</b> Verify mapping:
+      tag / register list, data types, scaling,
+      and quality / status mapping.
+    </div>
+
+    <div class="step">
+      <b>5)</b> Confirm update cycle:
+      GC cycle time vs DCS polling time
+      (avoid over-polling causing timeouts).
+    </div>
+
+    <div class="card gc" style="margin-top:16px;">
+      <h3>Quick Symptoms → Likely Cause</h3>
+      <p><b>All values stale:</b> IP/network issue, service down, wrong protocol port.</p>
+      <p><b>Values update but wrong:</b> register offset, scaling, wrong data type.</p>
+      <p><b>Bad quality only:</b> quality/status mapping, handshake issue, polling mismatch.</p>
+    </div>
+
+  </main>
+
+  <!-- ✅ CENTRAL FOOTER -->
+  <div id="siteFooter"></div>
+
+  <!-- ✅ LOAD HEADER / FOOTER -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
