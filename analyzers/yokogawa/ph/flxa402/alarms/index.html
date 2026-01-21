@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Yokogawa FLXA402 pH Alarms | Decision Trees | AnalyzersHub</title>
+
+  <meta name="description"
+        content="Alarm decision trees for Yokogawa FLXA402 pH / ORP analyzer. Covers unstable pH, slope failure, temperature alarms, sensor faults, and correct troubleshooting order." />
+
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18" />
+</head>
+
+<body data-page="analyzers">
+
+  <!-- CENTRAL HEADER -->
+  <div id="siteHeader"></div>
+
+  <!-- BREADCRUMBS -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a><span>›</span>
+    <a href="analyzers.html">Analyzer Search</a><span>›</span>
+    <a href="analyzers/yokogawa/ph/flxa402/flxa402.html">FLXA402</a><span>›</span>
+    <span class="current">Alarm Decision Trees</span>
+  </nav>
+
+  <main class="container">
+
+    <div class="panel">
+      <h2 style="margin:0;color:#0b3c5d;">
+        Yokogawa FLXA402 — Alarm Decision Trees
+      </h2>
+
+      <p class="muted" style="margin:8px 0 0;">
+        Model-specific alarm troubleshooting for FLXA402 pH / ORP analyzers.
+        Follow the sequence strictly to avoid unnecessary recalibration
+        or transmitter replacement.
+      </p>
+
+      <div class="warn" style="margin-top:10px;">
+        <b>Rule:</b> Resolve sensor and process issues first.
+        FLXA402 electronics rarely cause pH instability.
+      </div>
+
+      <div class="action-row">
+        <a class="btn btn-ghost"
+           href="analyzers/yokogawa/ph/flxa402/flxa402.html">
+          ← Back to Analyzer
+        </a>
+        <a class="btn btn-ghost"
+           href="guides/ph/ph-alarm-decision-tree.html">
+          Generic pH Alarm Guide →
+        </a>
+      </div>
+    </div>
+
+    <div class="grid">
+
+      <div class="card gc">
+        <h3>Unstable / Fluctuating pH</h3>
+        <ul class="list">
+          <li>Check for air bubbles or intermittent immersion.</li>
+          <li>Inspect sensor glass and reference junction.</li>
+          <li>Verify proper grounding of piping and transmitter.</li>
+          <li>Check sensor cable for moisture ingress.</li>
+        </ul>
+      </div>
+
+      <div class="card gc">
+        <h3>Drifting pH Reading</h3>
+        <ul class="list">
+          <li>Reference poisoning (sulfides, proteins, heavy metals).</li>
+          <li>Blocked junction or low electrolyte flow.</li>
+          <li>Aging glass electrode (low slope).</li>
+          <li>Temperature compensation mismatch.</li>
+        </ul>
+      </div>
+
+      <div class="card gc">
+        <h3>Calibration / Slope Error</h3>
+        <ul class="list">
+          <li>Expired or contaminated buffer solutions.</li>
+          <li>Insufficient stabilization time.</li>
+          <li>Dry or cracked glass bulb.</li>
+          <li>Slope outside limits → sensor replacement.</li>
+        </ul>
+      </div>
+
+      <div class="card gc">
+        <h3>Temperature Alarm</h3>
+        <ul class="list">
+          <li>Broken Pt100 / Pt1000 element.</li>
+          <li>Incorrect temperature sensor type configured.</li>
+          <li>Poor thermal contact with process.</li>
+          <li>Shared cable damage affecting temperature signal.</li>
+        </ul>
+      </div>
+
+      <div class="card gc">
+        <h3>No Signal / Sensor Fault</h3>
+        <ul class="list">
+          <li>Broken glass bulb or disconnected sensor.</li>
+          <li>Wet or damaged high-impedance cable.</li>
+          <li>Incorrect wiring or terminal assignment.</li>
+          <li>Confirm by connecting a known-good sensor.</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </main>
+
+  <div id="siteFooter"></div>
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
+
+</body>
+</html>
