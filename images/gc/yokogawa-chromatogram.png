@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1000 400">
+
+  <defs>
+    <style>
+      .axis { stroke:#263238; stroke-width:2; }
+      .grid { stroke:#e0e0e0; stroke-width:1; }
+      .curve { fill:none; stroke:#2e7d32; stroke-width:3; }
+      .title { font-size:18px; fill:#0b3c5d; font-weight:700; }
+      .label { font-size:14px; fill:#374151; }
+    </style>
+  </defs>
+
+  <!-- Axes -->
+  <line x1="80" y1="320" x2="960" y2="320" class="axis"/>
+  <line x1="80" y1="60"  x2="80"  y2="320" class="axis"/>
+
+  <!-- Grid -->
+  <line x1="80" y1="260" x2="960" y2="260" class="grid"/>
+  <line x1="80" y1="200" x2="960" y2="200" class="grid"/>
+  <line x1="80" y1="140" x2="960" y2="140" class="grid"/>
+
+  <!-- Chromatogram -->
+  <path class="curve"
+        d="M80 320
+           C160 320, 180 280, 200 180
+           C215 120, 235 120, 250 180
+           C280 320, 340 320, 380 260
+           C400 230, 420 170, 440 150
+           C460 130, 480 130, 500 160
+           C540 320, 600 320, 660 260
+           C690 230, 720 200, 740 190
+           C760 180, 790 180, 820 210
+           C860 320, 920 320, 960 320"/>
+
+  <!-- Labels -->
+  <text x="520" y="35" class="title" text-anchor="middle">
+    Yokogawa GC — Typical Stable Chromatogram
+  </text>
+
+  <text x="520" y="360" class="label" text-anchor="middle">
+    Time / Retention Order
+  </text>
+
+  <text x="30" y="210" class="label" transform="rotate(-90 30,210)">
+    Detector Response
+  </text>
+
+</svg>
