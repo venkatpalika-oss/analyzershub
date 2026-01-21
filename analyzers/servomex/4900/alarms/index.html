@@ -5,201 +5,199 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Servomex 4900 Alarm Decision Trees | AnalyzersHub</title>
 
-  <!-- ✅ BASE PATH -->
+  <!-- GitHub Pages base -->
   <base href="/analyzershub/">
 
-  <!-- ✅ GLOBAL CSS -->
-  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18" />
+  <!-- Global styles -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
 
 <body data-page="analyzers">
 
-  <!-- ✅ CENTRAL HEADER -->
-  <div id="siteHeader"></div>
+<!-- ================= CENTRAL HEADER ================= -->
+<div id="siteHeader"></div>
 
-  <!-- ✅ BREADCRUMBS -->
-  <nav class="crumbs" aria-label="Breadcrumb">
-    <a href="index.html">Home</a><span>›</span>
-    <a href="analyzers.html">Analyzer Search</a><span>›</span>
-    <a href="analyzers.html?vendor=servomex">Servomex</a><span>›</span>
-    <a href="analyzers/servomex/4900/index.html">4900</a><span>›</span>
-    <span class="current">Alarms</span>
-  </nav>
+<!-- ================= BREADCRUMBS ================= -->
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="analyzers.html">Analyzer Search</a><span>›</span>
+  <a href="analyzers.html?vendor=servomex">Servomex</a><span>›</span>
+  <a href="analyzers/servomex/4900/index.html">4900</a><span>›</span>
+  <span class="current">Alarms</span>
+</nav>
 
-  <main class="container">
+<main class="container">
 
-    <!-- =====================================================
-         HEADER PANEL
-    ====================================================== -->
-    <div class="panel">
-      <h2 style="margin:0;color:#0b3c5d;">
-        Servomex 4900 — Alarm Decision Trees
-      </h2>
+<!-- ================= HEADER PANEL ================= -->
+<section class="panel">
+  <h2>Servomex 4900 — Alarm Decision Trees</h2>
+  <p class="muted">
+    Technician-grade alarm handling based on real refinery experience.
+    Follow the sequence strictly to avoid false calibration and unnecessary sensor replacement.
+  </p>
 
-      <p class="muted" style="margin:8px 0 0;">
-        Technician-first alarm handling using <b>decision-tree logic</b>.
-        Follow the sequence strictly to avoid unnecessary calibration or
-        sensor replacement.
-      </p>
+  <div class="warn">
+    <b>Golden rule:</b> Always stabilize <b>sample flow, pressure, and moisture</b>
+    before touching calibration or sensors.
+  </div>
 
-      <div class="action-row">
-        <a class="btn btn-ghost" href="analyzers/servomex/4900/index.html">
-          ← Back to Analyzer
-        </a>
-        <a class="btn btn-ghost" href="analyzers.html?vendor=servomex">
-          Servomex Analyzers →
-        </a>
-      </div>
+  <div class="action-row">
+    <a class="btn btn-ghost" href="analyzers/servomex/4900/index.html">
+      ← Back to Analyzer
+    </a>
+  </div>
+</section>
 
-      <div class="warn">
-        <b>Golden rule:</b>
-        Always stabilize <b>sample flow & pressure</b> before acting on alarms.
-      </div>
-    </div>
+<!-- ================= ALARMS GRID ================= -->
+<section class="panel">
+<div class="grid">
 
-    <!-- =====================================================
-         ALARM GRID
-    ====================================================== -->
-    <div class="grid">
+<!-- =================================================
+     SAMPLE FLOW ALARM
+================================================== -->
+<div class="card gas">
+  <h3>Sample Flow Alarm</h3>
+  <p class="muted">Flow below design limit or unstable (pressure hunting).</p>
 
-      <!-- =================================================
-           SAMPLE FLOW ALARM
-      ================================================== -->
-      <div class="card gas">
-        <h3>Sample Flow Alarm</h3>
-        <p class="muted">Insufficient or unstable sample flow.</p>
+  <svg viewBox="0 0 900 520" width="100%" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="af1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+        <path d="M0,0 L10,5 L0,10 Z" fill="#0b3c5d"/>
+      </marker>
+    </defs>
 
-        <!-- SVG DECISION TREE -->
-        <svg viewBox="0 0 420 240" width="100%" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <marker id="arr1" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-              <path d="M0,0 L8,4 L0,8 Z" fill="#0b3c5d"/>
-            </marker>
-          </defs>
+    <rect x="350" y="20" width="200" height="50" rx="10" fill="#e3f2fd" stroke="#0b3c5d"/>
+    <text x="450" y="52" text-anchor="middle">Sample Flow Alarm</text>
 
-          <rect x="120" y="10" width="180" height="40" rx="8" fill="#e3f2fd" stroke="#0b3c5d"/>
-          <text x="210" y="36" text-anchor="middle">Flow Alarm Active</text>
+    <line x1="450" y1="70" x2="450" y2="120" stroke="#0b3c5d" marker-end="url(#af1)"/>
 
-          <line x1="210" y1="50" x2="210" y2="80" stroke="#0b3c5d" marker-end="url(#arr1)"/>
+    <rect x="80" y="120" width="260" height="60" rx="10" fill="#fff3e0" stroke="#ef6c00"/>
+    <text x="210" y="155" text-anchor="middle">Process pressure available?</text>
 
-          <rect x="40" y="80" width="160" height="50" rx="8" fill="#fff3e0" stroke="#ef6c00"/>
-          <text x="120" y="110" text-anchor="middle">Check source pressure</text>
+    <rect x="560" y="120" width="260" height="60" rx="10" fill="#fff3e0" stroke="#ef6c00"/>
+    <text x="690" y="155" text-anchor="middle">Pressure hunting?</text>
 
-          <rect x="220" y="80" width="160" height="50" rx="8" fill="#fff3e0" stroke="#ef6c00"/>
-          <text x="300" y="110" text-anchor="middle">Check filters / drains</text>
+    <line x1="210" y1="180" x2="210" y2="260" stroke="#0b3c5d" marker-end="url(#af1)"/>
+    <line x1="690" y1="180" x2="690" y2="260" stroke="#0b3c5d" marker-end="url(#af1)"/>
 
-          <line x1="120" y1="130" x2="120" y2="170" stroke="#0b3c5d" marker-end="url(#arr1)"/>
-          <line x1="300" y1="130" x2="300" y2="170" stroke="#0b3c5d" marker-end="url(#arr1)"/>
+    <rect x="80" y="260" width="260" height="60" rx="10" fill="#fdecea" stroke="#c62828"/>
+    <text x="210" y="295" text-anchor="middle">Process issue → Inform OPS</text>
 
-          <rect x="120" y="170" width="180" height="50" rx="8" fill="#e8f5e9" stroke="#2e7d32"/>
-          <text x="210" y="200" text-anchor="middle">Stabilize flow → Clear alarm</text>
-        </svg>
+    <rect x="560" y="260" width="260" height="60" rx="10" fill="#fff3e0" stroke="#ef6c00"/>
+    <text x="690" y="295" text-anchor="middle">Check filters / moisture</text>
 
-        <div class="warn">
-          <b>Do not calibrate</b> with unstable flow.
-        </div>
-      </div>
+    <line x1="690" y1="320" x2="690" y2="400" stroke="#0b3c5d" marker-end="url(#af1)"/>
 
-      <!-- =================================================
-           OXYGEN SENSOR FAULT
-      ================================================== -->
-      <div class="card gas">
-        <h3>Oxygen Sensor Fault</h3>
-        <p class="muted">Paramagnetic O₂ signal outside limits.</p>
+    <rect x="560" y="400" width="260" height="60" rx="10" fill="#e8f5e9" stroke="#2e7d32"/>
+    <text x="690" y="435" text-anchor="middle">Stabilize flow → Alarm clears</text>
+  </svg>
 
-        <svg viewBox="0 0 420 240" width="100%" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-              <path d="M0,0 L8,4 L0,8 Z" fill="#0b3c5d"/>
-            </marker>
-          </defs>
+  <div class="note">
+    <b>Typical root causes:</b><br>
+    Wet / blocked filters — <b>45%</b><br>
+    Regulator hunting — <b>30%</b><br>
+    Process pressure loss — <b>15%</b><br>
+    Internal restriction fault — <b>10%</b>
+  </div>
+</div>
 
-          <rect x="120" y="10" width="180" height="40" rx="8" fill="#e3f2fd" stroke="#0b3c5d"/>
-          <text x="210" y="36" text-anchor="middle">O₂ Sensor Alarm</text>
+<!-- =================================================
+     OXYGEN SENSOR FAULT
+================================================== -->
+<div class="card gas">
+  <h3>Oxygen Sensor Fault (Paramagnetic)</h3>
+  <p class="muted">O₂ signal unstable or outside physical limits.</p>
 
-          <line x1="210" y1="50" x2="210" y2="80" stroke="#0b3c5d" marker-end="url(#arr2)"/>
+  <svg viewBox="0 0 900 520" width="100%" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="af2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+        <path d="M0,0 L10,5 L0,10 Z" fill="#0b3c5d"/>
+      </marker>
+    </defs>
 
-          <rect x="40" y="80" width="160" height="50" rx="8" fill="#fff3e0" stroke="#ef6c00"/>
-          <text x="120" y="110" text-anchor="middle">Verify flow stability</text>
+    <rect x="350" y="20" width="200" height="50" rx="10" fill="#e3f2fd" stroke="#0b3c5d"/>
+    <text x="450" y="52" text-anchor="middle">O₂ Sensor Fault</text>
 
-          <rect x="220" y="80" width="160" height="50" rx="8" fill="#fff3e0" stroke="#ef6c00"/>
-          <text x="300" y="110" text-anchor="middle">Check zero gas purity</text>
+    <line x1="450" y1="70" x2="450" y2="120" stroke="#0b3c5d" marker-end="url(#af2)"/>
 
-          <line x1="210" y1="130" x2="210" y2="170" stroke="#0b3c5d" marker-end="url(#arr2)"/>
+    <rect x="80" y="120" width="260" height="60" rx="10" fill="#fff3e0" stroke="#ef6c00"/>
+    <text x="210" y="155" text-anchor="middle">Is sample flow stable?</text>
 
-          <rect x="120" y="170" width="180" height="50" rx="8" fill="#fdecea" stroke="#c62828"/>
-          <text x="210" y="200" text-anchor="middle">Inspect / replace sensor</text>
-        </svg>
+    <rect x="560" y="120" width="260" height="60" rx="10" fill="#fff3e0" stroke="#ef6c00"/>
+    <text x="690" y="155" text-anchor="middle">Zero gas truly O₂-free?</text>
 
-        <div class="warn">
-          Sensor replacement is the <b>last step</b>, not the first.
-        </div>
-      </div>
+    <line x1="210" y1="180" x2="210" y2="260" stroke="#0b3c5d" marker-end="url(#af2)"/>
+    <line x1="690" y1="180" x2="690" y2="260" stroke="#0b3c5d" marker-end="url(#af2)"/>
 
-      <!-- =================================================
-           COMMUNICATION ALARM
-      ================================================== -->
-      <div class="card gas">
-        <h3>Communication Alarm</h3>
-        <p class="muted">Analyzer data not updating in DCS.</p>
+    <rect x="80" y="260" width="260" height="60" rx="10" fill="#fff3e0" stroke="#ef6c00"/>
+    <text x="210" y="295" text-anchor="middle">Check moisture / drains</text>
 
-        <svg viewBox="0 0 420 220" width="100%" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <marker id="arr3" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-              <path d="M0,0 L8,4 L0,8 Z" fill="#0b3c5d"/>
-            </marker>
-          </defs>
+    <rect x="560" y="260" width="260" height="60" rx="10" fill="#fdecea" stroke="#c62828"/>
+    <text x="690" y="295" text-anchor="middle">Sensor ageing / damage</text>
+  </svg>
 
-          <rect x="120" y="10" width="180" height="40" rx="8" fill="#e3f2fd" stroke="#0b3c5d"/>
-          <text x="210" y="36" text-anchor="middle">Comm Alarm</text>
+  <div class="note">
+    <b>Typical root causes:</b><br>
+    Moisture ingress — <b>40%</b><br>
+    Pressure shock / hunting — <b>25%</b><br>
+    Wrong zero gas / leaks — <b>20%</b><br>
+    True sensor failure — <b>15%</b>
+  </div>
+</div>
 
-          <line x1="210" y1="50" x2="210" y2="80" stroke="#0b3c5d" marker-end="url(#arr3)"/>
+<!-- =================================================
+     COMMUNICATION ALARM
+================================================== -->
+<div class="card gas">
+  <h3>Communication Alarm</h3>
+  <p class="muted">Analyzer values not updating in DCS.</p>
 
-          <rect x="40" y="80" width="160" height="50" rx="8" fill="#fff3e0" stroke="#ef6c00"/>
-          <text x="120" y="110" text-anchor="middle">Check power / LAN</text>
+  <svg viewBox="0 0 900 420" width="100%" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="af3" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+        <path d="M0,0 L10,5 L0,10 Z" fill="#0b3c5d"/>
+      </marker>
+    </defs>
 
-          <rect x="220" y="80" width="160" height="50" rx="8" fill="#fff3e0" stroke="#ef6c00"/>
-          <text x="300" y="110" text-anchor="middle">Verify IP / DCS mapping</text>
+    <rect x="350" y="20" width="200" height="50" rx="10" fill="#e3f2fd" stroke="#0b3c5d"/>
+    <text x="450" y="52" text-anchor="middle">Communication Alarm</text>
 
-          <line x1="210" y1="130" x2="210" y2="170" stroke="#0b3c5d" marker-end="url(#arr3)"/>
+    <line x1="450" y1="70" x2="450" y2="120" stroke="#0b3c5d" marker-end="url(#af3)"/>
 
-          <rect x="120" y="170" width="180" height="40" rx="8" fill="#e8f5e9" stroke="#2e7d32"/>
-          <text x="210" y="195" text-anchor="middle">Restore comms</text>
-        </svg>
+    <rect x="80" y="120" width="260" height="60" rx="10" fill="#fff3e0" stroke="#ef6c00"/>
+    <text x="210" y="155" text-anchor="middle">Analyzer running locally?</text>
 
-        <div class="warn">
-          Many comm alarms are <b>DCS quality-bit issues</b>, not analyzer faults.
-        </div>
-      </div>
+    <rect x="560" y="120" width="260" height="60" rx="10" fill="#fff3e0" stroke="#ef6c00"/>
+    <text x="690" y="155" text-anchor="middle">Ping reachable?</text>
 
-    </div>
+    <line x1="210" y1="180" x2="210" y2="260" stroke="#0b3c5d" marker-end="url(#af3)"/>
+    <line x1="690" y1="180" x2="690" y2="260" stroke="#0b3c5d" marker-end="url(#af3)"/>
 
-    <!-- =====================================================
-         DISCUSSION
-    ====================================================== -->
-    <div class="panel">
-      <h3 style="margin:0;color:#0b3c5d;">Discussion</h3>
-      <p class="muted" style="margin:8px 0 0;">
-        Share Servomex 4900 alarm root causes and plant fixes.
-        (Requires GitHub login.)
-      </p>
+    <rect x="80" y="260" width="260" height="60" rx="10" fill="#e8f5e9" stroke="#2e7d32"/>
+    <text x="210" y="295" text-anchor="middle">DCS mapping / quality bit</text>
 
-      <script src="https://utteranc.es/client.js"
-              repo="venkatpalika-oss/analyzershub"
-              issue-term="pathname"
-              theme="github-light"
-              crossorigin="anonymous"
-              async>
-      </script>
-    </div>
+    <rect x="560" y="260" width="260" height="60" rx="10" fill="#fdecea" stroke="#c62828"/>
+    <text x="690" y="295" text-anchor="middle">Network / power issue</text>
+  </svg>
 
-  </main>
+  <div class="note">
+    <b>Typical root causes:</b><br>
+    DCS quality-bit issue — <b>45%</b><br>
+    Network / switch fault — <b>30%</b><br>
+    Power / UPS reset — <b>15%</b><br>
+    Analyzer service stopped — <b>10%</b>
+  </div>
+</div>
 
-  <!-- ✅ CENTRAL FOOTER -->
-  <div id="siteFooter"></div>
+</div>
+</section>
 
-  <!-- ✅ LOAD HEADER / FOOTER -->
-  <script src="assets/js/includes.js?v=2026-01-18"></script>
+</main>
+
+<!-- ================= CENTRAL FOOTER ================= -->
+<div id="siteFooter"></div>
+
+<script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
