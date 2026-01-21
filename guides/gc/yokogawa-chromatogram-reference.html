@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yokogawa GC Chromatogram Reference | AnalyzersHub</title>
+
+<base href="/analyzershub/">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<div id="siteHeader"></div>
+
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span>›</span>
+  <a href="guides/index.html">Guides</a><span>›</span>
+  <span class="current">Yokogawa GC Chromatogram</span>
+</nav>
+
+<main class="container">
+
+<section class="panel">
+  <h2>Yokogawa GC — Chromatogram Reference</h2>
+  <p class="muted">
+    Typical chromatogram appearance for Yokogawa process gas chromatographs.
+    Used for troubleshooting <b>sampling, valves, oven stability, and carrier gas issues</b>.
+  </p>
+
+  <div class="warn">
+    <b>Important:</b> Peak order, retention time, and response vary by method.
+    This reference is for <b>pattern recognition only</b>, not calibration.
+  </div>
+</section>
+
+<section class="panel">
+  <h3>Typical Stable Chromatogram</h3>
+
+  <p class="muted">
+    A healthy GC chromatogram shows:
+  </p>
+
+  <ul class="list">
+    <li>Stable baseline (no drift or noise)</li>
+    <li>Consistent retention times</li>
+    <li>Sharp, symmetrical peaks</li>
+    <li>Repeatable peak area between runs</li>
+  </ul>
+
+  <div class="card gc">
+    <img src="images/gc/yokogawa-chromatogram.png"
+         alt="Yokogawa GC Chromatogram Reference">
+  </div>
+</section>
+
+<section class="panel">
+  <h3>Common Fault Patterns</h3>
+
+  <div class="grid">
+
+    <div class="card gc">
+      <h4>Baseline Noise / Drift</h4>
+      <ul class="list">
+        <li>Wet sample or condensation</li>
+        <li>Carrier pressure hunting</li>
+        <li>Detector instability</li>
+      </ul>
+    </div>
+
+    <div class="card gc">
+      <h4>Retention Time Shift</h4>
+      <ul class="list">
+        <li>Oven temperature deviation</li>
+        <li>Carrier flow change</li>
+        <li>Column ageing</li>
+      </ul>
+    </div>
+
+    <div class="card gc">
+      <h4>Missing / Low Peaks</h4>
+      <ul class="list">
+        <li>Injection valve fault</li>
+        <li>Sample loop blockage</li>
+        <li>Incorrect valve timing</li>
+      </ul>
+    </div>
+
+    <div class="card gc">
+      <h4>Peak Tailing / Broadening</h4>
+      <ul class="list">
+        <li>Column contamination</li>
+        <li>Moisture ingress</li>
+        <li>Valve leakage</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<div class="note">
+  <b>Technician tip:</b>
+  Always compare chromatograms only after confirming
+  <b>stable sample pressure, dry sample, and stable carrier gas</b>.
+</div>
+
+</main>
+
+<div id="siteFooter"></div>
+<script src="assets/js/includes.js"></script>
+
+</body>
+</html>
