@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="420" viewBox="0 0 1200 420"
+ xmlns="http://www.w3.org/2000/svg">
+
+<style>
+  .axis{stroke:#374151;stroke-width:2}
+  .noise{stroke:#dc2626;stroke-width:2;fill:none}
+  .text{font-size:13px;fill:#374151}
+</style>
+
+<line x1="80" y1="60" x2="80" y2="340" class="axis"/>
+<line x1="80" y1="340" x2="1120" y2="340" class="axis"/>
+
+<path d="M80 300 L120 295 L160 305 L200 290 L240 310 L280 295
+         L320 305 L360 290 L400 310 L440 295 L480 305 L520 290
+         L560 310 L600 295 L640 305 L680 290 L720 310 L760 295
+         L800 305 L840 290 L880 310 L920 295 L960 305 L1000 290
+         L1040 310 L1080 295 L1120 305" class="noise"/>
+
+<text x="200" y="200" class="text">
+Baseline noise → moisture / carrier instability
+</text>
+
+</svg>
