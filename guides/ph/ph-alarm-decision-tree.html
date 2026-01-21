@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>pH Analyzer Alarm Decision Tree | Troubleshooting Guide | AnalyzersHub</title>
+
+  <meta name="description"
+        content="Generic pH analyzer alarm decision tree for technicians. Covers unstable pH, drifting readings, slope failure, temperature alarms, sensor faults, and correct troubleshooting order." />
+
+  <base href="/analyzershub/">
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18" />
+</head>
+
+<body data-page="guides">
+
+  <!-- ✅ CENTRAL HEADER -->
+  <div id="siteHeader"></div>
+
+  <!-- BREADCRUMBS -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a><span>›</span>
+    <a href="guides/index.html">Guides</a><span>›</span>
+    <a href="guides/ph/index.html">pH Measurement</a><span>›</span>
+    <span class="current">Alarm Decision Tree</span>
+  </nav>
+
+  <main class="container">
+
+    <!-- INTRO PANEL -->
+    <div class="panel">
+      <h2 style="margin:0;color:#0b3c5d;">
+        pH Analyzer – Alarm Decision Tree (Generic)
+      </h2>
+
+      <p class="muted" style="margin:8px 0 0;">
+        This decision tree helps technicians troubleshoot common pH analyzer
+        alarms logically and efficiently. Follow the order strictly to avoid
+        unnecessary sensor or transmitter replacement.
+      </p>
+
+      <div class="warn" style="margin-top:10px;">
+        <b>Golden rule:</b> pH alarms almost always originate from the
+        <b>sensor or process</b>, not from the analyzer electronics.
+      </div>
+    </div>
+
+    <div class="grid">
+
+      <!-- UNSTABLE PH -->
+      <div class="card gc">
+        <h3>Alarm: Unstable / Noisy pH</h3>
+        <ul class="list">
+          <li><b>Check sensor:</b> air bubbles, loose mounting, cracked glass.</li>
+          <li><b>Check process:</b> turbulence, flashing, intermittent flow.</li>
+          <li><b>Check grounding:</b> poor grounding causes noisy signals.</li>
+          <li><b>Check cable:</b> moisture ingress, damaged insulation.</li>
+        </ul>
+
+        <div class="warn" style="margin-top:8px;">
+          Do not recalibrate before stabilizing the signal.
+        </div>
+      </div>
+
+      <!-- DRIFTING PH -->
+      <div class="card gc">
+        <h3>Alarm: Drifting pH</h3>
+        <ul class="list">
+          <li><b>Reference poisoning:</b> sulphides, proteins, heavy metals.</li>
+          <li><b>Blocked junction:</b> slow electrolyte exchange.</li>
+          <li><b>Aging glass:</b> slope degradation.</li>
+          <li><b>Temperature mismatch:</b> faulty or slow temperature element.</li>
+        </ul>
+
+        <div class="warn" style="margin-top:8px;">
+          Frequent calibration = sensor near end of life.
+        </div>
+      </div>
+
+      <!-- CALIBRATION FAILURE -->
+      <div class="card gc">
+        <h3>Alarm: Calibration / Slope Failure</h3>
+        <ul class="list">
+          <li><b>Old or contaminated buffers:</b> always use fresh buffers.</li>
+          <li><b>Insufficient stabilization time:</b> wait patiently.</li>
+          <li><b>Dry sensor:</b> rehydrate or replace.</li>
+          <li><b>Slope outside limits:</b> sensor replacement required.</li>
+        </ul>
+
+        <div class="warn" style="margin-top:8px;">
+          Calibration cannot fix a damaged sensor.
+        </div>
