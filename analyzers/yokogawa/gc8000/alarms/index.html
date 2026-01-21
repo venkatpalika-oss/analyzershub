@@ -7,7 +7,44 @@
 
 <base href="/analyzershub/">
 <link rel="stylesheet" href="assets/css/style.css">
+
+<!-- =================================================
+     ADDITIVE: Future-ready SVG zoom support
+     (Does NOT affect current layout)
+================================================== -->
+<style>
+.svg-zoom-wrap{
+  overflow-x:auto;
+  cursor:zoom-in;
+}
+.svg-modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.85);
+  display:none;
+  z-index:99999;
+}
+.svg-modal.active{ display:flex; }
+.svg-modal-content{
+  margin:auto;
+  background:#fff;
+  padding:16px;
+  max-width:95%;
+  max-height:95%;
+  overflow:auto;
+  border-radius:6px;
+}
+.svg-modal-close{
+  position:fixed;
+  top:14px;
+  right:18px;
+  font-size:26px;
+  color:#fff;
+  cursor:pointer;
+}
+</style>
 </head>
+
 <body>
 
 <header class="site-header">
@@ -37,22 +74,36 @@
     <a class="btn btn-ghost" href="analyzers.html">Back to Search</a>
   </div>
 
+  <!-- =================================================
+       ADDITIVE RECOMMENDATION (SAFE)
+  ================================================== -->
+  <div class="note" style="margin:16px 0;">
+    <b>Technician recommendation:</b><br>
+    Always troubleshoot GC alarms in this order:
+    <b>sampling → carrier gas → oven temperature → valves → communication</b>.
+    Most GC alarms are caused by sampling or carrier instability,
+    not by electronics or software.
+  </div>
+
   <div class="grid">
     <div class="card gc">
       <h3>Carrier / Pressure / Flow</h3>
       <p>No peaks, unstable baseline, carrier pressure alarms.</p>
       <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/alarms/carrier-pressure.html">Open →</a>
     </div>
+
     <div class="card gc">
       <h3>Oven / Temperature</h3>
       <p>Oven not ready, heater fault, instability.</p>
       <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/alarms/oven-temperature.html">Open →</a>
     </div>
+
     <div class="card gc">
       <h3>Valve / Sequence</h3>
       <p>Injection failure, valve switching faults.</p>
       <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/alarms/valve-sequence.html">Open →</a>
     </div>
+
     <div class="card gc">
       <h3>Communication / DCS</h3>
       <p>No update, bad quality, network issues.</p>
@@ -60,6 +111,12 @@
     </div>
   </div>
 </main>
+
+<!-- ================= SVG ZOOM MODAL (FUTURE USE) ================= -->
+<div id="svgModal" class="svg-modal" onclick="closeSvgModal()">
+  <div class="svg-modal-close">✕</div>
+  <div class="svg-modal-content" id="svgModalContent"></div>
+</div>
 
 <footer class="site-footer">
   <div class="site-footer-inner">
@@ -71,6 +128,27 @@
     </div>
   </div>
 </footer>
+
+<!-- =================================================
+     ADDITIVE JS (SAFE, FUTURE USE)
+================================================== -->
+<script>
+function openSvgModal(el){
+  const svg = el.querySelector('svg')?.cloneNode(true);
+  if(!svg) return;
+  const modal = document.getElementById('svgModal');
+  const content = document.getElementById('svgModalContent');
+  content.innerHTML = '';
+  content.appendChild(svg);
+  modal.classList.add('active');
+}
+function closeSvgModal(){
+  document.getElementById('svgModal').classList.remove('active');
+}
+document.addEventListener('keydown', e=>{
+  if(e.key === 'Escape') closeSvgModal();
+});
+</script>
 
 </body>
 </html>
