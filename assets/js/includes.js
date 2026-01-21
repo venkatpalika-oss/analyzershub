@@ -60,4 +60,62 @@
     document.head.appendChild(s1);
   }
 
+  /* =====================================================
+     GLOBAL SVG CLICK-TO-ZOOM (AUTO APPLY)
+     - Does NOT affect pages without SVGs
+     - Applies to all <svg> inside .card
+     - Fully additive, safe
+  ===================================================== */
+  function ensureSvgModal() {
+    if (document.getElementById("svgModal")) return;
+
+    const modal = document.createElement("div");
+    modal.id = "svgModal";
+    modal.className = "svg-modal";
+    modal.innerHTML = `
+      <div class="svg-modal-close">✕</div>
+      <div class="svg-modal-content" id="svgModalContent"></div>
+    `;
+    modal.addEventListener("click", closeSvgModal);
+    document.body.appendChild(modal);
+
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape") closeSvgModal();
+    });
+  }
+
+  function openSvgModal(svg) {
+    ensureSvgModal();
+    const modal = document.getElementById("svgModal");
+    const content = document.getElementById("svgModalContent");
+    content.innerHTML = "";
+    content.appendChild(svg.cloneNode(true));
+    modal.classList.add("active");
+  }
+
+  function closeSvgModal() {
+    const modal = document.getElementById("svgModal");
+    if (modal) modal.classList.remove("active");
+  }
+
+  function autoWrapSvgs() {
+    document.querySelectorAll(".card svg").forEach(svg => {
+      if (svg.closest(".svg-zoom-wrap")) return;
+
+      const wrap = document.createElement("div");
+      wrap.className = "svg-zoom-wrap";
+      wrap.style.cursor = "zoom-in";
+
+      svg.parentNode.insertBefore(wrap, svg);
+      wrap.appendChild(svg);
+
+      wrap.addEventListener("click", e => {
+        e.stopPropagation();
+        openSvgModal(svg);
+      });
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", autoWrapSvgs);
+
 })();
