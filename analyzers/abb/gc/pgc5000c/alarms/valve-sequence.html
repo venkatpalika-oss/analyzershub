@@ -1,49 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PGC5000C Valve / Sequence | Decision Tree | AnalyzersHub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<base href="/analyzershub/">
-<link rel="stylesheet" href="assets/css/style.css">
+  <title>PGC5000C Valve / Sequence | Decision Tree | AnalyzersHub</title>
+
+  <base href="/analyzershub/">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
 </head>
-<body>
 
-<header class="site-header"><div class="site-header-inner">
-  <a class="brand" href="index.html">AnalyzersHub</a>
-  <nav class="site-nav"><a href="index.html">Home</a><a href="analyzers.html">Search</a><a href="analyzers.html?category=gc">GC Hub</a></nav>
-</div></header>
+<body data-page="decision-tree">
 
-<nav class="crumbs" aria-label="Breadcrumb">
-  <a href="index.html">Home</a><span>›</span><a href="analyzers.html?vendor=abb">ABB</a><span>›</span>
-  <a href="analyzers/abb/gc/pgc5000c/pgc5000c.html">PGC5000C</a><span>›</span>
-  <a href="analyzers/abb/gc/pgc5000c/alarms/index.html">Alarms</a><span>›</span>
-  <span class="current">Valve / Sequence</span>
-</nav>
+  <!-- ✅ CENTRAL HEADER -->
+  <div id="siteHeader"></div>
 
-<main class="container">
-  <h2 style="margin-top:18px;">Decision Tree: Valve / Sequence</h2>
+  <!-- ✅ BREADCRUMBS -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a><span>›</span>
+    <a href="analyzers.html?vendor=abb">ABB</a><span>›</span>
+    <a href="analyzers/abb/gc/pgc5000c/pgc5000c.html">PGC5000C</a><span>›</span>
+    <a href="analyzers/abb/gc/pgc5000c/alarms/index.html">Alarms</a><span>›</span>
+    <span class="current">Valve / Sequence</span>
+  </nav>
 
-  <div class="action-row">
-    <a class="btn btn-ghost" href="analyzers/abb/gc/pgc5000c/alarms/index.html">← Back to Alarms Hub</a>
-    <a class="btn btn-primary" href="guides/gc/abb-gc-alarm-codes.html">ABB GC Codes →</a>
-    <a class="btn btn-ghost" href="guides/gc/chromatogram-guide.html">Chromatogram Guide</a>
-  </div>
+  <main class="container">
 
-  <div class="warn"><b>Goal:</b> confirm valves switch correctly and method timing is consistent.</div>
+    <h2 style="margin-top:18px;">
+      Decision Tree: Valve / Sequence
+    </h2>
 
-  <div class="step"><b>1)</b> Check instrument air supply (clean/dry) and pressure stability.</div>
-  <div class="step"><b>2)</b> Verify solenoid actuation (click/indicator). Check wiring/power if dead.</div>
-  <div class="step"><b>3)</b> If valve moves but results wrong: suspect sticking/leakage/contamination.</div>
-  <div class="step"><b>4)</b> Verify method sequence timing vs last known good configuration.</div>
-  <div class="step"><b>5)</b> Run 2–3 cycles and confirm repeatable peaks.</div>
-</main>
+    <div class="action-row">
+      <a class="btn btn-ghost"
+         href="analyzers/abb/gc/pgc5000c/alarms/index.html">
+        ← Back to Alarms Hub
+      </a>
 
-<footer class="site-footer"><div class="site-footer-inner">
-  <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
-  <div class="footer-links"><a href="index.html">Home</a><a href="analyzers.html">Search</a></div>
-</div></footer>
+      <a class="btn btn-primary"
+         href="guides/gc/abb-gc-alarm-codes.html">
+        ABB GC Codes →
+      </a>
+
+      <a class="btn btn-ghost"
+         href="guides/gc/chromatogram-guide.html">
+        Chromatogram Guide
+      </a>
+    </div>
+
+    <div class="warn">
+      <b>Goal:</b>
+      Confirm valves switch correctly
+      and method timing is consistent.
+    </div>
+
+    <div class="step">
+      <b>1)</b> Check instrument air supply
+      (clean, dry) and pressure stability.
+    </div>
+
+    <div class="step">
+      <b>2)</b> Verify solenoid actuation
+      (click or indicator).
+      Check wiring or power if dead.
+    </div>
+
+    <div class="step">
+      <b>3)</b> If valve moves but results are wrong:
+      suspect sticking, leakage,
+      or contamination.
+    </div>
+
+    <div class="step">
+      <b>4)</b> Verify method sequence timing
+      against the last known
+      good configuration.
+    </div>
+
+    <div class="step">
+      <b>5)</b> Run <b>2–3 cycles</b>
+      and confirm repeatable peaks.
+    </div>
+
+  </main>
+
+  <!-- ✅ CENTRAL FOOTER -->
+  <div id="siteFooter"></div>
+
+  <!-- ✅ LOAD HEADER / FOOTER -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
