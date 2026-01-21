@@ -1,33 +1,93 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portable NGC Oven / Temperature | Decision Tree | AnalyzersHub</title>
-<base href="/analyzershub/"><link rel="stylesheet" href="assets/css/style.css">
-</head><body>
-<header class="site-header"><div class="site-header-inner">
-<a class="brand" href="index.html">AnalyzersHub</a>
-<nav class="site-nav"><a href="index.html">Home</a><a href="analyzers.html">Search</a><a href="analyzers.html?category=gc">GC Hub</a></nav>
-</div></header>
-<nav class="crumbs" aria-label="Breadcrumb">
-<a href="index.html">Home</a><span>›</span><a href="analyzers.html?vendor=abb">ABB</a><span>›</span>
-<a href="analyzers/abb/gc/portable-ngc/portable-ngc.html">Portable NGC</a><span>›</span>
-<a href="analyzers/abb/gc/portable-ngc/alarms/index.html">Alarms</a><span>›</span><span class="current">Oven / Temperature</span>
-</nav>
-<main class="container">
-<h2 style="margin-top:18px;">Decision Tree: Oven / Temperature</h2>
-<div class="action-row">
-<a class="btn btn-ghost" href="analyzers/abb/gc/portable-ngc/alarms/index.html">← Back to Alarms Hub</a>
-<a class="btn btn-primary" href="guides/gc/abb-gc-alarm-codes.html">ABB GC Codes →</a>
-<a class="btn btn-ghost" href="guides/gc/chromatogram-guide.html">Chromatogram Guide</a>
-</div>
-<div class="warn"><b>Goal:</b> stabilize temperature before accepting portable results.</div>
-<div class="step"><b>1)</b> Check setpoint vs actual.</div>
-<div class="step"><b>2)</b> If low: verify power/heater path.</div>
-<div class="step"><b>3)</b> If hunting: check sensor/wiring/airflow.</div>
-<div class="step"><b>4)</b> Allow stabilization time.</div>
-<div class="step"><b>5)</b> Run 2–3 repeatable cycles.</div>
-</main>
-<footer class="site-footer"><div class="site-footer-inner">
-<div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
-<div class="footer-links"><a href="index.html">Home</a><a href="analyzers.html">Search</a></div>
-</div></footer>
-</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Portable NGC Oven / Temperature | Decision Tree | AnalyzersHub</title>
+
+  <base href="/analyzershub/">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
+</head>
+
+<body data-page="decision-tree">
+
+  <!-- ✅ CENTRAL HEADER -->
+  <div id="siteHeader"></div>
+
+  <!-- ✅ BREADCRUMBS -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a><span>›</span>
+    <a href="analyzers.html?vendor=abb">ABB</a><span>›</span>
+    <a href="analyzers/abb/gc/portable-ngc/portable-ngc.html">Portable NGC</a><span>›</span>
+    <a href="analyzers/abb/gc/portable-ngc/alarms/index.html">Alarms</a><span>›</span>
+    <span class="current">Oven / Temperature</span>
+  </nav>
+
+  <main class="container">
+
+    <h2 style="margin-top:18px;">
+      Decision Tree: Oven / Temperature
+    </h2>
+
+    <div class="action-row">
+      <a class="btn btn-ghost"
+         href="analyzers/abb/gc/portable-ngc/alarms/index.html">
+        ← Back to Alarms Hub
+      </a>
+
+      <a class="btn btn-primary"
+         href="guides/gc/abb-gc-alarm-codes.html">
+        ABB GC Codes →
+      </a>
+
+      <a class="btn btn-ghost"
+         href="guides/gc/chromatogram-guide.html">
+        Chromatogram Guide
+      </a>
+    </div>
+
+    <div class="warn">
+      <b>Goal:</b>
+      Stabilize oven temperature
+      before accepting portable results.
+    </div>
+
+    <div class="step">
+      <b>1)</b> Check setpoint
+      versus actual temperature.
+    </div>
+
+    <div class="step">
+      <b>2)</b> If temperature is low:
+      verify power supply and heater path.
+    </div>
+
+    <div class="step">
+      <b>3)</b> If temperature hunts:
+      check sensor integrity, wiring,
+      and airflow.
+    </div>
+
+    <div class="step">
+      <b>4)</b> Allow sufficient
+      stabilization time.
+    </div>
+
+    <div class="step">
+      <b>5)</b> Run <b>2–3 cycles</b>
+      and confirm repeatable results.
+    </div>
+
+  </main>
+
+  <!-- ✅ CENTRAL FOOTER -->
+  <div id="siteFooter"></div>
+
+  <!-- ✅ LOAD HEADER / FOOTER -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
+
+</body>
+</html>
