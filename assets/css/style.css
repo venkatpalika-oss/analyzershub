@@ -523,4 +523,53 @@ img{max-width:100%;height:auto;display:block}
 }
 .footer-links a:hover{text-decoration:underline}
 
+/* =========================================================
+   ADDITIVE: GLOBAL SVG CLICK-TO-ZOOM SUPPORT
+   Safe append — does not modify existing styles
+========================================================= */
+
+/* Wrapper injected by JS for alarm SVGs */
+.svg-zoom-wrap{
+  overflow-x:auto;
+  padding:6px 0;
+}
+
+/* Modal overlay */
+.svg-modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.85);
+  display:none;
+  z-index:99999;
+}
+
+.svg-modal.active{
+  display:flex;
+}
+
+/* Modal content container */
+.svg-modal-content{
+  margin:auto;
+  background:#fff;
+  padding:16px;
+  max-width:95%;
+  max-height:95%;
+  overflow:auto;
+  border-radius:8px;
+  box-shadow:0 20px 60px rgba(0,0,0,.45);
+}
+
+/* Close button */
+.svg-modal-close{
+  position:fixed;
+  top:14px;
+  right:18px;
+  font-size:26px;
+  font-weight:900;
+  color:#fff;
+  cursor:pointer;
+  user-select:none;
+}
+
+
 }
