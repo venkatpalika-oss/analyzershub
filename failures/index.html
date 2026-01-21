@@ -43,7 +43,7 @@
         <b>Important:</b>
         In more than <b>70% of cases</b>, the analyzer itself is healthy.
         Failures originate in <b>sampling systems, utilities,
-        environment, or maintenance practices</b>.
+        environment, or commissioning practices</b>.
       </div>
     </div>
 
@@ -64,8 +64,12 @@
           <ul class="list">
             <li>Erratic readings</li>
             <li>Sensor damage</li>
-            <li>Frequent analyzer shutdowns</li>
+            <li>Frequent shutdowns</li>
           </ul>
+          <a class="btn btn-primary"
+             href="failures/moisture-failures.html">
+            Open →
+          </a>
         </div>
 
         <div class="card">
@@ -79,142 +83,100 @@
             <li>False alarms</li>
             <li>Calibration instability</li>
           </ul>
+          <a class="btn btn-primary"
+             href="failures/sampling-system-failures.html">
+            Open →
+          </a>
         </div>
 
         <div class="card">
-          <h4>⚙️ Utility Issues</h4>
+          <h4>⚙️ Utility Failures</h4>
           <p class="muted">
-            Problems with instrument air, carrier gas,
-            power supply, or earthing.
+            Instrument air, power, and nitrogen
+            related issues.
           </p>
           <ul class="list">
             <li>Random trips</li>
             <li>Valve malfunction</li>
-            <li>Communication drops</li>
+            <li>Analyzer resets</li>
           </ul>
+          <a class="btn btn-primary"
+             href="failures/utility-failures.html">
+            Open →
+          </a>
         </div>
 
         <div class="card">
-          <h4>🧠 Calibration & Drift</h4>
+          <h4>🧠 Calibration Mistakes</h4>
           <p class="muted">
-            Over-calibration, poor gas quality,
-            or ignoring drift trends.
+            Over-calibration, poor span gas quality,
+            or ignoring analyzer stability.
           </p>
           <ul class="list">
             <li>Chasing readings</li>
-            <li>False confidence</li>
+            <li>Hidden root causes</li>
             <li>Audit failures</li>
           </ul>
+          <a class="btn btn-primary"
+             href="failures/calibration-mistakes.html">
+            Open →
+          </a>
         </div>
 
         <div class="card">
-          <h4>🔌 Electronics & Communication</h4>
-          <p class="muted">
-            Power fluctuations, grounding issues,
-            network misconfiguration.
-          </p>
-          <ul class="list">
-            <li>DCS mismatch</li>
-            <li>Frozen values</li>
-            <li>Intermittent data</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h4>🌡️ Environment & Installation</h4>
+          <h4>🌡️ Shelter & Environment</h4>
           <p class="muted">
             Heat, dust, vibration, corrosion,
             or poor shelter design.
           </p>
           <ul class="list">
             <li>Reduced analyzer life</li>
-            <li>Repeated component failures</li>
-            <li>Unstable operation</li>
+            <li>Board & sensor damage</li>
+            <li>Seasonal failures</li>
           </ul>
+          <a class="btn btn-primary"
+             href="failures/shelter-environment-failures.html">
+            Open →
+          </a>
+        </div>
+
+        <div class="card">
+          <h4>🚀 Commissioning Failures</h4>
+          <p class="muted">
+            Problems introduced during startup
+            that permanently affect reliability.
+          </p>
+          <ul class="list">
+            <li>Never stabilizes</li>
+            <li>Day-one alarms</li>
+            <li>Operator distrust</li>
+          </ul>
+          <a class="btn btn-primary"
+             href="failures/commissioning-failures.html">
+            Open →
+          </a>
         </div>
 
       </div>
     </div>
 
-    <!-- HOW TO TROUBLESHOOT -->
+    <!-- TROUBLESHOOTING ORDER -->
     <div class="panel">
       <h3 style="margin:0;color:#0b3c5d;">
         Correct Troubleshooting Order (Critical)
       </h3>
 
-      <div class="step">
-        <b>1)</b> Check sample conditioning and drains
-      </div>
-
-      <div class="step">
-        <b>2)</b> Verify utilities (air, power, carrier gas)
-      </div>
-
-      <div class="step">
-        <b>3)</b> Inspect sampling path integrity
-      </div>
-
-      <div class="step">
-        <b>4)</b> Review trends before calibrating
-      </div>
-
-      <div class="step">
-        <b>5)</b> Touch analyzer electronics last
-      </div>
+      <div class="step"><b>1)</b> Sampling & drains</div>
+      <div class="step"><b>2)</b> Utilities (air, power, gas)</div>
+      <div class="step"><b>3)</b> Environment & shelter</div>
+      <div class="step"><b>4)</b> Trends & stability</div>
+      <div class="step"><b>5)</b> Calibration</div>
+      <div class="step"><b>6)</b> Analyzer electronics (last)</div>
 
       <div class="warn">
         <b>Field rule:</b>
         If you start troubleshooting from the analyzer electronics,
         you are already too late.
-      </div>
-    </div>
-
-    <!-- DOMAIN LINKS -->
-    <div class="panel">
-      <h3 style="margin:0;color:#0b3c5d;">
-        Failure Patterns by Domain
-      </h3>
-
-      <div class="grid">
-
-        <div class="card">
-          <h4>Biogas / CBG Plants</h4>
-          <p class="muted">
-            Moisture ingress, high H₂S,
-            rapid sensor degradation.
-          </p>
-          <a class="btn btn-primary"
-             href="analyzers/biogas/index.html">
-            Explore Biogas →
-          </a>
-        </div>
-
-        <div class="card">
-          <h4>CEMS / PEMS</h4>
-          <p class="muted">
-            Calibration discipline,
-            sample line integrity,
-            data validity.
-          </p>
-          <a class="btn btn-primary"
-             href="analyzers/cems/index.html">
-            Explore CEMS →
-          </a>
-        </div>
-
-        <div class="card">
-          <h4>Refinery / Process Plants</h4>
-          <p class="muted">
-            Carrier gas purity,
-            valve timing,
-            analyzer shelters.
-          </p>
-          <a class="btn btn-primary"
-             href="analyzers/refinery/index.html">
-            Explore Refinery →
-          </a>
-        </div>
-
       </div>
     </div>
 
@@ -225,9 +187,9 @@
       </h3>
 
       <p class="muted">
-        Use this failure hub as a reference point.
-        Each category will expand into
-        detailed case studies and decision trees.
+        Use this failure hub as your starting point.
+        Each category expands into detailed explanations
+        and real plant case studies.
       </p>
 
       <div class="action-row">
