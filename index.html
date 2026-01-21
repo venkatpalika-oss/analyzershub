@@ -6,7 +6,7 @@
 
   <title>AnalyzersHub | Industrial Analyzer Knowledge Hub</title>
   <meta name="description"
-        content="AnalyzersHub is an industrial analyzer knowledge hub for technicians. Covers working principles, calibration, troubleshooting, alarm decision trees, CEMS, and real plant experience." />
+        content="AnalyzersHub is a field-driven industrial analyzer knowledge hub. Covers real failures, troubleshooting order, calibration discipline, and plant-proven case studies across Biogas, CEMS, and Refinery systems." />
 
   <!-- GitHub Pages base -->
   <base href="/analyzershub/">
@@ -37,44 +37,56 @@
 
 <body data-page="home">
 
-<!-- =====================================================
-     CENTRAL HEADER
-====================================================== -->
+<!-- ================= CENTRAL HEADER ================= -->
 <div id="siteHeader"></div>
 
-<!-- =====================================================
-     HERO
-====================================================== -->
+<!-- ================= HERO ================= -->
 <section class="hero">
   <div class="hero-inner">
     <h2>Industrial Analyzer Knowledge Hub</h2>
     <p>
-  A field-driven knowledge platform for <b>industrial analyzers</b> —
-  focused on real failures, correct troubleshooting order,
-  calibration discipline, and plant-proven case studies
-  across <b>Biogas, CEMS, and Refinery</b> systems.
-</p>
+      A field-driven knowledge platform for <b>industrial analyzers</b> —
+      focused on real failures, correct troubleshooting order,
+      calibration discipline, and plant-proven case studies
+      across <b>Biogas, CEMS, and Refinery</b> systems.
+    </p>
 
-    <!-- UPDATED CTA ROW -->
     <div class="action-row">
       <a class="btn btn-primary" href="start-here.html">
         Start Here →
       </a>
-      <a class="btn btn-ghost" href="analyzers.html">
-        Browse All Analyzers
+      <a class="btn btn-ghost" href="failures/index.html">
+        Common Failures →
       </a>
-      <a class="btn btn-ghost" href="community/index.html">
-        Join Community
+      <a class="btn btn-ghost" href="analyzers.html">
+        Analyzer Search →
       </a>
     </div>
   </div>
 </section>
 
-<!-- =====================================================
-     MAIN CONTENT
-====================================================== -->
+<!-- ================= MAIN CONTENT ================= -->
 <main class="container">
 
+  <!-- START HERE PANEL -->
+  <section class="panel">
+    <h2>New to Industrial Analyzers?</h2>
+    <p class="muted">
+      Not sure where to begin? Follow a structured learning and troubleshooting
+      path used by technicians and engineers in real operating plants.
+    </p>
+
+    <div class="action-row">
+      <a class="btn btn-primary" href="start-here.html">
+        Start Here →
+      </a>
+      <a class="btn btn-ghost" href="failures/index.html">
+        Most Common Failures →
+      </a>
+    </div>
+  </section>
+
+  <!-- WHY ANALYZERS MATTER -->
   <section class="panel">
     <h2>Why Industrial Analyzers Are Critical</h2>
     <p>
@@ -83,59 +95,77 @@
       safety systems, and environmental compliance.
     </p>
     <p>
-      Incorrect analyzer readings can result in fuel losses,
+      Incorrect analyzer readings lead to fuel losses,
       unstable operation, false alarms, shutdowns,
       and regulatory penalties.
     </p>
   </section>
 
+  <!-- DOMAIN ENTRY -->
   <section class="panel">
+    <h2>Explore by Plant / Domain</h2>
+
     <div class="grid">
       <div class="card">
-        <h4>💰 Economic Impact</h4>
-        <p>Fuel optimization, yield protection, and energy efficiency.</p>
+        <h4>Biogas / CBG Plants</h4>
+        <p class="muted">
+          Digesters, gas composition, H₂S, moisture,
+          engine protection and stability.
+        </p>
+        <a class="btn btn-primary" href="analyzers/biogas/index.html">
+          Open →
+        </a>
       </div>
+
       <div class="card">
-        <h4>⚠️ Safety</h4>
-        <p>Oxygen, toxic gas, and explosive atmosphere monitoring.</p>
+        <h4>CEMS / PEMS</h4>
+        <p class="muted">
+          Emission monitoring, audits, calibration discipline,
+          DAHS and compliance.
+        </p>
+        <a class="btn btn-primary" href="analyzers/cems/index.html">
+          Open →
+        </a>
       </div>
+
       <div class="card">
-        <h4>🌍 Compliance</h4>
-        <p>CEMS accuracy protects permits and statutory reporting.</p>
-      </div>
-      <div class="card">
-        <h4>📊 Control</h4>
-        <p>Control loops depend on reliable analyzer measurements.</p>
+        <h4>Refinery / Process Plants</h4>
+        <p class="muted">
+          GC systems, carrier gas quality,
+          shelters, utilities and reliability.
+        </p>
+        <a class="btn btn-primary" href="analyzers/refinery/index.html">
+          Open →
+        </a>
       </div>
     </div>
   </section>
 
+  <!-- FAILURE-FIRST MINDSET -->
   <section class="panel">
-    <h2>Analyzer Skills Are High-Value Skills</h2>
-    <p>
-      Analyzer engineering combines instrumentation, chemistry,
-      sampling systems, utilities, and deep process understanding.
-    </p>
-    <div class="step">
-      Analyzer expertise is rare — and therefore highly valuable.
-    </div>
-  </section>
+    <h2>Why Analyzers Really Fail</h2>
 
-  <section class="panel">
-    <h2>Common Analyzer Misconceptions</h2>
     <ul class="list">
-      <li>“If it shows a value, it must be correct”</li>
-      <li>“Calibration fixes all problems”</li>
-      <li>“The analyzer itself is faulty”</li>
-      <li>“Software is always the issue”</li>
-      <li>“Analyzers run themselves after commissioning”</li>
+      <li>Sampling systems, not sensors</li>
+      <li>Moisture, not electronics</li>
+      <li>Utilities, not calibration</li>
+      <li>Environment, not software</li>
     </ul>
-    <div class="step">
-      In reality, most analyzer problems originate in the
-      <b>sample conditioning and utilities</b>, not the analyzer hardware.
+
+    <div class="warn">
+      <b>Field rule:</b>
+      If you start troubleshooting from the analyzer electronics,
+      you are already too late.
+    </div>
+
+    <div class="action-row">
+      <a class="btn btn-primary" href="failures/index.html">
+        Explore Failure Patterns →
+      </a>
     </div>
   </section>
 
+  <!-- CAREER PATH -->
   <section class="panel">
     <h2>Analyzer Career Path</h2>
     <div class="grid">
@@ -158,45 +188,37 @@
     </div>
   </section>
 
+  <!-- MOST USED PATHS -->
   <section class="panel">
-    <h2>Quick Access</h2>
+    <h2>Most Used Paths</h2>
+
     <div class="grid">
       <div class="card">
+        <h4>Common Analyzer Failures</h4>
+        <p class="muted">Start troubleshooting the right way.</p>
+        <a class="btn btn-primary" href="failures/index.html">Open →</a>
+      </div>
+
+      <div class="card">
         <h4>Analyzer Search</h4>
-        <p>Browse analyzers by type, vendor, and application.</p>
+        <p class="muted">Browse by vendor, type and application.</p>
         <a class="btn btn-primary" href="analyzers.html">Open →</a>
       </div>
+
       <div class="card">
-        <h4>Knowledge Base</h4>
-        <p>Field experience, case studies, and root-cause lessons.</p>
-        <a class="btn btn-primary" href="knowledge/index.html">Open →</a>
-      </div>
-      <div class="card">
-        <h4>Guides</h4>
-        <p>Chromatograms, alarm interpretation, best practices.</p>
-        <a class="btn btn-primary" href="guides/index.html">Open →</a>
+        <h4>Start Here</h4>
+        <p class="muted">Structured entry for new engineers.</p>
+        <a class="btn btn-primary" href="start-here.html">Open →</a>
       </div>
     </div>
   </section>
 
-  <section class="panel">
-    <h2>Analyzer Data Flow to DCS</h2>
-    <img src="assets/images/data_flow_to_dcs.png"
-         alt="Analyzer Data Flow to DCS"
-         loading="lazy"
-         style="max-width:560px;width:100%;display:block;margin:14px auto;border-radius:12px;">
-  </section>
-
 </main>
 
-<!-- =====================================================
-     CENTRAL FOOTER
-====================================================== -->
+<!-- ================= CENTRAL FOOTER ================= -->
 <div id="siteFooter"></div>
 
-<!-- =====================================================
-     HEADER / FOOTER LOADER
-====================================================== -->
+<!-- ================= HEADER / FOOTER LOADER ================= -->
 <script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
