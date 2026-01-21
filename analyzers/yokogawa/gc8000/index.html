@@ -3,139 +3,164 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Yokogawa GC8000 | AnalyzersHub</title>
 
   <base href="/analyzershub/">
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18" />
 </head>
 
-<body>
+<body data-page="analyzer-gc8000">
 
-<!--#include virtual="/analyzershub/includes/header.html" -->
-  <div class="site-header-inner">
-    <a class="brand" href="index.html">AnalyzersHub</a>
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Analyzer Search</a>
-      <a href="blog/index.html">Blog</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://github.com/venkatpalika-oss/analyzershub/discussions" target="_blank" rel="noopener">Discussion</a>
-    </nav>
-  </div>
-</header>
+  <!-- ✅ CENTRAL HEADER -->
+  <div id="siteHeader"></div>
 
-<nav class="crumbs" aria-label="Breadcrumb">
-  <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers.html">Analyzer Search</a><span>›</span>
-  <a href="analyzers.html?vendor=yokogawa">Yokogawa</a><span>›</span>
-  <span class="current">GC8000</span>
-</nav>
+  <!-- ✅ BREADCRUMBS -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a><span>›</span>
+    <a href="analyzers.html">Analyzer Search</a><span>›</span>
+    <a href="analyzers.html?vendor=yokogawa">Yokogawa</a><span>›</span>
+    <span class="current">GC8000</span>
+  </nav>
 
-<main class="container">
+  <main class="container">
 
-  <div class="panel">
-    <h2 style="margin:0;color:#0b3c5d;">Yokogawa GC8000 — Process Gas Chromatograph</h2>
-    <p class="muted" style="margin:8px 0 0;">
-      Online GC for continuous gas composition monitoring (refinery / gas plant / fuel gas / process control).
-      Focus: sampling, carrier gas, valves, oven stability, detector stability, and DCS communication.
-    </p>
+    <div class="panel">
+      <h2 style="margin:0;color:#0b3c5d;">
+        Yokogawa GC8000 — Process Gas Chromatograph
+      </h2>
 
-    <div class="action-row">
-      <a class="btn btn-ghost" href="analyzers.html">← Back to Search</a>
-      <a class="btn btn-primary" href="analyzers/yokogawa/gc8000/alarms/index.html">Alarm Decision Trees →</a>
-      <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/alarm-codes.html">Alarm Codes →</a>
-    </div>
-
-    <div class="warn">
-      <b>Technician rule:</b> Fix <b>carrier gas + sampling</b> issues first. Most GC alarms are caused by
-      pressure/flow instability, contamination, or switching/valve issues — not electronics.
-    </div>
-  </div>
-
-  <div class="grid">
-
-    <div class="card gc">
-      <h3>Working Principle</h3>
-      <p>
-        GC separates gas components in a <b>column</b> and measures each component using a <b>detector</b>.
-        The instrument runs a cycle: inject sample → separate in column → detect peaks → calculate composition.
+      <p class="muted" style="margin:8px 0 0;">
+        Online GC for continuous gas composition monitoring
+        (refinery / gas plant / fuel gas / process control).
+        Focus: sampling, carrier gas, valves, oven stability,
+        detector stability, and DCS communication.
       </p>
-      <ul class="list">
-        <li><b>Separation:</b> components travel at different speeds through the column.</li>
-        <li><b>Detection:</b> detector converts eluting components into a signal (peaks).</li>
-        <li><b>Calculation:</b> peak areas are converted to composition using calibration factors.</li>
-      </ul>
-      <p class="muted"><b>Accuracy depends on:</b> stable carrier flow/pressure, clean sample, consistent valve switching, and stable oven temperature.</p>
-    </div>
 
-    <div class="card gc">
-      <h3>Main Components (Field Focus)</h3>
-      <ul class="list">
-        <li><b>Sample system:</b> sample conditioning, filters, regulators, restriction, drains.</li>
-        <li><b>Carrier gas system:</b> carrier supply, regulators, traps/filters (if used).</li>
-        <li><b>Injection & switching valves:</b> sample loop, rotary/solenoid valves, timing.</li>
-        <li><b>Oven / temperature control:</b> heater, sensors, controller.</li>
-        <li><b>Column & detector:</b> column module + detector electronics.</li>
-        <li><b>Controller & comms:</b> HMI/controller, I/O, Modbus/OPC/Ethernet, alarms.</li>
-      </ul>
-    </div>
+      <div class="action-row">
+        <a class="btn btn-ghost" href="analyzers.html">
+          ← Back to Search
+        </a>
+        <a class="btn btn-primary"
+           href="analyzers/yokogawa/gc8000/alarms/index.html">
+          Alarm Decision Trees →
+        </a>
+        <a class="btn btn-ghost"
+           href="analyzers/yokogawa/gc8000/alarm-codes.html">
+          Alarm Codes →
+        </a>
+      </div>
 
-    <div class="card gc">
-      <h3>Calibration Procedure (Technician Sequence)</h3>
-      <div class="step"><b>1)</b> Confirm analyzer running stable cycles (no carrier/sample alarms).</div>
-      <div class="step"><b>2)</b> Verify carrier pressure/flow stable (no hunting), leaks checked.</div>
-      <div class="step"><b>3)</b> Apply calibration standard (certified gas). Allow stable runs (2–3).</div>
-      <div class="step"><b>4)</b> Update calibration factors / response factors (as per method).</div>
-      <div class="step"><b>5)</b> Run verification standard. Compare % error to acceptance.</div>
-      <div class="step"><b>6)</b> Return to process sample, confirm stable trend and DCS updates.</div>
-      <p class="muted">Tip: If peaks shift or area is unstable, do not calibrate—fix sampling/flow/valves first.</p>
-    </div>
-
-    <div class="card gc">
-      <h3>Major Troubleshooting (Top Issues)</h3>
-      <ul class="list">
-        <li><b>Unstable composition / noisy peaks:</b> carrier instability, leaks, contamination, detector drift.</li>
-        <li><b>Retention time shift:</b> oven temp drift, carrier flow change, column aging.</li>
-        <li><b>Missing peaks / low response:</b> injection valve issue, loop not filling, restriction, detector fault.</li>
-        <li><b>Repeatability bad:</b> valve timing, pressure hunting, sample conditioning.</li>
-        <li><b>DCS not updating:</b> comms mapping/scaling, quality bit, polling interval.</li>
-      </ul>
-
-      <div class="action-row" style="margin-top:10px;">
-        <a class="btn btn-ghost" href="analyzers/yokogawa/gc8000/alarms/index.html">Use Decision Trees →</a>
-        <a class="btn btn-ghost" href="guides/gc/chromatogram-guide.html">Chromatogram Guide →</a>
+      <div class="warn">
+        <b>Technician rule:</b>
+        Fix <b>carrier gas + sampling</b> issues first.
+        Most GC alarms are caused by pressure/flow instability,
+        contamination, or valve switching issues —
+        not electronics.
       </div>
     </div>
 
-  </div>
+    <div class="grid">
 
-  <!-- Discussion -->
-  <div class="panel">
-    <h3 style="margin:0;color:#0b3c5d;">Discussion</h3>
-         Share GC8000 troubleshooting tips, valve issues, peak problems, and calibration experiences. (Requires GitHub login.)
-    </p>
-    <script src="https://utteranc.es/client.js"
-            repo="venkatpalika-oss/analyzershub"
-            issue-term="pathname"
-            theme="github-light"
-            crossorigin="anonymous"
-            async>
-    </script>
-  </div>
+      <div class="card gc">
+        <h3>Working Principle</h3>
+        <p>
+          GC separates gas components in a <b>column</b>
+          and measures each component using a <b>detector</b>.
+          The instrument runs a cycle:
+          inject sample → separate → detect peaks →
+          calculate composition.
+        </p>
 
-</main>
+        <ul class="list">
+          <li><b>Separation:</b> components travel at different speeds through the column.</li>
+          <li><b>Detection:</b> detector converts eluting components into a signal.</li>
+          <li><b>Calculation:</b> peak areas converted using calibration factors.</li>
+        </ul>
 
-<footer class="site-footer">
-  <div class="site-footer-inner">
-    <div><b>AnalyzersHub</b><br><span class="muted">Built for Analyzer Technicians</span></div>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Search</a>
-      <a href="blog/index.html">Blog</a>
-      <a href="contact.html">Contact</a>
+        <p class="muted">
+          <b>Accuracy depends on:</b>
+          stable carrier flow/pressure, clean sample,
+          consistent valve switching, and stable oven temperature.
+        </p>
+      </div>
+
+      <div class="card gc">
+        <h3>Main Components (Field Focus)</h3>
+        <ul class="list">
+          <li><b>Sample system:</b> conditioning, filters, regulators, drains.</li>
+          <li><b>Carrier gas system:</b> supply, regulators, traps.</li>
+          <li><b>Injection & switching valves:</b> sample loop, rotary/solenoid valves.</li>
+          <li><b>Oven / temperature control:</b> heater, sensors, controller.</li>
+          <li><b>Column & detector:</b> column module + electronics.</li>
+          <li><b>Controller & comms:</b> HMI, I/O, Modbus/OPC/Ethernet.</li>
+        </ul>
+      </div>
+
+      <div class="card gc">
+        <h3>Calibration Procedure (Technician Sequence)</h3>
+        <div class="step"><b>1)</b> Confirm stable analyzer cycles.</div>
+        <div class="step"><b>2)</b> Verify carrier pressure/flow stable.</div>
+        <div class="step"><b>3)</b> Apply calibration gas; allow 2–3 stable runs.</div>
+        <div class="step"><b>4)</b> Update calibration / response factors.</div>
+        <div class="step"><b>5)</b> Run verification standard.</div>
+        <div class="step"><b>6)</b> Return to process; confirm stable trends.</div>
+
+        <p class="muted">
+          Tip: If peaks shift or area is unstable,
+          do not calibrate — fix sampling/flow/valves first.
+        </p>
+      </div>
+
+      <div class="card gc">
+        <h3>Major Troubleshooting (Top Issues)</h3>
+        <ul class="list">
+          <li><b>Unstable composition:</b> carrier instability, leaks, contamination.</li>
+          <li><b>Retention time shift:</b> oven drift, flow change, column aging.</li>
+          <li><b>Missing peaks:</b> injection valve issue, restriction, detector fault.</li>
+          <li><b>Bad repeatability:</b> valve timing, pressure hunting.</li>
+          <li><b>DCS not updating:</b> comms mapping, scaling, polling.</li>
+        </ul>
+
+        <div class="action-row" style="margin-top:10px;">
+          <a class="btn btn-ghost"
+             href="analyzers/yokogawa/gc8000/alarms/index.html">
+            Use Decision Trees →
+          </a>
+          <a class="btn btn-ghost"
+             href="guides/gc/chromatogram-guide.html">
+            Chromatogram Guide →
+          </a>
+        </div>
+      </div>
+
     </div>
-  </div>
-</footer>
+
+    <!-- Discussion -->
+    <div class="panel">
+      <h3 style="margin:0;color:#0b3c5d;">Discussion</h3>
+      <p class="muted">
+        Share GC8000 troubleshooting tips, valve issues,
+        peak problems, and calibration experiences.
+        (Requires GitHub login.)
+      </p>
+
+      <script src="https://utteranc.es/client.js"
+              repo="venkatpalika-oss/analyzershub"
+              issue-term="pathname"
+              theme="github-light"
+              crossorigin="anonymous"
+              async>
+      </script>
+    </div>
+
+  </main>
+
+  <!-- ✅ CENTRAL FOOTER -->
+  <div id="siteFooter"></div>
+
+  <!-- ✅ LOAD HEADER / FOOTER -->
+  <script src="assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>
