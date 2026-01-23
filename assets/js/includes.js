@@ -18,10 +18,10 @@
   }
 
   // ===============================
-  // LOAD HEADER & FOOTER
+  // LOAD HEADER & FOOTER (FIXED FOR CUSTOM DOMAIN)
   // ===============================
-  await loadInto("siteHeader", "includes/header.html");
-  await loadInto("siteFooter", "includes/footer.html");
+  await loadInto("siteHeader", "/analyzershub/includes/header.html");
+  await loadInto("siteFooter", "/analyzershub/includes/footer.html");
 
   // ===============================
   // ACTIVE NAV HIGHLIGHT
