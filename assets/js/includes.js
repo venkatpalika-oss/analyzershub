@@ -17,11 +17,27 @@
     }
   }
 
-  // ===============================
-  // LOAD HEADER & FOOTER (FIXED FOR CUSTOM DOMAIN)
-  // ===============================
-  await loadInto("siteHeader", "/analyzershub/includes/header.html");
-  await loadInto("siteFooter", "/analyzershub/includes/footer.html");
+// assets/js/includes.js
+document.addEventListener("DOMContentLoaded", () => {
+
+  async function loadInto(id, url) {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    try {
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) throw new Error(url + " " + res.status);
+      el.innerHTML = await res.text();
+    } catch (e) {
+      console.error("Include failed:", e.message);
+    }
+  }
+
+  // ✅ RELATIVE TO <base href="/">
+  loadInto("siteHeader", "includes/header.html");
+  loadInto("siteFooter", "includes/footer.html");
+
+});
 
   // ===============================
   // ACTIVE NAV HIGHLIGHT
