@@ -212,7 +212,7 @@ img{max-width:100%;height:auto;display:block}
   color:#fff;
   background:
     linear-gradient(rgba(11,60,93,.85), rgba(11,60,93,.65)),
-    url("images/home-hero.png");
+  url("../images/home-hero.png");
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
@@ -260,7 +260,7 @@ img{max-width:100%;height:auto;display:block}
   color:#fff;
   background:
     linear-gradient(rgba(11,60,93,.88), rgba(11,60,93,.70)),
-    url("images/home-hero.png");
+    url("../images/home-hero.png")
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
