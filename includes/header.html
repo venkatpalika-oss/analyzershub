@@ -1,3 +1,4 @@
+<!-- ================= LOCKED HEADER ================= -->
 <header class="site-header">
   <div class="site-header-inner">
 
@@ -38,20 +39,17 @@
           }
         </style>
 
-        <!-- BADGE (TIGHT GEOMETRY) -->
+        <!-- BADGE -->
         <g transform="translate(0,0) scale(0.9)">
-          <!-- Rings -->
           <circle cx="80" cy="80" r="58"
                   fill="none" stroke="#2ec4ff" stroke-width="6"/>
           <circle cx="80" cy="80" r="42"
                   fill="none" stroke="#2ec4ff" stroke-width="3" opacity="0.6"/>
 
-          <!-- A structure -->
           <path d="M55 108 L80 38 L105 108"
                 fill="none" stroke="#2ec4ff"
                 stroke-width="7" stroke-linecap="round"/>
 
-          <!-- Inclined ECG (animated) -->
           <path class="ecg"
                 d="M52 92 H62
                    L68 82
@@ -64,7 +62,6 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"/>
 
-          <!-- Magnifier (animated) -->
           <g class="magnifier">
             <circle cx="80" cy="118" r="10"
                     fill="none" stroke="#2ec4ff" stroke-width="5"/>
@@ -96,55 +93,42 @@
       </svg>
     </a>
 
-   <!-- NAVIGATION -->
-<nav class="site-nav">
-  <a href="index.html" data-nav="home">Home</a>
-  <a href="start-here.html"
-   data-nav="start"
-   style="background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.25);">
-  Start Here
-</a>
+    <!-- NAVIGATION -->
+    <nav class="site-nav" aria-label="Primary Navigation">
 
-  <!-- KNOWLEDGE BASE WITH DOMAIN DROPDOWN -->
-  <div class="nav-item has-dropdown">
-    <a href="analyzers.html"
-       class="nav-link"
-       data-nav="kb">
-      Knowledge Base ▾
-    </a>
+      <a href="index.html" data-nav="home">Home</a>
 
-    <div class="dropdown">
-      <a href="analyzers.html">
-        Browse by Analyzer
+      <a href="start-here.html"
+         data-nav="start"
+         style="background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.25);">
+        Start Here
       </a>
 
-      <a href="analyzers/biogas/index.html">
-        Biogas &amp; CBG
-      </a>
- <a href="analyzers/refinery/index.html">
-        Refinery Analyzers
-      </a>
+      <!-- KNOWLEDGE BASE DROPDOWN -->
+      <div class="nav-item has-dropdown">
+        <a href="analyzers.html"
+           class="nav-link"
+           data-nav="kb">
+          Knowledge Base ▾
+        </a>
 
-      <a href="analyzers/cems/index.html">
-        CEMS / PEMS
-      </a>
-      <!-- Future domains -->
-      <!--
-      <a href="analyzers/refinery/index.html">Refinery</a>
-      <a href="analyzers/cems/index.html">CEMS / PEMS</a>
-      -->
-    </div>
-  </div>
+        <div class="dropdown">
+          <a href="analyzers.html">Browse by Analyzer</a>
+          <a href="analyzers/biogas/index.html">Biogas &amp; CBG</a>
+          <a href="analyzers/refinery/index.html">Refinery Analyzers</a>
+          <a href="analyzers/cems/index.html">CEMS / PEMS</a>
+        </div>
+      </div>
 
-  <a href="learn/index.html" data-nav="learn">Learn</a>
-  <a href="community/index.html" data-nav="community">Community</a>
+      <a href="learn/index.html" data-nav="learn">Learn</a>
+      <a href="community/index.html" data-nav="community">Community</a>
 
-  <span class="nav-sep"></span>
+      <span class="nav-sep"></span>
 
-  <a href="blog/index.html" data-nav="blog">Blog</a>
-  <a href="contact.html" data-nav="contact">Contact</a>
- </nav>
+      <a href="blog/index.html" data-nav="blog">Blog</a>
+      <a href="contact.html" data-nav="contact">Contact</a>
 
+    </nav>
 
   </div>
 </header>
