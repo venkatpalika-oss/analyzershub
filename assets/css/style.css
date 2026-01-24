@@ -211,8 +211,8 @@ img{max-width:100%;height:auto;display:block}
   align-items:center;
   color:#fff;
   background:
-    linear-gradient(rgba(11,60,93,.85), rgba(11,60,93,.65)),
-  url("../images/home-hero.png");
+    linear-gradient(rgba(11,60,93,.95), rgba(11,60,93,.90)),
+  url("images/home-hero.png");
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
@@ -259,8 +259,8 @@ img{max-width:100%;height:auto;display:block}
   align-items:center;
   color:#fff;
   background:
-    linear-gradient(rgba(11,60,93,.88), rgba(11,60,93,.70)),
-    url("../images/home-hero.png")
+    linear-gradient(rgba(11,60,93,.96), rgba(11,60,93,.92)),
+    url("images/home-hero.png")
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
