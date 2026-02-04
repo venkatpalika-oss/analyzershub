@@ -2,68 +2,119 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>AI Analyzer Assistant | InstMates</title>
+  <title>InstMates AI | Analyzer Troubleshooting Assistant</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Global styles -->
+  <!-- ================= GLOBAL CSS ================= -->
   <link rel="stylesheet" href="/assets/css/style.css" />
 
   <style>
     .ai-box {
       max-width: 900px;
       margin: 40px auto;
-      padding: 20px;
+      padding: 24px;
       background: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 0 12px rgba(0,0,0,.08);
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,.08);
     }
+
+    .ai-box h2 {
+      margin-top: 0;
+    }
+
+    .ai-subtitle {
+      margin-top: 4px;
+      margin-bottom: 16px;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #0b5ed7;
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      margin-bottom: 16px;
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: 600;
+    }
+
+    select,
     textarea {
       width: 100%;
+      margin-top: 6px;
+    }
+
+    textarea {
       min-height: 120px;
     }
-    select, button {
-      margin-top: 10px;
+
+    button {
+      margin-top: 16px;
     }
+
     #answer {
-      margin-top: 20px;
+      margin-top: 24px;
       white-space: pre-wrap;
       background: #f5f7fa;
-      padding: 15px;
+      padding: 16px;
       border-radius: 6px;
+      border-left: 4px solid #0b5ed7;
     }
   </style>
 </head>
 
-<body>
+<body data-page="ai">
 
+<!-- ================= HEADER ================= -->
 <div id="siteHeader"></div>
 
+<!-- ================= AI PANEL ================= -->
 <div class="ai-box">
-  <h2>AI Analyzer Assistant</h2>
 
-  <label>Analyzer</label>
+  <h2>InstMates AI</h2>
+  <div class="ai-subtitle">
+    AI-powered troubleshooting for instrument & analyzer technicians
+  </div>
+
+  <div class="badge">InstMates Intelligence</div>
+
+  <label for="analyzer">Analyzer</label>
   <select id="analyzer">
-    <option value="GC">Gas Chromatograph</option>
+    <option value="GC">Gas Chromatograph (GC)</option>
     <option value="CEMS">CEMS</option>
   </select>
 
-  <label>Detector</label>
+  <label for="detector">Detector</label>
   <select id="detector">
     <option value="FID">FID</option>
     <option value="TCD">TCD</option>
   </select>
 
-  <label>Describe the problem</label>
-  <textarea id="question"
-    placeholder="Example: GC8000 showing negative peaks, baseline flat"></textarea>
+  <label for="question">Describe the problem</label>
+  <textarea
+    id="question"
+    placeholder="Example: Yokogawa GC8000 showing negative peaks, baseline flat">
+  </textarea>
 
-  <button onclick="runAI()">Ask AI</button>
+  <button class="btn btn-primary" onclick="runAI()">
+    Ask InstMates AI
+  </button>
 
   <div id="answer"></div>
+
 </div>
 
+<!-- ================= FOOTER ================= -->
 <div id="siteFooter"></div>
 
+<!-- ================= SCRIPTS ================= -->
 <script src="/assets/js/includes.js"></script>
 <script src="/assets/js/ai.js"></script>
 
