@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Analyzer Assistant | InstMates</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="/assets/css/style.css" />
+
+  <style>
+    .ai-box {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0,0,0,.08);
+    }
+    textarea {
+      width: 100%;
+      min-height: 120px;
+    }
+    select, button {
+      margin-top: 10px;
+    }
+    #answer {
+      margin-top: 20px;
+      white-space: pre-wrap;
+      background: #f5f7fa;
+      padding: 15px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="siteHeader"></div>
+
+<div class="ai-box">
+  <h2>AI Analyzer Assistant</h2>
+
+  <label>Analyzer</label>
+  <select id="analyzer">
+    <option value="GC">Gas Chromatograph</option>
+    <option value="CEMS">CEMS</option>
+  </select>
+
+  <label>Detector</label>
+  <select id="detector">
+    <option value="FID">FID</option>
+    <option value="TCD">TCD</option>
+  </select>
+
+  <label>Describe the problem</label>
+  <textarea id="question"
+    placeholder="Example: GC8000 showing negative peaks, baseline flat"></textarea>
+
+  <button onclick="runAI()">Ask AI</button>
+
+  <div id="answer"></div>
+</div>
+
+<div id="siteFooter"></div>
+
+<script src="/assets/js/includes.js"></script>
+<script src="/assets/js/ai.js"></script>
+
+</body>
+</html>
