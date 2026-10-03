@@ -3,247 +3,150 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>AnalyzersHub | Industrial Analyzer Knowledge Hub</title>
-  <meta name="description"
-        content="AnalyzersHub is a field-driven industrial analyzer knowledge hub. Covers real failures, troubleshooting order, calibration discipline, and plant-proven case studies across Biogas, CEMS, and Refinery systems." />
-
-  <!-- GitHub Pages base -->
-  <base href="/">
-
-  <!-- Global CSS -->
-  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
-
-  <!-- Home Hero Override -->
-  <style>
-    .hero{
-      min-height:360px;
-      display:flex;
-      align-items:center;
-      color:#fff;
-      background:
-        linear-gradient(rgba(11,60,93,0.85), rgba(11,60,93,0.65)),
-        url("assets/images/home-hero.png");
-      background-size:cover;
-      background-position:center;
-      background-repeat:no-repeat;
-    }
-    .hero h2,
-    .hero p{
-      text-shadow:0 3px 18px rgba(0,0,0,.8);
-    }
-  </style>
+  <title>AnalyzersHub | Process Analyzer Engineering References</title>
+  <meta name="description" content="Explore process analyzer engineering, measurement technologies and applications through practical references, sample-conditioning guides and CEMS learning." />
   <link rel="canonical" href="https://analyzershub.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="AnalyzersHub" />
-  <meta property="og:title" content="AnalyzersHub | Industrial Analyzer Knowledge Hub" />
-  <meta property="og:description" content="AnalyzersHub is a field-driven industrial analyzer knowledge hub. Covers real failures, troubleshooting order, calibration discipline, and plant-proven case studies across Biogas, CEMS, and Refinery systems." />
+  <meta property="og:title" content="AnalyzersHub | Process Analyzer Engineering References" />
+  <meta property="og:description" content="Explore process analyzer engineering, measurement technologies and applications through practical references, sample-conditioning guides and CEMS learning." />
   <meta property="og:url" content="https://analyzershub.com/" />
   <meta property="og:image" content="https://analyzershub.com/assets/images/home-hero.png" />
-  <meta property="og:image:alt" content="Industrial analyzer equipment" />
+  <meta property="og:image:alt" content="Industrial process plant with towers, pipework and storage tanks" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="AnalyzersHub | Industrial Analyzer Knowledge Hub" />
-  <meta name="twitter:description" content="AnalyzersHub is a field-driven industrial analyzer knowledge hub. Covers real failures, troubleshooting order, calibration discipline, and plant-proven case studies across Biogas, CEMS, and Refinery systems." />
+  <meta name="twitter:title" content="AnalyzersHub | Process Analyzer Engineering References" />
+  <meta name="twitter:description" content="Explore process analyzer engineering, measurement technologies and applications through practical references, sample-conditioning guides and CEMS learning." />
   <meta name="twitter:image" content="https://analyzershub.com/assets/images/home-hero.png" />
-  <meta name="twitter:image:alt" content="Industrial analyzer equipment" />
+  <meta name="twitter:image:alt" content="Industrial process plant with towers, pipework and storage tanks" />
+  <meta name="theme-color" content="#0B2239" />
+  <link rel="icon" type="image/svg+xml" href="/assets/images/brand/analyzershub-icon.svg" />
+  <link rel="stylesheet" href="/assets/css/home-m1.css" />
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "https://analyzershub.com/#website",
-  "url": "https://analyzershub.com/",
-  "name": "AnalyzersHub",
-  "description": "AnalyzersHub is a field-driven industrial analyzer knowledge hub. Covers real failures, troubleshooting order, calibration discipline, and plant-proven case studies across Biogas, CEMS, and Refinery systems.",
-  "inLanguage": "en"
-}
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://analyzershub.com/#website",
+    "url": "https://analyzershub.com/",
+    "name": "AnalyzersHub",
+    "description": "Explore process analyzer engineering, measurement technologies and applications through practical references, sample-conditioning guides and CEMS learning.",
+    "inLanguage": "en"
+  }
   </script>
 </head>
-
-<body data-page="home">
-
-<!-- ================= CENTRAL HEADER ================= -->
-<div id="siteHeader"></div>
-
-<!-- ================= HERO ================= -->
-<section class="hero">
-  <div class="hero-inner">
-    <h2>Industrial Analyzer Knowledge Hub</h2>
-    <p>
-      A field-driven knowledge platform for <b>industrial analyzers</b> —
-      focused on real failures, correct troubleshooting order,
-      calibration discipline, and plant-proven case studies
-      across <b>Biogas, CEMS, and Refinery</b> systems.
-    </p>
-
-    <div class="action-row">
-      <a class="btn btn-primary" href="start-here.html">
-        Start Here →
+<body class="home-m1">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <!-- Homepage-only treatment: original shared logo, includes and legacy CSS are preserved. -->
+  <header class="home-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="AnalyzersHub home">
+        <picture class="brand-symbol">
+          <source media="(max-width: 480px)" srcset="/assets/images/brand/analyzershub-icon.svg" />
+          <img class="brand-mark" src="/assets/images/brand/analyzershub-header-mark.svg" width="66" height="60" alt="" />
+        </picture>
+        <span class="brand-name">Analyzers<span>Hub</span><small>PROCESS ANALYZER ENGINEERING</small></span>
       </a>
-      <a class="btn btn-ghost" href="failures/index.html">
-        Common Failures →
-      </a>
-      <a class="btn btn-ghost" href="analyzers.html">
-        Analyzer Search →
-      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="/" aria-current="page">Home</a>
+        <a href="/analyzers.html">Analyzer References</a>
+        <a href="/learn/">Learn</a>
+        <a href="#about">About</a>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- ================= MAIN CONTENT ================= -->
-<main class="container">
+  <main id="main-content" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="accent-line" aria-hidden="true"></span> KNOWLEDGE TODAY. ENGINEERING FORWARD.</p>
+          <h1 id="hero-title">Engineering Tools for <span>Process Analyzer</span> Professionals</h1>
+          <p class="hero-summary">Practical knowledge for the measurement decisions that matter.</p>
+          <p class="hero-description">Explore analyzer technologies, applications and engineering fundamentals today. Structured engineering workflows are in development for AnalyzersHub V2.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="/analyzers.html">Browse Analyzer References <span aria-hidden="true">↗</span></a>
+            <a class="button secondary" href="/learn/">Explore Learning <span aria-hidden="true">→</span></a>
+          </div>
+          <p class="availability-note">Available now: references, guides and learning material.</p>
+        </div>
 
-  <!-- START HERE PANEL -->
-  <section class="panel">
-    <h2>New to Industrial Analyzers?</h2>
-    <p class="muted">
-      Not sure where to begin? Follow a structured learning and troubleshooting
-      path used by technicians and engineers in real operating plants.
-    </p>
-
-    <div class="action-row">
-      <a class="btn btn-primary" href="start-here.html">
-        Start Here →
-      </a>
-      <a class="btn btn-ghost" href="failures/index.html">
-        Most Common Failures →
-      </a>
-    </div>
-  </section>
-
-  <!-- WHY ANALYZERS MATTER -->
-  <section class="panel">
-    <h2>Why Industrial Analyzers Are Critical</h2>
-    <p>
-      Industrial analyzers are the <b>eyes and ears of a process plant</b>.
-      They directly influence combustion efficiency, product quality,
-      safety systems, and environmental compliance.
-    </p>
-    <p>
-      Incorrect analyzer readings lead to fuel losses,
-      unstable operation, false alarms, shutdowns,
-      and regulatory penalties.
-    </p>
-  </section>
-
-  <!-- DOMAIN ENTRY -->
-  <section class="panel">
-    <h2>Explore by Plant / Domain</h2>
-
-    <div class="grid">
-      <div class="card">
-        <h4>Biogas / CBG Plants</h4>
-        <p class="muted">
-          Digesters, gas composition, H₂S, moisture,
-          engine protection and stability.
-        </p>
-        <a class="btn btn-primary" href="analyzers/biogas/index.html">
-          Open →
-        </a>
       </div>
+        <div class="hero-visual">
+          <img src="/assets/images/home-hero-m1-1200.webp"
+               srcset="/assets/images/home-hero-m1-720.webp 720w, /assets/images/home-hero-m1-1200.webp 1200w"
+               sizes="(max-width: 900px) 100vw, 58vw"
+               width="1200" height="800" fetchpriority="high"
+               alt="Industrial process plant with towers, interconnected pipework and storage tanks" />
+        </div>
+      <div class="wrap hero-footnote"><span>TECHNOLOGIES</span><span>APPLICATIONS</span><span>SAMPLE SYSTEMS</span><span>ENGINEERING FUNDAMENTALS</span></div>
+    </section>
 
-      <div class="card">
-        <h4>CEMS / PEMS</h4>
-        <p class="muted">
-          Emission monitoring, audits, calibration discipline,
-          DAHS and compliance.
-        </p>
-        <a class="btn btn-primary" href="analyzers/cems/index.html">
-          Open →
-        </a>
+    <section class="workflow section" aria-labelledby="workflow-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><p class="eyebrow">THE ENGINEERING WORKFLOW</p><h2 id="workflow-title">A structured path from question to specification.</h2></div>
+          <p class="future-badge">COMING IN ANALYZERSHUB V2</p>
+        </div>
+        <p class="section-intro">Our direction for future tools. These workflows are being developed and are not yet available.</p>
+        <ol class="workflow-steps">
+          <li><div class="step-top"><span class="step-number">01</span><span class="step-connector" aria-hidden="true">→</span></div><h3>SELECT</h3><p>Assess measurement technology for a defined application.</p></li>
+          <li><div class="step-top"><span class="step-number">02</span><span class="step-connector" aria-hidden="true">→</span></div><h3>DESIGN</h3><p>Develop a preliminary measurement and sample-system concept.</p></li>
+          <li><div class="step-top"><span class="step-number">03</span><span class="step-connector" aria-hidden="true">→</span></div><h3>CALCULATE</h3><p>Perform structured analyzer engineering calculations.</p></li>
+          <li><div class="step-top"><span class="step-number">04</span><span class="step-end" aria-hidden="true">□</span></div><h3>SPECIFY</h3><p>Turn reviewed engineering inputs into preliminary structured outputs.</p></li>
+        </ol>
       </div>
+    </section>
 
-      <div class="card">
-        <h4>Refinery / Process Plants</h4>
-        <p class="muted">
-          GC systems, carrier gas quality,
-          shelters, utilities and reliability.
-        </p>
-        <a class="btn btn-primary" href="analyzers/refinery/index.html">
-          Open →
-        </a>
+    <section class="section available" aria-labelledby="available-title">
+      <div class="wrap">
+        <div class="section-heading"><div><p class="eyebrow available-label">REFERENCE &amp; LEARNING</p><h2 id="available-title">Available now</h2></div><p class="heading-aside">Start with the knowledge.<br>Explore the existing collection.</p></div>
+        <div class="resource-grid">
+          <a class="resource-card" href="/analyzers.html"><span class="card-index">01 / TECHNOLOGIES</span><h3>Analyzer Technologies</h3><p>Explore industrial analyzers, measurement principles and equipment references.</p><span class="card-link">Browse analyzer references <span aria-hidden="true">↗</span></span></a>
+          <a class="resource-card" href="/analyzers/biogas/"><span class="card-index">02 / APPLICATIONS</span><h3>Applications &amp; Industries</h3><p>Explore the roles of gas measurement across biogas and CBG processes.</p><span class="card-link">Explore biogas applications <span aria-hidden="true">↗</span></span></a>
+          <a class="resource-card" href="/learn/"><span class="card-index">03 / ENVIRONMENTAL</span><h3>CEMS &amp; Environmental</h3><p>Build a foundation in emission monitoring, sampling and data handling.</p><span class="card-link">Explore CEMS learning <span aria-hidden="true">↗</span></span></a>
+          <a class="resource-card" href="/guides/process-analyzer-sampling.html"><span class="card-index">04 / SAMPLE SYSTEMS</span><h3>Sample Conditioning</h3><p>Understand pressure control, moisture, filtration and representative sampling.</p><span class="card-link">Read the sampling guide <span aria-hidden="true">↗</span></span></a>
+          <a class="resource-card" href="/guides/calibration-best-practices.html"><span class="card-index">05 / MEASUREMENT QUALITY</span><h3>Calibration &amp; Maintenance</h3><p>Review stability checks, calibration gas use and verification practices.</p><span class="card-link">Read calibration practices <span aria-hidden="true">↗</span></span></a>
+          <a class="resource-card" href="/failures/"><span class="card-index">06 / PRACTICAL EXPERIENCE</span><h3>Field Lessons</h3><p>Learn from sampling, utility and environmental failures in analyzer systems.</p><span class="card-link">Explore field lessons <span aria-hidden="true">↗</span></span></a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FAILURE-FIRST MINDSET -->
-  <section class="panel">
-    <h2>Why Analyzers Really Fail</h2>
-
-    <ul class="list">
-      <li>Sampling systems, not sensors</li>
-      <li>Moisture, not electronics</li>
-      <li>Utilities, not calibration</li>
-      <li>Environment, not software</li>
-    </ul>
-
-    <div class="warn">
-      <b>Field rule:</b>
-      If you start troubleshooting from the analyzer electronics,
-      you are already too late.
-    </div>
-
-    <div class="action-row">
-      <a class="btn btn-primary" href="failures/index.html">
-        Explore Failure Patterns →
-      </a>
-    </div>
-  </section>
-
-  <!-- CAREER PATH -->
-  <section class="panel">
-    <h2>Analyzer Career Path</h2>
-    <div class="grid">
-      <div class="card">
-        <h4>🔧 Technician</h4>
-        <p>Calibration, checks, routine maintenance.</p>
+    <section class="reference-section" aria-labelledby="reference-title">
+      <div class="wrap reference-grid">
+        <div><p class="eyebrow">THE REFERENCE COLLECTION</p><h2 id="reference-title">Understand the technology.<br>Put the application in context.</h2><p>A browsable reference collection covering industrial analyzers, measurement technologies, applications and equipment. Use it to develop understanding of process analyzer systems.</p><a class="button primary" href="/analyzers.html">Browse Analyzer References <span aria-hidden="true">↗</span></a></div>
+        <div class="reference-topics"><p class="topics-label">INSIDE THE COLLECTION</p><ul><li><span>01</span> Gas chromatography</li><li><span>02</span> Oxygen &amp; gas analysis</li><li><span>03</span> Emission monitoring</li><li><span>04</span> Liquid analysis &amp; pH</li></ul><p class="reference-note">Reference material available today.<br>Engineering selection tools are still in development.</p></div>
       </div>
-      <div class="card">
-        <h4>🎯 Specialist</h4>
-        <p>Advanced troubleshooting and startups.</p>
+    </section>
+
+    <section class="section learning" aria-labelledby="learn-title">
+      <div class="wrap learning-grid">
+        <div class="learning-intro"><p class="eyebrow">LEARN / REFERENCE</p><h2 id="learn-title">Build the knowledge behind each decision.</h2><p>Measurement principles, applications and practical limitations form the foundation for future engineering workflows. Begin with the existing CEMS lessons.</p><a class="text-link" href="/learn/">Explore all CEMS learning <span aria-hidden="true">→</span></a></div>
+        <ol class="lesson-list">
+          <li><a href="/learn/cems/module-1-key-terms.html"><span class="lesson-number">01</span><div><small>START WITH THE FUNDAMENTALS</small><h3>CEMS key terms</h3><p>Understand the language of emission monitoring.</p></div><span class="lesson-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="/learn/cems/module-2-wet-vs-dry.html"><span class="lesson-number">02</span><div><small>UNDERSTAND THE MEASUREMENT BASIS</small><h3>Wet vs. dry basis</h3><p>See why moisture matters when interpreting a measurement.</p></div><span class="lesson-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="/learn/cems/module-4-calibration-quality.html"><span class="lesson-number">03</span><div><small>REVIEW MEASUREMENT QUALITY</small><h3>Calibration quality</h3><p>Connect calibration practices with reliable analyzer operation.</p></div><span class="lesson-arrow" aria-hidden="true">↗</span></a></li>
+        </ol>
       </div>
-      <div class="card">
-        <h4>📈 Reliability Engineer</h4>
-        <p>Performance monitoring, trends, and prevention.</p>
+    </section>
+
+    <section class="section selected" aria-labelledby="selected-title">
+      <div class="wrap">
+        <div class="section-heading"><div><p class="eyebrow">SELECTED TECHNICAL READING</p><h2 id="selected-title">A wider view of analyzer engineering.</h2></div><a class="text-link" href="/blog/">View technical articles <span aria-hidden="true">→</span></a></div>
+        <div class="reading-grid">
+          <article><p class="reading-category">PROCESS CONTEXT</p><h3><a href="/blog/posts/why-industrial-analyzers-exist.html">Why industrial analyzers exist</a></h3><p>The relationship between process measurements, control, quality and environmental needs.</p></article>
+          <article><p class="reading-category">SAMPLE CONDITIONING</p><h3><a href="/blog/posts/analyzer-sampling-systems-explained.html">Analyzer sampling systems explained</a></h3><p>A closer look at the path between a process sample and a useful measurement.</p></article>
+          <article><p class="reading-category">MEASUREMENT TECHNOLOGY</p><h3><a href="/guides/ph/ph-working-principle.html">pH measurement in practice</a></h3><p>Sensor behavior, installation considerations and the realities of measurement in the field.</p></article>
+        </div>
       </div>
-      <div class="card">
-        <h4>🧠 Consultant / SME</h4>
-        <p>Multi-plant expertise, audits, and training.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- MOST USED PATHS -->
-  <section class="panel">
-    <h2>Most Used Paths</h2>
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="wrap about-grid"><div><p class="eyebrow">ABOUT ANALYZERSHUB</p><h2 id="about-title">Practical engineering.<br>Clear boundaries.</h2></div><div><p>AnalyzersHub brings together practical process-analyzer knowledge with a focus on measurement technology and application context.</p><p>Our direction for future workflows is to make assumptions and limitations explicit, with bounded outputs that support engineering review. They will require application-specific judgment, manufacturer guidance and site requirements.</p><a class="text-link" href="/disclaimer.html">Read the scope and limitations <span aria-hidden="true">→</span></a></div></div>
+    </section>
+  </main>
 
-    <div class="grid">
-      <div class="card">
-        <h4>Common Analyzer Failures</h4>
-        <p class="muted">Start troubleshooting the right way.</p>
-        <a class="btn btn-primary" href="failures/index.html">Open →</a>
-      </div>
-
-      <div class="card">
-        <h4>Analyzer Search</h4>
-        <p class="muted">Browse by vendor, type and application.</p>
-        <a class="btn btn-primary" href="analyzers.html">Open →</a>
-      </div>
-
-      <div class="card">
-        <h4>Start Here</h4>
-        <p class="muted">Structured entry for new engineers.</p>
-        <a class="btn btn-primary" href="start-here.html">Open →</a>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<!-- ================= CENTRAL FOOTER ================= -->
-<div id="siteFooter"></div>
-
-<!-- ================= HEADER / FOOTER LOADER ================= -->
-<script src="assets/js/includes.js?v=2026-01-18"></script>
-
+  <footer class="home-footer">
+    <div class="wrap footer-top"><div><a class="footer-brand" href="/">Analyzers<span>Hub</span></a><p>Engineering Tools for Process Analyzer Professionals</p></div><nav aria-label="Footer navigation"><a href="/blog/">Blog</a><a href="/community/index.html">Community</a><a href="/contact.html">Contact</a><a href="/disclaimer.html">Disclaimer</a></nav></div>
+    <div class="wrap footer-bottom"><span>© AnalyzersHub. All rights reserved.</span><span>References today. Structured workflows in development.</span></div>
+  </footer>
 </body>
 </html>
