@@ -9,7 +9,14 @@
   <base href="/">
 
   <!-- ✅ GLOBAL CSS -->
-  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18" />
+  <link rel="stylesheet" href="/assets/css/style.css?v=2026-01-18" />
+  <link rel="canonical" href="https://analyzershub.com/analyzers/servomex/4900/">
+  <meta name="description" content="Servomex 4900 model reference: distinguish legacy 04900 from 4900 Multigas, with channel, sample-condition and maintenance qualifications.">
+  <style>
+    /* Keep the existing navigation dropdown usable with a keyboard. */
+    .site-nav .has-dropdown:focus-within .dropdown { display: block; }
+    .site-nav a:focus-visible { outline: 2px solid #ffbf47; outline-offset: 2px; }
+  </style>
 </head>
 
 <body data-page="analyzers">
@@ -19,9 +26,9 @@
 
   <!-- ✅ BREADCRUMBS -->
   <nav class="crumbs" aria-label="Breadcrumb">
-    <a href="index.html">Home</a><span>›</span>
-    <a href="analyzers.html">Analyzer Search</a><span>›</span>
-    <a href="analyzers.html?vendor=servomex">Servomex</a><span>›</span>
+    <a href="/index.html">Home</a><span>›</span>
+    <a href="/analyzers.html">Analyzer Search</a><span>›</span>
+    <a href="/analyzers.html?vendor=servomex">Servomex</a><span>›</span>
     <span class="current">4900</span>
   </nav>
 
@@ -31,117 +38,47 @@
          HEADER PANEL
     ====================================================== -->
     <div class="panel">
-      <h2 style="margin:0;color:#0b3c5d;">
+      <h1 style="margin:0;color:#0b3c5d;">
         Servomex 4900 — Multigas Process Analyzer
-      </h2>
+      </h1>
 
       <p class="muted" style="margin:8px 0 0;">
-        Continuous multigas analyzer using <b>paramagnetic oxygen</b> and
-        <b>NDIR infrared</b> measurement technologies. Widely used in
-        hydrogen plants, refineries, SMRs, and air separation units.
+        Model reference for the legacy 04900 / Xentra / SERVOPRO 4900 and the separately identified SERVOPRO 4900 Multigas. Check the nameplate and manual generation before using specifications or service instructions.
       </p>
 
       <div class="action-row">
-        <a class="btn btn-ghost" href="analyzers.html">← Back to Search</a>
+        <a class="btn btn-ghost" href="/analyzers.html">← Back to Search</a>
         <a class="btn btn-primary"
-           href="analyzers/servomex/4900/alarms/index.html">
+           href="/analyzers/servomex/4900/alarms/index.html">
           Alarm Decision Trees →
         </a>
         <a class="btn btn-ghost"
-           href="guides/process-analyzer-sampling.html">
+           href="/guides/process-analyzer-sampling.html">
           Sampling Guide →
         </a>
       </div>
 
-      <div class="warn">
-        <b>Technician rule:</b>
-        If readings are unstable, always check
-        <b>sample conditioning, pressure stability, and moisture</b>
-        before calibration or sensor replacement.
-      </div>
+<div class="warn">Servomex lists the legacy 04900 / Xentra / SERVOPRO 4900 as obsolete and separately lists the 4900 Multigas product. This does not mean all analyzers named 4900 are obsolete.</div>
     </div>
 
     <!-- =====================================================
          MAIN GRID
     ====================================================== -->
     <div class="grid">
-
-      <!-- WORKING PRINCIPLE -->
-      <div class="card gas">
-        <h3>Working Principle</h3>
-        <p>
-          The Servomex 4900 uses two independent physical principles for
-          continuous gas measurement.
-        </p>
-        <ul class="list">
-          <li>
-            <b>Paramagnetic O₂:</b>
-            Oxygen molecules are attracted into a magnetic field,
-            generating a signal proportional to concentration.
-          </li>
-          <li>
-            <b>NDIR (CO / CO₂):</b>
-            Infrared absorption at specific wavelengths determines
-            gas concentration.
-          </li>
-        </ul>
+      <div class="card gas"><h3>Measurement technologies</h3>
+        <p>For the paramagnetic O₂ channel, oxygen is attracted into a magnetic field; the magnetodynamic cell uses feedback to measure the resulting displacement. Other fitted gas channels use their specified infrared technologies. Channel and communications options are generation-specific.</p>
       </div>
-
-      <!-- MAIN COMPONENTS -->
-      <div class="card gas">
-        <h3>Main Components</h3>
-        <ul class="list">
-          <li><b>Sample conditioning:</b> filters, regulators, drains.</li>
-          <li><b>Flow control:</b> capillaries / flow restrictors.</li>
-          <li><b>Measurement modules:</b> paramagnetic O₂ sensor, IR cell.</li>
-          <li><b>Electronics:</b> signal conditioning & processing.</li>
-          <li><b>Controller & comms:</b> display, I/O, Ethernet.</li>
-        </ul>
+      <div class="card gas"><h3>Sample conditions</h3>
+        <p>Use the matched manual to establish sample pressure, flow, temperature and conditioning requirements. Protect the measurement system from condensate and contamination. Background-gas effects must be assessed for the installed O₂ channel and mixture; a universal correction is not provided here.</p>
       </div>
-
-      <!-- CALIBRATION -->
-      <div class="card gas">
-        <h3>Calibration Procedure</h3>
-        <div class="step"><b>1)</b> Confirm analyzer is stable (no flow alarms).</div>
-        <div class="step"><b>2)</b> Verify sample & calibration gas pressure.</div>
-        <div class="step"><b>3)</b> Apply zero gas and allow stabilization.</div>
-        <div class="step"><b>4)</b> Apply span gas and verify response.</div>
-        <div class="step"><b>5)</b> Return to process and confirm DCS values.</div>
+      <div class="card gas"><h3>Calibration and maintenance</h3>
+        <p>Use gas standards and procedures matched to the fitted channels and generation. The legacy 04900001B manual does not establish procedures for a newer 4900 Multigas unit.</p>
+        <p>The former daily/weekly/monthly/annual schedule and fault-frequency ranking were not supported by the cited configuration evidence and have been removed. Set service intervals from the applicable manual and operating conditions.</p>
       </div>
-
-      <!-- MAJOR TROUBLESHOOTING -->
-      <div class="card gas">
-        <h3>Major Troubleshooting</h3>
-        <ul class="list">
-          <li><b>Unstable readings:</b> pressure hunting, wet sample, leaks.</li>
-          <li><b>Slow response:</b> blocked filters or restricted flow.</li>
-          <li><b>High drift:</b> sensor ageing or contamination.</li>
-          <li><b>No DCS update:</b> comms, scaling, or quality-bit issues.</li>
-        </ul>
-
-        <div class="action-row" style="margin-top:10px;">
-          <a class="btn btn-ghost"
-             href="analyzers/servomex/4900/alarms/index.html">
-            Use Alarm Decision Trees →
-          </a>
-        </div>
+      <div class="card gas"><h3>Documentation limits</h3>
+        <p>The full current-generation manual and applicable background-gas correction data have not been validated for this page. Confirm those details before applying numerical limits or service procedures.</p>
+        <p><a href="/analyzers/servomex/4900/alarms/index.html">4900 alarm archive — verify generation applicability</a></p>
       </div>
-
-      <!-- MAINTENANCE -->
-      <div class="card gas">
-        <h3>Maintenance (Field Practice)</h3>
-        <ul class="list">
-          <li><b>Daily:</b> Check sample flow, pressure, and alarms.</li>
-          <li><b>Weekly:</b> Inspect filters, drains, and fittings.</li>
-          <li><b>Monthly:</b> Leak test sample system, verify calibration.</li>
-          <li><b>Annually:</b> Sensor health check and validation.</li>
-        </ul>
-
-        <div class="warn">
-          Poor maintenance causes more analyzer faults than electronics failure.
-        </div>
-      </div>
-
     </div>
 
     <!-- =====================================================
@@ -164,13 +101,25 @@
       </script>
     </div>
 
-  </main>
+
+  <section class="panel" aria-label="Technical references">
+    <h3>Technical references</h3>
+    <p>Updated against manufacturer documentation. Match the document to the installed model and options.</p>
+    <ul>
+      <li>Servomex: <a href="https://www.servomex.com/obsolete-products/04900-servopro-4900/">04900 / Xentra / SERVOPRO 4900</a> — Legacy product lifecycle notice; undated.</li>
+      <li>Servomex: <a href="https://www.servomex.com/wp-content/uploads/2023/01/04900001b_4.pdf">SERVOPRO 4900 user manual</a> — 04900001B, Rev 4; legacy generation only.</li>
+      <li>Servomex: <a href="https://www.servomex.com/gas-analyzers/finder/4900-multigas/">SERVOPRO 4900 Multigas</a> — Current product overview; undated; accessed 3 October 2026.</li>
+      <li>Servomex: <a href="https://www.servomex.com/gas-analyzers/technologies/paramagnetic/">Paramagnetic oxygen analyzer technology</a> — Manufacturer principle overview; undated.</li>
+    </ul>
+  </section>
+
+</main>
 
   <!-- ✅ CENTRAL FOOTER -->
   <div id="siteFooter"></div>
 
   <!-- ✅ LOAD HEADER / FOOTER -->
-  <script src="assets/js/includes.js?v=2026-01-18"></script>
+  <script src="/assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>

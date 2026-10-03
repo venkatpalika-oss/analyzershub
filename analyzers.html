@@ -12,8 +12,13 @@
 <base href="/">
 
 <!-- Global styles -->
-<link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
+<link rel="stylesheet" href="/assets/css/style.css?v=2026-01-18">
   <link rel="canonical" href="https://analyzershub.com/analyzers.html" />
+  <style>
+    /* Keep the existing navigation dropdown usable with a keyboard. */
+    .site-nav .has-dropdown:focus-within .dropdown { display: block; }
+    .site-nav a:focus-visible { outline: 2px solid #ffbf47; outline-offset: 2px; }
+  </style>
 </head>
 
 <body data-page="analyzers">
@@ -23,7 +28,7 @@
 
 <!-- ================= BREADCRUMBS ================= -->
 <nav class="crumbs" aria-label="Breadcrumb">
-  <a href="index.html">Home</a><span>›</span>
+  <a href="/index.html">Home</a><span>›</span>
   <span class="current">Analyzer Search</span>
 </nav>
 
@@ -31,7 +36,7 @@
 
   <!-- ================= INTRO ================= -->
   <section class="panel">
-    <h2>Analyzer Knowledge Hub</h2>
+    <h1>Analyzer Knowledge Hub</h1>
     <p class="muted">
       Browse analyzers by manufacturer. Each analyzer includes working principles,
       calibration guidance, troubleshooting notes, and alarm decision trees
@@ -39,7 +44,7 @@
     </p>
 
     <div class="action-row">
-      <a class="btn btn-ghost" href="index.html">← Back to Home</a>
+      <a class="btn btn-ghost" href="/index.html">← Back to Home</a>
     </div>
   </section>
 
@@ -56,7 +61,7 @@
         <p class="muted">
           Industrial process GC for refinery, petrochemical, and gas applications.
         </p>
-        <a class="btn btn-primary" href="analyzers/siemens/maxum-ii/">
+        <a class="btn btn-primary" href="/analyzers/siemens/maxum-ii/">
           Open Analyzer →
         </a>
       </div>
@@ -66,7 +71,7 @@
         <p class="muted">
           Modular process GC with smart oven design.
         </p>
-        <a class="btn btn-primary" href="analyzers/abb/gc/pgc5000b/">
+        <a class="btn btn-primary" href="/analyzers/abb/gc/pgc5000b/">
           Open Analyzer →
         </a>
       </div>
@@ -76,7 +81,7 @@
         <p class="muted">
           Portable natural gas chromatograph for field analysis.
         </p>
-        <a class="btn btn-primary" href="analyzers/abb/gc/portable-ngc/">
+        <a class="btn btn-primary" href="/analyzers/abb/gc/portable-ngc/">
           Open Analyzer →
         </a>
       </div>
@@ -86,7 +91,7 @@
         <p class="muted">
           Modular process GC for complex multi-stream analysis.
         </p>
-        <a class="btn btn-primary" href="analyzers/yokogawa/gc8000/">
+        <a class="btn btn-primary" href="/analyzers/yokogawa/gc8000/">
           Open Analyzer →
         </a>
       </div>
@@ -101,7 +106,7 @@
           carrier gas, oven stability, and valve issues.
         </p>
         <a class="btn btn-ghost"
-           href="guides/gc/yokogawa-chromatogram-reference.html">
+           href="/guides/gc/yokogawa-chromatogram-reference.html">
           Open Reference →
         </a>
       </div>
@@ -111,7 +116,7 @@
         <p class="muted">
           Online gas chromatographs for industrial process analysis.
         </p>
-        <a class="btn btn-primary" href="analyzers/agilent/gc/">
+        <a class="btn btn-primary" href="/analyzers/agilent/gc/">
           Open Analyzer →
         </a>
       </div>
@@ -122,7 +127,7 @@
           Advanced ABB process GC with Smart Oven design for refinery
           and petrochemical applications.
         </p>
-        <a class="btn btn-primary" href="analyzers/abb/gc/pgc5000c/">
+        <a class="btn btn-primary" href="/analyzers/abb/gc/pgc5000c/">
           Open Analyzer →
         </a>
       </div>
@@ -133,7 +138,7 @@
           ABB process GC configured for total sulfur measurement
           in refinery and petrochemical applications.
         </p>
-        <a class="btn btn-primary" href="analyzers/abb/gc/pgc5007b/">
+        <a class="btn btn-primary" href="/analyzers/abb/gc/pgc5007b/">
           Open Analyzer →
         </a>
       </div>
@@ -154,7 +159,7 @@
         <p class="muted">
           Zirconia in-situ oxygen analyzer for boilers and furnaces.
         </p>
-        <a class="btn btn-primary" href="analyzers/yokogawa/zr22g/">
+        <a class="btn btn-primary" href="/analyzers/yokogawa/zr22g/">
           Open Analyzer →
         </a>
       </div>
@@ -164,7 +169,7 @@
         <p class="muted">
           Entry-level zirconia oxygen analyzer.
         </p>
-        <a class="btn btn-primary" href="analyzers/abb/az10/">
+        <a class="btn btn-primary" href="/analyzers/abb/az10/">
           Open Analyzer →
         </a>
       </div>
@@ -172,9 +177,9 @@
       <div class="card oxygen">
         <h4>ABB AZ20</h4>
         <p class="muted">
-          Advanced in-situ oxygen analyzer.
+          In-situ zirconia oxygen monitor for combustion applications.
         </p>
-        <a class="btn btn-primary" href="analyzers/abb/az20/">
+        <a class="btn btn-primary" href="/analyzers/abb/az20/">
           Open Analyzer →
         </a>
       </div>
@@ -182,9 +187,9 @@
       <div class="card oxygen">
         <h4>ABB AZ25</h4>
         <p class="muted">
-          TDLAS-based gas analyzer.
+          In-situ zirconia oxygen analyzer for high-temperature combustion applications.
         </p>
-        <a class="btn btn-primary" href="analyzers/abb/az25/">
+        <a class="btn btn-primary" href="/analyzers/abb/az25/">
           Open Analyzer →
         </a>
       </div>
@@ -194,7 +199,7 @@
         <p class="muted">
           High-performance zirconia oxygen analyzer.
         </p>
-        <a class="btn btn-primary" href="analyzers/abb/az30/">
+        <a class="btn btn-primary" href="/analyzers/abb/az30/">
           Open Analyzer →
         </a>
       </div>
@@ -204,7 +209,7 @@
         <p class="muted">
           TDLAS analyzer for harsh process environments.
         </p>
-        <a class="btn btn-primary" href="analyzers/abb/az40/">
+        <a class="btn btn-primary" href="/analyzers/abb/az40/">
           Open Analyzer →
         </a>
       </div>
@@ -213,10 +218,10 @@
       <div class="card gas">
         <h4>Servomex 4900 Multigas Analyzer</h4>
         <p class="muted">
-          Paramagnetic O₂ and NDIR multigas analyzer for hydrogen plants,
-          refineries, and process gas applications.
+          Paramagnetic O₂ and infrared gas analysis; distinguish legacy 04900
+          from the separately identified 4900 Multigas generation.
         </p>
-        <a class="btn btn-primary" href="analyzers/servomex/4900/">
+        <a class="btn btn-primary" href="/analyzers/servomex/4900/">
           Open Analyzer →
         </a>
       </div>
@@ -237,7 +242,7 @@
         <p class="muted">
           SRU analyzer for H₂S, SO₂, and tail gas monitoring.
         </p>
-        <a class="btn btn-primary" href="analyzers/ametek/888/">
+        <a class="btn btn-primary" href="/analyzers/ametek/888/">
           Open Analyzer →
         </a>
       </div>
@@ -247,7 +252,7 @@
         <p class="muted">
           Process gas analyzer for sulfur and emissions applications.
         </p>
-        <a class="btn btn-primary" href="analyzers/ametek/933/">
+        <a class="btn btn-primary" href="/analyzers/ametek/933/">
           Open Analyzer →
         </a>
       </div>
@@ -267,7 +272,7 @@
         <p class="muted">
           Wobbe Index and calorific value measurement.
         </p>
-        <a class="btn btn-primary" href="analyzers/hobre/wobbe-index/">
+        <a class="btn btn-primary" href="/analyzers/hobre/wobbe-index/">
           Open Analyzer →
         </a>
       </div>
@@ -308,7 +313,7 @@
       </ul>
 
       <a class="btn btn-primary"
-         href="analyzers/biogas/index.html">
+         href="/analyzers/biogas/index.html">
         Open Biogas Analyzer Cluster →
       </a>
     </div>
@@ -337,7 +342,7 @@
         Widely used for demanding industrial and utility applications.
       </p>
       <a class="btn btn-primary"
-         href="analyzers/yokogawa/ph/flxa402/flxa402.html">
+         href="/analyzers/yokogawa/ph/flxa402/flxa402.html">
         Open Analyzer →
       </a>
     </div>
@@ -373,19 +378,19 @@
 
   <div class="action-row" style="margin-top:10px;">
     <a class="btn btn-ghost"
-       href="guides/ph/ph-working-principle.html">
+       href="/guides/ph/ph-working-principle.html">
       pH Measurement – Field Reality →
     </a>
 
     <a class="btn btn-ghost"
-       href="guides/ph/ph-alarm-decision-tree.html">
+       href="/guides/ph/ph-alarm-decision-tree.html">
       pH Alarm Decision Tree →
     </a>
   </div>
 
 </section>
 
-     
+
 
 
   <!-- ================= TECHNICIAN NOTE ================= -->
@@ -395,12 +400,24 @@
     utilities, or process disturbances — not the analyzer electronics.
   </div>
 
+
+  <section class="panel" aria-label="Technical references">
+    <h3>Technical references</h3>
+    <p>Updated against manufacturer documentation. Match the document to the installed model and options.</p>
+    <ul>
+      <li>ABB: <a href="https://library.e.abb.com/public/09aa7ae0e1534982854718cb7b2896cd/IM_AZ20P-EN_G.pdf">Endura AZ20 Oxygen monitor — Combustion oxygen probe</a> — IM/AZ20P-EN, Rev G; introduction, pneumatic connections and maintenance.</li>
+      <li>ABB: <a href="https://new.abb.com/products/measurement-products/analytical/zirconia-in-situ-oxygen-and-combustion/endura-az25-high-temperature-combustion-gas-oxygen-analyzer">Endura AZ25 High temperature combustion gas oxygen analyzer</a> — Manufacturer product overview; undated.</li>
+      <li>Servomex: <a href="https://www.servomex.com/obsolete-products/04900-servopro-4900/">04900 / Xentra / SERVOPRO 4900</a> — Legacy product lifecycle notice; undated.</li>
+      <li>Servomex: <a href="https://www.servomex.com/gas-analyzers/finder/4900-multigas/">SERVOPRO 4900 Multigas</a> — Current product overview; undated; accessed 3 October 2026.</li>
+    </ul>
+  </section>
+
 </main>
 
 <!-- ================= CENTRAL FOOTER ================= -->
 <div id="siteFooter"></div>
 
-<script src="assets/js/includes.js?v=2026-01-18"></script>
+<script src="/assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>

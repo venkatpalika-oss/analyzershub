@@ -9,7 +9,7 @@
   <base href="/">
 
   <!-- Global styles -->
-  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2026-01-18">
 
   <!-- SVG click-to-zoom support (added safely) -->
   <style>
@@ -43,6 +43,13 @@
       cursor:pointer;
     }
   </style>
+  <link rel="canonical" href="https://analyzershub.com/analyzers/servomex/4900/alarms/">
+  <meta name="description" content="Servomex 4900 — Alarm Decision Trees: documentation scope, technical qualifications and manufacturer references.">
+  <style>
+    /* Keep the existing navigation dropdown usable with a keyboard. */
+    .site-nav .has-dropdown:focus-within .dropdown { display: block; }
+    .site-nav a:focus-visible { outline: 2px solid #ffbf47; outline-offset: 2px; }
+  </style>
 </head>
 
 <body data-page="analyzers">
@@ -52,10 +59,10 @@
 
 <!-- ================= BREADCRUMBS ================= -->
 <nav class="crumbs" aria-label="Breadcrumb">
-  <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers.html">Analyzer Search</a><span>›</span>
-  <a href="analyzers.html?vendor=servomex">Servomex</a><span>›</span>
-  <a href="analyzers/servomex/4900/index.html">4900</a><span>›</span>
+  <a href="/index.html">Home</a><span>›</span>
+  <a href="/analyzers.html">Analyzer Search</a><span>›</span>
+  <a href="/analyzers.html?vendor=servomex">Servomex</a><span>›</span>
+  <a href="/analyzers/servomex/4900/index.html">4900</a><span>›</span>
   <span class="current">Alarms</span>
 </nav>
 
@@ -63,10 +70,9 @@
 
 <!-- ================= HEADER PANEL ================= -->
 <section class="panel">
-  <h2>Servomex 4900 — Alarm Decision Trees</h2>
+  <h1>Servomex 4900 — Alarm Decision Trees</h1>
   <p class="muted">
-    Technician-grade alarm handling based on real refinery experience.
-    Follow the sequence strictly to avoid false calibration and unnecessary sensor replacement.
+    Legacy 4900 alarm archive. Match the nameplate, fitted channels and manual generation before applying these notes. These diagrams have not been validated as a current-generation 4900 Multigas service procedure.
   </p>
 
   <div class="warn">
@@ -75,7 +81,7 @@
   </div>
 
   <div class="action-row">
-    <a class="btn btn-ghost" href="analyzers/servomex/4900/index.html">
+    <a class="btn btn-ghost" href="/analyzers/servomex/4900/index.html">
       ← Back to Analyzer
     </a>
   </div>
@@ -123,17 +129,11 @@
     <line x1="690" y1="320" x2="690" y2="400" stroke="#0b3c5d" marker-end="url(#af1)"/>
 
     <rect x="560" y="400" width="260" height="60" rx="10" fill="#e8f5e9" stroke="#2e7d32"/>
-    <text x="690" y="435" text-anchor="middle">Stabilize flow → Alarm clears</text>
+    <text x="690" y="435" text-anchor="middle">Restore flow; verify alarm status</text>
   </svg>
   </div>
 
-  <div class="note">
-    <b>Typical root causes:</b><br>
-    Wet / blocked filters — <b>45%</b><br>
-    Regulator hunting — <b>30%</b><br>
-    Process pressure loss — <b>15%</b><br>
-    Internal restriction fault — <b>10%</b>
-  </div>
+<div class="note">The former numerical failure-frequency breakdown was unsupported and has been removed. Use configuration-matched diagnostics to establish the cause.</div>
 </div>
 
 <!-- =================================================
@@ -169,17 +169,11 @@
     <text x="210" y="295" text-anchor="middle">Check moisture / drains</text>
 
     <rect x="560" y="260" width="260" height="60" rx="10" fill="#fdecea" stroke="#c62828"/>
-    <text x="690" y="295" text-anchor="middle">Sensor ageing / damage</text>
+    <text x="690" y="295" text-anchor="middle">Further diagnostics required</text>
   </svg>
   </div>
 
-  <div class="note">
-    <b>Typical root causes:</b><br>
-    Moisture ingress — <b>40%</b><br>
-    Pressure shock / hunting — <b>25%</b><br>
-    Wrong zero gas / leaks — <b>20%</b><br>
-    True sensor failure — <b>15%</b>
-  </div>
+<div class="note">The former numerical failure-frequency breakdown was unsupported and has been removed. Use configuration-matched diagnostics to establish the cause.</div>
 </div>
 
 <!-- =================================================
@@ -206,7 +200,7 @@
     <text x="210" y="155" text-anchor="middle">Analyzer running locally?</text>
 
     <rect x="560" y="120" width="260" height="60" rx="10" fill="#fff3e0" stroke="#ef6c00"/>
-    <text x="690" y="155" text-anchor="middle">Ping reachable?</text>
+    <text x="690" y="155" text-anchor="middle">Installed interface verified?</text>
 
     <line x1="210" y1="180" x2="210" y2="260" stroke="#0b3c5d" marker-end="url(#af3)"/>
     <line x1="690" y1="180" x2="690" y2="260" stroke="#0b3c5d" marker-end="url(#af3)"/>
@@ -219,17 +213,22 @@
   </svg>
   </div>
 
-  <div class="note">
-    <b>Typical root causes:</b><br>
-    DCS quality-bit issue — <b>45%</b><br>
-    Network / switch fault — <b>30%</b><br>
-    Power / UPS reset — <b>15%</b><br>
-    Analyzer service stopped — <b>10%</b>
-  </div>
+<div class="note">The former numerical failure-frequency breakdown was unsupported and has been removed. Use configuration-matched diagnostics to establish the cause.</div>
 </div>
 
 </div>
 </section>
+
+
+  <section class="panel" aria-label="Technical references">
+    <h3>Technical references</h3>
+    <p>Updated against manufacturer documentation. Match the document to the installed model and options.</p>
+    <ul>
+      <li>Servomex: <a href="https://www.servomex.com/wp-content/uploads/2023/01/04900001b_4.pdf">SERVOPRO 4900 user manual</a> — 04900001B, Rev 4; legacy generation only.</li>
+      <li>Servomex: <a href="https://www.servomex.com/obsolete-products/04900-servopro-4900/">04900 / Xentra / SERVOPRO 4900</a> — Legacy product lifecycle notice; undated.</li>
+      <li>Servomex: <a href="https://www.servomex.com/gas-analyzers/finder/4900-multigas/">SERVOPRO 4900 Multigas</a> — Current product overview; undated; accessed 3 October 2026.</li>
+    </ul>
+  </section>
 
 </main>
 
@@ -242,7 +241,7 @@
 <!-- ================= CENTRAL FOOTER ================= -->
 <div id="siteFooter"></div>
 
-<script src="assets/js/includes.js?v=2026-01-18"></script>
+<script src="/assets/js/includes.js?v=2026-01-18"></script>
 
 <script>
 function openSvgModal(el){

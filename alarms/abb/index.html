@@ -4,16 +4,20 @@
   <meta charset="UTF-8">
   <title>ABB Alarm Knowledge Base | AnalyzersHub</title>
 
-  <meta name="description"
-        content="ABB analyzer alarm knowledge base. Select an ABB analyzer model to access detailed, model-specific alarm troubleshooting and decision trees.">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- PROJECT BASE -->
   <base href="/">
 
   <!-- GLOBAL STYLES -->
-  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2026-01-18">
+  <meta name="description" content="ABB Alarm Knowledge Base: documentation scope, technical qualifications and manufacturer references.">
+  <link rel="canonical" href="https://analyzershub.com/alarms/abb/">
+  <style>
+    /* Keep the existing navigation dropdown usable with a keyboard. */
+    .site-nav .has-dropdown:focus-within .dropdown { display: block; }
+    .site-nav a:focus-visible { outline: 2px solid #ffbf47; outline-offset: 2px; }
+  </style>
 </head>
 
 <body data-page="alarms">
@@ -23,7 +27,7 @@
 
 <!-- ================= BREADCRUMBS ================= -->
 <nav class="crumbs" aria-label="Breadcrumb">
-  <a href="index.html">Home</a>
+  <a href="/index.html">Home</a>
   <span>›</span>
   <span class="current">ABB Alarms</span>
 </nav>
@@ -32,7 +36,7 @@
 
   <!-- ================= INTRO ================= -->
   <section class="panel">
-    <h2>ABB Alarm Knowledge Base</h2>
+    <h1>ABB Alarm Knowledge Base</h1>
 
     <p class="muted">
       This section provides access to <b>model-specific alarm troubleshooting</b>
@@ -62,7 +66,7 @@
           Entry-level zirconia oxygen analyzer.
         </p>
         <a class="btn btn-primary"
-           href="analyzers/abb/az10/alarms/">
+           href="/analyzers/abb/az10/alarms/">
           Open AZ10 Alarms →
         </a>
       </div>
@@ -73,7 +77,7 @@
           Advanced in-situ zirconia oxygen analyzer.
         </p>
         <a class="btn btn-primary"
-           href="analyzers/abb/az20/alarms/">
+           href="/analyzers/abb/az20/alarms/">
           Open AZ20 Alarms →
         </a>
       </div>
@@ -81,10 +85,10 @@
       <div class="card oxygen">
         <h4>ABB AZ25</h4>
         <p class="muted">
-          TDLAS-based gas analyzer.
+          In-situ zirconia oxygen analyzer for high-temperature combustion applications.
         </p>
         <a class="btn btn-primary"
-           href="analyzers/abb/az25/alarms/">
+           href="/analyzers/abb/az25/alarms/">
           Open AZ25 Alarms →
         </a>
       </div>
@@ -95,7 +99,7 @@
           High-performance zirconia oxygen analyzer.
         </p>
         <a class="btn btn-primary"
-           href="analyzers/abb/az30/alarms/">
+           href="/analyzers/abb/az30/alarms/">
           Open AZ30 Alarms →
         </a>
       </div>
@@ -106,7 +110,7 @@
           TDLAS gas analyzer for demanding applications.
         </p>
         <a class="btn btn-primary"
-           href="analyzers/abb/az40/alarms/">
+           href="/analyzers/abb/az40/alarms/">
           Open AZ40 Alarms →
         </a>
       </div>
@@ -117,13 +121,22 @@
   <!-- ================= NAVIGATION ================= -->
   <section class="panel">
     <div class="action-row">
-      <a class="btn btn-ghost" href="analyzers.html">
+      <a class="btn btn-ghost" href="/analyzers.html">
         Analyzer Search
       </a>
-      <a class="btn btn-ghost" href="analyzers.html?filter=abb">
+      <a class="btn btn-ghost" href="/analyzers.html?filter=abb">
         ABB Analyzers
       </a>
     </div>
+  </section>
+
+
+  <section class="panel" aria-label="Technical references">
+    <h3>Technical references</h3>
+    <p>Updated against manufacturer documentation. Match the document to the installed model and options.</p>
+    <ul>
+      <li>ABB: <a href="https://new.abb.com/products/measurement-products/analytical/zirconia-in-situ-oxygen-and-combustion/endura-az25-high-temperature-combustion-gas-oxygen-analyzer">Endura AZ25 High temperature combustion gas oxygen analyzer</a> — Manufacturer product overview; undated.</li>
+    </ul>
   </section>
 
 </main>
@@ -131,7 +144,7 @@
 <!-- ================= CENTRAL FOOTER ================= -->
 <div id="siteFooter"></div>
 
-<script src="assets/js/includes.js?v=2026-01-18"></script>
+<script src="/assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>

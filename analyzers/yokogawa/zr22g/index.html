@@ -6,7 +6,14 @@
   <title>Yokogawa ZR22G | AnalyzersHub</title>
 
   <base href="/">
-  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2026-01-18">
+  <link rel="canonical" href="https://analyzershub.com/analyzers/yokogawa/zr22g/">
+  <meta name="description" content="Yokogawa ZR22G with ZR402G: zirconia measurement, sensor temperature, reference air and calibration-gas roles, with manufacturer references.">
+  <style>
+    /* Keep the existing navigation dropdown usable with a keyboard. */
+    .site-nav .has-dropdown:focus-within .dropdown { display: block; }
+    .site-nav a:focus-visible { outline: 2px solid #ffbf47; outline-offset: 2px; }
+  </style>
 </head>
 
 <body data-page="analyzers">
@@ -16,25 +23,25 @@
 
 <!-- BREADCRUMBS -->
 <nav class="crumbs">
-  <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers.html">Analyzer Search</a><span>›</span>
+  <a href="/index.html">Home</a><span>›</span>
+  <a href="/analyzers.html">Analyzer Search</a><span>›</span>
   <span class="current">Yokogawa ZR22G</span>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" style="background-image:linear-gradient(rgba(11,60,93,.95),rgba(11,60,93,.90));">
   <div class="hero-inner">
-    <h2>Yokogawa ZR22G</h2>
+    <h1>Yokogawa ZR22G</h1>
     <p>
       Zirconia in-situ oxygen analyzer for combustion control in boilers,
       furnaces, heaters, and process kilns.
     </p>
 
     <div class="action-row">
-      <a class="btn btn-primary" href="analyzers/yokogawa/zr22g/alarms/">
+      <a class="btn btn-primary" href="/analyzers/yokogawa/zr22g/alarms/">
         Alarm Decision Trees →
       </a>
-      <a class="btn btn-ghost" href="analyzers.html">
+      <a class="btn btn-ghost" href="/analyzers.html">
         Back to Analyzer Search →
       </a>
     </div>
@@ -47,14 +54,7 @@
   <div class="panel">
     <h3>Working Principle</h3>
     <p>
-      The ZR22G operates on the zirconium dioxide (ZrO₂) solid electrolyte principle.
-      When heated to approximately 700 °C, the zirconia sensor generates an EMF
-      proportional to the difference in oxygen partial pressure between the process
-      gas and the reference air.
-    </p>
-    <p>
-      This voltage is converted by the transmitter into oxygen concentration using
-      the Nernst equation.
+      In the documented ZR22G detector / ZR402G converter system, the zirconia cell operates at 750 °C. Its voltage depends on the logarithm of the oxygen partial-pressure ratio between reference air and sample gas (the Nernst relationship). The converter calculates oxygen concentration from this voltage.
     </p>
   </div>
 
@@ -73,20 +73,10 @@
 
   <!-- Calibration -->
   <div class="panel">
-    <h3>Calibration Procedure</h3>
-    <ol class="list">
-      <li>Ensure stable process conditions and normal sensor temperature</li>
-      <li>Perform <b>zero calibration</b> using nitrogen or instrument air</li>
-      <li>Apply <b>span gas</b> (typically 2–8% O₂)</li>
-      <li>Allow readings to stabilize before accepting calibration</li>
-      <li>Verify readings against expected values</li>
-    </ol>
-
-    <div class="warn">
-      <b>Field tip:</b>
-      Frequent calibration failures often indicate sensor aging,
-      blocked reference air, or heater degradation.
-    </div>
+    <h3>Calibration — ZR22G / ZR402G</h3>
+    <p>The manual describes a low-oxygen “zero” gas (typically about 1% O₂ in nitrogen) and an air “span” gas (about 21% O₂). Enter the actual gas concentrations and follow the applicable flow, stabilization and calibration sequence in chapter 9.</p>
+    <p>Reference air serves the reference side of the cell; calibration gas is introduced to the measurement side. They have different functions. Nitrogen alone is not the generic zero-gas instruction for this system.</p>
+    <div class="warn">These notes apply to the cited ZR22G / ZR402G configuration, not every zirconia analyzer.</div>
   </div>
 
   <!-- Troubleshooting -->
@@ -96,7 +86,7 @@
       <li><b>High drift:</b> sensor aging, contamination, unstable reference air</li>
       <li><b>Calibration failure:</b> incorrect gas, leaks, poor flow</li>
       <li><b>Heater alarms:</b> heater burnout, wiring faults</li>
-      <li><b>Low EMF:</b> cracked sensor or process oxygen imbalance</li>
+      <li><b>Cell voltage:</b> interpret with measured oxygen, temperature and the chapter 12 diagnostics; voltage alone does not establish a failed cell.</li>
       <li><b>Signal noise:</b> grounding or shielding issues</li>
     </ul>
   </div>
@@ -105,21 +95,30 @@
   <div class="panel">
     <h3>Quick Navigation</h3>
     <div class="action-row">
-      <a class="btn btn-primary" href="analyzers/yokogawa/zr22g/alarms/">
+      <a class="btn btn-primary" href="/analyzers/yokogawa/zr22g/alarms/">
         ZR22G Alarm Decision Trees
       </a>
-      <a class="btn btn-ghost" href="analyzers/yokogawa/ox400/">
+      <a class="btn btn-ghost" href="/analyzers/yokogawa/ox400/">
         Next: Yokogawa OX400 →
       </a>
     </div>
   </div>
+
+
+  <section class="panel" aria-label="Technical references">
+    <h3>Technical references</h3>
+    <p>Updated against manufacturer documentation. Match the document to the installed model and options.</p>
+    <ul>
+      <li>Yokogawa: <a href="https://web-material3.yokogawa.com/IM11M12A01-02E.pdf">ZR22G / ZR402G Separate type Zirconia Oxygen/Humidity Analyzer</a> — IM 11M12A01-02E, 18th edition, 27 December 2022; chapters 7, 9, 11–12.</li>
+    </ul>
+  </section>
 
 </main>
 
 <!-- CENTRAL FOOTER -->
 <div id="siteFooter"></div>
 
-<script src="assets/js/includes.js?v=2026-01-18"></script>
+<script src="/assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>

@@ -8,7 +8,14 @@
   <base href="/">
 
   <!-- ✅ Global CSS only -->
-  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2026-01-18">
+  <link rel="canonical" href="https://analyzershub.com/analyzers/abb/az25/">
+  <meta name="description" content="ABB Endura AZ25 model reference: high-temperature in-situ zirconia oxygen measurement with manufacturer documentation.">
+  <style>
+    /* Keep the existing navigation dropdown usable with a keyboard. */
+    .site-nav .has-dropdown:focus-within .dropdown { display: block; }
+    .site-nav a:focus-visible { outline: 2px solid #ffbf47; outline-offset: 2px; }
+  </style>
 </head>
 
 <body data-page="analyzers">
@@ -18,24 +25,24 @@
 
 <!-- Breadcrumb -->
 <nav class="crumbs" aria-label="Breadcrumb">
-  <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers.html?filter=abb">ABB</a><span>›</span>
+  <a href="/index.html">Home</a><span>›</span>
+  <a href="/analyzers.html?filter=abb">ABB</a><span>›</span>
   <span class="current">AZ25</span>
 </nav>
 
 <!-- Hero -->
 <section class="hero-search">
   <div class="hero-inner">
-    <h2>ABB AZ25</h2>
-    <p>Mid-range oxygen analyzer for more complex combustion processes.</p>
+    <h1 style="color:#0b3c5d;">ABB AZ25</h1>
+    <p>In-situ zirconia oxygen analyzer for high-temperature combustion applications.</p>
 
     <div class="action-row">
       <!-- Shared AZ alarm folder -->
-      <a class="btn btn-primary" href="analyzers/abb/az10/alarms/index.html">
+      <a class="btn btn-primary" href="/analyzers/abb/az10/alarms/index.html">
         View Common Alarms →
       </a>
-      <a class="btn btn-ghost" href="analyzers.html?filter=abb">Back to ABB →</a>
-      <a class="btn btn-ghost" href="analyzers.html?category=oxygen">Oxygen Hub →</a>
+      <a class="btn btn-ghost" href="/analyzers.html?filter=abb">Back to ABB →</a>
+      <a class="btn btn-ghost" href="/analyzers.html?category=oxygen">Oxygen Hub →</a>
     </div>
   </div>
 </section>
@@ -54,21 +61,15 @@
     <div class="card oxygen">
       <h3>Overview</h3>
       <p>
-        The ABB AZ25 is designed for industrial combustion monitoring where
-        higher stability and enhanced diagnostics are required compared to entry-level analyzers.
+        The Endura AZ25 uses a zirconium oxide cell at the probe tip for direct measurement in a furnace or flue duct. It is not a TDLAS analyzer.
       </p>
     </div>
 
     <div class="card oxygen">
       <h3>Calibration</h3>
       <p>
-        Perform <b>zero</b>, <b>span</b>, and <b>reference gas</b> calibration as per manufacturer instructions.
-        Use diagnostic menus to confirm sensor response and stability.
+        Match calibration to the installed AZ25 probe and transmitter documentation. The product overview describes test-gas calibration; it does not support a separate generic “reference gas calibration” step or the former failure-frequency claim.
       </p>
-      <div class="step">
-        <b>Field tip:</b> Frequent calibration failures usually indicate
-        leaks, moisture ingress, reference path restriction, or heater instability.
-      </div>
     </div>
 
     <div class="card oxygen">
@@ -88,10 +89,10 @@
     <div class="card oxygen">
       <h3>Common Alarms</h3>
       <p>
-        AZ-series alarms (AZ10 / AZ20 / AZ25) share common diagnostics and logic.
+        The linked AZ10 archive is not evidence that AZ25 uses identical diagnostics. Verify the installed transmitter documentation.
       </p>
       <div class="action-row">
-        <a class="btn btn-primary" href="analyzers/abb/az10/alarms/index.html">
+        <a class="btn btn-primary" href="/analyzers/abb/az10/alarms/index.html">
           Go to Alarms →
         </a>
       </div>
@@ -99,13 +100,22 @@
 
   </div>
 
+
+  <section class="panel" aria-label="Technical references">
+    <h3>Technical references</h3>
+    <p>Updated against manufacturer documentation. Match the document to the installed model and options.</p>
+    <ul>
+      <li>ABB: <a href="https://new.abb.com/products/measurement-products/analytical/zirconia-in-situ-oxygen-and-combustion/endura-az25-high-temperature-combustion-gas-oxygen-analyzer">Endura AZ25 High temperature combustion gas oxygen analyzer</a> — Manufacturer product overview; undated.</li>
+    </ul>
+  </section>
+
 </main>
 
 <!-- ✅ CENTRAL FOOTER -->
 <div id="siteFooter"></div>
 
 <!-- ✅ LOAD HEADER / FOOTER -->
-<script src="assets/js/includes.js?v=2026-01-18"></script>
+<script src="/assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>

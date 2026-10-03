@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>ZR22G High Drift Decision Tree | AnalyzersHub</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/style.css">
 <style>
 ul.tree, ul.tree ul { list-style: none; padding-left: 1em; }
 ul.tree ul { border-left: 2px solid #555; margin-left: 1em; }
@@ -18,20 +18,23 @@ ul.tree li::before {
   border-top: 2px solid #555;
 }
 </style>
+  <base href="/">
+  <link rel="canonical" href="https://analyzershub.com/alarms/yokogawa/decision-trees/zr22g-high-drift.html">
+  <meta name="description" content="Decision Tree – ZR22G High Drift / Unstable Reading: documentation scope, technical qualifications and manufacturer references.">
 </head>
 
 <body>
 <header>
-<h1>AnalyzersHub</h1>
+<p class="brand" style="color:#0b3c5d;">AnalyzersHub</p>
 <nav>
-<a href="index.html">Home</a>
-<a href="analyzers.html">Analyzers</a>
-<a href="index.html">Alarm Index</a>
+<a href="/index.html">Home</a>
+<a href="/analyzers.html">Analyzers</a>
+<a href="/index.html">Alarm Index</a>
 </nav>
 </header>
 
 <main>
-<h2>Decision Tree – ZR22G High Drift / Unstable Reading</h2>
+<h1>Decision Tree – ZR22G High Drift / Unstable Reading</h1>
 
 <ul class="tree">
 <li>High Drift Alarm
@@ -48,7 +51,7 @@ ul.tree li::before {
                 <li>No leak → Check grounding and shielding
                   <ul>
                     <li>Poor grounding → Correct earthing</li>
-                    <li>Grounding OK → Sensor end-of-life → Replace sensor</li>
+                    <li>Grounding OK → Continue the configuration-matched diagnostics; this check does not prove sensor end-of-life</li>
                   </ul>
                 </li>
               </ul>
@@ -61,7 +64,16 @@ ul.tree li::before {
 </li>
 </ul>
 
-<p><strong>Field Tip:</strong> Ash buildup is the #1 cause in boilers and kilns.</p>
+<p><strong>Field Tip:</strong> No failure-frequency ranking is established by the cited documentation.</p>
+
+  <section class="panel" aria-label="Technical references">
+    <h3>Technical references</h3>
+    <p>Updated against manufacturer documentation. Match the document to the installed model and options.</p>
+    <ul>
+      <li>Yokogawa: <a href="https://web-material3.yokogawa.com/IM11M12A01-02E.pdf">ZR22G / ZR402G Separate type Zirconia Oxygen/Humidity Analyzer</a> — IM 11M12A01-02E, 18th edition, 27 December 2022; chapters 7, 9, 11–12.</li>
+    </ul>
+  </section>
+
 </main>
 
 <footer>

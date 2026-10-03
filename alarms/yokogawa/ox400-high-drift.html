@@ -2,91 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Yokogawa OX400 High Drift Alarm | AnalyzersHub</title>
-    <meta name="description" content="Yokogawa OX400 high drift alarm troubleshooting. Causes, field checks, corrective actions, and decision tree.">
-    <meta name="keywords" content="OX400 high drift, Yokogawa oxygen analyzer, troubleshooting">
+    <title>OX400 High Drift / Unstable Reading — Documentation Notes | AnalyzersHub</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+  <base href="/">
+  <link rel="canonical" href="https://analyzershub.com/alarms/yokogawa/ox400-high-drift.html">
+  <meta name="description" content="Yokogawa OX400 — High Drift / Unstable Reading: documentation scope, technical qualifications and manufacturer references.">
 </head>
 <body>
 <header>
-    <h1>AnalyzersHub</h1>
+    <p class="brand" style="color:#0b3c5d;">AnalyzersHub</p>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="analyzers.html">Analyzers</a>
+        <a href="/index.html">Home</a>
+        <a href="/analyzers.html">Analyzers</a>
     </nav>
 </header>
 
-<main>
-    <h2>Alarm: High Drift / Unstable Reading</h2>
-    <p><strong>Manufacturer:</strong> Yokogawa</p>
-    <p><strong>Analyzer:</strong> OX400 Oxygen Analyzer</p>
-    <hr>
+<main class="container">
+  <div class="panel">
+    <h1>Yokogawa OX400 — High Drift / Unstable Reading</h1>
+    <p>The previous reference-air/probe replacement diagnosis was not validated for this OX400 configuration. Record the drift, sample conditions and diagnostic indication for model-specific review.</p>
+    <h3>Configuration scope</h3>
+    <p>OX400 measures sampled gas using a zirconia sensor. Use the installed model code and sample-drawing option when choosing documentation.</p>
+    <p>Detailed fault isolation remains subject to separate technical review. This page does not authorize component replacement from a symptom alone.</p>
+    <a href="/analyzers/yokogawa/ox400/">OX400 model reference</a>
+  </div>
 
-    <section>
-        <h3>Alarm Description</h3>
-        <p>
-            Analyzer readings fluctuate beyond acceptable limits. Measurement is unstable.
-        </p>
-    </section>
+  <section class="panel" aria-label="Technical references">
+    <h3>Technical references</h3>
+    <p>Updated against manufacturer documentation. Match the document to the installed model and options.</p>
+    <ul>
+      <li>Yokogawa: <a href="https://web-material3.yokogawa.com/GS11M10B01-01E_038.pdf">OX400 Low Concentration Zirconia Oxygen Analyzer</a> — GS 11M10B01-01E, 3rd edition, March 2011; amended pages June 2017.</li>
+    </ul>
+  </section>
 
-    <section>
-        <h3>Typical Symptoms</h3>
-        <ul>
-            <li>Oxygen readings oscillate rapidly</li>
-            <li>Analyzer fails to maintain span/zero</li>
-            <li>Calibration may fail intermittently</li>
-        </ul>
-    </section>
-
-    <section>
-        <h3>Probable Causes</h3>
-        <ol>
-            <li>Sensor contamination or aging</li>
-            <li>Reference air supply unstable</li>
-            <li>Heater temperature fluctuations</li>
-            <li>Signal wiring noise</li>
-            <li>Electronics module instability</li>
-        </ol>
-    </section>
-
-    <section>
-        <h3>Field Checks</h3>
-        <ul>
-            <li>Inspect sensor/probe condition</li>
-            <li>Verify reference air flow stability</li>
-            <li>Check heater temperature</li>
-            <li>Inspect wiring for noise or loose connections</li>
-        </ul>
-    </section>
-
-    <section>
-        <h3>Corrective Actions</h3>
-        <ul>
-            <li>Clean or replace sensor/probe</li>
-            <li>Stabilize reference air supply</li>
-            <li>Ensure heater operates properly</li>
-            <li>Repair wiring and connections</li>
-            <li>Replace electronics if drift persists</li>
-        </ul>
-    </section>
-
-    <section>
-        <h3>Decision Tree Diagnosis</h3>
-        <p>
-            👉 <a href="decision-trees/ox400-high-drift.html">OX400 High Drift Decision Tree</a>
-        </p>
-    </section>
-
-    <section>
-        <h3>Related Pages</h3>
-        <ul>
-            <li><a href="analyzers/yokogawa/ox400.html">OX400 Analyzer Overview</a></li>
-            <li><a href="ox400-heater-error.html">Heater Error Alarm</a></li>
-            <li><a href="ox400-no-signal.html">No Oxygen Signal Alarm</a></li>
-            <li><a href="ox400-calibration-failure.html">Calibration Failure Alarm</a></li>
-        </ul>
-    </section>
 </main>
 
 <footer>

@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Rosemount 6888 Calibration Failure Alarm | AnalyzersHub</title>
-    <meta name="description" content="Rosemount 6888 calibration failure alarm troubleshooting. Causes, field checks, corrective actions, and decision tree.">
-    <meta name="keywords" content="6888 calibration failure, Rosemount 6888, troubleshooting">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+  <base href="/">
+  <link rel="canonical" href="https://analyzershub.com/alarms/rosemount/6888-calibration-failure.html">
+  <meta name="description" content="Alarm: Calibration Failure: documentation scope, technical qualifications and manufacturer references.">
 </head>
 <body>
 <header>
-    <h1>AnalyzersHub</h1>
+    <p class="brand" style="color:#0b3c5d;">AnalyzersHub</p>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="analyzers.html">Analyzers</a>
+        <a href="/index.html">Home</a>
+        <a href="/analyzers.html">Analyzers</a>
     </nav>
 </header>
 
 <main>
-    <h2>Alarm: Calibration Failure</h2>
+    <h1>Alarm: Calibration Failure</h1>
     <p><strong>Manufacturer:</strong> Rosemount</p>
     <p><strong>Analyzer:</strong> 6888 Oxygen Analyzer</p>
     <hr>
@@ -72,19 +73,29 @@
     <section>
         <h3>Decision Tree Diagnosis</h3>
         <p>
-            👉 <a href="decision-trees/6888-calibration-failure.html">6888 Calibration Failure Decision Tree</a>
+            👉 <a href="/alarms/rosemount/decision-trees/6888-calibration-failure.html">6888 Calibration Failure Decision Tree</a>
         </p>
     </section>
 
     <section>
         <h3>Related Pages</h3>
         <ul>
-            <li><a href="analyzers/rosemount/6888.html">Rosemount 6888 Analyzer Overview</a></li>
-            <li><a href="6888-heater-error.html">Heater Error Alarm</a></li>
-            <li><a href="6888-no-signal.html">No Signal Alarm</a></li>
-            <li><a href="6888-high-drift.html">High Drift Alarm</a></li>
+            <li><a href="/analyzers/rosemount/6888.html">Rosemount 6888 Analyzer Overview</a></li>
+            <li><a href="/alarms/rosemount/6888-heater-error.html">Heater Error Alarm</a></li>
+            <li><a href="/alarms/rosemount/6888-no-signal.html">No Signal Alarm</a></li>
+            <li><a href="/alarms/rosemount/6888-high-drift.html">High Drift Alarm</a></li>
         </ul>
     </section>
+<section class="panel"><h3>6888A calibration-gas scope</h3><p>The cited Rev AB manual rejects pure nitrogen as the low-point gas. Its instrument-air calibration wording conflicts between sections 1.7 and 3.6; manufacturer configuration-specific verification is required. Reference air is a separate supply. The generic checks below are not a complete model-matched calibration procedure.</p></section>
+
+  <section class="panel" aria-label="Technical references">
+    <h3>Technical references</h3>
+    <p>Updated against manufacturer documentation. Match the document to the installed model and options.</p>
+    <ul>
+      <li>Emerson: <a href="https://www.emerson.com/is/content/emerson/en/measurement-instrumentation/technical/products/gas-analysis-combustion/documents/doc-rosemount-00809-0100-4890.pdf">Rosemount 6888A In Situ Oxygen Analyzer</a> — 00809-0100-4890, Rev AB, January 2023; sections 1.3, 1.7, 3.6, 4–5.</li>
+    </ul>
+  </section>
+
 </main>
 
 <footer>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>ZR22G Calibration Failure Decision Tree | AnalyzersHub</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../../../assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/style.css">
 <style>
 ul.tree, ul.tree ul { list-style: none; padding-left: 1em; }
 ul.tree ul { border-left: 2px solid #555; margin-left: 1em; }
@@ -18,20 +18,23 @@ ul.tree li::before {
   border-top: 2px solid #555;
 }
 </style>
+  <base href="/">
+  <link rel="canonical" href="https://analyzershub.com/alarms/yokogawa/decision-trees/zr22g-calibration-failure.html">
+  <meta name="description" content="Decision Tree – ZR22G Calibration Failure: documentation scope, technical qualifications and manufacturer references.">
 </head>
 
 <body>
 <header>
-<h1>AnalyzersHub</h1>
+<p class="brand" style="color:#0b3c5d;">AnalyzersHub</p>
 <nav>
-<a href="../../../index.html">Home</a>
-<a href="../../../analyzers.html">Analyzers</a>
-<a href="../index.html">Alarm Index</a>
+<a href="/index.html">Home</a>
+<a href="/analyzers.html">Analyzers</a>
+<a href="/alarms/yokogawa/index.html">Alarm Index</a>
 </nav>
 </header>
 
 <main>
-<h2>Decision Tree – ZR22G Calibration Failure</h2>
+<h1>Decision Tree – ZR22G Calibration Failure</h1>
 
 <ul class="tree">
 <li>Calibration Failure Alarm
@@ -41,13 +44,13 @@ ul.tree li::before {
         <li>No → Restore calibration gas supply</li>
         <li>Yes → Check calibration valve operation
           <ul>
-            <li>Valve not switching → Replace solenoid valve</li>
+            <li>Valve not switching → Verify the fitted calibration system and its diagnostics before authorizing replacement</li>
             <li>Valve OK → Check gas tubing
               <ul>
                 <li>Leak/blockage → Repair tubing</li>
                 <li>OK → Check sensor response
                   <ul>
-                    <li>Slow/no response → Replace sensor probe</li>
+                    <li>Slow/no response → Follow chapter 12 diagnostics; response alone does not identify a failed probe</li>
                     <li>Normal → Review calibration parameters</li>
                   </ul>
                 </li>
@@ -61,7 +64,16 @@ ul.tree li::before {
 </li>
 </ul>
 
-<p><strong>Field Tip:</strong> Expired span gas is a frequent hidden cause.</p>
+<p><strong>Field Tip:</strong> Use the applicable gas certificate and calibration settings; no failure-frequency ranking is established here.</p>
+
+  <section class="panel" aria-label="Technical references">
+    <h3>Technical references</h3>
+    <p>Updated against manufacturer documentation. Match the document to the installed model and options.</p>
+    <ul>
+      <li>Yokogawa: <a href="https://web-material3.yokogawa.com/IM11M12A01-02E.pdf">ZR22G / ZR402G Separate type Zirconia Oxygen/Humidity Analyzer</a> — IM 11M12A01-02E, 18th edition, 27 December 2022; chapters 7, 9, 11–12.</li>
+    </ul>
+  </section>
+
 </main>
 
 <footer>

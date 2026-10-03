@@ -2,17 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ABB AZ25 Alarm Decision Trees | AnalyzersHub</title>
+  <title>ABB AZ25 Alarm Documentation | AnalyzersHub</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description"
-        content="ABB AZ25 TDLAS analyzer alarm troubleshooting. Common alarm explanations, field checks, corrective actions, and decision tree navigation.">
 
   <!-- ✅ PROJECT BASE -->
   <base href="/">
 
   <!-- ✅ GLOBAL CSS -->
-  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2026-01-18">
+  <link rel="canonical" href="https://analyzershub.com/analyzers/abb/az25/alarms/">
+  <meta name="description" content="ABB AZ25 — Alarm Documentation: documentation scope, technical qualifications and manufacturer references.">
+  <style>
+    /* Keep the existing navigation dropdown usable with a keyboard. */
+    .site-nav .has-dropdown:focus-within .dropdown { display: block; }
+    .site-nav a:focus-visible { outline: 2px solid #ffbf47; outline-offset: 2px; }
+  </style>
 </head>
 
 <body data-page="alarms">
@@ -22,87 +26,52 @@
 
   <!-- ================= BREADCRUMBS ================= -->
   <nav class="crumbs" aria-label="Breadcrumb">
-    <a href="index.html">Home</a>
+    <a href="/index.html">Home</a>
     <span>›</span>
-    <a href="analyzers.html">Analyzer Search</a>
+    <a href="/analyzers.html">Analyzer Search</a>
     <span>›</span>
-    <a href="analyzers/abb/az25/">ABB AZ25</a>
+    <a href="/analyzers/abb/az25/">ABB AZ25</a>
     <span>›</span>
     <span class="current">Alarms</span>
   </nav>
 
   <main class="container">
 
-    <!-- ================= INTRO ================= -->
     <section class="panel">
-      <h2>ABB AZ25 – Alarm Decision Trees</h2>
-      <p class="muted">
-        Alarm troubleshooting guidance for ABB AZ25 TDLAS analyzers.
-        These alarms are commonly related to optical path condition,
-        signal strength, alignment, purge flow, and process disturbances.
-      </p>
-
-      <div class="warn">
-        <b>Technician note:</b>
-        AZ25 alarms are often caused by beam attenuation, window fouling,
-        purge issues, or process upsets. Always verify the optical path
-        before replacing analyzer hardware.
-      </div>
-    </section>
-
-    <!-- ================= ALARM LIST ================= -->
-    <section class="panel">
-      <h3>Common ABB AZ25 Alarms</h3>
-
-      <ul class="list">
-
-        <li>
-          <a href="analyzers/abb/az25/alarms/no-signal.html">
-            No Signal / Beam Lost
-          </a>
-        </li>
-
-        <li>
-          <a href="analyzers/abb/az25/alarms/low-signal-strength.html">
-            Low Signal Strength / Attenuation
-          </a>
-        </li>
-
-        <li>
-          <a href="analyzers/abb/az25/alarms/calibration-fault.html">
-            Calibration Fault
-          </a>
-        </li>
-
-        <li>
-          <a href="analyzers/abb/az25/alarms/purge-fault.html">
-            Purge / Reference Path Fault
-          </a>
-        </li>
-
-      </ul>
+      <h1>ABB AZ25 — Alarm Documentation</h1>
+      <p>AZ25 uses a zirconium oxide cell for in-situ oxygen measurement. The previous TDLAS identity and beam-loss, optical-alignment and laser-window guidance did not describe this product and have been withdrawn.</p>
+      <p>Use the installed AZ25 probe and transmitter manuals for alarm identification. A model-matched alarm-code and corrective-action review is still required; no replacement decision tree is supplied here.</p>
     </section>
 
     <!-- ================= NAVIGATION ================= -->
     <section class="panel">
       <div class="action-row">
-        <a class="btn btn-ghost" href="analyzers/abb/az25/">
+        <a class="btn btn-ghost" href="/analyzers/abb/az25/">
           ← Back to AZ25 Overview
         </a>
 
-        <a class="btn btn-ghost" href="analyzers.html?filter=abb">
+        <a class="btn btn-ghost" href="/analyzers.html?filter=abb">
           ABB Analyzer Search →
         </a>
       </div>
     </section>
 
-  </main>
+
+  <section class="panel" aria-label="Technical references">
+    <h3>Technical references</h3>
+    <p>Updated against manufacturer documentation. Match the document to the installed model and options.</p>
+    <ul>
+      <li>ABB: <a href="https://new.abb.com/products/measurement-products/analytical/zirconia-in-situ-oxygen-and-combustion/endura-az25-high-temperature-combustion-gas-oxygen-analyzer">Endura AZ25 High temperature combustion gas oxygen analyzer</a> — Manufacturer product overview; undated.</li>
+    </ul>
+  </section>
+
+</main>
 
   <!-- ================= CENTRAL FOOTER ================= -->
   <div id="siteFooter"></div>
 
   <!-- ================= LOAD HEADER / FOOTER ================= -->
-  <script src="assets/js/includes.js?v=2026-01-18"></script>
+  <script src="/assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>

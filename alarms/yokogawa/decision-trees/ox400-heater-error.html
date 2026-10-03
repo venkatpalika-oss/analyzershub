@@ -2,57 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>OX400 Heater Error Decision Tree | AnalyzersHub</title>
+    <title>OX400 Heater Error — Documentation Notes | AnalyzersHub</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+  <base href="/">
+  <link rel="canonical" href="https://analyzershub.com/alarms/yokogawa/decision-trees/ox400-heater-error.html">
+  <meta name="description" content="Yokogawa OX400 — Heater Error: documentation scope, technical qualifications and manufacturer references.">
 </head>
 <body>
 <header>
-    <h1>AnalyzersHub</h1>
+    <p class="brand" style="color:#0b3c5d;">AnalyzersHub</p>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="analyzers.html">Analyzers</a>
-        <a href="ox400-heater-error.html">Back to Alarm</a>
+        <a href="/index.html">Home</a>
+        <a href="/analyzers.html">Analyzers</a>
+        <a href="/alarms/yokogawa/decision-trees/ox400-heater-error.html">Back to Alarm</a>
     </nav>
 </header>
 
-<main>
-    <h2>OX400 Heater Error - Decision Tree</h2>
+<main class="container">
+  <div class="panel">
+    <h1>Yokogawa OX400 — Heater Error</h1>
+    <p>The earlier generic heater LED, resistance and replacement sequence was not matched to an OX400 service manual. A heater-related indication requires the applicable OX400 diagnostic and service instructions.</p>
+    <h3>Configuration scope</h3>
+    <p>OX400 measures sampled gas using a zirconia sensor. Use the installed model code and sample-drawing option when choosing documentation.</p>
+    <p>Detailed fault isolation remains subject to separate technical review. This page does not authorize component replacement from a symptom alone.</p>
+    <a href="/analyzers/yokogawa/ox400/">OX400 model reference</a>
+  </div>
 
-    <p>Follow these steps to diagnose Heater Error alarms:</p>
-
-    <ol>
-        <li>Check if the analyzer is powered on.
-            <ul>
-                <li>Yes → Next step</li>
-                <li>No → Power on analyzer and wait for warm-up</li>
-            </ul>
-        </li>
-        <li>Verify heater status LED.
-            <ul>
-                <li>LED normal → Next step</li>
-                <li>LED fault → Inspect heater element and wiring</li>
-            </ul>
-        </li>
-        <li>Measure heater resistance.
-            <ul>
-                <li>Within spec → Check wiring and connectors</li>
-                <li>Out of spec → Replace heater element</li>
-            </ul>
-        </li>
-        <li>Inspect heater wiring and connectors.
-            <ul>
-                <li>Secure & intact → Check electronics module</li>
-                <li>Loose/Damaged → Repair or replace wiring</li>
-            </ul>
-        </li>
-        <li>Test electronics module.
-            <ul>
-                <li>Functional → Alarm should clear</li>
-                <li>Faulty → Replace electronics module</li>
-            </ul>
-        </li>
-    </ol>
+  <section class="panel" aria-label="Technical references">
+    <h3>Technical references</h3>
+    <p>Updated against manufacturer documentation. Match the document to the installed model and options.</p>
+    <ul>
+      <li>Yokogawa: <a href="https://web-material3.yokogawa.com/GS11M10B01-01E_038.pdf">OX400 Low Concentration Zirconia Oxygen Analyzer</a> — GS 11M10B01-01E, 3rd edition, March 2011; amended pages June 2017.</li>
+    </ul>
+  </section>
 
 </main>
 

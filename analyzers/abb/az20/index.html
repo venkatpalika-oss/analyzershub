@@ -8,7 +8,14 @@
   <base href="/">
 
   <!-- ✅ Global CSS only in HEAD -->
-  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2026-01-18">
+  <link rel="canonical" href="https://analyzershub.com/analyzers/abb/az20/">
+  <meta name="description" content="ABB Endura AZ20 model reference: in-situ zirconia measurement, probe and transmitter documentation, reference air and test-gas calibration.">
+  <style>
+    /* Keep the existing navigation dropdown usable with a keyboard. */
+    .site-nav .has-dropdown:focus-within .dropdown { display: block; }
+    .site-nav a:focus-visible { outline: 2px solid #ffbf47; outline-offset: 2px; }
+  </style>
 </head>
 
 <body data-page="analyzers">
@@ -18,24 +25,24 @@
 
 <!-- Breadcrumb -->
 <nav class="crumbs" aria-label="Breadcrumb">
-  <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers.html?filter=abb">ABB</a><span>›</span>
+  <a href="/index.html">Home</a><span>›</span>
+  <a href="/analyzers.html?filter=abb">ABB</a><span>›</span>
   <span class="current">AZ20</span>
 </nav>
 
 <!-- Hero -->
 <section class="hero-search">
   <div class="hero-inner">
-    <h2>ABB AZ20</h2>
-    <p>Mid-range oxygen analyzer with extended diagnostics.</p>
+    <h1 style="color:#0b3c5d;">ABB AZ20</h1>
+    <p>In-situ zirconia oxygen monitor for continuous combustion monitoring.</p>
 
     <div class="action-row">
       <!-- Keeping your original shared AZ alarm folder -->
-      <a class="btn btn-primary" href="analyzers/abb/az10/alarms/index.html">
-        View Common Alarms →
+      <a class="btn btn-primary" href="/analyzers/abb/az10/alarms/index.html">
+        Shared AZ10 alarm archive →
       </a>
-      <a class="btn btn-ghost" href="analyzers.html?filter=abb">Back to ABB →</a>
-      <a class="btn btn-ghost" href="analyzers.html?category=oxygen">Oxygen Hub →</a>
+      <a class="btn btn-ghost" href="/analyzers.html?filter=abb">Back to ABB →</a>
+      <a class="btn btn-ghost" href="/analyzers.html?category=oxygen">Oxygen Hub →</a>
     </div>
   </div>
 </section>
@@ -54,21 +61,16 @@
     <div class="card oxygen">
       <h3>Overview</h3>
       <p>
-        The ABB AZ20 is suitable for industrial combustion processes with mid-level accuracy
-        and extended diagnostics for stable O₂ measurement.
+        The Endura AZ20 system uses a zirconia combustion oxygen probe with a transmitter. Select the probe, transmitter and accessories against the documented process limits; no relative accuracy ranking is established here.
       </p>
     </div>
 
     <div class="card oxygen">
       <h3>Calibration</h3>
       <p>
-        Perform <b>zero</b>, <b>span</b>, and <b>reference gas</b> calibration as per the manual.
-        Use diagnostics tools to confirm sensor stability and response.
+        Follow the transmitter calibration instructions for the installed test-gas arrangement. The probe reference-air supply and test-gas connections serve separate functions; “reference gas calibration” is not an additional generic calibration step.
       </p>
-      <div class="step">
-        <b>Field tip:</b> If calibration shifts often, check sample leaks, moisture/condensation,
-        and reference path restrictions before blaming the sensor.
-      </div>
+      <div class="step">Match gas values, connections and any automatic calibration options to the probe and transmitter manuals.</div>
     </div>
 
     <div class="card oxygen">
@@ -78,7 +80,7 @@
         Replace components as recommended by the manufacturer.
       </p>
       <ul class="list">
-        <li>Check filter condition and sample flow stability</li>
+        <li>Inspect the fitted probe protection and gas connections according to the probe manual</li>
         <li>Confirm heater temperature stability (no hunting)</li>
         <li>Verify reference/air path is clean and dry</li>
         <li>Check wiring/earth for noise issues</li>
@@ -87,15 +89,25 @@
 
     <div class="card oxygen">
       <h3>Common Alarms</h3>
-      <p>All AZ Series alarms are in the shared AZ alarm folder.</p>
+      <p>The linked archive is labelled AZ10. Verify AZ20 applicability against its own transmitter diagnostics.</p>
       <div class="action-row">
-        <a class="btn btn-primary" href="analyzers/abb/az10/alarms/index.html">
-          Go to Alarms →
+        <a class="btn btn-primary" href="/analyzers/abb/az10/alarms/index.html">
+          Shared AZ10 alarm archive →
         </a>
       </div>
     </div>
 
   </div>
+
+
+  <section class="panel" aria-label="Technical references">
+    <h3>Technical references</h3>
+    <p>Updated against manufacturer documentation. Match the document to the installed model and options.</p>
+    <ul>
+      <li>ABB: <a href="https://library.e.abb.com/public/09aa7ae0e1534982854718cb7b2896cd/IM_AZ20P-EN_G.pdf">Endura AZ20 Oxygen monitor — Combustion oxygen probe</a> — IM/AZ20P-EN, Rev G; introduction, pneumatic connections and maintenance.</li>
+      <li>ABB: <a href="https://library.e.abb.com/public/af853e3435faa6d4c1257b2f0054c058/IM_AZ20E-EN_2.pdf">Endura AZ20 Oxygen monitor — Transmitter</a> — IM/AZ20E-EN, Rev B; calibration and diagnostics.</li>
+    </ul>
+  </section>
 
 </main>
 
@@ -103,7 +115,7 @@
 <div id="siteFooter"></div>
 
 <!-- ✅ LOAD HEADER/FOOTER -->
-<script src="assets/js/includes.js?v=2026-01-18"></script>
+<script src="/assets/js/includes.js?v=2026-01-18"></script>
 
 </body>
 </html>

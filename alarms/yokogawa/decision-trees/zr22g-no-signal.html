@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>ZR22G No Oxygen Signal Decision Tree | AnalyzersHub</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/style.css">
 <style>
 ul.tree, ul.tree ul { list-style: none; padding-left: 1em; }
 ul.tree ul { border-left: 2px solid #555; margin-left: 1em; }
@@ -18,20 +18,23 @@ ul.tree li::before {
   border-top: 2px solid #555;
 }
 </style>
+  <base href="/">
+  <link rel="canonical" href="https://analyzershub.com/alarms/yokogawa/decision-trees/zr22g-no-signal.html">
+  <meta name="description" content="Decision Tree – ZR22G No Oxygen Signal: documentation scope, technical qualifications and manufacturer references.">
 </head>
 
 <body>
 <header>
-<h1>AnalyzersHub</h1>
+<p class="brand" style="color:#0b3c5d;">AnalyzersHub</p>
 <nav>
-<a href="index.html">Home</a>
-<a href="analyzers.html">Analyzers</a>
-<a href="index.html">Alarm Index</a>
+<a href="/index.html">Home</a>
+<a href="/analyzers.html">Analyzers</a>
+<a href="/index.html">Alarm Index</a>
 </nav>
 </header>
 
 <main>
-<h2>Decision Tree – ZR22G No Oxygen Signal</h2>
+<h1>Decision Tree – ZR22G No Oxygen Signal</h1>
 
 <ul class="tree">
 <li>No Oxygen Signal Alarm
@@ -44,11 +47,11 @@ ul.tree li::before {
             <li>No flow → Restore reference air supply</li>
             <li>Flow OK → Check probe output signal
               <ul>
-                <li>No output → Replace sensor probe</li>
+                <li>No output → Continue sensor and circuit diagnostics before authorizing replacement</li>
                 <li>Output present → Check converter input terminals
                   <ul>
                     <li>Signal missing → Repair wiring</li>
-                    <li>Signal OK → Replace converter electronics</li>
+                    <li>Signal OK → Continue converter diagnostics; this check alone does not establish electronics failure</li>
                   </ul>
                 </li>
               </ul>
@@ -61,7 +64,16 @@ ul.tree li::before {
 </li>
 </ul>
 
-<p><strong>Field Tip:</strong> Reference air blockage is the most common cause after heater faults.</p>
+<p><strong>Field Tip:</strong> Reference-air arrangements differ; identify the installed configuration before troubleshooting.</p>
+
+  <section class="panel" aria-label="Technical references">
+    <h3>Technical references</h3>
+    <p>Updated against manufacturer documentation. Match the document to the installed model and options.</p>
+    <ul>
+      <li>Yokogawa: <a href="https://web-material3.yokogawa.com/IM11M12A01-02E.pdf">ZR22G / ZR402G Separate type Zirconia Oxygen/Humidity Analyzer</a> — IM 11M12A01-02E, 18th edition, 27 December 2022; chapters 7, 9, 11–12.</li>
+    </ul>
+  </section>
+
 </main>
 
 <footer>

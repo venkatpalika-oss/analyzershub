@@ -4,45 +4,43 @@
   <meta charset="UTF-8">
   <title>Rosemount 6888 Zirconia Oxygen Analyzer | AnalyzersHub</title>
 
-  <meta name="description" content="Rosemount 6888 zirconia oxygen analyzer overview, alarms, and troubleshooting for analyzer technicians.">
-  <meta name="keywords" content="Rosemount 6888, Zirconia Oxygen Analyzer, CEMS, combustion oxygen analyzer">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <base href="/">
-  <link rel="stylesheet" href="assets/css/style.css?v=2026-01-18">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2026-01-18">
+  <link rel="canonical" href="https://analyzershub.com/analyzers/rosemount/6888.html">
+  <meta name="description" content="Rosemount 6888A model reference: combustion oxygen measurement, performance conditions and unresolved calibration-gas wording in Rev AB.">
 </head>
 
 <body>
 
 <header class="site-header">
   <div class="site-header-inner">
-    <a class="brand" href="index.html">AnalyzersHub</a>
+    <a class="brand" href="/index.html">AnalyzersHub</a>
     <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Analyzer Search</a>
-      <a href="analyzers.html?filter=rosemount">Rosemount</a>
+      <a href="/index.html">Home</a>
+      <a href="/analyzers.html">Analyzer Search</a>
+      <a href="/analyzers.html?filter=rosemount">Rosemount</a>
     </nav>
   </div>
 </header>
 
 <nav class="crumbs">
-  <a href="index.html">Home</a><span>›</span>
-  <a href="analyzers.html">Analyzers</a><span>›</span>
+  <a href="/index.html">Home</a><span>›</span>
+  <a href="/analyzers.html">Analyzers</a><span>›</span>
   <span class="current">Rosemount 6888</span>
 </nav>
 
 <section class="hero-search">
   <div class="hero-inner">
-    <h2>Rosemount 6888 — Zirconia Oxygen Analyzer</h2>
+    <h1 style="color:#0b3c5d;">Rosemount 6888 / 6888A — Zirconia Oxygen Analyzer</h1>
     <p>
-      High-temperature zirconia oxygen analyzer used in
-      <b>CEMS</b>, boilers, furnaces, and combustion control applications.
+      In-situ oxygen measurement in combustion flue gas. The technical notes on this page refer specifically to the Rosemount 6888A manual, Rev AB.
     </p>
 
     <div class="action-row">
-      <a class="btn btn-primary" href="alarms/rosemount/6888/decision-trees/index.html">Decision Trees →</a>
-      <a class="btn btn-ghost" href="alarms/rosemount/6888/alarm-codes.html">Alarm Codes →</a>
-      <a class="btn btn-ghost" href="analyzers.html">← Back to Search</a>
+      <a class="btn btn-primary" href="#alarm-reference">Decision Trees →</a>
+      <a class="btn btn-ghost" href="#alarm-reference">Alarm Reference →</a>
+      <a class="btn btn-ghost" href="/analyzers.html">← Back to Search</a>
     </div>
   </div>
 </section>
@@ -52,10 +50,7 @@
   <div class="panel">
     <h3>Analyzer Overview</h3>
     <p>
-      The <b>Rosemount 6888</b> is a zirconia-based oxygen analyzer designed
-      for continuous measurement of oxygen in flue gas and combustion processes.
-      It is widely used in power plants, refineries, and industrial furnaces
-      where high-temperature operation and fast response are required.
+      The 6888A places a heated zirconia sensor in the flue-gas duct or stack. Its cell voltage follows the logarithm of the oxygen partial-pressure ratio between reference gas and measured gas.
     </p>
   </div>
 
@@ -63,8 +58,8 @@
     <h3>Key Features</h3>
     <ul class="list">
       <li>Zirconia oxygen sensor with integrated heater</li>
-      <li>Fast response time and high measurement accuracy</li>
-      <li>Designed for harsh, high-temperature environments</li>
+      <li>Accuracy and response depend on the documented configuration and operating conditions</li>
+      <li>Match probe and temperature options to the application limits in section 1.7</li>
       <li>Supports field calibration and onboard diagnostics</li>
     </ul>
   </div>
@@ -73,42 +68,42 @@
     <h3>Typical Applications</h3>
     <ul class="list">
       <li>Boilers and fired heaters</li>
-      <li>Continuous Emissions Monitoring Systems (CEMS)</li>
+      <li>Use in a monitoring system does not by itself establish regulatory compliance</li>
       <li>Combustion control and efficiency optimization</li>
       <li>Industrial furnaces and incinerators</li>
     </ul>
   </div>
 
   <div class="panel">
-    <h3>Common Alarms & Troubleshooting</h3>
+    <h3 id="alarm-reference">Common Alarms &amp; Troubleshooting</h3>
 
     <div class="grid">
       <div class="card">
         <h3>Heater Error</h3>
         <p>Sensor heater not reaching or maintaining set temperature.</p>
-        <a class="btn btn-ghost" href="alarms/rosemount/6888-heater-error.html">View Alarm →</a>
-        <a class="btn btn-primary" href="alarms/rosemount/decision-trees/6888-heater-error.html">Start Diagnosis →</a>
+        <a class="btn btn-ghost" href="/alarms/rosemount/6888-heater-error.html">View Alarm →</a>
+        <a class="btn btn-primary" href="/alarms/rosemount/decision-trees/6888-heater-error.html">Start Diagnosis →</a>
       </div>
 
       <div class="card">
         <h3>No Signal</h3>
         <p>Oxygen output missing or invalid.</p>
-        <a class="btn btn-ghost" href="alarms/rosemount/6888-no-signal.html">View Alarm →</a>
-        <a class="btn btn-primary" href="alarms/rosemount/decision-trees/6888-no-signal.html">Start Diagnosis →</a>
+        <a class="btn btn-ghost" href="/alarms/rosemount/6888-no-signal.html">View Alarm →</a>
+        <a class="btn btn-primary" href="/alarms/rosemount/decision-trees/6888-no-signal.html">Start Diagnosis →</a>
       </div>
 
       <div class="card">
         <h3>Calibration Failure</h3>
         <p>Zero or span calibration unsuccessful.</p>
-        <a class="btn btn-ghost" href="alarms/rosemount/6888-calibration-failure.html">View Alarm →</a>
-        <a class="btn btn-primary" href="alarms/rosemount/decision-trees/6888-calibration-failure.html">Start Diagnosis →</a>
+        <a class="btn btn-ghost" href="/alarms/rosemount/6888-calibration-failure.html">View Alarm →</a>
+        <a class="btn btn-primary" href="/alarms/rosemount/decision-trees/6888-calibration-failure.html">Start Diagnosis →</a>
       </div>
 
       <div class="card">
         <h3>High Drift / Unstable Reading</h3>
         <p>Oxygen reading fluctuates beyond acceptable limits.</p>
-        <a class="btn btn-ghost" href="alarms/rosemount/6888-high-drift.html">View Alarm →</a>
-        <a class="btn btn-primary" href="alarms/rosemount/decision-trees/6888-high-drift.html">Start Diagnosis →</a>
+        <a class="btn btn-ghost" href="/alarms/rosemount/6888-high-drift.html">View Alarm →</a>
+        <a class="btn btn-primary" href="/alarms/rosemount/decision-trees/6888-high-drift.html">Start Diagnosis →</a>
       </div>
     </div>
   </div>
@@ -117,16 +112,23 @@
     <h3>Maintenance & Calibration Notes</h3>
     <ul class="list">
       <li>Allow heater temperature to fully stabilize before trusting readings</li>
-      <li>Use certified zero and span gases for calibration</li>
+      <li>Use the configuration-matched calibration gases. The cited manual rejects pure nitrogen as the low-point gas</li>
       <li>Inspect wiring, heater circuits, and electronics periodically</li>
       <li>Check zirconia sensor for contamination, cracking, or aging</li>
     </ul>
 
-    <div class="warn">
-      Frequent calibration failure or drift usually indicates
-      sensor aging, heater problems, or sample process issues.
-    </div>
+    <div class="warn">Sections 1.7 and 3.6 of the cited manual differ on instrument air as high calibration gas. Manufacturer documentation requires configuration-specific verification; no definitive instrument-air calibration procedure is given here. Reference air and calibration gas have separate functions.</div>
+    <p>A calibration-gas response test is not the same as response to a process change; gas velocity and diffuser condition affect installed response.</p>
   </div>
+
+
+  <section class="panel" aria-label="Technical references">
+    <h3>Technical references</h3>
+    <p>Updated against manufacturer documentation. Match the document to the installed model and options.</p>
+    <ul>
+      <li>Emerson: <a href="https://www.emerson.com/is/content/emerson/en/measurement-instrumentation/technical/products/gas-analysis-combustion/documents/doc-rosemount-00809-0100-4890.pdf">Rosemount 6888A In Situ Oxygen Analyzer</a> — 00809-0100-4890, Rev AB, January 2023; sections 1.3, 1.7, 3.6, 4–5.</li>
+    </ul>
+  </section>
 
 </main>
 
@@ -137,9 +139,9 @@
       <span class="muted">Built for Analyzer Technicians</span>
     </div>
     <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="analyzers.html">Search</a>
-      <a href="disclaimer.html">Disclaimer</a>
+      <a href="/index.html">Home</a>
+      <a href="/analyzers.html">Search</a>
+      <a href="/disclaimer.html">Disclaimer</a>
     </div>
   </div>
 </footer>

@@ -3,44 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Yokogawa TDLS8000 Gas Analyzer | AnalyzersHub</title>
-
-    <meta name="description" content="Yokogawa TDLS8000 analyzer overview, specifications, alarms, and troubleshooting for analyzer technicians.">
-    <meta name="keywords" content="TDLS8000, Yokogawa, gas analyzer, laser, TDLS">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+  <base href="/">
+  <link rel="canonical" href="https://analyzershub.com/analyzers/yokogawa/tdls8000/">
+  <meta name="description" content="Yokogawa TDLS8000 model reference: optical measurement, configuration, transmission, response and maintenance limits with manual provenance.">
 </head>
 
 <body>
 
 <header>
-    <h1>AnalyzersHub</h1>
+    <p class="brand" style="color:#0b3c5d;">AnalyzersHub</p>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="analyzers.html">Analyzers</a>
+        <a href="/index.html">Home</a>
+        <a href="/analyzers.html">Analyzers</a>
     </nav>
 </header>
 
 <main>
 
-    <h2>Yokogawa TDLS8000 Gas Analyzer</h2>
+    <h1>Yokogawa TDLS8000 Gas Analyzer</h1>
 
     <section>
         <h3>Analyzer Overview</h3>
         <p>
-            The Yokogawa TDLS8000 is a Tunable Diode Laser Spectroscopy (TDLS) analyzer
-            for in-situ gas measurement. It provides fast, accurate, and continuous
-            monitoring of specific gases with minimal maintenance.
+            TDLS8000 scans a tunable laser across a gas absorption line to determine concentration along the optical path. The installed gas channel, path length, pressure and temperature settings must match the application.
         </p>
     </section>
 
     <section>
         <h3>Key Features</h3>
         <ul>
-            <li>Laser-based high-speed gas measurement</li>
-            <li>Non-contact in-situ measurement</li>
-            <li>Stable performance with low maintenance</li>
-            <li>Multiple gas measurement capability</li>
+            <li>In-situ cross-path measurement or a documented flow-cell sampling arrangement, depending on configuration</li>
+            <li>Gas species and simultaneous measurements depend on the ordered channels and options</li>
+            <li>Analysis-cycle time alone does not establish installed system response</li>
+            <li>A path measurement does not by itself demonstrate representative whole-duct composition</li>
         </ul>
     </section>
 
@@ -69,13 +67,13 @@
 
                 <tr>
                     <td>
-                        <a href="alarms/yokogawa/tdls8000-laser-error.html">
+                        <a href="/alarms/yokogawa/tdls8000-laser-error.html">
                             Laser Error
                         </a>
                     </td>
                     <td>Laser emission unstable or not detected</td>
                     <td>
-                        <a href="alarms/yokogawa/decision-trees/tdls8000-laser-error.html">
+                        <a href="/alarms/yokogawa/decision-trees/tdls8000-laser-error.html">
                             Start Diagnosis
                         </a>
                     </td>
@@ -83,13 +81,13 @@
 
                 <tr>
                     <td>
-                        <a href="alarms/yokogawa/tdls8000-no-signal.html">
+                        <a href="/alarms/yokogawa/tdls8000-no-signal.html">
                             No Gas Signal
                         </a>
                     </td>
                     <td>No valid gas measurement available</td>
                     <td>
-                        <a href="alarms/yokogawa/decision-trees/tdls8000-no-signal.html">
+                        <a href="/alarms/yokogawa/decision-trees/tdls8000-no-signal.html">
                             Start Diagnosis
                         </a>
                     </td>
@@ -97,13 +95,13 @@
 
                 <tr>
                     <td>
-                        <a href="alarms/yokogawa/tdls8000-calibration-failure.html">
+                        <a href="/alarms/yokogawa/tdls8000-calibration-failure.html">
                             Calibration Failure
                         </a>
                     </td>
-                    <td>Zero or span calibration unsuccessful</td>
+                    <td>Validation or calibration issue; match the configured method</td>
                     <td>
-                        <a href="alarms/yokogawa/decision-trees/tdls8000-calibration-failure.html">
+                        <a href="/alarms/yokogawa/decision-trees/tdls8000-calibration-failure.html">
                             Start Diagnosis
                         </a>
                     </td>
@@ -111,13 +109,13 @@
 
                 <tr>
                     <td>
-                        <a href="alarms/yokogawa/tdls8000-high-drift.html">
+                        <a href="/alarms/yokogawa/tdls8000-high-drift.html">
                             High Drift / Unstable Reading
                         </a>
                     </td>
                     <td>Reading unstable or drifting beyond limits</td>
                     <td>
-                        <a href="alarms/yokogawa/decision-trees/tdls8000-high-drift.html">
+                        <a href="/alarms/yokogawa/decision-trees/tdls8000-high-drift.html">
                             Start Diagnosis
                         </a>
                     </td>
@@ -131,11 +129,20 @@
         <h3>Maintenance & Calibration Notes</h3>
         <ul>
             <li>Check laser output and optical alignment</li>
-            <li>Ensure measurement path is free from dust/smoke</li>
-            <li>Perform calibration with correct gas standard</li>
+            <li>Maintain sufficient optical transmission; particles, dirty windows and misalignment can reduce it. There is no universal dust-free requirement or particulate threshold here</li>
+            <li>Follow configuration-specific validation/calibration instructions, including optical path and purge conditions</li>
             <li>Inspect electronics module periodically</li>
         </ul>
     </section>
+
+
+  <section class="panel" aria-label="Technical references">
+    <h3>Technical references</h3>
+    <p>Updated against manufacturer documentation. Match the document to the installed model and options.</p>
+    <ul>
+      <li>Yokogawa: <a href="https://web-material3.yokogawa.com/1/33159/files/IM11Y01D01-01EN_140.pdf">TDLS8000 Tunable Diode Laser Spectrometer</a> — IM 11Y01D01-01EN, 14th edition, 2025; sections 3.4, 7–8 and Appendix 4.</li>
+    </ul>
+  </section>
 
 </main>
 
